@@ -348,6 +348,8 @@ def main(argv=None):
     for name in RUST_REPOS:
         scaffold(destination / name, name)
     configure_workspace(destination)
+    if (destination / "tempo" / "tools" / "local.mk").is_file():
+        write_new(destination / "Makefile", "include tempo/tools/local.mk\n")
     if not args.no_check:
         check_local_resolution(destination)
         print("Checking the workspace...", flush=True)
