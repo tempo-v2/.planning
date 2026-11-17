@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run the initial cross-repository interface qualification. No installs or Git writes."""
 import argparse
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -21,6 +22,7 @@ def main():
         [sys.executable, str(root / ".planning/scripts/test_bootstrap_workspace.py")],
         ["cargo", "fmt", "--all", "--", "--check"],
         ["cargo", "test", "--workspace"],
+        ["cargo", "doc", "--workspace", "--no-deps"],
         ["cargo", "clippy", "--workspace", "--all-targets", "--", "-D", "warnings"],
         ["cargo", "build", "-p", "tempo"],
         ["node", "--test", str(root / "tempo-core-components/test/study.test.js")],
@@ -28,7 +30,11 @@ def main():
     ]
     for command in steps:
         print("Running: " + " ".join(command), flush=True)
-        subprocess.run(command, cwd=root, check=True)
+        environment = os.environ.copy()
+        if command[:2] == ["cargo", "doc"]:
+            # Docs are a supported reading surface: broken links must fail here.
+            environment["RUSTDOCFLAGS"] = (environment.get("RUSTDOCFLAGS", "") + " -D warnings").strip()
+        subprocess.run(command, cwd=root, env=environment, check=True)
     print("Interface qualification passed. This does not qualify SQLite durability or real chess/FSRS algorithms.")
 
 

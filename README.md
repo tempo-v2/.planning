@@ -7,6 +7,7 @@ trees. Seven Rust packages compose one application; the UI package is separate.
 
 | Document | Purpose |
 | --- | --- |
+| [READING_GUIDE.md](READING_GUIDE.md) | Concept-to-file map, suggested reading order, and how to use the nearby examples |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Ownership and allowed dependency graph |
 | [INTERFACES.md](INTERFACES.md) | Minimal complete interfaces, transaction flow, real/fixture inventory and replacement criteria |
 | [BEHAVIOR.md](BEHAVIOR.md) | Shared expectations B01–B15; requirements versus working defaults |
@@ -44,17 +45,25 @@ the patch entries. Existing source files are preserved. The script does not
 pull, reset, switch branches, commit or push. `--no-check` skips dependency
 resolution and compilation.
 
+## Reading and contributing
+
+Begin with [READING_GUIDE.md](READING_GUIDE.md). Each component README maps a
+question or public concept to a source file and a runnable example. Rust files
+start with purpose/when-to-use documentation and keep usage scenarios in their
+own `#[cfg(test)]` module. Public root imports remain convenient; implementation
+files are named for the concepts they explain.
+
 ## Development checks
 
 Use `cargo test -p tempo-study` (or the affected package) for isolated component
-work. UI checks run with `node --test` from `tempo-core-components`; they need no
+work. `cargo doc --workspace --no-deps --open` builds the API reading surface. UI checks run with `node --test` from `tempo-core-components`; they need no
 Rust process or database. `cargo test -p tempo --test contracts` checks application
 composition. `node --test tempo/tests/ui_boundary.mjs` checks the real Rust/UI
 protocol after building `tempo`.
 
 The full qualification script is for the initial cross-repository contract and
 changes spanning its boundaries. It checks the dependency graph, negative
-architecture cases, workspace migration, Rust contracts/lints, UI behavior, and
+architecture cases, workspace migration, Rust contracts/lints and warning-free documentation, UI behavior, and
 the actual stdio round trip. It does not qualify real PGN parsing, FSRS, SQLite
 constraints/durability, or browser rendering.
 
