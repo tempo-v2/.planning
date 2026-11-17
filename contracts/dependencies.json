@@ -1,0 +1,9 @@
+{
+  "tempo-types": [],
+  "tempo-study": ["tempo-types"],
+  "tempo-queue": ["tempo-types"],
+  "tempo-learning": ["tempo-types"],
+  "tempo-chess": ["tempo-study", "tempo-types"],
+  "tempo-store": ["tempo-chess", "tempo-learning", "tempo-study", "tempo-types"],
+  "tempo": ["tempo-chess", "tempo-learning", "tempo-queue", "tempo-store", "tempo-study", "tempo-types"]
+}

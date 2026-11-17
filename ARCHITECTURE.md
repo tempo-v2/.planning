@@ -4,8 +4,9 @@ Contract baseline v0.1 · 2026-11-17
 
 Tempo 2 uses separate Git repositories, small Rust libraries, one application
 process, and one SQLite database. This document defines ownership and permitted
-dependencies. It does not claim that the interfaces or behavior are implemented.
-Concrete acceptance examples live in [BEHAVIOR.md](BEHAVIOR.md).
+dependencies. The executable interface scaffold is specified in
+[INTERFACES.md](INTERFACES.md); its real and fixture implementations are identified
+there. Concrete acceptance expectations live in [BEHAVIOR.md](BEHAVIOR.md).
 
 ## Ownership
 
@@ -29,7 +30,8 @@ chess content and database rows belong to their owning repositories.
 
 An arrow means **imports**, not the direction of runtime requests. These are
 allowed edges; a crate adds an edge only when its implementation needs it.
-The bootstrap creates packages with empty dependency sections.
+The initial interface scaffold now declares the edges it uses; the architecture
+gate checks all dependency kinds against the permitted graph.
 
 ```mermaid
 flowchart TD
@@ -56,8 +58,8 @@ domain types to persist them; domain crates do not import Store. UI components
 receive view data and emit input; the application owns their transport adapter.
 `.planning` has no runtime dependency role.
 
-Each repository should eventually enforce its allowed direct dependencies in
-its own checks. Ordinary Study, Queue, Learning and Chess unit tests require
+The shared architecture gate enforces allowed direct dependencies and repository
+source boundaries. Ordinary Study, Queue, Learning and Chess unit tests require
 neither the full application nor a database/browser/provider. Real transaction
 and application journeys are tested at those boundaries.
 
@@ -123,17 +125,19 @@ workspace. The parent directory is not a Git repository. Its `Cargo.toml`, share
 repositories are excluded from Cargo membership. Package manifests contain their
 own metadata and can stand alone outside that parent.
 
-No cross-repository dependency is invented by bootstrap: the current repositories
-have no released Rust APIs. When an import is needed, its consumer selects a
-compatible published version or an immutable Git revision. Shared public types
-must resolve to a consistent source/version. Local path overrides belong in
-local development configuration, not the release contract. Workspace membership
-alone does not override versioned dependencies with sibling source trees.
+The interface scaffold uses exact package version requirements and explicit
+root-local Cargo patches to the sibling checkouts. These packages have not been
+published as releases. Setup verifies their local source identity. Release
+consumption will select a compatible published version or an immutable Git
+revision; shared public types must resolve to a consistent source/version. Local
+path overrides belong in local development configuration, not the release
+contract. Workspace membership alone does not override versioned dependencies.
 
 Component releases carry their focused test evidence. Application adoption tests
 the affected contracts and real integration path. Toolchain, feature or dependency
 changes require reassessing the relevant evidence. Building empty scaffolds
-proves setup only; the examples in BEHAVIOR.md remain to be implemented.
+proves setup only. Qualification of the wired scaffold adds executable contract
+evidence; real chess algorithms and SQL durability require their own acceptance.
 
 ## References
 

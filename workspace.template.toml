@@ -1,0 +1,23 @@
+# Local aggregation only: each member remains a separate Git repository.
+[workspace]
+resolver = "3"
+members = [
+    "tempo-types",
+    "tempo-study",
+    "tempo-queue",
+    "tempo-learning",
+    "tempo-chess",
+    "tempo-store",
+    "tempo",
+]
+exclude = [".planning", "tempo-core-components"]
+
+# Local development overrides; component release dependencies stay versioned.
+[patch.crates-io]
+tempo-types = { path = "tempo-types" }
+tempo-study = { path = "tempo-study" }
+tempo-queue = { path = "tempo-queue" }
+tempo-learning = { path = "tempo-learning" }
+tempo-chess = { path = "tempo-chess" }
+tempo-store = { path = "tempo-store" }
+tempo = { path = "tempo" }
