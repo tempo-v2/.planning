@@ -1,8 +1,19 @@
 # Shared behavioral examples
 
+**Scope: v0.1 scaffold expectations.** The R/D labels below record their status
+at that baseline; they do not make every historical policy a requirement of the
+current daily application. In particular, B04 and the same-day-repeat operational
+defaults must not be reinstated in current daily Study, whose accepted policy
+superseded them. These examples also cover fixture/legacy contracts.
+
+Before using an example as authority, identify its runtime/profile and reconcile
+it with the current accepted contract and [canonical agent guidance](agent-guidance/AGENTS.md).
+Preserve still-applicable identity, atomicity and whole-attempt invariants.
+An example of one content family is not an exclusive rule for that family.
+
 These are acceptance expectations, **not executed tests or implementation evidence**. See [ARCHITECTURE.md](ARCHITECTURE.md) for ownership and dependencies.
 
-**R — established requirement:** learning identity, one repertoire response, whole-puzzle assessment, separated eligibility/order, same-day repeat semantics, flexible grading, and content preservation.
+**R — established requirement at the v0.1 baseline:** learning identity, one repertoire response, whole-puzzle assessment, separated eligibility/order, same-day repeat semantics, flexible grading, and content preservation.
 
 **D — v0.1 working default:** an operational choice, including immediate failure persistence, replay, stale-attempt checks, introduction, and restart behavior. These defaults do not imply that Andy separately selected every detail.
 

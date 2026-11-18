@@ -6,7 +6,10 @@ Tempo 2 uses separate Git repositories, small Rust libraries, one application
 process, and one SQLite database. This document defines ownership and permitted
 dependencies. The executable interface scaffold is specified in
 [INTERFACES.md](INTERFACES.md); its real and fixture implementations are identified
-there. Concrete acceptance expectations live in [BEHAVIOR.md](BEHAVIOR.md).
+there. The original scaffold's scoped acceptance examples live in
+[BEHAVIOR.md](BEHAVIOR.md). Current work follows the
+[canonical agent guidance](agent-guidance/AGENTS.md) and the accepted contract
+for the selected runtime.
 
 ## Ownership
 
@@ -19,7 +22,8 @@ there. Concrete acceptance expectations live in [BEHAVIOR.md](BEHAVIOR.md).
 | [tempo-chess](https://github.com/tempo-v2/tempo-chess) | Position identity, PGN, repertoire/tactic content, chess graders, pure game comparison | Validated content, content differences, assessments/feedback |
 | [tempo-store](https://github.com/tempo-v2/tempo-store) | SQLite schema, constraints, migrations, mappings, consistent reads and transaction mechanism | Stored domain values and committed results |
 | [tempo](https://github.com/tempo-v2/tempo) | Application commands, dependency assembly, transaction orchestration, transport and provider access | Application/API responses |
-| [tempo-core-components](https://github.com/tempo-v2/tempo-core-components) | Presentation components: board, controls, dialogs | Rendered views and user intent |
+| [tempo-ui](https://github.com/tempo-v2/tempo-ui) | Pages, interaction policy, transport, local preferences and exact-command recovery | Rendered application views and explicit user/continuation commands |
+| [tempo-core-components](https://github.com/tempo-v2/tempo-core-components) | Reusable presentation components: board, controls, dialogs | Rendered components and local input |
 | [.planning](https://github.com/tempo-v2/.planning) | Cross-repository engineering decisions, shared examples, local setup | Documentation and development tooling |
 
 `tempo-chess` initially contains private position, PGN, repertoire, tactics and
@@ -27,6 +31,22 @@ grading modules. `tempo-types` stays small: rich learning state, queue inputs,
 chess content and database rows belong to their owning repositories.
 
 ## Permitted production dependencies
+
+### Decision authority
+
+Package ownership and permitted imports do not establish the meaning of every
+condition written inside a package. Before changing observable behavior, follow
+[the decision rule in AGENTS.md](agent-guidance/AGENTS.md#0-establish-behavior-before-choosing-its-implementation):
+state the behavior, its current basis, owner, permitted semantic inputs,
+independent presentation/representation facts, and lifetime. UI-owned interaction
+can be legitimate without being server-owned; it still needs an explicit rule.
+
+Treat the v0.1 protocol and learning examples linked below as scoped historical
+contracts. Identify the current runtime/profile and accepted contract before
+carrying an example forward. Dependency-check success establishes the import
+boundary, not the correctness or authority of a product decision.
+
+### Import graph
 
 An arrow means **imports**, not the direction of runtime requests. These are
 allowed edges; a crate adds an edge only when its implementation needs it.
@@ -54,8 +74,10 @@ flowchart TD
 
 Study, Queue and Learning depend only on the shared vocabulary among Tempo
 crates. Chess implements Study's grader interface. Store depends on public
-domain types to persist them; domain crates do not import Store. UI components
-receive view data and emit input; the application owns their transport adapter.
+domain types to persist them; domain crates do not import Store. Core components
+receive presentation data and emit local input. Tempo UI owns browser transport,
+interaction and recovery; the Tempo application owns server command endpoints,
+server-side transport handling and application orchestration.
 `.planning` has no runtime dependency role.
 
 The shared architecture gate enforces allowed direct dependencies and repository
