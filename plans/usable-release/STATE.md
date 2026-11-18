@@ -316,3 +316,64 @@ listener, a fresh pre-install backup was taken. The managed listener served
 collection checks agreed on the dataset. The live database matched the
 pre-install backup row for row. No live grades or repertoire mutations were
 used for verification.
+
+## F5 repertoire mutation contract
+
+These rules apply to the current local daily runtime and retain the separate
+standard-profile import used by the durability and portable-restore fixtures.
+
+| Operation and behavior | Basis and owner | Inputs | Independent of | Durable effect and retry |
+| --- | --- | --- | --- | --- |
+| Create a repertoire through Preview and Save. | Local Repertoires upload contract. Tempo allocates the destination and Chess compiles its PGN. | Dataset, exact signed upload, explicit learner color and validated label. The signed preview carries the generated ID. | Existing labels may match the new one. They are never lookup keys. | New ID and targets, default learning, one exact Save receipt. |
+| Rename an existing repertoire. | Local Repertoires rename contract. Tempo applies label metadata. | Dataset, existing ID, validated new name. | Target keys, semantic versions, eligibility and learning. | Updates the catalog display label and may advance content revision. Repeating the current name is a no-op. Prior accepted Save receipts stay replayable. |
+| Replace all selected routes. Retire omitted targets and restore reintroduced targets for that same repertoire. | Local Repertoires replacement contract. Chess compares against the latest retained definition. DailyLearning owns changed-answer policy and Tempo coordinates the atomic Store commit. | Dataset, selected ID, current name and learner color, exact signed input and content revision, latest catalog and learning at Save. | Other repertoires and tactics. Ordinary Study may update learning after Preview. Presentation-only changes do not alter semantic version or attempt authority. | Same definition retains version and learning, even after retirement and restart. A changed answer advances version, preserves first introduction and requires re-teaching without a new slot. Invalidated active attempts remain abandoned. An exact accepted Save returns its original receipt before freshness checks. |
+| Additive catalog merge remains available in the standard profile. | Existing standard import and fixture contract. Chess plans the merge, Tempo applies its existing profile behavior, Store commits atomically. | Dataset and validated catalog or configured parser output. Explicit parser destination ID and separate label. | Display and provenance do not supply identity. | Omitted content remains present. Existing standard semantic-reset behavior stays in that profile. |
+| Reject generic PGN and non-tactic catalogs in daily Study. | F5 caller audit. Daily PGN uses signed browser Preview/Save. CLI transfer and the public daily catalog method use the existing tactic-only planner. | Selected runtime profile. For a catalog, Chess accepts only active tactic items and no repertoire routes. | Label, provenance, and target spelling do not choose the mutation path. | Unsupported input, including mixed catalogs, fails before writes. These Rust methods have no persisted request envelope or browser command route. |
+
+Changing the legal answer at the same identity must change the semantic version
+and reset answer-specific learning. Changing only the name must preserve
+versions, learning and valid attempts. Exact receipts remain authoritative
+after later content edits. An unaccepted command for an abandoned attempt stays
+invalid even when the same semantic version returns.
+
+The independent contract review traced the browser routes, tactic-only CLI
+transfer, generic Rust methods and standard durable-repertoire fixture. It
+confirmed the existing daily replacement, invalidation and replay behavior on
+checkpoint 09 using disposable SQLite. Browser Save and Study recovery paths
+are reused without changing serialization or command interpretation.
+
+### Implementation and focused evidence
+
+[Tempo #9](https://github.com/tempo-v2/tempo/pull/9) is pinned at
+`53fa24687013de819b6f82b66274ca59cf5d3cb6`.
+[Chess #6](https://github.com/tempo-v2/tempo-chess/pull/6) is pinned at
+`22f7f5934849a41cce22a4550530add921ea9a88`.
+Use those trees with the other checkpoint 09 components, workspace lock, UI
+lock and Core package from the manifest. No Store, Learning, wire or schema
+change is required.
+
+The locked Tempo and Chess checks passed 134 tests and doctests. The
+application tests cover daily generic rejection with PGN, repertoire catalogs
+and two mixed catalog forms, and verify that a valid tactic can use the same
+display label. File-backed checks also cover Standard additive import,
+retire/restart/restore, invalidation and exact replay. The existing quota,
+ordinary review between Preview and Save, FSRS and replacement checks passed
+with the candidate. Architecture and formatting checks passed.
+
+Independent review exercised public Rust entry points, HTTP and file-backed
+SQLite. It verified mixed and route-only rejection before writes and that
+generic daily PGN never reaches its parser. Using the archived checkpoint 09
+backend to issue original commands, it verified pending signed Save delivery
+and exact accepted receipt replay after content edits, rename and restart.
+It checked that restoration compares against the latest retained answer,
+keeps the same identity, allows re-teaching at zero opening allowance and
+cannot revive a retired or invalidated attempt. Intervening reviews retained
+their learning. Older accepted Study receipts still replayed exactly, while
+unaccepted commands for the invalidated attempts were rejected.
+
+Chrome also retained a pending Save initially sent by the checkpoint 09 UI
+after its committed reply was lost. On restart with the candidate, the browser
+reloaded and sent the exact original request. It rendered the original success
+reply while the later rename, content revision and receipt count stayed intact.
+
+F4 theme membership remains a separate deferred task.
