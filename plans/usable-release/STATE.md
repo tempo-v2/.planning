@@ -79,3 +79,25 @@ Use those three commits together with the other repository revisions in checkpoi
 The locked Tempo and Chess tests, the UI build and 21 tests, and seven HTTP and boundary tests passed on the listed combination. Chrome uploaded and saved a valid 300-game repertoire larger than 256 KiB in a disposable database. It previewed all 277 records of a 747,227-byte game collection and saved a selected tactic from it. That collection contains conflicting learner moves for either color and remains unsuitable as one repertoire under the current import contract.
 
 The fix awaits review and a coordinated installation of the three components. No production service or study database was used for testing.
+
+## Coordinated main candidate, November 18, 2026
+
+The candidate captures the current Tempo 2 sources, including tactics settings and theme selection, personal capture scheduling, and the board sounds and move feedback packaged with Core 0.2.2. It retains the large PGN import fix from the published release branches. Each component PR targets its own `main`. The [manifest](manifest.json) records the compatible component commits and input hashes.
+
+| Component | Candidate commit | PR |
+| --- | --- | --- |
+| tempo-types | `8662444cfb1ed1d2710c2bd95c4939473d6c0307` | [#1](https://github.com/tempo-v2/tempo-types/pull/1) |
+| tempo-study | `c0d4436987b67546f9112728893991d454e33030` | [#1](https://github.com/tempo-v2/tempo-study/pull/1) |
+| tempo-chess | `db3a758350aecde33a2ec652760520f86a7e985e` | [#4](https://github.com/tempo-v2/tempo-chess/pull/4) |
+| tempo-learning | `f036785bb52820d60d6c067a125987262722cf9d` | [#2](https://github.com/tempo-v2/tempo-learning/pull/2) |
+| tempo-queue | `d89b95fe7a6d24dac488e17cd9f813e23335da8f` | [#2](https://github.com/tempo-v2/tempo-queue/pull/2) |
+| tempo-store | `62aea494e6b5588a6c642e16e6ecec413cd74c30` | [#3](https://github.com/tempo-v2/tempo-store/pull/3) |
+| tempo-core-components | `8ce37b3ff677a3145d59206d5149bc586ddf66d4` | [#5](https://github.com/tempo-v2/tempo-core-components/pull/5) |
+| tempo-ui | `af08033ca98dd5115d54b878cea0aee32ea8d46e` | [#3](https://github.com/tempo-v2/tempo-ui/pull/3) |
+| tempo | `04fdbf4d7d4b4cf6da898ec13e434ef4c3fbfd48` | [#6](https://github.com/tempo-v2/tempo/pull/6) |
+
+The isolated release assembly passed 241 Rust tests, 23 UI tests, one Core package test, seven HTTP and boundary tests, and the dependency-direction gate. The rebuilt Core tarball matched the UI vendor file byte for byte. Disposable Chrome coverage saved tactic themes, verified their persistence through an app restart, and verified the board sound preference persisted across reload. The server served MP3 assets as audio.
+
+Twenty-one of the 22 rebuilt UI files matched the running server byte for byte. The JavaScript diff consisted of the existing large-PGN fix, which removes the two upload forms' 256 KiB guards. The running instance and its dataset were left in place.
+
+Review all ten PRs before merging as a coordinated set. Merge the component PRs and then the planning PR. Use the combined source set for the next build. Installation is a separate step.

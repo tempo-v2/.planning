@@ -39,3 +39,33 @@ make build-ui
 For a foreground instance, run `make start`. In a fresh workspace this creates a new local database if no default file exists. To continue studying with an existing database, supply its actual path with `make start TEMPO_DB=/path/to/study.sqlite`. The original binary and served web hashes identify the recorded Mac installation. A build from a different checkout path or host can have different native binary bytes.
 
 See the [Mac operations and recovery instructions](https://github.com/tempo-v2/tempo/blob/cf94c79cc69820e1819ad32a4112a20b452ca1d6/OPENING.md).
+
+## Reconstruct the November 18 main candidate
+
+Use an empty directory with the Rust and Node versions recorded for
+`main-candidate-2026-11-18` in the manifest. This candidate uses the same
+workspace Cargo lock as checkpoint 04 and consumes the Core 0.2.2 tarball from
+the UI repository.
+
+```sh
+git clone --branch release/current-tempo2-20261118 https://github.com/tempo-v2/.planning.git .planning
+python3 - <<'PY'
+from pathlib import Path
+import json
+import shutil
+import subprocess
+
+planning = Path(".planning")
+release = planning / "plans" / "usable-release"
+candidate = json.loads((release / "manifest.json").read_text())["main-candidate-2026-11-18"]
+for repo, revision in candidate["repositories"].items():
+    url = f"https://github.com/tempo-v2/{repo}.git"
+    subprocess.run(["git", "clone", "--no-checkout", url, repo], check=True)
+    subprocess.run(["git", "-C", repo, "checkout", "--detach", revision], check=True)
+shutil.copyfile(planning / "workspace.template.toml", "Cargo.toml")
+shutil.copyfile(planning / candidate["workspace_lock"]["path"], "Cargo.lock")
+Path("Makefile").write_text("include tempo/tools/local.mk\n")
+PY
+cargo build --locked -p tempo
+make build-ui
+```

@@ -114,5 +114,34 @@
       "followup_test_commit": "5cdc53816e4c6844ca2cdd1f6fe58baf41bb02b9",
       "workspace_doc": "plans/usable-release/WORKSPACE.md"
     }
+  },
+  "main-candidate-2026-11-18": {
+    "source_branch": "release/current-tempo2-20261118",
+    "repositories": {
+      "tempo-types": "8662444cfb1ed1d2710c2bd95c4939473d6c0307",
+      "tempo-study": "c0d4436987b67546f9112728893991d454e33030",
+      "tempo-chess": "db3a758350aecde33a2ec652760520f86a7e985e",
+      "tempo-learning": "f036785bb52820d60d6c067a125987262722cf9d",
+      "tempo-queue": "d89b95fe7a6d24dac488e17cd9f813e23335da8f",
+      "tempo-store": "62aea494e6b5588a6c642e16e6ecec413cd74c30",
+      "tempo-core-components": "8ce37b3ff677a3145d59206d5149bc586ddf66d4",
+      "tempo-ui": "af08033ca98dd5115d54b878cea0aee32ea8d46e",
+      "tempo": "04fdbf4d7d4b4cf6da898ec13e434ef4c3fbfd48"
+    },
+    "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "node": "v26.12.0",
+    "workspace_lock": {
+      "path": "plans/usable-release/workspace-04.Cargo.lock",
+      "sha256": "00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042"
+    },
+    "ui_lock": {
+      "path": "tempo-ui/package-lock.json",
+      "sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c"
+    },
+    "core_package": {
+      "version": "0.2.2",
+      "path": "tempo-ui/vendor/tempo-v2-core-components-0.2.2.tgz",
+      "sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
+    }
   }
 }
