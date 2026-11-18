@@ -774,3 +774,24 @@ game played after the reset could influence teaching.
 Installation remains a separate managed release. Take a consistent pre-upgrade
 backup before installing the compatible pair. The checkpoint 12 binary cannot
 open schema 7. A live repertoire reset requires its own confirmation in the UI.
+
+### Development server restart
+
+The user requested that rerunning `make start` replace the running local
+session. The launcher can now replace a verified, same-user Tempo
+development listener on the selected port. A listener from another assembled
+checkout qualifies under the same rule. The managed installation and other
+ports retain their existing lifecycle. Port ownership and managed resource
+identity determine eligibility. Checkout paths may contain spaces.
+
+The launcher records the process identity before building. It rechecks the
+same listener before sending SIGTERM and waits for the selected port to
+become available before launching. A failed build or invalid database leaves
+the existing server running. Nothing about the handoff is stored in SQLite.
+
+Real Make runs covered replacement from another checkout, a second launch
+from the same checkout, an unrelated listener, managed resource protection in
+both checkouts, and build and input failures. The five existing guard tests
+passed. The managed listener kept its PID. The current UI guard works with
+this launcher. [Tempo #16](https://github.com/tempo-v2/tempo/pull/16) contains
+commit `57215e4330f5e856c2d4cf5b1861eb853634e6f8`.
