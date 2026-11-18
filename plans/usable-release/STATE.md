@@ -637,9 +637,48 @@ ordinary Next and Answer with a provider HTTP connection deliberately
 stalled. Chrome also retried the original Games upload body after a lost
 reply and page reload.
 
-Locked Rust component tests and the 28 UI tests passed. The optimized
+The 216 locked Rust tests and doctests and all 28 UI tests passed. The optimized
 candidate served all 22 byte-verified UI files and the read-only
 Study status/progress, repertoire document and Games reads. The
 schema-4 to schema-6 rehearsal verified all prior rows and Learning values,
 including 172 backfilled authoritative Test coverage records in that copy.
 SQLite integrity and foreign-key checks passed.
+
+The final independent check compared real Chrome command sequences and
+durable results with the same exercise name present, changed and omitted,
+using a fixed New York study clock and deterministic IDs. Clean requested
+Test, corrected requested Test and Teach all matched. The optimized
+candidate also recovered the checkpoint 11 editor's exact saved envelope
+in both accepted/lost and unaccepted cases, preserving the authored PGN
+and committing one document revision. The reviewer checked the actual
+Chess.com archive payload and the provider's cache headers independently.
+
+### Merged source and checkpoint 12 installation
+
+The PRs above were merged in dependency order and the resulting remote
+main trees matched the exact reviewed heads. The merged pins were:
+
+- tempo-chess `d066844c83648a948ecbf47e11eaed49cdb64367`
+- tempo-learning `101ec4245173f4e7afa77e074ef3a665c63e4317`
+- tempo-queue `31cb46dfc7e3f513c22aaf33996d18c9498c5ab6`
+- tempo-store `36a2131f1b01122b9fa8e125a824fb5d0cd41b0d`
+- tempo-ui `61aff22900d1985528bd49b94aa0385c3166f2dd`
+- tempo `2d171ec3f3e253d7e282701eca216c8491d11b43`
+
+On November 18, the registered Mac LaunchAgent installed checkpoint
+12-game-evidence on port 41822, using the same dataset and database inode.
+A consistent checkpoint 11 backup was created before shutdown and
+another was taken with the service stopped. Migration preserved all
+pre-cutover rows and prior Learning values. SQLite integrity and foreign
+keys passed. The release verified the listener against the registration,
+all 22 served UI files, and read-only Study resume and progress, the
+repertoire document read and Games history. Chrome rendered the installed
+Study, Games and repertoire editor with only read-only requests.
+No live grades, imports or periodic sync were used for verification.
+The [checkpoint 12 manifest](manifest.json) records exact source and artifact
+hashes.
+
+Keep the paired checkpoint 11 binary, UI, registration and schema-4
+backup as a pre-cutover recovery point. A release repair after new work
+has been accepted must use a schema-6-compatible pair and retain the
+current database. The checkpoint 11 binary cannot open schema 6.
