@@ -1,0 +1,113 @@
+{
+  "02": {
+    "repositories": {
+      ".planning": "9a8194e5f8e517df95d0c0a2bb7e0034fedc20a4",
+      "tempo": "026f68f8003abf45c7b49e3894da58757c9f762e",
+      "tempo-chess": "7e96e6e293ac34b2f9b09aeb97bd5ae8673f2fc5",
+      "tempo-core-components": "31be96b06cd241fc925b476e03b1d706501aefba",
+      "tempo-learning": "539d369e02f25f963cf16327559ef6d9272cba8e",
+      "tempo-queue": "12b4f3ccd7978e6f3c79f78b21315b65e410bc70",
+      "tempo-store": "1991e6420b4777bb48b7b8332ef27936d5778077",
+      "tempo-study": "c0d4436987b67546f9112728893991d454e33030",
+      "tempo-types": "8662444cfb1ed1d2710c2bd95c4939473d6c0307",
+      "tempo-ui": "c5b53548bf4533119ddc961dfeaa0a26c8ab0d16"
+    },
+    "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: aarch64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "node": "v26.12.0",
+    "wire_version": 4,
+    "dataset_schema": 2,
+    "study_timezone": "America/New_York",
+    "default_daily_introductions": {
+      "repertoire": 10,
+      "tactics": 20
+    },
+    "start": "make start",
+    "core_tarball_sha256": "f5b3a1b2c30cd490eaa8502376cb743785c337f373b2ee74c7ba7852822964bd",
+    "artifacts_sha256": {
+      "Cargo.lock": "bd2e260d5aeadc41d39fd54577e92413b31a35cb1f91f1a38ee2de0231756d73",
+      "tempo": "3386632f47fbdb8e9e33958846364dd8f39d24e7cf6663f579a3786e298a87d3",
+      "ui/assets/app.css": "666cf10ead14d52dd6388f173c1e6f9ed17384c79b7ad9770c14d98420d97769",
+      "ui/assets/app.js": "9e968d106ce184f5413c91457ceda00c7a2a50655a5b78c5301258b86de56af7",
+      "ui/assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+      "ui/assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+      "ui/assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+      "ui/assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+      "ui/assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+      "ui/assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+      "ui/assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+      "ui/assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+      "ui/assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+      "ui/assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+      "ui/assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+      "ui/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+      "ui/index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+    }
+  },
+  "04": {
+    "repositories": {
+      ".planning": "9a8194e5f8e517df95d0c0a2bb7e0034fedc20a4",
+      "tempo": "8cc99ebcf1f18882dd7b0d63720e02bf73d97132",
+      "tempo-chess": "304924a846627b2187f5b4c83690b4fb251a84cb",
+      "tempo-core-components": "31be96b06cd241fc925b476e03b1d706501aefba",
+      "tempo-learning": "539d369e02f25f963cf16327559ef6d9272cba8e",
+      "tempo-queue": "756d63169b1e4601d0d4f4b4af54f5fe44d17d0b",
+      "tempo-store": "9d706bad33424337ef46d5ac9df8cad30ae782b1",
+      "tempo-study": "c0d4436987b67546f9112728893991d454e33030",
+      "tempo-types": "8662444cfb1ed1d2710c2bd95c4939473d6c0307",
+      "tempo-ui": "23b611a8301a202aec5ba2f66931469975f7fa0f"
+    },
+    "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: aarch64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "node": "v26.12.0",
+    "wire_version": 4,
+    "dataset_schema": 3,
+    "study_timezone": "America/New_York",
+    "default_daily_introductions": {
+      "repertoire": 10,
+      "tactics": 20
+    },
+    "start": "make start",
+    "core_tarball_sha256": "f5b3a1b2c30cd490eaa8502376cb743785c337f373b2ee74c7ba7852822964bd",
+    "artifacts_sha256": {
+      "Cargo.lock": "00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042",
+      "tempo": "34f14b1f3179b4c9f4de7b8440b4eb6c00670b2b19e8f1feb5b1fed6034f1d2d",
+      "ui/assets/app.css": "9d6550895b85f466c068231f51c7301a572776c191e75dc99e926576e7b87136",
+      "ui/assets/app.js": "27d7337cfd225f477aaad811e5b31a7f1302dba51652164f6e1dc8ed6785d68d",
+      "ui/assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+      "ui/assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+      "ui/assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+      "ui/assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+      "ui/assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+      "ui/assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+      "ui/assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+      "ui/assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+      "ui/assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+      "ui/assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+      "ui/assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+      "ui/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+      "ui/index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+    },
+    "workspace_inputs": {
+      "workspace_manifest": {
+        "path": ".planning/workspace.template.toml",
+        "sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072"
+      },
+      "workspace_lock": {
+        "path": ".planning/plans/usable-release/workspace-04.Cargo.lock",
+        "sha256": "00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042"
+      },
+      "ui_lock": {
+        "path": "tempo-ui/package-lock.json",
+        "sha256": "bba7ca34dbc414cbd098a2e12660da6102fb2da73411ee895f3de446eb1b61bd"
+      }
+    },
+    "observed_foreground": {
+      "executable": "target/debug/tempo",
+      "sha256": "b74ed9abdd91786246b1fcf62c531156d5469b6052681077a5aca2e02091865f",
+      "ui": "tempo-ui/dist",
+      "database": ".local/usable-release/study.sqlite",
+      "url": "http://127.0.0.1:41822",
+      "study_timezone": "America/New_York",
+      "schema": 3
+    }
+  }
+}
