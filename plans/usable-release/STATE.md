@@ -735,3 +735,42 @@ review blockers remained.
 
 Publication opens the compatible PR set. The managed checkpoint 12
 installation remains the current release.
+
+### Repertoire progress reset
+
+| Behavior | Basis and owner | Inputs and lifetime |
+| --- | --- | --- |
+| Start one repertoire from the beginning | User-approved reset with Study history erased. Tempo coordinates, Store owns the atomic write, and Queue clears those targets' session deferrals. | The confirmed command addresses the current dataset and stable repertoire ID. Store scopes it to active and retired targets. The display name and PGN are independent. The reset receipt survives restart and an exact retry leaves newer progress intact. |
+| Teach reset positions as new | Existing Daily Study and opening allowance rules. Learning supplies fresh state and Queue uses the existing line frontier. | Reset removes introduction dates, review state, attempts, assessments and their replayable Study outcomes. Attempts on other targets can still recover. Content identities, versions and the accepted PGN remain valid. |
+| Keep played games as history | User-approved retention of games. Tempo applies the reset boundary before Learning evaluates game evidence. | A known game start strictly after the saved cutoff can affect Study. An older or unknown start remains historical. Existing import receipts replay exactly. |
+
+The compatible candidate is:
+
+| Component | Pull request | Commit |
+| --- | --- | --- |
+| Store | [#9](https://github.com/tempo-v2/tempo-store/pull/9) | `ce5b1e44226e37d5120db3fdd064fb80875d3a05` |
+| Queue | [#5](https://github.com/tempo-v2/tempo-queue/pull/5) | `d10f76d6e6d2f6b564754ccd91c07c536a1449ca` |
+| Tempo | [#15](https://github.com/tempo-v2/tempo/pull/15) | `507bd0b373daa1823f619b256c36e9d4e1c28707` |
+| UI | [#10](https://github.com/tempo-v2/tempo-ui/pull/10) | `fb1f5de3c514b6c57e82921d719368ed45e76176` |
+
+The unchanged component trees and workspace lock match checkpoint 12.
+The UI uses the same Core 0.2.2 tarball. SQLite schema 7 adds the reset
+receipts and scoped lookup indexes. Study and content wire versions continue
+at 5 and 4, with a new repertoire command and reply.
+
+All 260 locked workspace tests and doctests and 29 UI tests passed.
+The optimized backend and built UI served the reset and retry journey over
+HTTP with clean SQLite integrity and foreign keys. Independent Chrome
+verification covered cancellation, a lost response, exact retry after new
+learning, and a list failure after acceptance. A disposable backup of the
+installed database migrated without rewriting existing rows. The reset erased
+76 London attempts and 76 assessments on that copy. An injected receipt
+failure rolled the whole transaction back. The previous installed UI produced
+both accepted and unaccepted Italian lesson envelopes that recovered on the
+candidate with one durable teaching effect each. Restoring a retired London
+position left it new. Old or undated game imports remained historical and a
+game played after the reset could influence teaching.
+
+Installation remains a separate managed release. Take a consistent pre-upgrade
+backup before installing the compatible pair. The checkpoint 12 binary cannot
+open schema 7. A live repertoire reset requires its own confirmation in the UI.
