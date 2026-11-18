@@ -682,3 +682,56 @@ Keep the paired checkpoint 11 binary, UI, registration and schema-4
 backup as a pre-cutover recovery point. A release repair after new work
 has been accepted must use a schema-6-compatible pair and retain the
 current database. The checkpoint 11 binary cannot open schema 6.
+
+### Checkpoint 12 Games corrections
+
+| Behavior | Basis and owner | Inputs and lifetime |
+| --- | --- | --- |
+| Enrich local PGN chronology | Checkpoint 12 correction, Tempo and Store | The same game, matching played facts and precise UTC start may gain a missing valid end bound. A known end survives omission and rejects a different known end. Resolve the batch before Learning evaluates the selected repertoire. Store checks the same rule under its write lock. Accepted command replies are immutable across later imports and restarts. |
+| Identify comparison rows | Checkpoint 12 correction, Store and Games UI | Use the persisted comparison ID across history reads. Game identity and display fields may be shared by several versions. Previous receipts may omit the ID. |
+| Count received games | Checkpoint 12 correction, provider adapters | Count candidate records evaluated in the requested window, including records rejected individually and malformed records whose date cannot be determined. Archive, transport and limit diagnostics contribute zero. Earlier receipts retain their reported counts. |
+
+The baseline reproduced the known-end rejection in the ordinary import
+contract against SQLite. The existing JSX key produced the same value for
+two comparison versions, and the existing report calculation counted one
+game for a failed month that delivered no records.
+
+The correction resolves PGN chronology across the batch, then applies
+the existing Learning transition only to selected comparisons. It
+preserves established timing on omission. An older comparison for
+another repertoire or version needs a qualifying reanalysis to acquire
+the enriched timing. Date-only PGNs and a changed normalized start keep
+their existing identity and timing behavior. Older accepted reports
+replay their original fields and counts.
+
+The compatible candidate is:
+
+| Component | Pull request | Verified head |
+| --- | --- | --- |
+| Store | [#8](https://github.com/tempo-v2/tempo-store/pull/8) | `09fc5933c46eb1d0a2ef02a26985f2b675d729f5` |
+| Tempo | [#14](https://github.com/tempo-v2/tempo/pull/14) | `b2988778560ce35a694851eb66cea9948e3af87b` |
+| UI | [#9](https://github.com/tempo-v2/tempo-ui/pull/9) | `3b55a5a9f07d9fc8737680e2840d42f5bf0e63ac` |
+
+The other component and lock pins match checkpoint 12. Schema 6 and the
+Study and content wire versions are unchanged.
+
+The locked Tempo and Store suites passed 103 tests and doctests, with a
+focused rerun for enrichment of a game already covered by an ordinary
+Test. The SQLite paths covered both batch orders, omission, conflicting
+known ends, rollback of earlier writes in the batch, and exact replay
+across restart. The provider traversal exercised a failed Chess.com
+month and a capped archive with invalid records using fixture responses.
+All 29 UI tests and the guarded UI build passed.
+
+Independent Chrome checks exercised the archived installed checkpoint 12
+backend and UI on disposable SQLite copies, then used the candidate UI to
+recover accepted and never-accepted PGN commands. The accepted reply
+replayed byte for byte without the comparison ID. Both retries preserved
+the exact command body and left one game, comparison, observation and
+receipt per copy, with zero grades and clean SQLite integrity and foreign
+keys. Chrome kept history rows distinct across reanalysis and displayed
+zero fetched games beside a simulated failed archive. No material
+review blockers remained.
+
+Publication opens the compatible PR set. The managed checkpoint 12
+installation remains the current release.
