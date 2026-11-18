@@ -79,3 +79,91 @@ Use those three commits together with the other repository revisions in checkpoi
 The locked Tempo and Chess tests, the UI build and 21 tests, and seven HTTP and boundary tests passed on the listed combination. Chrome uploaded and saved a valid 300-game repertoire larger than 256 KiB in a disposable database. It previewed all 277 records of a 747,227-byte game collection and saved a selected tactic from it. That collection contains conflicting learner moves for either color and remains unsuitable as one repertoire under the current import contract.
 
 The fix awaits review and a coordinated installation of the three components. No production service or study database was used for testing.
+
+## November 18 UX candidate
+
+The packet pins were comparison points. At intake the workspace used those
+published heads plus local source for Core 0.2.2, board reply animation and
+audio, tactic theme settings, and quota-exempt personal captures. The foreground
+listener on port 41822 ran the workspace debug executable and served the
+workspace UI matching checkpoint 06. The checkpoint 06 LaunchAgent was idle.
+The served JavaScript SHA-256 was
+`392479a12f0af0bc239615de87d2c263d4660ca6c04e898e57172a0b7e645999`.
+The foreground executable was distinct from checkpoint 06's archived executable.
+The listener responded to a Study status read at intake and closeout. The
+private dataset path, content and learning were preserved.
+
+The candidate adopts the current runtime and bundled Core package in isolated
+source trees. Existing working copies and untracked catalog recovery tools
+remain in place. During publication the application, Chess, UI and Planning
+integration branches advanced with the large-PGN change above. The candidate
+includes those audited changes and keeps the 2 MiB content-command limit and
+per-game requirements.
+
+| Packet | Reconciliation and candidate behavior |
+| --- | --- |
+| 01 | **Partial at intake.** Sticky assessment and exact retries already existed. The UI now reads the terminal grade, pauses after correction, uses separate Practice and Teach wording, and continues after a confirmed lesson with independent Next recovery. Enter is scoped to the available primary action. |
+| 02 | **Partial at intake.** Reused versioned Core and existing optional audio, move cues and notices. Added flip, saved theme/piece/volume preferences and shortcut help. Navigation, pausing or inspecting cancel automatic continuation. |
+| 03 | **Implemented.** Separate progress read reports due work, required re-teaching, pending scheduled correction, and accepted introductions against the effective limits. It uses the same day, admission facts, and Queue projection as selection. Personal captures retain their existing quota exemption. Completed frontier positions may expose more lessons. |
+| 04 | **Implemented.** Move history is derived from the disclosed prefix of the issued definition and the exact reply cursor. History input is read-only, with a return to the same live attempt. Opening context uses the known position and existing teaching context. Full route reconstruction is deferred per packet scope. |
+| 05 | **Implemented.** Browse label/source and learning filters in 30-item keyset pages; detail shows stored starting position and provenance. Explicit solution reads are blocked for an active target. Theme and rating normalization are deferred per packet scope. |
+| 06 | **Partial at intake.** Reused the legal parser, capture preview token, and durable exact save. The UI uses numbered SAN and selected-line replay, bulk selection of valid rows, equivalence checks after row changes, and preserves a newer draft after an older save resolves. |
+
+### Checks and operating evidence
+
+- The optimized locked build and isolated UI build passed, with 24 UI tests,
+  66 Chess tests, eight focused application contract tests, four HTTP/boundary
+  checks, strict Clippy for the changed backend owners, and the dependency
+  direction check. Core's source rebuilt to the exact installed-package tarball
+  consumed by the UI. Practice, rollover, exact receipt replay and learning
+  preservation were verified on disposable data.
+- Chrome checked terminal clean and corrected tactics, blocked active solutions,
+  the played-move cursor, return to the live board, preference reload, lesson
+  acknowledgement delivery loss followed by failed Next, and black-to-move
+  capture with delayed delivery and a newer draft. The journeys used disposable
+  data at 1280 and 390 px widths.
+- Independent review led to neutral reveal wording, retention of other capture
+  row drafts, and a fix for a successful Retry Next leaving Study paused. A
+  stale cross-tab solution response is discarded when an activity change is
+  observed. The backend checks the current active target on every detail read.
+- On a disposable copy with 17,657 tactics, one optimized run measured about
+  207 ms for Next when selection was required, 213 ms for full progress,
+  9 ms for an unchanged progress stamp, and 42–66 ms for the first two unfiltered
+  30-item collection pages. A due query took 103 ms and a no-match source search
+  took 196 ms. Reads on transition share Queue policy, and periodic stamped
+  checks avoid catalog reads when the dataset/day/revision match. Times are
+  single local observations.
+- The UX branches are open drafts against the current integration branches.
+  Coordinated review is pending. The existing live service remains on its
+  observed foreground binary and checkpoint 06 UI; the UX candidate was
+  built and verified on disposable instances.
+
+### Matched source and artifacts
+
+Use the pinned sources together. The existing
+[workspace build instructions](WORKSPACE.md) and `workspace-04.Cargo.lock`
+apply when reconstructing the candidate with these revisions in a separate
+directory. The Cargo lock SHA-256 remains
+`00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042`.
+Use the UI lock and the vendored Core package; the wire-4 history field is
+optional and the new reads are separate from existing command receipts.
+
+| Repository | Candidate head | Pull request |
+| --- | --- | --- |
+| tempo | `cbb0a3e36b39c8ebbce379de88063aaacf6c2dcb` | [#5](https://github.com/tempo-v2/tempo/pull/5) |
+| tempo-ui | `f4c39cf40e4f1b74feb117dbad0806f084ad5857` | [#2](https://github.com/tempo-v2/tempo-ui/pull/2) |
+| tempo-core-components | `d30422b9bd6a972c12189200ac6eb4ca0114239c` | [#4](https://github.com/tempo-v2/tempo-core-components/pull/4) |
+| tempo-chess | `b81fea2f1ed94a83ace53a094a78fb0f9a022153` | [#3](https://github.com/tempo-v2/tempo-chess/pull/3) |
+| tempo-store | `d4e731c4bef33fdec560aa7f409bb3e974a69393` | [#2](https://github.com/tempo-v2/tempo-store/pull/2) |
+| tempo-queue | `3009a4b6c450305abbc26f3af396f301cdffb38c` | [#1](https://github.com/tempo-v2/tempo-queue/pull/1) |
+| tempo-learning | `e5bae3eb19d9aa74d9b7ca01882f2078ae1ff569` | [#1](https://github.com/tempo-v2/tempo-learning/pull/1) |
+| tempo-study | `c0d4436987b67546f9112728893991d454e33030` | Reused |
+| tempo-types | `8662444cfb1ed1d2710c2bd95c4939473d6c0307` | Reused |
+
+| Candidate artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo executable | `f247b70cafbe12bdf3dad3c8500b1863e804c830b5001bee108cda85d9165ee8` |
+| UI JavaScript | `10053c20ab59bbbea6bb2f5eb341dd354207c4f3baa75517313a517f07774283` |
+| UI stylesheet | `1dd1a2da646816cf0f6d3c58edb9325e8b00fa0f884b25bb98e5816d965f0eb1` |
+| UI lockfile | `c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c` |
+| Core 0.2.2 UI tarball | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
