@@ -32,6 +32,17 @@ fresh machine, clone `.planning` into `~/Developer/tempo-v2/.planning`, then run
 its bootstrap with `~/Developer/tempo-v2` as the destination. `--protocol ssh`
 selects SSH for new clones; existing valid origins are preserved.
 
+Copy the [canonical agent guidance](agent-guidance/AGENTS.md) into the assembled
+workspace before agent work. From the workspace root:
+
+```sh
+test -e AGENTS.md || cp .planning/agent-guidance/AGENTS.md AGENTS.md
+```
+
+If a root copy already exists, merge the canonical guidance into it and retain
+any applicable local instructions. Update the tracked canonical copy when the
+shared guidance changes.
+
 Bootstrap creates a local virtual workspace and local Cargo patches for the
 unpublished sibling packages. Package manifests retain standalone metadata and
 version requirements. The parent is not a Git repository. The UI and `.planning`
