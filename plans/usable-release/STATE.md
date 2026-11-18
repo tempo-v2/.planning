@@ -456,3 +456,79 @@ served UI assets matched the checkpoint 10 manifest before, during and
 after the checks. Development used the disposable dataset throughout.
 The editor can use these commands and the checkpoint 10 manifest for
 the previous-release recovery rehearsal.
+
+## Current repertoire PGN editor
+
+Packet B applies to the local daily Repertoires authoring surface. The
+independent design review confirmed the boundaries before implementation.
+
+| Decision | Basis and owner | Semantic inputs and lifetime |
+| --- | --- | --- |
+| Current document | Packet B, Tempo and Store | One accepted authored PGN per dataset and stable repertoire ID. Store pins the archived source atomically with Save. Unknown legacy associations are unavailable. Names, headers and provenance order never resolve the source. |
+| Edit authority | Packet B and existing F5, Tempo | The addressed read returns the content revision and authoring metadata together. Edit Preview checks that revision before signing the exact F5 input. Save verifies existing signatures unchanged and validates post-Preview freshness. Newly issued tokens authenticate a new purpose so a legacy receipt-only Save at the same revision cannot claim new Preview authority. Study revision changes alone permit the edit. Rename follows the existing content revision and keeps PGN bytes. |
+| Document-only Save and replay | Packet B and F5, Store and Tempo | A changed source pointer advances the content fence even if the catalog is unchanged. Semantic versions and Learning still follow F5. The old accepted receipt replays exactly and never republishes its historical source. Migration creates an empty association table and preserves existing revisions. |
+| Display and delivery | Packet B, Tempo authoring reply and UI | Explicit Edit or Download requests full PGN. Editing and downloading do not issue Study commands. The UI retains edits through failures and retries the immutable signed Save while acceptance is uncertain. After acceptance it reloads current state as a read. |
+
+### Qualification and publication
+
+The compatible main trees matched the independently approved PR heads and
+the source used for the optimized backend and UI build.
+
+- [Store #6](https://github.com/tempo-v2/tempo-store/pull/6) merged as
+  `779c50a9fb0c63bed4e613c54d589158fc945917`.
+- [Tempo #11](https://github.com/tempo-v2/tempo/pull/11) merged as
+  `a41ac24f1743fbba1fddd7f9f395f2176c04e7ef`.
+- [UI #7](https://github.com/tempo-v2/tempo-ui/pull/7) merged as
+  `d885269c188677a38bbdb06975b3c8679a6c1805`.
+
+Locked Tempo and Store checks passed 93 tests and doctests. The 25 UI tests
+passed. File-backed acceptance included a true A→B→A document-only write,
+both freshness fences, Study between Preview and Save, and injected rollback
+of document, catalog, Learning and receipt. The candidate accepted exact
+replay after a later edit and rename without reverting either. Reused Core
+0.2.2, the component pins and locks from checkpoint 10 for unchanged
+components, and existing Study wire and queue behavior.
+
+The real Chrome editor check used guard-qualified development startup and
+was repeated with the optimized pair. It covered unavailable legacy sources,
+late reads, switching, invalid PGN, dirty Cancel and Study navigation,
+typing after Preview, current-only download, both stale conflicts, Save
+accepted with a failed document reload, and exact retry after a lost Save
+reply across browser and server restart. Independent optimized checks also
+covered recovery storage read and cleanup failures.
+
+The independent reviewer used the previously installed checkpoint 10
+binary and Chrome UI to capture accepted-and-lost and unaccepted signed
+Save envelopes. Candidate migration preserved the full schema 3 data dump.
+The accepted envelope replayed byte for byte without changing current PGN
+or metadata. The unaccepted envelope committed once. A separate copy
+rejected it after a real intervening content edit. A fresh Preview
+established the same authored PGN after a legacy receipt-only Save at the
+same revision. Altered inputs and incorrectly versioned signatures failed.
+
+### Verified checkpoint 11 installation
+
+On November 18, the qualified optimized backend and UI were installed on
+the original dataset through its macOS session LaunchAgent. A fresh
+private backup and rehearsal verified SQLite integrity, foreign keys,
+and preservation of all existing rows across schema 3 → 4. A second
+private backup was taken during cutover. The live dataset inode was kept
+and all pre-cutover rows matched the migrated file, with only the new
+empty association table and supporting index added. No synthetic edits
+or grades were used on the live dataset.
+
+The managed listener on 41822 served all 21 pinned assets and the HTML
+entry point. Read-only Study status, progress, repertoire list, legacy
+document read and Resume of the saved active attempt passed. The
+[checkpoint 11 manifest](manifest.json) pins the installed components,
+locks and artifact hashes.
+
+Use Edit, Preview changes, Save repertoire, and Download PGN on the
+Repertoires page. A repertoire that predates checkpoint 11 may have no
+verified current document. An accepted complete replacement through the
+existing import form establishes it. The installed schema is 4.
+Checkpoint 10 cannot open that schema. Keep the private pre-cutover
+backup and preserve any later accepted work if recovery is needed.
+
+F5 remains closed. F4 theme membership, visual editing and game or
+feedback integration are outside this checkpoint.
