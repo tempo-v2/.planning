@@ -108,6 +108,11 @@
       "url": "http://127.0.0.1:41822",
       "study_timezone": "America/New_York",
       "schema": 3
+    },
+    "handoff": {
+      "operations_doc_commit": "cf94c79cc69820e1819ad32a4112a20b452ca1d6",
+      "followup_test_commit": "5cdc53816e4c6844ca2cdd1f6fe58baf41bb02b9",
+      "workspace_doc": "plans/usable-release/WORKSPACE.md"
     }
   }
 }
