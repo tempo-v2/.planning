@@ -25,6 +25,9 @@ for repo, revision in checkpoint["repositories"].items():
     subprocess.run(["git", "-C", repo, "checkout", "--detach", revision], check=True)
 shutil.copyfile(planning / "workspace.template.toml", "Cargo.toml")
 shutil.copyfile(release / "workspace-04.Cargo.lock", "Cargo.lock")
+guidance = planning / "agent-guidance" / "AGENTS.md"
+if guidance.exists() and not Path("AGENTS.md").exists():
+    shutil.copyfile(guidance, "AGENTS.md")
 Path("Makefile").write_text("include tempo/tools/local.mk\n")
 PY
 ```
