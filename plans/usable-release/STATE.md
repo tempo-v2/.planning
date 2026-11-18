@@ -295,3 +295,24 @@ content wire 4 and SQLite schema 3.
 Use the [workspace lock](workspace-04.Cargo.lock) and the UI lock with the bundled
 Core 0.2.2 tarball. The Core tarball SHA-256 is
 `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+
+### Verified checkpoint 09 installation
+
+The qualified source trees matched the merged main branches. The archived
+executable, public UI files, workspace lock, UI lock and Core 0.2.2 tarball
+matched the pinned assembly. This reused the qualification above, including
+recovery from checkpoints 07 and 08. See the [checkpoint 09 manifest](manifest.json)
+for merge commits, locks and artifact hashes.
+
+Checkpoint 09 was initially installed by the session LaunchAgent on November 18.
+A foreground development launch subsequently displaced it. The foreground
+process and the loaded but stopped managed job were checked separately. The
+managed checkpoint was then restored on the original dataset. A fresh private
+SQLite backup and an isolated startup rehearsal verified integrity, foreign
+keys, and unchanged content, learning, configuration, active work and receipts.
+Chrome rendered Study on the rehearsal copy. After stopping the foreground
+listener, a fresh pre-install backup was taken. The managed listener served
+21 matching public assets, and read-only Study, progress, content and
+collection checks agreed on the dataset. The live database matched the
+pre-install backup row for row. No live grades or repertoire mutations were
+used for verification.
