@@ -795,3 +795,42 @@ both checkouts, and build and input failures. The five existing guard tests
 passed. The managed listener kept its PID. The current UI guard works with
 this launcher. [Tempo #16](https://github.com/tempo-v2/tempo/pull/16) contains
 commit `57215e4330f5e856c2d4cf5b1861eb853634e6f8`.
+
+### Single managed Tempo service
+
+The user selected one ordinary Tempo service. Plain `make start` now owns
+the registered Mac restart and replaces all positively identified same-user
+Tempo development listeners. The archived LaunchAgent determines the retained
+database and port. The assembled checkout determines the new runtime and UI.
+An explicit disposable database or alternate port belongs to `make start-dev`.
+A foreign listener or inconsistent registration blocks the cutover.
+
+Build and disposable migration rehearsal run before process shutdown. A
+changed build receives an immutable artifact directory and a stopped-time
+database backup before bootstrap. Verification uses the registered process,
+the bound port, the dataset, and exact served UI bytes. An unchanged build
+restarts without a second backup. Recovery preserves the live database
+and can restart the prior service while the schema remains compatible.
+
+| Component | Pull request | Commit |
+| --- | --- | --- |
+| Tempo | [#17](https://github.com/tempo-v2/tempo/pull/17) | `6dbf784f446380e7c3df4097cc5b49dc9bf4cd14` |
+| UI | [#11](https://github.com/tempo-v2/tempo-ui/pull/11) | `1ca0cd54d4242ad8fef5f61043b030dcef852669` |
+| Store | [Merged reset #9](https://github.com/tempo-v2/tempo-store/pull/9) | `73e9b2f9eebeb275b22bf4e5b64c063d2005c202` |
+| Queue | [Merged reset #5](https://github.com/tempo-v2/tempo-queue/pull/5) | `aed1e864e7a2e22f84f5fce9c616d643ca289000` |
+
+The remaining component trees, lock and Core package match the repertoire
+reset candidate. The optimized build and guarded UI build completed. All
+five guard tests and the Chrome repertoire journey on `make start-dev`
+passed. Independent checks exercised a pre-migration startup failure and
+a post-migration startup failure on disposable retained data.
+
+Installed and verified on the Mac on November 18. `make start` closed three
+development listeners and replaced checkpoint 12 with
+`workspace-5f8da4a18be2eec0cdf2` on 41822. A second run replaced the managed
+PID and left one Tempo listener and one cutover backup. The database reached
+schema 7 with both-direction row equality for every pre-upgrade table,
+clean SQLite integrity and foreign keys, and zero repertoire resets.
+Live Study status used the retained dataset and the served bundle included
+Reset progress. The stopped-time backup and prior registration are retained
+locally. No repository merge was performed by this task.
