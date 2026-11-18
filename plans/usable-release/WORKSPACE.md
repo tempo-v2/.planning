@@ -1,9 +1,13 @@
 # Tempo workspace and development
 
-Use the current merged Tempo and UI tooling together in an assembled
-workspace. The thin root Makefile includes `tempo/tools/local.mk`.
-`make start` uses port 41823 and `.local/development/study.sqlite`. For a
-separate existing development database, use `make start TEMPO_DB=PATH`.
+Use the matching Tempo and UI tooling in an assembled workspace. The
+root Makefile includes `tempo/tools/local.mk`. With the single-service
+launcher from [Tempo #17](https://github.com/tempo-v2/tempo/pull/17),
+`make start` builds the checkout and restarts the registered Mac service
+on its existing database and port. It closes verified development copies.
+`make start-dev` defaults to port 41823 and
+`.local/development/study.sqlite`. For a separate existing development
+database, use `make start-dev TEMPO_DB=PATH`.
 Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
 `make build-ui` checks the output before installing packages or building.
 See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
