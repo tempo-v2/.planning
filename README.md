@@ -1,16 +1,24 @@
 # Tempo 2 planning
 
-Cross-repository contracts, decisions, and setup for nine independent Git source
-trees. Seven Rust packages compose one application; the UI package is separate.
+Cross-repository contracts, decisions, and setup for independent Git source
+trees. Seven Rust packages compose one application; the UI and reusable Core
+packages are separate.
 
 ## Start here
 
+Start with the canonical agent guidance and the current release/workspace ledger.
+Identify the accepted behavior and selected runtime before choosing implementation
+inputs. A dependency diagram establishes allowed imports; it does not authorize
+a consumer to invent policy from an available field.
+
 | Document | Purpose |
 | --- | --- |
-| [READING_GUIDE.md](READING_GUIDE.md) | Concept-to-file map, suggested reading order, and how to use the nearby examples |
+| [agent-guidance/AGENTS.md](agent-guidance/AGENTS.md) | Current working instructions, including behavior authority before implementation |
+| [plans/usable-release/STATE.md](plans/usable-release/STATE.md) and [WORKSPACE.md](plans/usable-release/WORKSPACE.md) | Release history, source/artifact handoff and scope to reconcile with the current task |
+| [READING_GUIDE.md](READING_GUIDE.md) | Scaffold-era concept map; use current component paths and scope |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Ownership and allowed dependency graph |
-| [INTERFACES.md](INTERFACES.md) | Minimal complete interfaces, transaction flow, real/fixture inventory and replacement criteria |
-| [BEHAVIOR.md](BEHAVIOR.md) | Shared expectations B01–B15; requirements versus working defaults |
+| [INTERFACES.md](INTERFACES.md) | Historical v0.1 scaffold interfaces and replacement rationale; not the current wire inventory |
+| [BEHAVIOR.md](BEHAVIOR.md) | Historical scaffold expectations B01–B15; some learning policies were superseded |
 | [contracts/dependencies.json](contracts/dependencies.json) | Machine-readable dependency rules |
 | [VERIFICATION.md](VERIFICATION.md) | Source baseline, executed checks and remaining limits |
 
@@ -31,6 +39,21 @@ Run those commands from the parent containing the sibling repositories. For a
 fresh machine, clone `.planning` into `~/Developer/tempo-v2/.planning`, then run
 its bootstrap with `~/Developer/tempo-v2` as the destination. `--protocol ssh`
 selects SSH for new clones; existing valid origins are preserved.
+
+Copy the [canonical agent guidance](agent-guidance/AGENTS.md) into the assembled
+workspace before agent work. From the workspace root:
+
+```sh
+test -e AGENTS.md || cp .planning/agent-guidance/AGENTS.md AGENTS.md
+```
+
+If a root copy already exists, merge the canonical guidance into it and retain
+any applicable local instructions. Update the tracked canonical copy when the
+shared guidance changes.
+
+Read the tracked canonical file at the start of each task even when a copied
+root file already exists. The planning repository's root AGENTS.md points to
+that one source. Changes here are not automatically installed on another machine.
 
 Bootstrap creates a local virtual workspace and local Cargo patches for the
 unpublished sibling packages. Package manifests retain standalone metadata and

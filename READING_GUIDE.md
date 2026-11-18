@@ -1,5 +1,13 @@
 # Reading and extending Tempo 2
 
+**Scope: scaffold-era reading guide.** The branch names, component paths and UI
+ownership below describe that refactor. Begin current work with
+[canonical agent guidance](agent-guidance/AGENTS.md) and the current
+release/workspace ledger. Resolve the actual component/source revision before
+following a path; application UI/controller/validator work belongs to Tempo UI,
+while Core supplies reusable components. These historical examples do not
+independently authorize a product rule for another runtime.
+
 The file list is an outline of the concepts. Start with the question you have,
 open its named file, read the short module documentation, then read or run the
 `#[cfg(test)]` usage scenario in that same file. Root `lib.rs` files and JS barrels

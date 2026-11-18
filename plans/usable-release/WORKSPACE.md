@@ -25,6 +25,9 @@ for repo, revision in checkpoint["repositories"].items():
     subprocess.run(["git", "-C", repo, "checkout", "--detach", revision], check=True)
 shutil.copyfile(planning / "workspace.template.toml", "Cargo.toml")
 shutil.copyfile(release / "workspace-04.Cargo.lock", "Cargo.lock")
+guidance = planning / "agent-guidance" / "AGENTS.md"
+if guidance.exists() and not Path("AGENTS.md").exists():
+    shutil.copyfile(guidance, "AGENTS.md")
 Path("Makefile").write_text("include tempo/tools/local.mk\n")
 PY
 ```
@@ -73,3 +76,16 @@ PY
 cargo build --locked -p tempo
 make build-ui
 ```
+
+## Build the shared Study candidate
+
+Use a separate assembled workspace with the revisions in the [shared Study
+ledger](STATE.md#shared-study-decision-contracts-november-18-2026). For each
+changed component, clone its repository and fetch its linked PR head using
+`git fetch origin refs/pull/PR_NUMBER/head`. Check out the listed commit. For
+reused components, check out the listed main commit.
+
+Use the workspace template, Cargo lock and Core package described above.
+Run `cargo build --release --locked -p tempo` and, in the UI repository, run
+`npm ci` and `npm run build`. For local qualification, serve that UI build with
+the matching binary and a disposable SQLite database.

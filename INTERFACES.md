@@ -2,6 +2,20 @@
 
 Contract version 0.1 · 2026-11-17
 
+**Scope: historical scaffold.** This records the first executable composition,
+including wire version 1, its four-command surface, fixture implementations and
+the earlier placement of controller/validator code in Core. It is not the current
+production wire inventory or ownership map. Tempo UI now owns application
+interaction and recovery; Core supplies reusable presentation components.
+
+For new work, begin with [canonical agent guidance](agent-guidance/AGENTS.md),
+the current release/workspace ledger and the owning component's accepted contract
+at the selected source revision. A “safe view” can contain identity, authoritative
+state/results, delivery facts and display metadata. Visibility to a consumer does
+not make those values interchangeable or authorize new policy based on them.
+Retain the historical examples below as scoped evidence rather than copying
+their defaults into a different runtime.
+
 ## Purpose and acceptance
 
 This increment connects every current component through executable public

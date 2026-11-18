@@ -101,3 +101,197 @@ The isolated release assembly passed 241 Rust tests, 23 UI tests, one Core packa
 Twenty-one of the 22 rebuilt UI files matched the running server byte for byte. The JavaScript diff consisted of the existing large-PGN fix, which removes the two upload forms' 256 KiB guards. The running instance and its dataset were left in place.
 
 Review all ten PRs before merging as a coordinated set. Merge the component PRs and then the planning PR. Use the combined source set for the next build. Installation is a separate step.
+## November 18 UX candidate
+
+The packet pins were comparison points. At intake the workspace used those
+published heads plus local source for Core 0.2.2, board reply animation and
+audio, tactic theme settings, and quota-exempt personal captures. The foreground
+listener on port 41822 ran the workspace debug executable and served the
+workspace UI matching checkpoint 06. The checkpoint 06 LaunchAgent was idle.
+The served JavaScript SHA-256 was
+`392479a12f0af0bc239615de87d2c263d4660ca6c04e898e57172a0b7e645999`.
+The foreground executable was distinct from checkpoint 06's archived executable.
+The listener responded to a Study status read at intake and closeout. The
+private dataset path, content and learning were preserved.
+
+The candidate adopts the current runtime and bundled Core package in isolated
+source trees. Existing working copies and untracked catalog recovery tools
+remain in place. During publication the application, Chess, UI and Planning
+integration branches advanced with the large-PGN change above. The candidate
+includes those audited changes and keeps the 2 MiB content-command limit and
+per-game requirements.
+
+| Packet | Reconciliation and candidate behavior |
+| --- | --- |
+| 01 | **Partial at intake.** Sticky assessment and exact retries already existed. The UI now reads the terminal grade, pauses after correction, uses separate Practice and Teach wording, and continues after a confirmed lesson with independent Next recovery. Enter is scoped to the available primary action. |
+| 02 | **Partial at intake.** Reused versioned Core and existing optional audio, move cues and notices. Added flip, saved theme/piece/volume preferences and shortcut help. Navigation, pausing or inspecting cancel automatic continuation. |
+| 03 | **Implemented.** Separate progress read reports due work, required re-teaching, pending scheduled correction, and accepted introductions against the effective limits. It uses the same day, admission facts, and Queue projection as selection. Personal captures retain their existing quota exemption. Completed frontier positions may expose more lessons. |
+| 04 | **Implemented.** Move history is derived from the disclosed prefix of the issued definition and the exact reply cursor. History input is read-only, with a return to the same live attempt. Opening context uses the known position and existing teaching context. Full route reconstruction is deferred per packet scope. |
+| 05 | **Implemented.** Browse label/source and learning filters in 30-item keyset pages; detail shows stored starting position and provenance. Explicit solution reads are blocked for an active target. Theme and rating normalization are deferred per packet scope. |
+| 06 | **Partial at intake.** Reused the legal parser, capture preview token, and durable exact save. The UI uses numbered SAN and selected-line replay, bulk selection of valid rows, equivalence checks after row changes, and preserves a newer draft after an older save resolves. |
+
+### Checks and operating evidence
+
+- The optimized locked build and isolated UI build passed, with 24 UI tests,
+  66 Chess tests, eight focused application contract tests, four HTTP/boundary
+  checks, strict Clippy for the changed backend owners, and the dependency
+  direction check. Core's source rebuilt to the exact installed-package tarball
+  consumed by the UI. Practice, rollover, exact receipt replay and learning
+  preservation were verified on disposable data.
+- Chrome checked terminal clean and corrected tactics, blocked active solutions,
+  the played-move cursor, return to the live board, preference reload, lesson
+  acknowledgement delivery loss followed by failed Next, and black-to-move
+  capture with delayed delivery and a newer draft. The journeys used disposable
+  data at 1280 and 390 px widths.
+- Independent review led to neutral reveal wording, retention of other capture
+  row drafts, and a fix for a successful Retry Next leaving Study paused. A
+  stale cross-tab solution response is discarded when an activity change is
+  observed. The backend checks the current active target on every detail read.
+- On a disposable copy with 17,657 tactics, one optimized run measured about
+  207 ms for Next when selection was required, 213 ms for full progress,
+  9 ms for an unchanged progress stamp, and 42–66 ms for the first two unfiltered
+  30-item collection pages. A due query took 103 ms and a no-match source search
+  took 196 ms. Reads on transition share Queue policy, and periodic stamped
+  checks avoid catalog reads when the dataset/day/revision match. Times are
+  single local observations.
+- The UX branches are open drafts against the current integration branches.
+  Coordinated review is pending. The existing live service remains on its
+  observed foreground binary and checkpoint 06 UI; the UX candidate was
+  built and verified on disposable instances.
+
+### Matched source and artifacts
+
+Use the pinned sources together. The existing
+[workspace build instructions](WORKSPACE.md) and `workspace-04.Cargo.lock`
+apply when reconstructing the candidate with these revisions in a separate
+directory. The Cargo lock SHA-256 remains
+`00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042`.
+Use the UI lock and the vendored Core package; the wire-4 history field is
+optional and the new reads are separate from existing command receipts.
+
+| Repository | Candidate head | Pull request |
+| --- | --- | --- |
+| tempo | `cbb0a3e36b39c8ebbce379de88063aaacf6c2dcb` | [#5](https://github.com/tempo-v2/tempo/pull/5) |
+| tempo-ui | `d782e748b734fd2df155a39fd3025339792c5fd9` | [#2](https://github.com/tempo-v2/tempo-ui/pull/2) |
+| tempo-core-components | `d30422b9bd6a972c12189200ac6eb4ca0114239c` | [#4](https://github.com/tempo-v2/tempo-core-components/pull/4) |
+| tempo-chess | `b81fea2f1ed94a83ace53a094a78fb0f9a022153` | [#3](https://github.com/tempo-v2/tempo-chess/pull/3) |
+| tempo-store | `d4e731c4bef33fdec560aa7f409bb3e974a69393` | [#2](https://github.com/tempo-v2/tempo-store/pull/2) |
+| tempo-queue | `3009a4b6c450305abbc26f3af396f301cdffb38c` | [#1](https://github.com/tempo-v2/tempo-queue/pull/1) |
+| tempo-learning | `e5bae3eb19d9aa74d9b7ca01882f2078ae1ff569` | [#1](https://github.com/tempo-v2/tempo-learning/pull/1) |
+| tempo-study | `c0d4436987b67546f9112728893991d454e33030` | Reused |
+| tempo-types | `8662444cfb1ed1d2710c2bd95c4939473d6c0307` | Reused |
+
+| Candidate artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo executable | `f247b70cafbe12bdf3dad3c8500b1863e804c830b5001bee108cda85d9165ee8` |
+| UI JavaScript | `a7399f02a638e8e2189a8a04444ad4efddba2b7612bd36faa223ec5f9002e61c` |
+| UI stylesheet | `1dd1a2da646816cf0f6d3c58edb9325e8b00fa0f884b25bb98e5816d965f0eb1` |
+| UI lockfile | `c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c` |
+| Core 0.2.2 UI tarball | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+
+
+### Release review and installation handoff
+
+The second review found that the capture preview flipped after each replayed
+ply. The UI fix anchors it to the solver's starting side. Chrome verified
+black-side orientation after the first move. The full locked Rust workspace
+suite and the final UI and Chrome checks passed. On a private copy of the
+live schema-3 database, startup and Study, progress and collection reads
+preserved every row.
+
+The authorized cutover uses the matched checkpoint under
+`.local/usable-release/checkpoints/07-ux`. Its private `verification.json`
+records the observed installed artifacts and Study check. Its `source.json`
+records the verified merged source trees. Startup uses the original database
+path. The pre-install backup and previous artifacts are retained privately.
+
+## Shared Study decision contracts, November 18, 2026
+
+Checkpoint 08 installed Study wire 5 and the optional, display-only
+`exercise_name`. Checkpoint 07 carried the richer Study experience on the
+release branches and used wire 4. The coordinated candidate starts from the
+current main branches and reconciles the accepted UX changes as one source set.
+
+| Behavior | Basis and owner | Decision inputs | Independent of | Lifetime |
+| --- | --- | --- | --- | --- |
+| Continue after a clean Test or Practice. Hold a corrected completion for explicit Continue. Teach requires the learner's acknowledgement and then loads Next. | Shared Study workflow requested for the local daily runtime. UI owns navigation and cues. Study owns whole-attempt assessment, which Tempo projects. | Issued activity, completion, whole-attempt outcome, settled delivery and current view. UI also honors stop, inspection, dialogs and navigation. | Exercise name, source attribution and correctness of only the final move. | Study persists the sticky assessment and Tempo reprojects the issued attempt on replay. The UI timer belongs to the current display and is canceled when that display is left. |
+| Retry an unresolved command exactly. After an accepted Answer or Acknowledge followed by failed Next, only retry Next. | Existing local Study exact-command contract. The UI controller owns delivery and the enabled recovery actions. | Controller busy state, the pending command, storage availability, authoritative stale error codes and validated replies. | Error wording and exercise metadata. | The immutable mutation envelope survives reload and releases. Next is retried in the current UI, and startup can request Next after a resolved mutation. |
+| Recover a previously accepted allowance with its original summary and one durable effect. | Local Study wire upgrade and existing exact-receipt contract. Application owns response compatibility, Store owns atomic receipts and allowance writes. | Matching dataset, submission and fingerprint, receipt kind and recognized saved Empty version. | Today's clock, queue, catalog and allowances. | Historical wire-4 and current wire-5 replies can coexist in SQLite. Only the replay header is adapted. Content replies remain wire 4. |
+
+Expected consumer outcomes were specified before changing the workflow. With a
+fixed exercise, clock and command IDs, an unchanged, renamed or omitted label
+produces identical commands and database effects. Changing the whole-attempt
+outcome to Again holds the completion even if the last move is correct. A
+reproduced Teach move alone writes nothing. Inject loss after accepting Answer
+or Acknowledge and expect the same command on Retry. Separately fail Next and
+expect the saved result and only Next on Retry. Replay a real wire-4 allowance
+from the previous installed backend after rollover and compare the saved reply,
+both days' allowances, revision and receipt count.
+
+### Reconciliation
+
+| Finding | Disposition |
+| --- | --- |
+| F1, continuation and outcome | Main already supplied the neutral name and wire 5. The reconciled UI also carries the UX branch's whole-attempt outcome, explicit acknowledgement and separate Next, played history, progress, preferences, collection and capture improvements. Exercise names are display-only. The prompt supplies move progress for any activity. |
+| F2, accepted older allowance reply | Repaired in the application replay path. Existing typed attempt receipts already reprojected pinned attempts. Content saves already used wire 4 on both sides. The Study and both content pending-envelope formats are unchanged. |
+| F3, prose-driven controls | Repaired in the UI controller and its consumers. Storage and refresh facts, current delivery status and the pending command determine available recovery actions. |
+| F4, theme admission and transfer | Still present. The application converter `tools/tactics/convert.py` gives catalog-directory imports richer membership provenance than repository packs. `application/tactic_preferences.rs` decodes it and passes ranks to Queue for unseen admissions. Explicit theme selections can exclude items without recognized metadata. Due work and practice remain eligible under their existing policies. `apply_tactic_transfer` preserves existing items during reimport. The next contract should define validated membership at import, what reimport can enrich and how existing learning is preserved. |
+| F5, repertoire replacement and identity | Still present. Application `import_pgn/apply_catalog` can reset the full Learning state on semantic changes, while browser replacement uses `DailyLearning::changed_answer` and preserves lifetime introduction evidence. The local transfer command is tactics-only. The legacy Chess `RepertoirePgnParser` uses one string as ID and label, while `compile_repertoire` separates them. Before adding a caller, define generic merge versus replacement semantics, require the appropriate Learning transition and narrow the legacy parser contract. |
+
+### Verification
+
+- The locked workspace passed 243 Rust tests and doctests with Rust 1.98.1.
+  The UI passed 25 tests and built on Node 26.12.0 from the lock and bundled
+  Core 0.2.2. Seven transport and Core boundary checks passed, along with the
+  dependency-direction check.
+- Real Chrome and SQLite exercised the same seeded attempt and browser submission
+  IDs across original, changed and omitted names for clean and corrected Test,
+  clean and corrected Practice, and Teach. Commands, receipt identities,
+  grades, learning and allowance effects matched across variants. The candidate
+  passed with the real clock on the same study day, comparing without elapsed
+  milliseconds. A separate disposable build changed only the clock to a
+  fixed instant and passed with exact row comparisons.
+- A lost response after accepted Answer or Acknowledge required repeating the
+  exact command. A subsequent interrupted Next displayed the saved result and
+  Retry sent only Next. Chrome also checked stale recovery with empty and changed
+  message text, and exercised move history, progress, preferences, collection
+  and the capture draft.
+- Archived checkpoint 07 (wire 4) and checkpoint 08 (wire 5) binaries created
+  database fixtures using the real HTTP path. Both archived UIs produced their
+  own pending allowance envelopes after loss of an accepted reply. The candidate
+  loaded disposable copies and recovered those envelopes, typed Answer and
+  Acknowledge receipts, and serialized repertoire and capture saves. Replays
+  were compared before allowing Next to run. SQLite allowances, revision,
+  receipts, assessments, attempts and learning were unchanged by the replays.
+  Both archived clients also left an Answer pending before reaching the server.
+  The candidate accepted each original command once and replayed it without a
+  second grade or receipt.
+- The cross-midnight regression inserted the historical wire-4 receipt shape
+  through Store, advanced the app clock one day and recovered the original
+  summary twice. The same-version cross-midnight test also passed. The archived
+  binary checks and clock-controlled SQLite tests provide separate evidence.
+- The independent review checked contract authority, branch reconciliation and
+  the implementation. Review corrected a missing integration import, Refresh
+  being hidden by empty error text, and timer rearming after failed manual Next.
+
+The running listener still points to checkpoint 08. Candidate qualification
+used disposable services and databases. This release set keeps Study wire 5,
+content wire 4 and SQLite schema 3.
+
+### Matched source and artifacts
+
+| Repository | Candidate commit | Pull request |
+| --- | --- | --- |
+| tempo | `4c2b26bcaaf1dc13a300c3f6de4c265c5dce7a7a` | [#8](https://github.com/tempo-v2/tempo/pull/8) |
+| tempo-ui | `d09620a123b8031fa30d183e3db41f0df478dde0` | [#5](https://github.com/tempo-v2/tempo-ui/pull/5) |
+| tempo-store | `b15562b97d3db9606f6cd28a2f4d6c4b64145169` | [#5](https://github.com/tempo-v2/tempo-store/pull/5) |
+| tempo-chess | `beecfd991ae2027975c1c8cc3d767671bdd80260` | [#5](https://github.com/tempo-v2/tempo-chess/pull/5) |
+| tempo-queue | `1a1dfdebe97a14662b402a7a4715cb85c2c81285` | [#3](https://github.com/tempo-v2/tempo-queue/pull/3) |
+| tempo-learning | `10fd7783685a70e05f3ae2a606d8d25deaddf1ef` | Reused main |
+| tempo-study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Reused main |
+| tempo-types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Reused main |
+| tempo-core-components | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Reused main |
+
+Use the [workspace lock](workspace-04.Cargo.lock) and the UI lock with the bundled
+Core 0.2.2 tarball. The Core tarball SHA-256 is
+`4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
