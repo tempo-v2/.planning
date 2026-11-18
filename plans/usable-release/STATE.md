@@ -377,3 +377,32 @@ reloaded and sent the exact original request. It rendered the original success
 reply while the later rename, content revision and receipt count stayed intact.
 
 F4 theme membership remains a separate deferred task.
+
+### Verified checkpoint 10 installation
+
+The independent reviewer approved both exact code heads. The optimized
+executable passed their HTTP, SQLite and Chrome tests with the archived
+checkpoint 09 UI. The merged main trees matched the qualified heads.
+[Tempo #9](https://github.com/tempo-v2/tempo/pull/9) merged as
+`80d5abc63c95b003fff1da56c9dadc02a576dd54`,
+[Chess #6](https://github.com/tempo-v2/tempo-chess/pull/6) as
+`e454bcfe7d90c1f7cbcff02325f09b23944d31c9`, and
+[Planning #8](https://github.com/tempo-v2/.planning/pull/8) as
+`2fa0aef4deb34f89395489377768b8c51a1eb70d`.
+
+The [checkpoint 10 manifest](manifest.json) records the exact component
+and artifact combination. The release reuses the checkpoint 09 UI, Core 0.2.2
+and both locks. Checkpoint 09 also rendered the existing live attempt in
+Chrome using a read-only Resume before cutover.
+
+A fresh private SQLite backup passed integrity and foreign-key checks. An
+isolated startup rehearsal preserved all rows and rendered Study in Chrome.
+After a second private backup at cutover, the macOS session LaunchAgent
+started checkpoint 10 on the original dataset. The listener served
+21 matching public assets. Study, progress, repertoire and collection
+reads agreed on the retained dataset, and Chrome rendered the existing
+attempt using read-only Resume. The live database matched the pre-install
+backup row for row. Prior release artifacts and the previous LaunchAgent
+configuration remain available privately for recovery.
+
+F5 is closed. F4 remains deferred.
