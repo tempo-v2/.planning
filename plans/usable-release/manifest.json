@@ -365,5 +365,112 @@
       "tempo-ui": 7,
       "tempo-store": 6
     }
+  },
+  "12-game-evidence": {
+    "repositories": {
+      ".planning": "30e713b1fa34f21d5386585e426ba36d3364c7c8",
+      "tempo": "2d171ec3f3e253d7e282701eca216c8491d11b43",
+      "tempo-ui": "61aff22900d1985528bd49b94aa0385c3166f2dd",
+      "tempo-store": "36a2131f1b01122b9fa8e125a824fb5d0cd41b0d",
+      "tempo-chess": "d066844c83648a948ecbf47e11eaed49cdb64367",
+      "tempo-queue": "31cb46dfc7e3f513c22aaf33996d18c9498c5ab6",
+      "tempo-learning": "101ec4245173f4e7afa77e074ef3a665c63e4317",
+      "tempo-study": "73b2482dfb2ae652220727b87451fdb4a5110807",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-core-components": "e9a1d160a729bc9fbbddaf16427625301cc9498a"
+    },
+    "reviewed_heads": {
+      "tempo-chess": "427bc84f6303d35818ae4ead8a96d41fd58419a7",
+      "tempo-learning": "9d24ad171a4d682929a812344397eb2e05be05ba",
+      "tempo-queue": "aa49bdfed6bdbbea7178462f4e79748efef8e3f8",
+      "tempo-store": "249a12a9f0ae880f6000da7de9fb94d8603b68fb",
+      "tempo-ui": "e21ace64e49b64a6a4be336a7025861961400c65",
+      "tempo": "9caf8a9ac01b71662694e4a9b778f6fcd2d30286"
+    },
+    "pull_requests": {
+      "tempo-chess": 7,
+      "tempo-learning": 3,
+      "tempo-queue": 4,
+      "tempo-store": 7,
+      "tempo-ui": 8,
+      "tempo": 13,
+      ".planning": 12
+    },
+    "study_wire_version": 5,
+    "content_wire_version": 4,
+    "dataset_schema": 6,
+    "portable_snapshot_version": 2,
+    "core_package": "0.2.2",
+    "core_tarball_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+    "workspace_inputs": {
+      "workspace_manifest": {
+        "path": ".planning/workspace.template.toml",
+        "sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072"
+      },
+      "workspace_lock": {
+        "path": ".planning/plans/usable-release/workspace-04.Cargo.lock",
+        "sha256": "00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042"
+      },
+      "ui_lock": {
+        "path": "tempo-ui/package-lock.json",
+        "sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c"
+      }
+    },
+    "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: aarch64-apple-darwin\nrelease: 1.98.1\nLLVM version: 22.1.8",
+    "node": "v26.12.0",
+    "artifacts_sha256": {
+      "Cargo.lock": "00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042",
+      "tempo": "f8627daf8f5f9a2cd46d255ef29482340ca2279ad1431e68ca8e051bb02ad3c5",
+      "ui/assets/app.css": "19ac7f5717accb3bbe11efe8582c6b02a71b4a4ff12d73ced085f43b6f40b825",
+      "ui/assets/app.js": "57f748d5947546d055b566c4d668a57a283890ae57e7bfcab7650f3cab866630",
+      "ui/assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+      "ui/assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+      "ui/assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+      "ui/assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+      "ui/assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+      "ui/assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+      "ui/assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+      "ui/assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+      "ui/assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+      "ui/assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+      "ui/assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+      "ui/assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+      "ui/assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+      "ui/assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+      "ui/assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+      "ui/assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+      "ui/assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+      "ui/assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+      "ui/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+      "ui/index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+    },
+    "observed_installation": {
+      "date": "2026-11-18",
+      "mode": "macOS session LaunchAgent",
+      "port": 41822,
+      "checkpoint": "12-game-evidence",
+      "schema_upgrade": [
+        4,
+        5,
+        6
+      ],
+      "database_inode_preserved": true,
+      "database_rows_and_prior_learning_values_preserved": true,
+      "targets_with_backfilled_test_coverage": 172,
+      "sqlite_integrity_and_foreign_keys": true,
+      "read_only_study_resume": true,
+      "read_only_repertoire_document": true,
+      "read_only_games": true,
+      "chrome_read_only_study_games_and_editor": true,
+      "http_files_verified": 22,
+      "previous_release_study_and_editor_envelopes_recovered": true,
+      "recurring_game_refresh": false
+    },
+    "recovery": {
+      "previous_checkpoint": "11-repertoire-editor",
+      "previous_checkpoint_schema": 4,
+      "previous_registration_and_consistent_pre_cutover_backup_retained": true,
+      "current_checkpoint_required_for_schema_6": true
+    }
   }
 }
