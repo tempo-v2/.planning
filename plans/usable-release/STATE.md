@@ -151,7 +151,7 @@ optional and the new reads are separate from existing command receipts.
 | Repository | Candidate head | Pull request |
 | --- | --- | --- |
 | tempo | `cbb0a3e36b39c8ebbce379de88063aaacf6c2dcb` | [#5](https://github.com/tempo-v2/tempo/pull/5) |
-| tempo-ui | `f4c39cf40e4f1b74feb117dbad0806f084ad5857` | [#2](https://github.com/tempo-v2/tempo-ui/pull/2) |
+| tempo-ui | `d782e748b734fd2df155a39fd3025339792c5fd9` | [#2](https://github.com/tempo-v2/tempo-ui/pull/2) |
 | tempo-core-components | `d30422b9bd6a972c12189200ac6eb4ca0114239c` | [#4](https://github.com/tempo-v2/tempo-core-components/pull/4) |
 | tempo-chess | `b81fea2f1ed94a83ace53a094a78fb0f9a022153` | [#3](https://github.com/tempo-v2/tempo-chess/pull/3) |
 | tempo-store | `d4e731c4bef33fdec560aa7f409bb3e974a69393` | [#2](https://github.com/tempo-v2/tempo-store/pull/2) |
@@ -163,7 +163,23 @@ optional and the new reads are separate from existing command receipts.
 | Candidate artifact | SHA-256 |
 | --- | --- |
 | Optimized Tempo executable | `f247b70cafbe12bdf3dad3c8500b1863e804c830b5001bee108cda85d9165ee8` |
-| UI JavaScript | `10053c20ab59bbbea6bb2f5eb341dd354207c4f3baa75517313a517f07774283` |
+| UI JavaScript | `a7399f02a638e8e2189a8a04444ad4efddba2b7612bd36faa223ec5f9002e61c` |
 | UI stylesheet | `1dd1a2da646816cf0f6d3c58edb9325e8b00fa0f884b25bb98e5816d965f0eb1` |
 | UI lockfile | `c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c` |
 | Core 0.2.2 UI tarball | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+
+
+### Release review and installation handoff
+
+The second review found that the capture preview flipped after each replayed
+ply. The UI fix anchors it to the solver's starting side. Chrome verified
+black-side orientation after the first move. The full locked Rust workspace
+suite and the final UI and Chrome checks passed. On a private copy of the
+live schema-3 database, startup and Study, progress and collection reads
+preserved every row.
+
+The authorized cutover uses the matched checkpoint under
+`.local/usable-release/checkpoints/07-ux`. Its private `verification.json`
+records the observed installed artifacts and Study check. Its `source.json`
+records the verified merged source trees. Startup uses the original database
+path. The pre-install backup and previous artifacts are retained privately.
