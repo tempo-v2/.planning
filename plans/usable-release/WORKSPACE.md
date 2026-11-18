@@ -1,4 +1,20 @@
-# Reconstruct checkpoint 04
+# Tempo workspace and development
+
+Use the current merged Tempo and UI tooling together in an assembled
+workspace. The thin root Makefile includes `tempo/tools/local.mk`.
+`make start` uses port 41823 and `.local/development/study.sqlite`. For a
+separate existing development database, use `make start TEMPO_DB=PATH`.
+Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
+`make build-ui` checks the output before installing packages or building.
+See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
+for development and the explicit installed lifecycle.
+
+The instructions below reproduce historical source pins in isolated
+directories. Keep their database and build outputs separate and use current
+tooling for development startup. In these older trees, `make start`
+can displace installed Tempo.
+
+## Reconstruct checkpoint 04
 
 The [manifest](manifest.json) pins the component commits, toolchain, Core tarball and original installed artifact hashes. The [ledger](STATE.md) records which evidence applies to checkpoint 04.
 
@@ -39,7 +55,9 @@ cargo build --release --locked -p tempo
 make build-ui
 ```
 
-For a foreground instance, run `make start`. In a fresh workspace this creates a new local database if no default file exists. To continue studying with an existing database, supply its actual path with `make start TEMPO_DB=/path/to/study.sqlite`. The original binary and served web hashes identify the recorded Mac installation. A build from a different checkout path or host can have different native binary bytes.
+The original binary and served web hashes identify the recorded Mac
+installation. A build from a different checkout path or host can have
+different native binary bytes.
 
 See the [Mac operations and recovery instructions](https://github.com/tempo-v2/tempo/blob/cf94c79cc69820e1819ad32a4112a20b452ca1d6/OPENING.md).
 

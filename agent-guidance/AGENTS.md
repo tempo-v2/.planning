@@ -61,7 +61,7 @@ Establish the active contract and its scope before using a historical example or
 
 Use the latest agreed implementation as the base. Reference SHAs in an old prompt are comparison evidence, not instructions to reset or downgrade newer code. A default branch is not automatically the active integration baseline.
 
-Preserve unrelated and in-progress changes. Do not reset, stash, delete, overwrite or stage another worker's files simply to make the checkout clean. Use a task branch/worktree and explicit file ownership where needed. Separate development/test outputs from artifacts served by the running installation.
+Preserve unrelated and in-progress changes. Do not reset, stash, delete, overwrite or stage another worker's files simply to make the checkout clean. Use a task branch/worktree and explicit file ownership where needed. Separate development/test outputs from artifacts served by the managed installation. Use the guarded development entry points for local startup and build. Installed lifecycle authority comes from the managed registration and explicit release operation, including while the service is stopped.
 
 Reconcile reported new work once, narrow the remaining task, and proceed. Do not repeat repository-wide discovery after every small change.
 

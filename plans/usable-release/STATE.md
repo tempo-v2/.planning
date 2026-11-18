@@ -406,3 +406,53 @@ backup row for row. Prior release artifacts and the previous LaunchAgent
 configuration remain available privately for recovery.
 
 F5 is closed. F4 remains deferred.
+
+
+## Development lifecycle correction
+
+Checkpoint 10 remains the installed runtime. The earlier foreground launch
+displaced checkpoint 09. The incident evidence does not identify the exact
+command that caused it.
+
+| Operation | Basis and owner | Inputs and durable effects |
+| --- | --- | --- |
+| Development build/start | Packet A, assembled workspace launcher and shared preflight | Current registered plist and loaded job, resolved file and output identity, selected development database and local bind availability. An occupied port fails before build or initialization. A fresh default may be initialized. An explicit missing path requires `init-dev`. |
+| Foreground shutdown | Foreground terminal | Ctrl+C reaches the process launched for this command. Development commands do not signal existing listeners. |
+| Installed restart or release | Explicit Mac managed lifecycle | Registered artifact pair and retained database. Release uses qualified pins, backup and rehearsal. A stopped job retains the same resource protections. |
+
+The canonical Mac registration is read even in an alternate worktree. A
+different port, path spelling or worktree does not make a managed resource
+available for development. A file or directory alias and an unreadable
+registration cause refusal before the guarded operation writes. The shared
+guard also runs for a direct UI build.
+
+### Completion and editor handoff
+
+Tooling updated; checkpoint 10 runtime retained. [Tempo #10](https://github.com/tempo-v2/tempo/pull/10)
+merged as `0a2c0af9102983749b7f345aa0154b1554c008bb` and
+[UI #6](https://github.com/tempo-v2/tempo-ui/pull/6) merged as
+`9e47931668db1fbe6fcfe1dfab662f3584a56364`. Both published PR
+diffs and merged trees matched the checked branches. The Mac workspace's
+root Makefile includes the merged launcher. The matching UI guard and
+operating instructions were adopted as scoped files so existing working
+changes could stay in place.
+
+Use `make start` on 41823 with the separate default development database.
+Use `make init-dev TEMPO_DB=PATH` to create a disposable explicit database,
+then `make start TEMPO_DB=PATH TEMPO_PORT=PORT`. Use `make build-ui` for an
+output-only build. Installed use remains on 41822 through the session
+LaunchAgent. Explicit managed startup and release rehearsal are described
+in [Tempo's operating instructions](https://github.com/tempo-v2/tempo/blob/0a2c0af9102983749b7f345aa0154b1554c008bb/OPENING.md#installed-use-on-the-mac).
+
+The independent report approved the code after five focused guard tests
+and real Make and UI entry point checks. The checks covered occupied
+ports, unloaded and uninspectable registrations, database and output
+aliases, alternate worktrees, and parallel Make. A new explicit SQLite
+database passed integrity checks. The development server started twice
+on a single disposable database using the adopted workspace command,
+with foreground shutdown between runs. The installed PID, database
+identity and registration stayed unchanged. The backend and all 21
+served UI assets matched the checkpoint 10 manifest before, during and
+after the checks. Development used the disposable dataset throughout.
+The editor can use these commands and the checkpoint 10 manifest for
+the previous-release recovery rehearsal.
