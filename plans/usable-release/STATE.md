@@ -532,3 +532,114 @@ backup and preserve any later accepted work if recovery is needed.
 
 F5 remains closed. F4 theme membership, visual editing and game or
 feedback integration are outside this checkpoint.
+
+## Game evidence for daily Study
+
+Scope is the local daily runtime and the November 18 game-evidence packet.
+The candidate starts from current component mains including the PGN editor,
+guarded development lifecycle, and offline tactic tooling.
+
+| Behavior | Basis and owner | Inputs, independence and lifetime |
+| --- | --- | --- |
+| Import completed games | Packet, provider adapters and Tempo | Explicit source, account or PGN learner, repertoire and bounded dates. Source plus stable provider ID identifies a game. Local PGN identity derives from normalized played game facts. Preserve participants, played mainline, source time interval and separate ingestion time. Labels do not identify players or repertoires. |
+| Compare covered decisions | Packet, Chess | Explicit repertoire ID and its configured color, learner identity and legal played mainline. Active canonical position identifies each target within that repertoire. Record match or deviation with target/answer version and ply. A comparison keys on game, learner, repertoire and compared semantic facts. Display changes preserve identity. A new answer version may yield new historical evidence. |
+| Project relevance | Packet, Evidence and Learning | Evidence retains observations and reduces bounded current-version facts. Learning alone authorizes a coalesced Test obligation from a provably post-teaching miss whose occurrence upper bound is at or after the latest qualifying assessed Test's issuance. Unknown chronology yields record-only for learned material. Use strict comparisons for chronology and the accepted Test's configured study day for target-wide cadence across answer changes. Test issuance before the game leaves the obligation pending, while changing only import timestamp does not change coverage. |
+| Accept and select work | Packet, Learning, Store and Queue | Ordinary Test alone schedules and records authoritative issued/assessed coverage atomically with any request resolution. Persist answer-version requests and coverage across restart and portable restore. Queue prioritizes actionable requested Tests, then ordinary due work and allowed opening frontiers using compiled route membership. Current attempts, quotas, cadence and answer protection remain authoritative. |
+
+### Games usage and recovery
+
+Open Games from Study. Choose Lichess or Chess.com, enter the learner's
+public account name, choose the repertoire for the learner's color, and
+select up to 31 UTC dates. Refresh is explicit. Lichess filters by game
+start, and Chess.com archives by game finish. Other-color games are counted
+as skips. Chess.com archives can lag the live site. A partial read lists
+its errors separately and leaves the last successful refresh time intact.
+
+For PGN, choose the learner's exact White or Black player name and one
+repertoire. Upload a file or paste complete games. Legal PGN mainlines
+provide comparison evidence. Authoritative UTC start and end bounds can
+come from a previously verified matching provider record, or from the
+PGN's UTCDate, UTCTime, UTCEndDate and UTCEndTime fields. A date alone
+cannot establish a post-teaching lapse. Older repertoires without a verified
+current PGN can compare exact learner positions. For their opponent moves,
+unknown branches are counted as coverage gaps.
+
+The Games views show positions matched, learner deviations, and the first
+deviation's half-move, without exposing its prescribed move. A Game request
+can bring a qualifying learned target into today's normal Study Tests,
+subject to the next-study-day floor after Teach and one accepted Test per
+target per study day. A Good or Again covers occurrences strictly before its
+saved issuance. Later misses keep their request. An untaught deviation can
+raise its existing route frontier within the current allowance. An active
+exercise stays on the board. When a Games reply is interrupted, retry the
+saved command to recover the committed result. A deliberate new import can
+compare the same game with a newly edited answer version.
+
+Study wire 5 and content wire 4 are unchanged. The new Games endpoints
+have their own answer-safe report and receipt. SQLite migrates schema 4
+through 5 to 6. Assessed Test issuance and target-wide acceptance day are
+backfilled from existing authoritative rows. Daily portable snapshots are
+format 2 and carry pending obligations and coverage even for a target
+with no pending request. Format 1 remains readable and retains unknown
+issuance where it has no historical evidence.
+
+### Candidate and checks
+
+Phase 1 used SQLite and Chrome to compare a legal uploaded game alongside
+a malformed record, retry an unchanged game, and confirm that evidence-only
+ingestion preserved attempts, learning, allowances and scheduling. The
+serial provider adapters read both public services directly. The Lichess
+bounded July 17 export returned game LhL9TRJY. The Chess.com October 4, 2009
+window returned two completed Erik games, and a repeat returned the same
+IDs using the cached adapter. Chrome also completed a bounded Lichess
+refresh via the app.
+
+Phase 2 exercised the real SQLite daily path. A future-due learned target
+became eligible, preserving its FSRS memory until Test. The first Again
+plus correction created one grade and kept a genuinely newer observation
+pending until the next study day. Good resolved the newer obligation.
+A deeper unseen miss prioritized the allowed frontier. Portable
+export/restore suppressed reimport of already covered evidence. A completed
+public Lichess PGN exercised Test selection, durable resolution, exact
+receipt recovery after a repertoire edit, and deliberate reanalysis.
+
+The reviewed runtime candidate is:
+
+| Component | Pull request | Candidate head |
+| --- | --- | --- |
+| Chess | [#7](https://github.com/tempo-v2/tempo-chess/pull/7) | `427bc84f6303d35818ae4ead8a96d41fd58419a7` |
+| Learning | [#3](https://github.com/tempo-v2/tempo-learning/pull/3) | `9d24ad171a4d682929a812344397eb2e05be05ba` |
+| Queue | [#4](https://github.com/tempo-v2/tempo-queue/pull/4) | `aa49bdfed6bdbbea7178462f4e79748efef8e3f8` |
+| Store | [#7](https://github.com/tempo-v2/tempo-store/pull/7) | `249a12a9f0ae880f6000da7de9fb94d8603b68fb` |
+| UI | [#8](https://github.com/tempo-v2/tempo-ui/pull/8) | `e21ace64e49b64a6a4be336a7025861961400c65` |
+| Tempo | [#13](https://github.com/tempo-v2/tempo/pull/13) | `9caf8a9ac01b71662694e4a9b778f6fcd2d30286` |
+
+Unchanged dependencies use checkpoint 11's Study, Types and Core 0.2.2
+pins. Workspace and UI locks are unchanged.
+
+### Independent qualification
+
+The reviewer traced the production DailySession and DailyLearning path and
+tested a completed Lichess game through a future-due requested Test and
+Again resolution on disposable SQLite. Games import and Study Answer
+transactions both rolled back cleanly under injected receipt-write
+failures and accepted the exact same command once on retry. The
+implementation owner fixed the review findings affecting immutable game
+receipts, interrupted refresh recovery and verified PGN source identity.
+
+With the actual checkpoint 11 backend and Chrome UI on disposable copies,
+the reviewer captured both accepted-but-lost and unaccepted Study
+envelopes. The migrated candidate accepted exact retry with one durable
+assessment and receipt in each case. The accepted reply replayed
+byte-equivalently. Chrome retained a saved Good when automatic Next
+failed and issued only Next on Retry. The guarded application completed
+ordinary Next and Answer with a provider HTTP connection deliberately
+stalled. Chrome also retried the original Games upload body after a lost
+reply and page reload.
+
+Locked Rust component tests and the 28 UI tests passed. The optimized
+candidate served all 22 byte-verified UI files and the read-only
+Study status/progress, repertoire document and Games reads. The
+schema-4 to schema-6 rehearsal verified all prior rows and Learning values,
+including 172 backfilled authoritative Test coverage records in that copy.
+SQLite integrity and foreign-key checks passed.
