@@ -834,3 +834,70 @@ clean SQLite integrity and foreign keys, and zero repertoire resets.
 Live Study status used the retained dataset and the served bundle included
 Reset progress. The stopped-time backup and prior registration are retained
 locally. No repository merge was performed by this task.
+
+## Gameplay-triggered corrective Study
+
+This milestone supersedes F4 tactic-theme cleanup. It uses the November 18
+Daily Study runtime and the user's game-correction contract.
+
+| Decision | Owner and basis | Inputs, independence, and lifetime |
+| --- | --- | --- |
+| Classify a game decision | Chess applies the combined repertoire contract. | Use the legal played mainline, explicitly identified learner side, and active target answers at the canonical position. Any prescribed match wins. An uncovered learner move or opponent deviation has no learning effect. Labels are display data. |
+| Attribute one repair | Chess uses verified pre-miss move sequences; Tempo accepts a genuine unresolved choice. | A unique target or verified unique route can establish attribution. Save unresolved choices and check the selected option against the current comparison. Bind a choice to the raw game and canonical position across comparison revisions. |
+| Apply Game Again | Daily Learning applies or initializes FSRS. Tempo and Store enforce acceptance and deduplication. | Accept at the current model assessment time with source date, compared version and played context as evidence. A date-only game suffices even after a prior Good. A precise start must follow an explicit repertoire reset, and a date-only game qualifies on or after the reset's study day. Keep one durable failure per raw game and target, including after restore. |
+| Repair and recall | Daily Learning owns one sequence. Queue projects eligibility and the UI displays the result. | Guided reproduction is immediate and ungraded, including for unstudied targets at zero quota. Three clean recalls qualify on distinct subsequent configured study days. A newer miss resets progress. An already-issued card carries its failure revision. Keep model-assessment timing separate from human Test cadence. |
+
+SQLite schema 8 preserves game receipts, stable comparison IDs, provider
+counts, and verified PGN timing enrichment. Startup reconciles the evidence
+behind pending legacy requests. Historical comparisons can be reprocessed
+explicitly for a window of up to 31 days and 500 stored records. Portable
+format 3 retains corrective progress and game deduplication provenance.
+Study remains wire 5 with optional presentation fields.
+
+| Component | Candidate commit | Pull request |
+| --- | --- | --- |
+| Chess | `3bfc6d53b51087901288fa0839d57a8bb49ba168` | [#8](https://github.com/tempo-v2/tempo-chess/pull/8) |
+| Learning | `42689dab4f2c6393c6c5d3bb868f87cd9ff107a8` | [#4](https://github.com/tempo-v2/tempo-learning/pull/4) |
+| Queue | `7d6c82aa28e38e0d7179ea6272583387528c1a52` | [#6](https://github.com/tempo-v2/tempo-queue/pull/6) |
+| Store | `fa6f1a01a3a54d80dcdc7b2de6640dbfec23c8ba` | [#10](https://github.com/tempo-v2/tempo-store/pull/10) |
+| Tempo | `77a1359d2e206f1e4ee82c08c5c1453984590cdb` | [#18](https://github.com/tempo-v2/tempo/pull/18) |
+| UI | `6dbbbc76cd07ca828cf6e20da4623c9751ac356b` | [#12](https://github.com/tempo-v2/tempo-ui/pull/12) |
+
+Reuse Study `73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. The workspace lock is
+`00a275f9216923bcb093b8c1eaeec16585040fde26647ab73ab880f16e0dd042`.
+The UI consumes the versioned Core 0.2.2 tarball with SHA-256
+`4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+
+All 263 locked Rust tests and doctests and 29 UI tests passed. Independent
+Chrome runs exercised the previous actual installed schema-7 pair and
+candidate on disposable copies. Accepted and unaccepted Games and Study
+commands retained the original command bytes. Accepted replies matched
+exactly, recovery finished, and each human command had one durable effect.
+Chrome compared Italian play with London and Ruy Lopez also active. A
+date-only Italian miss then offered exact-position guided repair at zero
+quota and left three recalls pending after acknowledgement. Rust's
+production SQLite contracts exercised separate recall days, stale open
+attempts, repeated games, saved target choice, and portable restore.
+
+The optimized backend upgraded a disposable copy of
+`workspace-5f8da4a18be2eec0cdf2` from schema 7 to 8. All 20 pre-existing
+tables matched in both directions. The process served the retained
+dataset's Study status and exact candidate UI bytes, and SQLite integrity
+and foreign keys passed.
+
+Remote main trees matched the qualified source after the six feature PRs
+merged. The [release manifest](manifest.json) records the final merge
+commits and installed artifact hashes. The managed launcher installed
+`workspace-1a52ad9b7cb891f341c9` on port 41822 on November 18. The service
+uses the retained dataset at schema 8. Verification matched the registered
+listener, byte-checked all 22 served UI files, and compared the live
+database against its stopped-time schema-7 backup. All 20 pre-existing
+tables matched in both directions, with clean integrity and foreign keys.
+
+The independent browser recovery and guided-repair checks passed on the
+debug candidate. An optional repeat of the Games recovery check on the
+optimized build timed out waiting for a reply after replacing its test
+server. The optimized build passed the disposable migration rehearsal
+and installed readback. Synthetic games and grades used disposable data.
