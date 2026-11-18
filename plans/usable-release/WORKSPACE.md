@@ -48,7 +48,9 @@ workspace Cargo lock as checkpoint 04 and consumes the Core 0.2.2 tarball from
 the UI repository.
 
 ```sh
-git clone --branch release/current-tempo2-20261118 https://github.com/tempo-v2/.planning.git .planning
+git clone https://github.com/tempo-v2/.planning.git .planning
+git -C .planning fetch origin refs/pull/4/head
+git -C .planning checkout --detach FETCH_HEAD
 python3 - <<'PY'
 from pathlib import Path
 import json
@@ -61,6 +63,8 @@ candidate = json.loads((release / "manifest.json").read_text())["main-candidate-
 for repo, revision in candidate["repositories"].items():
     url = f"https://github.com/tempo-v2/{repo}.git"
     subprocess.run(["git", "clone", "--no-checkout", url, repo], check=True)
+    pull = candidate["pull_requests"][repo]
+    subprocess.run(["git", "-C", repo, "fetch", "origin", f"refs/pull/{pull}/head"], check=True)
     subprocess.run(["git", "-C", repo, "checkout", "--detach", revision], check=True)
 shutil.copyfile(planning / "workspace.template.toml", "Cargo.toml")
 shutil.copyfile(planning / candidate["workspace_lock"]["path"], "Cargo.lock")

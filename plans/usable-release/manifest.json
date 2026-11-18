@@ -142,6 +142,17 @@
       "version": "0.2.2",
       "path": "tempo-ui/vendor/tempo-v2-core-components-0.2.2.tgz",
       "sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
+    },
+    "pull_requests": {
+      "tempo-types": 1,
+      "tempo-study": 1,
+      "tempo-chess": 4,
+      "tempo-learning": 2,
+      "tempo-queue": 2,
+      "tempo-store": 3,
+      "tempo-core-components": 5,
+      "tempo-ui": 3,
+      "tempo": 6
     }
   }
 }
