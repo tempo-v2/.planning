@@ -178,10 +178,10 @@ b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c  assets/wQ-6YL7
 3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac  index.html
 ```
 
-## Final combined release qualification
+## Combined release qualification at the reviewed snapshot
 
-The [final source table](STATE.md#final-corrective-integration-with-current-study-main)
-records the published runtime commits and their trees. All nine trees match
+The [reviewed-snapshot source table](STATE.md#corrective-integration-at-the-reviewed-snapshot)
+records those runtime commits and their trees. All nine trees matched
 the independent current-main preview. The Tempo and UI merge commits have
 the same parent sets as the preview commits
 `33e6d5cd83ebd9cefeb5afa5508c2f67e0ff366d` and
@@ -290,3 +290,50 @@ b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c  assets/wQ-6YL7
 494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3  assets/wR-IQNXS3HT.svg
 3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac  index.html
 ```
+
+## Final combined release qualification
+
+The [final source and tree table](STATE.md#final-corrective-candidate-with-shared-analysis-main)
+includes the shared analysis release that landed while the reviewed
+snapshot was being qualified. Tempo, UI, Chess and Study have different
+trees from the independent preview. The other five runtime trees match.
+All checks below ran on the refreshed assembly.
+
+| Check | Final result |
+| --- | --- |
+| Locked Rust workspace | 311 tests and doctests passed across 21 groups |
+| Repository UI and independent consumer probes | 63 and 64 passed, respectively |
+| Rust/UI and HTTP/SQLite integration | All five passed on a serial rerun. The first parallel run hit a SQLite lock on a direct test-fixture read after the rollback checks |
+| Architecture | Dependency gate and four self-tests passed |
+| Original runner with `--include-prior` | Exit 0. All three finding groups, ten prior assertions and three additional Store controls passed |
+| Historical SQLite fault probes | Both passed. Identical paused status accompanied 24 → 48 actual rows and one Retry identity. A successful old provider reply was discarded on dataset replacement |
+| Packaged Chrome Games | Same-tab paused Retry, first settlement, late A/current B, previous released request recovery and history timeout recovery passed |
+| Packaged Chrome Study | Compact SAN, remaining repair count, narrow replay and exact pending acknowledgement recovery passed. Interrupted Next only replayed Next |
+| Packaged Chrome analysis | Marked-line authoring, evidence isolation and Fix Response passed |
+| Ordinary optimized HTTP Study | With provider and Maia unavailable, issued an eligible test, replayed the exact accepted answer with one durable result, and issued a different test |
+| Synthetic SQLite restart and assets | All 34 tables matched, integrity and foreign keys passed at schema 11, and all 22 HTTP-served UI files matched the package |
+
+The original acceptance runner retained its 0/1/2 classification and
+reported zero reviewed failure groups. Its format checks exercised
+portable format 5 and older exports. The browser tests used disposable
+SQLite and read the preceding shared-analysis checkpoint
+`workspace-7ed579a4d29162fc4fdc` artifact pair for cross-release Games
+recovery. The prior backend hash was
+`79176f94d5df5d728c57df8127e0eabab654a1c27187bb0ba0f31df5a40b8dc3`.
+For the final controlled same-tab paused case, history reads went 3 → 4,
+historical GETs went 1 → 4, and one Retry POST cleared the pending
+envelope. The SQLite fault probe supplies the separate real-row evidence.
+
+### Final optimized package hashes
+
+The final package used the same macOS arm64 host, toolchain, locked Cargo
+and npm inputs and Core 0.2.2 tarball recorded above. The guarded UI build,
+copied package and HTTP-served bytes matched for all 22 UI files.
+The 20 UI files other than the app stylesheet and script have the
+same hashes as the reviewed-snapshot map above.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Optimized macOS arm64 Mach-O `tempo` | `b442484f85da2d3615534c7a84ec4700f80c9af8202e03a29b4827747b197798` |
+| `assets/app.css` | `967506592a49d1785f481274ad5c6d5127ea8a3c429f2c12009e3ef733195197` |
+| `assets/app.js` | `64ac022b765be976caaf18dd0d7a87ae28d8ccda0076298dfeed76b32fb73652` |

@@ -1884,11 +1884,11 @@ controls, optional-service Study, and synthetic restart.
 The next release step is coordinated review of the linked PR heads. The
 corrective set is awaiting merge and installation authorization.
 
-### Final corrective integration with current Study main
+### Corrective integration at the reviewed snapshot
 
-This candidate supersedes the corrective source set above for the release
-decision. The earlier corrective checks and the installed correction-context
-release remain recorded in their respective sections. The current-main
+This candidate was qualified before shared analysis landed on main.
+The earlier corrective checks and the installed correction-context
+release remain recorded in their respective sections. This integration
 snapshot used Tempo `df06acb9aab5d16b7f642089101e5e0c277ef8fd`, UI
 `da8e883c7bf10ec0f9c33df41d5405b7bb8be0b0`, Queue
 `a171e70faf684dead33f04ad455012380fcb2e54`, and Planning
@@ -1914,10 +1914,42 @@ UI retains the correction context, count and compact SAN from main.
 Its Games implementation and mounted acknowledgement regressions match
 the accepted CR-F3 commit byte for byte.
 
-The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
+The [reviewed-snapshot qualification and artifact record](historical-follow-up-evidence.md#combined-release-qualification-at-the-reviewed-snapshot)
 identifies the locks, Core tarball, macOS executable and all packaged UI
 files. SQLite schema 11, portable format 5 and Study wire 5 carry forward.
 
-The next unfinished step is the decision on merging the coordinated PRs.
-Managed installation requires separate authorization and verification of
-the retained live data and registered artifact set.
+The shared analysis merge below supersedes this package for the release decision.
+
+### Final corrective candidate with shared analysis main
+
+Main advanced during qualification. The final snapshot includes Tempo
+`70850707200c856b089820b32e0baabdff3a21a7`, UI
+`3bf2278469d846007243761dc96be9e17cde2117`, Chess
+`531cadaea8c89de230d3516d31d95582dc7263dd`, Study
+`4b46e6c45a6330177b089eadcae69821e57b6657`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, and Planning
+`4589d3ecdf6988fdb26c50ab8a8bcb775d3981f1`. Planning merge
+`a7316225ad4ab087ae49c3e84ceaa2156dd801ef` preserves the shared analysis
+installation and both previously reconciled histories.
+
+| Runtime component | Final source commit | Git tree |
+| --- | --- | --- |
+| Tempo [#25](https://github.com/tempo-v2/tempo/pull/25) | `2f1cc242f3373ffffe333fae386d18b4cd683f79` | `fb4fcc35de17a348f74173d6e21deae2efd9a3e3` |
+| UI [#19](https://github.com/tempo-v2/tempo-ui/pull/19) | `046898f1f144652cb8fa0f43b6c74816e7211ba0` | `80f3a6313bb67a3a672042283d709b77a7ae084a` |
+| Chess | `531cadaea8c89de230d3516d31d95582dc7263dd` | `9007327f271afdabdc18cc6de25f137bd64abc36` |
+| Study | `4b46e6c45a6330177b089eadcae69821e57b6657` | `f435026c89fb88db58faebc2d05b091e20ac1e96` |
+
+The Store, Queue, Learning, Types and Core pins and trees match the
+reviewed-snapshot table above. Tempo and UI match the clean merge trees
+of the new snapshot and the original corrective heads. These two trees,
+plus the new Chess and Study trees, differ from the attached merge
+preview. The refreshed assembly keeps the CR-F3 acknowledgement path
+and mounted regressions alongside the newer Study and Games analysis
+entry points.
+
+The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
+identifies the actual release-host package. SQLite schema 11, portable
+format 5, and Study wire 5 carry forward. The next unfinished step is
+the decision on merging the coordinated PRs. Managed installation
+requires separate authorization and verification of the retained live
+data and registered artifact set.
