@@ -528,5 +528,142 @@
         "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
       }
     }
+  },
+  "game-relevant-study": {
+    "repositories": {
+      "tempo-chess": "94b1a0fce704ef16d8065663ce38afcdc6371b11",
+      "tempo-queue": "b70402598c91be87687feb42932cf9d8209e3eb1",
+      "tempo-store": "8c3a18cc3d6ffd48481ea2cd9ff1d365d4b0dc10",
+      "tempo": "598c2d329b42c528d0924c6cd45fcad6f4260f98",
+      "tempo-ui": "30a1dc13dcd71c314e57678637fc107fb16e19ba",
+      "tempo-learning": "09c4359ab90d0cd1e5166b1f25460fd272406fd1",
+      "tempo-study": "73b2482dfb2ae652220727b87451fdb4a5110807",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-core-components": "e9a1d160a729bc9fbbddaf16427625301cc9498a"
+    },
+    "pull_requests": {
+      "tempo-chess": [
+        9,
+        10
+      ],
+      "tempo-queue": [
+        8
+      ],
+      "tempo-store": [
+        12
+      ],
+      "tempo": [
+        20,
+        21
+      ],
+      "tempo-ui": [
+        13,
+        14,
+        15
+      ]
+    },
+    "reviewed_heads": {
+      "tempo-chess": "1d6110fe1f31b379ac55e788b265d233f2c95f24",
+      "tempo-queue": "1f9ccf3e766b2aa7dd3e608ca8947c3285a12ac4",
+      "tempo-store": "c574ebfc1021d3548340439aa5609d9aba89364b",
+      "tempo": "7d8e70c90450eafbe44867ae9dfe50aa2930563f",
+      "tempo-ui": "36d9643c560d202d834b769f1d1251fd63f8801f"
+    },
+    "workspace_lock": {
+      "path": ".planning/plans/usable-release/workspace-corrective-portability.Cargo.lock",
+      "sha256": "c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0"
+    },
+    "core_tarball_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+    "maia_weights_sha256": "65aae8465eed5e65df66a24ea7370715579f9e5435098d06fe18bdb1e267e997",
+    "portable_snapshot_version": 4,
+    "core_install": {
+      "previous_checkpoint": "workspace-120682a40a2cf6bf6214",
+      "checkpoint": "workspace-0ba32b455b1cdf65e729",
+      "schema": 10,
+      "port": 41822,
+      "prior_tables_equal": 24,
+      "binary_sha256": "0147035baba6a39cf3660139ba8ea0ddb6f5579626f93e153667d4d3543006cd",
+      "ui_sha256": {
+        "assets/app.css": "19ac7f5717accb3bbe11efe8582c6b02a71b4a4ff12d73ced085f43b6f40b825",
+        "assets/app.js": "59a533c2e1db8f72e51a65d7519b454190b733eb603e405f49b3a4404d7849ce",
+        "assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+        "assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+        "assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+        "assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+        "assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+        "assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+        "assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+        "assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+        "assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+        "assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+        "assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+        "assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+        "assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+        "assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+        "assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+        "assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+        "assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+        "assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+        "assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+        "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+      }
+    },
+    "observed_installation": {
+      "previous_checkpoint": "workspace-0ba32b455b1cdf65e729",
+      "checkpoint": "workspace-08812817f80797b72eaf",
+      "schema": 10,
+      "port": 41822,
+      "prior_tables_equal": 32,
+      "binary_sha256": "74a48dee9821c200aa5ffd6da31d9557acc84e22f4b905c93116d06289db5f2f",
+      "ui_sha256": {
+        "assets/app.css": "19ac7f5717accb3bbe11efe8582c6b02a71b4a4ff12d73ced085f43b6f40b825",
+        "assets/app.js": "3bb70253eb3a435e3ac68c85fce2c89275cc1260fb7414506827bbeb716518fb",
+        "assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+        "assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+        "assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+        "assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+        "assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+        "assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+        "assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+        "assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+        "assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+        "assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+        "assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+        "assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+        "assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+        "assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+        "assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+        "assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+        "assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+        "assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+        "assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+        "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+      }
+    },
+    "observed_activation": {
+      "raw_games": {
+        "chess_com": 1930,
+        "lichess": 377
+      },
+      "windows": 30,
+      "incomplete_windows": 0,
+      "distinct_game_again": 432,
+      "corrective_targets": 178,
+      "personal_targets": 30,
+      "ranking_window": 200,
+      "maia": {
+        "completed": 2431,
+        "profile": "Maia Rapid 1500",
+        "projected": 2980,
+        "status": "complete",
+        "total": 2431
+      },
+      "gap_groups": 250,
+      "engine": "Stockfish 19",
+      "legal_candidates": 3,
+      "structural_neighbors": 3,
+      "historical_start_utc": "2026-08-21",
+      "historical_end_utc_exclusive": "2026-11-19"
+    }
   }
 }
