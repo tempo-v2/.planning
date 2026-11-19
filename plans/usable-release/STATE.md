@@ -1949,7 +1949,26 @@ entry points.
 
 The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
 identifies the actual release-host package. SQLite schema 11, portable
-format 5, and Study wire 5 carry forward. The next unfinished step is
-the decision on merging the coordinated PRs. Managed installation
-requires separate authorization and verification of the retained live
-data and registered artifact set.
+format 5, and Study wire 5 carry forward.
+
+#### Verified merge to main
+
+| Pull request | Fenced reviewed head | Verified main merge | Verified Git tree |
+| --- | --- | --- | --- |
+| [Store #15](https://github.com/tempo-v2/tempo-store/pull/15) | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | `bac6a78f3d970ea2dfd44fce834370f6cb18d042` | `61090e235be25ff8cf287d2d639bd678b815562a` |
+| [Tempo #25](https://github.com/tempo-v2/tempo/pull/25) | `2f1cc242f3373ffffe333fae386d18b4cd683f79` | `d2e6382c29dc22527d27bb2a7d22192ddc58ef70` | `fb4fcc35de17a348f74173d6e21deae2efd9a3e3` |
+| [UI #19](https://github.com/tempo-v2/tempo-ui/pull/19) | `046898f1f144652cb8fa0f43b6c74816e7211ba0` | `e40462e4f90bc61a8da4b256d060d9c25b9f9a15` | `80f3a6313bb67a3a672042283d709b77a7ae084a` |
+| [Planning #25](https://github.com/tempo-v2/.planning/pull/25) | `06aac77cf9e9b7e55472d5db023133c67335db45` | `68ecc1b727de035a26aa331c09a05c0ede160206` | `eb0b3cbab823d5f445a11c56e5df7d4751192ca4` |
+
+GitHub's merge previews matched the qualified trees and their expected
+parents. The main branches matched the verified snapshot before merging.
+Each merge used its exact reviewed head, and the remote merge commits
+matched the qualified trees and the same parent pairs. A final check of
+all nine runtime repositories matched the qualified assembly, including
+the six companion trees.
+
+The release-host package was rechecked on disk against the optimized
+binary digest and all 22 UI hashes. Installation awaits separate
+authorization. The next unfinished step is to use the actual managed
+registration, preserve retained live data and rollback material, and
+verify the installed package and scoped smoke checks.
