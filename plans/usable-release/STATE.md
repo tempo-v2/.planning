@@ -1053,3 +1053,121 @@ readback showed 30 personally relevant targets in the 200-game window,
 legal Stockfish candidates plus three structural neighbors for a saved
 gap. The live verification used a read-only analysis request and did not
 save a repertoire response.
+
+## Schema-10 corrective candidate
+
+The corrective packet applies to R10-F1 through R10-F5. The earlier
+deferred tactic-theme finding is separate. The ten remote main heads
+matched the reviewed checkpoint at dispatch. Existing worktrees and the
+older open ledger PR #19 are preserved. One backend owner sequences
+terminal reach, choice provenance and repair, account recognition, then
+model currentness. One UI owner works in parallel. This candidate reserves
+SQLite 11 and portable format 5, with a single forward 10 → 11 migration
+and matching fresh creation. Preserve the literal intermediate schema 10
+in the 9 → 10 predecessor step.
+
+| Finding | Behavior and owner | Semantic inputs and independence | Lifetime and disposition |
+| --- | --- | --- | --- |
+| R10-F1 | Tempo verifies each book's model input. Store serves the current projection to Daily Study; Queue owns ordering. | Canonical finite authored routes including endpoints, learner side, final active target/version/answer facts, and explicit projection identity. Names, comments, duplicate route representations, tactics and grades do not determine validity. | Keep document edit freshness and inference cache identity separate. Persist bootstrap, verified and revoked authority distinctly. Fence publication by current dataset and book input and preserve complete results against old partial work. Implemented and exercised through the owning consumer. |
+| R10-F2 | Tempo projects complete encounters from Chess and accepted choices. Store atomically persists a choice with its selected target/version, independently of Learning. | Dataset/source/game/position closes a choice. Current Chess miss and matching target/version determine attributed relevance. Automatic failures and current candidate ordering cannot select an old choice. | Keep closure through restart, reset, version changes and restore. Recover only proved historical attribution and repair derived encounters under content and exact-choice fences without grading. Implemented and exercised through the owning consumer. |
+| R10-F3 | Tempo's existing finite projector includes terminal first arrivals from Chess's canonical endpoint map. | Authored path edges, exact after-position and reply probabilities determine reach. Labels and duplicate path order are irrelevant. | Reproject from raw distributions under the corrected projection identity. Implemented and exercised through the owning consumer. |
+| R10-F4 | Tempo scopes each job to the accounts supplied for it. Store recognizes explicitly accepted identities additively. | Supplied valid accounts define fetch windows. Retained recognized identities filter relevance and gaps, with the existing unconfigured fallback. Omission does not remove an identity. | Recognition survives later jobs, failure, retry, restart and Study reset. Implemented. Retained-copy inspection found no missing recognized identity. |
+| R10-F5 | Games UI publishes and retries each evidence read independently. | Resource replies, bounded timeouts and request generation determine read feedback. Background reads cannot clear action errors or replay mutations. | Abort stale requests and timers. Preserve successful data and immutable pending command identity. Implemented and exercised through the owning consumer. |
+
+### Qualification and review
+
+The [candidate manifest](manifest.json) records the exact compatible
+revisions, Cargo and npm locks, release binary, and every packaged UI file.
+Study wire 5 and content wire 4 retain their accepted payload shapes.
+Disposable Chrome verified that the candidate served all 22 packaged files.
+
+The assembled `cargo test --workspace --locked` run passed 285 tests and
+doctests. The final test-only additions passed focused metadata and portable
+contracts (five tests), Store (28 tests and three doctests), and the historical
+account scenario. The opening-release selector passed 27 tests. The
+architecture gate, debug and optimized builds, 36 locked UI tests on Node
+24.22.3, the guarded UI build, and three Rust/UI boundary tests passed. The
+final optimized rebuild reproduced the binary hash after the test-only
+commits. The independent reviewer accepted all three exact runtime heads.
+
+R10-F1 preserved actual Next ordering under rename and an unrelated tactic
+edit. An issued reason survived a projection update and a subsequent eligible
+selection used the new evidence. Signed equivalent PGN preserved reach. A
+real route edit invalidated only its book, and old publication and bootstrap
+were rejected across newer authority and dataset replacement. A deterministic
+SQLite test queued explicit Analyze behind cache-only work. R10-F3 contributed
+0.38 at the terminal transposition through native projection publication.
+Missing raw distributions left the affected target unknown and the book
+partial.
+
+R10-F2 Chrome recovery used the archived schema-10 binary and UI. Both
+accepted-lost and unaccepted Choose recovered with and without a new Game
+Again. Each made one closure and one receipt with the accepted target/version.
+All request bytes and accepted-lost reply bytes matched. Signed document-only
+Save passed both loss modes with stable target versions. A native schema-9
+fixture replayed an earlier saved Teach and Choose after upgrading. A startup
+fixture damaged by the old import path repaired its miss with unchanged
+Learning, assessments, failure keys, resets, and receipts. A matched Study
+control verified that the recovered miss decided the tie between two equally
+exposed eligible reviews. Late receipt failure rolled back the complete
+choice and encounter transaction. An exact choice-set change without a
+normal revision change fenced both ordinary replacement and evidence repair.
+
+In five independent schema-10 fixtures, provenance recovery found three
+provable selections, one closed unattributed selection and one conflict.
+The repair examined five encounter maps, corrected three, and reported two
+unresolved. The repaired cases covered a no-grade native child, an exact
+legacy parent alias and a legacy failure-only closure. A second startup
+repaired zero additional maps in each case. A separate schema-9 fixture
+recovered one direct attribution.
+
+R10-F4 preserved both exposure and gap counts at two after a narrower request.
+Fetch windows stayed scoped to its explicit provider and learner. Real
+coordinator tests covered initial filtering, additive recognition, exact
+replay, conflicting command, provider failure/retry and restart. R10-F5
+mounted tests covered independent publication, bounded timeout and retry,
+stale response cleanup, retained action errors and exact pending bytes.
+Packaged Chrome covered read-error recovery, complete and partial projection
+status, opening a legal gap response, signed Preview/Save, actual modeled
+selection after rename, and a lost accepted Answer followed by an interrupted
+Next. Recovery replayed the original Answer bytes once, and Next Retry sent only
+Next. Cache-only work caused no Maia process spawn. Explicit Analyze also
+completed with a fixture worker that returned legal distributions.
+
+### Retained-copy rehearsal
+
+Fresh creation and retained-copy upgrades from schema 10 and schema 9 passed.
+An injected migration collision rolled back both predecessor paths. Removing
+the collision allowed migration to complete. Subsequent startup and restart
+matched all original base columns and row counts in both directions across
+28 authoritative schema-10 tables and 24 schema-9 tables. SQLite integrity
+and foreign keys passed. The schema-10 copy retained 432 failure keys,
+103 Games receipts and all 2,431 cached distributions. Cache-only work rebuilt
+2,980 reach rows for two complete current books. The schema-9 retained copy had
+no verified source associations and reported two unavailable books.
+
+The schema-10 retained copy contained no choice closures or chosen-position
+failure keys. Provenance recovered, unattributed and conflicting counts were
+all zero. Encounter maps examined, repaired and unresolved were all zero.
+Both identities from the sole accepted historical request were already
+recognized. No identity-data repair was required.
+
+### Publication and delivery
+
+| Repository | Verified review head | Pull request |
+| --- | --- | --- |
+| Tempo | `5f622e3748ab1830af0894e02a0bae408c1c7440` | [#22](https://github.com/tempo-v2/tempo/pull/22) |
+| Store | `0d3a7cc13b91013764fbf466e35a0cc5caed2d9f` | [#13](https://github.com/tempo-v2/tempo-store/pull/13) |
+| UI | `90ed0057214f78fbe4eff59de67f266435eed142` | [#16](https://github.com/tempo-v2/tempo-ui/pull/16) |
+
+The corrective candidate is implemented, tested, independently accepted and
+published for coordinated review. It remains unmerged, uninstalled and
+inactive. The active service still serves schema-10 checkpoint
+`workspace-08812817f80797b72eaf` on port 41822. Qualification used retained and
+synthetic copies. Live provider fetching and real-weight Maia inference were
+outside this qualification.
+
+The next delivery stage is coordinated merge of the compatible heads and
+comparison of the merged trees with the qualified candidate. Installation
+requires the managed launcher and authorized cutover, including a stopped
+database backup and post-start database, listener and artifact readback.
