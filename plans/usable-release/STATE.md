@@ -1602,3 +1602,41 @@ foreign-key checks passed. The registered listener served all
 22 verified UI files. The backup is
 `recovery-start-opl3ya1b`. The optimized binary SHA-256 is
 `58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
+
+## Repertoire correction context and pending count
+
+| Behavior | Basis, owner, and inputs | Independence and lifetime |
+| --- | --- | --- |
+| Show the numbered SAN before the correction decision. | Study request for the daily release. Chess already projects the verified mainline through the issued deviation. UI shows the prefix during the live correction and uses the full line during replay. | The prefix ends before the played deviation. A first-move decision or unavailable source omits it. Replay and the displayed SAN do not submit commands or change Learning. |
+| Count all pending guided repairs, including the current card and skipped repairs. | Study request and explicit choice to count all pending corrections. Queue projects the size of its Repair set before applying session deferrals. Tempo reads active current-version Learning facts and publishes the count via `/api/study-progress`. | Labels and the availability of replay evidence do not determine membership. An accepted repair moves the obligation into recall. The UI refreshes after confirmed Study transitions and uses the progress stamp for periodic reads. Study wire 5, SQLite schema 11 and the saved receipt formats carry forward. |
+
+### Qualified source set
+
+| Component | Verified PR head |
+| --- | --- |
+| Queue | `36c712ab15c36ac6e609d6497952c75b3aeddd55` [#9](https://github.com/tempo-v2/tempo-queue/pull/9) |
+| Tempo | `75834a5ef5f144d001ee60c074072d6ca49114a6` [#29](https://github.com/tempo-v2/tempo/pull/29) |
+| UI | `2f035ce0660add5af09274cdd8cd71b22d9717e2` [#22](https://github.com/tempo-v2/tempo-ui/pull/22) |
+
+The combined candidate uses the other six component pins from the installed
+`workspace-8467c4c7540fb7b6f55e` table above. Its workspace Cargo lock is
+`c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`
+and UI npm lock is
+`1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb`.
+The UI consumed the locked Core 0.2.2 tarball.
+
+The locked workspace passed 300 Rust tests and doctests, 36 UI tests,
+five Rust/UI application integration checks, and the architecture gate
+with its four self-tests. The new SQLite regression checks skip, save,
+exact receipt replay, recall eligibility and content replacement. The
+packaged Chrome check uses a disposable server and database. It verifies
+the SAN prefix on desktop and at 390px, replay and return, the count
+before Save and after a saved repair with interrupted Next, one receipt
+and zero additional assessments, and fallback rendering with a first-move
+decision, unavailable game context and a progress response without the count.
+
+The standalone UI import scanner reports the same JSX false positive in
+`GamesPage.jsx` on untouched main and the candidate. Changed Rust files
+pass formatting. Workspace-wide formatting reports existing differences
+in Tempo and Chess module declarations. The PRs target main and await
+coordinated review. The installed checkpoint remains the baseline above.
