@@ -4,7 +4,13 @@ The tests used synthetic fixtures and isolated workspaces on arm64 macOS 26.6.2 
 
 ## Reproduction
 
-Before the production changes, the new mounted tests ran against UI `c039f829624f7f19bc79dfad24e35cc7f20b77c9`. Both first-terminal cases failed on the assertion for the rendered `game-from-B` row. The foreign-status case failed because the page rendered the foreign job. The test process reported three failures after successful bundling and mounting.
+Before the production changes, the new mounted tests ran against UI `c039f829624f7f19bc79dfad24e35cc7f20b77c9` with the following command from `tempo-ui`.
+
+```sh
+node --test --test-name-pattern='first terminal historical|foreign historical status' test/games_evidence.test.js
+```
+
+Both first-terminal cases failed on the assertion for the rendered `game-from-B` row. The foreign-status case failed because the page rendered the foreign job. The test process reported three failures after successful bundling and mounting.
 
 | First terminal B scenario | Baseline history reads before → after | Baseline historical GETs | Baseline gaps GETs | Observed at assertion |
 | --- | --- | --- | --- | --- |
@@ -79,9 +85,9 @@ Native headless Chrome used the previous installed checkpoint
 `58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
 It created an accepted Retry with a lost response and a second Retry that
 had never reached the server, on disposable SQLite. The compiled candidate
-accepted each original command with one durable effect. For the lost reply,
-the POST body matched byte for byte and the two retained job records matched
-before and after replay. A separate Chrome page held the first actual B GET
+resolved both original commands. The previously unaccepted Retry had one
+durable effect. The already accepted Retry's POST body matched byte for byte
+and the two retained job records matched before and after replay. A separate Chrome page held the first actual B GET
 until the initial empty history rendered. It used a deterministic history
 transport fixture for a visible row at settlement. Current B and Retry A
 were real HTTP/SQLite operations. B's provider was intentionally unavailable,
