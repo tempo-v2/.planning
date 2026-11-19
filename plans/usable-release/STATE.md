@@ -962,3 +962,94 @@ foreign keys. The original timeout's cause remains unproven.
 The four runtime branches were published for review. The candidate remains
 unmerged and uninstalled. Readback confirmed the managed installation still
 served its recorded UI and used schema 8 on port 41822.
+
+## Game relevance and opponent coverage
+
+This milestone starts at the installed corrective Study schema-9 release and
+uses the current Daily Study contract.
+
+| Decision | Owner, inputs, and lifetime |
+| --- | --- |
+| Record positions and departures | Chess uses legal played positions, the identified learner side, current answer versions, and verified authored branches. A prescribed move accepted by any applicable book suppresses a memory miss. Record distinct-game encounters including correct play, report each book's first departure and later canonical reentry, and distinguish endpoints from unavailable context. Display names are irrelevant. Store retains game identity and learner role independently of comparison receipts. |
+| Accept historical learning effects | Tempo uses the explicit backfill range, configured identities, and each repertoire's accepted reset generation at job start. A qualifying older game can receive a current-time Game Again. A later reset supersedes any remaining learning effects for that repertoire. Learning retains one ongoing correction per target. Store keeps the original game/target keys and commits bounded child imports under immutable receipts. Ordinary refresh is governed by its existing reset rule. |
+| Rank eligible work | Queue compares distinct-game exposure in the latest 200 eligible games, then attributed misses against the current answer version. Known modeled reach is the fallback for targets without personal exposure. Regular eligible reviews keep corrective and capture precedence. Eligible introductions use the maximum relevance along the unintroduced route and preserve teaching precedence, rotation, quotas and tactic alternation. An answer version can change miss evidence. A display name does not change ordering. |
+| Model and author responses | The fixed Maia Rapid 1500 profile caches full legal distributions. Reach sums first arrival across authored paths assuming saved learner moves. Local coverage uses only reply mass for positions with saved learner responses. Gates and starting positions come from Chess. Games revalidates each gap against the current document, and the editor proposes an explicit legal response for the existing Preview and Save workflow. Stockfish and structural-neighbor analysis provide read-only suggestions for that exact position. |
+
+Schema 10 adds durable game facts, projected relevance, job progress, and
+model caches. Study wire 5 and content wire 4 keep their existing reply
+shapes. Study fetches an optional reason fixed at issuance separately.
+Provider fetching, Maia inference, and optional Stockfish analysis run
+outside Study. The bounded ranking snapshot is rebuilt by game ingestion or
+reanalysis. Full raw game history remains in the installed database.
+
+Production SQLite and Daily Study tests cover correctly played positions,
+review order and future-due exclusion, deeper prerequisite selection,
+different branches of one repertoire, evidence removal with stable counts,
+versioned ambiguous choices, duplicate receipts, and a later reset at the
+same clock time while a stored date-only backfill resumes. Independent
+Chrome qualification covered metadata invariance, accepted answer with
+interrupted Next, exact command replay, and two separate opponent gaps.
+Saving the first response left the second gap available. Stalling both
+provider and model workers left Next responsive and preserved the issued
+attempt on a repeat Next.
+
+The optimized final core pair recovered six previous-release scenarios from
+the actual installed schema-9 binary and UI. Games import, corrective choice,
+and signed repertoire Save each passed with an accepted-lost and an
+unaccepted command. All six commands retained their original bytes and had
+one durable effect. Accepted-lost replies matched byte for byte. The rerun
+deliberately withheld Games status reads and verified that recovery could
+still proceed. It qualifies [UI #14](https://github.com/tempo-v2/tempo-ui/pull/14)
+alongside [UI #13](https://github.com/tempo-v2/tempo-ui/pull/13).
+
+The first managed install tested schema 9 → 10 and preserved all 24 existing
+tables in both directions, the same retained database inode, and the Study
+status. All 22 served UI files matched. The existing Preview and Save workflow
+attached the retained Italian and London authored sources on the live
+dataset. Both documents round-tripped exactly. The target identities,
+versions, ordered route memberships, decoded Learning values, attempts and
+assessments matched.
+
+The initial historical range was August 21 through November 18, 2026 UTC.
+It completed 30 windows after provider splits, with 377 Lichess games and
+1,930 Chess.com games processed. There were 432 durable Game Agains across
+178 targets, with the existing Repair and recall rules. No provider
+windows remained incomplete. Maia filled all 2,431 requested opponent
+positions and projected reach for 2,980 targets.
+
+Raw game identity follows the established provider and normalized PGN
+contracts. A PGN matched to a previously verified provider record reuses that
+provider record. An older standalone PGN without a verified provider link
+keeps its original raw identity. Accepted obligations and receipts are
+preserved independently of the derived ranking projection.
+
+### Published and installed on November 18, 2026
+
+The [release manifest](manifest.json) records the exact component
+pins and both verified artifact sets. The merged repository trees
+matched the checked candidate. Publication includes all companion PRs.
+
+| Component | Pull requests | Installed main commit |
+| --- | --- | --- |
+| Chess | [#9](https://github.com/tempo-v2/tempo-chess/pull/9), [#10](https://github.com/tempo-v2/tempo-chess/pull/10) | `94b1a0fce704ef16d8065663ce38afcdc6371b11` |
+| Queue | [#8](https://github.com/tempo-v2/tempo-queue/pull/8) | `b70402598c91be87687feb42932cf9d8209e3eb1` |
+| Store | [#12](https://github.com/tempo-v2/tempo-store/pull/12) | `8c3a18cc3d6ffd48481ea2cd9ff1d365d4b0dc10` |
+| Tempo | [#20](https://github.com/tempo-v2/tempo/pull/20), [#21](https://github.com/tempo-v2/tempo/pull/21) | `598c2d329b42c528d0924c6cd45fcad6f4260f98` |
+| UI | [#13](https://github.com/tempo-v2/tempo-ui/pull/13), [#14](https://github.com/tempo-v2/tempo-ui/pull/14), [#15](https://github.com/tempo-v2/tempo-ui/pull/15) | `30a1dc13dcd71c314e57678637fc107fb16e19ba` |
+
+The final locked workspace passed 277 Rust tests and doctests and 29 UI
+tests. The optimized optional pair passed real Stockfish 19 analysis,
+structural neighbors, two-page gap browsing, explicit choice and save,
+and cleanup of a deliberately stalled engine. The analysis left the
+draft, selection, and database state unchanged until an explicit Save.
+
+The managed launcher installed `workspace-08812817f80797b72eaf` on port 41822.
+The stopped-time backup and final database matched across all 32 existing
+tables before reactivating the model summary. Dataset and database inode
+were preserved. The registered listener served the verified binary and
+all 22 UI files, and SQLite integrity and foreign keys passed. Live
+readback showed 30 personally relevant targets in the 200-game window,
+250 distinct gap groups, complete historical and Maia results, and three
+legal Stockfish candidates plus three structural neighbors for a saved
+gap. The live verification used a read-only analysis request and did not
+save a repertoire response.
