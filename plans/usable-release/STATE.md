@@ -1953,3 +1953,53 @@ format 5, and Study wire 5 carry forward. The next unfinished step is
 the decision on merging the coordinated PRs. Managed installation
 requires separate authorization and verification of the retained live
 data and registered artifact set.
+
+## PGN upload caps removed, November 19, 2026
+
+The earlier PGN change removed the 256 KiB and 32-game checks. A 5,075-byte
+Caro-Kann export still failed Repertoires Preview because its single game
+contained more than 512 plies across variations.
+
+| Decision | Authority, inputs and lifetime |
+| --- | --- |
+| Accept uploaded PGN | The requested rule applies to Repertoires, Tactics and manual Games import. Chess owns legal moves, valid PGN and the repertoire response for each canonical learner position. Byte count, game count, total plies, nesting and route expansion are independent of acceptance. Provider refresh and historical window policies have their own inputs. |
+| Save an accepted preview or import | Tempo validates the same dataset and command identity. Repertoire and tactic saves use their existing signed previews. Store continues to own atomic writes and receipt replay. The UI can hold a large immutable command in IndexedDB under the same per-tab recovery scope. Earlier session envelopes remain readable. |
+
+| Changed component | Qualified head | Pull request |
+| --- | --- | --- |
+| Chess | `6695bfb5a932d28ac2ec00521879d3814ecd7764` | [#16](https://github.com/tempo-v2/tempo-chess/pull/16) |
+| Tempo | `143cbdb12d9d2c8b90c1c56661e444ac4fb33c18` | [#31](https://github.com/tempo-v2/tempo/pull/31) |
+| UI | `9b02b0fc82aa2b826cf395b5bd1fe44bd14e90be` | [#25](https://github.com/tempo-v2/tempo-ui/pull/25) |
+
+The companion pins are Store `bac6a78f3d970ea2dfd44fce834370f6cb18d042`,
+Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`,
+Queue `a171e70faf684dead33f04ad455012380fcb2e54`,
+Study `4b46e6c45a6330177b089eadcae69821e57b6657`,
+Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, and
+Core `e9a1d16a729bc9fbbddaf16427625301cc9498a` with packaged Core 0.2.2.
+The workspace reuses the corrective portability Cargo lock. SQLite schema
+11 and the existing wire shapes carry forward.
+
+The optimized build, 63 UI tests, six HTTP/consumer tests, architecture
+check, and focused Tempo and Chess Rust suites passed. The standalone
+Stockfish process cleanup test passed when rerun with host process access.
+Disposable HTTP covered signed repertoire and tactic saves above 2 MiB, 501
+manual game records, and refusal of an incomplete declared HTTP body. Chess
+crossed the previous move, depth and expanded route counts and still
+rejected an illegal move. Independent review accepted the combined change.
+Packaged Chrome uploaded and saved the original Caro-Kann file. For 6 MiB
+repertoire and tactic saves, it lost the accepted reply, reloaded, sent
+the exact original command and observed one durable receipt per command.
+Chrome also submitted 501 games from a 6 MiB file, reloaded after an
+accepted reply was lost, and replayed the exact original request once
+without adding a receipt.
+
+The managed installer rehearsed and activated
+`workspace-c21029b32dd79bcfc7e2` on port 41822 from the reviewed PR heads.
+The optimized backend SHA-256 is
+`d214b0c5055389592b8f8e03cb70bd9fe714ab1a551cdf9b2c59a3957f04c0d8`.
+The listener served all 22 expected UI files. The live database kept its
+inode, dataset and schema. All 34 tables matched the stopped-time backup
+`recovery-start-848yw9po`; integrity and foreign keys passed. Live
+Repertoires Preview accepted the original PGN. The corresponding Save
+was verified on disposable data. The three runtime PRs are open against main.
