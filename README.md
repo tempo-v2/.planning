@@ -17,7 +17,7 @@ a consumer to invent policy from an available field.
 | [plans/usable-release/STATE.md](plans/usable-release/STATE.md) and [WORKSPACE.md](plans/usable-release/WORKSPACE.md) | Release history, source/artifact handoff and scope to reconcile with the current task |
 | [READING_GUIDE.md](READING_GUIDE.md) | Scaffold-era concept map; use current component paths and scope |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Ownership and allowed dependency graph |
-| [INTERFACES.md](INTERFACES.md) | Historical v0.1 scaffold interfaces and replacement rationale; not the current wire inventory |
+| [INTERFACES.md](INTERFACES.md) | Production interface and ownership map, followed by retained scaffold history |
 | [BEHAVIOR.md](BEHAVIOR.md) | Historical scaffold expectations B01–B15; some learning policies were superseded |
 | [contracts/dependencies.json](contracts/dependencies.json) | Machine-readable dependency rules |
 | [VERIFICATION.md](VERIFICATION.md) | Source baseline, executed checks and remaining limits |
