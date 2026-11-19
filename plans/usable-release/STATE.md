@@ -1722,3 +1722,40 @@ merge and managed cutover are separate authorized operations.
 | --- | --- | --- | --- |
 | Refresh Games history when authoritative historical status first reveals settled work or reveals new progress since the previous settlement. | CR-F1. Tempo publishes persisted job and window progress. The Games page owns history invalidation and bounded reads. Complete and incomplete jobs can have applied batches. A paused job can also have committed earlier batches. | Active dataset, current job, settlement state, ordered window identities, attempts and outcomes, and an observed transition out of running. Changes to notes, error text and acknowledgement identity do not prove fresh history. | Page-local observation. Invalidation supersedes older history reads immediately. Only an owned, successful history response replaces displayed rows. Errors retain the read retry. |
 | Scope historical command acceptance and current status to the active dataset. | CR-F2 and the historical commands contract above. Tempo owns active dataset, retained command checks and current-job reconciliation. Games owns read publication for the dataset established by its catalog. | Active dataset, immutable command identity and normalized input, retained job, and outstanding provider reply ownership. Retained acknowledgement and current status may name different jobs. Identity-free idle remains valid. | Retained acceptance survives within its dataset. Coordinator work from a prior dataset is discarded in memory, with outstanding provider replies drained before starting another window. |
+
+#### Reconciled corrective candidate
+
+The original corrective PRs remain the integration path. Their heads now
+include the newer Study interface and repertoire recommendation releases on
+main. The merge bases for the new runtime assembly include Tempo
+`c6d47cb463b83dedff0f96cd087def8b42f2fdf9` and UI
+`377b09c9b48213d326c99a0aeb8398b85246aa37`. Planning includes main
+`6d4d0366c100f3dee12d26cbddd525ad3d1a3617`.
+
+| Component | Qualified commit | Review |
+| --- | --- | --- |
+| Tempo | `dd2a5e5e2dec81cda666775abc77cb77425ce1e4` | [#25](https://github.com/tempo-v2/tempo/pull/25) |
+| UI | `14becea19c4c31f5e7ce9db7e473185d8eb71493` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
+| Store | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | [#15](https://github.com/tempo-v2/tempo-store/pull/15) |
+| Chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | [Integrated #14](https://github.com/tempo-v2/tempo-chess/pull/14) |
+| Learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Existing dependency |
+| Queue | `b70402598c91be87687feb42932cf9d8209e3eb1` | Existing dependency |
+| Study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Existing dependency |
+| Types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Existing dependency |
+| Core | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Existing Core 0.2.2 package |
+
+CR-F1 refreshes history after a first or newer historical settlement and
+cancels any earlier in-flight history read. The exact acknowledgement
+resolves A independently of current job B. A newer window attempt can
+trigger a refresh under the same job ID. CR-F2 fences commands and status
+to the active dataset and preserves outstanding-provider reply isolation.
+
+The [verification record](historical-follow-up-evidence.md) contains
+before/after observations, commands, artifact digests, and the qualification
+limits. The combined run passed 303 Rust tests and doctests, 53 UI tests,
+three Rust/UI boundary tests, the architecture gate and four self-tests,
+and the original acceptance groups. Native packaged verification, optimized
+model controls, optional-service Study and synthetic restart all passed.
+
+The next release step is coordinated review of the linked PR heads. The
+corrective set is awaiting merge and installation authorization.
