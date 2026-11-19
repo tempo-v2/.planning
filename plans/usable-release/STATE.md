@@ -1246,7 +1246,7 @@ reply on the board or stage a Stockfish or Explorer suggestion, then select
 | Behavior | Basis, owner, inputs and lifetime |
 | --- | --- |
 | Stage and compare replies | The approved board-first workflow gives UI ownership of hover, focus and the staged reply. Chess supplies the exact position and legal UCI identities. SAN and analysis labels affect display. The selected move changes the drafted line only when explicitly saved. |
-| Append a response | Tempo revalidates dataset, repertoire and document revision. Chess builds the PGN addition. UI requires a signed preview that preserves existing answers and learning before delivering the existing Save. The signed command and its receipt retain the same identity across reload and replay. Client continuation stores the gap context alongside that command. After confirmation, a failure to load the next gap allows a read-only retry. |
+| Append a response | Tempo revalidates dataset, repertoire and document revision. Chess builds the PGN addition. Tempo signs the existing Save payload only if Chess’s plan preserves existing answers and learning. UI delivers the signed command and manages recovery. The signed command and its receipt retain the same identity across reload and replay. Client continuation stores the gap context alongside that command. After confirmation, a failure to load the next gap allows a read-only retry. |
 | Show position evidence | Maia describes the position before the opponent move. Stockfish, structural similarity and Explorer describe the position where the learner responds. Tempo queries the rated Rapid Explorer independently using the validated position and chosen rating band. No result changes legality, save eligibility or Study policy. |
 
 ### Qualified source and artifacts
@@ -1254,8 +1254,8 @@ reply on the board or stage a Stockfish or Explorer suggestion, then select
 | Component | Qualified commit | Pull request |
 | --- | --- | --- |
 | Chess | `996971b48e1ff763f2a638f75ad981488e80155c` | [#11](https://github.com/tempo-v2/tempo-chess/pull/11) |
-| Tempo | `ef620ffefa94d65b16dc65d833e56e9a8293256c` | [#23](https://github.com/tempo-v2/tempo/pull/23) |
-| UI | `963853f915ab7546450003eb0f1a4a456ca22dee` | [#17](https://github.com/tempo-v2/tempo-ui/pull/17) |
+| Tempo | `827a83067e02ce1e8c94ddf1f49072af5ccb73e7` | [#23](https://github.com/tempo-v2/tempo/pull/23) |
+| UI | `8be2381cb3f256d8f00b4cf07a3abb6c1b5d3d49` | [#17](https://github.com/tempo-v2/tempo-ui/pull/17) |
 
 Use Store `7a7b45d39697375dcb89957a6ead8b4d3417ef0b`, Queue
 `b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
@@ -1268,17 +1268,17 @@ and the versioned Core 0.2.2 tarball
 `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
 
 The optimized backend SHA-256 is
-`e3c2d250a761b939191efe74c91db0701cc4a5ae6d57260cd5ad3e61db3eb325`.
+`9e76796d5993d78ee4c53bb122034b7d716dfeaff7a480adc6aa868b8549a1ea`.
 The packaged JS and CSS hashes after a fresh locked install are
-`8fc51a29c397b7eb126b26848a159c197edbe23aa3771e3cc4f7c1a83b386e07` and
+`c15a30cef7afa5a2e5b1ef776339c2be72e76e7cab63ccf4a6e4e381d80d679e` and
 `1b98748452a1f75e6ea42f51cfb1fd20ee670b806b0e1862e38b45379ae88d9b`.
 This candidate inherits schema 11 and the existing Study and content wire
 versions from the integration baseline.
 
 ### Verification and handoff
 
-- All 291 locked Rust tests and doctests, all 36 UI tests, the architecture
-  gate, and the guarded UI build passed.
+- All 292 locked Rust tests and doctests, all 36 UI tests, three Rust/UI
+  boundary tests, the architecture gate, and the guarded UI build passed.
 - On a disposable retained copy, the archived installed schema-10 pair
   served its gaps. The optimized candidate opened the same copy under
   schema 11, displayed the Scandinavian gap in SAN, and passed SQLite
@@ -1296,6 +1296,58 @@ versions from the integration baseline.
   handling passed with simulated provider replies. A live authenticated
   Explorer lookup remains unverified until a token is configured.
 
-The runtime PRs are open against main at the verified heads above. Review
-and merge the compatible set together. Managed installation is a separate
-delivery step.
+### Interface audit
+
+The dependency and source-confinement gate passed for all seven Rust
+packages. The packaged UI consumes Core 0.2.2 from its versioned tarball.
+Core handles board input and rendering. UI handles staging, arrows, and
+exact-command continuation. Chess supplies legality, canonical position, SAN,
+the authored PGN addition, and the typed change plan. Tempo now enforces the
+append-only rule against that plan before signing. Store commits the existing
+Save and its receipt atomically. The approved gap path can restore a retired
+answer when its version and learning are preserved. A different answer at
+that same retired target is rejected, with no Save token issued.
+
+The audit also traced application → Study/Chess grading and attempt
+progression, Learning transitions, Queue eligibility and ordering, and Store
+receipt replay through their public interfaces. Study continuation consumes
+the declared activity, status and assessment. Repertoire names and SAN
+remain display values. The missing-SAN case now preserves selection of an
+otherwise legal suggestion. Explorer and local analysis contribute display
+evidence independently of save and Study decisions.
+
+An inherited ownership cleanup remains. The application’s repertoire-side
+helper extracts side-to-move from Chess’s validated canonical FEN. Moving that
+projection behind a typed Chess interface would remove the application’s
+dependency on the FEN field layout. The current release reuses the same
+validated inputs. This audit covered the package graph and the changed
+runtime and Study handoffs.
+
+### Merged, installed and verified on November 19, 2026
+
+The runtime PR heads matched the qualified commits. The verified main merge
+trees matched each tested source tree.
+
+| Component | Verified main merge |
+| --- | --- |
+| Chess | `06fc9717b4d8abe5d0eff3b55c7a45cebfd350b2` |
+| Tempo | `61f590a013eb868446a7b10f8edad42508bd5532` |
+| UI | `1e8d668ac2dd15aaca4fb793fd1e731f86b35c5b` |
+
+The supported Mac lifecycle installed `workspace-3876ee307c2769bbcf01` on
+port 41822 after proving all 34 tables matched on a disposable rehearsal.
+The stopped-time backup and prior registration are in
+`.local/usable-release/recovery-start-etqol4ik`. The registered process
+served the tested optimized binary and all 22 UI files. SQLite stayed at
+schema 11 with the same dataset and file inode. Integrity and foreign-key
+checks passed.
+
+On a separate disposable copy of the existing dataset, Chrome opened the
+real Italian `1…d5` gap, staged `exd5`, and accepted the signed Save exactly
+once. The original 20,639 learning rows, 148 attempts, 114 assessments,
+308 Study receipts and two reset records matched afterward. On the live
+service Chrome opened the same modal, observed Stockfish and the hover
+arrow, staged and cleared `exd5`, then closed the modal. The verifier
+intercepted Study startup and blocked live mutation requests. After the
+browser check all rows across all 34 live tables matched the stopped-time
+backup in both directions.
