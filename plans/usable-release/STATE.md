@@ -1638,5 +1638,36 @@ decision, unavailable game context and a progress response without the count.
 The standalone UI import scanner reports the same JSX false positive in
 `GamesPage.jsx` on untouched main and the candidate. Changed Rust files
 pass formatting. Workspace-wide formatting reports existing differences
-in Tempo and Chess module declarations. The PRs target main and await
-coordinated review. The installed checkpoint remains the baseline above.
+in Tempo and Chess module declarations.
+
+### Managed installation
+
+| Component | Verified main merge | PR |
+| --- | --- | --- |
+| tempo-queue | `a171e70faf684dead33f04ad455012380fcb2e54` | [#9](https://github.com/tempo-v2/tempo-queue/pull/9) |
+| tempo | `df06acb9aab5d16b7f642089101e5e0c277ef8fd` | [#29](https://github.com/tempo-v2/tempo/pull/29) |
+| tempo-ui | `ea729f5d0f2499ce36fc3ab49aca256b400d7fd7` | [#22](https://github.com/tempo-v2/tempo-ui/pull/22) |
+
+Each merged runtime tree matched its reviewed PR head. The six companion
+pins still matched their remote main branches. The optimized binary and
+locked UI passed the packaged Chrome correction check on disposable data.
+The five focused Rust correction contracts and five application integration
+checks passed again. The broader suite evidence above applies to the same
+runtime trees.
+
+The managed launcher rehearsed the candidate on a disposable copy, created
+a stopped-service backup in `recovery-start-wctlsa51`, and installed
+`workspace-63a0f28a9bbb29b9ae89` on port 41822.
+The registered service ran the qualified binary and served all
+22 matching UI files. The binary SHA-256 is
+`c7e798e1d4a6489c46fe3777fad06f0330867f1f32f71d290088e6c1c576bad8`.
+
+The live read-only Chrome check resumed the retained active correction,
+matched the displayed SAN prefix to its source, and verified the heading
+with 98 repairs remaining. The same database file, dataset,
+active attempt and schema 11 were observed after restart.
+All 34 tables matched the stopped-service backup
+row for row, including 20,777 Learning records,
+226 attempts, 114 assessments and
+386 Study receipts. SQLite integrity and foreign-key
+checks passed.
