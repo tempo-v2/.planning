@@ -11,6 +11,18 @@ Open a game and Tempo shows the first opening decision against the chosen repert
 - The populated instance contains an Italian repertoire for White, a Caro-Kann repertoire for Black and three completed club games. River is the fourth game, available for you to import. Each evaluator used a different copy.
 - Try a recent Italian game of your own, or import the [club game against River](recent.pgn) with Andy as the learner. Pick a response after the unfamiliar move, stop after your chosen reply and save. Close the review and see whether you can tell from Games what you saved and what still needs attention.
 
+## Keeping a draft while looking around
+
+Play a continuation on the review board. **Return to played line**, Previous, the move sheet and the game library can now change your view while the candidate line keeps its own start and endpoint. **Return to draft** takes the board back to the line. To change course, use **Replace draft with viewed line** or **Discard draft**. The selected destination and the moves in the signed preview identify what Save will add.
+
+Opening a game compares it with the current document. Looking up an explored position uses that same document and content revision. If an edit changes the version during analysis, the comparison offers **Reload comparison**. The library’s first-decision filter still describes the recorded import.
+
+The review and analysis boards share move selection, source formatting and annotation helpers. Review includes the prepared, played and marked moves, requested engine lines, and bounded contributions from the other sources. An included move can show a measured zero, a missing value, a pending read or an unavailable source. The full analysis board also offers **All legal moves** for authoring.
+
+In the final private walkthrough we started in the filtered archive, opened an actual opponent gap, compared candidates, and dragged a new bishop reply. We browsed backward, returned to Games, reopened and reloaded, then previewed the original line. The save added exactly one unintroduced target. A fresh read showed the saved reply against the move played in the game. Private screenshots and game identities stay on the prototype machine.
+
+The focused two-tab Chrome test held a preview open during an explicit discard, then released it. Save stayed unavailable. Another test interrupted delivery of an accepted save and edited the draft in the other tab. Retry sent the original command and preserved the newer draft. The editor and game workbench share signed preview and durable delivery while each owns its own confirmation flow.
+
 ## Andy’s walkthrough and the revision
 
 Andy could identify the difference between **3.Bb5** and **3.Bc4** in Avery, but dragging the bishop replayed its move and the exhaustive legal-move picker took attention away from the board. His larger obstacle came one screen earlier. He had refreshed his actual games and could not find one worth opening.
