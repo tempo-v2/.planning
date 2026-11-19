@@ -1557,3 +1557,48 @@ row, including 20,720 learning records, 174 attempts, 114 assessments and
 334 Study receipts. Integrity and foreign keys passed. The stopped-time
 backup and prior registration are in
 `.local/usable-release/recovery-start-37czkteg`.
+
+## Chess projections, explicit tactic inputs, and the deviation arrow
+
+| Behavior | Authority, inputs, independence, and lifetime |
+| --- | --- |
+| Display learner color and SAN | Chess projects learner color from the solver start. It formats only the move that the issued lesson or already-disclosed correction permits. The pinned definition determines the result across restart and receipt replay. Labels are independent of identity, grading, and scheduling. |
+| Select tactics | Queue receives the existing capture-priority timestamp. Tempo derives it from the typed personal-capture origin and its unreviewed introduction. Pack ordering takes typed theme, difficulty, ordinal, position, and admission facts. The compatibility adapter alone interprets the reserved catalog encoding. It decodes packs only when the policy needs them. Ordinary attribution and display names are independent. Existing catalog records, learning and ordering rules carry forward. |
+| Display the game deviation | UI draws the exact verified game move in red and the issued repertoire move in blue at the live correction. The replay cursor and pending guided move have their own board state. Browsing never submits a grade. Supplemental fields use an HTTP display opt-in. The prior strict v5 HTTP and stdio shapes and immutable commands remain readable. |
+
+### Verification and managed installation
+
+| Component | Verified main commit | Pull request |
+| --- | --- | --- |
+| tempo-chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | [#14](https://github.com/tempo-v2/tempo-chess/pull/14) |
+| tempo | `c6d47cb463b83dedff0f96cd087def8b42f2fdf9` | [#27](https://github.com/tempo-v2/tempo/pull/27) |
+| tempo-ui | `377b09c9b48213d326c99a0aeb8398b85246aa37` | [#21](https://github.com/tempo-v2/tempo-ui/pull/21) |
+| tempo-store | `461c7c10370386e119a9d4dbb7734a4449ecad0b` | Integration baseline |
+| tempo-learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Integration baseline |
+| tempo-queue | `b70402598c91be87687feb42932cf9d8209e3eb1` | Integration baseline |
+| tempo-study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Integration baseline |
+| tempo-types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Integration baseline |
+| tempo-core-components | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Integration baseline |
+
+The merged runtime trees matched the qualified build, including the repertoire
+recommendation release that landed during verification. The locked suite passed
+299 Rust tests and doctests, 36 UI tests, three Rust/UI boundary checks, and the
+dependency gate. Core 0.2.2 was consumed through its locked npm tarball.
+The recommendation browser check passed its layout, override, and signed Save
+recovery scenarios. Independent packaged Chrome exercised both arrows, replay and guided-state
+restoration on desktop and narrow layouts. It recovered accepted-lost and
+unaccepted wrong-answer commands from the previous installed recommendation release with both
+the previous and current UI. Original command bytes and identities matched and
+each accepted command had one assessment and receipt. No Study wire version,
+SQLite schema, portable format, or learning rows required a migration.
+
+The installed checkpoint is `workspace-8467c4c7540fb7b6f55e` on port
+41822. Chrome resumed the existing active repair by read, verified
+both arrows and the original-game link, replayed the game and returned to the
+exercise. After the live check all 34 SQLite tables matched the
+stopped-time backup row for row, including 20,724 learning
+records. The database inode, dataset and schema 11 matched. Integrity and
+foreign-key checks passed. The registered listener served all
+22 verified UI files. The backup is
+`recovery-start-opl3ya1b`. The optimized binary SHA-256 is
+`58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
