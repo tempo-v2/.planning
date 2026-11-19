@@ -1236,3 +1236,62 @@ The open PRs contain the qualified set. Coordinated merge and managed
 installation are separate stages. At merge, compare the resulting trees
 to this set. At authorized cutover, verify the running artifacts,
 database and registered listener against the managed release.
+
+## Exercise-first Study and source game replay
+
+Study leads with the exercise and places Today below the card. A guided
+repertoire correction can show the move played in the source game and replay
+its legal mainline through that deviation. It remains outside the new opening
+allowance.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Authorize correction context | Tempo serves the read only for the active guided repair in the requested dataset. Store matches the issued target, answer version, miss revision and acceptance time against the reset boundary. The saved failure and exact choice or unambiguous retained observation determine the source across restart. Chess verifies the issued canonical position and the actual move before projecting SAN and FEN. Missing or ambiguous evidence leaves the guided lesson available. |
+| Display and browse the game | The UI uses the ready Repair flag and verified context for presentation. Exercise names are display text. The replay index and guided board preview are local to the issued view, and browsing emits no Study command. Returning restores the current exercise and a reproduced unsaved move. |
+| Show daily progress | The card explains the existing Learning and Queue rule. Today displays the server's existing daily projection. Study wire 5, SQLite 11 and portable format 5 carry forward. |
+
+### Compatible source and evidence
+
+| Component | Source commit | Pull request |
+| --- | --- | --- |
+| tempo | `94f1028fbc82ba6accfbecd9d621758e8a6b6d72` | [#24](https://github.com/tempo-v2/tempo/pull/24) |
+| tempo-chess | `77f7c7b88f9925b7f418d4c79e08a582f5bd9734` | [#12](https://github.com/tempo-v2/tempo-chess/pull/12) |
+| tempo-store | `04e215b7a6bbd95ac06a4ecd606d291d290e528f` | [#14](https://github.com/tempo-v2/tempo-store/pull/14) |
+| tempo-ui | `b6f42e41808246626c6e37cedec379f61060945b` | [#18](https://github.com/tempo-v2/tempo-ui/pull/18) |
+| tempo-core-components | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Integration baseline |
+| tempo-learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Integration baseline |
+| tempo-queue | `b70402598c91be87687feb42932cf9d8209e3eb1` | Integration baseline |
+| tempo-study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Integration baseline |
+| tempo-types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Integration baseline |
+
+The locked assembled build used the existing split workspace layout and the
+bundled Core 0.2.2 npm package. Candidate artifacts and locks have these
+SHA-256 values.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Workspace Cargo lock | `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0` |
+| UI npm lock | `1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb` |
+| Bundled Core package | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+| Development Tempo executable | `225de0fa30a56de04b31888234100069c372737a917e3837579838abbe119b1f` |
+| Packaged UI JavaScript | `9bcc998174ae0d86dc7c76d009814ef9df96a9779eeefeef84641a174f9b7db8` |
+| Packaged UI CSS | `f40d6d8e9d06d5057d463ea0d3de4435e1cf60a9c6dccb0aec7715ab5aad6b3b` |
+
+The locked workspace suite passed 292 Rust tests and doctests. The locked UI
+install, build and 36 tests passed, along with three Rust/UI boundary checks.
+The SQLite contracts cover a newer miss while the old repair is open, restart,
+an explicit choice, an ambiguous repeated position, missing source after
+portable restore, a reset, and a blind recall. A disposable copy of the
+installed dataset verified an active correction's exact prefix and original
+provider link.
+
+Independent review accepted the combined feature. Packaged Chrome exercised
+desktop and narrow layouts, exact replay and the keyboard controls, returning
+with a reproduced unsaved move, and navigation without Study commands or
+durable writes. It recovered a lost accepted acknowledgement with identical
+bytes, followed by a failed Next and a Next-only retry. Present, renamed and
+omitted exercise names across cloned baselines produced identical commands,
+accepted replies and durable Learning, assessment, receipt and failure rows.
+
+The candidate is published for coordinated review. Merge and managed
+installation are pending.
