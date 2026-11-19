@@ -1720,7 +1720,8 @@ merge and managed cutover are separate authorized operations.
 
 | Behavior | Basis and owner | Inputs and independence | Lifetime |
 | --- | --- | --- | --- |
-| Refresh Games history when authoritative historical status first reveals settled work or reveals new progress since the previous settlement. | CR-F1. Tempo publishes persisted job and window progress. The Games page owns history invalidation and bounded reads. Complete and incomplete jobs can have applied batches. A paused job can also have committed earlier batches. | Active dataset, current job, settlement state, ordered window identities, attempts and outcomes, and an observed transition out of running. Changes to notes, error text and acknowledgement identity do not prove fresh history. | Page-local observation. Invalidation supersedes older history reads immediately. Only an owned, successful history response replaces displayed rows. Errors retain the read retry. |
+| Refresh Games history when authoritative historical status first reveals settled work or reveals new progress since the previous settlement. | CR-F1. Tempo publishes persisted job and window progress. The Games page owns history invalidation and bounded reads. Complete and incomplete jobs can have applied batches. A paused job can also have committed earlier batches. | Active dataset, current job, settlement state, ordered window identities, attempts and outcomes, and an observed transition out of running. Notes and error text are presentation data. | Page-local observation. Invalidation supersedes older history reads immediately. Only an owned, successful history response replaces displayed rows. Errors retain the read retry. |
+| Refresh Games history once after a validated local Retry and a matching authoritative settlement, including an identical paused view. | CR-F3. The Games page owns freshness. Tempo owns current job status and validates command acceptance. | Dataset and job from the accepted Retry, plus an owned status GET for the same dataset and job in complete, incomplete or paused state. Acknowledgement A cannot establish status or execution for B. | Page-local until matching settlement, dataset replacement, a newer eligible local Retry acknowledgement, or unmount. Failed, timed-out, cancelled and foreign status reads leave the fact available. |
 | Scope historical command acceptance and current status to the active dataset. | CR-F2 and the historical commands contract above. Tempo owns active dataset, retained command checks and current-job reconciliation. Games owns read publication for the dataset established by its catalog. | Active dataset, immutable command identity and normalized input, retained job, and outstanding provider reply ownership. Retained acknowledgement and current status may name different jobs. Identity-free idle remains valid. | Retained acceptance survives within its dataset. Coordinator work from a prior dataset is discarded in memory, with outstanding provider replies drained before starting another window. |
 
 #### Reconciled corrective candidate
@@ -1735,7 +1736,7 @@ main. The merge bases for the new runtime assembly include Tempo
 | Component | Qualified commit | Review |
 | --- | --- | --- |
 | Tempo | `dd2a5e5e2dec81cda666775abc77cb77425ce1e4` | [#25](https://github.com/tempo-v2/tempo/pull/25) |
-| UI | `14becea19c4c31f5e7ce9db7e473185d8eb71493` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
+| UI | `2fd11a8860ee0a5664aae85f85adea861005c3d3` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
 | Store | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | [#15](https://github.com/tempo-v2/tempo-store/pull/15) |
 | Chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | [Integrated #14](https://github.com/tempo-v2/tempo-chess/pull/14) |
 | Learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Existing dependency |
@@ -1749,13 +1750,19 @@ cancels any earlier in-flight history read. The exact acknowledgement
 resolves A independently of current job B. A newer window attempt can
 trigger a refresh under the same job ID. CR-F2 fences commands and status
 to the active dataset and preserves outstanding-provider reply isolation.
+CR-F3 also refreshes after a same-tab Retry whose job resumes and pauses
+between GETs with the same status bytes. The acknowledgement supplies
+freshness once for its own dataset and job.
 
 The [verification record](historical-follow-up-evidence.md) contains
 before/after observations, commands, artifact digests, and the qualification
-limits. The combined run passed 303 Rust tests and doctests, 53 UI tests,
-three Rust/UI boundary tests, the architecture gate and four self-tests,
-and the original acceptance groups. Native packaged verification, optimized
-model controls, optional-service Study and synthetic restart all passed.
+limits. The CR-F3 run passed 58 UI tests, 56 supplied consumer probes,
+three Rust/UI boundary tests, and the architecture gate with four self-tests.
+Packaged Chrome verified same-tab freshness, prior-release Retry recovery,
+and all 22 HTTP-served UI files.
+The unchanged backend assembly retains the prior evidence from 303 Rust
+tests and doctests, the original backend acceptance groups, optimized model
+controls, optional-service Study, and synthetic restart.
 
 The next release step is coordinated review of the linked PR heads. The
 corrective set is awaiting merge and installation authorization.

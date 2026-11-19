@@ -70,15 +70,35 @@ The combined run exited 0. All three PI finding groups, the three extra Store co
 
 The optimized worker probe reran transient recovery, permanent exhaustion after four attempts, and explicit Analyze priority. The original interrupted-inference check recovered one complete and one partial projection and the retained 50,000-millionths reach. The ordinary HTTP Study smoke check used an unavailable provider and missing Maia weights. It issued an eligible test, accepted and exactly replayed one answer, issued a different test, and recorded one assessment, receipt and review.
 
-The later `tempo2-pi-corrective-review-packet.zip` was unavailable. Its manifest and its 49 adapter and two successor-gap assertions could not be rerun byte for byte. The repository suite and original packet covered the named bounded reads and the two new mounted successor-gap controls exercised fetch and body failures. Historical review logs and old asset hashes are provenance for the earlier candidate only.
+The later `tempo2-pi-corrective-review-packet.zip` was unavailable for the original reconciled run. The historical follow-up review packet supplied the archived 49 adapter and two successor-gap assertions, which ran successfully against the CR-F3 candidate.
+
+## CR-F3 same-tab paused Retry
+
+The supplied `probes/ui/historical_freshness.test.mjs` case failed on UI `14becea19c4c31f5e7ce9db7e473185d8eb71493` at the stale-history assertion and passed on `c039f829624f7f19bc79dfad24e35cc7f20b77c9`. The durable mounted regression in `test/games_evidence.test.js` failed at the later-row assertion in all five cases on the reviewed production code. On UI `2fd11a8860ee0a5664aae85f85adea861005c3d3`, all five displayed the later row in the same tab after one Retry POST and one additional history GET. The cases cover an immediate matching GET and matching GETs after failure, timeout, a foreign dataset, and cancellation. Repeated identical paused GETs left the history read count stable.
+
+The corrected UI passed **58** repository tests, including **29** mounted Games and GapEditor cases, and **56** supplied consumer probes. The supplied probes comprise four historical freshness/ownership cases, the original CR-F1 late-A/current-B reproduction, 49 read adapter cases, and two successor-gap cases. The three Rust/UI boundary journeys, architecture gate, four gate self-tests, and guarded `make build-ui` also passed. The auxiliary import scanner's earlier `name="from"` false positive remains recorded above.
+
+The follow-up packet's SHA-256 manifest verified. Its `probes/backend/backend-observations.json` (SHA-256 `89d71eaed18e69fe325c79ab91f801c3f15d9cd9df19df5559945c63c9d0740b`) records 24 → 48 actual rows on disposable SQLite with identical paused status, the pending window's attempt fixed at 0, and one saved Retry identity. Its separate restore probe isolates a successful old provider reply from the new dataset. This run reuses those backend observations and the earlier Rust/Store qualification for the same Tempo, Store, Chess, remaining backend pins, and Cargo lock. The changed code is in the Games consumer.
 
 ## Scope of the observed behavior
 
-A historical pause may hide already applied batches while its current window remains pending. First-observed pauses, changed window facts and observed running-to-paused transitions trigger a refresh. A resume that begins and returns to an identical paused job-and-window view between reads exposes no distinguishable revision on the existing wire. Games can reload history independently.
+A historical pause may hide already applied batches while its current window remains pending. First-observed pauses, changed window facts and observed running-to-paused transitions trigger a refresh. A validated same-tab Retry also triggers one refresh when a matching owned GET observes settlement, even with identical paused status. An external resume that starts and pauses between reads with an identical job-and-window view remains indistinguishable on the existing wire. Re-entering Games or reloading the page reads history again. The visible **Reload game evidence** button appears after a history read error.
 
 The restore cases use the application API on disposable SQLite and do not imply an installed HTTP restore route. The managed installation and database were outside these tests.
 
 ## Packaged browser and synthetic restart
+
+The CR-F3 run used the rebuilt UI and the same hash-verified optimized
+backend listed below. All 22 files served over HTTP matched the guarded
+build byte for byte. In Chrome's controlled same-tab paused fixture,
+history GETs went from 3 to 4, status GETs from 1 to 4, and Retry POSTs from
+0 to 1. The later fixture row replaced the earlier row and the pending
+request cleared. The same packaged run repeated the real old-A/current-B
+HTTP and disposable SQLite checks below, including first-settled B,
+byte-identical accepted Retry replay, one effect for the previous
+unaccepted Retry, and history deadline recovery. SQLite integrity and
+foreign keys passed at schema 11. The separate backend probe above
+establishes that additional real rows can coexist with identical status.
 
 Native headless Chrome used the previous installed checkpoint
 `workspace-8467c4c7540fb7b6f55e`, whose executable matched SHA-256
@@ -135,7 +155,7 @@ guarded build.
 
 ```text
 c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d  assets/app.css
-fc8d367edba68c99038072bcc25e74c60792a4a3404a476703a8e0685d6dfe74  assets/app.js
+97420b5bf344b84ed25737ee0dc12f9c12582c7bf2e622d3e821c4a0eca2907e  assets/app.js
 a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1  assets/bB-GT5SSGJP.svg
 d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c  assets/bK-675NAWJZ.svg
 f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa  assets/bN-JOUYBUTG.svg
