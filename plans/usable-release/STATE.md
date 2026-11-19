@@ -1269,9 +1269,9 @@ and the versioned Core 0.2.2 tarball
 
 The optimized backend SHA-256 is
 `e3c2d250a761b939191efe74c91db0701cc4a5ae6d57260cd5ad3e61db3eb325`.
-The packaged JS and CSS hashes are
-`15a33d876f973c2e9f483817041f24cebb633b62b8cf27f0cec58b8dca29640d` and
-`e6bfa612c12a1d1da9d1fc7155e82cdc75d78c3618119538a81f5d96efd226fb`.
+The packaged JS and CSS hashes after a fresh locked install are
+`8fc51a29c397b7eb126b26848a159c197edbe23aa3771e3cc4f7c1a83b386e07` and
+`1b98748452a1f75e6ea42f51cfb1fd20ee670b806b0e1862e38b45379ae88d9b`.
 This candidate inherits schema 11 and the existing Study and content wire
 versions from the integration baseline.
 
