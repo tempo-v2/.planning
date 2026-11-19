@@ -1575,3 +1575,10 @@ real Maia weights were outside these checks.
 The compatible source set is qualified and published for coordinated review.
 The deployed Study replay release remains the installed version. Candidate
 merge and managed cutover are separate authorized operations.
+
+### Historical freshness and dataset follow-up
+
+| Behavior | Basis and owner | Inputs and independence | Lifetime |
+| --- | --- | --- | --- |
+| Refresh Games history when authoritative historical status first reveals settled work or reveals new progress since the previous settlement. | CR-F1. Tempo publishes persisted job and window progress. The Games page owns history invalidation and bounded reads. Complete and incomplete jobs can have applied batches. A paused job can also have committed earlier batches. | Active dataset, current job, settlement state, ordered window identities, attempts and outcomes, and an observed transition out of running. Changes to notes, error text and acknowledgement identity do not prove fresh history. | Page-local observation. Invalidation supersedes older history reads immediately. Only an owned, successful history response replaces displayed rows. Errors retain the read retry. |
+| Scope historical command acceptance and current status to the active dataset. | CR-F2 and the historical commands contract above. Tempo owns active dataset, retained command checks and current-job reconciliation. Games owns read publication for the dataset established by its catalog. | Active dataset, immutable command identity and normalized input, retained job, and outstanding provider reply ownership. Retained acknowledgement and current status may name different jobs. Identity-free idle remains valid. | Retained acceptance survives within its dataset. Coordinator work from a prior dataset is discarded in memory, with outstanding provider replies drained before starting another window. |
