@@ -1171,3 +1171,68 @@ The next delivery stage is coordinated merge of the compatible heads and
 comparison of the merged trees with the qualified candidate. Installation
 requires the managed launcher and authorized cutover, including a stopped
 database backup and post-start database, listener and artifact readback.
+
+## Schema-11 review repairs
+
+The adversarial review held the candidate above for three reproduced
+findings. The revised [candidate manifest](manifest.json) supersedes its
+Tempo and Store pins and optimized binary hash. All other runtime pins,
+the UI package, SQLite schema 11, portable format 5, and the public
+payload shapes carry forward. The registered service still serves
+schema-10 checkpoint `workspace-08812817f80797b72eaf`.
+
+| Finding | Behavior and owner | Inputs, independence and lifetime |
+| --- | --- | --- |
+| R11-F1 | Store restores attribution of an accepted native choice only when retained evidence establishes one historical target/version. Tempo's existing startup reconciliation repairs the derived encounter. | The saved closure, parent position and ply, candidate target/version, exact child identity and recorded miss establish provenance across restart and upgrade. The selected-child hash may use the direct schema-9 parent, wrapped schema-10 parent, or the exact wrapper reconstructed from a schema-9 alias. Candidate order and an existing automatic grade do not select a target. Missing or conflicting proof leaves the choice closed. Learning, grades and accepted receipts carry forward. |
+| R11-F2 | Tempo's single model coordinator retries a failed automatic projection up to three times, waiting 1, 2 and 4 seconds after failures. A newer cache request replaces the pending retry and explicit Analyze takes priority. | Each attempt reads current inputs and uses the existing dataset and per-book Store publication checks. A successfully published partial result settles cache-only work. Exhaustion is logged and the durable projection stays pending. Analyze can recover it when the underlying fault clears. Retries are in memory and startup schedules from current retained content. |
+| R11-F3 | Tempo's projector carries exact zero through multiplication with a missing reply probability in either order. | A known zero determines the product. Missing evidence on an otherwise positive path still leaves the contribution unknown. First arrival, per-book completeness and the raw cache retain their existing meanings. The reserved schema-11 projection was qualified from fresh predecessor copies. |
+
+### Qualification
+
+- The review packet reproduced all three findings on the original heads,
+  with all seven hostile Store controls passing. Independent rerun on the
+  repaired candidate passed all ten assertions.
+- The three historical writer combinations passed independently via actual
+  schema-11 startup and HTTP replay: direct old/old, old/new alias, and
+  direct new/new. Each synthetic schema-10 reimport removed the attributed
+  miss before upgrade. Startup recovered target and answer version 1 and
+  repaired exposure 1 / misses 0 to exposure 1 / misses 1. Learning,
+  assessments, failure keys, retained receipt bytes and the replayed Choose
+  reply matched. Repeated startup repaired zero additional maps and another
+  reimport preserved the miss. Integrity and foreign keys passed.
+- The optimized HTTP listener with one retained raw distribution reproduced
+  a failed cache publication under SQLite contention. After unlock, GET
+  observed complete 1 / pending 0 with unchanged content and no other
+  trigger. A separate permanent failure stopped after four attempts, with
+  the final failure logged. Repeated reads left it pending and explicit
+  Analyze recovered both targets after the fault was removed. In a separate
+  run, Analyze preempted the first automatic retry delay and published once.
+  An SQLite audit trigger confirmed the subsequent cache wake did not
+  publish again.
+- The transposition published 200,000 millionths while its book stayed
+  partial. The projector also passed unknown followed by zero, positive
+  followed by unknown, and the existing 380,000 millionths complete case.
+- The locked assembled suite passed 289 Rust tests and doctests. The
+  architecture gate, three Rust/UI boundary tests and 36 UI tests passed.
+  All 22 packaged UI hashes match the previously qualified artifact. The
+  earlier browser and saved-command evidence remains applicable to the
+  unchanged UI and wire shapes, supplemented by the historical HTTP replay.
+
+The checks used disposable databases. Live provider fetching and inference
+with real Maia weights remain outside this qualification.
+
+### Publication and handoff
+
+| Repository | Qualified head | Pull request |
+| --- | --- | --- |
+| Tempo | `061b718e11903ecba2bee4f401eed1b21931c56e` | [#22](https://github.com/tempo-v2/tempo/pull/22) |
+| Store | `529efb31c2b302af7e2571a48626aeca12414e70` | [#13](https://github.com/tempo-v2/tempo-store/pull/13) |
+| UI | `90ed0057214f78fbe4eff59de67f266435eed142` | [#16](https://github.com/tempo-v2/tempo-ui/pull/16) |
+| Planning | This ledger and the revised candidate manifest | [#21](https://github.com/tempo-v2/.planning/pull/21) |
+
+The independent reviewer accepted the combined heads above. The optimized binary SHA-256 is
+`3ef27d814584666f77adfcccbccca40437c371a457e01412a6d752f5ccdb8945`.
+The open PRs contain the qualified set. Coordinated merge and managed
+installation are separate stages. At merge, compare the resulting trees
+to this set. At authorized cutover, verify the running artifacts,
+database and registered listener against the managed release.
