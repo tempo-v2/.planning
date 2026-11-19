@@ -1968,7 +1968,36 @@ all nine runtime repositories matched the qualified assembly, including
 the six companion trees.
 
 The release-host package was rechecked on disk against the optimized
-binary digest and all 22 UI hashes. Installation awaits separate
-authorization. The next unfinished step is to use the actual managed
-registration, preserve retained live data and rollback material, and
-verify the installed package and scoped smoke checks.
+binary digest and all 22 UI hashes.
+
+#### Managed installation and live acceptance
+
+On November 19, the separately authorized managed install replaced
+`workspace-7ed579a4d29162fc4fdc` with
+`workspace-6406aa4f8658cb73dd62` on registered port 41822. The managed
+rebuild matched the exact qualified package before cutover. The loaded
+registration and the actual listener identified the installed Mach-O
+binary at SHA-256
+`b442484f85da2d3615534c7a84ec4700f80c9af8202e03a29b4827747b197798`.
+All 22 files on disk and served over HTTP matched the final artifact
+hashes. The first rehearsal exceeded the launcher's one-second health
+probe before it stopped the previous service. A disposable startup
+check passed and the standard managed retry completed the cutover.
+
+The stopped-service database and prior registration are in
+`.local/usable-release/recovery-start-l8gh2ud5`. The backup database
+SHA-256 is
+`6147f710c5d97ea92b03586df79e6e4dd4c0d63bee75f111e9272225e714a1d6`.
+The prior registered executable and its 22 UI files still match their
+pre-install hashes.
+
+The live service reported the same SQLite file, dataset, schema 11 and
+active Study attempt. Chrome used the read-only Resume command, verified
+the retained position, and opened Games. History returned 100 rows and
+the authoritative historical status was complete. The smoke sent zero
+mutations. Study reported zero remaining guided corrections, so the
+correction-context and same-tab Retry journeys remain covered by the
+qualified disposable tests. After the live smoke, all 34 tables matched
+the stopped-service backup row for row, including 20,783 Learning rows,
+325 attempts, 115 assessments, and 485 Study receipts. Integrity and
+foreign-key checks passed on both copies.
