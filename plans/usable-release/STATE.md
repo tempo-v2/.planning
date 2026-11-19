@@ -1835,3 +1835,41 @@ controls, optional-service Study, and synthetic restart.
 
 The next release step is coordinated review of the linked PR heads. The
 corrective set is awaiting merge and installation authorization.
+
+### Final corrective integration with current Study main
+
+This candidate supersedes the corrective source set above for the release
+decision. The earlier corrective checks and the installed correction-context
+release remain recorded in their respective sections. The current-main
+snapshot used Tempo `df06acb9aab5d16b7f642089101e5e0c277ef8fd`, UI
+`da8e883c7bf10ec0f9c33df41d5405b7bb8be0b0`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, and Planning
+`53da95502431dbc091afb45c7678eccce0dd5b8c`. Planning merge
+`cc515dd1adec985eb6ee63421ff5826104e7786d` retains both appended ledger
+histories. Review and publication use the current corrective PR heads.
+
+| Runtime component | Final source commit | Git tree |
+| --- | --- | --- |
+| Tempo [#25](https://github.com/tempo-v2/tempo/pull/25) | `e9771becbf26b1e8c76d1a5bc68da4dce10eb54b` | `dee7ba84f6b36418255c5cb5e97eb505618520f8` |
+| UI [#19](https://github.com/tempo-v2/tempo-ui/pull/19) | `bf0c05f608cd5fcb4e017b45ff1202de1cd66d48` | `f8c4ef79cbe45ea53c14d2fe97733b49d5251ea5` |
+| Store [#15](https://github.com/tempo-v2/tempo-store/pull/15) | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | `61090e235be25ff8cf287d2d639bd678b815562a` |
+| Queue | `a171e70faf684dead33f04ad455012380fcb2e54` | `a1ebab77ddf5473c9d98b27ab0f26f12aca63c14` |
+| Chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | `39772c7fc7b4739c1033b650c9208725d23cba67` |
+| Learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | `2f7312f3dba27d2e3477e7b821a292b71913fe67` |
+| Study | `73b2482dfb2ae652220727b87451fdb4a5110807` | `f2efa867550bca6ce3a96ed77359f6f02eea492d` |
+| Types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | `88926c441ed45c8fc983efe097ac9226b3fb51d4` |
+| Core 0.2.2 | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | `ad591c239ba10befbfb77bf8cd573e31323821d3` |
+
+All nine runtime trees match the independently reviewed merge preview.
+The final Tempo consumes the newer Queue's pending-repair count. The final
+UI retains the correction context, count and compact SAN from main.
+Its Games implementation and mounted acknowledgement regressions match
+the accepted CR-F3 commit byte for byte.
+
+The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
+identifies the locks, Core tarball, macOS executable and all packaged UI
+files. SQLite schema 11, portable format 5 and Study wire 5 carry forward.
+
+The next unfinished step is the decision on merging the coordinated PRs.
+Managed installation requires separate authorization and verification of
+the retained live data and registered artifact set.

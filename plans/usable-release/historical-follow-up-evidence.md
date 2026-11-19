@@ -144,7 +144,7 @@ copy of the newly created synthetic Study database preserved all 34 tables.
 SQLite integrity and foreign keys passed. All 22 served files matched the
 guarded build.
 
-## Artifact SHA-256
+## Earlier CR-F3 artifact SHA-256
 
 | Artifact | Hash |
 | --- | --- |
@@ -156,6 +156,119 @@ guarded build.
 ```text
 c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d  assets/app.css
 97420b5bf344b84ed25737ee0dc12f9c12582c7bf2e622d3e821c4a0eca2907e  assets/app.js
+a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1  assets/bB-GT5SSGJP.svg
+d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c  assets/bK-675NAWJZ.svg
+f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa  assets/bN-JOUYBUTG.svg
+d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3  assets/bP-3PVWADTM.svg
+8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098  assets/bQ-PBUQEJQM.svg
+32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884  assets/bR-CBGYAKGK.svg
+7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b  assets/capture.mp3
+da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010  assets/castle.mp3
+ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52  assets/check.mp3
+3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9  assets/illegal.mp3
+0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61  assets/move-opponent.mp3
+3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547  assets/move-self.mp3
+69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815  assets/promote.mp3
+b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d  assets/wB-YLMC6FHU.svg
+e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4  assets/wK-AUE64UFO.svg
+25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d  assets/wN-CSRTRN5I.svg
+0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50  assets/wP-63DUNQX4.svg
+b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c  assets/wQ-6YL7MNW5.svg
+494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3  assets/wR-IQNXS3HT.svg
+3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac  index.html
+```
+
+## Final combined release qualification
+
+The [final source table](STATE.md#final-corrective-integration-with-current-study-main)
+records the published runtime commits and their trees. All nine trees match
+the independent current-main preview. The Tempo and UI merge commits have
+the same parent sets as the preview commits
+`33e6d5cd83ebd9cefeb5afa5508c2f67e0ff366d` and
+`29c4c1966296857a9ad00597e2a254a640c30b68`, respectively.
+The preview's 304 locked Rust tests and doctests, across 20 test groups,
+apply to these exact runtime trees and matching Cargo manifest and lock.
+The earlier 303-test assembly is historical evidence.
+
+The final assembly freshly passed 58 repository UI tests, 64 supplied
+consumer probes (56 original and eight additional), the architecture gate
+and four self-tests. The five Rust/UI and HTTP/SQLite integration checks ran
+against the optimized package. The auxiliary import scanner's existing JSX
+false positive remains outside the changed runtime source.
+
+### Original acceptance runner
+
+The CR-F3 review packet verified all 171 listed file hashes. The pristine
+original acceptance packet verified its 90 listed hashes. The disposable
+copy used the supplied one-line status API adaptation described above.
+The original runner was invoked with `--include-prior`. Its classification
+stayed intact: exit 0 means acceptance passed, 1 means a recognized finding
+failed with controls passing, and 2 means setup, control, or unrecognized
+failure. The final run exited **0**, with zero reviewed failure groups.
+
+| Group | Final result |
+| --- | --- |
+| PI-F1 interrupted model recovery | Recovered without a manual trigger |
+| PI-F2 retained historical Retry | Exact accepted Retry acknowledged after later work and restart |
+| PI-F3 bounded Games reads | Both deadline and recovery cases passed |
+| Prior assertions | All ten passed, including portable format 5 and old-format recovery |
+| Additional Store controls | All three passed |
+
+The two supplied historical SQLite fault probes also passed against a
+disposable copy of the final sources. Actual history grew from 24 to
+48 rows with identical paused status, attempt 0, and one saved Retry ID.
+The restore probe discarded an old dataset's successful provider reply
+and retained only the new dataset's game. An initial invocation using the
+shared acceptance build directory selected a binary with zero matching
+tests. The separate target run executed and passed both named probes.
+
+### Packaged Games and Study on the release host
+
+Native headless Chrome ran the final optimized package and exercised the
+previous correction-context checkpoint `workspace-63a0f28a9bbb29b9ae89`
+as a read-only executable and UI source, on fresh SQLite. Retry A kept
+its original envelope and request bytes, cleared on acknowledgement, and
+left current B and the retained jobs intact. The previous undelivered
+Retry produced one durable effect. B first settled incomplete with the
+provider unavailable. The first-settlement history row used controlled
+transport, and the history deadline recovered through the dedicated
+read action. In the controlled same-tab paused case, one Retry POST and
+three identical subsequent GETs increased history reads from 3 to 4 and
+displayed the later row. A separate consumer ordering case observed
+settlement before the acknowledgement and incurred a bounded second read.
+
+The checked-in Chrome Study journey passed compact SAN, a black-to-move
+prefix, narrow layout, replay and return, and the remaining-repair count
+from 2 to 1 after accepted acknowledgement. A separate fault run dropped
+an accepted Study acknowledgement response and confirmed byte-identical
+replay, one receipt, zero additional assessments, and Next-only recovery
+after interruption. The ordinary optimized HTTP Study journey issued an
+eligible test while the provider connection failed and Maia was unavailable.
+It accepted and exactly replayed the answer, recorded one receipt and grade,
+and issued a distinct next test. The subsequent synthetic restart preserved
+all 34 SQLite tables with successful integrity and foreign-key checks at
+schema 11. These checks used disposable data.
+
+### Final artifact SHA-256
+
+The release host was macOS 26.6.2 arm64 with Rust 1.98.1, Node 26.12.0
+and npm 11.20.0. The server came from
+`cargo build --release --locked --offline -p tempo --bin tempo`.
+The UI came from guarded `make build-ui`, using the locked Core 0.2.2
+package. Each of the 22 packaged files matched the built file, the reviewed
+preview's digest and the bytes served by the optimized binary.
+
+| Input or artifact | SHA-256 |
+| --- | --- |
+| Workspace Cargo manifest | `acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072` |
+| Workspace Cargo lock | `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0` |
+| UI npm lock | `1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb` |
+| Core 0.2.2 tarball | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+| Optimized macOS arm64 Mach-O `tempo` | `b7daa655733a63989ca6a688abf81b34cacdf5da41fc7e38859e179079cab777` |
+
+```text
+91393cc0d4552e945e2f1e6ca4467f3b89a4b35567c4e1450c6d88b11cd3afc2  assets/app.css
+e46960a62b4c40d9907902eba092cfab67f970031ef5d9978f2ec889476702b6  assets/app.js
 a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1  assets/bB-GT5SSGJP.svg
 d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c  assets/bK-675NAWJZ.svg
 f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa  assets/bN-JOUYBUTG.svg
