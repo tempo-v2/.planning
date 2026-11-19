@@ -1462,3 +1462,63 @@ priority from a reserved provenance string and tactic selection decodes
 legacy pack metadata from the same generic provenance field. Those inputs
 should enter selection as explicit domain facts. No selection, grading or
 persistence policy was changed to address these findings in this cutover.
+
+## Repertoire-aware default in Fix response
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Reuse nearby replies | The approved authoring preference tries the current repertoire before other active same-side repertoires. In each, distinct supporting positions determine frequency and closest support breaks ties. Chess owns canonical structure, saved moves and whether the same piece can play the same legal move at the gap. Labels and SAN are display values. |
+| Compare against Stockfish | Tempo tries the ranked replies until it finds a comparable move within 50 centipawns. A best comparable repertoire reply 51–150 centipawns behind leaves the selection blank. Stockfish needs all eligible comparisons to exceed 150. Missing or mate scores cannot justify that fallback. The identical top move is a zero difference for any score type. |
+| Stage a default | A matching analysis request and content revision can fill an untouched modal. UI owns manual input, clearing, arrows, focus and exact-command recovery. An automatic selection changes no durable state. Explicit Save uses the existing signed preview and Store receipt. |
+
+The similarity panel shows support counts and expandable board examples next
+to Stockfish. Explorer shows its game counts and outcomes on a full-width
+row below the pair. Narrow screens stack the panels beneath the board.
+Tempo looks at eight distinct positions per group and compares up to sixteen
+distinct repertoire responses in a bounded same-depth Stockfish search.
+If that budget leaves responses unscored, the selection can stay blank.
+The existing top-three neighbor projection remains available to older pages.
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Chess | `c6da613f37e0ae11e7abf25167b01f9a45ba3065` | [#13](https://github.com/tempo-v2/tempo-chess/pull/13) |
+| Tempo | `966f0982b53f59de2bd8c604014809e1e77d1d9a` | [#26](https://github.com/tempo-v2/tempo/pull/26) |
+| UI | `47fa621e7cb04b7cb14cef38a44ac7e76707bdaf` | [#20](https://github.com/tempo-v2/tempo-ui/pull/20) |
+
+The combined candidate starts at the installed Study replay source. Reuse
+Store `461c7c10370386e119a9d4dbb7734a4449ecad0b`, Queue
+`b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
+`09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Study
+`73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. Use workspace lock SHA-256
+`c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`
+and the packaged Core 0.2.2 tarball
+`4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+SQLite schema 11 and the existing Study and repertoire Save contracts carry
+forward.
+
+The optimized backend SHA-256 is
+`3b1e5b564cf391ef0327ba3aa38057031a708bee147428d25824b63696454ed6`.
+The packaged JS and CSS hashes are
+`dae72ededfcda99f758a31729c36b46f0c20cb865179910958f4914d49c73a77` and
+`c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d`.
+
+The combined build passed 298 locked Rust tests and doctests, 36 UI tests,
+three Rust/UI boundary tests, and the architecture gate. Independent review
+verified the owner boundaries, same-depth Stockfish comparison including
+replies outside the unrestricted top three, and the actual packaged board
+consumer. In Chrome the synthetic transport exercised both layouts, arrows,
+manual override during a held drag, clearing, stale analysis, and exact
+Save replay after reload. The underlying disposable database preserved
+existing learning and accepted one save.
+
+The production endpoint on a disposable copy of the retained dataset
+recommended `exd5` against the Italian `1…d5` gap. The move appeared once
+among the current repertoire neighbors and tied Stockfish. Analysis left
+all checked durable rows identical. An explicit signed save added one
+receipt and preserved all 20,639 existing learning rows, 148 attempts,
+114 assessments, and existing Study receipts in that copy.
+
+The runtime PR heads were verified against main. Merge and managed
+installation are separate delivery stages.
