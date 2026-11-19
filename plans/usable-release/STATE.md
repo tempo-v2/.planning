@@ -2002,4 +2002,10 @@ The listener served all 22 expected UI files. The live database kept its
 inode, dataset and schema. All 34 tables matched the stopped-time backup
 `recovery-start-848yw9po`; integrity and foreign keys passed. Live
 Repertoires Preview accepted the original PGN. The corresponding Save
-was verified on disposable data. The three runtime PRs are open against main.
+was verified on disposable data.
+
+GitHub merged the three runtime PRs into main. Each fetched main tree
+matched the qualified head listed above. The merged workspace uses
+Chess `25fe9e01482ddc04d323207c18fdcfb5e97be4db`,
+Tempo `5130af42f78e5aa25ad42056c8f0b2c6544dd5f3`, and
+UI `a16b7ca4ca3149b5789f8e6f935fcdf9b3f8f75c` with the same companion pins.
