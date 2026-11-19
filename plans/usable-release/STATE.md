@@ -1674,7 +1674,7 @@ checks passed.
 
 ## Shared analysis board and marked-line authoring, November 19
 
-The candidate starts from the compact-correction installation `workspace-6d37b569cfafffdcc9d1`. Its four runtime PRs are open for coordinated review.
+The candidate starts from the compact-correction installation `workspace-6d37b569cfafffdcc9d1`. The table records the initial coordinated review heads. The final merge commits and installation checks follow below.
 
 | Component | Head | Pull request |
 | --- | --- | --- |
@@ -1695,4 +1695,27 @@ The combined candidate passed 305 Rust tests and doctests, 39 UI tests and the d
 
 Chrome on disposable retained copies verified guided return, cancel before disclosure, one accepted Again, reload, and Next for original, changed and omitted display names. Previous installed clients produced accepted-lost and unaccepted Answer, Show Move and signed repertoire Save commands. The candidate replayed the original identities with one durable effect. A separate database check covered an attempt with an earlier miss and an edit that changed the issued answer.
 
-All five real evidence sources returned results for the London position on a disposable retained copy. In one optimized run the repertoire comparison took about two seconds cold and 19 ms on the next ply. Strict workspace Clippy still flags existing Store warnings. No live installation or migration was performed. The next release step is coordinated review and merge. Whole-repertoire first-gap probability remains a later feature.
+All five real evidence sources returned results for the London position on a disposable retained copy. In one optimized run the repertoire comparison took about two seconds cold and 19 ms on the next ply. Strict workspace Clippy still flags existing Store warnings. Those checks used disposable data. Whole-repertoire first-gap probability remains a later feature.
+
+### Coordinated review and merge
+
+The UI now binds confirmation to the displayed dataset, attempt, content version and revision. Returning from analysis resumes the addressed open activity or requests Next when it has ended. Fix Response retains the selected move across an exploratory visit. The analysis table opens the supporting boards for a particular move and shows the size of each Explorer population.
+
+Chess verifies a supplied starting move order against a contiguous authored route, including the observed opponent departure permitted by Fix Response. Tempo checks that the signed Save fits the HTTP transport before returning a successful preview. A rejected replacement preview clears its previous Save button.
+
+The final candidate passed 307 Rust tests and doctests, 41 UI tests, and the architecture gate. Packaged Chrome covered staged response retention, a stale preview followed by refresh and Save, cancel and confirmed Again, cross-window return, and independently delayed evidence. The five real providers returned evidence for the London decision on disposable data. Strict workspace Clippy has the existing Store findings described above.
+
+| Repository | Qualified head | Verified main merge |
+| --- | --- | --- |
+| [tempo-study #2](https://github.com/tempo-v2/tempo-study/pull/2) | `addc9a1fcba2460858e525865fb554e4003891d0` | `4b46e6c45a6330177b089eadcae69821e57b6657` |
+| [tempo-chess #15](https://github.com/tempo-v2/tempo-chess/pull/15) | `78c51850495ac9ef587d240e17c26cd13f4761d2` | `531cadaea8c89de230d3516d31d95582dc7263dd` |
+| [tempo #30](https://github.com/tempo-v2/tempo/pull/30) | `9a43767c4ed47851f2d263ae3b679c37548bc4c8` | `70850707200c856b089820b32e0baabdff3a21a7` |
+| [tempo-ui #24](https://github.com/tempo-v2/tempo-ui/pull/24) | `1e293784106ac219959acfd590e42cc2a30fcc34` | `3bf2278469d846007243761dc96be9e17cde2117` |
+
+### Managed installation and live acceptance
+
+The merged trees matched the reviewed runtime heads. The managed launcher rehearsed the release on a disposable backup, stopped the prior service, backed up its database and registration, and installed checkpoint `workspace-7ed579a4d29162fc4fdc` on port 41822. The binary SHA-256 was `79176f94d5df5d728c57df8127e0eabab654a1c27187bb0ba0f31df5a40b8dc3`. All 22 served UI files matched the qualified build.
+
+Chrome resumed the existing London System guided correction, opened **Analyze** using the live Study button, matched the analysis board to the exact issued position, and returned to the same active correction. The live check used the read-only Resume operation on entry and return. The card displayed 89 repairs remaining. The installed repertoire list reported London System with 1,201 positions and Italian with 1,923.
+
+After the browser journey all 34 database tables matched the stopped-service backup `recovery-start-b8d4qxqe` row for row. The same database file, dataset, active attempt and schema 11 were retained. Counts included two repertoire documents, 20,783 learning records, 235 attempts, 114 assessments and 395 Study receipts. SQLite integrity and foreign-key checks passed on both copies.
