@@ -1462,3 +1462,116 @@ priority from a reserved provenance string and tactic selection decodes
 legacy pack metadata from the same generic provenance field. Those inputs
 should enter selection as explicit domain facts. No selection, grading or
 persistence policy was changed to address these findings in this cutover.
+
+## Post-install Games recovery repairs
+
+PI-F1–PI-F3 use the schema-11 review packet as historical reproduction
+evidence. The follow-up starts from the combined Study replay main trees
+above. Store selection excludes partial headers, historical Retry gates
+durable replay on current-job state, and selected Games callers own read
+deadlines. Independent source review also found that publishing a retained
+job acknowledgement as current status would displace a newer job in Games.
+Import, Reprocess and Choose already check stored command identity before
+repeating effects. Ordinary Refresh retains its separate single-status-slot
+delivery contract.
+
+| Flow | Authority, identity and lifetime | Recovery boundary and proof |
+| --- | --- | --- |
+| Model | Tempo originates cache-refresh or explicit Analyze intent. Store retains raw distributions by raw model and position. Reach is derived under dataset, verified book input, projection algorithm and target versions. Raw evidence survives restart for matching positions. | Raw distributions commit individually before guarded projection publication. A partial header can survive alongside newer durable evidence. The worker restores progress on the existing startup/content trigger. Incomplete cache can settle successfully, while operational errors consume the bounded retry budget. Zero, unknown and known positive reach keep their existing meanings. |
+| Historical commands | Tempo validates active dataset and immutable command identity. The saved job retains accepted Retry IDs under dataset and job across replacement and restart. The current-job pointer governs new work admission. | The retry ID and incremented window attempts commit together before execution. A validated acknowledgement for the original job clears the UI envelope. The saved view may evolve. The status read owns publication of the current job. |
+| Games reads | The six named UI adapters own deadlines through response-body consumption. The page, dataset and gap offset govern publication. Catalog and paginated gaps are reads even when transported as POST. | Deadline expiry exposes a recoverable resource error. Owner cancellation suppresses obsolete publication. The page owns polling and reload. The separate exact-command path resolves uncertain mutation acceptance. |
+
+The browser can retain a partial model snapshot until its next read.
+Automatic cache work has no separate public activity signal. Recovery is
+verified through the normal status endpoint without changing the meaning of
+projection completeness.
+
+### Compatible candidate
+
+| Component | Exact commit | Follow-up |
+| --- | --- | --- |
+| Tempo | `e6443a7372178e3e00292567d9d4f400f9a3e7d2` | [#25](https://github.com/tempo-v2/tempo/pull/25) |
+| Store | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | [#15](https://github.com/tempo-v2/tempo-store/pull/15) |
+| UI | `c039f829624f7f19bc79dfad24e35cc7f20b77c9` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
+
+The other build inputs are Chess `a8c24fad8aec9645fa006d68fa6dcdf4ddac16ad`,
+Queue `b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
+`09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Study
+`73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. The assembled set uses
+SQLite schema 11, portable format 5, Study wire 5, and unchanged Games
+and content reply shapes. Qualification used Rust 1.98.1 and Node 26.12.0.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Workspace Cargo lock | `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0` |
+| UI npm lock | `1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb` |
+| Bundled Core 0.2.2 package | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+| Optimized executable | `0ae630f423245caf314823ffa59676a0e4e0b71620ce80876a0b291c82416adc` |
+
+<details>
+<summary>SHA-256 values of all 22 packaged UI files</summary>
+
+```text
+bcd62afaf82ff483a5bd4f065ccbbea0a1f3619cbbce18efc7d0e9886af4e2de  assets/app.css
+a1db424c8ff70be144862ea018980c347b30127a595b22304e20537f44251c5e  assets/app.js
+a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1  assets/bB-GT5SSGJP.svg
+d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c  assets/bK-675NAWJZ.svg
+f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa  assets/bN-JOUYBUTG.svg
+d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3  assets/bP-3PVWADTM.svg
+8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098  assets/bQ-PBUQEJQM.svg
+32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884  assets/bR-CBGYAKGK.svg
+7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b  assets/capture.mp3
+da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010  assets/castle.mp3
+ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52  assets/check.mp3
+3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9  assets/illegal.mp3
+0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61  assets/move-opponent.mp3
+3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547  assets/move-self.mp3
+69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815  assets/promote.mp3
+b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d  assets/wB-YLMC6FHU.svg
+e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4  assets/wK-AUE64UFO.svg
+25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d  assets/wN-CSRTRN5I.svg
+0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50  assets/wP-63DUNQX4.svg
+b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c  assets/wQ-6YL7MNW5.svg
+494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3  assets/wR-IQNXS3HT.svg
+3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac  index.html
+```
+
+</details>
+
+### Before and after
+
+The acceptance packet was checked against its supplied SHA-256 list.
+On untouched integration heads it returned exit 1 with all four expected
+assertions across three finding groups. The ten prior assertions and three
+additional Store controls passed. The same packet with `--include-prior`
+returned exit 0 on the combined candidate, with all findings and controls
+passing.
+
+| Finding | Integration baseline | Qualified candidate |
+| --- | --- | --- |
+| PI-F1 | Interrupted Analyze left two partial projections and no known reach for A on startup without inference. | Cache-only startup reached one complete and one partial projection with A's retained 50,000-millionths reach before any manual trigger. Content and raw inputs matched. An optimized worker test recovered a transient failure, exhausted a permanent failure after four attempts, and gave Analyze priority during backoff. Tests also passed the stale and downgrade fences, transposition, and zero/unknown controls. |
+| PI-F2 | Retry A had one durable acceptance and failed replay while B was current, including after SQLite reopen. | Real SQLite checks acknowledged A while current, while B was processing, after B settled, and after reopen. The suite rejected unseen old-job retries and scope mismatches. Packaged Chrome delivered a byte-identical lost-response Retry from the previous installed UI and cleared the envelope with B still visible and the stored jobs unchanged. A separate previous-browser envelope that had failed before delivery was accepted on a disposable database copy exactly once. |
+| PI-F3 | Both mounted history and catalog reads remained loading after the transport recovered. | Mounted tests recovered all six scoped reads, including a stalled body, a nonzero gap offset, and a deliberately late transport. Read recovery preserved pending bytes and unrelated action errors. Packaged Chrome displayed a history timeout and recovered the history without a mutation before the explicit Retry. |
+
+The locked workspace passed 296 Rust tests and doctests, 43 UI tests
+including 14 mounted Games cases, and three Rust/UI application boundary
+tests. The architecture gate and its four self-tests passed. The independent
+reviewer exercised both affected backend paths, the mounted Games cases,
+and worker failure and priority on the optimized binary. With both the
+provider and Maia unavailable, the disposable HTTP Study check issued a
+normal activity, accepted and replayed one answer, then issued a different
+activity. It saved one human assessment, one receipt, and one review.
+
+On a disposable copy of the previous schema-11 backup, optimized startup
+and read-only Games requests preserved every row in all 34 tables,
+including 20,639 Learning rows, 148 attempts, 114 assessments, and 308
+Study receipts. SQLite integrity and foreign keys passed. All 22 assets
+served by the candidate matched the guarded UI build. Provider failures and
+inference interruption used deterministic fixtures. Live providers and
+real Maia weights were outside these checks.
+
+The compatible source set is qualified and published for coordinated review.
+The deployed Study replay release remains the installed version. Candidate
+merge and managed cutover are separate authorized operations.
