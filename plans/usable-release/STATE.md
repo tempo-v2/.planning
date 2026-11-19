@@ -1719,3 +1719,237 @@ The merged trees matched the reviewed runtime heads. The managed launcher rehear
 Chrome resumed the existing London System guided correction, opened **Analyze** using the live Study button, matched the analysis board to the exact issued position, and returned to the same active correction. The live check used the read-only Resume operation on entry and return. The card displayed 89 repairs remaining. The installed repertoire list reported London System with 1,201 positions and Italian with 1,923.
 
 After the browser journey all 34 database tables matched the stopped-service backup `recovery-start-b8d4qxqe` row for row. The same database file, dataset, active attempt and schema 11 were retained. Counts included two repertoire documents, 20,783 learning records, 235 attempts, 114 assessments and 395 Study receipts. SQLite integrity and foreign-key checks passed on both copies.
+
+## Post-install Games recovery repairs
+
+PI-F1–PI-F3 use the schema-11 review packet as historical reproduction
+evidence. The follow-up starts from the combined Study replay main trees
+above. Store selection excludes partial headers, historical Retry gates
+durable replay on current-job state, and selected Games callers own read
+deadlines. Independent source review also found that publishing a retained
+job acknowledgement as current status would displace a newer job in Games.
+Import, Reprocess and Choose already check stored command identity before
+repeating effects. Ordinary Refresh retains its separate single-status-slot
+delivery contract.
+
+| Flow | Authority, identity and lifetime | Recovery boundary and proof |
+| --- | --- | --- |
+| Model | Tempo originates cache-refresh or explicit Analyze intent. Store retains raw distributions by raw model and position. Reach is derived under dataset, verified book input, projection algorithm and target versions. Raw evidence survives restart for matching positions. | Raw distributions commit individually before guarded projection publication. A partial header can survive alongside newer durable evidence. The worker restores progress on the existing startup/content trigger. Incomplete cache can settle successfully, while operational errors consume the bounded retry budget. Zero, unknown and known positive reach keep their existing meanings. |
+| Historical commands | Tempo validates active dataset and immutable command identity. The saved job retains accepted Retry IDs under dataset and job across replacement and restart. The current-job pointer governs new work admission. | The retry ID and incremented window attempts commit together before execution. A validated acknowledgement for the original job clears the UI envelope. The saved view may evolve. The status read owns publication of the current job. |
+| Games reads | The six named UI adapters own deadlines through response-body consumption. The page, dataset and gap offset govern publication. Catalog and paginated gaps are reads even when transported as POST. | Deadline expiry exposes a recoverable resource error. Owner cancellation suppresses obsolete publication. The page owns polling and reload. The separate exact-command path resolves uncertain mutation acceptance. |
+
+The browser can retain a partial model snapshot until its next read.
+Automatic cache work has no separate public activity signal. Recovery is
+verified through the normal status endpoint without changing the meaning of
+projection completeness.
+
+### Compatible candidate
+
+| Component | Exact commit | Follow-up |
+| --- | --- | --- |
+| Tempo | `e6443a7372178e3e00292567d9d4f400f9a3e7d2` | [#25](https://github.com/tempo-v2/tempo/pull/25) |
+| Store | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | [#15](https://github.com/tempo-v2/tempo-store/pull/15) |
+| UI | `c039f829624f7f19bc79dfad24e35cc7f20b77c9` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
+
+The other build inputs are Chess `a8c24fad8aec9645fa006d68fa6dcdf4ddac16ad`,
+Queue `b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
+`09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Study
+`73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. The assembled set uses
+SQLite schema 11, portable format 5, Study wire 5, and unchanged Games
+and content reply shapes. Qualification used Rust 1.98.1 and Node 26.12.0.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Workspace Cargo lock | `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0` |
+| UI npm lock | `1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb` |
+| Bundled Core 0.2.2 package | `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4` |
+| Optimized executable | `0ae630f423245caf314823ffa59676a0e4e0b71620ce80876a0b291c82416adc` |
+
+<details>
+<summary>SHA-256 values of all 22 packaged UI files</summary>
+
+```text
+bcd62afaf82ff483a5bd4f065ccbbea0a1f3619cbbce18efc7d0e9886af4e2de  assets/app.css
+a1db424c8ff70be144862ea018980c347b30127a595b22304e20537f44251c5e  assets/app.js
+a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1  assets/bB-GT5SSGJP.svg
+d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c  assets/bK-675NAWJZ.svg
+f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa  assets/bN-JOUYBUTG.svg
+d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3  assets/bP-3PVWADTM.svg
+8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098  assets/bQ-PBUQEJQM.svg
+32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884  assets/bR-CBGYAKGK.svg
+7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b  assets/capture.mp3
+da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010  assets/castle.mp3
+ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52  assets/check.mp3
+3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9  assets/illegal.mp3
+0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61  assets/move-opponent.mp3
+3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547  assets/move-self.mp3
+69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815  assets/promote.mp3
+b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d  assets/wB-YLMC6FHU.svg
+e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4  assets/wK-AUE64UFO.svg
+25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d  assets/wN-CSRTRN5I.svg
+0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50  assets/wP-63DUNQX4.svg
+b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c  assets/wQ-6YL7MNW5.svg
+494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3  assets/wR-IQNXS3HT.svg
+3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac  index.html
+```
+
+</details>
+
+### Before and after
+
+The acceptance packet was checked against its supplied SHA-256 list.
+On untouched integration heads it returned exit 1 with all four expected
+assertions across three finding groups. The ten prior assertions and three
+additional Store controls passed. The same packet with `--include-prior`
+returned exit 0 on the combined candidate, with all findings and controls
+passing.
+
+| Finding | Integration baseline | Qualified candidate |
+| --- | --- | --- |
+| PI-F1 | Interrupted Analyze left two partial projections and no known reach for A on startup without inference. | Cache-only startup reached one complete and one partial projection with A's retained 50,000-millionths reach before any manual trigger. Content and raw inputs matched. An optimized worker test recovered a transient failure, exhausted a permanent failure after four attempts, and gave Analyze priority during backoff. Tests also passed the stale and downgrade fences, transposition, and zero/unknown controls. |
+| PI-F2 | Retry A had one durable acceptance and failed replay while B was current, including after SQLite reopen. | Real SQLite checks acknowledged A while current, while B was processing, after B settled, and after reopen. The suite rejected unseen old-job retries and scope mismatches. Packaged Chrome delivered a byte-identical lost-response Retry from the previous installed UI and cleared the envelope with B still visible and the stored jobs unchanged. A separate previous-browser envelope that had failed before delivery was accepted on a disposable database copy exactly once. |
+| PI-F3 | Both mounted history and catalog reads remained loading after the transport recovered. | Mounted tests recovered all six scoped reads, including a stalled body, a nonzero gap offset, and a deliberately late transport. Read recovery preserved pending bytes and unrelated action errors. Packaged Chrome displayed a history timeout and recovered the history without a mutation before the explicit Retry. |
+
+The locked workspace passed 296 Rust tests and doctests, 43 UI tests
+including 14 mounted Games cases, and three Rust/UI application boundary
+tests. The architecture gate and its four self-tests passed. The independent
+reviewer exercised both affected backend paths, the mounted Games cases,
+and worker failure and priority on the optimized binary. With both the
+provider and Maia unavailable, the disposable HTTP Study check issued a
+normal activity, accepted and replayed one answer, then issued a different
+activity. It saved one human assessment, one receipt, and one review.
+
+On a disposable copy of the previous schema-11 backup, optimized startup
+and read-only Games requests preserved every row in all 34 tables,
+including 20,639 Learning rows, 148 attempts, 114 assessments, and 308
+Study receipts. SQLite integrity and foreign keys passed. All 22 assets
+served by the candidate matched the guarded UI build. Provider failures and
+inference interruption used deterministic fixtures. Live providers and
+real Maia weights were outside these checks.
+
+The compatible source set is qualified and published for coordinated review.
+The deployed Study replay release remains the installed version. Candidate
+merge and managed cutover are separate authorized operations.
+
+### Historical freshness and dataset follow-up
+
+| Behavior | Basis and owner | Inputs and independence | Lifetime |
+| --- | --- | --- | --- |
+| Refresh Games history when authoritative historical status first reveals settled work or reveals new progress since the previous settlement. | CR-F1. Tempo publishes persisted job and window progress. The Games page owns history invalidation and bounded reads. Complete and incomplete jobs can have applied batches. A paused job can also have committed earlier batches. | Active dataset, current job, settlement state, ordered window identities, attempts and outcomes, and an observed transition out of running. Notes and error text are presentation data. | Page-local observation. Invalidation supersedes older history reads immediately. Only an owned, successful history response replaces displayed rows. Errors retain the read retry. |
+| Refresh Games history once after a validated local Retry and a matching authoritative settlement, including an identical paused view. | CR-F3. The Games page owns freshness. Tempo owns current job status and validates command acceptance. | Dataset and job from the accepted Retry, plus an owned status GET for the same dataset and job in complete, incomplete or paused state. Acknowledgement A cannot establish status or execution for B. | Page-local until matching settlement, dataset replacement, a newer eligible local Retry acknowledgement, or unmount. Failed, timed-out, cancelled and foreign status reads leave the fact available. |
+| Scope historical command acceptance and current status to the active dataset. | CR-F2 and the historical commands contract above. Tempo owns active dataset, retained command checks and current-job reconciliation. Games owns read publication for the dataset established by its catalog. | Active dataset, immutable command identity and normalized input, retained job, and outstanding provider reply ownership. Retained acknowledgement and current status may name different jobs. Identity-free idle remains valid. | Retained acceptance survives within its dataset. Coordinator work from a prior dataset is discarded in memory, with outstanding provider replies drained before starting another window. |
+
+#### Reconciled corrective candidate
+
+The original corrective PRs remain the integration path. Their heads now
+include the newer Study interface and repertoire recommendation releases on
+main. The merge bases for the new runtime assembly include Tempo
+`c6d47cb463b83dedff0f96cd087def8b42f2fdf9` and UI
+`377b09c9b48213d326c99a0aeb8398b85246aa37`. Planning includes main
+`6d4d0366c100f3dee12d26cbddd525ad3d1a3617`.
+
+| Component | Qualified commit | Review |
+| --- | --- | --- |
+| Tempo | `dd2a5e5e2dec81cda666775abc77cb77425ce1e4` | [#25](https://github.com/tempo-v2/tempo/pull/25) |
+| UI | `2fd11a8860ee0a5664aae85f85adea861005c3d3` | [#19](https://github.com/tempo-v2/tempo-ui/pull/19) |
+| Store | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | [#15](https://github.com/tempo-v2/tempo-store/pull/15) |
+| Chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | [Integrated #14](https://github.com/tempo-v2/tempo-chess/pull/14) |
+| Learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Existing dependency |
+| Queue | `b70402598c91be87687feb42932cf9d8209e3eb1` | Existing dependency |
+| Study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Existing dependency |
+| Types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Existing dependency |
+| Core | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Existing Core 0.2.2 package |
+
+CR-F1 refreshes history after a first or newer historical settlement and
+cancels any earlier in-flight history read. The exact acknowledgement
+resolves A independently of current job B. A newer window attempt can
+trigger a refresh under the same job ID. CR-F2 fences commands and status
+to the active dataset and preserves outstanding-provider reply isolation.
+CR-F3 also refreshes after a same-tab Retry whose job resumes and pauses
+between GETs with the same status bytes. The acknowledgement supplies
+freshness once for its own dataset and job.
+
+The [verification record](historical-follow-up-evidence.md) contains
+before/after observations, commands, artifact digests, and the qualification
+limits. The CR-F3 run passed 58 UI tests, 56 supplied consumer probes,
+three Rust/UI boundary tests, and the architecture gate with four self-tests.
+Packaged Chrome verified same-tab freshness, prior-release Retry recovery,
+and all 22 HTTP-served UI files.
+The unchanged backend assembly retains the prior evidence from 303 Rust
+tests and doctests, the original backend acceptance groups, optimized model
+controls, optional-service Study, and synthetic restart.
+
+The next release step is coordinated review of the linked PR heads. The
+corrective set is awaiting merge and installation authorization.
+
+### Corrective integration at the reviewed snapshot
+
+This candidate was qualified before shared analysis landed on main.
+The earlier corrective checks and the installed correction-context
+release remain recorded in their respective sections. This integration
+snapshot used Tempo `df06acb9aab5d16b7f642089101e5e0c277ef8fd`, UI
+`da8e883c7bf10ec0f9c33df41d5405b7bb8be0b0`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, and Planning
+`53da95502431dbc091afb45c7678eccce0dd5b8c`. Planning merge
+`cc515dd1adec985eb6ee63421ff5826104e7786d` retains both appended ledger
+histories. Review and publication use the current corrective PR heads.
+
+| Runtime component | Final source commit | Git tree |
+| --- | --- | --- |
+| Tempo [#25](https://github.com/tempo-v2/tempo/pull/25) | `e9771becbf26b1e8c76d1a5bc68da4dce10eb54b` | `dee7ba84f6b36418255c5cb5e97eb505618520f8` |
+| UI [#19](https://github.com/tempo-v2/tempo-ui/pull/19) | `bf0c05f608cd5fcb4e017b45ff1202de1cd66d48` | `f8c4ef79cbe45ea53c14d2fe97733b49d5251ea5` |
+| Store [#15](https://github.com/tempo-v2/tempo-store/pull/15) | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | `61090e235be25ff8cf287d2d639bd678b815562a` |
+| Queue | `a171e70faf684dead33f04ad455012380fcb2e54` | `a1ebab77ddf5473c9d98b27ab0f26f12aca63c14` |
+| Chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | `39772c7fc7b4739c1033b650c9208725d23cba67` |
+| Learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | `2f7312f3dba27d2e3477e7b821a292b71913fe67` |
+| Study | `73b2482dfb2ae652220727b87451fdb4a5110807` | `f2efa867550bca6ce3a96ed77359f6f02eea492d` |
+| Types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | `88926c441ed45c8fc983efe097ac9226b3fb51d4` |
+| Core 0.2.2 | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | `ad591c239ba10befbfb77bf8cd573e31323821d3` |
+
+All nine runtime trees match the independently reviewed merge preview.
+The final Tempo consumes the newer Queue's pending-repair count. The final
+UI retains the correction context, count and compact SAN from main.
+Its Games implementation and mounted acknowledgement regressions match
+the accepted CR-F3 commit byte for byte.
+
+The [reviewed-snapshot qualification and artifact record](historical-follow-up-evidence.md#combined-release-qualification-at-the-reviewed-snapshot)
+identifies the locks, Core tarball, macOS executable and all packaged UI
+files. SQLite schema 11, portable format 5 and Study wire 5 carry forward.
+
+The shared analysis merge below supersedes this package for the release decision.
+
+### Final corrective candidate with shared analysis main
+
+Main advanced during qualification. The final snapshot includes Tempo
+`70850707200c856b089820b32e0baabdff3a21a7`, UI
+`3bf2278469d846007243761dc96be9e17cde2117`, Chess
+`531cadaea8c89de230d3516d31d95582dc7263dd`, Study
+`4b46e6c45a6330177b089eadcae69821e57b6657`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, and Planning
+`4589d3ecdf6988fdb26c50ab8a8bcb775d3981f1`. Planning merge
+`a7316225ad4ab087ae49c3e84ceaa2156dd801ef` preserves the shared analysis
+installation and both previously reconciled histories.
+
+| Runtime component | Final source commit | Git tree |
+| --- | --- | --- |
+| Tempo [#25](https://github.com/tempo-v2/tempo/pull/25) | `2f1cc242f3373ffffe333fae386d18b4cd683f79` | `fb4fcc35de17a348f74173d6e21deae2efd9a3e3` |
+| UI [#19](https://github.com/tempo-v2/tempo-ui/pull/19) | `046898f1f144652cb8fa0f43b6c74816e7211ba0` | `80f3a6313bb67a3a672042283d709b77a7ae084a` |
+| Chess | `531cadaea8c89de230d3516d31d95582dc7263dd` | `9007327f271afdabdc18cc6de25f137bd64abc36` |
+| Study | `4b46e6c45a6330177b089eadcae69821e57b6657` | `f435026c89fb88db58faebc2d05b091e20ac1e96` |
+
+The Store, Queue, Learning, Types and Core pins and trees match the
+reviewed-snapshot table above. Tempo and UI match the clean merge trees
+of the new snapshot and the original corrective heads. These two trees,
+plus the new Chess and Study trees, differ from the attached merge
+preview. The refreshed assembly keeps the CR-F3 acknowledgement path
+and mounted regressions alongside the newer Study and Games analysis
+entry points.
+
+The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
+identifies the actual release-host package. SQLite schema 11, portable
+format 5, and Study wire 5 carry forward. The next unfinished step is
+the decision on merging the coordinated PRs. Managed installation
+requires separate authorization and verification of the retained live
+data and registered artifact set.
