@@ -2138,3 +2138,68 @@ is still the PGN-cap checkpoint described above. All mutation and failure
 fixtures used disposable data. No install or retained-data enrichment
 was performed in this run. Tactical detector algorithms and flashcard
 generation belong to the subsequent project.
+
+### Disposable post-game repertoire prototype
+
+Andy asked to compare a completed game with a chosen repertoire and save a useful
+continuation through a chosen board. The baseline is the reviewed interface
+candidate above. This experiment uses synthetic games, separate local origins
+and SQLite files. Implementation and browser observations belong to the prototype.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Open the game and select a position | Store identifies the accepted raw game by dataset, source and game ID. Tempo validates the learner's side and selected repertoire. Chess supplies its played timeline, position identity, authored replies, departure and reentry. UI holds the selected occurrence, destination and navigation. Display names, game results and detector availability do not determine preparation. |
+| Explain existing preparation | Compare the current verified document with this game's positions. A different played move at a prepared learner position is a review opportunity. An unfamiliar opponent move can need a reply. An authored endpoint can be left as it is. Only Learning's introduced fact establishes whether a saved decision has been introduced. A missing document or learning row remains unknown. The historical import result keeps its original meaning. |
+| Save a selected line | Exploring and reviewing are reads. The selected endpoint and destination determine the exact line submitted to Chess's existing signed preview. An add-only save accepts the preview only when it preserves prior responses and retires no routes. Store owns acceptance, revision checks and immutable replay. A successful save refreshes the current comparison. An explicit study answer remains a separate operation. |
+| Describe completion | Report the specific completed comparison or accepted edit and the currently unresolved positions. Opening the board cannot establish completion of a human review or detector run. Current comparisons are specific to this game and destination and imply no population-level coverage. |
+
+One relevant change is a different prescribed response for the same canonical
+board. Renaming the repertoire and changing move order on the way to that board
+must preserve its exact prescription. A different destination can legitimately
+change that answer.
+
+The [walkthrough, screenshots and disposable setup](postgame-prototype/README.md)
+record the two fresh browser visits and a return-screen follow-up. The first visit
+could save a marked line but could not find an arbitrary game board or a
+transposition, or determine completed work on returning. The independent repeat
+completed all eight tasks. Its first pass still required reopening River to
+identify the remaining move. In the subsequent repeat, the library displayed
+the saved stop at 5.cxd4 and the outstanding 4…Nxf3+ for the same destination.
+
+| Prototype component | Verified source | Draft PR |
+| --- | --- | --- |
+| Store | `8f3bb25ff7c0713ebda8b433571701bba4bbc547` | [#17](https://github.com/tempo-v2/tempo-store/pull/17) |
+| Tempo | `0e89791476a95372a36090b3abd11b955c03bd6c` | [#33](https://github.com/tempo-v2/tempo/pull/33) |
+| UI | `fc1a1cfd25dd5a2b242140ac174a532678b47c42` | [#27](https://github.com/tempo-v2/tempo-ui/pull/27) |
+
+Each PR targets the reviewed interface execution candidate. Retain its
+[other component pins](manifest.json) and workspace lock. The Core 0.2.2
+package SHA-256 is `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+Schema 11 and the existing immutable command and receipt formats carry forward.
+The new addressed game review is a read. Player headers were added to the
+history read. No released or managed installation was selected or changed.
+
+The application and Store passed 96 library tests. The UI passed 93 tests.
+Chrome exercised exact rendered piece squares, an explicitly selected range
+through reentry, a switch between two same-color books mid-variation, a
+protected conflict, a bounded save, reload and mobile layout. Existing
+detector, gap recommendation and Games recovery journeys passed. Independent
+old-release recovery used a clone of the static installed-schema backup and the
+real previous binary for both lost and unaccepted Games imports and signed
+repertoire saves. Chrome recovered each immutable command with one effect.
+The [walkthrough](postgame-prototype/README.md) records the proof limits.
+
+The reviewer's only content save added one authored line through 5.cxd4 and
+two unintroduced targets. All 18 prior learning rows and target versions
+matched. SQLite integrity and foreign keys passed. The populated and empty
+copies reserved for Andy use separate local origins and databases; every
+database row matched its own starting fixture at handoff. All 22 served UI
+files matched the qualified directory on both ports. Ports 42684 and 42686
+are reserved only for these local demo instances.
+
+The optimized executable SHA-256 is
+`dbfe98b22b2b0bd077e73f8eeec4bbefe9af4612a5850c215a8e2ddd2a841615`.
+The UI JavaScript SHA-256 is
+`033895265be34eb7294b52111b30285225f4d1142c25410221d3b5bea5647dae`.
+The CSS SHA-256 is
+`5ed443269e98902e379a1a597a9f4600308368716b283bbe036f06ff31fd0094`.
