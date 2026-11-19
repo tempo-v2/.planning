@@ -882,8 +882,8 @@
     "planning_base": "5b62a7fc47ea8b4e8ff4ace4b931039151c89648",
     "repositories": {
       "tempo": {
-        "commit": "2cc1a53c52414e7202b5d66f6b22fa02f4abff60",
-        "tree": "6efb9f4800fd9b7f0b731d0712fa9a2500ceab24",
+        "commit": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f",
+        "tree": "3dcadd4f12a76b071404b5c27e90bdbfedfb10f3",
         "ref": "feat/production-evidence-interfaces",
         "pull_request": "https://github.com/tempo-v2/tempo/pull/32"
       },
@@ -957,7 +957,16 @@
       "study_recovery": "tempo-study-recovery-v4",
       "external_recovery_db": "tempo-content-recovery IndexedDB version 1"
     },
+    "a06_supplemental_qualification": {
+      "tempo_commit": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f",
+      "command": "cargo test --locked --offline -p tempo --lib game_detection::tests::",
+      "passed": 3,
+      "failed": 0,
+      "ignored": 0,
+      "independent_review_passed": true
+    },
     "qualification_artifacts": {
+      "tempo_source_commit": "2cc1a53c52414e7202b5d66f6b22fa02f4abff60",
       "cargo_profile": "dev with CARGO_PROFILE_DEV_DEBUG=0 and CARGO_INCREMENTAL=0",
       "tempo_sha256": "73ed3503a13eda77325442d4379cd180fa79685b60bf3cc5ee221ca3cd94d1c1",
       "game_detection_contract_host_sha256": "1858befcad8488799ec917c22ef4c0bbcebf59e1871717ca69c4b8b57590ae60",

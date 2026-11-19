@@ -2021,7 +2021,7 @@ SHA-256 matches the PGN upload release above.
 | Packet and acceptance | Owner | Evidence and disposition | Published review |
 | --- | --- | --- | --- |
 | E01 · A01–A02 | Chess | Passed public consumer tests for N+1 occurrences, custom Black starts, special moves, repeated positions, uncapped PGN and rejected claims. | [Chess #17](https://github.com/tempo-v2/tempo-chess/pull/17) |
-| E02 · A03–A07, A29 | Tempo | Passed real-host HTTP and SQLite checks for exact accepted inputs, typed outcomes, replay during a newer run, Busy, late timeout fencing and dataset replacement. Ordinary discovery is unconfigured. The default daily ports and explicit fixture capabilities are exercised through real daily and fixture consumers. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| E02 · A03–A07, A29 | Tempo | Passed real-host HTTP and SQLite checks for exact accepted inputs, typed outcomes, replay during a newer run, Busy, timeout and dataset replacement. The supplemental coordinator checks below establish worker acknowledgement, late-success fencing and slot reuse. Ordinary discovery is unconfigured. The default daily ports and explicit fixture capabilities are exercised through real daily and fixture consumers. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
 | E03 · A04–A08 | UI | Passed Chrome against the separate external executable using the production host. The journey covers repeated anchors, relabeling, perspective, detector revision/configuration, unavailable/empty/invalid/timeout, late selection ownership and Study while analysis is active. Analysis-only requests preserve disposable SQLite rows. | [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
 | E04 · A09–A11 | Evidence owners and UI | Passed fresh and retained source checks and Chrome Analysis/Gap consumers. Invalid unit mass and aggregate counts are rejected. Verified local reach, engine POV, known zero and optional source failures stay distinguishable. Engine/provider inference in the deterministic tests uses controlled replies. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) · [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
 | R01 · A12, A14 | GameJobs | Passed five SQLite/channel Refresh cases and replay through real HTTP. A retains its exact durable acknowledgement while B owns current status, including replay after reopen. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
@@ -2106,7 +2106,31 @@ browser cases use the actual installed PGN-cap artifact pair on disposable
 data. Study cases exercise typed Answer receipts and serialized allowance
 replies. Games cases exercise inline and external envelopes.
 
-The candidate is implemented, tested, independently reviewed and published.
+### A06 detector lifecycle closure
+
+Tempo commit `89ba3123a40ec5b7cc35ea185a4817f2b2424e4f` adds test-only
+coverage for the gap identified on `2cc1a53`. From the pinned candidate
+workspace, `cargo test --locked --offline -p tempo --lib game_detection::tests::`
+executed three cases with zero failures and zero ignored. A timed-out scan
+kept the worker occupied through repeated Busy replies, and the same worker
+completed a fresh scan after acknowledgement. A controlled late Complete
+message exercised the coordinator fence directly. The dataset-replacement
+case verified the stale response after acknowledgement and completed a scan
+against the replacement dataset. Independent review inspected the test-only
+diff and reran all three cases at the same commit with zero failures and
+zero ignored. A06 is closed.
+
+Prior HTTP Study responsiveness, Chrome timeout presentation and read-only
+SQLite evidence carry forward from the original qualification artifacts
+because the runtime source and inputs are identical. The manifest retains
+those artifact hashes and identifies their original Tempo source revision.
+
+N1 remains a diagnostic follow-up. Align the classification of repeated
+proved pack occurrences with the converter and Queue before using conflict
+counts to scope retained-data repair. N2 remains a converter follow-up.
+Report non-string difficulty values through the normal invalid-metadata
+path and cover the list-valued case. Retained enrichment is deferred.
+
 The next release steps are coordinated merge of the compatible component
 PRs followed by Tempo/UI and the Planning record, remote tree verification
 and a separately authorized managed installation. The current live release
