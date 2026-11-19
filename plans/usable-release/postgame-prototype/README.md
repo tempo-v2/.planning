@@ -2,13 +2,28 @@
 
 Open a game and Tempo shows the first opening decision against the chosen repertoire. Click any move to inspect its board, play another move to explore, then preview the line between the selected start and stopping point. A preview lists each saved or new move. A conflicting learner response shows what would be replaced and prevents the add-only save.
 
-![Game review board with a played move, prepared reply and candidate moves](workbench.png)
+![The Avery game at the first decision, with arrows for the played and prepared bishop moves](avery-board.png)
 
 ## Try it on Andy’s Mac
 
-- [Open the game library](http://127.0.0.1:42684/#games) or [open the empty case](http://127.0.0.1:42686/#games). The local “Open Post-game Prototype.command” in the workspace’s .local/postgame-lab directory restarts the populated demo if necessary and opens its private Chrome profile. The empty launcher works the same way.
+- [Open the personal game library](http://127.0.0.1:42688/#games). The separate “Open Personal Prototype.command” launcher reopens the same private database in its own Chrome profile. The copy contains the repertoires, completed games and learning history from its snapshot. Further saves stay in this copy.
+- [Open the synthetic game library](http://127.0.0.1:42684/#games) or [open the empty case](http://127.0.0.1:42686/#games). The local “Open Post-game Prototype.command” in the workspace’s .local/postgame-lab directory restarts the populated demo if necessary and opens its private Chrome profile. The empty launcher works the same way.
 - The populated instance contains an Italian repertoire for White, a Caro-Kann repertoire for Black and three completed club games. River is the fourth game, available for you to import. Each evaluator used a different copy.
 - Try a recent Italian game of your own, or import the [club game against River](recent.pgn) with Andy as the learner. Pick a response after the unfamiliar move, stop after your chosen reply and save. Close the review and see whether you can tell from Games what you saved and what still needs attention.
+
+## Andy’s walkthrough and the revision
+
+Andy could identify the difference between **3.Bb5** and **3.Bc4** in Avery, but dragging the bishop replayed its move and the exhaustive legal-move picker took attention away from the board. His larger obstacle came one screen earlier. He had refreshed his actual games and could not find one worth opening.
+
+| Moment | Earlier experience | Revised experience |
+| --- | --- | --- |
+| Find a game | A long list of recent comparisons had little opening context. | Search all retained comparisons by player, PGN opening name, ECO or a sequence in the first twelve half-moves. Combine a repertoire with the learner’s color and the first recorded decision. Both filters and the results page survive a return from review. |
+| Review an existing answer | The board snapped back on a physical drop. Candidate controls and a long move picker competed with the prepared reply. | The shared board keeps the dragged piece on its destination. The Avery board shows the prepared move in green and the different played move in red. The comparison table opens on request. |
+| Explore an alternative | The start of authoring felt separate from playing through the game. | Playing an alternative stages the continuation on the board. Preview shows the selected range, the new responses and any conflicts before an explicit save. |
+| Compare candidates | Engine moves, nearby repertoire examples and exact answers were difficult to compare. | One row per move, optional source columns and sortable headers. Choose one to five Stockfish candidates, mark engine ranks on the board, or inspect local Maia and Lichess rapid frequencies. Grouped rank labels handle moves to the same square. |
+| Reopen a historical surprise | A historical opponent gap sometimes led to a different first decision with the current book. | The list labels the import-time finding. Opening the game explains a changed finding alongside the current decision, including after reloading. |
+
+An independent browser reviewer found and explained a changed decision, staged a knight move, checked candidate scores and returned with their filters intact. Before the revision a real drag reached its destination, returned to its origin, then moved again. In the revised browser checks the bishop and knight stayed on their destination across sampled animation frames. These observations supplement Andy’s own walkthrough.
 
 ## Observed before and after
 
@@ -39,13 +54,13 @@ The position remains fixed while evidence or destinations change. This borrows f
 
 ## Boundaries
 
-The library groups games from the latest 100 saved comparisons. A game can have several comparisons. Reopening it compares its accepted moves with the selected repertoire as it stands now. A library row’s last comparison is the result observed on the last visit. Other edits can change its result. A browser-local review mark records an explicit decision by the visitor. The same game can still have an unprepared move. Browser-local marks and resume locations do not sync to another profile. The game, accepted PGN and learning records persist in SQLite.
+The searchable library includes the latest recorded comparison for each game and learner across the archive. The expandable detailed import history retains its recent 100-comparison window. Older, locally uploaded games may lack opening tags, and providers sometimes omit them. Their opening moves remain searchable. The app has no universal opening-name classifier. Reopening it compares its accepted moves with the selected repertoire as it stands now. A library row’s last comparison is the result observed on the last visit. Other edits can change its result. A browser-local review mark records an explicit decision by the visitor. The same game can still have an unprepared move. Browser-local marks and resume locations do not sync to another profile. The game, accepted PGN and learning records persist in SQLite.
 
-The review describes positions in the selected game and legal moves or routes in a named repertoire. It provides no probability of encountering a move or of covering future games. Stockfish runs on request for the displayed board. The detector registry is empty in this instance. Maia weights and external explorer credentials were not provisioned. Nearby move candidates summarize matching examples. Viewing their underlying boards remains easier in the existing full analysis view. The Games workflow supports additions to a selected, verified repertoire document. Intentional replacements belong in the repertoire editor.
+The review describes positions in the selected game and legal moves or routes in a named repertoire. The table includes Stockfish scores from a bounded search, the observed frequency for the specified Lichess rapid population, and Maia’s predicted next move for its displayed profile. All describe the displayed position. None estimates future repertoire coverage. Stockfish, local Maia and Lichess Explorer were exercised in the personal copy. Synthetic fixtures can show an unavailable source. Nearby move candidates summarize matching examples. Viewing their underlying boards remains easier in the existing full analysis view. The Games workflow supports additions to a selected, verified repertoire document. Intentional replacements belong in the repertoire editor.
 
 ## Reproduce on a compatible checkout
 
-Use the reviewed interface candidate component set in the [manifest](../manifest.json), replacing Tempo, Store and UI with the prototype commits in the [run ledger](../STATE.md#disposable-post-game-repertoire-prototype). Keep the same workspace lock and packed Core dependency. In a separate assembled development workspace, build the UI with `make build-ui` and the backend with `cargo build --release --locked -p tempo`. From that workspace, these commands create a brand-new private database directory, seed it through Tempo’s public commands and print its standalone serve command.
+Use the reviewed interface candidate component set in the [manifest](../manifest.json), replacing Chess, Tempo, Store and UI with the prototype commits in the [run ledger](../STATE.md#andys-board-and-game-finding-walkthrough). Keep the same workspace lock and packed Core dependency. In a separate assembled development workspace, build the UI with `make build-ui` and the backend with `cargo build --release --locked -p tempo`. From that workspace, these commands create a brand-new private database directory, seed it through Tempo’s public commands and print its standalone serve command.
 
 ```sh
 python3 .planning/plans/usable-release/postgame-prototype/make_demo.py target/release/tempo tempo-ui/dist ./postgame-demo

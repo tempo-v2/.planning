@@ -2203,3 +2203,25 @@ The UI JavaScript SHA-256 is
 `033895265be34eb7294b52111b30285225f4d1142c25410221d3b5bea5647dae`.
 The CSS SHA-256 is
 `5ed443269e98902e379a1a597a9f4600308368716b283bbe036f06ff31fd0094`.
+
+### Andy's board and game-finding walkthrough
+
+Andy could tell that he chose Bb5 over Bc4, but the board replayed his drag and the candidate controls competed with a simple review. He could not find an Italian game with an unexpected reply in the library.
+
+- A drop follows the legal move accepted by the existing board and Chess. A played departure and a saved response are cues at that exact position. Changing their labels, source visibility or table order has no effect on selection or saving. An off-game branch is an unsaved candidate until Andy previews and confirms its selected range through the existing command.
+- A game is discoverable by its retained player names, opening tags and first main-line moves. For the action filter, only a saved comparison for the selected repertoire can describe how that game first left preparation. Its recorded departure kind is authoritative for that comparison. Opening names and names of books are display facts. Opening a result compares against the current document again. Reading or filtering makes no learning or content changes.
+- Engine line count controls only the bounded position search. Omission preserves three lines for older callers. Changing engine count or ranking never selects a repertoire response.
+- The personal instance is a point-in-time copy in its own local directory, port and browser origin. Restart reopens the same copy. Real games, account settings and credentials stay outside repository artifacts.
+
+The independent walkthrough used a new private browser context. The final return visit explained how a previously recorded opponent gap became a different played response in the current document and retained that explanation on reload. Frame sampling covered actual board drags. The candidate comparison, opening search and signed add-only save were exercised in Chrome on disposable games. The empty library loaded separately.
+
+| Prototype component | Reviewed source | Draft review |
+| --- | --- | --- |
+| Chess | `a5dcf40e3f51bfa5ff45f9c466922ca541965706` | [#18](https://github.com/tempo-v2/tempo-chess/pull/18) |
+| Store | `9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9` | [#17](https://github.com/tempo-v2/tempo-store/pull/17) |
+| Tempo | `29623cf1951a06b73ffe57db364d0ecf6c507106` | [#33](https://github.com/tempo-v2/tempo/pull/33) |
+| UI | `59e05d22d2b02d39e0040b4282036f82ff794d1e` | [#27](https://github.com/tempo-v2/tempo-ui/pull/27) |
+
+Use the remaining pins and packed Core package from the preceding prototype entry. The application added a read-only archive page and an optional engine search count. New manual imports retain optional opening labels independently of game identity. Existing comparison, learning and save command formats still apply. The Store regression covers two learners, historic summaries, more than one page and a new comparison arriving between reads. All 93 UI tests passed. Live requests returned one, three and five Stockfish candidates and actual Lichess and Maia values. A row-by-row digest of thirteen content, game, receipt and learning tables still matched the source snapshot after the independent walkthrough. The database copy also passed integrity and foreign-key checks.
+
+The [updated walkthrough](postgame-prototype/README.md) includes the synthetic board screenshot and both disposable launch options. Personal examples and data remain local. No merge or production installation was performed.
