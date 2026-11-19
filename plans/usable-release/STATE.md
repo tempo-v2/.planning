@@ -901,3 +901,64 @@ debug candidate. An optional repeat of the Games recovery check on the
 optimized build timed out waiting for a reply after replacing its test
 server. The optimized build passed the disposable migration rehearsal
 and installed readback. Synthetic games and grades used disposable data.
+
+### Corrective Study portability and acceptance follow-up
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Restore Games acceptance boundaries | The installed Games contract uses each repertoire’s latest reset time and each accepted raw game/canonical-position choice. Store captures those facts and failure keys in the same read as catalog and Learning, and restores them atomically under the fresh dataset identity. Reset receipts, comparison IDs, labels and newly applied grades are independent of those boundaries. |
+| Restore pending requests from older snapshots | Learning translates the saved actionable day, answer version, coverage cutoff or teaching-relevance flag into an actionable portable obligation. A qualifying Test or Teach consumes it under the original cadence and allowance rules. Current corrections take precedence. No game identity, played move, synthetic grade or FSRS update is inferred from those flags. |
+| Accept a batch of game failures | Learning proposes the transitions in game order. Store validates the game/event, dataset and current target/version and requires exactly the corresponding final writes. Distinct game events for one target may contribute, in order, to one final state. Immutable command replay uses the saved receipt. |
+| Validate and describe corrective recall | Learning requires recall eligibility to begin on a later study day than the last model assessment and owns the recall total. Store and Tempo retain those facts through export and restore. |
+
+F4 and explicit Repair counts in Study progress remain follow-ups.
+
+Portable format 4 uses SQLite schema 9. The migration adds two provenance
+tables and a choice lookup view. Versions 1–3 remain readable with matching
+scheduling settings. Their original fields can carry legacy obligations and
+failure keys. Reset or choice facts omitted in an older export cannot be
+recovered from that export. The installed-database reconciliation path still
+uses actual saved game evidence.
+
+| Changed runtime repository | Qualified commit | Pull request |
+| --- | --- | --- |
+| Learning | `a5cd36781a86b239da17daa9a3c26c98c54b3e8e` | [#5](https://github.com/tempo-v2/tempo-learning/pull/5) |
+| Queue | `f856262183b1c40cefa8391cf060e29c08bf70af` | [#7](https://github.com/tempo-v2/tempo-queue/pull/7) |
+| Store | `9330237ed983e940d18f92b353e4355cafc3806e` | [#11](https://github.com/tempo-v2/tempo-store/pull/11) |
+| Tempo | `be6ca8f80c211d8df083920c06d92d0c4066a645` | [#19](https://github.com/tempo-v2/tempo/pull/19) |
+
+Assemble these four commits with the Chess, Study, Types, UI and Core
+versions in the installed milestone's [manifest](manifest.json).
+Use the [candidate workspace lock](workspace-corrective-portability.Cargo.lock),
+SHA-256 `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`.
+The optimized `cargo build --release --locked --offline -p tempo` build with
+Rust 1.98.1 produced backend SHA-256
+`8b593c32ccef6cb2cdb709f4dea5d9bef24c5873296f02938aad95bbd7236afe`.
+The test pair used all 22 byte-verified UI files from
+`workspace-1a52ad9b7cb891f341c9`. The earlier UI, Chess adherence,
+FSRS cadence and Study recovery qualification applies to those retained
+contracts and artifacts.
+
+All 270 Rust tests and doctests passed with the candidate lock. The focused
+production SQLite round trips exercised the later of two resets, a saved
+choice with a single automatic failure and no new Again, both legacy
+obligations through Study, and rejection of same-day corrective recall.
+Store rejected missing, stale, duplicate and mismatched writes or event
+identities before publication. A real two-game import applied two distinct
+transitions and saved one final state. Independent review traced the
+consuming paths and reran the focused application and Store tests and the
+Learning and Queue suites.
+
+Chrome on the final optimized pair passed accepted-lost and unaccepted Games
+recovery from both the actual schema-8 release and the prior schema-7 launch
+pair. The schema-7 run used a disposable copy of the 20,639-target retained
+checkpoint and exercised the scenario that previously timed out. Both runs
+restarted the listener under the same origin and waited for the Games job
+endpoint before retry. Chrome sent the original request bytes, replayed saved
+reply bytes exactly, and cleared the pending commands. SQLite ended at schema 9
+with one durable effect for each newly accepted game and clean integrity and
+foreign keys. The original timeout's cause remains unproven.
+
+The four runtime branches were published for review. The candidate remains
+unmerged and uninstalled. Readback confirmed the managed installation still
+served its recorded UI and used schema 8 on port 41822.
