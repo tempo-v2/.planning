@@ -1671,3 +1671,22 @@ row for row, including 20,777 Learning records,
 226 attempts, 114 assessments and
 386 Study receipts. SQLite integrity and foreign-key
 checks passed.
+
+### Compact correction notation
+
+Tempo UI [#23](https://github.com/tempo-v2/tempo-ui/pull/23) merged to main at
+`da8e883c7bf10ec0f9c33df41d5405b7bb8be0b0`. The correction card displays
+contiguous numbered SAN as `1. d4 d5 2. Bf4 Nf6`, retaining `...` when
+the line starts with Black. Chess's existing SAN and replay data supply
+the display. The count and save use the contracts above.
+
+The matched Chrome journey passed for paired moves, a Black-start fixture,
+replay and Next recovery. The merged UI tree matched the tested PR head.
+The backend binary matched the SHA-256 above. The managed launcher rehearsed
+the candidate and installed `workspace-6d37b569cfafffdcc9d1` on port 41822.
+All 22 served UI files matched the qualified build. Read-only Chrome resumed
+the existing correction and verified compact SAN with 96 repairs remaining.
+All 34 database tables matched stopped-service backup `recovery-start-88eo2t3p`,
+including 20,777 Learning records, 228 attempts, 114 assessments and 388
+Study receipts. The database file, active attempt, dataset and schema 11
+matched, and SQLite integrity and foreign-key checks passed.
