@@ -1463,6 +1463,146 @@ legacy pack metadata from the same generic provenance field. Those inputs
 should enter selection as explicit domain facts. No selection, grading or
 persistence policy was changed to address these findings in this cutover.
 
+## Repertoire-aware default in Fix response
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Reuse nearby replies | The approved authoring preference tries the current repertoire before other active same-side repertoires. In each, distinct supporting positions determine frequency and closest support breaks ties. Chess owns canonical structure, saved moves and whether the same piece can play the same legal move at the gap. Labels and SAN are display values. |
+| Compare against Stockfish | Tempo tries the ranked replies until it finds a comparable move within 50 centipawns. A best comparable repertoire reply 51–150 centipawns behind leaves the selection blank. Stockfish needs all eligible comparisons to exceed 150. Missing or mate scores cannot justify that fallback. The identical top move is a zero difference for any score type. |
+| Stage a default | A matching analysis request and content revision can fill an untouched modal. UI owns manual input, clearing, arrows, focus and exact-command recovery. An automatic selection changes no durable state. Explicit Save uses the existing signed preview and Store receipt. |
+
+The similarity panel shows support counts and expandable board examples next
+to Stockfish. Explorer shows its game counts and outcomes on a full-width
+row below the pair. Narrow screens stack the panels beneath the board.
+Tempo looks at eight distinct positions per group and compares up to sixteen
+distinct repertoire responses in a bounded same-depth Stockfish search.
+If that budget leaves responses unscored, the selection can stay blank.
+The existing top-three neighbor projection remains available to older pages.
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Chess | `c6da613f37e0ae11e7abf25167b01f9a45ba3065` | [#13](https://github.com/tempo-v2/tempo-chess/pull/13) |
+| Tempo | `966f0982b53f59de2bd8c604014809e1e77d1d9a` | [#26](https://github.com/tempo-v2/tempo/pull/26) |
+| UI | `47fa621e7cb04b7cb14cef38a44ac7e76707bdaf` | [#20](https://github.com/tempo-v2/tempo-ui/pull/20) |
+
+The combined candidate starts at the installed Study replay source. Reuse
+Store `461c7c10370386e119a9d4dbb7734a4449ecad0b`, Queue
+`b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
+`09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Study
+`73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. Use workspace lock SHA-256
+`c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`
+and the packaged Core 0.2.2 tarball
+`4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+SQLite schema 11 and the existing Study and repertoire Save contracts carry
+forward.
+
+The optimized backend SHA-256 is
+`3b1e5b564cf391ef0327ba3aa38057031a708bee147428d25824b63696454ed6`.
+The packaged JS and CSS hashes are
+`dae72ededfcda99f758a31729c36b46f0c20cb865179910958f4914d49c73a77` and
+`c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d`.
+
+The combined build passed 298 locked Rust tests and doctests, 36 UI tests,
+three Rust/UI boundary tests, and the architecture gate. Independent review
+verified the owner boundaries, same-depth Stockfish comparison including
+replies outside the unrestricted top three, and the actual packaged board
+consumer. In Chrome the synthetic transport exercised both layouts, arrows,
+manual override during a held drag, clearing, stale analysis, and exact
+Save replay after reload. The underlying disposable database preserved
+existing learning and accepted one save.
+
+The production endpoint on a disposable copy of the retained dataset
+recommended `exd5` against the Italian `1…d5` gap. The move appeared once
+among the current repertoire neighbors and tied Stockfish. Analysis left
+all checked durable rows identical. An explicit signed save added one
+receipt and preserved all 20,639 existing learning rows, 148 attempts,
+114 assessments, and existing Study receipts in that copy.
+
+The runtime PR heads were verified against main. Merge and managed
+installation are separate delivery stages.
+
+### Merged, installed and verified on November 19, 2026
+
+The merged runtime trees matched the independently reviewed and qualified
+candidate.
+
+| Component | Verified main merge |
+| --- | --- |
+| Chess | `52ae0ee6d8ad0fd367ec1e6f84202f024981d054` |
+| Tempo | `a1117eb23c9a417e36d80a4cfd00f1840fc05bfd` |
+| UI | `92350d27d0317cfa78057034b4bb51a28fa46438` |
+
+A read-only Chrome check on a disposable copy of the earlier retained dataset
+opened the Italian `1…d5` gap and displayed **Suggested exd5** with its green
+arrow. One nearby position in the current repertoire supported the move,
+which tied Stockfish. Similar positions appeared to the left of Stockfish,
+with Explorer across the row below. All three stacked under the board at
+the narrow viewport. The copy matched its baseline across all 34 tables.
+
+The current live repertoire already had `1.e4 d5 2.exd5` saved. Its
+Scandinavian position was therefore absent from the gap list. On the
+current-data rehearsal and live service, Chrome checked both layouts on
+the remaining Italian `7…Qd7` gap. It displayed **Suggested Bxb5** with two
+nearby positions supporting it and a zero-centipawn difference. The live
+document still contained the saved Scandinavian move. Both browser checks
+used a read-only Study startup and issued zero saves.
+
+The managed launch agent installed `workspace-ba11fdade1d61e762d39` on
+port 41822. The registered listener served the qualified binary and all 22
+UI files. The database kept its inode, dataset identity and schema 11.
+After the live check, all 34 tables matched the stopped-time backup row for
+row, including 20,720 learning records, 174 attempts, 114 assessments and
+334 Study receipts. Integrity and foreign keys passed. The stopped-time
+backup and prior registration are in
+`.local/usable-release/recovery-start-37czkteg`.
+
+## Chess projections, explicit tactic inputs, and the deviation arrow
+
+| Behavior | Authority, inputs, independence, and lifetime |
+| --- | --- |
+| Display learner color and SAN | Chess projects learner color from the solver start. It formats only the move that the issued lesson or already-disclosed correction permits. The pinned definition determines the result across restart and receipt replay. Labels are independent of identity, grading, and scheduling. |
+| Select tactics | Queue receives the existing capture-priority timestamp. Tempo derives it from the typed personal-capture origin and its unreviewed introduction. Pack ordering takes typed theme, difficulty, ordinal, position, and admission facts. The compatibility adapter alone interprets the reserved catalog encoding. It decodes packs only when the policy needs them. Ordinary attribution and display names are independent. Existing catalog records, learning and ordering rules carry forward. |
+| Display the game deviation | UI draws the exact verified game move in red and the issued repertoire move in blue at the live correction. The replay cursor and pending guided move have their own board state. Browsing never submits a grade. Supplemental fields use an HTTP display opt-in. The prior strict v5 HTTP and stdio shapes and immutable commands remain readable. |
+
+### Verification and managed installation
+
+| Component | Verified main commit | Pull request |
+| --- | --- | --- |
+| tempo-chess | `10701e28ae259de46b04a1a62ba914a46bc012d2` | [#14](https://github.com/tempo-v2/tempo-chess/pull/14) |
+| tempo | `c6d47cb463b83dedff0f96cd087def8b42f2fdf9` | [#27](https://github.com/tempo-v2/tempo/pull/27) |
+| tempo-ui | `377b09c9b48213d326c99a0aeb8398b85246aa37` | [#21](https://github.com/tempo-v2/tempo-ui/pull/21) |
+| tempo-store | `461c7c10370386e119a9d4dbb7734a4449ecad0b` | Integration baseline |
+| tempo-learning | `09c4359ab90d0cd1e5166b1f25460fd272406fd1` | Integration baseline |
+| tempo-queue | `b70402598c91be87687feb42932cf9d8209e3eb1` | Integration baseline |
+| tempo-study | `73b2482dfb2ae652220727b87451fdb4a5110807` | Integration baseline |
+| tempo-types | `a8e46c9b9442f1180ec33b8035cef1c713414b66` | Integration baseline |
+| tempo-core-components | `e9a1d160a729bc9fbbddaf16427625301cc9498a` | Integration baseline |
+
+The merged runtime trees matched the qualified build, including the repertoire
+recommendation release that landed during verification. The locked suite passed
+299 Rust tests and doctests, 36 UI tests, three Rust/UI boundary checks, and the
+dependency gate. Core 0.2.2 was consumed through its locked npm tarball.
+The recommendation browser check passed its layout, override, and signed Save
+recovery scenarios. Independent packaged Chrome exercised both arrows, replay and guided-state
+restoration on desktop and narrow layouts. It recovered accepted-lost and
+unaccepted wrong-answer commands from the previous installed recommendation release with both
+the previous and current UI. Original command bytes and identities matched and
+each accepted command had one assessment and receipt. No Study wire version,
+SQLite schema, portable format, or learning rows required a migration.
+
+The installed checkpoint is `workspace-8467c4c7540fb7b6f55e` on port
+41822. Chrome resumed the existing active repair by read, verified
+both arrows and the original-game link, replayed the game and returned to the
+exercise. After the live check all 34 SQLite tables matched the
+stopped-time backup row for row, including 20,724 learning
+records. The database inode, dataset and schema 11 matched. Integrity and
+foreign-key checks passed. The registered listener served all
+22 verified UI files. The backup is
+`recovery-start-opl3ya1b`. The optimized binary SHA-256 is
+`58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
+
 ## Post-install Games recovery repairs
 
 PI-F1–PI-F3 use the schema-11 review packet as historical reproduction
