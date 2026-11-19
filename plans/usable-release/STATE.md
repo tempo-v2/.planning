@@ -1671,3 +1671,28 @@ row for row, including 20,777 Learning records,
 226 attempts, 114 assessments and
 386 Study receipts. SQLite integrity and foreign-key
 checks passed.
+
+## Shared analysis board and marked-line authoring, November 19
+
+The candidate starts from the compact-correction installation `workspace-6d37b569cfafffdcc9d1`. Its four runtime PRs are open for coordinated review.
+
+| Component | Head | Pull request |
+| --- | --- | --- |
+| Tempo | `e2322515433f7256f5306f76c031a8fa993b29c3` | [#30](https://github.com/tempo-v2/tempo/pull/30) |
+| UI | `5d535f58eeeb59ca3a46cfcb7fd590e35732a472` | [#24](https://github.com/tempo-v2/tempo-ui/pull/24) |
+| Chess | `98c557ab85bdc4edf130f829530889f1bc0e02b4` | [#15](https://github.com/tempo-v2/tempo-chess/pull/15) |
+| Study | `addc9a1fcba2460858e525865fb554e4003891d0` | [#2](https://github.com/tempo-v2/tempo-study/pull/2) |
+
+Use Store `461c7c10370386e119a9d4dbb7734a4449ecad0b`, Queue `a171e70faf684dead33f04ad455012380fcb2e54`, Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Types `a8e46c9b9442f1180ec33b8035cef1c713414b66` and packaged Core 0.2.2 from `e9a1d160a729bc9fbbddaf16427625301cc9498a`. The candidate reuses the installed workspace lock and schema 11.
+
+| Decision | Owner, input and effect |
+| --- | --- |
+| Open the issued decision | Tempo resolves dataset, attempt, revision and issued content version. Confirmation on an unfinished scheduled Test applies Study's terminal concession with at most one human Again. Learning and Store handle the normal transition and atomic receipt. Guided visits retain the issued attempt. Practice assistance preserves scheduling. The UI recovers the immutable command separately from reading the analysis position or requesting Next. |
+| Compare a position | Each source receives a Chess-validated position. Stockfish uses a bounded common-depth search for the pinned moves. Each Explorer population has its own counts. Maia supplies the side-to-move distribution. Selected repertoire, learner side and content revision scope the saved-move comparison. Source results, labels and arrow preferences have no grading or authoring authority. |
+| Author marked lines | The UI submits the explicitly marked paths. Chess verifies the anchor and legal moves against the current source, checks one learner answer per position and previews replacements across transpositions. The application signs the reviewed document. Store applies the existing receipt-bound Save. Unmarked branches are exploratory. |
+
+The combined candidate passed 305 Rust tests and doctests, 39 UI tests and the dependency-direction check. Chrome verified creating a repertoire with two marked branches, excluding an unmarked move, returning to a pin, comparing a fourth engine candidate, source failure isolation, and rejecting a late result. The Fix Response journey covered its recommendation, manual override, stale results and signed Save recovery.
+
+Chrome on disposable retained copies verified guided return, cancel before disclosure, one accepted Again, reload, and Next for original, changed and omitted display names. Previous installed clients produced accepted-lost and unaccepted Answer, Show Move and signed repertoire Save commands. The candidate replayed the original identities with one durable effect. A separate database check covered an attempt with an earlier miss and an edit that changed the issued answer.
+
+All five real evidence sources returned results for the London position on a disposable retained copy. In one optimized run the repertoire comparison took about two seconds cold and 19 ms on the next ply. Strict workspace Clippy still flags existing Store warnings. No live installation or migration was performed. The next release step is coordinated review and merge. Whole-repertoire first-gap probability remains a later feature.
