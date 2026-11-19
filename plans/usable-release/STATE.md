@@ -959,6 +959,25 @@ reply bytes exactly, and cleared the pending commands. SQLite ended at schema 9
 with one durable effect for each newly accepted game and clean integrity and
 foreign keys. The original timeout's cause remains unproven.
 
-The four runtime branches were published for review. The candidate remains
-unmerged and uninstalled. Readback confirmed the managed installation still
-served its recorded UI and used schema 8 on port 41822.
+#### Merged and installed on November 18, 2026
+
+The five PR heads matched the reviewed commits. GitHub reported all five
+merged into main, and each fetched merge tree matched its reviewed tree.
+The [release manifest](manifest.json) records the merge commits and unchanged
+Chess, Study, Types, UI and Core pins. The managed build reproduced the
+qualified optimized backend and all 22 UI files using the candidate workspace
+lock. The source and artifact match carries forward the locked test suite,
+independent review and optimized Games recovery evidence above.
+
+The schema 8 to 9 rehearsal ran the qualified pair on a disposable copy of
+the current dataset. Existing schema objects and all rows across 22 existing
+tables matched. Integrity, foreign keys and the read-only Study status passed.
+
+The managed launcher stopped the schema-8 service, saved a consistent SQLite
+backup with its previous registration, and started
+`workspace-120682a40a2cf6bf6214` on port 41822. The live database kept its
+dataset identity and file inode. Its 22 pre-existing tables matched the
+stopped-time backup row for row, and integrity and foreign keys passed.
+The registered process owned the listener, all 22 served UI file hashes
+matched, and Study status and Games history responded to read-only checks.
+F4 and explicit Repair progress counts remain deferred.
