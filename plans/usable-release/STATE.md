@@ -1178,7 +1178,7 @@ The adversarial review held the candidate above for three reproduced
 findings. The revised [candidate manifest](manifest.json) supersedes its
 Tempo and Store pins and optimized binary hash. All other runtime pins,
 the UI package, SQLite schema 11, portable format 5, and the public
-payload shapes carry forward. The registered service still serves
+payload shapes carry forward. At review, the registered service served
 schema-10 checkpoint `workspace-08812817f80797b72eaf`.
 
 | Finding | Behavior and owner | Inputs, independence and lifetime |
@@ -1230,9 +1230,33 @@ with real Maia weights remain outside this qualification.
 | UI | `90ed0057214f78fbe4eff59de67f266435eed142` | [#16](https://github.com/tempo-v2/tempo-ui/pull/16) |
 | Planning | This ledger and the revised candidate manifest | [#21](https://github.com/tempo-v2/.planning/pull/21) |
 
-The independent reviewer accepted the combined heads above. The optimized binary SHA-256 is
+The independent reviewer accepted the combined heads above. The optimized
+binary SHA-256 is
 `3ef27d814584666f77adfcccbccca40437c371a457e01412a6d752f5ccdb8945`.
-The open PRs contain the qualified set. Coordinated merge and managed
-installation are separate stages. At merge, compare the resulting trees
-to this set. At authorized cutover, verify the running artifacts,
-database and registered listener against the managed release.
+
+### Managed cutover, November 19, 2026
+
+All four PRs merged to main. Each fetched merge commit's complete Git tree
+matched the qualified head. The six reused component main branches matched
+the candidate pins.
+
+| Repository | Verified main merge |
+| --- | --- |
+| Tempo | `380d178fdbdec0dcd2525735068a6292f417f38f` |
+| Store | `7a7b45d39697375dcb89957a6ead8b4d3417ef0b` |
+| UI | `de7f708aef837768e1b8ce9435ef4e56050fae58` |
+| Planning | `cd99ebc1865550882303076f42f248565152e558` |
+
+The managed launcher rehearsed the migration on a disposable copy before
+stopping the schema-10 service. It created a private, integrity-checked
+SQLite backup and saved the previous registration before changing the
+LaunchAgent. The backup and detailed verification are retained locally.
+
+Checkpoint `workspace-68dc7fa8e5221063cbf5` is installed and active on
+loopback port 41822. The registered process owns the listener and serves
+the qualified binary and all 22 verified UI files. The same database and
+dataset advanced from schema 10 to 11. The original columns and row counts
+of all 28 authoritative tables match the stopped backup in both directions,
+including content, Learning, attempts, assessments, games, settings and
+receipts. SQLite integrity and foreign-key checks passed. Cache-only
+projection settled with two complete books and zero pending.

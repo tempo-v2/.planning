@@ -818,9 +818,9 @@
       "implemented": true,
       "tested": true,
       "published": true,
-      "merged": false,
-      "installed": false,
-      "active": false
+      "merged": true,
+      "installed": true,
+      "active": true
     },
     "previous_candidate": "schema-10-corrective-candidate",
     "previous_planning_head": "627ed5738f15d117fdd32c8926b5f038a94b7769",
@@ -832,6 +832,35 @@
       "review_findings_and_store_controls": 10,
       "historical_choice_writer_combinations": 3,
       "ui_artifact_hashes_verified": 22
+    },
+    "merged_main": {
+      "tempo-store": "7a7b45d39697375dcb89957a6ead8b4d3417ef0b",
+      "tempo-ui": "de7f708aef837768e1b8ce9435ef4e56050fae58",
+      "tempo": "380d178fdbdec0dcd2525735068a6292f417f38f",
+      ".planning": "cd99ebc1865550882303076f42f248565152e558"
+    },
+    "verified_merged_trees": {
+      "tempo-store": "9c8d719c5627fa1d684ea841243c181cfacefc14",
+      "tempo-ui": "f276008dafe456d1a57de700ef83f9bd9e792bfb",
+      "tempo": "4046b1f836e8b4387b0a871b47da93a4b46c5fdf",
+      ".planning": "f2d633ff1605d39197db270916e6a798370e1723"
+    },
+    "observed_activation": {
+      "date": "2026-11-19",
+      "checkpoint": "workspace-68dc7fa8e5221063cbf5",
+      "schema_before": 10,
+      "schema_after": 11,
+      "port": 41822,
+      "verified_served_ui_files": 22,
+      "preserved_authoritative_tables": 28,
+      "integrity_check": "ok",
+      "foreign_key_violations": 0,
+      "projection": {
+        "complete_current": 2,
+        "partial_current": 0,
+        "pending": 0,
+        "unavailable": 0
+      }
     }
   }
 }
