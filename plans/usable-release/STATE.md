@@ -1602,3 +1602,33 @@ foreign-key checks passed. The registered listener served all
 22 verified UI files. The backup is
 `recovery-start-opl3ya1b`. The optimized binary SHA-256 is
 `58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
+
+## Stockfish tiebreak for equal nearby support
+
+The approved Fix response rule keeps the existing repertoire priority and
+support counts. When two replies have equal support in the same group,
+Tempo orders them by the better comparable Stockfish evaluation. An available
+comparison sorts ahead of a missing one. Structural distance and move
+identity resolve remaining ties. Before engine results arrive, the nearby
+list uses structural order within support ties. The completed analysis
+returns the same ordering for the list and default selection. The inputs
+are distinct-position support, Chess move identity, existing distance, and
+the existing learner-relative score comparison. SAN and labels remain display
+values. The 50/150 centipawn rules and durable Save contract carry forward.
+
+[Tempo #28](https://github.com/tempo-v2/tempo/pull/28) qualified at
+`bd01975ad0bf8bd190ec663ef23bc7db1635a9f7`, based on the installed
+explicit Study input release above. Reuse that release's Chess, UI, Store,
+Learning, Queue, Study, Types and versioned Core pins. The optimized backend
+SHA-256 is `5c5907552ad4e03be703401cf1f60320582401a294494e058a7d33f199004995`.
+The packaged UI JS and CSS hashes are
+`30dff520aef7ea87564b9fa251458328c6366304bdc1d7b7320fd35b07a382e2` and
+`c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d`.
+
+All four focused recommendation tests, 36 UI tests, the guarded build,
+and the architecture gate passed. The real Stockfish and Chrome check
+recreated the screenshot's London `5…Bg4` board and four equally supported
+replies on disposable SQLite data. Chrome suggested `c4` and showed it at
+the top of Similar repertoire positions. Learning, attempts, assessments,
+receipts and repertoire documents stayed identical. The current live gap
+list had no matching London `…Bg4` gap. Merge and installation are pending.
