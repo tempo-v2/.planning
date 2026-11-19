@@ -1522,3 +1522,38 @@ receipt and preserved all 20,639 existing learning rows, 148 attempts,
 
 The runtime PR heads were verified against main. Merge and managed
 installation are separate delivery stages.
+
+### Merged, installed and verified on November 19, 2026
+
+The merged runtime trees matched the independently reviewed and qualified
+candidate.
+
+| Component | Verified main merge |
+| --- | --- |
+| Chess | `52ae0ee6d8ad0fd367ec1e6f84202f024981d054` |
+| Tempo | `a1117eb23c9a417e36d80a4cfd00f1840fc05bfd` |
+| UI | `92350d27d0317cfa78057034b4bb51a28fa46438` |
+
+A read-only Chrome check on a disposable copy of the earlier retained dataset
+opened the Italian `1…d5` gap and displayed **Suggested exd5** with its green
+arrow. One nearby position in the current repertoire supported the move,
+which tied Stockfish. Similar positions appeared to the left of Stockfish,
+with Explorer across the row below. All three stacked under the board at
+the narrow viewport. The copy matched its baseline across all 34 tables.
+
+The current live repertoire already had `1.e4 d5 2.exd5` saved. Its
+Scandinavian position was therefore absent from the gap list. On the
+current-data rehearsal and live service, Chrome checked both layouts on
+the remaining Italian `7…Qd7` gap. It displayed **Suggested Bxb5** with two
+nearby positions supporting it and a zero-centipawn difference. The live
+document still contained the saved Scandinavian move. Both browser checks
+used a read-only Study startup and issued zero saves.
+
+The managed launch agent installed `workspace-ba11fdade1d61e762d39` on
+port 41822. The registered listener served the qualified binary and all 22
+UI files. The database kept its inode, dataset identity and schema 11.
+After the live check, all 34 tables matched the stopped-time backup row for
+row, including 20,720 learning records, 174 attempts, 114 assessments and
+334 Study receipts. Integrity and foreign keys passed. The stopped-time
+backup and prior registration are in
+`.local/usable-release/recovery-start-37czkteg`.
