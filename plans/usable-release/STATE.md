@@ -1236,3 +1236,66 @@ The open PRs contain the qualified set. Coordinated merge and managed
 installation are separate stages. At merge, compare the resulting trees
 to this set. At authorized cutover, verify the running artifacts,
 database and registered listener against the managed release.
+
+## Board-first repertoire fixes
+
+Games opens confirmed opponent gaps in a modal. The learner can play a legal
+reply on the board or stage a Stockfish or Explorer suggestion, then select
+**Save response**. The normal Repertoires page still provides PGN editing.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Stage and compare replies | The approved board-first workflow gives UI ownership of hover, focus and the staged reply. Chess supplies the exact position and legal UCI identities. SAN and analysis labels affect display. The selected move changes the drafted line only when explicitly saved. |
+| Append a response | Tempo revalidates dataset, repertoire and document revision. Chess builds the PGN addition. UI requires a signed preview that preserves existing answers and learning before delivering the existing Save. The signed command and its receipt retain the same identity across reload and replay. Client continuation stores the gap context alongside that command. After confirmation, a failure to load the next gap allows a read-only retry. |
+| Show position evidence | Maia describes the position before the opponent move. Stockfish, structural similarity and Explorer describe the position where the learner responds. Tempo queries the rated Rapid Explorer independently using the validated position and chosen rating band. No result changes legality, save eligibility or Study policy. |
+
+### Qualified source and artifacts
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Chess | `996971b48e1ff763f2a638f75ad981488e80155c` | [#11](https://github.com/tempo-v2/tempo-chess/pull/11) |
+| Tempo | `ef620ffefa94d65b16dc65d833e56e9a8293256c` | [#23](https://github.com/tempo-v2/tempo/pull/23) |
+| UI | `963853f915ab7546450003eb0f1a4a456ca22dee` | [#17](https://github.com/tempo-v2/tempo-ui/pull/17) |
+
+Use Store `7a7b45d39697375dcb89957a6ead8b4d3417ef0b`, Queue
+`b70402598c91be87687feb42932cf9d8209e3eb1`, Learning
+`09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Study
+`73b2482dfb2ae652220727b87451fdb4a5110807`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. Use the workspace lock with
+SHA-256 `c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`
+and the versioned Core 0.2.2 tarball
+`4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+
+The optimized backend SHA-256 is
+`e3c2d250a761b939191efe74c91db0701cc4a5ae6d57260cd5ad3e61db3eb325`.
+The packaged JS and CSS hashes are
+`15a33d876f973c2e9f483817041f24cebb633b62b8cf27f0cec58b8dca29640d` and
+`e6bfa612c12a1d1da9d1fc7155e82cdc75d78c3618119538a81f5d96efd226fb`.
+This candidate inherits schema 11 and the existing Study and content wire
+versions from the integration baseline.
+
+### Verification and handoff
+
+- All 291 locked Rust tests and doctests, all 36 UI tests, the architecture
+  gate, and the guarded UI build passed.
+- On a disposable retained copy, the archived installed schema-10 pair
+  served its gaps. The optimized candidate opened the same copy under
+  schema 11, displayed the Scandinavian gap in SAN, and passed SQLite
+  integrity and foreign-key checks.
+- Packaged Chrome exercised White drag and tap, Black orientation, explicit
+  underpromotion on a narrow screen, keyboard and hover arrows, automatic
+  Stockfish analysis, and two consecutive saves in one repertoire. An actual
+  revision change and an injected unsafe preview stopped Save. Existing
+  answers and learning matched after the additions. Accepted-lost saves
+  replayed byte for byte, including after reload, with one receipt per
+  response. A typed stale successor error allowed a next-only retry.
+- Independent review exercised the board and recovery with fixture
+  transport. The real local endpoint returned the setup state without a
+  token. Explorer timeout, rate limit, count rendering and stale-result
+  handling passed with simulated provider replies. A live authenticated
+  Explorer lookup remains unverified until a token is configured.
+
+The runtime PRs are open against main at the verified heads above. Review
+and merge the compatible set together. Managed installation is a separate
+delivery step.
