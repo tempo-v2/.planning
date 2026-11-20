@@ -2905,3 +2905,61 @@ The installed predecessor replay passed all six accepted-lost and unaccepted
 Answer, Learn more tactics, and PGN Save cases. The existing durable replies
 replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
 records the compatible merge commits, artifact hashes, and backup.
+
+## Tempo Settings
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Apply board appearance and audio within one browser | The approved Settings plan preserves browser scope. Tempo UI owns theme, pieces, volume and sound enabled. Settings and quick mute use the same browser record. Study, Game Review and preview boards consume it. The prior browser keys are upgrade inputs. |
+| Save daily opening and tactic limits, extra tactics, and themes | The desktop Settings section is the edit surface. Tempo validates the requested settings, dataset and profile revision. Store commits the existing profile atomically. Tempo applies the confirmed values to future selection and allowance grants. Names, board preferences and navigation do not affect a grant or admission. Settings carry forward through restart and database backup. |
+| Preserve the current exercise and accepted grants | Opening Settings is a read. Returning to an empty or paused Study uses a read-only status refresh. Due reviews, issued attempts, introductions already consumed, accepted allowances and command receipts keep their existing identities. An accepted allowance still replays its original result after a settings change. An unaccepted command uses the applicable settings when accepted. |
+| Keep the Phone Study route boundary | Tempo's desktop endpoint owns shared settings. Phone changes browser-local board preferences and reads the latest limits through its existing Study routes. Progress revalidation includes a settings revision independently of attempt and learning revisions. |
+
+The canonical agent guidance requires every user preference to be editable
+in Settings with one authoritative value and save path. The workspace copy
+carries the same rule. Desktop Settings replaces the older tactics editor and
+the configure writer. Browser-local choices also apply to the new tactics
+builder, including its setup board. Host provisioning remains in its managed
+scope.
+
+| Component | Qualified head | Pull request |
+| --- | --- | --- |
+| Tempo | `54d8fb450d07d88c6236b291adb76f10af160d54` | [#39](https://github.com/tempo-v2/tempo/pull/39) |
+| UI | `8da234145dfd87be0f589ed7f9f7a533cff1bf37` | [#34](https://github.com/tempo-v2/tempo-ui/pull/34) |
+
+Build the pair with Store `27ffcc992d4b12424c1208676ae594d4245277e9` and the
+other pinned components from the installed repertoire-suspension release.
+Use its Cargo lock and UI lock with packaged Core 0.2.2. The candidate
+includes the merged tactics builder. SQLite schema 13 and Study wire 5
+carry forward. An older progress stamp triggers one fresh read.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo binary | `90703cf6bf9f1b7169d404c58257bd5ee4f223c223e5008f71a91807be735f7a` |
+| Desktop JavaScript | `7d9aa7bf586256fcd90ddcf0012041ee2fd635e8a976d94609713fee9bb2552c` |
+| Phone JavaScript | `f2643fcd193e9ac8781304f310f1c70e52673639d495a9f3ad72f7b00c68a8ae` |
+
+The combined architecture gate, 174 Rust tests and doctests, 111 UI tests,
+and four focused HTTP checks passed. Packaged Chrome and phone-sized WebKit
+covered browser preference carryover, separate desktop and phone preferences,
+lost Settings acknowledgements, concurrent tabs, and changes in shared limits
+and theme admission through Study. Chrome verified the existing repertoire
+suspension and tactics builder workflows using the same candidate.
+
+Independent review reproduced two edge cases. A Settings status read now
+offers ordinary Next when new work is eligible. Large allowances are projected
+within the existing browser integer range, while previously accepted grants
+retain their exact receipts. Focused consumer checks verified both fixes.
+
+The exact Review later, repertoire-suspension, and board-capture
+installations each passed six recovery cases covering accepted-lost and
+unaccepted Answer, Learn more tactics, and repertoire Save. Retry Next sent
+only Next. Study metadata
+invariance passed for clean Test, a miss, and Teach. A settings save on a
+disposable copy of the installed schema-13 profile preserved all 39 tables
+apart from the intended profile preference, with integrity and foreign keys
+verified. The prior omitted extra-tactics value retained its effective
+default on the first save.
+
+The component pull requests are published for coordinated review. The
+Settings candidate has not been installed.
