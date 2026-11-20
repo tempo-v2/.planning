@@ -959,9 +959,28 @@ reply bytes exactly, and cleared the pending commands. SQLite ended at schema 9
 with one durable effect for each newly accepted game and clean integrity and
 foreign keys. The original timeout's cause remains unproven.
 
-The four runtime branches were published for review. The candidate remains
-unmerged and uninstalled. Readback confirmed the managed installation still
-served its recorded UI and used schema 8 on port 41822.
+#### Merged and installed on November 18, 2026
+
+The five PR heads matched the reviewed commits. GitHub reported all five
+merged into main, and each fetched merge tree matched its reviewed tree.
+The [release manifest](manifest.json) records the merge commits and unchanged
+Chess, Study, Types, UI and Core pins. The managed build reproduced the
+qualified optimized backend and all 22 UI files using the candidate workspace
+lock. The source and artifact match carries forward the locked test suite,
+independent review and optimized Games recovery evidence above.
+
+The schema 8 to 9 rehearsal ran the qualified pair on a disposable copy of
+the current dataset. Existing schema objects and all rows across 22 existing
+tables matched. Integrity, foreign keys and the read-only Study status passed.
+
+The managed launcher stopped the schema-8 service, saved a consistent SQLite
+backup with its previous registration, and started
+`workspace-120682a40a2cf6bf6214` on port 41822. The live database kept its
+dataset identity and file inode. Its 22 pre-existing tables matched the
+stopped-time backup row for row, and integrity and foreign keys passed.
+The registered process owned the listener, all 22 served UI file hashes
+matched, and Study status and Games history responded to read-only checks.
+F4 and explicit Repair progress counts remain deferred.
 
 ## Game relevance and opponent coverage
 
@@ -1178,7 +1197,7 @@ The adversarial review held the candidate above for three reproduced
 findings. The revised [candidate manifest](manifest.json) supersedes its
 Tempo and Store pins and optimized binary hash. All other runtime pins,
 the UI package, SQLite schema 11, portable format 5, and the public
-payload shapes carry forward. The registered service still serves
+payload shapes carry forward. At review, the registered service served
 schema-10 checkpoint `workspace-08812817f80797b72eaf`.
 
 | Finding | Behavior and owner | Inputs, independence and lifetime |
@@ -1230,12 +1249,36 @@ with real Maia weights remain outside this qualification.
 | UI | `90ed0057214f78fbe4eff59de67f266435eed142` | [#16](https://github.com/tempo-v2/tempo-ui/pull/16) |
 | Planning | This ledger and the revised candidate manifest | [#21](https://github.com/tempo-v2/.planning/pull/21) |
 
-The independent reviewer accepted the combined heads above. The optimized binary SHA-256 is
+The independent reviewer accepted the combined heads above. The optimized
+binary SHA-256 is
 `3ef27d814584666f77adfcccbccca40437c371a457e01412a6d752f5ccdb8945`.
-The open PRs contain the qualified set. Coordinated merge and managed
-installation are separate stages. At merge, compare the resulting trees
-to this set. At authorized cutover, verify the running artifacts,
-database and registered listener against the managed release.
+
+### Managed cutover, November 19, 2026
+
+All four PRs merged to main. Each fetched merge commit's complete Git tree
+matched the qualified head. The six reused component main branches matched
+the candidate pins.
+
+| Repository | Verified main merge |
+| --- | --- |
+| Tempo | `380d178fdbdec0dcd2525735068a6292f417f38f` |
+| Store | `7a7b45d39697375dcb89957a6ead8b4d3417ef0b` |
+| UI | `de7f708aef837768e1b8ce9435ef4e56050fae58` |
+| Planning | `cd99ebc1865550882303076f42f248565152e558` |
+
+The managed launcher rehearsed the migration on a disposable copy before
+stopping the schema-10 service. It created a private, integrity-checked
+SQLite backup and saved the previous registration before changing the
+LaunchAgent. The backup and detailed verification are retained locally.
+
+At this cutover, checkpoint `workspace-68dc7fa8e5221063cbf5` was installed
+and active on loopback port 41822. The registered process owns the listener and serves
+the qualified binary and all 22 verified UI files. The same database and
+dataset advanced from schema 10 to 11. The original columns and row counts
+of all 28 authoritative tables match the stopped backup in both directions,
+including content, Learning, attempts, assessments, games, settings and
+receipts. SQLite integrity and foreign-key checks passed. Cache-only
+projection settled with two complete books and zero pending.
 
 ## Board-first repertoire fixes
 
@@ -1603,6 +1646,37 @@ foreign-key checks passed. The registered listener served all
 `recovery-start-opl3ya1b`. The optimized binary SHA-256 is
 `58ea1e9904ad897606ad5be9345a943caaee69a6a089ebc0e9a39c04540de095`.
 
+## Stockfish tiebreak for equal nearby support
+
+The approved Fix response rule keeps the existing repertoire priority and
+support counts. When two replies have equal support in the same group,
+Tempo orders them by the better comparable Stockfish evaluation. An available
+comparison sorts ahead of a missing one. Structural distance and move
+identity resolve remaining ties. Before engine results arrive, the nearby
+list uses structural order within support ties. The completed analysis
+returns the same ordering for the list and default selection. The inputs
+are distinct-position support, Chess move identity, existing distance, and
+the existing learner-relative score comparison. SAN and labels remain display
+values. The 50/150 centipawn rules and durable Save contract carry forward.
+
+[Tempo #28](https://github.com/tempo-v2/tempo/pull/28) qualified at
+`bd01975ad0bf8bd190ec663ef23bc7db1635a9f7`, based on the installed
+explicit Study input release above. Reuse that release's Chess, UI, Store,
+Learning, Queue, Study, Types and versioned Core pins. The optimized backend
+SHA-256 is `5c5907552ad4e03be703401cf1f60320582401a294494e058a7d33f199004995`.
+The packaged UI JS and CSS hashes are
+`30dff520aef7ea87564b9fa251458328c6366304bdc1d7b7320fd35b07a382e2` and
+`c2584eb9c9e1da000328dc635ed4a20cd31164af4c6b3bb7c572851124d2306d`.
+
+All four focused recommendation tests, 36 UI tests, the guarded build,
+and the architecture gate passed. The real Stockfish and Chrome check
+recreated the screenshot's London `5…Bg4` board and four equally supported
+replies on disposable SQLite data. Chrome suggested `c4` and showed it at
+the top of Similar repertoire positions. Learning, attempts, assessments,
+receipts and repertoire documents stayed identical. The current live gap
+list had no matching London `…Bg4` gap. At that qualification, merge and
+installation were pending.
+
 ## Repertoire correction context and pending count
 
 | Behavior | Basis, owner, and inputs | Independence and lifetime |
@@ -1671,6 +1745,25 @@ row for row, including 20,777 Learning records,
 226 attempts, 114 assessments and
 386 Study receipts. SQLite integrity and foreign-key
 checks passed.
+
+### Compact correction notation
+
+Tempo UI [#23](https://github.com/tempo-v2/tempo-ui/pull/23) merged to main at
+`da8e883c7bf10ec0f9c33df41d5405b7bb8be0b0`. The correction card displays
+contiguous numbered SAN as `1. d4 d5 2. Bf4 Nf6`, retaining `...` when
+the line starts with Black. Chess's existing SAN and replay data supply
+the display. The count and save use the contracts above.
+
+The matched Chrome journey passed for paired moves, a Black-start fixture,
+replay and Next recovery. The merged UI tree matched the tested PR head.
+The backend binary matched the SHA-256 above. The managed launcher rehearsed
+the candidate and installed `workspace-6d37b569cfafffdcc9d1` on port 41822.
+All 22 served UI files matched the qualified build. Read-only Chrome resumed
+the existing correction and verified compact SAN with 96 repairs remaining.
+All 34 database tables matched stopped-service backup `recovery-start-88eo2t3p`,
+including 20,777 Learning records, 228 attempts, 114 assessments and 388
+Study receipts. The database file, active attempt, dataset and schema 11
+matched, and SQLite integrity and foreign-key checks passed.
 
 ## Shared analysis board and marked-line authoring, November 19
 
@@ -1949,10 +2042,58 @@ entry points.
 
 The [final qualification and artifact record](historical-follow-up-evidence.md#final-combined-release-qualification)
 identifies the actual release-host package. SQLite schema 11, portable
-format 5, and Study wire 5 carry forward. The next unfinished step is
-the decision on merging the coordinated PRs. Managed installation
-requires separate authorization and verification of the retained live
-data and registered artifact set.
+format 5, and Study wire 5 carry forward.
+
+#### Verified merge to main
+
+| Pull request | Fenced reviewed head | Verified main merge | Verified Git tree |
+| --- | --- | --- | --- |
+| [Store #15](https://github.com/tempo-v2/tempo-store/pull/15) | `4027bb41cf14425bcbb5f1e8c7467999b0c40a52` | `bac6a78f3d970ea2dfd44fce834370f6cb18d042` | `61090e235be25ff8cf287d2d639bd678b815562a` |
+| [Tempo #25](https://github.com/tempo-v2/tempo/pull/25) | `2f1cc242f3373ffffe333fae386d18b4cd683f79` | `d2e6382c29dc22527d27bb2a7d22192ddc58ef70` | `fb4fcc35de17a348f74173d6e21deae2efd9a3e3` |
+| [UI #19](https://github.com/tempo-v2/tempo-ui/pull/19) | `046898f1f144652cb8fa0f43b6c74816e7211ba0` | `e40462e4f90bc61a8da4b256d060d9c25b9f9a15` | `80f3a6313bb67a3a672042283d709b77a7ae084a` |
+| [Planning #25](https://github.com/tempo-v2/.planning/pull/25) | `06aac77cf9e9b7e55472d5db023133c67335db45` | `68ecc1b727de035a26aa331c09a05c0ede160206` | `eb0b3cbab823d5f445a11c56e5df7d4751192ca4` |
+
+GitHub's merge previews matched the qualified trees and their expected
+parents. The main branches matched the verified snapshot before merging.
+Each merge used its exact reviewed head, and the remote merge commits
+matched the qualified trees and the same parent pairs. A final check of
+all nine runtime repositories matched the qualified assembly, including
+the six companion trees.
+
+The release-host package was rechecked on disk against the optimized
+binary digest and all 22 UI hashes.
+
+#### Managed installation and live acceptance
+
+On November 19, the separately authorized managed install replaced
+`workspace-7ed579a4d29162fc4fdc` with
+`workspace-6406aa4f8658cb73dd62` on registered port 41822. The managed
+rebuild matched the exact qualified package before cutover. The loaded
+registration and the actual listener identified the installed Mach-O
+binary at SHA-256
+`b442484f85da2d3615534c7a84ec4700f80c9af8202e03a29b4827747b197798`.
+All 22 files on disk and served over HTTP matched the final artifact
+hashes. The first rehearsal exceeded the launcher's one-second health
+probe before it stopped the previous service. A disposable startup
+check passed and the standard managed retry completed the cutover.
+
+The stopped-service database and prior registration are in
+`.local/usable-release/recovery-start-l8gh2ud5`. The backup database
+SHA-256 is
+`6147f710c5d97ea92b03586df79e6e4dd4c0d63bee75f111e9272225e714a1d6`.
+The prior registered executable and its 22 UI files still match their
+pre-install hashes.
+
+The live service reported the same SQLite file, dataset, schema 11 and
+active Study attempt. Chrome used the read-only Resume command, verified
+the retained position, and opened Games. History returned 100 rows and
+the authoritative historical status was complete. The smoke sent zero
+mutations. Study reported zero remaining guided corrections, so the
+correction-context and same-tab Retry journeys remain covered by the
+qualified disposable tests. After the live smoke, all 34 tables matched
+the stopped-service backup row for row, including 20,783 Learning rows,
+325 attempts, 115 assessments, and 485 Study receipts. Integrity and
+foreign-key checks passed on both copies.
 
 ## PGN upload caps removed, November 19, 2026
 
@@ -2009,6 +2150,65 @@ matched the qualified head listed above. The merged workspace uses
 Chess `25fe9e01482ddc04d323207c18fdcfb5e97be4db`,
 Tempo `5130af42f78e5aa25ad42056c8f0b2c6544dd5f3`, and
 UI `a16b7ca4ca3149b5789f8e6f935fcdf9b3f8f75c` with the same companion pins.
+
+## Phone Study deployment, November 19, 2026
+
+| Decision | Authority, inputs and lifetime |
+| --- | --- |
+| Admit a phone request | The approved phone release is online and private to the configured owner. Tempo HTTP uses Tailscale's forwarded HTTPS authority and login, the exact configured origin for POST, and the Study path and method allowlist. The managed registration retains the opt-in over restart. Public Funnel traffic and foreign origins are denied. |
+| Select and save a Study attempt | The phone embeds the same Study session and calls the existing commands against the retained dataset. The shell supplies navigation and analysis availability. The application's authored Study context, receipt identity and durable grading rules apply at both origins, independent of display name and device. |
+
+Tempo [#34](https://github.com/tempo-v2/tempo/pull/34) publishes code
+built at `0167d0e210d97a1453a5709a3f980cc211e1e653`. The PR head
+`eef61a152d6a6e5584fc336b441dc263fa5cae2e` adds the documented Serve off command.
+UI [#28](https://github.com/tempo-v2/tempo-ui/pull/28) publishes and serves
+`835d2b003295d92066b8ac57f97f6751f00f708a`. The [manifest](manifest.json)
+records the compatible sources, Core package, locks and installed hashes.
+
+The optimized locked build, 51 Tempo tests and 63 UI tests passed.
+Packaged WebKit with iPhone touch input solved two tactics and confirmed
+the same active attempt over the desktop API. An accepted answer with a
+lost reply replayed its original bytes and had one grade and receipt. A
+failed Next preserved the answer and retried only Next. Inline corrective
+replay remained available. Independent packaged Chrome verification
+covered desktop corrective Study, interrupted Next and standalone analysis.
+The managed installer rehearsed both surfaces on a disposable copy of the
+retained schema-11 database. A separate disposable copy of the stopped-time
+backup returned the same active attempt on desktop and phone. The phone API
+completed the first 12 exercises in order. All 12 were opening exercises.
+
+The registered service installed `workspace-7d86fed76f7dde27c227`
+on port 41822. The database kept its inode and schema, and all 34 tables
+matched the stopped-time backup `recovery-start-esy5gyj0`. Integrity and
+foreign-key checks passed. All 22 desktop and 24 phone assets matched the
+installed files through their respective routes. Tailscale Serve on 8443
+served the phone bundle privately and reported the same dataset as
+desktop Study. Games, repertoire writes, and requests with a mismatched
+Origin or loopback Host were rejected through the actual proxy. The
+existing Tempo 1 route still responded. Three separate lab processes
+were preserved. Actual iPhone Safari over cellular acceptance is pending.
+
+### Phone continuation overlay, November 20, 2026
+
+The phone shell places manual continuation, guided acknowledgement and
+command recovery directly below the board. The board reserves the space
+across moves and delivery states. Tempo UI uses the existing action selection
+and handlers. When Study has no board, controls use the information panel.
+
+UI [#28](https://github.com/tempo-v2/tempo-ui/pull/28) publishes
+`ccf29c8684994d6fd48c8ae713a385b2044bc640`. Packaged WebKit at 375 × 600
+confirmed that Continue, guided acknowledgement, Retry and Retry next
+exercise each fit in view without moving the board or panel or changing the
+scroll position. The journey verified an accepted answer and receipt, a Next
+retry, a review completed after a miss and one guided acknowledgement.
+All 63 UI tests and the desktop Chrome corrective Study journey passed.
+
+The managed MacBook installation serves `workspace-f9f3e6bff02e198a60e1`.
+All 24 private HTTPS phone assets and 22 local desktop assets matched the
+installed build. The backend hash, Study dataset, database inode, schema 11
+and Serve configuration matched the prior release. All 34 tables matched
+the stopped-time backup `recovery-start-4ctmzui5`. Integrity and foreign keys
+passed. The [manifest](manifest.json) records the installed bundle hashes.
 
 ## Interface execution packet, November 19, 2026
 
@@ -2310,3 +2510,107 @@ listeners kept their original processes.
 The retained SQLite file kept its inode, dataset, active attempt, and
 schema 11. All 34 tables matched the stopped-service backup `recovery-start-4m9w3v5q` row
 for row. SQLite integrity and foreign-key checks passed on both files.
+
+
+## Historical PR reconciliation, November 20, 2026
+
+Six open documentation PRs contained historical records missing from main.
+Their historical evidence is retained in the corresponding sections above.
+The source observations were recorded during the original qualifications and
+cutovers; this reconciliation does not revalidate or change the running service.
+
+| Source PR | Preserved source head | Record and closure rationale |
+| --- | --- | --- |
+| [Planning #19](https://github.com/tempo-v2/.planning/pull/19) | `147c6361d7dd0656391ddd025861632f8103bdf2` | Schema-9 corrective Study installation and its exact manifest. |
+| [Planning #22](https://github.com/tempo-v2/.planning/pull/22) | `69e5b9713a72faa6b36d4b15226cf643dc1fe401` | Schema-11 merge trees, managed cutover and data-preservation observations. |
+| [Planning #28](https://github.com/tempo-v2/.planning/pull/28) | `3776e39c25792a8f62e4ee4d38655422b64b9526` | Stockfish tiebreak behavior, compatible artifacts and original qualification. |
+| [Planning #30](https://github.com/tempo-v2/.planning/pull/30) | `c26c9ab4759d064683c9008ba26e3b84c021f797` | Compact correction notation installation and retained-data checks. |
+| [Planning #32](https://github.com/tempo-v2/.planning/pull/32) | `b8956ba3ce09274507c7e76649274512ef12ea95` | Corrective release merges, artifact identities, backup and live acceptance. |
+| [Planning #36](https://github.com/tempo-v2/.planning/pull/36) | `28c8484b0514ff40ec75f6964bd6fd153f4574fa` | Original private Phone Study deployment and November 20 continuation-overlay installation. |
+
+The manifest's `historical_delivery_records` preserves the additional structured
+records from #19 and #22 without changing any existing release or active-state
+field. Their activation flags describe the recorded cutover only. The two Phone
+Study manifest entries retain their original component pins and installed hashes
+exactly. Those observations do not establish the current live installation.
+
+### Repository integration observed during cleanup
+
+GitHub readback on November 20 confirmed the nine interface PRs and five
+post-game PRs below merged. The reconciliation started at Planning main
+`1f1a5734ee4decbbf06f13f85fe025c0e3948c99` and incorporates concurrent main
+`3be85c922684398199ce6d5e89644319ff290214`; the original qualification records,
+component pins, package hashes and post-game evidence already on that main are
+preserved. These are repository integrations, not new installations.
+
+| Family | PR | Reviewed source head | Main merge |
+| --- | --- | --- | --- |
+| Interface | [tempo #32](https://github.com/tempo-v2/tempo/pull/32) | `89ba3123a40ec5b7cc35ea185a4817f2b2424e4f` | `8124e9399abfef54817994b96b6be766f4a264e4` |
+| Interface | [tempo-ui #26](https://github.com/tempo-v2/tempo-ui/pull/26) | `2fd49d22916b997a8dd0b26d7bc1d18b8aac3a84` | `1ac53554585de7a06589592953b671f22d4fdb1b` |
+| Interface | [tempo-chess #17](https://github.com/tempo-v2/tempo-chess/pull/17) | `849bcf4793ff9fc7081e91e3425713e84e153a97` | `39ffd194133df173d6aa0a295f950ab3e5eac6e7` |
+| Interface | [tempo-learning #6](https://github.com/tempo-v2/tempo-learning/pull/6) | `8fe06ca10a5249b1619bba26b016f38f961a84dc` | `58197f6fa9b2ea33907f2e305ec07efda64d553d` |
+| Interface | [tempo-queue #10](https://github.com/tempo-v2/tempo-queue/pull/10) | `c3b1169e3bc4990ed3e61f2d1e7a28a27328ead2` | `777345256564cefa7f25d537a5a7c51a5377e749` |
+| Interface | [tempo-study #3](https://github.com/tempo-v2/tempo-study/pull/3) | `bf18a3eb827237d132763afd8fec483e06c9eb25` | `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb` |
+| Interface | [tempo-store #16](https://github.com/tempo-v2/tempo-store/pull/16) | `be8dcd2ec2039d5d3bf43acd029cbcabb0f710aa` | `8d6b4dee9788e5d1eaee2e415cdb7a8d44d93457` |
+| Interface | [tempo-core-components #6](https://github.com/tempo-v2/tempo-core-components/pull/6) | `c740dac85f2f8e7124c25b31125ef0db81d9131c` | `99364f6d47a0467ed1cf0edf6a904566dc720dd6` |
+| Interface | [Planning #34](https://github.com/tempo-v2/.planning/pull/34) | `3375d0ae86f2b14818f2ac1a76612dd81de60238` | `027a9f6f2b5bd18c4c656be9d7082dc46ce696c6` |
+| Post-game | [tempo #33](https://github.com/tempo-v2/tempo/pull/33) | `26ac49a1c1406c5d0b2c34ec285bcc3f8f8a0650` | `9e93d008d5615731b8145c685e07026ab505a339` |
+| Post-game | [tempo-ui #27](https://github.com/tempo-v2/tempo-ui/pull/27) | `e3392f853eb3d42f95400fb8c5afc445c20f51ab` | `eb9a67ee1101bc6aada10f85d457193168fdb6ea` |
+| Post-game | [tempo-store #17](https://github.com/tempo-v2/tempo-store/pull/17) | `9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9` | `dc99718d3d3e8991be2fd9864abdceac623a4e07` |
+| Post-game | [tempo-chess #18](https://github.com/tempo-v2/tempo-chess/pull/18) | `a5dcf40e3f51bfa5ff45f9c466922ca541965706` | `692e229a441fa563271db28d5073e6cbc06fc257` |
+| Post-game | [Planning #35](https://github.com/tempo-v2/.planning/pull/35) | `b68a0697b814faccd19b0bbd14f79b6493246a2e` | `1f1a5734ee4decbbf06f13f85fe025c0e3948c99` |
+
+The Stockfish tiebreak [Tempo #28](https://github.com/tempo-v2/tempo/pull/28)
+subsequently merged at `ca2529b22884ace7b3ee61cc14911eb800019d89`. Its merged
+tree `f27c0b70adb0ca73c2749554a320ce8e7c56d7d5` matches the inspected clean
+combination with the accepted interface and post-game work.
+
+Phone's backend [Tempo #34](https://github.com/tempo-v2/tempo/pull/34) was
+reconciled and merged at `8899067d3310cd0a6e15db06174c20d399880f16`. The
+published head was `971c11bf10627c571b06040587b48ae7281f4f0a`, with qualified
+source tree `814cdf625bd8d9773effb851cdf9104faefb1ae9`.
+A concurrent Lichess release then merged Tempo #35 at
+`c8e3ac75b26f960cc33737ea1fe744c20db4ca66` and Chess #19 at
+`268bd292b18396880740f24ca2c471728c6651d1`. A fresh locked build and the two
+SQLite Study-analysis contracts passed against those actual mains. The phone
+HTTP regression also passed, including denial of the new desktop-only
+`/api/study/analysis-line` route. This records the other workstream's observed
+merges without claiming ownership of them.
+
+Phone UI [#28](https://github.com/tempo-v2/tempo-ui/pull/28) was reconciled
+with the actual desktop main and merged at
+`81d0802e4768a971cf8d246317cbee420e5d6633` from published reviewed head
+`08bee296bb81db13cf4e00e57f740f0483702104`. Its accepted tree is
+`b8e785ec3bbdd7243c15d04b64e81fc543beeb9e`. All 107 UI tests and the dual
+desktop/phone build passed. The mounted real desktop Lichess flow performed
+its analysis-line read exactly once; the phone surface did not expose analysis.
+A fresh browser launch in the cleanup environment was blocked by `EPERM`, so
+this cleanup does not claim a new browser pass. The earlier source-release
+browser evidence above remains historical evidence, with its original scope.
+
+These merges resolve the stale runtime PRs selected in the initial review.
+The six historical documentation PRs still await closure after this replacement
+is published, merged and verified. Review later and hanging-material work remains
+active and is outside this disposal.
+
+### Branch cleanup awaiting authentication
+
+The [branch proposal](pr-cleanup-branches-2026-11-20.json) records 143 stale
+refs with their inspected heads, comparison evidence and reasons. Every entry
+is `pending_authentication`; no branch deletion has occurred. Execution requires
+usable Git push authentication, a fresh check of each expected head, and a fresh
+check that no open PR uses the ref as its head or base. Use an expected-head lease
+for each deletion. Any changed ref, active PR head/base, protected branch, or
+branch added since the initial inventory stays outside this proposal.
+
+The six source documentation PRs are superseded by this reconciliation once
+it is on main. Their exact source heads above remain the historical reference.
+Any branch used by an active PR remains protected from deletion. Fresh pushes
+to Review later and newly published hanging-material branches establish active
+work; they are outside stale-PR disposal.
+
+The Phone and concurrent Lichess installation paragraphs above preserve the
+original source handoffs' recorded deployments. This cleanup has not installed
+or revalidated a running package and does not assert a current running identity.
+The physical iPhone cellular acceptance remained pending in the source handoff;
+no new observation here changes that status.
