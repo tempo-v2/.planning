@@ -3202,3 +3202,22 @@ schema-14 dataset and active attempt, all 46 pre-existing tables, all 22
 served desktop files, working Stockfish discovery, 12 queued games and
 24 previously completed positions. The service used the existing
 registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
+
+## Personal tactics and playing patterns
+
+| Behavior | Basis, owner and inputs | Independence and lifetime |
+| --- | --- | --- |
+| Record all eight motifs across actual learner turns. | Andy's approved plan. Chess uses the verified legal occurrence, move history and the explicit King > Queen > Rook > Bishop > Knight > Pawn hierarchy. Tempo verifies participation. | Presentation names and game outcome do not determine motifs. Retain every candidate and share comparable engine evidence at each game occurrence. |
+| Classify misses and admit only-move puzzles. | Chess compares all legal roots. The reporting band is 30 cp inclusive. Study admission requires a 75 cp lead, or a unique root preserving forced mate at any distance and a verified mate in one or two. Verify again for standalone content. | Game result and display metadata do not affect grading. Keep ambiguous misses in Games, once per turn overall. Store binds a request to the game occurrence and an issued attempt to exact content. |
+| Compare game outcomes and playing load. | Tempo joins verified game result and canonical game metadata. Load counts use completed games before the current start and the selected local calendar. | Filters do not change past load or game identity. Partial analysis and unavailable metadata remain visible. |
+| Resume through existing Study and analysis interfaces. | Queue and Learning own delivery and cadence; Chess owns mate grading; Store owns atomic acceptance and replay. | Earlier receipts and issued content retain their original meaning. Results on a new detector revision can reconcile unissued work only. |
+
+The linked draft implementation is [Chess #23](https://github.com/tempo-v2/tempo-chess/pull/23), [Store #24](https://github.com/tempo-v2/tempo-store/pull/24), [Tempo #44](https://github.com/tempo-v2/tempo/pull/44), and [UI #41](https://github.com/tempo-v2/tempo-ui/pull/41). The `personal-tactics` manifest entry pins the compatible component sources. SQLite stays at schema 14 and Study wire 5 continues to project the pinned issued content. The Games tactical report uses its own version 2 read, while unrecognized clients receive a typed request to reload.
+
+Focused independent review traced the actual Games and Study consumers. It found reissue and duplicate-introduction risks when rescans changed a result, a missing participant boundary in Games, and loss of rating and clock facts in PGN upload. The candidate retains issued requests and current attempts, reconciles only their future issuance, scopes findings to the verified game participant, and preserves validated PGN metadata. A revised-solution test verifies catalog and learning equivalence with the live issued attempt and ensures Skip cannot reissue the superseded request.
+
+The locked Rust unit suites passed 226 tests. Both engine-gated legacy recovery and source-position checks passed on their isolated real Stockfish run. The UI passed 128 tests and built desktop and phone output against the existing packaged Core. A normal-runtime Stockfish and Chromium journey qualified six disposable games, opening a stored finding in the source game, playing the Study move, and recovering from both a lost Answer reply and an interrupted Next. The previous installed executable issued the compatibility exercise. The candidate replayed its accepted and undelivered commands with one durable assessment.
+
+The paused desktop report on a disposable copy of the installed archive returned 2,317 games, including 523 at the canonical 1+0 control. The report took 310.6 ms with a concurrent stamped Study read of 1.2 ms. All 45 application tables matched the pre-rehearsal snapshot and SQLite integrity and foreign keys passed. Archive aggregation runs outside the foreground Study path. These timings describe the disposable rehearsal and the pinned development artifact.
+
+The draft branches await combined integration and managed rollout. No live archive backfill or loss-correlation result is claimed. After installation use the existing AC and Study-focus gate, observe archive coverage across Pause, Resume and restart, then verify the comparison denominators before interpreting the missed-tactic or playing-load rates.
