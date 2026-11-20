@@ -3143,3 +3143,25 @@ manifest and found no material interface or coupling blocker. It independently
 passed 29 application, Store and mounted History checks, including real
 Stockfish and the exact fulfilled-miss replay. The full Rust run passed 359
 checks and the UI passed 125 tests.
+
+The revised candidate independently passed the production 30-second gate
+at 30.45 seconds after Study activity, with AC and the real hardware idle
+sensor. The already completed 12-game run is the batch coverage evidence.
+Additional follow-up probes were closed once renewed physical activity held
+the idle gate and installation and health checks passed.
+
+### Merged and installed on November 20, 2026
+
+The six runtime pull requests and [Planning #51](https://github.com/tempo-v2/.planning/pull/51)
+are merged. All seven remote main trees matched their reviewed candidate trees.
+The managed launcher rehearsed on a disposable backup, kept the registered
+development prototype, and installed `workspace-0fe92773f4f7b84ecd62` on port
+41822. The rollback backup and previous registration are in
+`recovery-start-6sczmyp4`.
+
+The installed process owns the managed listener. The installed detector
+discovery endpoint reported the hanging-material Stockfish detector available.
+The installed desktop served all 22 files byte for byte. Schema 14 retained
+the same dataset and the active Study attempt. All 39 preexisting tables
+matched the stopped-time backup, integrity and foreign keys passed, and no
+retained games were enrolled as part of installation.

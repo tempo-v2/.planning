@@ -1870,15 +1870,15 @@
     }
   },
   "queued-position-analysis": {
-    "status": "reviewed",
+    "status": "installed",
     "base_release": "study-opponent-moves",
     "repositories": {
-      "tempo": "f528c904a834b4d5d8bd4be8c0fc1a668216af25",
-      "tempo-chess": "5faf12e839af70056ae006968cf2baf766d32ca4",
-      "tempo-store": "7c7baaa08597eb387c5bf4a9644336e7c5815c34",
-      "tempo-learning": "0571accc86ddd18e6863d6d64b85b8566cde67a8",
-      "tempo-queue": "d66861b54135edbf70b334af57b9a8a3262edb63",
-      "tempo-ui": "cff34fcbe831947402a232b1bb56e9af71c46eea",
+      "tempo": "768945e6501c13ecc8a63162d48c60c5c5b1ce7f",
+      "tempo-chess": "3deaf5afc5cada2d30e4b836afe8572c73860c43",
+      "tempo-store": "30f9f067f85c089f1b0e41299b99d721f5552b07",
+      "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
+      "tempo-queue": "211f3f51a2fbfa8b41fedff53ddc821d4b79d5a2",
+      "tempo-ui": "583d22ee440c12fd6478dd2635db1b917dc0c922",
       "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
       "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
       "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
@@ -1949,7 +1949,36 @@
         "study_max_ms": 7675.67,
         "integrity": "ok",
         "foreign_key_issues": 0
-      }
+      },
+      "revised_idle_start_seconds": 30.45
+    },
+    "reviewed_repositories": {
+      "tempo": "f528c904a834b4d5d8bd4be8c0fc1a668216af25",
+      "tempo-chess": "5faf12e839af70056ae006968cf2baf766d32ca4",
+      "tempo-store": "7c7baaa08597eb387c5bf4a9644336e7c5815c34",
+      "tempo-learning": "0571accc86ddd18e6863d6d64b85b8566cde67a8",
+      "tempo-queue": "d66861b54135edbf70b334af57b9a8a3262edb63",
+      "tempo-ui": "cff34fcbe831947402a232b1bb56e9af71c46eea",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
+    },
+    "installation": {
+      "checkpoint": "workspace-0fe92773f4f7b84ecd62",
+      "port": 41822,
+      "schema": 14,
+      "prior_tables_preserved": 39,
+      "dataset_preserved": true,
+      "active_attempt_preserved": true,
+      "served_desktop_files": 22,
+      "stockfish_detector": "available",
+      "preexisting_game_positions": 0,
+      "preexisting_enrollments": 0,
+      "sqlite_integrity": "ok",
+      "foreign_key_issues": 0,
+      "backend_sha256": "8f2f462884654e42475cf5491e969f05d25989f06f294d9be7a65125f935ae60",
+      "rollback_backup": "recovery-start-6sczmyp4",
+      "date": "2026-11-20"
     }
   }
 }
