@@ -2285,8 +2285,8 @@ Direct headless rendering at Lichess returned HTTP 403.
 
 ### Managed installation
 
-The installed build adds Lichess to the active desktop and Phone Study
-profile. Its published release refs preserve the existing Phone overlay.
+The installed build adds Lichess to desktop Tempo and carries forward
+the active Phone Study profile through the published release refs.
 The separate post-game prototype remains on its isolated origins.
 
 | Installed source | Commit |
