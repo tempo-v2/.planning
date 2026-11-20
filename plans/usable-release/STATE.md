@@ -3203,7 +3203,7 @@ served desktop files, working Stockfish discovery, 12 queued games and
 24 previously completed positions. The service used the existing
 registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
 
-### Desktop board resizing candidate
+### Desktop board resizing
 
 | Behavior | Basis and owner | Inputs and independence | Lifetime |
 | --- | --- | --- | --- |
@@ -3236,5 +3236,22 @@ tactic controls beside their boards. The packed browser check verified a
 legal move from h1 at the 240 px floor and a zero-argument surface signal.
 The tactic detail journey verified a real resize at 1000 × 500.
 
-The two implementation PRs are open. The managed installation is still
-`workspace-d29667030ac522f8838b`.
+A third fresh Astra reviewer found no material interface or coupling issues
+in the verified heads. The reviewer independently ran the packaged Core
+consumer, the h1 move and zero-argument signal probe, and all six Tempo
+browser journeys on disposable data.
+
+Core and Tempo UI merged to main at
+`a5f8f320313d6650700617eb24ca83ec2f3cb827` and
+`0f141717ceab7e6b51447bc21de78f3d82ae3b5a`. Both remote main trees
+matched the independently reviewed heads.
+
+On November 20, 2026, the managed launcher rehearsed on a disposable copy
+and installed `workspace-f9b26eccfcf93e4da47f` on port 41822. The backend
+binary matched the previous checkpoint byte for byte. The installed service
+served all 22 desktop and 24 phone files byte for byte and reported Study
+status and Stockfish availability. The database kept its identity, file
+inode, schema 14 and active study state. All 46 tables matched the
+stopped-time backup, and SQLite integrity and foreign keys passed. The
+previous registration and database backup are in
+`recovery-start-iwd4c9vb`.
