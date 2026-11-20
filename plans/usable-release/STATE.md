@@ -2763,9 +2763,9 @@ meantime. The repertoire stays visible and editable.
 
 | Component | Qualified commit | Pull request |
 | --- | --- | --- |
-| Store | `e3b142edd1aa4cdb789ac9e9ec082198ebb85de9` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
-| Tempo | `c62abff57a445e988130bfc4ab5602cc2379a562` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
-| UI | `ed81f90c75a4c7880fc8812e2b156dbe919c9fbd` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
+| Store | `4d7f57593601f245d1b19a7f7a83aa5abfda6494` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
+| Tempo | `0c7eeea2edb5bc8f09f12496bbb32285a22cfea7` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
+| UI | `abd711ede99f679b7b77e3cb8580b3048c227ad1` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
 
 Assemble with Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
 Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
@@ -2781,7 +2781,7 @@ SQLite advances to schema 13. Study wire 5, content wire 4 and portable
 format 5 carry forward. The repertoire list adds an optional activity field
 for compatibility with earlier serialized Save replies.
 
-The architecture checks, 171 Tempo and Store Rust tests and doctests, and
+The architecture checks, 174 Tempo and Store Rust tests and doctests, and
 107 UI tests passed. The Study contract covered new and due work, an issued
 lesson, rename and replacement while suspended, preserved grades and receipts,
 restart, and unchanged activity from another repertoire. The Games contract
@@ -2811,3 +2811,10 @@ attribution when a book leaves the comparison. Focused tests on disposable
 data cover an unaffected signed edit, unpinned Games evidence, the projected
 choice status, and both reprocessing and startup reconciliation after suspending
 a previously chosen repertoire.
+
+The second review caught an unnecessary Store prompt comparison and a UI
+handler that discarded a valid PGN preview. Store now relies on its existing
+snapshot invariant for prompt lifetime. The editor retains its signed preview
+while the activity command refreshes the catalog. The mounted Chrome journey
+completed the preserved replacement alongside suspension recovery, the Games
+scope, and the historical choice readback.
