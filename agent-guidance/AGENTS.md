@@ -107,6 +107,20 @@ Do not introduce a generic event bus, service locator, universal repository abst
 
 Keep one authoritative production path for each responsibility. When replacing a path, remove or explicitly retire the old path instead of leaving two competing implementations active. Keep test/demo adapters clearly outside normal runtime composition; do not use them as silent production fallbacks.
 
+### Review blocker: settings have one source of truth
+
+Every user-configurable Tempo preference must be editable in Settings and have
+one authoritative saved value, one owner, and one validation and save path for
+its declared scope. Hidden preferences, competing defaults, independent
+writers, and overrides via CLI flags, environment variables, or config files
+are forbidden. A feature shortcut may use the same setting through its owner.
+Review new and changed settings by tracing the Settings control through the
+authoritative value to the actual consumer.
+
+This rule applies to user preferences. Host setup, access provisioning,
+credentials, fixed product rules, and inputs to individual operations fall
+outside that scope.
+
 ### Review blocker: presentation data must not become policy
 
 Block a change when shared Study code chooses behavior from a title, name, display label, source/provenance string, content family, identifier spelling, or the presence/absence of optional display data until the author identifies the decision's owner and the explicit contract that carries it. An ownership explanation is not enough if the implementation still uses a display field as a proxy: change the consumer to use the semantic contract.
