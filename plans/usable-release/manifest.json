@@ -2027,5 +2027,45 @@
       "desktop": "4bb57742f1d896e92f636d077ee5375eb722829dfa61ba5e42d0d115e3776003",
       "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3"
     }
+  },
+  "personal-tactics": {
+    "status": "draft_review",
+    "base_release": "study-focus-analysis",
+    "repositories": {
+      "tempo": "692bf333e33b79203928698e70550c6c7e48c0c0",
+      "tempo-chess": "69f66efc76f8e69dcceb75937e57d908e520741e",
+      "tempo-store": "4a0f60199cdc97da80996d1c0b465dae78ba7c5f",
+      "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
+      "tempo-queue": "211f3f51a2fbfa8b41fedff53ddc821d4b79d5a2",
+      "tempo-ui": "127a71d5df9f5884b71c10db280a92456aa841fa",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
+    },
+    "pull_requests": {
+      "tempo": "https://github.com/tempo-v2/tempo/pull/44",
+      "tempo-chess": "https://github.com/tempo-v2/tempo-chess/pull/23",
+      "tempo-store": "https://github.com/tempo-v2/tempo-store/pull/24",
+      "tempo-ui": "https://github.com/tempo-v2/tempo-ui/pull/41"
+    },
+    "dataset_schema": 14,
+    "study_wire_version": 5,
+    "games_tactical_report_version": 2,
+    "built_artifacts": {
+      "debug_backend": "208abcc6cd97b73b3c44f80d77c7142c19da81a34cb28a6e813eeaf8354d9ad0",
+      "desktop": "6e6cb0e4cc3ab17b414d71c27eb7f70669d264bf59ed7c0afa4c864617474e0b",
+      "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3"
+    },
+    "qualification": {
+      "rust_passed": 226,
+      "additional_real_stockfish_passed": 2,
+      "ui_passed": 128,
+      "archive_copy_games": 2317,
+      "archive_copy_one_minute_no_increment": 523,
+      "archive_report_ms": 310.6,
+      "concurrent_stamped_study_read_ms": 1.2,
+      "archive_copy_application_tables_identical": 45,
+      "previous_installed_command_replay": true
+    }
   }
 }
