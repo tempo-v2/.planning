@@ -13,6 +13,34 @@ Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
 See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
 for development and the explicit installed lifecycle.
 
+## Match the interface candidate
+
+Use the `interface-execution-2026-11-19` entry in [manifest.json](manifest.json)
+with the workspace template and `workspace-corrective-portability.Cargo.lock`.
+Fetch each listed feature branch or main, then check out the exact commit in
+an isolated sibling-repository assembly. Verify the recorded trees, Cargo
+lock, UI lock and vendored Core package before using the candidate. Use the
+recorded qualification profile for reproducible test inputs.
+
+```sh
+cargo build --locked -p tempo --bin tempo --example game_detection_contract_host
+make build-ui
+node --test tempo/tests/game_detection_http.mjs
+```
+
+The browser acceptance command takes the production binary, external example
+and dist directory as inputs. Use the project browser tooling and disposable
+SQLite data. Production uses SQLite schema 11, Study wire 5, content wire 4
+and portable format 5. Uploaded PGN follows normal legality and content
+validation. Large pending commands can use the existing per-tab IndexedDB
+pointer and inline session envelopes remain supported.
+
+For inspection or recovery of current data, use the binary and UI associated
+with the managed registration and a verified backup compatible with those
+artifacts. The historical checkpoints below are for reconstructing their own
+datasets and source. Keep a recovery copy outside the served UI directory and
+start it separately from the managed listener.
+
 The instructions below reproduce historical source pins in isolated
 directories. Keep their database and build outputs separate and use current
 tooling for development startup. In these older trees, `make start`
