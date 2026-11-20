@@ -3202,3 +3202,29 @@ schema-14 dataset and active attempt, all 46 pre-existing tables, all 22
 served desktop files, working Stockfish discovery, 12 queued games and
 24 previously completed positions. The service used the existing
 registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
+
+### Desktop board resizing candidate
+
+| Behavior | Basis and owner | Inputs and independence | Lifetime |
+| --- | --- | --- | --- |
+| Drag the corner to resize a square board that stays near the vertical center. A click leaves its size alone. | The user's desktop board request covers Study, Analysis, Games review, repertoire response, tactic building and setup, and tactic detail. Core owns the gesture and sizing. Tempo UI opts in each main board and owns its page or dialog layout. | Desktop pointer and viewport, available board space, and drag displacement determine the size. Chess position, orientation, lock state, and display text are independent. The handle sits outside chess input, so resizing leaves Study commands and the repertoire response recommendation alone. | Size belongs to the mounted board. Reopening uses automatic fit. The phone shell and embedded previews use their existing presentation. |
+
+This candidate uses the Study-focus checkpoint backend and all of its
+non-UI pins. [Core #8](https://github.com/tempo-v2/tempo-core-components/pull/8)
+has verified head `d4385091d1a4ac8a10e9c5cf3ca058e5202d10df`.
+[Tempo UI #40](https://github.com/tempo-v2/tempo-ui/pull/40) has verified head
+`af51306289172544d227d983aa2e976647e65ee4`. Both PRs target `main`.
+Tempo UI vendors the byte-identical Core 0.2.4 package with SHA-256
+`ef754df283f79e58d784a33cf97717c6f8c61f3bf22e8dd72a53694ddfcdcb10`.
+
+The packaged Core Chrome consumer and all 128 UI tests passed. Both UI
+bundles built. Chrome verified initial and resized vertical centering on all
+seven main boards, size and square targeting, a short Games review window,
+and handle absence on a narrow viewport, a wide touch-first viewport and
+an import preview. Study kept its size through a move and sent no command
+during resizing. The repertoire response accepted a pending recommendation
+after the drag. The Phone Study WebKit journey passed with the handle absent.
+Browser journeys used disposable databases.
+
+The two implementation PRs are open. The managed installation is still
+`workspace-d29667030ac522f8838b`.
