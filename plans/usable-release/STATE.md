@@ -3207,24 +3207,26 @@ registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
 
 | Behavior | Basis and owner | Inputs and independence | Lifetime |
 | --- | --- | --- | --- |
-| Drag the corner to resize a square board that stays near the vertical center. A click leaves its size alone. | The user's desktop board request covers Study, Analysis, Games review, repertoire response, tactic building and setup, and tactic detail. Core owns the gesture and sizing. Tempo UI opts in each main board and owns its page or dialog layout. | Desktop pointer and viewport, available board space, and drag displacement determine the size. Chess position, orientation, lock state, and display text are independent. The handle sits outside chess input, so resizing leaves Study commands and the repertoire response recommendation alone. | Size belongs to the mounted board. Reopening uses automatic fit. The phone shell and embedded previews use their existing presentation. |
+| Drag the corner to resize a square board that stays near the vertical center. A click leaves its size alone. | The user's desktop board request covers Study, Analysis, Games review, repertoire response, tactic building and setup, and tactic detail. Core owns the gesture, handle clearance and sizing within the host. Tempo UI owns desktop eligibility, which main boards opt in and their page or dialog layout. | Desktop pointer and viewport, available board space, and drag displacement determine the size. Chess position, orientation, lock state, and display text are independent. The handle sits outside chess input, so resizing leaves Study commands and the repertoire response recommendation alone. | Size belongs to the mounted board. Reopening uses automatic fit. The phone shell and embedded previews use their existing presentation. |
 
 This candidate uses the Study-focus checkpoint backend and all of its
 non-UI pins. [Core #8](https://github.com/tempo-v2/tempo-core-components/pull/8)
-has verified head `d4385091d1a4ac8a10e9c5cf3ca058e5202d10df`.
+has verified head `e6efeee48d39a2a189ae277a56275a8dc174269d`.
 [Tempo UI #40](https://github.com/tempo-v2/tempo-ui/pull/40) has verified head
-`af51306289172544d227d983aa2e976647e65ee4`. Both PRs target `main`.
+`27ea145cc29c92ef5537d11bd91d00f07379bf35`. Both PRs target `main`.
 Tempo UI vendors the byte-identical Core 0.2.4 package with SHA-256
-`ef754df283f79e58d784a33cf97717c6f8c61f3bf22e8dd72a53694ddfcdcb10`.
+`5debea5c685ddc6199e3fb716747a4242cfac7e0e1e1cabffdfddfac0c1e244c`.
 
 The packaged Core Chrome consumer and all 128 UI tests passed. Both UI
 bundles built. Chrome verified initial and resized vertical centering on all
-seven main boards, size and square targeting, a short Games review window,
+seven main boards, size and square targeting, short Games and both short tactic editing views,
 and handle absence on a narrow viewport, a wide touch-first viewport and
 an import preview. Study kept its size through a move and sent no command
 during resizing. The repertoire response accepted a pending recommendation
 after the drag. The Phone Study WebKit journey passed with the handle absent.
 Browser journeys used disposable databases.
+
+The first independent Astra review caught a corner-square input regression and centering issues in short tactic editor windows. The revised candidate positions the handle outside the chess surface, reserves its width within Core, and puts the tactic editor controls beside their board on desktop. Tempo UI sizes its own frame track and uses one viewport and pointer eligibility decision. The repertoire response consumes a surface-only notification without a DOM payload.
 
 The two implementation PRs are open. The managed installation is still
 `workspace-d29667030ac522f8838b`.
