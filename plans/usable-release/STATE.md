@@ -2244,3 +2244,69 @@ Implemented and verified on the isolated instances. [UI #27](https://github.com/
 A detected repertoire-version mismatch belongs to the loaded game comparison. Its owner retains the warning and reload action through board navigation, source visibility changes and failed reloads. Only a successful fresh review replaces the earlier comparison. The warning is presentation state and never writes repertoire or learning data.
 
 UI candidate `e3392f853eb3d42f95400fb8c5afc445c20f51ab` extends [UI #27](https://github.com/tempo-v2/tempo-ui/pull/27). The Chrome regression edits the destination from e4 to c4 during review, observes the mismatch, changes source visibility, closes comparison, navigates forward and back, and forces one failed reload. The warning and its reload action survive. The successful reload shows c4 and clears the warning. All 96 UI tests passed. The preceding runtime and package pins still apply.
+
+## Lichess analysis release
+
+The compact **↗ Lichess** action opens the full issued tactic or the
+first matching opening variation in PGN order. Replay exports use the
+full loaded line. Boards with only a position open that position. Long
+lines offer a complete PGN download for manual import.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Authorize an analysis read | Tempo checks dataset, attempt, revision, issued content version and activity state for both position context and line export. A confirmed unfinished Test uses the existing concession and its immutable receipt. Display names and board orientation are independent of that decision. |
+| Read the export line | The ordinary analysis board loads its position context. A Lichess action requests a separate read. Chess finds the first legal authored route matching the issued canonical position and prescribed move. A tactic uses its issued definition. A missing matching route yields the retained issued move. A failed document lookup or parse returns an error that the user can retry from the open board. |
+| Own the external tab | Tempo UI reserves one tab for the initiating Study visit. Leaving Study or hiding the page cancels an outstanding launch, and late acceptance remains available through normal Study recovery. The initiating board supplies orientation for automatic launch. The visible Analysis board supplies orientation for its manual link. |
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Chess | `268bd292b18396880740f24ca2c471728c6651d1` | [#19](https://github.com/tempo-v2/tempo-chess/pull/19) |
+| Tempo | `c8e3ac75b26f960cc33737ea1fe744c20db4ca66` | [#35](https://github.com/tempo-v2/tempo/pull/35) |
+| UI | `b1f89c6d6c45ed4df935d68623bc221a04c1703c` | [#30](https://github.com/tempo-v2/tempo-ui/pull/30) |
+
+The final independent Astra review passed on the reconciled PR heads.
+The Tempo main merge incorporated concurrent Phone ingress and
+repertoire recommendation work. The Lichess application projection,
+contract tests and desktop route additions matched the reviewed change.
+The reconciled Chess and Tempo suites passed 219 tests and doctests.
+The reconciled UI passed 100 tests.
+
+Packaged Chromium on disposable SQLite verified the final puzzle ply,
+cancellation before acceptance, display-name invariance, one Again,
+previous-release recovery with the original command, an interrupted Next,
+and the replay cursor. It reproduced a document read failure and a PGN
+parse failure and kept ordinary Analyze available. It exercised a
+repurposed tab, a position read failure, reload and browser Back during
+a pending concession. Phone WebKit ran the optimized release assembly
+and verified touch Study, continuation and retry placement, inline
+repair, and the private ingress restrictions. In earlier live HTTP
+checks Lichess returned the exact inline sample PGN and orientation.
+Direct headless rendering at Lichess returned HTTP 403.
+
+### Managed installation
+
+The installed build adds Lichess to desktop Tempo and carries forward
+the active Phone Study profile through the published release refs.
+The separate post-game prototype remains on its isolated origins.
+
+| Installed source | Commit |
+| --- | --- |
+| [Tempo release assembly](https://github.com/tempo-v2/tempo/tree/release/lichess-with-phone) | `b93ec26b9dc86f2161c031eb0d997cefb8913b03` |
+| [UI release assembly](https://github.com/tempo-v2/tempo-ui/tree/release/lichess-with-phone) | `678fe423a7cfd6056c934f3ae848435850e1e361` |
+| [Chess feature head](https://github.com/tempo-v2/tempo-chess/commit/7be682bcb8d48dbd6433ccb697cec573a370db29) | `7be682bcb8d48dbd6433ccb697cec573a370db29` |
+
+The assembly also used Store `bac6a78f3d970ea2dfd44fce834370f6cb18d042`, Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, Study `4b46e6c45a6330177b089eadcae69821e57b6657`, Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core `e9a1d160a729bc9fbbddaf16427625301cc9498a` with
+the packed Core 0.2.2 tarball. It reused the corrective portability
+workspace Cargo lock.
+
+The managed launcher installed `workspace-c4afffae8dea3aea9fd1` on port 41822 after a
+disposable database rehearsal. The optimized executable SHA-256 is
+`37598f8b6b5c0b06c4ae5d0ff56457195aa8b075c8eb9f7f6cd37fdfc9308d50`. The registered listener served all 46 qualified desktop and
+phone files byte for byte. The Phone profile still returns its Study
+status and confines Lichess export to desktop. The three development
+listeners kept their original processes.
+
+The retained SQLite file kept its inode, dataset, active attempt, and
+schema 11. All 34 tables matched the stopped-service backup `recovery-start-4m9w3v5q` row
+for row. SQLite integrity and foreign-key checks passed on both files.
