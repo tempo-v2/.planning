@@ -2029,18 +2029,18 @@
     }
   },
   "personal-tactics": {
-    "status": "draft_review",
+    "status": "installed",
     "base_release": "study-focus-analysis",
     "repositories": {
-      "tempo": "bfd801caa84c0a0ac6f00c0804c0fcf7fa1fd3e5",
-      "tempo-chess": "69f66efc76f8e69dcceb75937e57d908e520741e",
-      "tempo-store": "839e22f5931f825c66735e80f6ddbc76bdf3aae6",
+      "tempo": "58feb9ad66d000edc95fa2bc100f8e4c804e0043",
+      "tempo-chess": "e1b23ee430e3a1dea8895db673d2ca0769986b67",
+      "tempo-store": "c81ff1e227bb08cf15176f0295eb91ff6a35ce9a",
       "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
       "tempo-queue": "211f3f51a2fbfa8b41fedff53ddc821d4b79d5a2",
-      "tempo-ui": "127a71d5df9f5884b71c10db280a92456aa841fa",
+      "tempo-ui": "81bbd3d4c20b1e24bebdf33e93610f773649aee2",
       "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
       "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
-      "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
+      "tempo-core-components": "a5f8f320313d6650700617eb24ca83ec2f3cb827"
     },
     "pull_requests": {
       "tempo": "https://github.com/tempo-v2/tempo/pull/44",
@@ -2053,14 +2053,12 @@
     "study_wire_version": 5,
     "games_tactical_report_version": 2,
     "built_artifacts": {
-      "debug_backend": "f7b3d6d8ccac449f596bac52cc45b4174fb07b2b61b0ec9957d72f3f4cb6eea1",
-      "desktop": "6e6cb0e4cc3ab17b414d71c27eb7f70669d264bf59ed7c0afa4c864617474e0b",
-      "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3",
-      "optimized_backend": "36b22edb9ca935237206b6bda46112fc87ec001e3b5397f01012d5440f0196b3"
+      "optimized_backend": "898a678bed7b2db839ce8b37b2d2b5223f956e47cd63663192971e84053fc371",
+      "desktop": "1c80835d3246cb46315e092d6bb05d9bba9bcd5463bea2fce495ea8251667004",
+      "phone": "0f6a998dacbb3a382faafdfda9be11ed1cd7c2568c189203e912d0291c39149d",
+      "packaged_core": "9971c41100e96082a55ef96dd925a7d443dc641c7961d96cffd798e3eb82c9ee"
     },
     "qualification": {
-      "rust_passed": 226,
-      "additional_real_stockfish_passed": 2,
       "ui_passed": 128,
       "archive_copy_games": 2317,
       "archive_copy_one_minute_no_increment": 523,
@@ -2082,7 +2080,41 @@
         "stamped_median_ms": 0.6,
         "stamped_max_ms": 9.9,
         "inconclusive_turns": 1
-      }
+      },
+      "earlier_draft_rust_passed": 226,
+      "earlier_draft_additional_real_stockfish_passed": 2,
+      "combined_rust_passed": 231,
+      "final_registration_focused_check_passed": true,
+      "final_independent_focused_checks_passed": 21,
+      "combined_stockfish_browser_duration_seconds": 107.8,
+      "combined_stockfish_concurrent_study_read_ms": 1.3
+    },
+    "base_installation": "workspace-f9b26eccfcf93e4da47f",
+    "reviewed_repositories": {
+      "tempo": "0f6f727121337a2584b622fae59bd00421749040",
+      "tempo-chess": "f2c156c5ab31086149d0b939afa027b142eeef68",
+      "tempo-store": "7dba1bc669b0b78f6c409b0c9924195824af67c3",
+      "tempo-ui": "a9285e3e70fb8ddff2e8f81285775fd646118ed0"
+    },
+    "installation": {
+      "date": "2026-11-20",
+      "checkpoint": "workspace-587a3ebb0de530457b3e",
+      "port": 41822,
+      "backend_sha256": "898a678bed7b2db839ce8b37b2d2b5223f956e47cd63663192971e84053fc371",
+      "desktop_sha256": "1c80835d3246cb46315e092d6bb05d9bba9bcd5463bea2fce495ea8251667004",
+      "phone_sha256": "0f6a998dacbb3a382faafdfda9be11ed1cd7c2568c189203e912d0291c39149d",
+      "preserved_tables": 46,
+      "dataset_preserved": true,
+      "active_attempt_preserved": true,
+      "database_inode_preserved": true,
+      "sqlite_integrity": "ok",
+      "foreign_key_issues": 0,
+      "desktop_files": 22,
+      "phone_files": 24,
+      "schema": 14,
+      "report_game_count": 2317,
+      "one_minute_no_increment": 523,
+      "backup": "recovery-start-qoee13ij"
     }
   }
 }

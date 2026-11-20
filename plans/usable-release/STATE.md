@@ -3262,18 +3262,18 @@ previous registration and database backup are in
 | --- | --- | --- |
 | Record all eight motifs across actual learner turns. | Andy's approved plan. Chess uses the verified legal occurrence, move history and the explicit King > Queen > Rook > Bishop > Knight > Pawn hierarchy. Tempo verifies participation. | Presentation names and game outcome do not determine motifs. Retain every candidate and share comparable engine evidence at each game occurrence. |
 | Classify misses and admit only-move puzzles. | Chess compares all legal roots. The reporting band is 30 cp inclusive. Study admission requires a 75 cp lead, or a unique root preserving forced mate at any distance and a verified mate in one or two. Verify again for standalone content. | Game result and display metadata do not affect grading. Keep ambiguous misses in Games, once per turn overall. Store binds a request to the game occurrence and an issued attempt to exact content. |
-| Compare game outcomes and playing load. | Tempo joins verified game result and canonical game metadata. Load counts use completed games before the current start and the selected local calendar. | Filters do not change past load or game identity. Partial analysis and unavailable metadata remain visible. |
+| Compare game outcomes and playing load. | Tempo joins verified game result and canonical game metadata. Load counts use completed games before the current start and the approved Eastern time calendar. | Filters do not change past load or game identity. Partial analysis and unavailable metadata remain visible. |
 | Resume through existing Study and analysis interfaces. | Queue and Learning own delivery and cadence; Chess owns mate grading; Store owns atomic acceptance and replay. | Earlier receipts and issued content retain their original meaning. Results on a new detector revision can reconcile unissued work only. |
 
-The linked draft implementation is [Chess #23](https://github.com/tempo-v2/tempo-chess/pull/23), [Store #24](https://github.com/tempo-v2/tempo-store/pull/24), [Tempo #44](https://github.com/tempo-v2/tempo/pull/44), and [UI #41](https://github.com/tempo-v2/tempo-ui/pull/41). The `personal-tactics` manifest entry pins the compatible component sources. SQLite stays at schema 14 and Study wire 5 continues to project the pinned issued content. The Games tactical report uses its own version 2 read, while unrecognized clients receive a typed request to reload.
+The implementation is [Chess #23](https://github.com/tempo-v2/tempo-chess/pull/23), [Store #24](https://github.com/tempo-v2/tempo-store/pull/24), [Tempo #44](https://github.com/tempo-v2/tempo/pull/44), and [UI #41](https://github.com/tempo-v2/tempo-ui/pull/41). The `personal-tactics` manifest entry pins the compatible component sources. SQLite stays at schema 14 and Study wire 5 continues to project the pinned issued content. The Games tactical report uses its own version 2 read, while unrecognized clients receive a typed request to reload.
 
 Focused independent review traced the actual Games and Study consumers. It found reissue and duplicate-introduction risks when rescans changed a result, a missing participant boundary in Games, and loss of rating and clock facts in PGN upload. The candidate retains issued requests and current attempts, reconciles only their future issuance, scopes findings to the verified game participant, and preserves validated PGN metadata. A revised-solution test verifies catalog and learning equivalence with the live issued attempt and ensures Skip cannot reissue the superseded request.
 
-The locked Rust unit suites passed 226 tests. Both engine-gated legacy recovery and source-position checks passed on their isolated real Stockfish run. The UI passed 128 tests and built desktop and phone output against the existing packaged Core. A normal-runtime Stockfish and Chromium journey qualified six disposable games, opening a stored finding in the source game, playing the Study move, and recovering from both a lost Answer reply and an interrupted Next. The previous installed executable issued the compatibility exercise. The candidate replayed its accepted and undelivered commands with one durable assessment.
+The earlier draft’s locked Rust unit suites passed 226 tests. Both engine-gated legacy recovery and source-position checks passed on their isolated real Stockfish run. The UI passed 128 tests and built desktop and phone output against the existing packaged Core. A normal-runtime Stockfish and Chromium journey qualified six disposable games, opening a stored finding in the source game, playing the Study move, and recovering from both a lost Answer reply and an interrupted Next. The previous installed executable issued the compatibility exercise. The candidate replayed its accepted and undelivered commands with one durable assessment.
 
 The paused desktop report on a disposable copy of the installed archive returned 2,317 games, including 523 at the canonical 1+0 control. The report took 310.6 ms with a concurrent stamped Study read of 1.2 ms. All 45 application tables matched the pre-rehearsal snapshot and SQLite integrity and foreign keys passed. Archive aggregation runs outside the foreground Study path. These timings describe the disposable rehearsal and the pinned development artifact.
 
-The draft branches await combined integration and managed rollout. No live archive backfill or loss-correlation result is claimed. After installation use the existing AC and Study-focus gate, observe archive coverage across Pause, Resume and restart, then verify the comparison denominators before interpreting the missed-tactic or playing-load rates.
+The full live archive scan and missed-tactic and playing-load estimates are pending. Analysis uses the existing AC and Study-focus gate.
 
 A separate real Stockfish run on the populated archive copy settled 12 learner turns in 106.7 seconds including the startup quiet period, with no inconclusive results and clean integrity and foreign keys. The exploratory probe reused a stale progress stamp after analysis wrote changes and saw a peak 4.82-second Study progress read. That workload differs from the on-screen client, which advances the stamp after a response. A fresh, stamped read during the concurrent archive report and during the six-game browser test remained responsive.
 
@@ -3287,3 +3287,46 @@ The repeated debug run also saw one 4.91-second current-stamp read. The final op
 - A clear opportunity contributes to its playing-load band even when a different turn in the same game has an unclear motif. Game-level loss attribution still withholds an uncertain no-miss claim. The approved ambiguity rule applies to competing non-mating options.
 - Store's request state distinguishes queued, issued, superseded while issued, and reviewed. Games renders that typed state. Supersession preserves the original active attempt and forbids future issuance of the obsolete request.
 - The combined candidate includes the installed desktop board-resize release and its packaged Core 0.2.4. Prior runtime behavior and evidence unrelated to the changed consumers remain in scope.
+- Engine scores that preserve a forced mate remain mate comparisons, including distances beyond the two detected mate motifs. A slower winning mate is a sound alternative. The 30 cp ambiguity rule applies to centipawn scores.
+- When a shared detector set settles partially, only a complete decision finding from the requested report can establish otherwise inconclusive personal-archive coverage. A complete finding from another detector cannot mask an uncertain complete-decision result.
+- A discovered attack or check requires a moved blocker on the stationary slider's ray. The owning Chess detector still verifies that the resulting attack is legal. Simply freeing a previously pinned slider does not change whether its ray was opened.
+- Pin and skewer evidence uses a legal threat on the front target. King-safety pin geometry remains separate from that evidence. A slider restricted to its own pin line cannot report an off-line attack on two opposing pieces.
+- Registration allows one complete-decision producer. A second claimant is rejected by the host regardless of either descriptor's identifier, so the active archive never selects an owner by ordering. Legacy producers may still be registered independently.
+
+
+### Merged and installed
+
+The sixth fresh Astra reviewer found no remaining interface or coupling
+blocker. The reviewer independently verified 21 focused Tempo, Chess and
+Store checks. These covered renamed and reordered detector registration,
+rejection of a second complete-decision producer, the existing Games-to-Study
+request, and replay of its saved answer after restart.
+
+| Component | Reviewed head | Verified main merge |
+| --- | --- | --- |
+| Chess | `f2c156c5ab31086149d0b939afa027b142eeef68` | `e1b23ee430e3a1dea8895db673d2ca0769986b67` |
+| Store | `7dba1bc669b0b78f6c409b0c9924195824af67c3` | `c81ff1e227bb08cf15176f0295eb91ff6a35ce9a` |
+| Tempo | `0f6f727121337a2584b622fae59bd00421749040` | `58feb9ad66d000edc95fa2bc100f8e4c804e0043` |
+| UI | `a9285e3e70fb8ddff2e8f81285775fd646118ed0` | `81bbd3d4c20b1e24bebdf33e93610f773649aee2` |
+
+Each remote main tree matched its reviewed head. The combined candidate
+passed 231 Rust tests before the final registration constraint. Its focused
+analysis-to-Study test passed again at the final head. All 128 UI tests and
+both builds passed with packaged Core 0.2.4. The combined Chrome and real
+Stockfish journey qualified six games and verified source and candidate
+boards, Study capture, original Answer replay and retry of Next alone. The
+journey took 107.8 seconds with a concurrent stamped Study read of 1.3 ms.
+Previous-release recovery used the same backend bytes as the board-resize
+checkpoint and verified both accepted and undelivered pending commands.
+
+On November 20, 2026, the first managed start ran out of disk space while
+copying the stopped database. The previous registration restarted after
+clearing the regenerable debug cache. The retry rehearsed the combined
+candidate and installed `workspace-587a3ebb0de530457b3e` on port 41822.
+Readback verified the listener, personal tactics detector and version 2 report.
+The live report found 2,317 games, including 523 at 1+0. All 46 database tables
+matched the stopped-time backup. Dataset, active attempt, database inode and
+schema 14 were preserved. SQLite integrity and foreign keys passed. All 22
+desktop and 24 phone files matched the installed artifacts, and both clients
+reported Study status for the same dataset. The rollback registration and
+verified database copy are in `recovery-start-qoee13ij`.
