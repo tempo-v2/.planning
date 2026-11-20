@@ -2799,8 +2799,6 @@ The schema-12 to schema-13 rehearsal on a disposable copy preserved all
 37 previous tables and objects. Integrity, foreign keys, Study and Repertoires
 readback passed.
 
-The three candidate PRs target main. Managed installation is pending.
-
 ### Astra interface review
 
 The first review identified five issues. The candidate now uses separate
@@ -2824,3 +2822,29 @@ issues in the revised runtime. The reviewer independently passed six
 focused Rust tests and nine mounted Study metadata journeys. The prior
 PGN Save fixture waits for the old response to fail and for the independent
 old model projection to settle before comparing every prior table.
+
+### Managed installation, November 20, 2026
+
+The coordinated PRs merged into main. Each fetched merge tree matched
+the reviewed tree. The managed launcher activated
+`workspace-361ad459f99b60436bd2` on port 41822 and created the
+stopped-time backup `recovery-start-4v3afd5a`. The first rehearsal
+timed out before stop. The launcher's exact desktop and phone readiness
+checks passed in a separate trial, followed by the standard managed retry.
+
+The registered process owns the listener and serves the qualified optimized
+binary and all 22 desktop and
+24 private HTTPS phone assets
+byte for byte. The database kept its file identity, dataset, active Study
+attempt, and all 36 previous application tables and SQLite sequence rows.
+Schema 13 passed integrity and foreign-key checks. Live Study and the
+Repertoires list responded on their supported surfaces. Suspension,
+resumption, and grade-generating checks used disposable databases.
+
+On the optimized candidate, Chrome completed the mounted signed PGN
+replacement across suspension, suspend and resume, lost-reply recovery,
+stale corrective-choice presentation, and scoped game-gap analysis.
+The installed predecessor replay passed all six accepted-lost and unaccepted
+Answer, Learn more tactics, and PGN Save cases. The existing durable replies
+replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
+records the compatible merge commits, artifact hashes, and backup.
