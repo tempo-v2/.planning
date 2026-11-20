@@ -2747,3 +2747,37 @@ Integrity and foreign-key checks passed. Passive Study responded on both
 surfaces. The desktop list read successfully, the phone save route
 accepted validation, and the phone list route returned 404. The
 observed installation in the [manifest](manifest.json) closes the release.
+
+## Tactic capture from the board, November 20, 2026
+
+Desktop Tactics Capture adds **Build a tactic** alongside PGN import. Set the
+starting position on the board or through FEN, then play the line or append
+pasted SAN. **Save tactic** runs the existing Preview and Save in one action.
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Compose one solver-first line | The capture request establishes the applied position and its side to move as the solver's start. Tempo UI projects the local draft and generates PGN with zero setup plies. Board and SAN entry produce the same PGN for the same position and moves. Whitespace, optional SAN numbering and reordered castling flags are presentation differences. |
+| Validate and accept the capture | The existing tactic PGN contract gives Chess authority over position and line legality. Tempo accepts only the single valid, signed record for the same PGN and dataset. Existing capture rules determine identity, learning, and receipt effects. |
+| Recover after uncertain delivery | Tempo UI retains the exact Save command in the existing recovery journal. Store replays its receipt if the command already committed. The editable drafts are page-local. |
+
+[Tempo UI #33](https://github.com/tempo-v2/tempo-ui/pull/33) carries
+`e36d214f68083a7c8ba67f22e29f6a4a5f65f792`. Qualify it with the other merged
+component revisions in the `study-review-later` entry of the
+[release manifest](manifest.json), including Tempo
+`846fae8fa1444ddf8b00e1793e935073ac030b7c` and the packaged Core 0.2.2.
+The existing UI lock and Core tarball match that entry. The candidate desktop
+JavaScript SHA-256 is `9896c6b85abded82dbdeb42d969fa8fb89327eb85ecb76525c17e59a46db791e`.
+The stylesheet SHA-256 is `fa152f8b2b84ee67b9b58c9f8b662f41be38445d0c660844e501d9299ed305eb`.
+
+All 111 UI tests and four package boundary checks passed. Chrome exercised
+desktop and narrow layouts against the matched Tempo binary on disposable
+SQLite data. It covered board editing, FEN including reordered castling
+rights, mixed board and SAN entry, atomic rejection of invalid SAN, promotion
+choice, PGN import, and the saved position and solution in Tactics. The invalid
+server preview issued zero Saves. After a successful reply was dropped,
+reload replayed the original Save bytes and left one tactic, one source, one
+receipt, and one learning row with zero assessments. Independent review traced
+the validation and recovery path and ran nine focused UI checks. Chrome was
+run in the implementation environment with local browser and port access.
+
+Candidate publication is for review. Managed installation is pending.
