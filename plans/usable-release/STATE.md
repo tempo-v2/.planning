@@ -3080,3 +3080,66 @@ keys passed.
 | Tempo executable | `02d3769ef42b0589ba9d2f3704c0cf68972e301bf1cb42ddf9ca3d77511def2a` |
 | Desktop JavaScript | `ee96cfa2fc753b5eeb12ad9bbdb6ef1cbaf3d7c5bf5ff55749f24975e80eb4db` |
 | Phone JavaScript | `6d0ea3363110bec7991e801c219b69e22d748342057919c28b8bfa8b93f573a8` |
+
+## Position analysis integration
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Enqueue actual learner positions | The accepted position-analysis plan authorizes new accepted imports and explicit archive selections. Tempo resolves participation and Chess provides the played turns. Store keys by dataset, source revision, ply and requested detector versions. Labels and repertoire matches are independent. Pause and restart preserve completed work. |
+| Share and settle analysis | Chess uses legal moves and exact comparable engine evidence. A winning mate supersedes other findings. Incomplete results never authorize a puzzle. Tempo coordinates the engine slot and Store atomically accepts a position and its training effects. |
+| Deliver missed capture practice | Learning owns activity and cadence. Queue alternates accepted game requests and regular due work at durable issuance. The exact game predecessor is display context only. Replays preserve the issued attempt and result. |
+| Yield to the foreground | Tempo runs background engine work only on wall power after 30 seconds of inactivity and yields to input or foreground engine requests. Cancellation retains ownership until acknowledged. |
+
+The integrated candidate uses schema 14 and the existing Study wire 5 opt-in
+for opponent context. The compatible application, Chess, Store, Learning, Queue,
+UI and inherited release pins are in the manifest under
+`queued-position-analysis`. The PRs target main and remain drafts.
+
+The combined locked Rust run passed 354 tests and doctests. A separate
+engine-gated real Stockfish 19 check passed cancellation, engine restart and
+exact all-root result recovery. The shared-host test ran two registered
+detectors through one position and counted one engine evaluation. The
+application test exercised two saved positions, the exact opponent setup move,
+a due review between game puzzles, and alternation across restart. The UI
+passed all 125 tests and built both output surfaces.
+
+The managed predecessor's stopped-time backup was cloned for a schema 13 to 14
+startup rehearsal. The candidate preserved all 39 prior tables row for row.
+SQLite integrity and foreign-key checks passed. Managed installation and live
+game enrollment remain separate.
+
+With a controlled idle signal on one disposable game, real Stockfish confirmed
+the missed pawn capture of the queen and issued a Study puzzle with the exact
+opponent move. The run took 10.4 seconds, with a slowest queue tick of 3.6 ms
+and a slowest in-process Study progress read of 0.7 ms. Headless Chrome loaded
+that saved result through the compiled Games UI, exercised Pause and Resume,
+and observed the predecessor board transition to the solver board in Study.
+
+The separate unassisted real-engine HTTP/browser run remained waiting for Mac
+idle and could not qualify automatic start or a multi-game soak. The timings
+above describe the single-game disposable run. Large-archive throughput and
+latency on a populated result write remain release checks.
+
+### Hardware qualification and independent review
+
+On wall power the first unassisted candidate started 31.36 seconds after the
+last Study activity, with the real Mac hardware idle timer at 41.68 seconds.
+It completed 383 positions in 12 retained games on a disposable copy in
+14 minutes 9 seconds, with no failed games or pending positions, nine
+inconclusive positions, five confirmed missed captures, and clean database
+integrity and foreign keys. The tester deliberately made uncached Study
+progress reads at every probe. Those reads had a median of 1.23 seconds and a
+95th percentile of 5.02 seconds under that workload. The installed predecessor
+on a disposable copy had a median uncached read of 0.94 seconds and a 0.34 ms
+median for the stamped reads the UI uses between changes.
+
+Four fresh Astra reviews found and drove corrections for selected learner
+identity, versioned membership and per-finding attribution, shared validated
+board and move history, typed retry disposition, actual multi-detector durable
+settlement, independent mate validation, exact skipped members, stable report
+identity across changing detector membership, and truthful progress and retry
+controls. The fifth fresh Astra reviewed the runtime pins now recorded in the
+manifest and found no material interface or coupling blocker. It independently
+passed 29 application, Store and mounted History checks, including real
+Stockfish and the exact fulfilled-miss replay. The full Rust run passed 359
+checks and the UI passed 125 tests.
