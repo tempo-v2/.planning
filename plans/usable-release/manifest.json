@@ -2055,7 +2055,8 @@
     "built_artifacts": {
       "debug_backend": "f7b3d6d8ccac449f596bac52cc45b4174fb07b2b61b0ec9957d72f3f4cb6eea1",
       "desktop": "6e6cb0e4cc3ab17b414d71c27eb7f70669d264bf59ed7c0afa4c864617474e0b",
-      "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3"
+      "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3",
+      "optimized_backend": "36b22edb9ca935237206b6bda46112fc87ec001e3b5397f01012d5440f0196b3"
     },
     "qualification": {
       "rust_passed": 226,
@@ -2073,6 +2074,14 @@
         "inconclusive_turns": 0,
         "elapsed_seconds_with_idle_gate": 106.7,
         "stale_stamp_probe_peak_ms": 4824.5
+      },
+      "archive_resume": {
+        "new_turns": 5,
+        "elapsed_seconds": 58.0,
+        "stamped_reads": 55,
+        "stamped_median_ms": 0.6,
+        "stamped_max_ms": 9.9,
+        "inconclusive_turns": 1
       }
     }
   }
