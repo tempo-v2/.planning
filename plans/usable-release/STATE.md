@@ -2986,7 +2986,7 @@ backup, and integrity and foreign-key checks passed.
 | --- | --- |
 | Find the opening move | Study should begin one ply before the learner's response when the exact move is available. Chess accepts the legal predecessor from an authored route, selected tactic range, or explicit source setup. Game repairs use the preceding move in the verified played game. The move must reach the canonical issued position. Chess combines matching source evidence independently of order. Conflicting candidates remain ambiguous across reimports. Labels, activity display text, and clock counters are independent. |
 | Present the exercise | Tempo pins the verified pair when issuing the attempt and exposes playback context for an unplayed first decision to opted-in Study wire 5 clients. The current board also carries its exact opponent arrow on resume, based on the issued definition and played cursor. Desktop and phone UI hold the pre-move board for 250 ms and keep one presentation per active attempt in the browser tab. Later replies use the grader's accepted autoplay moves and replace the red arrow in place. Playback has no command or scheduling effect. |
-| Recover saved context | The user selected existing-card coverage. An explicit metadata backfill uses the retained authored PGN, referenced capture archives, and verified original tactic transfers. Missing or conflicting evidence leaves the solver position available. Store updates only current presentation metadata against the observed dataset and write revision. Issued attempts, content versions, authored revisions, receipts, and learning stay as they were. |
+| Recover saved context | The user selected existing-card coverage. An explicit metadata backfill uses the retained authored PGN, referenced capture archives, and verified original tactic transfers. Missing or conflicting evidence leaves the solver position available. Additional source evidence can mark an already-verified context conflicting through the same Chess reconciliation. Store updates only current presentation metadata against the observed dataset and write revision. Issued attempts, content versions, authored revisions, receipts, and learning stay as they were. |
 
 Qualify together on the installed notifications baseline
 `workspace-d109531bfb95cf3cf2f6`, SQLite schema 13. The candidate keeps
@@ -2995,8 +2995,8 @@ Study wire 5 with opt-in move context and portable format 5.
 | Component | Qualified commit | Draft PR |
 | --- | --- | --- |
 | Chess | `013c9d3497bdc6d7287371b2201073aeff3bcdc5` | [#21](https://github.com/tempo-v2/tempo-chess/pull/21) |
-| Store | `673e5def2d744a1a75952f79bc35c2c25d464833` | [#22](https://github.com/tempo-v2/tempo-store/pull/22) |
-| Tempo | `58d930beb86d25ae0a4dbdf7bfd914be437e7dac` | [#41](https://github.com/tempo-v2/tempo/pull/41) |
+| Store | `ee3cae09a496a3eec60fde76ec561e85a8146d36` | [#22](https://github.com/tempo-v2/tempo-store/pull/22) |
+| Tempo | `33117a0ff09101f9e7516693515b9e9d42914499` | [#41](https://github.com/tempo-v2/tempo/pull/41) |
 | UI | `326b54e1d96cc14e986e2d20183ff9196ac19bac` | [#37](https://github.com/tempo-v2/tempo-ui/pull/37) |
 
 Reuse Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
@@ -3007,7 +3007,7 @@ Core `56fbc3e0acfa89a2a4798a8e854f147bbb1f8498`.
 Use the installed notifications release's workspace and UI locks and
 packaged Core 0.2.3.
 
-The locked Chess, Tempo and Store suites passed 268 tests and doctests.
+The locked Chess, Tempo and Store suites passed 269 tests and doctests.
 The packaged UI passed 112 tests. Chrome covered the exact pre-move board,
 the hold and board lock, legacy client compatibility, refresh, navigation,
 reduced motion, wrong-move recovery, restoring the latest arrow after a
