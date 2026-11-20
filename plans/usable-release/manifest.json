@@ -1368,5 +1368,411 @@
       "private_phone_assets_verified": 24,
       "matches_candidate_artifact_hashes": true
     }
+  },
+  "pr-cleanup-2026-11-20": {
+    "scope": "Repository PR and stale-branch closeout; no installation performed by this cleanup.",
+    "pr_readback_at_utc": "2026-11-20T14:25:38.027505+00:00",
+    "initial_open_pr_count": 31,
+    "cleanup_merged_existing_pr_count": 17,
+    "cleanup_merged_consolidation_pr_count": 1,
+    "cleanup_closed_historical_pr_count": 6,
+    "other_workstreams_resolved_initial_pr_count": 8,
+    "consolidation": {
+      "repo": ".planning",
+      "n": 40,
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-20T13:58:06Z",
+      "closed_at": "2026-11-20T13:58:06Z",
+      "head": "f977f06ad804f7fcadc0c995a06d4452b1b9848f",
+      "merge": "027992c1dc609b67e59d492879d73f31ee3047ae",
+      "url": "https://github.com/tempo-v2/.planning/pull/40"
+    },
+    "closed_historical_prs": [
+      {
+        "repo": ".planning",
+        "n": 19,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:29Z",
+        "head": "147c6361d7dd0656391ddd025861632f8103bdf2",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/19"
+      },
+      {
+        "repo": ".planning",
+        "n": 22,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:31Z",
+        "head": "69e5b9713a72faa6b36d4b15226cf643dc1fe401",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/22"
+      },
+      {
+        "repo": ".planning",
+        "n": 28,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:33Z",
+        "head": "3776e39c25792a8f62e4ee4d38655422b64b9526",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/28"
+      },
+      {
+        "repo": ".planning",
+        "n": 30,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:36Z",
+        "head": "c26c9ab4759d064683c9008ba26e3b84c021f797",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/30"
+      },
+      {
+        "repo": ".planning",
+        "n": 32,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:38Z",
+        "head": "b8956ba3ce09274507c7e76649274512ef12ea95",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/32"
+      },
+      {
+        "repo": ".planning",
+        "n": 36,
+        "state": "closed",
+        "merged": false,
+        "merged_at": null,
+        "closed_at": "2026-11-20T13:58:40Z",
+        "head": "28c8484b0514ff40ec75f6964bd6fd153f4574fa",
+        "merge": null,
+        "url": "https://github.com/tempo-v2/.planning/pull/36"
+      }
+    ],
+    "other_workstreams": {
+      "lichess_initial_prs_merged": 4,
+      "review_later_initial_prs_merged": 4,
+      "counted_as_cleanup_merges": false
+    },
+    "branches": {
+      "ledger_path": "plans/usable-release/pr-cleanup-branches-2026-11-20.json",
+      "execution_allowlisted_count": 148,
+      "ledger_entry_count": 149,
+      "withdrawn_active_base_count": 1,
+      "verification_status": "verified",
+      "verified_deleted_count": 148,
+      "verified_retained_or_changed_refs": [],
+      "final_readback_at_utc": "2026-11-20T14:25:38.027505+00:00",
+      "final_readback_result": "All 148 allowlisted refs absent; every retained ref and open PR head/base present; GitHub API and Git remote heads agree.",
+      "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads",
+      "verified_repository_count": 10,
+      "remaining_branch_count": 38,
+      "remaining_main_branch_count": 10,
+      "remaining_nondefault_branch_count": 28,
+      "expected_sha_mismatches": [],
+      "source_audit_sha256": "dc9115433d92144de7e021ebf4f2fad6e70a8ccae2a870c5fa2f88422bea4e97",
+      "main_refs_at_verification": {
+        "tempo": "846fae8fa1444ddf8b00e1793e935073ac030b7c",
+        "tempo-ui": "418e4fa4ea46280d22d3100f6c864e29ec7f8a14",
+        "tempo-chess": "268bd292b18396880740f24ca2c471728c6651d1",
+        "tempo-store": "06d021f2ba9d760499fa42f61b833253542e75cc",
+        "tempo-learning": "58197f6fa9b2ea33907f2e305ec07efda64d553d",
+        "tempo-queue": "777345256564cefa7f25d537a5a7c51a5377e749",
+        "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+        "tempo-core-components": "99364f6d47a0467ed1cf0edf6a904566dc720dd6",
+        "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+        ".planning": "b9e0527adf8622040dbba944a6287b426758f586"
+      },
+      "retained_nondefault_refs": {
+        "tempo": [
+          {
+            "sha": "b757f43f5eb70df4c8af6e962f955b481a1f37d4",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "2eac1235ce1439b48e496624b4b2c6fa0b3bbe08",
+            "branch": "feat/lichess-analysis"
+          },
+          {
+            "sha": "971c11bf10627c571b06040587b48ae7281f4f0a",
+            "branch": "feat/phone-study"
+          },
+          {
+            "sha": "71cbade9958624719a8f5bc7725cca44e42400e6",
+            "branch": "feat/study-review-later"
+          },
+          {
+            "sha": "26ac49a1c1406c5d0b2c34ec285bcc3f8f8a0650",
+            "branch": "prototype/postgame-workbench"
+          },
+          {
+            "sha": "b93ec26b9dc86f2161c031eb0d997cefb8913b03",
+            "branch": "release/lichess-with-phone"
+          }
+        ],
+        "tempo-ui": [
+          {
+            "sha": "bf958b4c306b0d506d5ca1c35b99cbc2b9d9c725",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "3c5536cfc71f1f2d1efd563ef41b5d8c950898eb",
+            "branch": "feat/lichess-analysis"
+          },
+          {
+            "sha": "08bee296bb81db13cf4e00e57f740f0483702104",
+            "branch": "feat/phone-study"
+          },
+          {
+            "sha": "e33c2fc3041ec4dc7a274e6789bb347e79a21225",
+            "branch": "feat/study-review-later"
+          },
+          {
+            "sha": "e3392f853eb3d42f95400fb8c5afc445c20f51ab",
+            "branch": "prototype/postgame-workbench"
+          },
+          {
+            "sha": "678fe423a7cfd6056c934f3ae848435850e1e361",
+            "branch": "release/lichess-with-phone"
+          }
+        ],
+        "tempo-chess": [
+          {
+            "sha": "c1a2aee45e7fb1c99f85805360f6941bb7f55a51",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "7397fa834f3862fad64c4e967067fe40f36ae713",
+            "branch": "feat/lichess-analysis"
+          },
+          {
+            "sha": "a5dcf40e3f51bfa5ff45f9c466922ca541965706",
+            "branch": "prototype/postgame-workbench"
+          }
+        ],
+        "tempo-store": [
+          {
+            "sha": "53d51bb4e08c1f153a2ecacaa8342e8a5272b302",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "4cb4e4136d4201dbd236f993c2d2f79cfd06cfbe",
+            "branch": "feat/study-review-later"
+          },
+          {
+            "sha": "9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9",
+            "branch": "prototype/postgame-workbench"
+          }
+        ],
+        "tempo-learning": [
+          {
+            "sha": "446a5318fcbba14facb975d9a8bffd226d5da982",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "8fe06ca10a5249b1619bba26b016f38f961a84dc",
+            "branch": "feat/production-evidence-interfaces"
+          }
+        ],
+        "tempo-queue": [
+          {
+            "sha": "a68e3c598de57de4cd53f447998c3913f8129d93",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "c3b1169e3bc4990ed3e61f2d1e7a28a27328ead2",
+            "branch": "feat/production-evidence-interfaces"
+          }
+        ],
+        "tempo-study": [],
+        "tempo-core-components": [],
+        "tempo-types": [],
+        ".planning": [
+          {
+            "sha": "d45e6e403105036bdd9e9933ada4debeab6e6885",
+            "branch": "docs/study-review-later-installed"
+          },
+          {
+            "sha": "70a4989c702460a5911de5877d8da051757d0ace",
+            "branch": "feat/hanging-material"
+          },
+          {
+            "sha": "2e3f18d4e5c5965971981490911fd9461843e033",
+            "branch": "feat/lichess-analysis"
+          },
+          {
+            "sha": "28c8484b0514ff40ec75f6964bd6fd153f4574fa",
+            "branch": "feat/phone-study"
+          },
+          {
+            "sha": "d66369e12c27a7b3951aaa17e872deda91d17421",
+            "branch": "feat/study-review-later"
+          },
+          {
+            "sha": "b68a0697b814faccd19b0bbd14f79b6493246a2e",
+            "branch": "prototype/postgame-workbench"
+          }
+        ]
+      },
+      "repository_summary": {
+        "tempo": {
+          "deleted": 28,
+          "retained_nonmain": 6,
+          "api_observed_at_utc": "2026-11-20T14:25:32.880Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.020039+00:00"
+        },
+        "tempo-ui": {
+          "deleted": 23,
+          "retained_nonmain": 6,
+          "api_observed_at_utc": "2026-11-20T14:25:32.730Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.004042+00:00"
+        },
+        "tempo-chess": {
+          "deleted": 17,
+          "retained_nonmain": 3,
+          "api_observed_at_utc": "2026-11-20T14:25:32.821Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.004199+00:00"
+        },
+        "tempo-store": {
+          "deleted": 15,
+          "retained_nonmain": 3,
+          "api_observed_at_utc": "2026-11-20T14:25:33.257Z",
+          "git_observed_at_utc": "2026-11-20T14:25:37.951775+00:00"
+        },
+        "tempo-learning": {
+          "deleted": 8,
+          "retained_nonmain": 2,
+          "api_observed_at_utc": "2026-11-20T14:25:32.794Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.024932+00:00"
+        },
+        "tempo-queue": {
+          "deleted": 10,
+          "retained_nonmain": 2,
+          "api_observed_at_utc": "2026-11-20T14:25:32.705Z",
+          "git_observed_at_utc": "2026-11-20T14:25:37.941222+00:00"
+        },
+        "tempo-study": {
+          "deleted": 6,
+          "retained_nonmain": 0,
+          "api_observed_at_utc": "2026-11-20T14:25:32.789Z",
+          "git_observed_at_utc": "2026-11-20T14:25:37.968577+00:00"
+        },
+        "tempo-core-components": {
+          "deleted": 6,
+          "retained_nonmain": 0,
+          "api_observed_at_utc": "2026-11-20T14:25:32.797Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.017741+00:00"
+        },
+        "tempo-types": {
+          "deleted": 3,
+          "retained_nonmain": 0,
+          "api_observed_at_utc": "2026-11-20T14:25:32.719Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.002044+00:00"
+        },
+        ".planning": {
+          "deleted": 32,
+          "retained_nonmain": 6,
+          "api_observed_at_utc": "2026-11-20T14:25:32.747Z",
+          "git_observed_at_utc": "2026-11-20T14:25:38.003832+00:00"
+        }
+      }
+    },
+    "remaining_open_pr_count": 7,
+    "remaining_open_prs": [
+      {
+        "url": "https://github.com/tempo-v2/tempo/pull/37",
+        "repo": "tempo-v2/tempo",
+        "n": 37,
+        "title": "Analyze hanging material and make missed captures the next Study card",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "b757f43f5eb70df4c8af6e962f955b481a1f37d4",
+        "base_ref": "prototype/postgame-workbench",
+        "base_sha": "26ac49a1c1406c5d0b2c34ec285bcc3f8f8a0650"
+      },
+      {
+        "url": "https://github.com/tempo-v2/tempo-ui/pull/31",
+        "repo": "tempo-v2/tempo-ui",
+        "n": 31,
+        "title": "Show hanging-piece outcomes and Stockfish comparisons in Games",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "bf958b4c306b0d506d5ca1c35b99cbc2b9d9c725",
+        "base_ref": "prototype/postgame-workbench",
+        "base_sha": "e3392f853eb3d42f95400fb8c5afc445c20f51ab"
+      },
+      {
+        "url": "https://github.com/tempo-v2/tempo-chess/pull/20",
+        "repo": "tempo-v2/tempo-chess",
+        "n": 20,
+        "title": "Detect hanging material and select one Stockfish capture puzzle",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "c1a2aee45e7fb1c99f85805360f6941bb7f55a51",
+        "base_ref": "prototype/postgame-workbench",
+        "base_sha": "a5dcf40e3f51bfa5ff45f9c466922ca541965706"
+      },
+      {
+        "url": "https://github.com/tempo-v2/tempo-store/pull/19",
+        "repo": "tempo-v2/tempo-store",
+        "n": 19,
+        "title": "Persist tactical observations and exact next-card requests",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "53d51bb4e08c1f153a2ecacaa8342e8a5272b302",
+        "base_ref": "prototype/postgame-workbench",
+        "base_sha": "9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9"
+      },
+      {
+        "url": "https://github.com/tempo-v2/tempo-learning/pull/7",
+        "repo": "tempo-v2/tempo-learning",
+        "n": 7,
+        "title": "Choose the learning activity for an immediate game recall",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "446a5318fcbba14facb975d9a8bffd226d5da982",
+        "base_ref": "feat/production-evidence-interfaces",
+        "base_sha": "8fe06ca10a5249b1619bba26b016f38f961a84dc"
+      },
+      {
+        "url": "https://github.com/tempo-v2/tempo-queue/pull/11",
+        "repo": "tempo-v2/tempo-queue",
+        "n": 11,
+        "title": "Prioritize explicit immediate game recalls",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "a68e3c598de57de4cd53f447998c3913f8129d93",
+        "base_ref": "feat/production-evidence-interfaces",
+        "base_sha": "c3b1169e3bc4990ed3e61f2d1e7a28a27328ead2"
+      },
+      {
+        "url": "https://github.com/tempo-v2/.planning/pull/39",
+        "repo": "tempo-v2/.planning",
+        "n": 39,
+        "title": "Record the hanging-material analysis candidate and qualification",
+        "state": "open",
+        "draft": true,
+        "head_ref": "feat/hanging-material",
+        "head_sha": "70a4989c702460a5911de5877d8da051757d0ace",
+        "base_ref": "prototype/postgame-workbench",
+        "base_sha": "b68a0697b814faccd19b0bbd14f79b6493246a2e"
+      }
+    ],
+    "installation_performed_by_cleanup": false,
+    "status": "complete",
+    "planning_main_before_closeout": "b9e0527adf8622040dbba944a6287b426758f586"
   }
 }

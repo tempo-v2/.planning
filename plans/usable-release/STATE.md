@@ -2514,7 +2514,7 @@ for row. SQLite integrity and foreign-key checks passed on both files.
 
 ## Historical PR reconciliation, November 20, 2026
 
-Six open documentation PRs contained historical records missing from main.
+Six documentation PRs had contained historical records missing from main.
 Their historical evidence is retained in the corresponding sections above.
 The source observations were recorded during the original qualifications and
 cutovers; this reconciliation does not revalidate or change the running service.
@@ -2588,26 +2588,69 @@ A fresh browser launch in the cleanup environment was blocked by `EPERM`, so
 this cleanup does not claim a new browser pass. The earlier source-release
 browser evidence above remains historical evidence, with its original scope.
 
-These merges resolve the stale runtime PRs selected in the initial review.
-The six historical documentation PRs still await closure after this replacement
-is published, merged and verified. Review later and hanging-material work remains
-active and is outside this disposal.
+### Verified PR closeout
 
-### Branch cleanup awaiting authentication
+This cleanup merged 17 previously open PRs: nine interface, five post-game,
+one Stockfish tiebreak and two Phone Study PRs. It also merged the new
+[consolidation PR #40](https://github.com/tempo-v2/.planning/pull/40) at
+`027992c1dc609b67e59d492879d73f31ee3047ae`, preserving the six historical
+records above. GitHub readback verified Planning #19, #22, #28, #30, #32 and
+#36 closed without merge after that consolidation. Their source heads remain
+the historical references; their useful evidence was preserved on main.
 
-The [branch proposal](pr-cleanup-branches-2026-11-20.json) records 143 stale
-refs with their inspected heads, comparison evidence and reasons. Every entry
-is `pending_authentication`; no branch deletion has occurred. Execution requires
-usable Git push authentication, a fresh check of each expected head, and a fresh
-check that no open PR uses the ref as its head or base. Use an expected-head lease
-for each deletion. Any changed ref, active PR head/base, protected branch, or
-branch added since the initial inventory stays outside this proposal.
+Other workstreams separately merged the four Lichess PRs and four Review later
+PRs from the original inventory. Those eight resolutions are not counted as
+merges performed by this cleanup. All 31 originally open PRs are resolved.
+The later Review later installation record is preserved below without alteration.
 
-The six source documentation PRs are superseded by this reconciliation once
-it is on main. Their exact source heads above remain the historical reference.
-Any branch used by an active PR remains protected from deletion. Fresh pushes
-to Review later and newly published hanging-material branches establish active
-work; they are outside stale-PR disposal.
+### Verified branch cleanup
+
+All 148 allowlisted stale refs were deleted. Independent GitHub API and Git
+`ls-remote --heads` inventories completed at 2026-11-20 14:25:38 UTC confirmed
+every deletion across all ten repositories. The two inventories agreed on every
+remaining head. There were no expected-SHA mismatches, unexpected survivors,
+missing retained refs, or missing active PR heads or bases.
+
+Exactly 38 branches remained: ten main branches and 28 retained non-main refs.
+The [branch ledger](pr-cleanup-branches-2026-11-20.json) records the 148 deleted
+refs, their original expected SHAs, verification method and timestamps. It also
+retains one withdrawn entry: Planning's `prototype/postgame-workbench` was
+preserved as the base of active PR #39. No active branch was deleted.
+
+| Repository | Deleted refs | Retained non-main refs |
+| --- | ---: | --- |
+| `tempo` | 28 | `feat/hanging-material`, `feat/lichess-analysis`, `feat/phone-study`, `feat/study-review-later`, `prototype/postgame-workbench`, `release/lichess-with-phone` |
+| `tempo-ui` | 23 | `feat/hanging-material`, `feat/lichess-analysis`, `feat/phone-study`, `feat/study-review-later`, `prototype/postgame-workbench`, `release/lichess-with-phone` |
+| `tempo-chess` | 17 | `feat/hanging-material`, `feat/lichess-analysis`, `prototype/postgame-workbench` |
+| `tempo-store` | 15 | `feat/hanging-material`, `feat/study-review-later`, `prototype/postgame-workbench` |
+| `tempo-learning` | 8 | `feat/hanging-material`, `feat/production-evidence-interfaces` |
+| `tempo-queue` | 10 | `feat/hanging-material`, `feat/production-evidence-interfaces` |
+| `tempo-study` | 6 | None |
+| `tempo-core-components` | 6 | None |
+| `tempo-types` | 3 | None |
+| `.planning` | 32 | `docs/study-review-later-installed`, `feat/hanging-material`, `feat/lichess-analysis`, `feat/phone-study`, `feat/study-review-later`, `prototype/postgame-workbench` |
+
+The manifest records the exact heads of all retained refs and the seven active
+PRs. Retained source and release branches remain available to their concurrent
+workstreams. This verification applies to the repository cleanup; it does not
+assert a new installation or a current running application identity.
+
+### Remaining active work
+
+GitHub readback at 2026-11-20 14:25 UTC found seven open draft PRs, all in the
+hanging-material feature. Their heads and integration bases remain outside
+stale-branch disposal. Review later is already merged; it is not in this open
+cohort.
+
+| Component | Active PR | Protected base |
+| --- | --- | --- |
+| Planning | [#39](https://github.com/tempo-v2/.planning/pull/39) | `prototype/postgame-workbench` |
+| Tempo | [#37](https://github.com/tempo-v2/tempo/pull/37) | `prototype/postgame-workbench` |
+| UI | [#31](https://github.com/tempo-v2/tempo-ui/pull/31) | `prototype/postgame-workbench` |
+| Chess | [#20](https://github.com/tempo-v2/tempo-chess/pull/20) | `prototype/postgame-workbench` |
+| Store | [#19](https://github.com/tempo-v2/tempo-store/pull/19) | `prototype/postgame-workbench` |
+| Queue | [#11](https://github.com/tempo-v2/tempo-queue/pull/11) | `feat/production-evidence-interfaces` |
+| Learning | [#7](https://github.com/tempo-v2/tempo-learning/pull/7) | `feat/production-evidence-interfaces` |
 
 The Phone and concurrent Lichess installation paragraphs above preserve the
 original source handoffs' recorded deployments. This cleanup has not installed

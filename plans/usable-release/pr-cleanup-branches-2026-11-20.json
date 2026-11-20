@@ -20,7 +20,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/23"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -42,8 +42,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "827a83067e02ce1e8c94ddf1f49072af5ccb73e7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "827a83067e02ce1e8c94ddf1f49072af5ccb73e7",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -58,7 +60,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -73,8 +75,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8c7c3691e919d10309a7528dd28a32fd6724b7ea"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8c7c3691e919d10309a7528dd28a32fd6724b7ea",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -97,7 +101,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/29"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -119,8 +123,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "75834a5ef5f144d001ee60c074072d6ca49114a6"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "75834a5ef5f144d001ee60c074072d6ca49114a6",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -143,7 +149,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/11"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -165,8 +171,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "353a430f07514088d9ef4b49631edbce454871f0"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "353a430f07514088d9ef4b49631edbce454871f0",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -189,7 +197,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/18"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -211,8 +219,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "77a1359d2e206f1e4ee82c08c5c1453984590cdb"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "77a1359d2e206f1e4ee82c08c5c1453984590cdb",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -235,7 +245,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/13"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -257,8 +267,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "9caf8a9ac01b71662694e4a9b778f6fcd2d30286"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "9caf8a9ac01b71662694e4a9b778f6fcd2d30286",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -281,7 +293,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/20"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -303,8 +315,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "94d9a489f09ca6dbf1492a725c5cf139097aecc7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "94d9a489f09ca6dbf1492a725c5cf139097aecc7",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -327,7 +341,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/21"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -349,8 +363,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "7d8e70c90450eafbe44867ae9dfe50aa2930563f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "7d8e70c90450eafbe44867ae9dfe50aa2930563f",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -365,7 +381,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -380,8 +396,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "e29f0a4ae5085a2dcf711cd91fa98b3ef19e4b0a"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "e29f0a4ae5085a2dcf711cd91fa98b3ef19e4b0a",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -404,11 +422,13 @@
         "url": "https://github.com/tempo-v2/tempo/pull/32"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -423,7 +443,7 @@
     "branch_unique": 6,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "only patch-equivalent changes or redundant merge commits",
     "original_proof": {
@@ -438,8 +458,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "only patch-equivalent changes or redundant merge commits"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f2f7fdd7948298e039cace1d9537a5f374d8db92"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f2f7fdd7948298e039cace1d9537a5f374d8db92",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -462,7 +484,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/26"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -484,8 +506,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "966f0982b53f59de2bd8c604014809e1e77d1d9a"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "966f0982b53f59de2bd8c604014809e1e77d1d9a",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -508,7 +532,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/30"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -530,8 +554,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "9a43767c4ed47851f2d263ae3b679c37548bc4c8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "9a43767c4ed47851f2d263ae3b679c37548bc4c8",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -554,7 +580,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/24"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -576,8 +602,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "94f1028fbc82ba6accfbecd9d621758e8a6b6d72"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "94f1028fbc82ba6accfbecd9d621758e8a6b6d72",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -600,7 +628,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/5"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -622,8 +650,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "cbb0a3e36b39c8ebbce379de88063aaacf6c2dcb"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "cbb0a3e36b39c8ebbce379de88063aaacf6c2dcb",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -646,7 +676,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/19"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -668,8 +698,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "be6ca8f80c211d8df083920c06d92d0c4066a645"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "be6ca8f80c211d8df083920c06d92d0c4066a645",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -692,7 +724,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/27"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -714,8 +746,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "ab7972cc61320caf3819fbbc501f3e088941fd3e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "ab7972cc61320caf3819fbbc501f3e088941fd3e",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -738,7 +772,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -760,8 +794,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8f18647fc4400c846067c58f70d9f8f44cdf183c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8f18647fc4400c846067c58f70d9f8f44cdf183c",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -784,7 +820,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/25"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -806,8 +842,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "2f1cc242f3373ffffe333fae386d18b4cd683f79"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "2f1cc242f3373ffffe333fae386d18b4cd683f79",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -830,7 +868,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/22"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -852,8 +890,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "061b718e11903ecba2bee4f401eed1b21931c56e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "061b718e11903ecba2bee4f401eed1b21931c56e",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -876,7 +916,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/31"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -898,8 +938,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "143cbdb12d9d2c8b90c1c56661e444ac4fb33c18"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "143cbdb12d9d2c8b90c1c56661e444ac4fb33c18",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -922,7 +964,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/9"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -944,8 +986,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "53fa24687013de819b6f82b66274ca59cf5d3cb6"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "53fa24687013de819b6f82b66274ca59cf5d3cb6",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -968,11 +1012,13 @@
         "url": "https://github.com/tempo-v2/tempo/pull/28"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "bd01975ad0bf8bd190ec663ef23bc7db1635a9f7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "bd01975ad0bf8bd190ec663ef23bc7db1635a9f7",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -995,7 +1041,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/16"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1017,8 +1063,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "57215e4330f5e856c2d4cf5b1861eb853634e6f8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "57215e4330f5e856c2d4cf5b1861eb853634e6f8",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -1041,7 +1089,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/10"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1063,8 +1111,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "a072feea34a625f0ec66d2ae9366719e6e17a625"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "a072feea34a625f0ec66d2ae9366719e6e17a625",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -1087,7 +1137,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/17"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1109,8 +1159,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "6dbf784f446380e7c3df4097cc5b49dc9bf4cd14"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "6dbf784f446380e7c3df4097cc5b49dc9bf4cd14",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -1133,7 +1185,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1155,8 +1207,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "04fdbf4d7d4b4cf6da898ec13e434ef4c3fbfd48"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "04fdbf4d7d4b4cf6da898ec13e434ef4c3fbfd48",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo",
@@ -1179,7 +1233,7 @@
         "url": "https://github.com/tempo-v2/tempo/pull/12"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1201,8 +1255,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "fb6fd12a2506048f9590f4172e47046bbd579741"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "fb6fd12a2506048f9590f4172e47046bbd579741",
+    "verified_at_utc": "2026-11-20T14:25:38.020039+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1225,7 +1281,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/17"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1247,8 +1303,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8be2381cb3f256d8f00b4cf07a3abb6c1b5d3d49"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8be2381cb3f256d8f00b4cf07a3abb6c1b5d3d49",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1263,7 +1321,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1278,8 +1336,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "349edde5ece77bba572774561c7fd3b367535618"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "349edde5ece77bba572774561c7fd3b367535618",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1302,7 +1362,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/22"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1324,8 +1384,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "2f035ce0660add5af09274cdd8cd71b22d9717e2"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "2f035ce0660add5af09274cdd8cd71b22d9717e2",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1348,7 +1410,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1370,8 +1432,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "08632aed6d23131ac04dbc2bcf8012a4a0623f5e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "08632aed6d23131ac04dbc2bcf8012a4a0623f5e",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1394,7 +1458,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/12"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1416,8 +1480,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "6dbbbc76cd07ca828cf6e20da4623c9751ac356b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "6dbbbc76cd07ca828cf6e20da4623c9751ac356b",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1440,7 +1506,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/8"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1462,8 +1528,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "e21ace64e49b64a6a4be336a7025861961400c65"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "e21ace64e49b64a6a4be336a7025861961400c65",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1486,7 +1554,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/13"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1508,8 +1576,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "07384d126641726d3d10d9a69107156be0abad99"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "07384d126641726d3d10d9a69107156be0abad99",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1532,7 +1602,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/15"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1554,8 +1624,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "36d9643c560d202d834b769f1d1251fd63f8801f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "36d9643c560d202d834b769f1d1251fd63f8801f",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1578,11 +1650,13 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/26"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "2fd49d22916b997a8dd0b26d7bc1d18b8aac3a84"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "2fd49d22916b997a8dd0b26d7bc1d18b8aac3a84",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1605,7 +1679,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/20"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1627,8 +1701,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "47fa621e7cb04b7cb14cef38a44ac7e76707bdaf"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "47fa621e7cb04b7cb14cef38a44ac7e76707bdaf",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1651,7 +1727,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/24"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1673,8 +1749,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "1e293784106ac219959acfd590e42cc2a30fcc34"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "1e293784106ac219959acfd590e42cc2a30fcc34",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1697,7 +1775,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/18"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1719,8 +1797,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "60585a834969a5afbcd3e454d5e744d3011890a1"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "60585a834969a5afbcd3e454d5e744d3011890a1",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1743,7 +1823,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/2"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1765,8 +1845,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "d782e748b734fd2df155a39fd3025339792c5fd9"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "d782e748b734fd2df155a39fd3025339792c5fd9",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1789,7 +1871,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/23"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1811,8 +1893,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "865a2683ff60977e8a8e23652fe9df4db32f908b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "865a2683ff60977e8a8e23652fe9df4db32f908b",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1835,7 +1919,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/21"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1857,8 +1941,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f599068d072b1e870ba023f16a1a55fb75a6ea18"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f599068d072b1e870ba023f16a1a55fb75a6ea18",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1881,7 +1967,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/14"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1903,8 +1989,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "ace87a68cf609a7de9347070baa908cba48a83c7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "ace87a68cf609a7de9347070baa908cba48a83c7",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1927,7 +2015,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1949,8 +2037,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "93eda25ea5ee9c4a5a9beeef597f2e8da687ccc9"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "93eda25ea5ee9c4a5a9beeef597f2e8da687ccc9",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -1973,7 +2063,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/19"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -1995,8 +2085,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "046898f1f144652cb8fa0f43b6c74816e7211ba0"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "046898f1f144652cb8fa0f43b6c74816e7211ba0",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -2019,7 +2111,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/16"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2041,8 +2133,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "90ed0057214f78fbe4eff59de67f266435eed142"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "90ed0057214f78fbe4eff59de67f266435eed142",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -2065,7 +2159,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/25"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2087,8 +2181,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "9b02b0fc82aa2b826cf395b5bd1fe44bd14e90be"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "9b02b0fc82aa2b826cf395b5bd1fe44bd14e90be",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -2111,7 +2207,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/11"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2133,8 +2229,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "1ca0cd54d4242ad8fef5f61043b030dcef852669"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "1ca0cd54d4242ad8fef5f61043b030dcef852669",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -2157,7 +2255,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2179,8 +2277,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f725d732b4562a21363cf8194527ac3d5c940c68"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f725d732b4562a21363cf8194527ac3d5c940c68",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-ui",
@@ -2203,7 +2303,7 @@
         "url": "https://github.com/tempo-v2/tempo-ui/pull/3"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2225,8 +2325,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "af08033ca98dd5115d54b878cea0aee32ea8d46e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "af08033ca98dd5115d54b878cea0aee32ea8d46e",
+    "verified_at_utc": "2026-11-20T14:25:38.004042+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2249,7 +2351,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/11"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2271,8 +2373,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "996971b48e1ff763f2a638f75ad981488e80155c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "996971b48e1ff763f2a638f75ad981488e80155c",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2287,7 +2391,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2302,8 +2406,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "d1b5485cda9934f771becfbf4e13c603526444d4"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "d1b5485cda9934f771becfbf4e13c603526444d4",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2326,7 +2432,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/8"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2348,8 +2454,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "3bfc6d53b51087901288fa0839d57a8bb49ba168"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "3bfc6d53b51087901288fa0839d57a8bb49ba168",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2372,11 +2480,13 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/17"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "849bcf4793ff9fc7081e91e3425713e84e153a97"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "849bcf4793ff9fc7081e91e3425713e84e153a97",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2399,7 +2509,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2421,8 +2531,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "427bc84f6303d35818ae4ead8a96d41fd58419a7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "427bc84f6303d35818ae4ead8a96d41fd58419a7",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2445,7 +2557,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/9"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2467,8 +2579,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "37d7941290461b991782be9aae1483b979e4c2d8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "37d7941290461b991782be9aae1483b979e4c2d8",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2491,7 +2605,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/10"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2513,8 +2627,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "1d6110fe1f31b379ac55e788b265d233f2c95f24"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "1d6110fe1f31b379ac55e788b265d233f2c95f24",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2529,7 +2645,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2544,8 +2660,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c080da41aba4b2d17c0359179c6bf137e4c1ced3"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c080da41aba4b2d17c0359179c6bf137e4c1ced3",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2560,7 +2678,7 @@
     "branch_unique": 1,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "only patch-equivalent changes or redundant merge commits",
     "original_proof": {
@@ -2575,8 +2693,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "only patch-equivalent changes or redundant merge commits"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "0b55fc9e1853a28bce295ffe2ab9031c546a4330"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "0b55fc9e1853a28bce295ffe2ab9031c546a4330",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2599,7 +2719,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/13"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2621,8 +2741,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c6da613f37e0ae11e7abf25167b01f9a45ba3065"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c6da613f37e0ae11e7abf25167b01f9a45ba3065",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2645,7 +2767,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/15"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2667,8 +2789,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "78c51850495ac9ef587d240e17c26cd13f4761d2"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "78c51850495ac9ef587d240e17c26cd13f4761d2",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2691,7 +2815,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/12"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2713,8 +2837,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "77f7c7b88f9925b7f418d4c79e08a582f5bd9734"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "77f7c7b88f9925b7f418d4c79e08a582f5bd9734",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2737,7 +2863,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/3"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2759,8 +2885,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "b81fea2f1ed94a83ace53a094a78fb0f9a022153"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "b81fea2f1ed94a83ace53a094a78fb0f9a022153",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2783,7 +2911,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/14"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2805,8 +2933,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c889697098fc4bcbf68914ceb8421fbe80a6d7fd"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c889697098fc4bcbf68914ceb8421fbe80a6d7fd",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2829,7 +2959,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/16"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2851,8 +2981,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "6695bfb5a932d28ac2ec00521879d3814ecd7764"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "6695bfb5a932d28ac2ec00521879d3814ecd7764",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2875,7 +3007,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2897,8 +3029,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "22f7f5934849a41cce22a4550530add921ea9a88"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "22f7f5934849a41cce22a4550530add921ea9a88",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-chess",
@@ -2921,7 +3055,7 @@
         "url": "https://github.com/tempo-v2/tempo-chess/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2943,8 +3077,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "db3a758350aecde33a2ec652760520f86a7e985e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "db3a758350aecde33a2ec652760520f86a7e985e",
+    "verified_at_utc": "2026-11-20T14:25:38.004199+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-types",
@@ -2959,7 +3095,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -2974,8 +3110,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "ad09bbe7d70e7737b1140d3f0f3f7a4746c237b2"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "ad09bbe7d70e7737b1140d3f0f3f7a4746c237b2",
+    "verified_at_utc": "2026-11-20T14:25:38.002044+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-types",
@@ -2990,7 +3128,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3005,8 +3143,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8662444cfb1ed1d2710c2bd95c4939473d6c0307"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8662444cfb1ed1d2710c2bd95c4939473d6c0307",
+    "verified_at_utc": "2026-11-20T14:25:38.002044+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-types",
@@ -3029,7 +3169,7 @@
         "url": "https://github.com/tempo-v2/tempo-types/pull/1"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3051,8 +3191,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8662444cfb1ed1d2710c2bd95c4939473d6c0307"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8662444cfb1ed1d2710c2bd95c4939473d6c0307",
+    "verified_at_utc": "2026-11-20T14:25:38.002044+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3067,7 +3209,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3082,8 +3224,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "e6a7b9fcf3d4f042578189b6f1b98f39112ebff2"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "e6a7b9fcf3d4f042578189b6f1b98f39112ebff2",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3106,7 +3250,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3128,8 +3272,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f14716359104722dc813348f74b59fb2007f644b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f14716359104722dc813348f74b59fb2007f644b",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3152,7 +3298,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/10"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3174,8 +3320,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "fa6f1a01a3a54d80dcdc7b2de6640dbfec23c8ba"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "fa6f1a01a3a54d80dcdc7b2de6640dbfec23c8ba",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3198,7 +3346,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3220,8 +3368,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "249a12a9f0ae880f6000da7de9fb94d8603b68fb"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "249a12a9f0ae880f6000da7de9fb94d8603b68fb",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3244,7 +3394,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/12"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3266,8 +3416,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c574ebfc1021d3548340439aa5609d9aba89364b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c574ebfc1021d3548340439aa5609d9aba89364b",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3282,7 +3434,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3297,8 +3449,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "cd001152df8ef40976074ea90c0d3d20227bc802"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "cd001152df8ef40976074ea90c0d3d20227bc802",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3321,11 +3475,13 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/16"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "be8dcd2ec2039d5d3bf43acd029cbcabb0f710aa"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "be8dcd2ec2039d5d3bf43acd029cbcabb0f710aa",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3340,7 +3496,7 @@
     "branch_unique": 1,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "only patch-equivalent changes or redundant merge commits",
     "original_proof": {
@@ -3355,8 +3511,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "only patch-equivalent changes or redundant merge commits"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "25eebde55d15ef1cd0c8e499d658d0a0656ffd11"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "25eebde55d15ef1cd0c8e499d658d0a0656ffd11",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3379,7 +3537,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/14"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3401,8 +3559,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "04e215b7a6bbd95ac06a4ecd606d291d290e528f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "04e215b7a6bbd95ac06a4ecd606d291d290e528f",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3425,7 +3585,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/2"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3447,8 +3607,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "d4e731c4bef33fdec560aa7f409bb3e974a69393"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "d4e731c4bef33fdec560aa7f409bb3e974a69393",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3471,7 +3633,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/11"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3493,8 +3655,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "9330237ed983e940d18f92b353e4355cafc3806e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "9330237ed983e940d18f92b353e4355cafc3806e",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3517,7 +3681,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3539,8 +3703,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "a031f96907d53507706c627fda928d658a68ba2b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "a031f96907d53507706c627fda928d658a68ba2b",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3563,7 +3729,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/15"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3585,8 +3751,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "4027bb41cf14425bcbb5f1e8c7467999b0c40a52"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "4027bb41cf14425bcbb5f1e8c7467999b0c40a52",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3609,7 +3777,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/13"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3631,8 +3799,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "529efb31c2b302af7e2571a48626aeca12414e70"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "529efb31c2b302af7e2571a48626aeca12414e70",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-store",
@@ -3655,7 +3825,7 @@
         "url": "https://github.com/tempo-v2/tempo-store/pull/3"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3677,8 +3847,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "62aea494e6b5588a6c642e16e6ecec413cd74c30"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "62aea494e6b5588a6c642e16e6ecec413cd74c30",
+    "verified_at_utc": "2026-11-20T14:25:37.951775+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3693,7 +3865,7 @@
     "branch_unique": 3,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded",
     "original_proof": {
@@ -3708,8 +3880,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "ba13a82c017a6a3333142c62d974b229e4289357"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "ba13a82c017a6a3333142c62d974b229e4289357",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3732,7 +3906,7 @@
         "url": "https://github.com/tempo-v2/tempo-learning/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3754,8 +3928,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "42689dab4f2c6393c6c5d3bb868f87cd9ff107a8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "42689dab4f2c6393c6c5d3bb868f87cd9ff107a8",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3778,7 +3954,7 @@
         "url": "https://github.com/tempo-v2/tempo-learning/pull/3"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3800,8 +3976,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "9d24ad171a4d682929a812344397eb2e05be05ba"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "9d24ad171a4d682929a812344397eb2e05be05ba",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3816,7 +3994,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3831,8 +4009,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "efa6214085db05d9069f4097c91ceef0f0de275f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "efa6214085db05d9069f4097c91ceef0f0de275f",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3847,7 +4027,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3862,8 +4042,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "a84a4c83bfe164fd1a3117d733621f63323e125b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "a84a4c83bfe164fd1a3117d733621f63323e125b",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3886,7 +4068,7 @@
         "url": "https://github.com/tempo-v2/tempo-learning/pull/1"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded",
     "original_proof": {
@@ -3908,8 +4090,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "e5bae3eb19d9aa74d9b7ca01882f2078ae1ff569"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "e5bae3eb19d9aa74d9b7ca01882f2078ae1ff569",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3932,7 +4116,7 @@
         "url": "https://github.com/tempo-v2/tempo-learning/pull/5"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -3954,8 +4138,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "a5cd36781a86b239da17daa9a3c26c98c54b3e8e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "a5cd36781a86b239da17daa9a3c26c98c54b3e8e",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-learning",
@@ -3978,7 +4164,7 @@
         "url": "https://github.com/tempo-v2/tempo-learning/pull/2"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4000,8 +4186,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f036785bb52820d60d6c067a125987262722cf9d"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f036785bb52820d60d6c067a125987262722cf9d",
+    "verified_at_utc": "2026-11-20T14:25:38.024932+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4016,7 +4204,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4031,8 +4219,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c1171f30828d5866dc1e488c685a9603d326e259"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c1171f30828d5866dc1e488c685a9603d326e259",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4055,7 +4245,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/9"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4077,8 +4267,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "36c712ab15c36ac6e609d6497952c75b3aeddd55"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "36c712ab15c36ac6e609d6497952c75b3aeddd55",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4101,7 +4293,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4123,8 +4315,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "7d6c82aa28e38e0d7179ea6272583387528c1a52"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "7d6c82aa28e38e0d7179ea6272583387528c1a52",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4147,7 +4341,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4169,8 +4363,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "aa49bdfed6bdbbea7178462f4e79748efef8e3f8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "aa49bdfed6bdbbea7178462f4e79748efef8e3f8",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4193,7 +4389,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/8"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4215,8 +4411,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "1f9ccf3e766b2aa7dd3e608ca8947c3285a12ac4"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "1f9ccf3e766b2aa7dd3e608ca8947c3285a12ac4",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4231,7 +4429,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4246,8 +4444,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "248c8dbc0aeeddac99abc5178f0664bc425af678"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "248c8dbc0aeeddac99abc5178f0664bc425af678",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4262,7 +4462,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4277,8 +4477,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "866ba060d7e6f78293a34eeea0498c0cf806826c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "866ba060d7e6f78293a34eeea0498c0cf806826c",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4301,7 +4503,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/1"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4323,8 +4525,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "3009a4b6c450305abbc26f3af396f301cdffb38c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "3009a4b6c450305abbc26f3af396f301cdffb38c",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4347,7 +4551,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4369,8 +4573,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f856262183b1c40cefa8391cf060e29c08bf70af"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f856262183b1c40cefa8391cf060e29c08bf70af",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-queue",
@@ -4393,7 +4599,7 @@
         "url": "https://github.com/tempo-v2/tempo-queue/pull/2"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4415,8 +4621,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "d89b95fe7a6d24dac488e17cd9f813e23335da8f"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "d89b95fe7a6d24dac488e17cd9f813e23335da8f",
+    "verified_at_utc": "2026-11-20T14:25:37.941222+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4431,7 +4639,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4446,8 +4654,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c0d4436987b67546f9112728893991d454e33030"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c0d4436987b67546f9112728893991d454e33030",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4462,7 +4672,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4477,8 +4687,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "4a9773fcb4959b41a55f50ed4cba79c21a428806"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "4a9773fcb4959b41a55f50ed4cba79c21a428806",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4501,11 +4713,13 @@
         "url": "https://github.com/tempo-v2/tempo-study/pull/3"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "bf18a3eb827237d132763afd8fec483e06c9eb25"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "bf18a3eb827237d132763afd8fec483e06c9eb25",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4520,7 +4734,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4535,8 +4749,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "4bfe734dd564965d370ae5c60c9a02e49ebfc095"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "4bfe734dd564965d370ae5c60c9a02e49ebfc095",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4559,7 +4775,7 @@
         "url": "https://github.com/tempo-v2/tempo-study/pull/2"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4581,8 +4797,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "addc9a1fcba2460858e525865fb554e4003891d0"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "addc9a1fcba2460858e525865fb554e4003891d0",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-study",
@@ -4605,7 +4823,7 @@
         "url": "https://github.com/tempo-v2/tempo-study/pull/1"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4627,8 +4845,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "c0d4436987b67546f9112728893991d454e33030"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c0d4436987b67546f9112728893991d454e33030",
+    "verified_at_utc": "2026-11-20T14:25:37.968577+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4643,7 +4863,7 @@
     "branch_unique": 3,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded",
     "original_proof": {
@@ -4658,8 +4878,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "e7885aa2d184df58635dd3bc6b6bba4edc06cdba"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "e7885aa2d184df58635dd3bc6b6bba4edc06cdba",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4674,7 +4896,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4689,8 +4911,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8123bb74d7b834a7f7ce2bd22a9d70574fee5890"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8123bb74d7b834a7f7ce2bd22a9d70574fee5890",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4713,11 +4937,13 @@
         "url": "https://github.com/tempo-v2/tempo-core-components/pull/6"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "c740dac85f2f8e7124c25b31125ef0db81d9131c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "c740dac85f2f8e7124c25b31125ef0db81d9131c",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4732,7 +4958,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4747,8 +4973,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "3c05ab709ef426c422b3453d8965665e6704f6b8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "3c05ab709ef426c422b3453d8965665e6704f6b8",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4771,7 +4999,7 @@
         "url": "https://github.com/tempo-v2/tempo-core-components/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded",
     "original_proof": {
@@ -4793,8 +5021,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "runtime changes patch-equivalent; obsolete four-line guidance pointer deliberately discarded"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "d30422b9bd6a972c12189200ac6eb4ca0114239c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "d30422b9bd6a972c12189200ac6eb4ca0114239c",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": "tempo-core-components",
@@ -4817,7 +5047,7 @@
         "url": "https://github.com/tempo-v2/tempo-core-components/pull/5"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4839,8 +5069,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8ce37b3ff677a3145d59206d5149bc586ddf66d4"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8ce37b3ff677a3145d59206d5149bc586ddf66d4",
+    "verified_at_utc": "2026-11-20T14:25:38.017741+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -4863,7 +5095,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/11"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4885,8 +5117,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "350ea6c8ec13acfbe92538d5c0c1f90b757a1f43"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "350ea6c8ec13acfbe92538d5c0c1f90b757a1f43",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -4909,7 +5143,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/9"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4931,8 +5165,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "29bdd505d4391944bd46f78f980d5577ebb50434"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "29bdd505d4391944bd46f78f980d5577ebb50434",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -4955,7 +5191,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/10"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -4977,8 +5213,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "85567739f65a4590fff1ec136c31ebb5ac4fa0d8"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "85567739f65a4590fff1ec136c31ebb5ac4fa0d8",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5001,7 +5239,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/7"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5023,8 +5261,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "8cff88132357f48e98274388ca454aa012ddbe1e"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "8cff88132357f48e98274388ca454aa012ddbe1e",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5047,7 +5287,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/31"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5069,8 +5309,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "08e721bba9abccd4ea26c0f95f186ba72e9d9cd1"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "08e721bba9abccd4ea26c0f95f186ba72e9d9cd1",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5093,7 +5335,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/23"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5115,8 +5357,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "56370ebef1a2e49f3d550ff65b68184d2ab77cf6"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "56370ebef1a2e49f3d550ff65b68184d2ab77cf6",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5139,7 +5383,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/29"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5161,8 +5405,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "65dc33d2a508975ace1b94dfd1ddf3c462fb6e62"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "65dc33d2a508975ace1b94dfd1ddf3c462fb6e62",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5185,7 +5431,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/17"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5207,8 +5453,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "68654e49aa0ba8a4073b5d3b72fb5cd037687c81"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "68654e49aa0ba8a4073b5d3b72fb5cd037687c81",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5231,7 +5479,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/12"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5253,8 +5501,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "6c94d9e923b3923bf7b584e36b22baae7a3968b9"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "6c94d9e923b3923bf7b584e36b22baae7a3968b9",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5277,7 +5527,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/20"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5299,8 +5549,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f55b3c4436d62079059d10a0d123a35bfb1799b6"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f55b3c4436d62079059d10a0d123a35bfb1799b6",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5315,7 +5567,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5330,8 +5582,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "324c101a40719af6ff341c937d1d5a587d1efdae"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "324c101a40719af6ff341c937d1d5a587d1efdae",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5346,7 +5600,7 @@
     "branch_unique": 0,
     "ancestor_of_inspected_main": true,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5361,8 +5615,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "321a73039c5feb411590ae210a508e80a9f918f6"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "321a73039c5feb411590ae210a508e80a9f918f6",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5385,11 +5641,13 @@
         "url": "https://github.com/tempo-v2/.planning/pull/34"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "newly_merged_requested_pr",
     "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "3375d0ae86f2b14818f2ac1a76612dd81de60238"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "3375d0ae86f2b14818f2ac1a76612dd81de60238",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5404,7 +5662,7 @@
     "branch_unique": 2,
     "ancestor_of_inspected_main": false,
     "associated_prs": [],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "only patch-equivalent changes or redundant merge commits",
     "original_proof": {
@@ -5419,8 +5677,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "only patch-equivalent changes or redundant merge commits"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "387794731a3b2c901b0e5bce343a6dfd5bb07539"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "387794731a3b2c901b0e5bce343a6dfd5bb07539",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5443,7 +5703,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/26"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5465,8 +5725,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "51d423e88259b22ae3e0ef26282a9ca79d1c1527"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "51d423e88259b22ae3e0ef26282a9ca79d1c1527",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5489,7 +5751,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/24"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5511,8 +5773,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "f3219a042f63056780204e6f50592fb7f8293bd2"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "f3219a042f63056780204e6f50592fb7f8293bd2",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5535,7 +5799,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/5"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5557,8 +5821,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "ff32a9560479bacc4b4c098913aeedeff3859008"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "ff32a9560479bacc4b4c098913aeedeff3859008",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5581,7 +5847,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/18"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5603,8 +5869,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "227819fbe774533d901c2f0e7eeb11bac8b86a6b"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "227819fbe774533d901c2f0e7eeb11bac8b86a6b",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5627,7 +5895,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/27"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5649,8 +5917,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "6b4a97978e725afa0f6d7f2609f256601ccf1423"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "6b4a97978e725afa0f6d7f2609f256601ccf1423",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5673,7 +5943,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/25"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5695,8 +5965,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "06aac77cf9e9b7e55472d5db023133c67335db45"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "06aac77cf9e9b7e55472d5db023133c67335db45",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5719,7 +5991,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/33"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5741,8 +6013,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "3f200833a697c84c3226a825370d8aa25140198c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "3f200833a697c84c3226a825370d8aa25140198c",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5765,7 +6039,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/8"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5787,8 +6061,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "b94fe4fa44bc88023f27a87c60faab095a7aeb5a"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "b94fe4fa44bc88023f27a87c60faab095a7aeb5a",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5811,7 +6087,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/15"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5833,8 +6109,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "85d3f677d2c33c47152ae334837f6f66c78a98f7"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "85d3f677d2c33c47152ae334837f6f66c78a98f7",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5857,7 +6135,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/16"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5879,8 +6157,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "4116bccb487273dbcc489dee523718fd63fd395d"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "4116bccb487273dbcc489dee523718fd63fd395d",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5903,11 +6183,14 @@
         "url": "https://github.com/tempo-v2/.planning/pull/35"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "preserve_active_pr_base",
     "source": "newly_merged_requested_pr",
-    "reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
-    "status": "pending_authentication",
-    "expected_head_sha": "b68a0697b814faccd19b0bbd14f79b6493246a2e"
+    "reason": "Preserved as the current base of active Planning PR #39; withdrawn from execution after fresh PR readback.",
+    "status": "preserved_active_pr_base",
+    "expected_head_sha": "b68a0697b814faccd19b0bbd14f79b6493246a2e",
+    "previous_proposal_reason": "Exact branch head is an ancestor of current main; requested interface/post-game/Stockfish PR merged; no open PR head/base uses this branch",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5930,7 +6213,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/4"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5952,8 +6235,10 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "396c37eae9f80eaac1ea63888e0bacab1740f243"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "396c37eae9f80eaac1ea63888e0bacab1740f243",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   },
   {
     "repo": ".planning",
@@ -5976,7 +6261,7 @@
         "url": "https://github.com/tempo-v2/.planning/pull/21"
       }
     ],
-    "disposition": "proposed_delete_after_immediate_ref_and_open_pr_recheck",
+    "disposition": "deleted_stale_ref",
     "source": "initial_verified_134",
     "reason": "exact ancestor of inspected main",
     "original_proof": {
@@ -5998,7 +6283,81 @@
       "disposition": "delete_after_final_ref_and_open_base_recheck",
       "reason": "exact ancestor of inspected main"
     },
-    "status": "pending_authentication",
-    "expected_head_sha": "4e4aa5ffb9279aa6786589cafb9fb69b8381318c"
+    "status": "deleted_verified_absent",
+    "expected_head_sha": "4e4aa5ffb9279aa6786589cafb9fb69b8381318c",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "cleanup/pr-backlog-2026-11-20",
+    "sha": "f977f06ad804f7fcadc0c995a06d4452b1b9848f",
+    "reason": "Cleanup ledger PR #40 merged; exact merged head remains unused by open PRs",
+    "expected_head_sha": "f977f06ad804f7fcadc0c995a06d4452b1b9848f",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "docs/compact-correction-install",
+    "sha": "c26c9ab4759d064683c9008ba26e3b84c021f797",
+    "reason": "Historical Planning PR #30 closed without merge as authorized stale discard; exact historical head unchanged and unused by open PRs",
+    "expected_head_sha": "c26c9ab4759d064683c9008ba26e3b84c021f797",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "docs/corrective-release-merge",
+    "sha": "b8956ba3ce09274507c7e76649274512ef12ea95",
+    "reason": "Historical Planning PR #32 closed without merge as authorized stale discard; exact historical head unchanged and unused by open PRs",
+    "expected_head_sha": "b8956ba3ce09274507c7e76649274512ef12ea95",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "docs/corrective-study-portability-install",
+    "sha": "147c6361d7dd0656391ddd025861632f8103bdf2",
+    "reason": "Historical Planning PR #19 closed without merge as authorized stale discard; exact historical head unchanged and unused by open PRs",
+    "expected_head_sha": "147c6361d7dd0656391ddd025861632f8103bdf2",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "docs/schema-11-managed-cutover",
+    "sha": "69e5b9713a72faa6b36d4b15226cf643dc1fe401",
+    "reason": "Historical Planning PR #22 closed without merge as authorized stale discard; exact historical head unchanged and unused by open PRs",
+    "expected_head_sha": "69e5b9713a72faa6b36d4b15226cf643dc1fe401",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
+  },
+  {
+    "repo": ".planning",
+    "branch": "fix/repertoire-score-tiebreak",
+    "sha": "3776e39c25792a8f62e4ee4d38655422b64b9526",
+    "reason": "Historical Planning PR #28 closed without merge as authorized stale discard; exact historical head unchanged and unused by open PRs",
+    "expected_head_sha": "3776e39c25792a8f62e4ee4d38655422b64b9526",
+    "status": "deleted_verified_absent",
+    "disposition": "deleted_stale_ref",
+    "source": "final_execution_allowlist_after_pr_closeout",
+    "verified_at_utc": "2026-11-20T14:25:38.003832+00:00",
+    "verification_method": "GitHub REST branch inventory and independent git ls-remote --heads"
   }
 ]
