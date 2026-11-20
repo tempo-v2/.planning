@@ -1976,7 +1976,7 @@ Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`,
 Queue `a171e70faf684dead33f04ad455012380fcb2e54`,
 Study `4b46e6c45a6330177b089eadcae69821e57b6657`,
 Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, and
-Core `e9a1d16a729bc9fbbddaf16427625301cc9498a` with packaged Core 0.2.2.
+Core `e9a1d160a729bc9fbbddaf16427625301cc9498a` with packaged Core 0.2.2.
 The workspace reuses the corrective portability Cargo lock. SQLite schema
 11 and the existing wire shapes carry forward.
 
@@ -2009,3 +2009,132 @@ matched the qualified head listed above. The merged workspace uses
 Chess `25fe9e01482ddc04d323207c18fdcfb5e97be4db`,
 Tempo `5130af42f78e5aa25ad42056c8f0b2c6544dd5f3`, and
 UI `a16b7ca4ca3149b5789f8e6f935fcdf9b3f8f75c` with the same companion pins.
+
+## Interface execution packet, November 19, 2026
+
+The remote mains match all ten SOURCE_BASELINE pins. The isolated assembly
+starts from those mains and preserves the existing workspace branches.
+Tempo #28 and Planning #19/#22/#28/#30/#32 remain outside the implementation
+leases. The running executable is workspace-c21029b32dd79bcfc7e2 and its
+SHA-256 matches the PGN upload release above.
+
+| Packet and acceptance | Owner | Evidence and disposition | Published review |
+| --- | --- | --- | --- |
+| E01 · A01–A02 | Chess | Passed public consumer tests for N+1 occurrences, custom Black starts, special moves, repeated positions, uncapped PGN and rejected claims. | [Chess #17](https://github.com/tempo-v2/tempo-chess/pull/17) |
+| E02 · A03–A07, A29 | Tempo | Passed real-host HTTP and SQLite checks for exact accepted inputs, typed outcomes, replay during a newer run, Busy, timeout and dataset replacement. The supplemental coordinator checks below establish worker acknowledgement, late-success fencing and slot reuse. Ordinary discovery is unconfigured. The default daily ports and explicit fixture capabilities are exercised through real daily and fixture consumers. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| E03 · A04–A08 | UI | Passed Chrome against the separate external executable using the production host. The journey covers repeated anchors, relabeling, perspective, detector revision/configuration, unavailable/empty/invalid/timeout, late selection ownership and Study while analysis is active. Analysis-only requests preserve disposable SQLite rows. | [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| E04 · A09–A11 | Evidence owners and UI | Passed fresh and retained source checks and Chrome Analysis/Gap consumers. Invalid unit mass and aggregate counts are rejected. Verified local reach, engine POV, known zero and optional source failures stay distinguishable. Engine/provider inference in the deterministic tests uses controlled replies. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) · [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| R01 · A12, A14 | GameJobs | Passed five SQLite/channel Refresh cases and replay through real HTTP. A retains its exact durable acknowledgement while B owns current status, including replay after reopen. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| U01 · A13–A15 | Games UI | Passed mounted persist-before-send, unreadable recovery, mismatched address and accepted cleanup tests. Actual prior-release Chrome created both inline and IndexedDB forms for both accepted-lost and unaccepted Refresh. Candidate reload replayed exact bytes, preserved B's slot and kept one receipt per accepted command. | [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| U02 · A15–A16 | UI transport | Passed ignored-abort fetch and body checks, bounded acknowledgement/read delivery, typed errors, mounted Study progress recovery and Games model start reconciliation. Real large PGN and exact prior envelopes were exercised by the combined consumer checks. | [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| S01 · A17–A18 | Store and Tempo adapters | Passed scoped/complete read, capability, rollback, import and receipt checks. SQLite accesses for single Study commands remain addressed/scoped. | [Store #16](https://github.com/tempo-v2/tempo-store/pull/16) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| L01 · A19 | Learning | Passed future/matched/stale correction and cadence tests plus daily FSRS, repair recall and restored obligation journeys. | [Learning #6](https://github.com/tempo-v2/tempo-learning/pull/6) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| Q01 · A20–A21 | Queue | Passed named admissions, canonical rotation, unrestricted versus restrictive-empty, duplicate-ID regression and actual daily ordering. Relevance preserves eligibility and admission. | [Queue #10](https://github.com/tempo-v2/tempo-queue/pull/10) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| ST01 · A22 | Study, Chess and Tempo | Passed shared initialization, legal shown move and ungraded completion. Guided errors, atomic rollback, sticky Test outcome and Practice preservation exercised through daily consumers. | [Study #3](https://github.com/tempo-v2/tempo-study/pull/3) · [Chess #17](https://github.com/tempo-v2/tempo-chess/pull/17) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| I01 · A23 | Tactic ingress | Passed converter parity and real daily transfer/admission with a retained-item reread. Read-only retained diagnostic completed. Enrichment remains deferred. | [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) |
+| C01 · A24 | Core and import guard | Passed packed consumer Chrome and actual JS/TypeScript syntax guard with negative fixtures. Packed Core 0.2.2 matches the vendored runtime bytes. The UI npm lock adds a pinned development parser. | [Core #6](https://github.com/tempo-v2/tempo-core-components/pull/6) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) · [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| S02 · A25 | Store read measurement | Measured and retained the current live-offset query at observed scale. See timings below. | This ledger |
+| V01 · A26–A29 | Independent reviewers and manager | Passed real HTTP/SQLite/controller, mounted metadata cases, accepted Answer interrupted Next, exact uncertain replay and actual previous-release representations. Review caught a Queue duplicate-theme panic and rechecked its correction. | [Queue #10](https://github.com/tempo-v2/tempo-queue/pull/10) · [Tempo #32](https://github.com/tempo-v2/tempo/pull/32) · [UI #26](https://github.com/tempo-v2/tempo-ui/pull/26) |
+| D01 · A30 | Manager | This ledger, current interfaces and manifest record the reviewed source combination, built artifacts and remaining release steps. | This ledger |
+
+The E02 analysis is an explicit read over an accepted dataset/source/game
+and resolved learner color under the packet V1 contract. Tempo owns request
+identity, deadlines and result delivery. Chess owns the legal timeline and
+finding validation. A changed source or semantic detector descriptor fences
+delivery. Labels and unrelated Learning revisions are irrelevant. Exact
+queries own ephemeral retained replies, which expire on eviction or restart.
+Detector absence is a capability state. Analysis has no durable mutation.
+
+### Retained source and gap checks
+
+The open Planning records preserve earlier work. #19 records corrective
+portability, #22 schema-11 cutover, #30 compact notation and #32 corrective
+release merges before the current PGN-cap checkpoint. The current checkpoint
+supersedes those installations. Planning #28 and Tempo #28 track the separate
+repertoire tiebreak work. Their dispositions remain open.
+
+S02 used the exact SQLite gap query on disposable in-memory copies of the
+stopped backup. Dataset and account predicates used covering indexes. SQLite
+used temporary B-trees for distinct, grouping and order. The 50-row copy
+materialized 50 groups (5,695 JSON bytes) in 0.212 ms first and 0.116 ms
+median warm. The retained-scale copy materialized 201 groups from 214 rows
+(22,869 JSON bytes) in 0.658 ms first and 0.497 ms median warm. A disposable
+host copy served 100 verified groups with more available in 27,374 bytes.
+The first read took 50.5 ms and the warm median was 16.8 ms over 30 repeats.
+Keep the current query at this observed scale. Store still materializes all
+groups. The endpoint uses live offsets, so page order is guaranteed across
+reads only while the evidence, recognized accounts and content basis stay
+stable. Revisit if growth makes grouping or materialization material.
+
+I01 ran the read-only diagnostic on the stopped backup and verified local
+Tempo 1 source assets. It found 17,267 active tactics with known membership,
+388 missing membership, no malformed membership, and four conflicts.
+Known source facts include focused and advanced packs outside the current
+daily ranking policy. The private diagnostic contains target references and
+source membership evidence for deliberate follow-up. Ordinary transfer still
+preserves retained items byte for byte and reports incoming membership gaps.
+
+### Compatible candidate and verification
+
+The [manifest](manifest.json) records full component commits, Git trees, lock
+hashes, Core package and the exact backend, external example and UI artifacts
+used for verification. Rust qualification kept the existing locked Cargo
+inputs. The candidate keeps SQLite schema 11, portable format 5, Study wire 5
+and content wire 4. Detection adds a separate V1 read-only wire. Ordinary
+Refresh adds its addressed acknowledgement to HTTP 202 and dataset identity
+to non-idle current status. Existing receipt bytes and browser storage formats
+carry forward.
+
+Executed evidence includes 236 locked Tempo/Store/Chess tests and
+the focused Learning, Queue and Study suites, architecture self-tests and
+the actual dependency gate, the UI build and 91 tests, four import guard
+tests, four converter tests and the independent packed Core consumer. The
+final HTTP run executed four production cases and three fixture/stdin cases.
+Chrome exercised detection, nine Study metadata journeys, four old Study
+recovery journeys and four old Games recovery journeys. The metadata
+comparison fixed issued and submission identities and study day, and
+normalized wall-clock milliseconds. The same locked compatibility set
+exercised the larger-than-old-limit PGN path. Previous PGN-release evidence
+for the 6 MiB repertoire and tactic IndexedDB replay is reused from the
+unchanged envelope and unchanged signed command/receipt format.
+
+Independent reviewers traced detector ownership, Daily Study decisions,
+Games recovery and the packed Core consumer. The manager separately reviewed
+the Store, source-evidence and Games detector consumer changes. The Queue
+duplicate-theme finding was repaired and rechecked. The previous-release
+browser cases use the actual installed PGN-cap artifact pair on disposable
+data. Study cases exercise typed Answer receipts and serialized allowance
+replies. Games cases exercise inline and external envelopes.
+
+### A06 detector lifecycle closure
+
+Tempo commit `89ba3123a40ec5b7cc35ea185a4817f2b2424e4f` adds test-only
+coverage for the gap identified on `2cc1a53`. From the pinned candidate
+workspace, `cargo test --locked --offline -p tempo --lib game_detection::tests::`
+executed three cases with zero failures and zero ignored. A timed-out scan
+kept the worker occupied through repeated Busy replies, and the same worker
+completed a fresh scan after acknowledgement. A controlled late Complete
+message exercised the coordinator fence directly. The dataset-replacement
+case verified the stale response after acknowledgement and completed a scan
+against the replacement dataset. Independent review inspected the test-only
+diff and reran all three cases at the same commit with zero failures and
+zero ignored. A06 is closed.
+
+Prior HTTP Study responsiveness, Chrome timeout presentation and read-only
+SQLite evidence carry forward from the original qualification artifacts
+because the runtime source and inputs are identical. The manifest retains
+those artifact hashes and identifies their original Tempo source revision.
+
+N1 remains a diagnostic follow-up. Align the classification of repeated
+proved pack occurrences with the converter and Queue before using conflict
+counts to scope retained-data repair. N2 remains a converter follow-up.
+Report non-string difficulty values through the normal invalid-metadata
+path and cover the list-valued case. Retained enrichment is deferred.
+
+The next release steps are coordinated merge of the compatible component
+PRs followed by Tempo/UI and the Planning record, remote tree verification
+and a separately authorized managed installation. The current live release
+is still the PGN-cap checkpoint described above. All mutation and failure
+fixtures used disposable data. No install or retained-data enrichment
+was performed in this run. Tactical detector algorithms and flashcard
+generation belong to the subsequent project.
