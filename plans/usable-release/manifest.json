@@ -834,6 +834,171 @@
       "ui_artifact_hashes_verified": 22
     }
   },
+  "pgn-caps-installed-2026-11-19": {
+    "status": "installed, directly re-observed listener executable and hashed checkpoint files",
+    "ledger_commit": "5b62a7fc47ea8b4e8ff4ace4b931039151c89648",
+    "checkpoint": "workspace-c21029b32dd79bcfc7e2",
+    "port": 41822,
+    "schema": 11,
+    "portable_format": 5,
+    "study_wire": 5,
+    "content_wire": 4,
+    "binary_sha256": "d214b0c5055389592b8f8e03cb70bd9fe714ab1a551cdf9b2c59a3957f04c0d8",
+    "checkpoint_ui_sha256": {
+      "assets/app.css": "967506592a49d1785f481274ad5c6d5127ea8a3c429f2c12009e3ef733195197",
+      "assets/app.js": "1217bc16505365a7c03a390656bf850e732260386b919c12042cbe31a088d6c9",
+      "assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+      "assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+      "assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+      "assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+      "assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+      "assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+      "assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+      "assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+      "assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+      "assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+      "assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+      "assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+      "assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+      "assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+      "assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+      "assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+      "assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+      "assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+      "assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+      "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+    }
+  },
+  "interface-execution-2026-11-19": {
+    "status": {
+      "implemented": true,
+      "tested": true,
+      "independent_review": true,
+      "published": true,
+      "merged": false,
+      "installed": false
+    },
+    "profile": "Daily Study, packaged local UI and SQLite",
+    "planning_base": "5b62a7fc47ea8b4e8ff4ace4b931039151c89648",
+    "repositories": {
+      "tempo": {
+        "commit": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f",
+        "tree": "3dcadd4f12a76b071404b5c27e90bdbfedfb10f3",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo/pull/32"
+      },
+      "tempo-ui": {
+        "commit": "2fd49d22916b997a8dd0b26d7bc1d18b8aac3a84",
+        "tree": "3f4ce9dc8ceae45d464027f9412bb0d4092c4b0a",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-ui/pull/26"
+      },
+      "tempo-chess": {
+        "commit": "849bcf4793ff9fc7081e91e3425713e84e153a97",
+        "tree": "33368b7eb6886758100c2a2aed69dff6e65ef107",
+        "ref": "feat/game-detector-contract",
+        "pull_request": "https://github.com/tempo-v2/tempo-chess/pull/17"
+      },
+      "tempo-store": {
+        "commit": "be8dcd2ec2039d5d3bf43acd029cbcabb0f710aa",
+        "tree": "802588d166225b32fa206ab0ae4d2192ec250331",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-store/pull/16"
+      },
+      "tempo-learning": {
+        "commit": "8fe06ca10a5249b1619bba26b016f38f961a84dc",
+        "tree": "83039bc03122e48ddd9588ae61d677932936878d",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-learning/pull/6"
+      },
+      "tempo-queue": {
+        "commit": "c3b1169e3bc4990ed3e61f2d1e7a28a27328ead2",
+        "tree": "80d78a25473e57cc055c849359f15af4399b3a76",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-queue/pull/10"
+      },
+      "tempo-study": {
+        "commit": "bf18a3eb827237d132763afd8fec483e06c9eb25",
+        "tree": "17f4b59bc52affe8018137c668e0a480081d1547",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-study/pull/3"
+      },
+      "tempo-types": {
+        "commit": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+        "tree": "88926c441ed45c8fc983efe097ac9226b3fb51d4",
+        "ref": "main"
+      },
+      "tempo-core-components": {
+        "commit": "c740dac85f2f8e7124c25b31125ef0db81d9131c",
+        "tree": "31d0fef7e8ddf0d9930d77ef9baac1fd0b8688b5",
+        "ref": "feat/production-evidence-interfaces",
+        "pull_request": "https://github.com/tempo-v2/tempo-core-components/pull/6"
+      }
+    },
+    "toolchain": {
+      "rust": "rustc 1.98.1 (48a229cea 2026-09-01)",
+      "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+      "node": "v26.12.0",
+      "npm": "11.20.0"
+    },
+    "inputs_sha256": {
+      "workspace_template": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+      "cargo_lock": "c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0",
+      "ui_npm_lock": "f713bbeded47625dd599dd75bf123ebe57d51c1a22336e94f2f6c15e05c4fe23",
+      "core_0_2_2_tarball": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
+    },
+    "formats": {
+      "sqlite_schema": 11,
+      "portable": 5,
+      "study_wire": 5,
+      "content_wire": 4,
+      "detector_wire": 1,
+      "games_recovery": "tempo.games.pending.v1 inline or external IndexedDB pointer",
+      "study_recovery": "tempo-study-recovery-v4",
+      "external_recovery_db": "tempo-content-recovery IndexedDB version 1"
+    },
+    "a06_supplemental_qualification": {
+      "tempo_commit": "89ba3123a40ec5b7cc35ea185a4817f2b2424e4f",
+      "command": "cargo test --locked --offline -p tempo --lib game_detection::tests::",
+      "passed": 3,
+      "failed": 0,
+      "ignored": 0,
+      "independent_review_passed": true
+    },
+    "qualification_artifacts": {
+      "tempo_source_commit": "2cc1a53c52414e7202b5d66f6b22fa02f4abff60",
+      "cargo_profile": "dev with CARGO_PROFILE_DEV_DEBUG=0 and CARGO_INCREMENTAL=0",
+      "tempo_sha256": "73ed3503a13eda77325442d4379cd180fa79685b60bf3cc5ee221ca3cd94d1c1",
+      "game_detection_contract_host_sha256": "1858befcad8488799ec917c22ef4c0bbcebf59e1871717ca69c4b8b57590ae60",
+      "ui_sha256": {
+        "assets/app.css": "967506592a49d1785f481274ad5c6d5127ea8a3c429f2c12009e3ef733195197",
+        "assets/app.js": "93d203ab2247989035de6837c79e9792a0cf670c38d48cb030fde36a56f576ef",
+        "assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+        "assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+        "assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+        "assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+        "assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+        "assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+        "assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+        "assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+        "assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+        "assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+        "assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+        "assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+        "assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+        "assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+        "assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+        "assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+        "assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+        "assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+        "assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+        "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+      }
+    },
+    "prior_browser_checkpoint": "workspace-c21029b32dd79bcfc7e2",
+    "qualification_record": "STATE.md#interface-execution-packet-november-19-2026",
+    "next_operation": "Coordinated merge and remote tree verification. Managed installation is a separate authorized operation."
+  },
   "phone-study": {
     "planning_base": "5b62a7fc47ea8b4e8ff4ace4b931039151c89648",
     "repositories": {
