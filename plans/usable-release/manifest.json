@@ -1868,5 +1868,159 @@
       "ui/phone/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
       "ui/phone/index.html": "4d5169c1972909ce18441e1dc0b440c69672145bc8ba77958a97fe06e0fdaef8"
     }
+  },
+  "runtime-diagnostics-2026-11-20": {
+    "status": "implemented_tested_published_not_merged_or_installed",
+    "scope": "Broad observational diagnostics for browser delivery, the application owner, SQLite, background work and host contention; no new repository or service.",
+    "recorded_at_utc": "2026-11-20T15:55:56.181420+00:00",
+    "repositories": {
+      "tempo": "53550a7a2ef6725e11d8028939e49be5642196ab",
+      "tempo-ui": "9e613e747c0c0760579196fe52e9252d95b120bd",
+      "tempo-store": "a44b2c485840306ef149ed74dbe5e2dc3e4b0154",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-queue": "777345256564cefa7f25d537a5a7c51a5377e749",
+      "tempo-chess": "268bd292b18396880740f24ca2c471728c6651d1",
+      "tempo-learning": "58197f6fa9b2ea33907f2e305ec07efda64d553d",
+      "tempo-core-components": "99364f6d47a0467ed1cf0edf6a904566dc720dd6"
+    },
+    "trees": {
+      "tempo": "fff94937e5bd527caedd365d3cb471d4f0d3c170",
+      "tempo-ui": "b900709b891d71e5fa811dc8dba01f055513cee2",
+      "tempo-store": "5e1de2273c1b6fb54484fd019a91c9609c1a1ca9",
+      "tempo-types": "88926c441ed45c8fc983efe097ac9226b3fb51d4",
+      "tempo-study": "17f4b59bc52affe8018137c668e0a480081d1547",
+      "tempo-queue": "80d78a25473e57cc055c849359f15af4399b3a76",
+      "tempo-chess": "564583b1048cc885cc7b1556fac86918d05e1919",
+      "tempo-learning": "83039bc03122e48ddd9588ae61d677932936878d",
+      "tempo-core-components": "31d0fef7e8ddf0d9930d77ef9baac1fd0b8688b5"
+    },
+    "integration_baselines": {
+      "tempo": "7f8060cabd1f03efa7faac27275f50dcd0e1a3a4",
+      "tempo-ui": "8321754ca28f2e34bd45b6d2c5102218bc33ba06",
+      "tempo-store": "27ffcc992d4b12424c1208676ae594d4245277e9"
+    },
+    "planning_base": "e29ac534f516688ad2661fbd5203e337f7ea9d35",
+    "pull_requests": {
+      "tempo": "https://github.com/tempo-v2/tempo/pull/40",
+      "tempo-ui": "https://github.com/tempo-v2/tempo-ui/pull/36",
+      "tempo-store": "https://github.com/tempo-v2/tempo-store/pull/21"
+    },
+    "branch": "feat/runtime-diagnostics",
+    "runtime_changed_files": 77,
+    "workspace_lock": {
+      "path": "plans/usable-release/workspace-runtime-diagnostics.Cargo.lock",
+      "sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c"
+    },
+    "ui_lock_sha256": "f713bbeded47625dd599dd75bf123ebe57d51c1a22336e94f2f6c15e05c4fe23",
+    "core_package": {
+      "version": "0.2.2",
+      "sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
+    },
+    "dataset_schema": 13,
+    "study_wire_version": 5,
+    "content_wire_version": 4,
+    "portable_format": 5,
+    "diagnostic_schema_version": 1,
+    "qualification_environment": {
+      "platform": "Linux x86_64",
+      "rustc": "1.100.0",
+      "node": "24.22.3",
+      "python": "3.12.14",
+      "profile": "debug binary, disposable SQLite and UI artifacts; actual transports"
+    },
+    "checks": [
+      {
+        "command": "cargo test --locked -p tempo -p tempo-store",
+        "result": "181 tests and doctests passed"
+      },
+      {
+        "command": "cargo test --locked -p tempo --lib diagnostics::tests",
+        "result": "6 passed after final queue/retention changes"
+      },
+      {
+        "command": "npm test (tempo-ui)",
+        "result": "122 passed"
+      },
+      {
+        "command": "npm run build (tempo-ui)",
+        "result": "guarded desktop and phone builds passed"
+      },
+      {
+        "command": "python3 .planning/scripts/check_architecture.py .",
+        "result": "seven unique packages; allowed dependency directions and source confinement passed"
+      },
+      {
+        "command": "python3 -B -m unittest discover -s tempo/tools/tests -p test_diagnose.py -q",
+        "result": "15 passed"
+      },
+      {
+        "command": "cargo build --locked -p tempo --bin tempo",
+        "result": "final published source builds without warnings"
+      },
+      {
+        "command": "python3 -B tempo/tests/runtime_diagnostics.py -q",
+        "result": "3 passed against final published source binary in 5.598s; no skips"
+      },
+      {
+        "command": "node --test tempo/tests/diagnostics_recovery.mjs",
+        "result": "1 actual accepted-Answer/body-timeout/restart/replay proof passed against final published source binary; one grade/receipt"
+      }
+    ],
+    "independent_review": {
+      "status": "no remaining blocking findings in reviewed scope",
+      "closed_findings": [
+        "orphan rotation pruning",
+        "live and ambiguous PID preservation",
+        "best-effort span cleanup",
+        "application errors inside HTTP 200",
+        "SQLite error/span attribution",
+        "JavaScript-safe exact span IDs"
+      ],
+      "review_scopes": [
+        "recording, retention, privacy and resource observation",
+        "browser/HTTP/Store correlation and exact-command recovery"
+      ]
+    },
+    "publication_verification": {
+      "method": "GitHub API PR head/base/changed-file list plus independent Git remote fetch and complete tree equality",
+      "heads_match": true,
+      "trees_match": true,
+      "changed_file_sets_match": true,
+      "all_runtime_prs_open_unmerged_and_clean": true
+    },
+    "overhead_sanity": {
+      "profile": "illustrative local Linux debug build, empty dataset, new TCP connection per request; 2x100 timed requests per mode plus 10 warmups per run",
+      "total_successful_requests": 660,
+      "median_ms": {
+        "off": 2.285,
+        "info": 2.212,
+        "debug": 2.965
+      },
+      "p95_ms": {
+        "off": 7.087,
+        "info": 7.261,
+        "debug": 5.616
+      },
+      "approx_log_bytes_per_110_requests": {
+        "off": 0,
+        "info": 96300,
+        "debug": 2015000
+      },
+      "observed_drop_counter_range": [
+        2,
+        4
+      ],
+      "meaning": "Info variability dominated differences; debug median about 0.68ms higher with about 21x log volume. Not a Mac/full-catalog capacity claim. Dropped count includes best-effort span registration misses."
+    },
+    "limitations": [
+      "No cause established for the reported live wait; capture a real incident after installation.",
+      "No managed Mac installation or retained dataset mutation.",
+      "Native macOS resource sampling/build and a live browser walkthrough were not executed here.",
+      "Refresh/backfill/model work is timed but not every worker event retains its triggering browser request ID.",
+      "Browser ring is memory-only and bounded to 500 events; dropped or exported-out events do not prove an operation was absent.",
+      "No compatibility qualification of separately active Settings or hanging-material candidates is claimed."
+    ],
+    "next_step": "Integrate the three source PRs using these pins, verify the managed Mac build through the existing lifecycle, and collect an actual timeout to distinguish blocked application work, SQLite waits, browser delivery and host contention."
   }
 }

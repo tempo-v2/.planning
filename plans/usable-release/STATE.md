@@ -2905,3 +2905,91 @@ The installed predecessor replay passed all six accepted-lost and unaccepted
 Answer, Learn more tactics, and PGN Save cases. The existing durable replies
 replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
 records the compatible merge commits, artifact hashes, and backup.
+
+
+## Runtime diagnostics candidate, November 20, 2026
+
+Andy requested broad debugging output because the browser's wait-ended message
+cannot distinguish Tempo work from competing development resources. Implemented,
+tested and published on `feat/runtime-diagnostics` in the existing application,
+UI and Store repositories. No separate diagnostics repository or runtime service
+is needed. The dependency boundary check still passes with seven Rust packages;
+Chess, Study, Learning, Queue, Types and Core remain unchanged.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Observe delivery and execution | Andy's debugging request authorizes recording timing and diagnostic identity. UI owns delivery phases; Tempo owns HTTP/application/worker spans and the sink; Store emits through the standard logging facade. Logs never decide acceptance, policy, authorization, priority or recovery. |
+| Correlate a retry | Each browser delivery gets a new header request ID. Existing command bytes, submission IDs, receipts and retry behavior retain their meaning. The server validates/echoes the diagnostic ID and supplies a per-process run ID. |
+| Record work while the application is blocked | An independent two-second watchdog observes active spans; a bounded writer uses nonblocking enqueue on request paths. Slow operations, stable SQLite codes, CPU/load/memory and sampler delay are evidence, not a causal verdict. |
+| Bound and export evidence | The UI retains 500 memory events and can export without a server call. Runtime files rotate at 5 MiB with two backups; four inactive historical runs plus active/unknown runs and the current run are retained. A read-only Python collector adds bounded process/memory/load samples and sanitized logs. |
+| Preserve product semantics | Diagnostic modes and sink failures must not alter bodies, deadlines, receipts, schemas, learning or scheduling. Changing a presentation name cannot change a policy decision. No content, PGN, FEN, answers, credentials, raw SQL, query values or free-form errors enter the structured log schema. |
+
+### Published source
+
+| Repository | Commit | PR | Qualified tree |
+| --- | --- | --- | --- |
+| Tempo | `53550a7a2ef6725e11d8028939e49be5642196ab` | [#40](https://github.com/tempo-v2/tempo/pull/40) | `fff94937e5bd527caedd365d3cb471d4f0d3c170` |
+| UI | `9e613e747c0c0760579196fe52e9252d95b120bd` | [#36](https://github.com/tempo-v2/tempo-ui/pull/36) | `b900709b891d71e5fa811dc8dba01f055513cee2` |
+| Store | `a44b2c485840306ef149ed74dbe5e2dc3e4b0154` | [#21](https://github.com/tempo-v2/tempo-store/pull/21) | `5e1de2273c1b6fb54484fd019a91c9609c1a1ca9` |
+
+GitHub readback verified each head, current main base and exact changed-file set
+(52 application files, nine UI files and 16 Store files). Independent Git fetch
+verified complete tree equality and clean local checkouts. All three PRs were
+open, unmerged and reported clean/mergeable. The
+`runtime-diagnostics-2026-11-20` entry in [manifest.json](manifest.json) records
+all unchanged component pins, the compatible workspace lock, protocols and
+qualification. No other open feature stack is included in this evidence.
+
+### Qualification
+
+The combined Tempo/Store Rust suite passed 181 tests and doctests; UI passed 122
+tests and both guarded builds. The dependency architecture check passed. The
+collector passed 15 tests, including macOS parsing fixtures, output/time bounds,
+privacy filtering, exact large span IDs and failure handling. Six focused recorder
+tests cover correlation restoration, filtering, rotation, orphan retention,
+nonblocking production enqueue and resource samples.
+
+The final published source rebuilt without warnings. Three actual HTTP/SQLite
+regressions passed without skips. They correlate HTTP/application/Store events,
+reject sensitive payloads, expose an application error carried in HTTP 200,
+and preserve the exact passive reply under info, debug, off and a failed log
+directory. A body-gated exclusive SQLite lock produces the real five-second busy
+error, correlated slow Store timing and an in-flight watchdog report. Releasing
+the lock restores the original successful reply.
+
+An independent actual shared-UI transport proof committed an Answer, withheld
+its response body until the unchanged ten-second deadline, restarted Tempo and
+replayed the identical saved command. Exactly one grade and one receipt remained.
+Both deliveries correlate through their distinct request/run IDs; the browser
+records the body-phase timeout. The reusable proof is
+`tempo/tests/diagnostics_recovery.mjs` and passed again on the final published
+source binary.
+
+Independent review closed orphan rotation retention, ambiguous PID handling,
+best-effort active-span cleanup, HTTP-200 application error recording, SQLite
+span attribution and integer precision in JavaScript readers. No blocking
+finding remains in the reviewed scopes.
+
+### Performance and limits
+
+A small Linux/debug/empty-dataset check completed all 660 passive requests. Pooled
+median latencies were 2.285 ms off, 2.212 ms info and 2.965 ms debug. Differences
+between info and off were smaller than run-to-run variation. Debug produced
+about 21 times the log volume and added about 0.68 ms to the pooled median.
+These are sanity observations, not a capacity claim for the Mac or full catalog.
+The recorder reported two to four dropped/missed observations per run; that
+counter includes best-effort active-span registration misses.
+
+Default info logging records request boundaries, errors, operations at least
+250 ms and two-second resource/stall samples. Debug enables detailed starts and
+ends. Full request context crosses detector, gap and position-evidence workers;
+refresh, backfill and model work is timed but does not always retain the original
+browser delivery ID. Match those by run/process/operation/time. The browser ring
+resets on reload. A missing event never proves that a command did not execute.
+
+**Implemented, tested and published; not merged or installed.** No retained
+personal data was read or modified. Native macOS runtime sampling and an actual
+installed-browser walkthrough remain unverified. The cause of Andy's reported
+live wait is still unknown. Use the existing managed lifecycle on the owning Mac
+for integration/installation, then collect an actual incident using
+[the diagnostic guide](https://github.com/tempo-v2/tempo/blob/53550a7a2ef6725e11d8028939e49be5642196ab/DIAGNOSTICS.md).

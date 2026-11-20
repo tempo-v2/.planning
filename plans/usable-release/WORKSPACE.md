@@ -139,3 +139,20 @@ Use the workspace template, Cargo lock and Core package described above.
 Run `cargo build --release --locked -p tempo` and, in the UI repository, run
 `npm ci` and `npm run build`. For local qualification, serve that UI build with
 the matching binary and a disposable SQLite database.
+
+
+## Runtime diagnostics candidate, November 20, 2026
+
+Use `runtime-diagnostics-2026-11-20` in [manifest.json](manifest.json) for the
+three published source commits and unchanged component pins. Assemble those
+commits in isolated sibling repositories using `.planning/workspace.template.toml`
+and `plans/usable-release/workspace-runtime-diagnostics.Cargo.lock`. Keep the
+packaged Core 0.2.2 from the UI lock. SQLite schema 13, Study wire 5, content wire
+4 and portable format 5 are unchanged.
+
+Build `tempo` with Cargo's locked dependencies and run the UI's guarded build.
+The focused runtime checks are `python3 -B tempo/tests/runtime_diagnostics.py -v`
+and `node --test tempo/tests/diagnostics_recovery.mjs`; both use disposable data.
+The collector checks are `python3 -B -m unittest discover -s tempo/tools/tests -p test_diagnose.py`.
+No installed service is required for these checks. Native managed Mac activation
+and a live timeout capture are separate from this published candidate.
