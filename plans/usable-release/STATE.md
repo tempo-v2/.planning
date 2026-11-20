@@ -3119,3 +3119,27 @@ The separate unassisted real-engine HTTP/browser run remained waiting for Mac
 idle and could not qualify automatic start or a multi-game soak. The timings
 above describe the single-game disposable run. Large-archive throughput and
 latency on a populated result write remain release checks.
+
+### Hardware qualification and independent review
+
+On wall power the first unassisted candidate started 31.36 seconds after the
+last Study activity, with the real Mac hardware idle timer at 41.68 seconds.
+It completed 383 positions in 12 retained games on a disposable copy in
+14 minutes 9 seconds, with no failed games or pending positions, nine
+inconclusive positions, five confirmed missed captures, and clean database
+integrity and foreign keys. The tester deliberately made uncached Study
+progress reads at every probe. Those reads had a median of 1.23 seconds and a
+95th percentile of 5.02 seconds under that workload. The installed predecessor
+on a disposable copy had a median uncached read of 0.94 seconds and a 0.34 ms
+median for the stamped reads the UI uses between changes.
+
+Four fresh Astra reviews found and drove corrections for selected learner
+identity, versioned membership and per-finding attribution, shared validated
+board and move history, typed retry disposition, actual multi-detector durable
+settlement, independent mate validation, exact skipped members, stable report
+identity across changing detector membership, and truthful progress and retry
+controls. The fifth fresh Astra reviewed the runtime pins now recorded in the
+manifest and found no material interface or coupling blocker. It independently
+passed 29 application, Store and mounted History checks, including real
+Stockfish and the exact fulfilled-miss replay. The full Rust run passed 359
+checks and the UI passed 125 tests.

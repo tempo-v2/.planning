@@ -1870,15 +1870,15 @@
     }
   },
   "queued-position-analysis": {
-    "status": "draft",
+    "status": "reviewed",
     "base_release": "study-opponent-moves",
     "repositories": {
-      "tempo": "b8363eb4ea017d2d245d1058faabea9fcd7f4979",
-      "tempo-chess": "050383f9303d041117e6f2bbcd48bf5ee4febdf0",
-      "tempo-store": "87ed1766f41c83f0070336c693558de7af207592",
+      "tempo": "f528c904a834b4d5d8bd4be8c0fc1a668216af25",
+      "tempo-chess": "5faf12e839af70056ae006968cf2baf766d32ca4",
+      "tempo-store": "7c7baaa08597eb387c5bf4a9644336e7c5815c34",
       "tempo-learning": "0571accc86ddd18e6863d6d64b85b8566cde67a8",
       "tempo-queue": "d66861b54135edbf70b334af57b9a8a3262edb63",
-      "tempo-ui": "3206dc48b2c3665863489e0ec91693500808292a",
+      "tempo-ui": "cff34fcbe831947402a232b1bb56e9af71c46eea",
       "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
       "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
       "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
@@ -1895,13 +1895,61 @@
     "dataset_schema": 14,
     "study_wire_version": 5,
     "checks": {
-      "rust_passed": 354,
+      "rust_passed": 359,
       "ui_passed": 125,
       "real_stockfish_recovery_passed": true,
       "real_stockfish_position_study_passed": true,
       "desktop_chrome_persisted_result_passed": true,
-      "unassisted_idle_soak_passed": false,
-      "schema_13_preserved_tables": 39
+      "unassisted_idle_soak_passed": true,
+      "schema_13_preserved_tables": 39,
+      "independent_astra": "clean, fifth review",
+      "initial_idle_batch": {
+        "games": 12,
+        "elapsed_seconds": 848.6,
+        "auto_start_seconds": 31.361657333094627,
+        "hid_idle_at_start": 41.682125583,
+        "task_status": [
+          [
+            "complete",
+            374
+          ],
+          [
+            "inconclusive",
+            9
+          ]
+        ],
+        "turns_per_game_range": [
+          5,
+          66
+        ],
+        "statistics": {
+          "completed_games": 12,
+          "decisions_scanned": 383,
+          "failed_games": 0,
+          "inconclusive_positions": 9,
+          "observations": 73,
+          "outcomes": {
+            "declined_inferior_capture": 13,
+            "good_alternative": 2,
+            "missed_good_capture": 5,
+            "took_good_capture": 34,
+            "took_inferior_capture": 6,
+            "uncertain": 9,
+            "winning_mate": 4
+          },
+          "pending_games": 0,
+          "pending_positions": 0,
+          "pending_requests": 5,
+          "timed_out_games": 0,
+          "unsupported_games": 0
+        },
+        "study_probes": 158,
+        "study_median_ms": 1230.5,
+        "study_p95_ms": 5018.6,
+        "study_max_ms": 7675.67,
+        "integrity": "ok",
+        "foreign_key_issues": 0
+      }
     }
   }
 }
