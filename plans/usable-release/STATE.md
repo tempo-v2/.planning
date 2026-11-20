@@ -2009,3 +2009,53 @@ matched the qualified head listed above. The merged workspace uses
 Chess `25fe9e01482ddc04d323207c18fdcfb5e97be4db`,
 Tempo `5130af42f78e5aa25ad42056c8f0b2c6544dd5f3`, and
 UI `a16b7ca4ca3149b5789f8e6f935fcdf9b3f8f75c` with the same companion pins.
+
+## Lichess analysis candidate
+
+The compact **↗ Lichess** action opens a separate tab from Study and the
+board views. Tactics start at the solver position and carry the full
+issued solution. Opening cards use the first matching saved variation
+in PGN order. A missing route offers the issued move as an explicitly
+labeled fallback. The complete PGN can be downloaded when the encoded
+line exceeds Lichess's analysis path limit.
+
+| Decision | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Authorize a Study analysis visit | The requested external action follows the existing Study analysis contract. Tempo fences the read by dataset, attempt, revision, and issued content version. An unfinished Test first uses the confirmed concession and its existing immutable receipt. The UI can reopen a manual link after recovery. Display names have no bearing on the visit. |
+| Choose the exported chess line | The user selected the first matching variation in PGN order. Chess finds a legal route through the issued canonical position and move in the current repertoire document. A tactic uses its retained issued definition. Tempo supplies these inputs after authorization. The read recomputes the repertoire context from the document at the time of the visit. |
+| Open the external destination | Tempo UI uses the authorized line, or the position and orientation already supplied to the board. A replay cursor does not change the line being inspected. A tab reservation lasts for the initiating attempt and is consumed once. |
+
+| Component | Candidate commit | Pull request |
+| --- | --- | --- |
+| Chess | `7be682bcb8d48dbd6433ccb697cec573a370db29` | [#19](https://github.com/tempo-v2/tempo-chess/pull/19) |
+| Tempo | `942545c41eb48076a5430e40dbb99f2d8dc1916f` | [#35](https://github.com/tempo-v2/tempo/pull/35) |
+| UI | `68dc126d291bfd30e64d5305cd6de6bb7499de6f` | [#30](https://github.com/tempo-v2/tempo-ui/pull/30) |
+
+Assemble with Store `bac6a78f3d970ea2dfd44fce834370f6cb18d042`,
+Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`,
+Queue `a171e70faf684dead33f04ad455012380fcb2e54`,
+Study `4b46e6c45a6330177b089eadcae69821e57b6657`,
+Types `a8e46c9b9442f1180ec33b8035cef1c713414b66` and Core
+`e9a1d160a729bc9fbbddaf16427625301cc9498a`. Use the existing corrective
+portability workspace lock and the packaged Core 0.2.2 tarball from the
+PGN upload milestone.
+
+The two locked Rust suites passed 198 tests and doctests. The architecture
+gate and its four self-tests passed. The packaged UI built and passed all
+67 UI tests. Packaged Chrome on disposable SQLite verified cancellation,
+one Again, original/renamed/omitted display names, isolation of the
+external tab, an independently navigated tab, interrupted Next, and
+replay-cursor-independent export in Tactics Collection. Chrome used the
+actual PGN-upload checkpoint binary and UI to produce accepted-lost and
+unaccepted concessions on copies of its synthetic fixture, then resumed
+on the candidate with identical commands, one assessment, and one receipt.
+Independent review verified the consuming paths and reran the focused
+tests. Its tab-ownership finding was fixed and reproduced in the browser
+regression.
+
+The live Lichess endpoint returned HTTP 200 with the exact inline PGN and
+orientation for the synthetic opening and Black-to-move puzzle. A direct
+headless Chrome visit returned HTTP 403. The packaged Tempo journey
+intercepted the Lichess destination for its browser assertions.
+
+The candidate is for coordinated PR review. Managed installation is pending.
