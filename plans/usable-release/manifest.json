@@ -1357,6 +1357,16 @@
       "tempo-store": "06d021f2ba9d760499fa42f61b833253542e75cc",
       "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
       "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66"
+    },
+    "observed_installation": {
+      "checkpoint": "workspace-cc3cf48ea9fd2222131b",
+      "backup": "recovery-start-_tvm060e",
+      "loopback_port": 41822,
+      "schema": 12,
+      "existing_tables_verified": 34,
+      "desktop_assets_verified": 22,
+      "private_phone_assets_verified": 24,
+      "matches_candidate_artifact_hashes": true
     }
   }
 }

@@ -2688,4 +2688,19 @@ Interrupted Next retried only Next.
 
 The three runtime PRs merged into main. Their remote merge trees match
 the qualified trees exactly. The manifest records both the reviewed heads
-and the merged component revisions. Managed installation is pending.
+and the merged component revisions.
+
+### Managed installation, November 20, 2026
+
+The registered service activated `workspace-cc3cf48ea9fd2222131b` on port
+41822. The launcher rehearsed the merged pair, then saved the stopped-time
+SQLite database and prior registration as `recovery-start-_tvm060e`.
+
+The running service matched the qualified binary and all
+22 desktop and 24 private HTTPS phone assets byte for byte.
+SQLite is at schema 12 on the same database file and dataset. The active
+attempt and every row in the 34 previous tables matched the backup.
+Integrity and foreign-key checks passed. Passive Study responded on both
+surfaces. The desktop list read successfully, the phone save route
+accepted validation, and the phone list route returned 404. The
+observed installation in the [manifest](manifest.json) closes the release.
