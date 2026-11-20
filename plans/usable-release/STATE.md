@@ -2245,6 +2245,72 @@ A detected repertoire-version mismatch belongs to the loaded game comparison. It
 
 UI candidate `e3392f853eb3d42f95400fb8c5afc445c20f51ab` extends [UI #27](https://github.com/tempo-v2/tempo-ui/pull/27). The Chrome regression edits the destination from e4 to c4 during review, observes the mismatch, changes source visibility, closes comparison, navigates forward and back, and forces one failed reload. The warning and its reload action survive. The successful reload shows c4 and clears the warning. All 96 UI tests passed. The preceding runtime and package pins still apply.
 
+## Lichess analysis release
+
+The compact **↗ Lichess** action opens the full issued tactic or the
+first matching opening variation in PGN order. Replay exports use the
+full loaded line. Boards with only a position open that position. Long
+lines offer a complete PGN download for manual import.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Authorize an analysis read | Tempo checks dataset, attempt, revision, issued content version and activity state for both position context and line export. A confirmed unfinished Test uses the existing concession and its immutable receipt. Display names and board orientation are independent of that decision. |
+| Read the export line | The ordinary analysis board loads its position context. A Lichess action requests a separate read. Chess finds the first legal authored route matching the issued canonical position and prescribed move. A tactic uses its issued definition. A missing matching route yields the retained issued move. A failed document lookup or parse returns an error that the user can retry from the open board. |
+| Own the external tab | Tempo UI reserves one tab for the initiating Study visit. Leaving Study or hiding the page cancels an outstanding launch, and late acceptance remains available through normal Study recovery. The initiating board supplies orientation for automatic launch. The visible Analysis board supplies orientation for its manual link. |
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Chess | `268bd292b18396880740f24ca2c471728c6651d1` | [#19](https://github.com/tempo-v2/tempo-chess/pull/19) |
+| Tempo | `c8e3ac75b26f960cc33737ea1fe744c20db4ca66` | [#35](https://github.com/tempo-v2/tempo/pull/35) |
+| UI | `b1f89c6d6c45ed4df935d68623bc221a04c1703c` | [#30](https://github.com/tempo-v2/tempo-ui/pull/30) |
+
+The final independent Astra review passed on the reconciled PR heads.
+The Tempo main merge incorporated concurrent Phone ingress and
+repertoire recommendation work. The Lichess application projection,
+contract tests and desktop route additions matched the reviewed change.
+The reconciled Chess and Tempo suites passed 219 tests and doctests.
+The reconciled UI passed 100 tests.
+
+Packaged Chromium on disposable SQLite verified the final puzzle ply,
+cancellation before acceptance, display-name invariance, one Again,
+previous-release recovery with the original command, an interrupted Next,
+and the replay cursor. It reproduced a document read failure and a PGN
+parse failure and kept ordinary Analyze available. It exercised a
+repurposed tab, a position read failure, reload and browser Back during
+a pending concession. Phone WebKit ran the optimized release assembly
+and verified touch Study, continuation and retry placement, inline
+repair, and the private ingress restrictions. In earlier live HTTP
+checks Lichess returned the exact inline sample PGN and orientation.
+Direct headless rendering at Lichess returned HTTP 403.
+
+### Managed installation
+
+The installed build adds Lichess to desktop Tempo and carries forward
+the active Phone Study profile through the published release refs.
+The separate post-game prototype remains on its isolated origins.
+
+| Installed source | Commit |
+| --- | --- |
+| [Tempo release assembly](https://github.com/tempo-v2/tempo/tree/release/lichess-with-phone) | `b93ec26b9dc86f2161c031eb0d997cefb8913b03` |
+| [UI release assembly](https://github.com/tempo-v2/tempo-ui/tree/release/lichess-with-phone) | `678fe423a7cfd6056c934f3ae848435850e1e361` |
+| [Chess feature head](https://github.com/tempo-v2/tempo-chess/commit/7be682bcb8d48dbd6433ccb697cec573a370db29) | `7be682bcb8d48dbd6433ccb697cec573a370db29` |
+
+The assembly also used Store `bac6a78f3d970ea2dfd44fce834370f6cb18d042`, Learning `09c4359ab90d0cd1e5166b1f25460fd272406fd1`, Queue
+`a171e70faf684dead33f04ad455012380fcb2e54`, Study `4b46e6c45a6330177b089eadcae69821e57b6657`, Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core `e9a1d160a729bc9fbbddaf16427625301cc9498a` with
+the packed Core 0.2.2 tarball. It reused the corrective portability
+workspace Cargo lock.
+
+The managed launcher installed `workspace-c4afffae8dea3aea9fd1` on port 41822 after a
+disposable database rehearsal. The optimized executable SHA-256 is
+`37598f8b6b5c0b06c4ae5d0ff56457195aa8b075c8eb9f7f6cd37fdfc9308d50`. The registered listener served all 46 qualified desktop and
+phone files byte for byte. The Phone profile still returns its Study
+status and confines Lichess export to desktop. The three development
+listeners kept their original processes.
+
+The retained SQLite file kept its inode, dataset, active attempt, and
+schema 11. All 34 tables matched the stopped-service backup `recovery-start-4m9w3v5q` row
+for row. SQLite integrity and foreign-key checks passed on both files.
+
 ## Phone Study deployment, November 19, 2026
 
 | Decision | Authority, inputs and lifetime |
@@ -2334,46 +2400,45 @@ authorization while concealing the board, then restores its variations
 and marked lines if verification succeeds. A journaled repertoire save
 retains its exact retry control even while the board is concealed.
 
-### Candidate
+### Combined candidate
 
-| Component | Published commit | Pull request |
+| Component | Reviewed commit | Pull request |
 | --- | --- | --- |
-| Tempo | `7ba2ee487325d18e0cfaf66dbf78bea2f0d755d2` | [#36](https://github.com/tempo-v2/tempo/pull/36) |
-| UI | `185ca319281e95cc9cc84480dc33c7fdede9555c` | [#29](https://github.com/tempo-v2/tempo-ui/pull/29) |
-| Store | `9f440b71844aee36b182a6672b253e409f4a1761` | [#18](https://github.com/tempo-v2/tempo-store/pull/18) |
+| Tempo | `71cbade9958624719a8f5bc7725cca44e42400e6` | [#36](https://github.com/tempo-v2/tempo/pull/36) |
+| UI | `e33c2fc3041ec4dc7a274e6789bb347e79a21225` | [#29](https://github.com/tempo-v2/tempo-ui/pull/29) |
+| Store | `4cb4e4136d4201dbd236f993c2d2f79cfd06cfbe` | [#18](https://github.com/tempo-v2/tempo-store/pull/18) |
 
-The [manifest](manifest.json) pins these changes with the six unchanged
-Phone Study components, the existing Cargo and UI locks, and packaged
-Core 0.2.2. SQLite advances to schema 12. Study wire v5 and portable
-format 5 carry forward. Tempo and UI are stacked on their Phone Study
-branches. The Store PR targets main.
+The [manifest](manifest.json) pins the compatible components, existing Cargo
+lock, current UI lock, packaged Core 0.2.2, and qualified artifact hashes.
+The candidate includes the merged StudyState interfaces, Phone Study and
+Lichess analysis. SQLite advances from schema 11 to 12. Study wire v5 and
+portable format 5 carry forward.
 
-Packaged desktop Chrome exercised mounted display-name variations, marking
-before an answer, the previous response in a multi-move tactic, and saving
-the completed card after automatic advance. It opened the exact issued
-position, verified the blind waiting state and later unlock, and checked
-removal, exact retry, restart, and returning to Study without issuing a
-card. Packaged phone-sized WebKit covered a lost save reply, reload and
-exact replay, desktop readback, guided correction, and the stable
-continuation controls. The phone allowlist rejected desktop review
-operations. Independent review checked that an explicit concession at
-the second decision reveals the bookmarked response despite a sticky
-earlier Again, while a plain skip keeps it locked.
+Independent Astra review traced the Study disclosure producer, Store
+facts, Tempo projection, browser invalidation, and exact signed Save
+recovery. The review led to typed reveal evidence, same-version
+later-attempt coverage, and fail-closed invalidation of a saved view when
+a second browser tab changes Study. The signed Save retry stays visible
+while the board is concealed.
 
-The optimized schema 11 to 12 rehearsal on a disposable copy of the
-installed Phone Study overlay's backup preserved all rows in the 34
-existing tables. Integrity and foreign-key checks passed. Using the
-actual installed desktop executable and bundle at
-`workspace-f9f3e6bff02e198a60e1`, Chrome left a Study command pending
-in each of the accepted-lost and unaccepted cases. The candidate replayed
-identical bytes and the same accepted result, with one grade in each
-case. An interrupted Next retried only Next.
+The optimized locked build, 31 Store tests, 55 Tempo contracts, 107 UI
+tests, and architecture gate with its four self-tests passed. Desktop
+Chrome covered exact positions before and after response, metadata
+invariance, later completion and concession, stable deduplication,
+removal and restart. It held a second tab's blind admission before
+delivery, dropped its accepted response, and verified the earlier
+board stayed concealed. The interrupted repertoire Save replayed
+the byte-identical pending command from the concealed board. Phone
+WebKit covered the shared list, lost-mark retry, and the continuation
+controls. The packaged Lichess journey covered answer-safe export,
+lost-concession retry, help after dismissal, and interrupted Next.
 
-The locked optimized build, all 54 application contracts, all 63 UI tests,
-and the architecture check with its four self-tests passed. The new
-SQLite application contract verifies that a saved opening opens the
-issued move after an authorized rename and change of answer, then
-disappears after the repertoire history reset. The original save receipt
-can replay afterward without restoring the mark.
+The candidate rehearsed against the stopped-time SQLite backup
+`recovery-start-4m9w3v5q`. All rows in the 34 prior tables matched, and
+integrity and foreign-key checks passed. Chrome used the previous
+installed executable and UI at `workspace-c4afffae8dea3aea9fd1` to
+leave accepted-lost and unaccepted Study commands pending. The
+candidate replayed the original bytes with one grade per case.
+Interrupted Next retried only Next.
 
-The candidate awaits coordinated review, merge, and managed installation.
+Merge and managed installation are pending.
