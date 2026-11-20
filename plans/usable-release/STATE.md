@@ -2046,3 +2046,25 @@ desktop Study. Games, repertoire writes, and requests with a mismatched
 Origin or loopback Host were rejected through the actual proxy. The
 existing Tempo 1 route still responded. Three separate lab processes
 were preserved. Actual iPhone Safari over cellular acceptance is pending.
+
+### Phone continuation overlay, November 20, 2026
+
+The phone shell places manual continuation, guided acknowledgement and
+command recovery directly below the board. The board reserves the space
+across moves and delivery states. Tempo UI uses the existing action selection
+and handlers. When Study has no board, controls use the information panel.
+
+UI [#28](https://github.com/tempo-v2/tempo-ui/pull/28) publishes
+`ccf29c8684994d6fd48c8ae713a385b2044bc640`. Packaged WebKit at 375 × 600
+confirmed that Continue, guided acknowledgement, Retry and Retry next
+exercise each fit in view without moving the board or panel or changing the
+scroll position. The journey verified an accepted answer and receipt, a Next
+retry, a review completed after a miss and one guided acknowledgement.
+All 63 UI tests and the desktop Chrome corrective Study journey passed.
+
+The managed MacBook installation serves `workspace-f9f3e6bff02e198a60e1`.
+All 24 private HTTPS phone assets and 22 local desktop assets matched the
+installed build. The backend hash, Study dataset, database inode, schema 11
+and Serve configuration matched the prior release. All 34 tables matched
+the stopped-time backup `recovery-start-4ctmzui5`. Integrity and foreign keys
+passed. The [manifest](manifest.json) records the installed bundle hashes.
