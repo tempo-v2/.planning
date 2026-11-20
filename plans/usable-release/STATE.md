@@ -2951,9 +2951,10 @@ offers ordinary Next when new work is eligible. Large allowances are projected
 within the existing browser integer range, while previously accepted grants
 retain their exact receipts. Focused consumer checks verified both fixes.
 
-The exact schema-12 and schema-13 installed predecessors each passed six
-recovery cases covering accepted-lost and unaccepted Answer, Learn more
-tactics, and repertoire Save. Retry Next sent only Next. Study metadata
+The exact Review later, repertoire-suspension, and board-capture
+installations each passed six recovery cases covering accepted-lost and
+unaccepted Answer, Learn more tactics, and repertoire Save. Retry Next sent
+only Next. Study metadata
 invariance passed for clean Test, a miss, and Teach. A settings save on a
 disposable copy of the installed schema-13 profile preserved all 39 tables
 apart from the intended profile preference, with integrity and foreign keys
