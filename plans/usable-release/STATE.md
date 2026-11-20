@@ -2905,3 +2905,57 @@ The installed predecessor replay passed all six accepted-lost and unaccepted
 Answer, Learn more tactics, and PGN Save cases. The existing durable replies
 replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
 records the compatible merge commits, artifact hashes, and backup.
+
+## Opponent moves in Study
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Find the opening move | Study should begin one ply before the learner's response when the exact move is available. Chess accepts the legal predecessor from an authored route, selected tactic range, or explicit source setup. Game repairs use the preceding move in the verified played game. The move must reach the canonical issued position. Labels, activity display text, and clock counters are independent. |
+| Present the exercise | Tempo pins the verified pair when issuing the attempt and exposes it for an unplayed first decision to opted-in Study wire 5 clients. Desktop and phone UI hold the pre-move board for 250 ms and keep one presentation per active attempt in the browser tab. Later replies use the grader's accepted autoplay moves and replace the red arrow in place. Playback has no command or scheduling effect. |
+| Recover saved context | The user selected existing-card coverage. An explicit metadata backfill uses the retained authored PGN, referenced capture archives, and verified original tactic transfers. Missing or conflicting evidence leaves the solver position available. Store updates only current presentation metadata against the observed dataset and write revision. Issued attempts, content versions, authored revisions, receipts, and learning stay as they were. |
+
+Qualify together on the installed tactic-board-capture baseline
+`workspace-73d00fe272ee6d48eff4`, SQLite schema 13. The candidate keeps
+Study wire 5 with opt-in move context and portable format 5.
+
+| Component | Qualified commit | Draft PR |
+| --- | --- | --- |
+| Chess | `7a99d2b75899e5a1fb55e2cce9c271a8b5b0ed46` | [#21](https://github.com/tempo-v2/tempo-chess/pull/21) |
+| Store | `c4c321d2774910562fc1e81828546573e39f4648` | [#22](https://github.com/tempo-v2/tempo-store/pull/22) |
+| Tempo | `af1f26d75a12bcbfd9b010a0f99e2bad3cbbe86c` | [#41](https://github.com/tempo-v2/tempo/pull/41) |
+| UI | `64af8cca186fc7446dddd7434a75016ba495aecc` | [#37](https://github.com/tempo-v2/tempo-ui/pull/37) |
+
+Reuse Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
+Queue `777345256564cefa7f25d537a5a7c51a5377e749`,
+Learning `58197f6fa9b2ea33907f2e305ec07efda64d553d`, and
+Core `99364f6d47a0467ed1cf0edf6a904566dc720dd6`.
+Use the workspace and UI locks and packaged Core 0.2.2 from the installed
+repertoire suspension baseline.
+
+The locked Chess, Tempo and Store suites passed 265 tests and doctests.
+The packaged UI passed 112 tests. Chrome covered the exact pre-move board,
+the hold and board lock, legacy client compatibility, refresh, navigation,
+reduced motion, wrong-move recovery and successive replies on a stable board.
+WebKit covered touch Study, the red arrow, the actual game's repair lead-in,
+and Retry Next. Nine Chrome journeys reproduced the same Study commands and
+durable outcomes with the exercise name present, renamed or omitted. Six
+accepted-lost and unaccepted journeys started with the actual installed
+predecessor and replayed the exact Answer, Learn more tactics, and PGN Save.
+
+A disposable backup of the installed dataset recovered 3,410 repertoire
+positions and 17,267 tactics. Six tactics had conflicting evidence. The
+preview left the file byte-identical, and repeating Apply produced zero
+updates. Thirty-seven tables matched exactly. Only current card metadata and
+the store write revision changed. SQLite integrity and foreign keys passed.
+
+Prepare the private transfer from the retained Tempo 1 bundle. Preview on the
+disposable database before adding `--apply` to the backfill command.
+
+```sh
+python3 -B tempo/tools/tactics/recover_setup_moves.py RETAINED_BUNDLE > PRIVATE_TRANSFER.json
+target/release/tempo backfill-study-lead-ins DISPOSABLE_DATABASE PRIVATE_TRANSFER.json
+```
+
+Publish the compatible set for review. Managed installation and application
+of the backfill to the live dataset are separate release operations.
