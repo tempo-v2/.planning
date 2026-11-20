@@ -3080,3 +3080,12 @@ keys passed.
 | Tempo executable | `02d3769ef42b0589ba9d2f3704c0cf68972e301bf1cb42ddf9ca3d77511def2a` |
 | Desktop JavaScript | `ee96cfa2fc753b5eeb12ad9bbdb6ef1cbaf3d7c5bf5ff55749f24975e80eb4db` |
 | Phone JavaScript | `6d0ea3363110bec7991e801c219b69e22d748342057919c28b8bfa8b93f573a8` |
+
+## Position analysis integration
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Enqueue actual learner positions | The accepted position-analysis plan authorizes new accepted imports and explicit archive selections. Tempo resolves participation and Chess provides the played turns. Store keys by dataset, source revision, ply and requested detector versions. Labels and repertoire matches are independent. Pause and restart preserve completed work. |
+| Share and settle analysis | Chess uses legal moves and exact comparable engine evidence. A winning mate supersedes other findings. Incomplete results never authorize a puzzle. Tempo coordinates the engine slot and Store atomically accepts a position and its training effects. |
+| Deliver missed capture practice | Learning owns activity and cadence. Queue alternates accepted game requests and regular due work at durable issuance. The exact game predecessor is display context only. Replays preserve the issued attempt and result. |
+| Yield to the foreground | Tempo runs background engine work only on wall power after 30 seconds of inactivity and yields to input or foreground engine requests. Cancellation retains ownership until acknowledged. |

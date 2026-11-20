@@ -1,0 +1,24 @@
+Tempo final combined-candidate real Stockfish HTTP verification
+Started: 2026-11-20T13:46:53.662921+00:00
+Build working directory: /workspace/scratch/c57673c857b1/hanging-workspace
+Build command: env RUSTUP_HOME=/workspace/scratch/c57673c857b1/toolchain/rustup CARGO_HOME=/workspace/scratch/c57673c857b1/toolchain/cargo /workspace/scratch/c57673c857b1/toolchain/cargo/bin/cargo build --locked -p tempo --bins --examples
+Build result: exit 0; Finished dev profile in 11.19s
+Test working directory: /workspace/scratch/c57673c857b1/hanging-workspace/tempo
+Test command: TEMPO_TACTICAL_PYTHON=/workspace/scratch/c57673c857b1/engine-venv/bin/python TEMPO_STOCKFISH=/workspace/scratch/c57673c857b1/engine-tools/stockfish/stockfish-ubuntu-x86-64-avx2 TEMPO_BINARY=/workspace/scratch/c57673c857b1/hanging-workspace/target/debug/tempo node --test tests/hanging_material_http.mjs
+Binary SHA256: 490d5a80b42f1c237d1e094f5e5d825c02aa2447fa8986ce6310221868bf78be
+Browser mode: disabled; no visual verification claimed
+
+✔ normal runtime analyzes real games, records comparisons, and makes each missed capture next without replacing active Study (37932.810763ms)
+ℹ Study progress responded in 6.1ms during a real Stockfish scan.
+ℹ Verified normal serve, six real-engine games, active-card preservation, durable recovery, next-up and idle-first priority.
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38124.442291
+
+Test exit code: 0
+Finished: 2026-11-20T13:47:31.951277+00:00
