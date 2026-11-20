@@ -2747,3 +2747,55 @@ Integrity and foreign-key checks passed. Passive Study responded on both
 surfaces. The desktop list read successfully, the phone save route
 accepted validation, and the phone list route returned 404. The
 observed installation in the [manifest](manifest.json) closes the release.
+
+## Repertoire suspension candidate
+
+**Suspend** in Repertoires pauses one book indefinitely. **Resume** restores
+eligibility under the saved schedule, including reviews that became due in the
+meantime. The repertoire stays visible and editable.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Change repertoire activity | The requested control uses dataset identity, repertoire identity, and an explicit Active or Suspended choice. Store saves the setting and receipt atomically, including Study's ungraded abandonment transition if the suspended repertoire has the unfinished attempt. Display name, learner color, PGN shape, and other repertoires are independent of the command. The setting persists in SQLite and full database backups. The portable content-and-learning format keeps its existing scope. |
+| Select Daily Study | Tempo supplies participating targets and routes to Queue. Suspension excludes due work, teaching, and corrective repair and recall. It retains the existing schedule, accepted results and same-day allowance usage. Exact replays keep their accepted result, and an old suspension receipt cannot undo Resume. |
+| Check game coverage | New comparisons, gaps, and Maia work use participating repertoires. Raw game import and the played timeline remain available. Historical summaries, encounters, and gaps are retained, including when an old game is processed again during suspension. Resume permits subsequent checks under the usual rules. |
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Store | `d2e9509b797ef9e598585d85f6a56736eea815f8` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
+| Tempo | `c63001c4f5e6cd8ca7a959164d8b0e9cba9a58da` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
+| UI | `a720a607dd0e4e4e7b21537b530a7a9a9fe7e4e7` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
+
+Assemble with Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
+Queue `777345256564cefa7f25d537a5a7c51a5377e749`,
+Chess `268bd292b18396880740f24ca2c471728c6651d1`,
+Learning `58197f6fa9b2ea33907f2e305ec07efda64d553d`, and
+Core `99364f6d47a0467ed1cf0edf6a904566dc720dd6`
+with packaged Core 0.2.2. Reuse the prior workspace Cargo lock
+`c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`.
+UI lock SHA-256 is
+`f713bbeded47625dd599dd75bf123ebe57d51c1a22336e94f2f6c15e05c4fe23`.
+SQLite advances to schema 13. Study wire 5, content wire 4 and portable
+format 5 carry forward. The repertoire list adds an optional activity field
+for compatibility with earlier serialized Save replies.
+
+The architecture checks, 171 Tempo and Store Rust tests and doctests, and
+107 UI tests passed. The Study contract covered new and due work, an issued
+lesson, rename and replacement while suspended, preserved grades and receipts,
+restart, and unchanged activity from another repertoire. The Games contract
+covered overlapping repertoires, raw game review, suppressed coverage and
+Maia inputs, and existing gaps returning after Resume. A fault-injected
+receipt failure rolled back the suspension and abandonment together.
+
+Desktop Chrome exercised cancel, suspend, a lost accepted response, restart,
+byte-identical replay, and Resume. Independent review ran nine mounted Study
+metadata cases and six accepted-lost and unaccepted Answer, Learn more
+tactics, and PGN Save cases using the actual installed predecessor. It
+verified exact delivery and a single durable effect in each case, including
+the previous PGN Save reply shape and Retry Next without another acceptance.
+The schema-12 to schema-13 rehearsal on a disposable copy preserved all
+37 previous tables and objects. Integrity, foreign keys, Study and Repertoires
+readback passed.
+
+The three candidate PRs target main. Managed installation is pending.
