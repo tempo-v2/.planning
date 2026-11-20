@@ -2032,7 +2032,9 @@ failed Next preserved the answer and retried only Next. Inline corrective
 replay remained available. Independent packaged Chrome verification
 covered desktop corrective Study, interrupted Next and standalone analysis.
 The managed installer rehearsed both surfaces on a disposable copy of the
-retained schema-11 database.
+retained schema-11 database. A separate disposable copy of the stopped-time
+backup returned the same active attempt on desktop and phone. The phone API
+completed the first 12 exercises in order. All 12 were opening exercises.
 
 The registered service installed `workspace-7d86fed76f7dde27c227`
 on port 41822. The database kept its inode and schema, and all 34 tables
