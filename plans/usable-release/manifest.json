@@ -975,5 +975,38 @@
         "phone/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3"
       }
     }
+  },
+  "study-review-later": {
+    "planning_base": "28c8484b0514ff40ec75f6964bd6fd153f4574fa",
+    "repositories": {
+      "tempo": "7ba2ee487325d18e0cfaf66dbf78bea2f0d755d2",
+      "tempo-ui": "185ca319281e95cc9cc84480dc33c7fdede9555c",
+      "tempo-chess": "25fe9e01482ddc04d323207c18fdcfb5e97be4db",
+      "tempo-core-components": "e9a1d160a729bc9fbbddaf16427625301cc9498a",
+      "tempo-learning": "09c4359ab90d0cd1e5166b1f25460fd272406fd1",
+      "tempo-queue": "a171e70faf684dead33f04ad455012380fcb2e54",
+      "tempo-store": "9f440b71844aee36b182a6672b253e409f4a1761",
+      "tempo-study": "4b46e6c45a6330177b089eadcae69821e57b6657",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66"
+    },
+    "pull_requests": {
+      "tempo": "https://github.com/tempo-v2/tempo/pull/36",
+      "tempo-ui": "https://github.com/tempo-v2/tempo-ui/pull/29",
+      "tempo-store": "https://github.com/tempo-v2/tempo-store/pull/18"
+    },
+    "dataset_schema": 12,
+    "study_wire_version": 5,
+    "workspace_lock": {
+      "path": ".planning/plans/usable-release/workspace-corrective-portability.Cargo.lock",
+      "sha256": "c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0"
+    },
+    "ui_lock_sha256": "1fe3dd71e3ff0699dc38d102fbc03e8fd742b5a7742d8b42bbf626343d2d1ebb",
+    "core_package": "@tempo-v2/core-components@0.2.2",
+    "core_tarball_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+    "candidate_artifact_hashes": {
+      "tempo": "48d4b65a91b5f354bffdd02a8de89b2f42b17c17cb4b8d6eae22e03c92426c3d",
+      "ui/assets/app.js": "098f61be74e5eaf5a96ae9b05e16dd781637f603ce7228072435897f23524e30",
+      "ui/phone/assets/app.js": "8480138d9f633ceb2a5fe53522b7ecd04342af20b929abd1027df826b39f32d6"
+    }
   }
 }

@@ -2068,3 +2068,55 @@ installed build. The backend hash, Study dataset, database inode, schema 11
 and Serve configuration matched the prior release. All 34 tables matched
 the stopped-time backup `recovery-start-4ctmzui5`. Integrity and foreign keys
 passed. The [manifest](manifest.json) records the installed bundle hashes.
+
+## Review later in Study
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Save an issued decision for later review | The approved Study request allows marking at any time on desktop and private Phone Study. Tempo addresses the reached decision by dataset, attempt, issued content version and index. Store deduplicates the versioned target and decision and records mutation receipts separately from Study. Exercise text, board orientation and subsequent answers do not determine what was saved. |
+| Open a saved decision | The existing Analysis disclosure contract and the approved rule for skipped blind cards govern the desktop read. Tempo checks authoritative mode, progress and result, including a later completion of the same version, and checks for a live blind attempt on the target. The analysis position follows the issued definition across edits. The list and save reply contain no answer. |
+| Retain marks and replay writes | Store ties marks to the source attempt and preserves them through a normal restart or SQLite backup. A repertoire history reset removes marks tied to erased attempts. Replaying a command acknowledges the original write, even after removal, without recreating the mark. Portable content and learning exports omit attempt-linked marks. |
+
+### Candidate
+
+| Component | Published commit | Pull request |
+| --- | --- | --- |
+| Tempo | `7ba2ee487325d18e0cfaf66dbf78bea2f0d755d2` | [#36](https://github.com/tempo-v2/tempo/pull/36) |
+| UI | `185ca319281e95cc9cc84480dc33c7fdede9555c` | [#29](https://github.com/tempo-v2/tempo-ui/pull/29) |
+| Store | `9f440b71844aee36b182a6672b253e409f4a1761` | [#18](https://github.com/tempo-v2/tempo-store/pull/18) |
+
+The [manifest](manifest.json) pins these changes with the six unchanged
+Phone Study components, the existing Cargo and UI locks, and packaged
+Core 0.2.2. SQLite advances to schema 12. Study wire v5 and portable
+format 5 carry forward. Tempo and UI are stacked on their Phone Study
+branches. The Store PR targets main.
+
+Packaged desktop Chrome exercised mounted display-name variations, marking
+before an answer, the previous response in a multi-move tactic, and saving
+the completed card after automatic advance. It opened the exact issued
+position, verified the blind waiting state and later unlock, and checked
+removal, exact retry, restart, and returning to Study without issuing a
+card. Packaged phone-sized WebKit covered a lost save reply, reload and
+exact replay, desktop readback, guided correction, and the stable
+continuation controls. The phone allowlist rejected desktop review
+operations. Independent review checked that an explicit concession at
+the second decision reveals the bookmarked response despite a sticky
+earlier Again, while a plain skip keeps it locked.
+
+The optimized schema 11 to 12 rehearsal on a disposable copy of the
+installed Phone Study overlay's backup preserved all rows in the 34
+existing tables. Integrity and foreign-key checks passed. Using the
+actual installed desktop executable and bundle at
+`workspace-f9f3e6bff02e198a60e1`, Chrome left a Study command pending
+in each of the accepted-lost and unaccepted cases. The candidate replayed
+identical bytes and the same accepted result, with one grade in each
+case. An interrupted Next retried only Next.
+
+The locked optimized build, all 54 application contracts, all 63 UI tests,
+and the architecture check with its four self-tests passed. The new
+SQLite application contract verifies that a saved opening opens the
+issued move after an authorized rename and change of answer, then
+disappears after the repertoire history reset. The original save receipt
+can replay afterward without restoring the mark.
+
+The candidate awaits coordinated review, merge, and managed installation.
