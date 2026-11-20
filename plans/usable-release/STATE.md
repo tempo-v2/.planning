@@ -2756,15 +2756,16 @@ meantime. The repertoire stays visible and editable.
 
 | Decision | Basis, owner, inputs and lifetime |
 | --- | --- |
-| Change repertoire activity | The requested control uses dataset identity, repertoire identity, and an explicit Active or Suspended choice. Store saves the setting and receipt atomically, including Study's ungraded abandonment transition if the suspended repertoire has the unfinished attempt. Display name, learner color, PGN shape, and other repertoires are independent of the command. The setting persists in SQLite and full database backups. The portable content-and-learning format keeps its existing scope. |
+| Change repertoire activity | The requested control uses dataset identity, repertoire identity, and an explicit Active or Suspended choice. Tempo asks Study to abandon an unfinished matching attempt without grading. Store validates and saves that transition, the setting, and the receipt atomically. Display name, learner color, PGN shape, and other repertoires are independent of the command. The setting persists in SQLite and full database backups. The portable content-and-learning format keeps its existing scope. |
+| Invalidate the affected reads | Store supplies a Games comparison basis with authored content and participation revisions. Participation changes also advance the Study revision. Authored editor drafts and signed PGN Save use the authored revision. The UI identifies Games evidence scope explicitly, independently of document version pinning. Historical corrective choices whose compared repertoire scope diverges carry an application-projected status asking for a new comparison. |
 | Select Daily Study | Tempo supplies participating targets and routes to Queue. Suspension excludes due work, teaching, and corrective repair and recall. It retains the existing schedule, accepted results and same-day allowance usage. Exact replays keep their accepted result, and an old suspension receipt cannot undo Resume. |
-| Check game coverage | New comparisons, gaps, and Maia work use participating repertoires. Raw game import and the played timeline remain available. Historical summaries, encounters, and gaps are retained, including when an old game is processed again during suspension. Resume permits subsequent checks under the usual rules. |
+| Check game coverage | New comparisons, gaps, and Maia work use participating repertoires. Raw game import and the played timeline remain available. Historical summaries, encounters, and gaps are retained, including when an old game is processed again during suspension. Resume permits subsequent checks under the usual rules. Existing corrective choices retain their authoritative attribution, including when the chosen book is suspended. |
 
 | Component | Qualified commit | Pull request |
 | --- | --- | --- |
-| Store | `d2e9509b797ef9e598585d85f6a56736eea815f8` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
-| Tempo | `c63001c4f5e6cd8ca7a959164d8b0e9cba9a58da` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
-| UI | `a720a607dd0e4e4e7b21537b530a7a9a9fe7e4e7` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
+| Store | `e3b142edd1aa4cdb789ac9e9ec082198ebb85de9` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
+| Tempo | `c62abff57a445e988130bfc4ab5602cc2379a562` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
+| UI | `ed81f90c75a4c7880fc8812e2b156dbe919c9fbd` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
 
 Assemble with Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
 Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
@@ -2799,3 +2800,14 @@ The schema-12 to schema-13 rehearsal on a disposable copy preserved all
 readback passed.
 
 The three candidate PRs target main. Managed installation is pending.
+
+### Astra interface review
+
+The first review identified five issues. The candidate now uses separate
+participation and authoring revisions, moves the abandonment decision to
+Tempo and Study, carries Games evidence scope explicitly, projects stale
+historical choice availability in Tempo, and preserves existing choice
+attribution when a book leaves the comparison. Focused tests on disposable
+data cover an unaffected signed edit, unpinned Games evidence, the projected
+choice status, and both reprocessing and startup reconciliation after suspending
+a previously chosen repertoire.
