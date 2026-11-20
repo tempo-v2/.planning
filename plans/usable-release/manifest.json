@@ -1900,7 +1900,7 @@
       "tempo-ui": "8321754ca28f2e34bd45b6d2c5102218bc33ba06",
       "tempo-store": "27ffcc992d4b12424c1208676ae594d4245277e9"
     },
-    "planning_base": "e29ac534f516688ad2661fbd5203e337f7ea9d35",
+    "planning_base": "d59ba567f554744d865a7d24a13fbc8ae9a09f42",
     "pull_requests": {
       "tempo": "https://github.com/tempo-v2/tempo/pull/40",
       "tempo-ui": "https://github.com/tempo-v2/tempo-ui/pull/36",

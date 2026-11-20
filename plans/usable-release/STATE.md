@@ -2906,6 +2906,80 @@ Answer, Learn more tactics, and PGN Save cases. The existing durable replies
 replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
 records the compatible merge commits, artifact hashes, and backup.
 
+## Tempo notifications candidate
+
+The user requested a short lower-right confirmation for Review Later and
+selected a first rollout that includes repertoire changes. Desktop and
+Phone Study share the same notification host. It holds one message for
+four seconds, fades over 200 ms, and keeps keyboard focus in place. With
+reduced motion it disappears after the hold without a fade.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Show a confirmation | Tempo UI uses the existing validated acceptance for Review Later, Save Previous Response, removing a saved review, Tactics settings, and repertoire saves and renames. Suspend and Resume use the refreshed list for the addressed repertoire. Display text can change without changing the command, acceptance, recovery, or decision to notify. |
+| Display and dismiss | Core takes a caller-supplied event ID and message. Each new event replaces the current confirmation and gets the full display time. An old timer can dismiss only its own event. IDs live in the app session and are independent of durable commands and receipts. |
+| Retain information for recovery | The owning page displays validation failures, pending writes, retry actions, cleanup warnings, and detailed results inline. A confirmed save and the subsequent document reload continue to have independent outcomes. |
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Core | `82cc41db0a146ff0db77bc2b9a308f12eee077fb` | [Core #7](https://github.com/tempo-v2/tempo-core-components/pull/7) |
+| UI | `8140d64e545d6b571ef808de0686da8b1b43d86c` | [UI #35](https://github.com/tempo-v2/tempo-ui/pull/35) |
+
+UI bundles Core 0.2.3 with tarball SHA-256
+`4e74b8f2f4c643bdb6e576ca12dbdf58faa3a407d4906b18ba060be7c6ab40bf`.
+Use the backend and workspace lock from the installed tactic-board capture
+release above, including Tempo `7f8060cabd1f03efa7faac27275f50dcd0e1a3a4`.
+The candidate is presentation-only and requires no wire or database
+migration.
+
+The packaged Core test passed in standalone Chrome with accessible status
+markup, preserved focus, repeated text and replacement during a fade, the
+hold and fade intervals, and reduced motion. Both UI builds and all 111 UI
+tests passed. Chrome on disposable databases verified bottom-right placement
+without layout shifts, marks retained after dismissal, removal, settings
+confirmation across navigation, repertoire save and rename, suspend and
+resume, marked-line saves, and Games workbench saves and replay. After a
+repertoire document reload failed, Retry reload remained available beyond
+dismissal and sent only the read. Phone Study in WebKit verified viewport fit
+and dismissal, with no success toast on a lost acknowledgement and a
+confirmation after exact replay of the original mark.
+
+Both component pull requests target main. Installation is separate.
+
+### Independent review and installation, November 20, 2026
+
+A fresh Astra review found no interface, ownership, or coupling issues. The
+reviewer independently ran the desktop Saved for Review journey in Chrome
+and Phone Study in WebKit on disposable databases. The checks covered
+accepted replies, dismissal, settings across navigation, removal, and
+replay of the exact command after a lost phone acknowledgement.
+
+[Core #7](https://github.com/tempo-v2/tempo-core-components/pull/7) merged as
+`56fbc3e0acfa89a2a4798a8e854f147bbb1f8498`,
+[UI #35](https://github.com/tempo-v2/tempo-ui/pull/35) as
+`8d0632e54fe12dc73005ce714d530af424c7b0f9`, and
+[Planning #46](https://github.com/tempo-v2/.planning/pull/46) as
+`30ced5fcae583168f6bbde732828c255c9d07fca`. All three merge trees matched
+the reviewed heads.
+
+The managed launcher rehearsed on a disposable copy, took stopped-time
+backup `recovery-start-xiot478i`, and activated
+`workspace-d109531bfb95cf3cf2f6` on port 41822. It used the launcher's
+option to retain the separate post-game prototype. The backend matched the
+preceding release byte for byte.
+
+The registered service served all 22 desktop and 24 private HTTPS phone
+files byte for byte. Both Study status reads and the desktop repertoire
+list reported the retained dataset. The database kept its file identity,
+schema 13, and the active Study attempt. All 39 SQLite tables matched the
+backup, and integrity and foreign-key checks passed.
+
+| Installed artifact | SHA-256 |
+| --- | --- |
+| Tempo executable | `156eaa0bb833831881360eea160b56ce2932be2290ceba5cc26fba7fbf4fcbb6` |
+| Desktop JavaScript | `ebe33969e3ec4aa3139433e0a3c636d5de034859e57cb6a4c2440248a3118fde` |
+| Phone JavaScript | `5c1ba6d33aa02753b4f70c1737fd6b2c9802ad3df923a90c034a0e28f6e08455` |
+
 
 ## Runtime diagnostics candidate, November 20, 2026
 
