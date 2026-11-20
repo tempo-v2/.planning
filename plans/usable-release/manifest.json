@@ -999,6 +999,136 @@
     "qualification_record": "STATE.md#interface-execution-packet-november-19-2026",
     "next_operation": "Coordinated merge and remote tree verification. Managed installation is a separate authorized operation."
   },
+  "historical_delivery_records": {
+    "scope": "Historical observations from the source PRs; not a current activation declaration.",
+    "gameplay-corrective-study-portability": {
+      "source_pr": "https://github.com/tempo-v2/.planning/pull/19",
+      "source_head": "147c6361d7dd0656391ddd025861632f8103bdf2",
+      "recorded_manifest": {
+        "repositories": {
+          "tempo-chess": "b88ed8ebfa75bd55e1ef0b572a147830c9ea6bf4",
+          "tempo-learning": "09c4359ab90d0cd1e5166b1f25460fd272406fd1",
+          "tempo-queue": "73f45ac784a10e84186363bfeadcf830a9e163d7",
+          "tempo-store": "82090c65c3ee231c01a7319f3e67716cff93aecb",
+          "tempo": "b343c5ee366a855d8682f0b86943016553712fa9",
+          "tempo-ui": "c2db5142bed1dd614ad63abd49d94e78b74d857c",
+          "tempo-core-components": "e9a1d160a729bc9fbbddaf16427625301cc9498a",
+          "tempo-study": "73b2482dfb2ae652220727b87451fdb4a5110807",
+          "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66"
+        },
+        "pull_requests": {
+          "tempo-store": 11,
+          "tempo-learning": 5,
+          "tempo-queue": 7,
+          "tempo": 19,
+          ".planning": 18
+        },
+        "reviewed_heads": {
+          "tempo-store": "9330237ed983e940d18f92b353e4355cafc3806e",
+          "tempo-learning": "a5cd36781a86b239da17daa9a3c26c98c54b3e8e",
+          "tempo-queue": "f856262183b1c40cefa8391cf060e29c08bf70af",
+          "tempo": "be6ca8f80c211d8df083920c06d92d0c4066a645",
+          ".planning": "227819fbe774533d901c2f0e7eeb11bac8b86a6b"
+        },
+        "planning_candidate_merge": "ba6b0246181775734e07272cd080b5dfc4710fca",
+        "workspace_lock": {
+          "path": ".planning/plans/usable-release/workspace-corrective-portability.Cargo.lock",
+          "sha256": "c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0"
+        },
+        "core_tarball_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+        "portable_snapshot_version": 4,
+        "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)",
+        "node": "v26.12.0",
+        "observed_installation": {
+          "date": "2026-11-18",
+          "mode": "macOS session LaunchAgent via make start",
+          "previous_checkpoint": "workspace-1a52ad9b7cb891f341c9",
+          "checkpoint": "workspace-120682a40a2cf6bf6214",
+          "schema": 9,
+          "port": 41822,
+          "prior_tables_equal": 22,
+          "ui_files_verified": 22,
+          "binary_sha256": "8b593c32ccef6cb2cdb709f4dea5d9bef24c5873296f02938aad95bbd7236afe",
+          "ui_sha256": {
+            "assets/app.css": "19ac7f5717accb3bbe11efe8582c6b02a71b4a4ff12d73ced085f43b6f40b825",
+            "assets/app.js": "f3af271a47c6bb7e35abb10c46c82a9f0df89c4e7d4909ed5c9bef91c237b75f",
+            "assets/bB-GT5SSGJP.svg": "a5d2ee9100f3b0b74beb3c95f88e3b43a46a790a00d41aa1db8ca9a0905568f1",
+            "assets/bK-675NAWJZ.svg": "d74cd8e5e49ca921e765c6c0c3a87ce7f5f437ca95bca44948b92771f7bdd65c",
+            "assets/bN-JOUYBUTG.svg": "f1f4e2a1eed37dd366b61b38f857ea8fd0b890b8f02215ceb99f0e710a7950fa",
+            "assets/bP-3PVWADTM.svg": "d0e48e03ec340c39e9fde73d0ae0c8b251d42a32c13381ad0664edce77ce7eb3",
+            "assets/bQ-PBUQEJQM.svg": "8ad433fa5876894ca03b9412e9e39b8d770e90bf1c59428ee8e06bf6bc472098",
+            "assets/bR-CBGYAKGK.svg": "32c8ae60d594e037839cb2f0815ee1739b58d1aea09b5df8b96fec62a6868884",
+            "assets/capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+            "assets/castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+            "assets/check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+            "assets/illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9",
+            "assets/move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+            "assets/move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+            "assets/promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+            "assets/wB-YLMC6FHU.svg": "b9db43162732aae75cd51b6f071185b000c514cd1b8a93a134bd8c6676351f9d",
+            "assets/wK-AUE64UFO.svg": "e1dc9b6358585210119b92c389551fc70fa6566316089b3eba017142153fd3f4",
+            "assets/wN-CSRTRN5I.svg": "25c6f4d7446b9f99d6b62239bf0cd0abcf2ebb902e96aa93a73b7816d8431b7d",
+            "assets/wP-63DUNQX4.svg": "0c77297b4870b95653edaf7514d3b8f36816d1a7f05c718f4c0f7f0dff016d50",
+            "assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
+            "assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
+            "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac"
+          },
+          "migration_rehearsed": [
+            8,
+            9
+          ],
+          "database_inode_preserved": true,
+          "dataset_identity_preserved": true,
+          "sqlite_integrity_and_foreign_keys": true,
+          "schema_8_backup_verified": true,
+          "launch_agent_listener_verified": true,
+          "read_only_study_and_games": true
+        }
+      }
+    },
+    "schema-11-managed-cutover": {
+      "source_pr": "https://github.com/tempo-v2/.planning/pull/22",
+      "source_head": "69e5b9713a72faa6b36d4b15226cf643dc1fe401",
+      "release_record": "schema-11-review-repair-candidate",
+      "delivery_at_observed_activation": {
+        "implemented": true,
+        "tested": true,
+        "published": true,
+        "merged": true,
+        "installed": true,
+        "active": true
+      },
+      "merged_main": {
+        "tempo-store": "7a7b45d39697375dcb89957a6ead8b4d3417ef0b",
+        "tempo-ui": "de7f708aef837768e1b8ce9435ef4e56050fae58",
+        "tempo": "380d178fdbdec0dcd2525735068a6292f417f38f",
+        ".planning": "cd99ebc1865550882303076f42f248565152e558"
+      },
+      "verified_merged_trees": {
+        "tempo-store": "9c8d719c5627fa1d684ea841243c181cfacefc14",
+        "tempo-ui": "f276008dafe456d1a57de700ef83f9bd9e792bfb",
+        "tempo": "4046b1f836e8b4387b0a871b47da93a4b46c5fdf",
+        ".planning": "f2d633ff1605d39197db270916e6a798370e1723"
+      },
+      "observed_activation": {
+        "date": "2026-11-19",
+        "checkpoint": "workspace-68dc7fa8e5221063cbf5",
+        "schema_before": 10,
+        "schema_after": 11,
+        "port": 41822,
+        "verified_served_ui_files": 22,
+        "preserved_authoritative_tables": 28,
+        "integrity_check": "ok",
+        "foreign_key_violations": 0,
+        "projection": {
+          "complete_current": 2,
+          "partial_current": 0,
+          "pending": 0,
+          "unavailable": 0
+        }
+      }
+    }
+  },
   "phone-study": {
     "planning_base": "5b62a7fc47ea8b4e8ff4ace4b931039151c89648",
     "repositories": {
@@ -1142,7 +1272,7 @@
     }
   },
   "study-review-later": {
-    "planning_base": "3be85c922684398199ce6d5e89644319ff290214",
+    "planning_base": "027992c1dc609b67e59d492879d73f31ee3047ae",
     "repositories": {
       "tempo": "71cbade9958624719a8f5bc7725cca44e42400e6",
       "tempo-ui": "e33c2fc3041ec4dc7a274e6789bb347e79a21225",
@@ -1216,6 +1346,17 @@
       "ui/phone/assets/wQ-6YL7MNW5.svg": "b05f4b8902f333d4e7eeb5475af4c6015a91fb7fdd3266bdd0adc84ad1f7076c",
       "ui/phone/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
       "ui/phone/index.html": "4d5169c1972909ce18441e1dc0b440c69672145bc8ba77958a97fe06e0fdaef8"
+    },
+    "merged_repositories": {
+      "tempo": "846fae8fa1444ddf8b00e1793e935073ac030b7c",
+      "tempo-ui": "418e4fa4ea46280d22d3100f6c864e29ec7f8a14",
+      "tempo-chess": "268bd292b18396880740f24ca2c471728c6651d1",
+      "tempo-core-components": "99364f6d47a0467ed1cf0edf6a904566dc720dd6",
+      "tempo-learning": "58197f6fa9b2ea33907f2e305ec07efda64d553d",
+      "tempo-queue": "777345256564cefa7f25d537a5a7c51a5377e749",
+      "tempo-store": "06d021f2ba9d760499fa42f61b833253542e75cc",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66"
     }
   }
 }
