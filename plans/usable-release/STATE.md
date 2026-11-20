@@ -3203,6 +3203,59 @@ served desktop files, working Stockfish discovery, 12 queued games and
 24 previously completed positions. The service used the existing
 registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
 
+### Desktop board resizing
+
+| Behavior | Basis and owner | Inputs and independence | Lifetime |
+| --- | --- | --- | --- |
+| Drag the corner to resize a square board that stays near the vertical center. A click leaves its size alone. | The user's desktop board request covers Study, Analysis, Games review, repertoire response, tactic building and setup, and tactic detail. Core owns the gesture, handle clearance and sizing within the host. Tempo UI owns desktop eligibility, which main boards opt in and their page or dialog layout. | Desktop pointer and viewport, available board space, and drag displacement determine the size. Chess position, orientation, lock state, and display text are independent. The handle sits outside chess input, so resizing leaves Study commands and the repertoire response recommendation alone. | Size belongs to the mounted board. Reopening uses automatic fit. The phone shell and embedded previews use their existing presentation. |
+
+This candidate uses the Study-focus checkpoint backend and all of its
+non-UI pins. [Core #8](https://github.com/tempo-v2/tempo-core-components/pull/8)
+has verified head `dad0ea4797b5c137cf804b082037b092a6e67992`.
+[Tempo UI #40](https://github.com/tempo-v2/tempo-ui/pull/40) has verified head
+`2a0c0286a49aa12a7a241f6c4f5fea73fa84f562`. Both PRs target `main`.
+Tempo UI vendors the byte-identical Core 0.2.4 package with SHA-256
+`9971c41100e96082a55ef96dd925a7d443dc641c7961d96cffd798e3eb82c9ee`.
+
+The packaged Core Chrome consumer and all 128 UI tests passed. Both UI
+bundles built. Chrome verified initial and resized vertical centering on all
+seven main boards, size and square targeting, short Games and all three
+tactics views,
+and handle absence on a narrow viewport, a wide touch-first viewport and
+an import preview. Study kept its size through a move and sent no command
+during resizing. The repertoire response accepted a pending recommendation
+after the drag. The Phone Study WebKit journey passed with the handle absent.
+Browser journeys used disposable databases.
+
+The independent Astra reviews found a blocked corner square, a surface signal
+leaking React pointer data, and short-window layout problems in the tactic
+builder, setup and detail. Core now reserves space outside the chess surface
+for the handle and invokes the surface consumer with zero arguments. Tempo UI
+owns a single viewport and device rule, sizes its own tracks and puts desktop
+tactic controls beside their boards. The packed browser check verified a
+legal move from h1 at the 240 px floor and a zero-argument surface signal.
+The tactic detail journey verified a real resize at 1000 × 500.
+
+A third fresh Astra reviewer found no material interface or coupling issues
+in the verified heads. The reviewer independently ran the packaged Core
+consumer, the h1 move and zero-argument signal probe, and all six Tempo
+browser journeys on disposable data.
+
+Core and Tempo UI merged to main at
+`a5f8f320313d6650700617eb24ca83ec2f3cb827` and
+`0f141717ceab7e6b51447bc21de78f3d82ae3b5a`. Both remote main trees
+matched the independently reviewed heads.
+
+On November 20, 2026, the managed launcher rehearsed on a disposable copy
+and installed `workspace-f9b26eccfcf93e4da47f` on port 41822. The backend
+binary matched the previous checkpoint byte for byte. The installed service
+served all 22 desktop and 24 phone files byte for byte and reported Study
+status and Stockfish availability. The database kept its identity, file
+inode, schema 14 and active study state. All 46 tables matched the
+stopped-time backup, and SQLite integrity and foreign keys passed. The
+previous registration and database backup are in
+`recovery-start-iwd4c9vb`.
+
 ## Personal tactics and playing patterns
 
 | Behavior | Basis, owner and inputs | Independence and lifetime |
@@ -3227,3 +3280,10 @@ A separate real Stockfish run on the populated archive copy settled 12 learner t
 Final review verified that the detail read uses the addressed position and that the archive report has a bounded background worker. The finding and game reads carry the exact verified learner and the application checks them again at the join, so a concurrent import changing the requested perspective cannot mix two players' evidence.
 
 The repeated debug run also saw one 4.91-second current-stamp read. The final optimized candidate resumed the paused archive copy, committed five additional turns in 58.0 seconds including the Study quiet period, and kept 55 stamped Study reads at a median 0.6 ms and a maximum 9.9 ms. One turn was inconclusive and retained its retry state. The copy passed integrity and foreign keys. This verifies a bounded resume, while the full installed archive scan and its correlation readout remain pending.
+
+### Interface review corrections
+
+- Chess declares whether a detector produces complete decision evidence. The host selects the archive producer by that declaration. Descriptor IDs, labels, ordering and other detector registrations are independent of whether the personal archive is enrolled and reported. Legacy winning-mate evidence and complete decision evidence are mutually exclusive. Store selects the report rows by the accepted assessment kind.
+- A clear opportunity contributes to its playing-load band even when a different turn in the same game has an unclear motif. Game-level loss attribution still withholds an uncertain no-miss claim. The approved ambiguity rule applies to competing non-mating options.
+- Store's request state distinguishes queued, issued, superseded while issued, and reviewed. Games renders that typed state. Supersession preserves the original active attempt and forbids future issuance of the obsolete request.
+- The combined candidate includes the installed desktop board-resize release and its packaged Core 0.2.4. Prior runtime behavior and evidence unrelated to the changed consumers remain in scope.
