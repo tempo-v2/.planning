@@ -2945,3 +2945,37 @@ and dismissal, with no success toast on a lost acknowledgement and a
 confirmation after exact replay of the original mark.
 
 Both component pull requests target main. Installation is separate.
+
+### Independent review and installation, November 20, 2026
+
+A fresh Astra review found no interface, ownership, or coupling issues. The
+reviewer independently ran the desktop Saved for Review journey in Chrome
+and Phone Study in WebKit on disposable databases. The checks covered
+accepted replies, dismissal, settings across navigation, removal, and
+replay of the exact command after a lost phone acknowledgement.
+
+[Core #7](https://github.com/tempo-v2/tempo-core-components/pull/7) merged as
+`56fbc3e0acfa89a2a4798a8e854f147bbb1f8498`,
+[UI #35](https://github.com/tempo-v2/tempo-ui/pull/35) as
+`8d0632e54fe12dc73005ce714d530af424c7b0f9`, and
+[Planning #46](https://github.com/tempo-v2/.planning/pull/46) as
+`30ced5fcae583168f6bbde732828c255c9d07fca`. All three merge trees matched
+the reviewed heads.
+
+The managed launcher rehearsed on a disposable copy, took stopped-time
+backup `recovery-start-xiot478i`, and activated
+`workspace-d109531bfb95cf3cf2f6` on port 41822. It used the launcher's
+option to retain the separate post-game prototype. The backend matched the
+preceding release byte for byte.
+
+The registered service served all 22 desktop and 24 private HTTPS phone
+files byte for byte. Both Study status reads and the desktop repertoire
+list reported the retained dataset. The database kept its file identity,
+schema 13, and the active Study attempt. All 39 SQLite tables matched the
+backup, and integrity and foreign-key checks passed.
+
+| Installed artifact | SHA-256 |
+| --- | --- |
+| Tempo executable | `156eaa0bb833831881360eea160b56ce2932be2290ceba5cc26fba7fbf4fcbb6` |
+| Desktop JavaScript | `ebe33969e3ec4aa3139433e0a3c636d5de034859e57cb6a4c2440248a3118fde` |
+| Phone JavaScript | `5c1ba6d33aa02753b4f70c1737fd6b2c9802ad3df923a90c034a0e28f6e08455` |
