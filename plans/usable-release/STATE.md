@@ -2780,7 +2780,30 @@ receipt, and one learning row with zero assessments. Independent review traced
 the validation and recovery path and ran nine focused UI checks. Chrome was
 run in the implementation environment with local browser and port access.
 
-Candidate publication is for review. Managed installation is pending.
+### Independent review and managed installation
+
+A fresh Astra review of the published heads found no interface ownership or
+coupling blocker. It independently passed nine focused tests and the Chrome
+capture journey, including exact Save recovery on disposable SQLite data.
+
+Tempo UI #33 merged as `8321754ca28f2e34bd45b6d2c5102218bc33ba06`. Its merge
+diff matches the reviewed diff. Repertoire suspension had also merged and
+been installed, so the combined release uses its Tempo
+`7f8060cabd1f03efa7faac27275f50dcd0e1a3a4`, Store
+`27ffcc992d4b12424c1208676ae594d4245277e9`, and other pinned components.
+The combined release passed 111 UI tests, both desktop Chrome journeys,
+and Phone Study in WebKit. The backend rebuilt byte for byte against the
+installed suspension baseline. The combined desktop JavaScript SHA-256 is
+`6b0b7e8af45d06982e805acc2da857214e88e2c83b93387b2de61b3bd004ff60`.
+
+The managed launcher activated `workspace-73d00fe272ee6d48eff4` on port
+41822 after rehearsal, with stopped-time recovery `recovery-start-firzf3oa`.
+The registered process served the built 22 desktop and 24 private phone
+assets byte for byte. Both Study status reads returned the retained dataset.
+SQLite retained schema 13 and the original database file. Integrity and
+foreign keys passed. Thirty tables matched the backup exactly. Verified
+receipts for a live repertoire suspension and a Study answer with its next
+attempt accounted for the other eight tables after restart.
 
 ## Repertoire suspension candidate
 
