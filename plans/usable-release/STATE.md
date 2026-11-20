@@ -2979,3 +2979,59 @@ backup, and integrity and foreign-key checks passed.
 | Tempo executable | `156eaa0bb833831881360eea160b56ce2932be2290ceba5cc26fba7fbf4fcbb6` |
 | Desktop JavaScript | `ebe33969e3ec4aa3139433e0a3c636d5de034859e57cb6a4c2440248a3118fde` |
 | Phone JavaScript | `5c1ba6d33aa02753b4f70c1737fd6b2c9802ad3df923a90c034a0e28f6e08455` |
+
+## Opponent moves in Study
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Find the opening move | Study should begin one ply before the learner's response when the exact move is available. Chess accepts the legal predecessor from an authored route, selected tactic range, or explicit source setup. Game repairs use the preceding move in the verified played game. The move must reach the canonical issued position. Chess combines matching source evidence independently of order. Conflicting candidates remain ambiguous across reimports. Labels, activity display text, and clock counters are independent. |
+| Present the exercise | Tempo pins the verified pair when issuing the attempt and exposes playback context for an unplayed first decision to opted-in Study wire 5 clients. The current board also carries its exact opponent arrow on resume, based on the issued definition and played cursor. Desktop and phone UI hold the pre-move board for 250 ms and keep one presentation per active attempt in the browser tab. Later replies use the grader's accepted autoplay moves and replace the red arrow in place. Playback has no command or scheduling effect. |
+| Recover saved context | The user selected existing-card coverage. An explicit metadata backfill uses the retained authored PGN, referenced capture archives, and verified original tactic transfers. Missing or conflicting evidence leaves the solver position available. Additional source evidence can mark an already-verified context conflicting through the same Chess reconciliation. Store updates only current presentation metadata against the observed dataset and write revision. Issued attempts, content versions, authored revisions, receipts, and learning stay as they were. |
+
+Qualify together on the installed notifications baseline
+`workspace-d109531bfb95cf3cf2f6`, SQLite schema 13. The candidate keeps
+Study wire 5 with opt-in move context and portable format 5.
+
+| Component | Qualified commit | Draft PR |
+| --- | --- | --- |
+| Chess | `013c9d3497bdc6d7287371b2201073aeff3bcdc5` | [#21](https://github.com/tempo-v2/tempo-chess/pull/21) |
+| Store | `ee3cae09a496a3eec60fde76ec561e85a8146d36` | [#22](https://github.com/tempo-v2/tempo-store/pull/22) |
+| Tempo | `33117a0ff09101f9e7516693515b9e9d42914499` | [#41](https://github.com/tempo-v2/tempo/pull/41) |
+| UI | `326b54e1d96cc14e986e2d20183ff9196ac19bac` | [#37](https://github.com/tempo-v2/tempo-ui/pull/37) |
+
+Reuse Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
+Queue `777345256564cefa7f25d537a5a7c51a5377e749`,
+Learning `58197f6fa9b2ea33907f2e305ec07efda64d553d`, and
+Core `56fbc3e0acfa89a2a4798a8e854f147bbb1f8498`.
+Use the installed notifications release's workspace and UI locks and
+packaged Core 0.2.3.
+
+The locked Chess, Tempo and Store suites passed 269 tests and doctests.
+The packaged UI passed 112 tests. Chrome covered the exact pre-move board,
+the hold and board lock, legacy client compatibility, refresh, navigation,
+reduced motion, wrong-move recovery, restoring the latest arrow after a
+refresh, and successive replies on a stable board.
+WebKit covered touch Study, the red arrow, the actual game's repair lead-in,
+and Retry Next. Nine Chrome journeys reproduced the same Study commands and
+durable outcomes with the exercise name present, renamed or omitted. Six
+accepted-lost and unaccepted journeys started with the actual installed
+predecessor and replayed the exact Answer, Learn more tactics, and PGN Save.
+
+A disposable backup of the installed dataset recovered 3,310 repertoire
+positions and 17,267 tactics. Verified disagreement for 106 positions was
+retained as ambiguous presentation metadata. The
+preview left the file byte-identical, and repeating Apply produced zero
+updates. Thirty-seven tables matched exactly. Only current card metadata and
+the store write revision changed. SQLite integrity and foreign keys passed.
+
+Prepare the private transfer from the retained Tempo 1 bundle. Preview on the
+disposable database before adding `--apply` to the backfill command.
+
+```sh
+python3 -B tempo/tools/tactics/recover_setup_moves.py RETAINED_BUNDLE > PRIVATE_TRANSFER.json
+target/release/tempo backfill-study-lead-ins DISPOSABLE_DATABASE PRIVATE_TRANSFER.json
+```
+
+Publish the compatible set for review. Managed installation and application
+of the backfill to the live dataset are separate release operations.
