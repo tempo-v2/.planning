@@ -2781,3 +2781,80 @@ the validation and recovery path and ran nine focused UI checks. Chrome was
 run in the implementation environment with local browser and port access.
 
 Candidate publication is for review. Managed installation is pending.
+
+## Repertoire suspension candidate
+
+**Suspend** in Repertoires pauses one book indefinitely. **Resume** restores
+eligibility under the saved schedule, including reviews that became due in the
+meantime. The repertoire stays visible and editable.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Change repertoire activity | The requested control uses dataset identity, repertoire identity, and an explicit Active or Suspended choice. Tempo asks Study to abandon an unfinished matching attempt without grading. Store validates and saves that transition, the setting, and the receipt atomically. Display name, learner color, PGN shape, and other repertoires are independent of the command. The setting persists in SQLite and full database backups. The portable content-and-learning format keeps its existing scope. |
+| Invalidate the affected reads | Store supplies a Games comparison basis with authored content and participation revisions. Participation changes also advance the Study revision. Authored editor drafts and signed PGN Save use the authored revision. The UI identifies Games evidence scope explicitly, independently of document version pinning. Historical corrective choices whose compared repertoire scope diverges carry an application-projected status asking for a new comparison. |
+| Select Daily Study | Tempo supplies participating targets and routes to Queue. Suspension excludes due work, teaching, and corrective repair and recall. It retains the existing schedule, accepted results and same-day allowance usage. Exact replays keep their accepted result, and an old suspension receipt cannot undo Resume. |
+| Check game coverage | New comparisons, gaps, and Maia work use participating repertoires. Raw game import and the played timeline remain available. Historical summaries, encounters, and gaps are retained, including when an old game is processed again during suspension. Resume permits subsequent checks under the usual rules. Existing corrective choices retain their authoritative attribution, including when the chosen book is suspended. |
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Store | `4d7f57593601f245d1b19a7f7a83aa5abfda6494` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
+| Tempo | `4cd489a8adeeb2ab2d304229eb809905796fe2f8` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
+| UI | `abd711ede99f679b7b77e3cb8580b3048c227ad1` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
+
+Assemble with Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`,
+Queue `777345256564cefa7f25d537a5a7c51a5377e749`,
+Chess `268bd292b18396880740f24ca2c471728c6651d1`,
+Learning `58197f6fa9b2ea33907f2e305ec07efda64d553d`, and
+Core `99364f6d47a0467ed1cf0edf6a904566dc720dd6`
+with packaged Core 0.2.2. Reuse the prior workspace Cargo lock
+`c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0`.
+UI lock SHA-256 is
+`f713bbeded47625dd599dd75bf123ebe57d51c1a22336e94f2f6c15e05c4fe23`.
+SQLite advances to schema 13. Study wire 5, content wire 4 and portable
+format 5 carry forward. The repertoire list adds an optional activity field
+for compatibility with earlier serialized Save replies.
+
+The architecture checks, 174 Tempo and Store Rust tests and doctests, and
+107 UI tests passed. The Study contract covered new and due work, an issued
+lesson, rename and replacement while suspended, preserved grades and receipts,
+restart, and unchanged activity from another repertoire. The Games contract
+covered overlapping repertoires, raw game review, suppressed coverage and
+Maia inputs, and existing gaps returning after Resume. A fault-injected
+receipt failure rolled back the suspension and abandonment together.
+
+Desktop Chrome exercised cancel, suspend, a lost accepted response, restart,
+byte-identical replay, and Resume. Independent review ran nine mounted Study
+metadata cases and six accepted-lost and unaccepted Answer, Learn more
+tactics, and PGN Save cases using the actual installed predecessor. It
+verified exact delivery and a single durable effect in each case, including
+the previous PGN Save reply shape and Retry Next without another acceptance.
+The schema-12 to schema-13 rehearsal on a disposable copy preserved all
+37 previous tables and objects. Integrity, foreign keys, Study and Repertoires
+readback passed.
+
+The three candidate PRs target main. Managed installation is pending.
+
+### Astra interface review
+
+The first review identified five issues. The candidate now uses separate
+participation and authoring revisions, moves the abandonment decision to
+Tempo and Study, carries Games evidence scope explicitly, projects stale
+historical choice availability in Tempo, and preserves existing choice
+attribution when a book leaves the comparison. Focused tests on disposable
+data cover an unaffected signed edit, unpinned Games evidence, the projected
+choice status, and both reprocessing and startup reconciliation after suspending
+a previously chosen repertoire.
+
+The second review caught an unnecessary Store prompt comparison and a UI
+handler that discarded a valid PGN preview. Store now relies on its existing
+snapshot invariant for prompt lifetime. The editor retains its signed preview
+while the activity command refreshes the catalog. The mounted Chrome journey
+completed the preserved replacement alongside suspension recovery, the Games
+scope, and the historical choice readback.
+
+A fresh final Astra review found no interface, ownership, or correctness
+issues in the revised runtime. The reviewer independently passed six
+focused Rust tests and nine mounted Study metadata journeys. The prior
+PGN Save fixture waits for the old response to fail and for the independent
+old model projection to settle before comparing every prior table.
