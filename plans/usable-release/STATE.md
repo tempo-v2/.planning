@@ -3101,9 +3101,21 @@ exact all-root result recovery. The shared-host test ran two registered
 detectors through one position and counted one engine evaluation. The
 application test exercised two saved positions, the exact opponent setup move,
 a due review between game puzzles, and alternation across restart. The UI
-passed all 124 tests and built both output surfaces.
+passed all 125 tests and built both output surfaces.
 
 The managed predecessor's stopped-time backup was cloned for a schema 13 to 14
 startup rehearsal. The candidate preserved all 39 prior tables row for row.
 SQLite integrity and foreign-key checks passed. Managed installation and live
 game enrollment remain separate.
+
+With a controlled idle signal on one disposable game, real Stockfish confirmed
+the missed pawn capture of the queen and issued a Study puzzle with the exact
+opponent move. The run took 10.4 seconds, with a slowest queue tick of 3.6 ms
+and a slowest in-process Study progress read of 0.7 ms. Headless Chrome loaded
+that saved result through the compiled Games UI, exercised Pause and Resume,
+and observed the predecessor board transition to the solver board in Study.
+
+The separate unassisted real-engine HTTP/browser run remained waiting for Mac
+idle and could not qualify automatic start or a multi-game soak. The timings
+above describe the single-game disposable run. Large-archive throughput and
+latency on a populated result write remain release checks.
