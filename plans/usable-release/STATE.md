@@ -2138,3 +2138,109 @@ is still the PGN-cap checkpoint described above. All mutation and failure
 fixtures used disposable data. No install or retained-data enrichment
 was performed in this run. Tactical detector algorithms and flashcard
 generation belong to the subsequent project.
+
+### Disposable post-game repertoire prototype
+
+Andy asked to compare a completed game with a chosen repertoire and save a useful
+continuation through a chosen board. The baseline is the reviewed interface
+candidate above. This experiment uses synthetic games, separate local origins
+and SQLite files. Implementation and browser observations belong to the prototype.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Open the game and select a position | Store identifies the accepted raw game by dataset, source and game ID. Tempo validates the learner's side and selected repertoire. Chess supplies its played timeline, position identity, authored replies, departure and reentry. UI holds the selected occurrence, destination and navigation. Display names, game results and detector availability do not determine preparation. |
+| Explain existing preparation | Compare the current verified document with this game's positions. A different played move at a prepared learner position is a review opportunity. An unfamiliar opponent move can need a reply. An authored endpoint can be left as it is. Only Learning's introduced fact establishes whether a saved decision has been introduced. A missing document or learning row remains unknown. The historical import result keeps its original meaning. |
+| Save a selected line | Exploring and reviewing are reads. The selected endpoint and destination determine the exact line submitted to Chess's existing signed preview. An add-only save accepts the preview only when it preserves prior responses and retires no routes. Store owns acceptance, revision checks and immutable replay. A successful save refreshes the current comparison. An explicit study answer remains a separate operation. |
+| Describe completion | Report the specific completed comparison or accepted edit and the currently unresolved positions. Opening the board cannot establish completion of a human review or detector run. Current comparisons are specific to this game and destination and imply no population-level coverage. |
+
+One relevant change is a different prescribed response for the same canonical
+board. Renaming the repertoire and changing move order on the way to that board
+must preserve its exact prescription. A different destination can legitimately
+change that answer.
+
+The [walkthrough, screenshots and disposable setup](postgame-prototype/README.md)
+record the two fresh browser visits and a return-screen follow-up. The first visit
+could save a marked line but could not find an arbitrary game board or a
+transposition, or determine completed work on returning. The independent repeat
+completed all eight tasks. Its first pass still required reopening River to
+identify the remaining move. In the subsequent repeat, the library displayed
+the saved stop at 5.cxd4 and the outstanding 4…Nxf3+ for the same destination.
+
+| Prototype component | Verified source | Draft PR |
+| --- | --- | --- |
+| Store | `8f3bb25ff7c0713ebda8b433571701bba4bbc547` | [#17](https://github.com/tempo-v2/tempo-store/pull/17) |
+| Tempo | `0e89791476a95372a36090b3abd11b955c03bd6c` | [#33](https://github.com/tempo-v2/tempo/pull/33) |
+| UI | `fc1a1cfd25dd5a2b242140ac174a532678b47c42` | [#27](https://github.com/tempo-v2/tempo-ui/pull/27) |
+
+Each PR targets the reviewed interface execution candidate. Retain its
+[other component pins](manifest.json) and workspace lock. The Core 0.2.2
+package SHA-256 is `4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4`.
+Schema 11 and the existing immutable command and receipt formats carry forward.
+The new addressed game review is a read. Player headers were added to the
+history read. No released or managed installation was selected or changed.
+
+The application and Store passed 96 library tests. The UI passed 93 tests.
+Chrome exercised exact rendered piece squares, an explicitly selected range
+through reentry, a switch between two same-color books mid-variation, a
+protected conflict, a bounded save, reload and mobile layout. Existing
+detector, gap recommendation and Games recovery journeys passed. Independent
+old-release recovery used a clone of the static installed-schema backup and the
+real previous binary for both lost and unaccepted Games imports and signed
+repertoire saves. Chrome recovered each immutable command with one effect.
+The [walkthrough](postgame-prototype/README.md) records the proof limits.
+
+The reviewer's only content save added one authored line through 5.cxd4 and
+two unintroduced targets. All 18 prior learning rows and target versions
+matched. SQLite integrity and foreign keys passed. The populated and empty
+copies reserved for Andy use separate local origins and databases; every
+database row matched its own starting fixture at handoff. All 22 served UI
+files matched the qualified directory on both ports. Ports 42684 and 42686
+are reserved only for these local demo instances.
+
+The optimized executable SHA-256 is
+`dbfe98b22b2b0bd077e73f8eeec4bbefe9af4612a5850c215a8e2ddd2a841615`.
+The UI JavaScript SHA-256 is
+`033895265be34eb7294b52111b30285225f4d1142c25410221d3b5bea5647dae`.
+The CSS SHA-256 is
+`5ed443269e98902e379a1a597a9f4600308368716b283bbe036f06ff31fd0094`.
+
+### Andy's board and game-finding walkthrough
+
+Andy could tell that he chose Bb5 over Bc4, but the board replayed his drag and the candidate controls competed with a simple review. He could not find an Italian game with an unexpected reply in the library.
+
+- A drop follows the legal move accepted by the existing board and Chess. A played departure and a saved response are cues at that exact position. Changing their labels, source visibility or table order has no effect on selection or saving. An off-game branch is an unsaved candidate until Andy previews and confirms its selected range through the existing command.
+- A game is discoverable by its retained player names, opening tags and first main-line moves. For the action filter, only a saved comparison for the selected repertoire can describe how that game first left preparation. Its recorded departure kind is authoritative for that comparison. Opening names and names of books are display facts. Opening a result compares against the current document again. Reading or filtering makes no learning or content changes.
+- Engine line count controls only the bounded position search. Omission preserves three lines for older callers. Changing engine count or ranking never selects a repertoire response.
+- The personal instance is a point-in-time copy in its own local directory, port and browser origin. Restart reopens the same copy. Real games, account settings and credentials stay outside repository artifacts.
+
+The independent walkthrough used a new private browser context. The final return visit explained how a previously recorded opponent gap became a different played response in the current document and retained that explanation on reload. Frame sampling covered actual board drags. The candidate comparison, opening search and signed add-only save were exercised in Chrome on disposable games. The empty library loaded separately.
+
+| Prototype component | Reviewed source | Draft review |
+| --- | --- | --- |
+| Chess | `a5dcf40e3f51bfa5ff45f9c466922ca541965706` | [#18](https://github.com/tempo-v2/tempo-chess/pull/18) |
+| Store | `9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9` | [#17](https://github.com/tempo-v2/tempo-store/pull/17) |
+| Tempo | `29623cf1951a06b73ffe57db364d0ecf6c507106` | [#33](https://github.com/tempo-v2/tempo/pull/33) |
+| UI | `59e05d22d2b02d39e0040b4282036f82ff794d1e` | [#27](https://github.com/tempo-v2/tempo-ui/pull/27) |
+
+Use the remaining pins and packed Core package from the preceding prototype entry. The application added a read-only archive page and an optional engine search count. New manual imports retain optional opening labels independently of game identity. Existing comparison, learning and save command formats still apply. The Store regression covers two learners, historic summaries, more than one page and a new comparison arriving between reads. All 93 UI tests passed. Live requests returned one, three and five Stockfish candidates and actual Lichess and Maia values. A row-by-row digest of thirteen content, game, receipt and learning tables still matched the source snapshot after the independent walkthrough. The database copy also passed integrity and foreign-key checks.
+
+The [updated walkthrough](postgame-prototype/README.md) includes the synthetic board screenshot and both disposable launch options. Personal examples and data remain local. No merge or production installation was performed.
+
+### Retained draft and consistent repertoire evidence
+
+Game navigation changes what is being viewed. The retained draft changes on deliberate authoring, explicit discard, or confirmed save. Its original game, range and continuation must survive browsing and return. The selected destination and its reviewed version govern preview and save. Repertoire evidence must describe the same dataset, book and version as the displayed review, including after asynchronous replies or another edit. A stale comparison offers a fresh read. Board position, column visibility and move ordering grant no permission to change content or learning.
+
+Admission to the move table is a presentation choice over a bounded set of relevant moves. A source supplies its measurements for those rows. An exact zero remains a value. No pending or failed source can answer for another. Study determines when an answer may be shown before analysis opens. The signed authoring command and its stored delivery identity still govern an actual save.
+
+Implemented and verified on the isolated instances. [UI #27](https://github.com/tempo-v2/tempo-ui/pull/27) is at `d16ead4f2dec84dbfffe80d2b2c572f2e8e0e75e`. [Tempo #33](https://github.com/tempo-v2/tempo/pull/33) is at `26ac49a1c1406c5d0b2c34ec285bcc3f8f8a0650`. The preceding Chess, Store and packed Core pins still apply. All three local instances served the built assets byte-for-byte.
+
+- Reproduced losing the reply on return to the game before the fix. Afterward Chrome covered backward navigation, competing branches, explicit replace/discard, switching destinations, library return, reload and save while viewing a different board. The independent reviewer reproduced and then verified the fix for a late preview after a second tab discarded its draft. Lost-response replay used the original signed command and preserved a newer edit.
+- The application rejects evidence for the wrong repertoire, document or content revision. A real document replacement during an open review removed stale Saved cells, then showed the new response after reload. The candidate browser test distinguishes measured zero, missing, pending and unavailable. The full board also exercised pinning and authoring with the explicit legal-move list.
+- The 96 UI tests, shared-board drag/promotion journey, signed editor restart/replay journey and scheduled Study analysis disclosure test passed. The personal walkthrough preview listed one new position, zero changed answers and zero retired positions. Its one accepted save created one content receipt and one unintroduced target. Existing learning rows, target identities and versions, attempts, assessments, game evidence, quotas and Study receipts matched the pre-save snapshot. Only the selected book’s document changed.
+- [Walkthrough](postgame-prototype/README.md#keeping-a-draft-while-looking-around). The private game, screenshots and local browser profile are on Andy’s machine. No production release was requested or installed.
+
+### Stale review warning
+
+A detected repertoire-version mismatch belongs to the loaded game comparison. Its owner retains the warning and reload action through board navigation, source visibility changes and failed reloads. Only a successful fresh review replaces the earlier comparison. The warning is presentation state and never writes repertoire or learning data.
+
+UI candidate `e3392f853eb3d42f95400fb8c5afc445c20f51ab` extends [UI #27](https://github.com/tempo-v2/tempo-ui/pull/27). The Chrome regression edits the destination from e4 to c4 during review, observes the mismatch, changes source visibility, closes comparison, navigates forward and back, and forces one failed reload. The warning and its reload action survive. The successful reload shows c4 and clears the warning. All 96 UI tests passed. The preceding runtime and package pins still apply.
