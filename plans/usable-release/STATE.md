@@ -3033,5 +3033,50 @@ python3 -B tempo/tools/tactics/recover_setup_moves.py RETAINED_BUNDLE > PRIVATE_
 target/release/tempo backfill-study-lead-ins DISPOSABLE_DATABASE PRIVATE_TRANSFER.json
 ```
 
-Publish the compatible set for review. Managed installation and application
-of the backfill to the live dataset are separate release operations.
+### Independent review, merge, and installation
+
+The first review found that a refreshed card lost the last reply arrow and
+that conflicting predecessors could depend on source order. The second
+review verified both fixes and found that backfill could overlook new
+evidence on cards with an existing move. The third fresh Astra review
+found no actionable interface, ownership, or coupling issues. It ran the
+SQLite backfill conflict regression independently and confirmed the active
+attempt and learning remained pinned. The reviewed combined build retained
+the installed notifications release and its Core 0.2.3 package.
+
+| Repository | Verified merge commit |
+| --- | --- |
+| Chess | `07b13a0d04c616db1db46943dc45a512470ddcaf` |
+| Store | `262a379823c71dee455fad24dd46a866a13b2525` |
+| Tempo | `4013a6d1c8d3ca32cb8b8ab756541f2ab4474605` |
+| UI | `5a9f35878212ae9d9caaf9816591e524725d39a8` |
+| Planning | `78d4e1ce6722aadbdb313fe91600c7dc4a591c2b` |
+
+All five merge trees matched the reviewed source. On November 20, 2026
+the managed launcher installed `workspace-641aab206895726c7169` on port
+41822 and saved backup `recovery-start-gyo8ui35`. The launcher retained
+the separate development prototype. Disposable rehearsal checked the
+same managed readiness before and after annotating the saved dataset.
+
+The live backfill took a separate stopped-time backup,
+`recovery-opponent-moves-91tuby6j`. It added 3,093 repertoire contexts and
+17,267 tactic contexts and marked 84 additional disagreements. The final
+catalog had 20,599 verified contexts and 106 conflicting contexts. A second
+application made zero changes. Thirty-seven tables matched the stopped-time
+backup exactly. The two other tables changed only in current presentation
+metadata and the store write revision. The active attempt, all previously
+saved learning, and the original schema-13 database file were preserved.
+Two accepted repertoire document saves between the artifact switch and the
+backfill account for the independently observed content changes in that
+interval.
+
+The registered listener served all 22 desktop and 24 private HTTPS phone
+assets byte for byte. Both read-only Study status calls and the desktop
+repertoire list used the retained dataset. SQLite integrity and foreign
+keys passed.
+
+| Installed artifact | SHA-256 |
+| --- | --- |
+| Tempo executable | `02d3769ef42b0589ba9d2f3704c0cf68972e301bf1cb42ddf9ca3d77511def2a` |
+| Desktop JavaScript | `ee96cfa2fc753b5eeb12ad9bbdb6ef1cbaf3d7c5bf5ff55749f24975e80eb4db` |
+| Phone JavaScript | `6d0ea3363110bec7991e801c219b69e22d748342057919c28b8bfa8b93f573a8` |
