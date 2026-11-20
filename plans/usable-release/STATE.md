@@ -2009,3 +2009,38 @@ matched the qualified head listed above. The merged workspace uses
 Chess `25fe9e01482ddc04d323207c18fdcfb5e97be4db`,
 Tempo `5130af42f78e5aa25ad42056c8f0b2c6544dd5f3`, and
 UI `a16b7ca4ca3149b5789f8e6f935fcdf9b3f8f75c` with the same companion pins.
+
+## Phone Study deployment, November 19, 2026
+
+| Decision | Authority, inputs and lifetime |
+| --- | --- |
+| Admit a phone request | The approved phone release is online and private to the configured owner. Tempo HTTP uses Tailscale's forwarded HTTPS authority and login, the exact configured origin for POST, and the Study path and method allowlist. The managed registration retains the opt-in over restart. Public Funnel traffic and foreign origins are denied. |
+| Select and save a Study attempt | The phone embeds the same Study session and calls the existing commands against the retained dataset. The shell supplies navigation and analysis availability. The application's authored Study context, receipt identity and durable grading rules apply at both origins, independent of display name and device. |
+
+Tempo [#34](https://github.com/tempo-v2/tempo/pull/34) publishes code
+built at `0167d0e210d97a1453a5709a3f980cc211e1e653`. The PR head
+`eef61a152d6a6e5584fc336b441dc263fa5cae2e` adds the documented Serve off command.
+UI [#28](https://github.com/tempo-v2/tempo-ui/pull/28) publishes and serves
+`835d2b003295d92066b8ac57f97f6751f00f708a`. The [manifest](manifest.json)
+records the compatible sources, Core package, locks and installed hashes.
+
+The optimized locked build, 51 Tempo tests and 63 UI tests passed.
+Packaged WebKit with iPhone touch input solved two tactics and confirmed
+the same active attempt over the desktop API. An accepted answer with a
+lost reply replayed its original bytes and had one grade and receipt. A
+failed Next preserved the answer and retried only Next. Inline corrective
+replay remained available. Independent packaged Chrome verification
+covered desktop corrective Study, interrupted Next and standalone analysis.
+The managed installer rehearsed both surfaces on a disposable copy of the
+retained schema-11 database.
+
+The registered service installed `workspace-7d86fed76f7dde27c227`
+on port 41822. The database kept its inode and schema, and all 34 tables
+matched the stopped-time backup `recovery-start-esy5gyj0`. Integrity and
+foreign-key checks passed. All 22 desktop and 24 phone assets matched the
+installed files through their respective routes. Tailscale Serve on 8443
+served the phone bundle privately and reported the same dataset as
+desktop Study. Games, repertoire writes, and requests with a mismatched
+Origin or loopback Host were rejected through the actual proxy. The
+existing Tempo 1 route still responded. Three separate lab processes
+were preserved. Actual iPhone Safari over cellular acceptance is pending.
