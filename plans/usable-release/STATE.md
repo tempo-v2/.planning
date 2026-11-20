@@ -3165,3 +3165,40 @@ The installed desktop served all 22 files byte for byte. Schema 14 retained
 the same dataset and the active Study attempt. All 39 preexisting tables
 matched the stopped-time backup, integrity and foreign keys passed, and no
 retained games were enrolled as part of installation.
+
+### Background analysis follows Study focus
+
+| Behavior | Basis and owner | Inputs and independence | Lifetime |
+| --- | --- | --- | --- |
+| Analysis can start after 30 seconds away from Study on wall power. | User-selected Study-only focus policy. The presentation shell reports presence, and Tempo's local runtime owns the admission and cancellation decision. | Visible and focused desktop Study, visible phone Study, actual Study commands, power, manual pause and foreground engine demand. Mouse, keyboard and unrelated browser activity are irrelevant. | Presence is an expiring in-memory signal per tab. A service restart gives clients 30 seconds to reconnect. Queued positions and accepted results retain their existing Store identity. |
+| Games explains what holds the queue. | The existing Analysis panel reflects the local runtime's decision. | A typed wait reason from the runtime. No policy depends on display text or a user setting. | The optional reason is negotiated by the client to preserve compatibility with older open tabs. |
+
+The service tracks each Study tab by an ephemeral identity and monotonic message
+sequence. A delivered release starts the quiet period even when it overtakes
+activation. A lost browser becomes inactive when its last heartbeat is 30
+seconds old. Study status reads, Games, Settings and backgrounded Study tabs
+leave analysis eligible. Active Study and genuine Study commands interrupt
+background work through the existing detector host.
+
+Candidate branches are [Tempo #43](https://github.com/tempo-v2/tempo/pull/43)
+and [Tempo UI #39](https://github.com/tempo-v2/tempo-ui/pull/39), based on
+the installed position-analysis source pair. Their code heads are
+`0ae0f0b1ca27d5bd83abf126dc01c4b6815eb1c8` and
+`6ec60270aa50daf26f4ebc75c60f642eb55142ee`. All other component pins
+and the dataset schema are shared with the position-analysis release.
+
+Independent review traced desktop and phone presence through the real UI entry
+points, the HTTP authorization boundary, and the existing cancellation path.
+The final heads passed 402 Rust tests and doctests, 128 JS tests, and four
+production HTTP tests, including phone ingress and Study receipt replay.
+The Mac Chrome rehearsal kept a focused Study page active for over 30
+seconds without a move. After switching to Games, real analysis started in
+30.26 seconds while the machine's HID idle time was 0.23 seconds. Returning
+to Study yielded the engine and kept completed positions.
+
+Both qualified source trees merged to main. The managed installer installed
+`workspace-d29667030ac522f8838b` on November 20. Readback verified the
+schema-14 dataset and active attempt, all 46 pre-existing tables, all 22
+served desktop files, working Stockfish discovery, 12 queued games and
+24 previously completed positions. The service used the existing
+registration and kept `recovery-start-niswgz8t` as the stopped-time backup.

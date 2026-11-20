@@ -1980,5 +1980,52 @@
       "rollback_backup": "recovery-start-6sczmyp4",
       "date": "2026-11-20"
     }
+  },
+  "study-focus-analysis": {
+    "repositories": {
+      "tempo": "15f6701d4ae7fd553039848553d193f623c12915",
+      "tempo-chess": "3deaf5afc5cada2d30e4b836afe8572c73860c43",
+      "tempo-store": "30f9f067f85c089f1b0e41299b99d721f5552b07",
+      "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
+      "tempo-queue": "211f3f51a2fbfa8b41fedff53ddc821d4b79d5a2",
+      "tempo-ui": "a5fb31eb81b8d68aff3f45c4ee5fe65dbbaaa023",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
+    },
+    "pull_requests": {
+      "tempo": 43,
+      "tempo-ui": 39
+    },
+    "qualification": {
+      "rust_passed": 402,
+      "ui_passed": 128,
+      "http_passed": 4,
+      "review": "clean",
+      "seconds_to_start_on_games": 30.26,
+      "mac_hid_idle_at_start_seconds": 0.23,
+      "yield_on_study_return": true
+    },
+    "installation": {
+      "checkpoint": "workspace-d29667030ac522f8838b",
+      "port": 41822,
+      "schema": 14,
+      "prior_tables_identical": 46,
+      "dataset_preserved": true,
+      "active_attempt_preserved": true,
+      "served_desktop_files": 22,
+      "stockfish_detector": "available",
+      "current_game_positions": 31,
+      "preexisting_enrollments": 12,
+      "sqlite_integrity": "ok",
+      "foreign_key_issues": 0,
+      "backend_sha256": "1c401b946f242f6adbc283a62021e151c9d315890b0de1f922b8002fcc76f5bc",
+      "rollback_backup": "recovery-start-niswgz8t",
+      "date": "2026-11-20"
+    },
+    "built_ui_sha256": {
+      "desktop": "4bb57742f1d896e92f636d077ee5375eb722829dfa61ba5e42d0d115e3776003",
+      "phone": "2603a033b0ad3a6189153e9f06c285cebc298a41b58b6ac570a64b278886a7b3"
+    }
   }
 }
