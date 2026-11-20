@@ -1868,5 +1868,37 @@
       "ui/phone/assets/wR-IQNXS3HT.svg": "494fff9b13a24122b4fa6df1fd1070b0470a7cf8d603ac14f4290d00a149bec3",
       "ui/phone/index.html": "4d5169c1972909ce18441e1dc0b440c69672145bc8ba77958a97fe06e0fdaef8"
     }
+  },
+  "queued-position-analysis": {
+    "status": "draft",
+    "base_release": "study-opponent-moves",
+    "repositories": {
+      "tempo": "df647ff186dae8e7914a0cafa4e07e2459f54d09",
+      "tempo-chess": "050383f9303d041117e6f2bbcd48bf5ee4febdf0",
+      "tempo-store": "87ed1766f41c83f0070336c693558de7af207592",
+      "tempo-learning": "0571accc86ddd18e6863d6d64b85b8566cde67a8",
+      "tempo-queue": "d66861b54135edbf70b334af57b9a8a3262edb63",
+      "tempo-ui": "fa19bc75e0d451846d596c93d9fddcbbc70174ea",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-core-components": "56fbc3e0acfa89a2a4798a8e854f147bbb1f8498"
+    },
+    "pull_requests": {
+      "tempo": "https://github.com/tempo-v2/tempo/pull/42",
+      "tempo-chess": "https://github.com/tempo-v2/tempo-chess/pull/22",
+      "tempo-store": "https://github.com/tempo-v2/tempo-store/pull/23",
+      "tempo-learning": "https://github.com/tempo-v2/tempo-learning/pull/8",
+      "tempo-queue": "https://github.com/tempo-v2/tempo-queue/pull/12",
+      "tempo-ui": "https://github.com/tempo-v2/tempo-ui/pull/38",
+      ".planning": "https://github.com/tempo-v2/.planning/pull/51"
+    },
+    "dataset_schema": 14,
+    "study_wire_version": 5,
+    "checks": {
+      "rust_passed": 354,
+      "ui_passed": 124,
+      "real_stockfish_recovery_passed": true,
+      "schema_13_preserved_tables": 39
+    }
   }
 }

@@ -3089,3 +3089,21 @@ keys passed.
 | Share and settle analysis | Chess uses legal moves and exact comparable engine evidence. A winning mate supersedes other findings. Incomplete results never authorize a puzzle. Tempo coordinates the engine slot and Store atomically accepts a position and its training effects. |
 | Deliver missed capture practice | Learning owns activity and cadence. Queue alternates accepted game requests and regular due work at durable issuance. The exact game predecessor is display context only. Replays preserve the issued attempt and result. |
 | Yield to the foreground | Tempo runs background engine work only on wall power after 30 seconds of inactivity and yields to input or foreground engine requests. Cancellation retains ownership until acknowledged. |
+
+The integrated candidate uses schema 14 and the existing Study wire 5 opt-in
+for opponent context. The compatible application, Chess, Store, Learning, Queue,
+UI and inherited release pins are in the manifest under
+`queued-position-analysis`. The PRs target main and remain drafts.
+
+The combined locked Rust run passed 354 tests and doctests. A separate
+engine-gated real Stockfish 19 check passed cancellation, engine restart and
+exact all-root result recovery. The shared-host test ran two registered
+detectors through one position and counted one engine evaluation. The
+application test exercised two saved positions, the exact opponent setup move,
+a due review between game puzzles, and alternation across restart. The UI
+passed all 124 tests and built both output surfaces.
+
+The managed predecessor's stopped-time backup was cloned for a schema 13 to 14
+startup rehearsal. The candidate preserved all 39 prior tables row for row.
+SQLite integrity and foreign-key checks passed. Managed installation and live
+game enrollment remain separate.
