@@ -2905,3 +2905,43 @@ The installed predecessor replay passed all six accepted-lost and unaccepted
 Answer, Learn more tactics, and PGN Save cases. The existing durable replies
 replayed exactly and Retry Next sent only Next. The [manifest](manifest.json)
 records the compatible merge commits, artifact hashes, and backup.
+
+## Tempo notifications candidate
+
+The user requested a short lower-right confirmation for Review Later and
+selected a first rollout that includes repertoire changes. Desktop and
+Phone Study share the same notification host. It holds one message for
+four seconds, fades over 200 ms, and keeps keyboard focus in place. With
+reduced motion it disappears after the hold without a fade.
+
+| Decision | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Show a confirmation | Tempo UI uses the existing validated acceptance for Review Later, Save Previous Response, removing a saved review, Tactics settings, and repertoire saves and renames. Suspend and Resume use the refreshed list for the addressed repertoire. Display text can change without changing the command, acceptance, recovery, or decision to notify. |
+| Display and dismiss | Core takes a caller-supplied event ID and message. Each new event replaces the current confirmation and gets the full display time. An old timer can dismiss only its own event. IDs live in the app session and are independent of durable commands and receipts. |
+| Retain information for recovery | The owning page displays validation failures, pending writes, retry actions, cleanup warnings, and detailed results inline. A confirmed save and the subsequent document reload continue to have independent outcomes. |
+
+| Component | Qualified commit | Pull request |
+| --- | --- | --- |
+| Core | `82cc41db0a146ff0db77bc2b9a308f12eee077fb` | [Core #7](https://github.com/tempo-v2/tempo-core-components/pull/7) |
+| UI | `8140d64e545d6b571ef808de0686da8b1b43d86c` | [UI #35](https://github.com/tempo-v2/tempo-ui/pull/35) |
+
+UI bundles Core 0.2.3 with tarball SHA-256
+`4e74b8f2f4c643bdb6e576ca12dbdf58faa3a407d4906b18ba060be7c6ab40bf`.
+Use the backend and workspace lock from the installed tactic-board capture
+release above, including Tempo `7f8060cabd1f03efa7faac27275f50dcd0e1a3a4`.
+The candidate is presentation-only and requires no wire or database
+migration.
+
+The packaged Core test passed in standalone Chrome with accessible status
+markup, preserved focus, repeated text and replacement during a fade, the
+hold and fade intervals, and reduced motion. Both UI builds and all 111 UI
+tests passed. Chrome on disposable databases verified bottom-right placement
+without layout shifts, marks retained after dismissal, removal, settings
+confirmation across navigation, repertoire save and rename, suspend and
+resume, marked-line saves, and Games workbench saves and replay. After a
+repertoire document reload failed, Retry reload remained available beyond
+dismissal and sent only the read. Phone Study in WebKit verified viewport fit
+and dismissal, with no success toast on a lost acknowledgement and a
+confirmation after exact replay of the original mark.
+
+Both component pull requests target main. Installation is separate.
