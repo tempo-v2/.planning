@@ -2764,7 +2764,7 @@ meantime. The repertoire stays visible and editable.
 | Component | Qualified commit | Pull request |
 | --- | --- | --- |
 | Store | `4d7f57593601f245d1b19a7f7a83aa5abfda6494` | [#20](https://github.com/tempo-v2/tempo-store/pull/20) |
-| Tempo | `0c7eeea2edb5bc8f09f12496bbb32285a22cfea7` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
+| Tempo | `4cd489a8adeeb2ab2d304229eb809905796fe2f8` | [#38](https://github.com/tempo-v2/tempo/pull/38) |
 | UI | `abd711ede99f679b7b77e3cb8580b3048c227ad1` | [#32](https://github.com/tempo-v2/tempo-ui/pull/32) |
 
 Assemble with Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`,
@@ -2818,3 +2818,9 @@ snapshot invariant for prompt lifetime. The editor retains its signed preview
 while the activity command refreshes the catalog. The mounted Chrome journey
 completed the preserved replacement alongside suspension recovery, the Games
 scope, and the historical choice readback.
+
+A fresh final Astra review found no interface, ownership, or correctness
+issues in the revised runtime. The reviewer independently passed six
+focused Rust tests and nine mounted Study metadata journeys. The prior
+PGN Save fixture waits for the old response to fail and for the independent
+old model projection to settle before comparing every prior table.
