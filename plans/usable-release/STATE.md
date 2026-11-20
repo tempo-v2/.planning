@@ -2244,3 +2244,94 @@ Implemented and verified on the isolated instances. [UI #27](https://github.com/
 A detected repertoire-version mismatch belongs to the loaded game comparison. Its owner retains the warning and reload action through board navigation, source visibility changes and failed reloads. Only a successful fresh review replaces the earlier comparison. The warning is presentation state and never writes repertoire or learning data.
 
 UI candidate `e3392f853eb3d42f95400fb8c5afc445c20f51ab` extends [UI #27](https://github.com/tempo-v2/tempo-ui/pull/27). The Chrome regression edits the destination from e4 to c4 during review, observes the mismatch, changes source visibility, closes comparison, navigates forward and back, and forces one failed reload. The warning and its reload action survive. The successful reload shows c4 and clears the warning. All 96 UI tests passed. The preceding runtime and package pins still apply.
+
+### Hanging material candidate — November 20, 2026
+
+Andy requested whole-game tactical analysis beginning with hanging material.
+Every actual learner decision is inspected, including custom starting positions,
+both colors, undated games and archives beyond the old 501-game window. The
+report distinguishes captures taken, equally good alternatives, missed good
+captures, inferior captures taken/declined and incomplete evidence. Only a
+confirmed missed good capture requests training. Andy explicitly chose
+Stockfish's strongest qualifying capture as the puzzle's single answer when
+several are available, accepting occasional individual card corrections.
+
+The [behavior and ownership record](hanging-material/README.md) defines the
+candidate geometry, engine comparison, queue and persistence lifetimes. Chess
+reuses the existing GameDetector and exact puzzle compiler. Tempo composes a
+bounded Stockfish evaluator and a small background acceptance consumer. Store
+accepts observation, puzzle reuse/introduction and an exact occurrence request
+in one transaction. Queue gives the newest request the next slot after the
+current attempt. Learning retains the existing scheduled-test cadence, using
+immediate blind Practice when another scheduled Test is not allowed. Study
+progress counts that required Practice; explicit Skip defers it, and a distinct
+new miss restores its priority.
+
+This first detector includes pawns and requires a legal capture with no immediate
+legal recapture of the capturer. Defended but profitable exchanges are outside
+its scope. Stockfish must supply complete exact scores for every legal root;
+the initial best-or-equivalent tolerance is 30 cp. Full game history and
+standalone puzzle context are evaluated separately. Incomplete or failed
+analysis is never converted into a statistical miss. Failed/timed-out results
+are retained and do not repeat automatically at the same analysis version.
+
+| Component | Published source | Draft PR |
+| --- | --- | --- |
+| Tempo | `b757f43f5eb70df4c8af6e962f955b481a1f37d4` | [#37](https://github.com/tempo-v2/tempo/pull/37) |
+| Chess | `c1a2aee45e7fb1c99f85805360f6941bb7f55a51` | [#20](https://github.com/tempo-v2/tempo-chess/pull/20) |
+| Store | `53d51bb4e08c1f153a2ecacaa8342e8a5272b302` | [#19](https://github.com/tempo-v2/tempo-store/pull/19) |
+| Learning | `446a5318fcbba14facb975d9a8bffd226d5da982` | [#7](https://github.com/tempo-v2/tempo-learning/pull/7) |
+| Queue | `a68e3c598de57de4cd53f447998c3913f8129d93` | [#11](https://github.com/tempo-v2/tempo-queue/pull/11) |
+| UI | `bf958b4c306b0d506d5ca1c35b99cbc2b9d9c725` | [#31](https://github.com/tempo-v2/tempo-ui/pull/31) |
+
+Tempo, Chess, Store and UI target the current `prototype/postgame-workbench`
+branches; Learning and Queue target `feat/production-evidence-interfaces`.
+Published trees exactly match the qualified local source trees. PR head, base,
+open state and the complete changed-file set were read back and verified. The
+[manifest](manifest.json) retains both authoring and published commit identities
+and the exact tree hashes. Study remains at
+`bf18a3eb827237d132763afd8fec483e06c9eb25`, Types at
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core at
+`c740dac85f2f8e7124c25b31125ef0db81d9131c`. The packed Core 0.2.2 artifact and
+workspace/npm locks are unchanged. Schema advances from 11 to 12; Study wire 5,
+content wire 4, detector preview wire 1 and portable format 5 are unchanged.
+
+The final locked combined workspace passed **333 Rust tests** with no failure.
+Its one dependency-gated real-engine case passed separately. **108 UI tests**,
+including 12 focused tactical transport/mounted tests, and the production UI
+build passed. Seventeen Python protocol tests and five Rust process lifecycle
+tests cover exact-root evidence, mate, resource limits, cancellation/reaping and
+request correlation. The dependency-direction check and locked build of all
+Tempo binaries/examples passed.
+
+The [final real HTTP run](hanging-material/final-http.log) passed with six
+Stockfish games in 37.933 seconds, with no failure or skip. It exercised automatic
+analysis through normal `serve`, all five established tactical outcomes, a
+free capture that stalemates instead of mating, duplicate import, the unchanged
+active attempt, exact lost-answer recovery after restart, urgent Next and an
+idle Black-side puzzle after ordinary quota was used. Strict UI validators
+accepted the actual responses; blind Study replies contained no answer key.
+Study progress responded in **6.1 ms during an actual engine scan** on this
+disposable fixture. This is one observed latency, not a general performance
+guarantee.
+
+Independent review repaired and rechecked: exact automatically quarantined
+puzzle reuse; urgent Practice Skip and progress; a deterministic acceptance
+failure blocking later games; and cancelled/revised observations conflicting
+with historical request references. Store migration tests preserved populated
+schema-11 learning, active attempts, assessments and accepted receipts. Actual
+application consumers verified per-occurrence idempotency, learning reuse,
+reanalysis, later-request survival, Skip/replay and restart behavior.
+
+**Browser walkthrough remains unverified.** Chromium could not create a Unix
+socket in this executor. Mounted tests use the production component and packed
+Core board, but no screenshot or visual-browser pass is claimed. The optional
+Chromium journey remains in the real HTTP fixture for an allowed host.
+
+**Implemented, tested and published; not merged or installed.** All synthetic
+games, grades and failures used disposable data. No retained personal dataset
+was analyzed or modified. The development binary SHA-256 is
+`490d5a80b42f1c237d1e094f5e5d825c02aa2447fa8986ce6310221868bf78be`.
+The first remaining release step is the permitted-browser walkthrough, followed
+by coordinated integration of the compatible baseline/feature stack and a
+separately authorized managed installation.
