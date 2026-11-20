@@ -2614,3 +2614,78 @@ original source handoffs' recorded deployments. This cleanup has not installed
 or revalidated a running package and does not assert a current running identity.
 The physical iPhone cellular acceptance remained pending in the source handoff;
 no new observation here changes that status.
+
+## Review later in Study
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Save an issued decision for later review | The approved Study request allows marking at any time on desktop and private Phone Study. Tempo addresses the reached decision by dataset, attempt, issued content version and index. Store deduplicates the versioned target and decision and records mutation receipts separately from Study. Exercise text, board orientation and subsequent answers do not determine what was saved. |
+| Open a saved decision | The existing Analysis disclosure contract and the approved rule for skipped blind cards govern the desktop read. Tempo checks authoritative mode, progress and result, including a later completion of the same version, and checks for a live blind attempt on the target. The analysis position follows the issued definition across edits. The list and save reply contain no answer. |
+| Retain marks and replay writes | Store ties marks to the source attempt and preserves them through a normal restart or SQLite backup. A repertoire history reset removes marks tied to erased attempts. Replaying a command acknowledges the original write, even after removal, without recreating the mark. Portable content and learning exports omit attempt-linked marks. |
+
+A revealed reply is a Study decision fact. Tempo records the exact cursor
+when an accepted answer, Show move, or concession discloses the response.
+Store retains the newest such fact and the revision at which the attempt
+was issued. Saved Analysis checks the source or a later closed attempt of
+the same version. Complete attempts cover the full definition. An
+abandoned attempt can supply evidence for an explicitly revealed
+decision and the solved prefix before it. A plain skip at an unanswered
+decision supplies no disclosure. A live blind attempt on the target
+takes precedence. Study receipt fingerprints remain replay identities.
+The Store adapter can read typed feedback from a legacy Study receipt
+when a retained attempt predates the explicit fields. Older closed
+attempts without retained evidence of an exact reveal stay locked.
+Store supplies the later completion and reveal facts. Tempo judges
+whether they cover the marked decision.
+
+A Study change from another tab invalidates the saved board's disclosure
+until the user opens it again. This also holds if the Study response is
+lost. Returning to a visible page without a Study change rechecks
+authorization while concealing the board, then restores its variations
+and marked lines if verification succeeds. A journaled repertoire save
+retains its exact retry control even while the board is concealed.
+
+### Combined candidate
+
+| Component | Reviewed commit | Pull request |
+| --- | --- | --- |
+| Tempo | `71cbade9958624719a8f5bc7725cca44e42400e6` | [#36](https://github.com/tempo-v2/tempo/pull/36) |
+| UI | `e33c2fc3041ec4dc7a274e6789bb347e79a21225` | [#29](https://github.com/tempo-v2/tempo-ui/pull/29) |
+| Store | `4cb4e4136d4201dbd236f993c2d2f79cfd06cfbe` | [#18](https://github.com/tempo-v2/tempo-store/pull/18) |
+
+The [manifest](manifest.json) pins the compatible components, existing Cargo
+lock, current UI lock, packaged Core 0.2.2, and qualified artifact hashes.
+The candidate includes the merged StudyState interfaces, Phone Study and
+Lichess analysis. SQLite advances from schema 11 to 12. Study wire v5 and
+portable format 5 carry forward.
+
+Independent Astra review traced the Study disclosure producer, Store
+facts, Tempo projection, browser invalidation, and exact signed Save
+recovery. The review led to typed reveal evidence, same-version
+later-attempt coverage, and fail-closed invalidation of a saved view when
+a second browser tab changes Study. The signed Save retry stays visible
+while the board is concealed.
+
+The optimized locked build, 31 Store tests, 55 Tempo contracts, 107 UI
+tests, and architecture gate with its four self-tests passed. Desktop
+Chrome covered exact positions before and after response, metadata
+invariance, later completion and concession, stable deduplication,
+removal and restart. It held a second tab's blind admission before
+delivery, dropped its accepted response, and verified the earlier
+board stayed concealed. The interrupted repertoire Save replayed
+the byte-identical pending command from the concealed board. Phone
+WebKit covered the shared list, lost-mark retry, and the continuation
+controls. The packaged Lichess journey covered answer-safe export,
+lost-concession retry, help after dismissal, and interrupted Next.
+
+The candidate rehearsed against the stopped-time SQLite backup
+`recovery-start-4m9w3v5q`. All rows in the 34 prior tables matched, and
+integrity and foreign-key checks passed. Chrome used the previous
+installed executable and UI at `workspace-c4afffae8dea3aea9fd1` to
+leave accepted-lost and unaccepted Study commands pending. The
+candidate replayed the original bytes with one grade per case.
+Interrupted Next retried only Next.
+
+The three runtime PRs merged into main. Their remote merge trees match
+the qualified trees exactly. The manifest records both the reviewed heads
+and the merged component revisions. Managed installation is pending.
