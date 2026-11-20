@@ -3330,3 +3330,36 @@ schema 14 were preserved. SQLite integrity and foreign keys passed. All 22
 desktop and 24 phone files matched the installed artifacts, and both clients
 reported Study status for the same dataset. The rollback registration and
 verified database copy are in `recovery-start-qoee13ij`.
+
+## Bounded hardening, November 20, 2026
+
+The run started at 23:42 UTC on November 20 with a hard stop at 01:42 UTC
+on November 21. **Partial candidate. Core is not ready.**
+
+| Compatible component | Published draft | Exact candidate head |
+| --- | --- | --- |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `2410513e56a2d915bc3c6931cb97146a73aeef6e` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `6992170493d15cfca02e5c2dea69716e8a5f413a` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `5aad5035c05e6b4d85a6574a02151e06c079f550` |
+
+The locked assembly used these heads together with unchanged Chess
+`e1b23ee`, Learning `4fb3053`, Study `ddf6839`, and Types `a8e46c9`.
+It passed 238 unit and integration tests and the dependency-direction gate.
+Independent review on the same heads reran the tactical and Queue checks
+and confirmed exact issue and receipt replay across restart.
+
+Both supplied M1 cases failed on current main. The candidate preserves the
+original issued or fulfilled binding and prevents the revised answer from
+showing up in ordinary Next. The unissued replacement still fails at Next
+after solving the replacement. A restore-and-scan regression proves that
+an existing ungraded introduction and one newly made by the scan can yield
+the same saved request and Learning. Safe withdrawal needs a durable link
+to the introducing request and a rule for already-retained unknown ownership.
+
+For M3, Queue proposes the ordering effect at selection. Store records it
+with the exact issuance and request binding. Request → regular due → request,
+restart, and failed-binding rollback are verified.
+
+D2 is a separate reviewed report-snapshot candidate in [UI #42](https://github.com/tempo-v2/tempo-ui/pull/42)
+at `7a156014f9fee2cba9cfa2d8e19cdbb358f187cc`. M2 and D1 remain deferred.
+No merge, installation, live data changes or historical cleanup were performed.
