@@ -998,5 +998,197 @@
     "prior_browser_checkpoint": "workspace-c21029b32dd79bcfc7e2",
     "qualification_record": "STATE.md#interface-execution-packet-november-19-2026",
     "next_operation": "Coordinated merge and remote tree verification. Managed installation is a separate authorized operation."
+  },
+  "hanging-material-2026-11-20": {
+    "status": "published-draft-candidate-browser-walkthrough-pending",
+    "merged": false,
+    "installed": false,
+    "qualified_on": "2026-11-20",
+    "source": {
+      "tempo": {
+        "commit": "b757f43f5eb70df4c8af6e962f955b481a1f37d4",
+        "tree": "c2ded254c5557dff0b3e8477a82ae864bf522083",
+        "local_qualified_commit": "74cf60f44e8e640558ac7f48ce6f61a35dcd15af",
+        "ref": "feat/hanging-material",
+        "base": "prototype/postgame-workbench",
+        "base_commit": "26ac49a1c1406c5d0b2c34ec285bcc3f8f8a0650",
+        "pull_request": "https://github.com/tempo-v2/tempo/pull/37",
+        "changed_files": [
+          "README.md",
+          "examples/game_detection_contract_host.rs",
+          "src/application/abandon.rs",
+          "src/application/daily.rs",
+          "src/application/mod.rs",
+          "src/application/tactical_analysis.rs",
+          "src/application/tactical_analysis/tests.rs",
+          "src/game_detection.rs",
+          "src/lib.rs",
+          "src/local_runtime.rs",
+          "src/local_runtime/http.rs",
+          "src/tactical_engine.rs",
+          "src/tactical_jobs.rs",
+          "tests/hanging_material_http.mjs",
+          "tools/stockfish/hanging.py",
+          "tools/stockfish/test_hanging.py"
+        ]
+      },
+      "tempo-chess": {
+        "commit": "c1a2aee45e7fb1c99f85805360f6941bb7f55a51",
+        "tree": "238899a6426c99ac82d3cd6340c8d9832441a101",
+        "local_qualified_commit": "6e77d9e8648d103bfbd15aeb80c280a9f3dbf321",
+        "ref": "feat/hanging-material",
+        "base": "prototype/postgame-workbench",
+        "base_commit": "a5dcf40e3f51bfa5ff45f9c466922ca541965706",
+        "pull_request": "https://github.com/tempo-v2/tempo-chess/pull/20",
+        "changed_files": [
+          "Cargo.toml",
+          "README.md",
+          "src/content_status.rs",
+          "src/game_detector.rs",
+          "src/hanging_material.rs",
+          "src/lib.rs",
+          "src/tactical_evaluation.rs",
+          "src/tactical_puzzle.rs",
+          "tests/game_detector.rs",
+          "tests/hanging_material.rs"
+        ]
+      },
+      "tempo-store": {
+        "commit": "53d51bb4e08c1f153a2ecacaa8342e8a5272b302",
+        "tree": "633cd5e3598aee8cd41631f45c92048ce644e891",
+        "local_qualified_commit": "193e8ef54de4d364b4e9803e673714516f10a4e5",
+        "ref": "feat/hanging-material",
+        "base": "prototype/postgame-workbench",
+        "base_commit": "9bc90f179ca2e85ccb9a75a3aae7ffcf6bd23dc9",
+        "pull_request": "https://github.com/tempo-v2/tempo-store/pull/19",
+        "changed_files": [
+          "README.md",
+          "src/lib.rs",
+          "src/memory_store.rs",
+          "src/sqlite_store.rs",
+          "src/sqlite_store/save_snapshot.rs",
+          "src/sqlite_store/tactical_analysis.rs",
+          "src/sqlite_store/tactical_analysis.sql",
+          "src/sqlite_store/tactical_analysis/tests.rs",
+          "src/store.rs",
+          "src/tactical_analysis.rs"
+        ]
+      },
+      "tempo-learning": {
+        "commit": "446a5318fcbba14facb975d9a8bffd226d5da982",
+        "tree": "39edb8971551368cbebac375d3d8fe0a5e9a95f0",
+        "local_qualified_commit": "f27a97a8d91d81690706642fb7b7d17e50a18e47",
+        "ref": "feat/hanging-material",
+        "base": "feat/production-evidence-interfaces",
+        "base_commit": "8fe06ca10a5249b1619bba26b016f38f961a84dc",
+        "pull_request": "https://github.com/tempo-v2/tempo-learning/pull/7",
+        "changed_files": [
+          "README.md",
+          "src/immediate_recall.rs",
+          "src/lib.rs"
+        ]
+      },
+      "tempo-queue": {
+        "commit": "a68e3c598de57de4cd53f447998c3913f8129d93",
+        "tree": "5e847f0e72478a1c78281acef7ae8fd90a9c75be",
+        "local_qualified_commit": "49560d9ef7f30199fdcf4e1a96275e50fe813575",
+        "ref": "feat/hanging-material",
+        "base": "feat/production-evidence-interfaces",
+        "base_commit": "c3b1169e3bc4990ed3e61f2d1e7a28a27328ead2",
+        "pull_request": "https://github.com/tempo-v2/tempo-queue/pull/11",
+        "changed_files": [
+          "README.md",
+          "src/daily.rs",
+          "src/lib.rs"
+        ]
+      },
+      "tempo-ui": {
+        "commit": "bf958b4c306b0d506d5ca1c35b99cbc2b9d9c725",
+        "tree": "f95b86ac0ddefd709fdf258bcc7ee2e7b5ac55a1",
+        "local_qualified_commit": "af8e582250819e06e617b23c7647fbc16854ce78",
+        "ref": "feat/hanging-material",
+        "base": "prototype/postgame-workbench",
+        "base_commit": "e3392f853eb3d42f95400fb8c5afc445c20f51ab",
+        "pull_request": "https://github.com/tempo-v2/tempo-ui/pull/31",
+        "changed_files": [
+          "GamesPage.jsx",
+          "README.md",
+          "TacticalHistory.jsx",
+          "tactical_history.css",
+          "tactical_history.js",
+          "test/game_detection_browser.mjs",
+          "test/games_evidence.test.js",
+          "test/tactical_history.test.js",
+          "test/tactical_history_fixture.js",
+          "test/tactical_history_mounted.test.js"
+        ]
+      },
+      "tempo-study": {
+        "commit": "bf18a3eb827237d132763afd8fec483e06c9eb25",
+        "tree": "17f4b59bc52affe8018137c668e0a480081d1547",
+        "ref": "feat/production-evidence-interfaces",
+        "changed": false
+      },
+      "tempo-types": {
+        "commit": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+        "tree": "88926c441ed45c8fc983efe097ac9226b3fb51d4",
+        "ref": "main",
+        "changed": false
+      },
+      "tempo-core-components": {
+        "commit": "c740dac85f2f8e7124c25b31125ef0db81d9131c",
+        "tree": "31d0fef7e8ddf0d9930d77ef9baac1fd0b8688b5",
+        "ref": "feat/production-evidence-interfaces",
+        "changed": false
+      }
+    },
+    "inputs_sha256": {
+      "workspace_template": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+      "cargo_lock": "c03a5547d570957d60c51510c5e1a438d5b60db59fd3aee1996378e2765943c0",
+      "ui_npm_lock": "f713bbeded47625dd599dd75bf123ebe57d51c1a22336e94f2f6c15e05c4fe23",
+      "core_0_2_2_tarball": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
+    },
+    "formats": {
+      "sqlite_schema": 12,
+      "portable": 5,
+      "study_wire": 5,
+      "content_wire": 4,
+      "detector_wire": 1,
+      "tactical_history_wire": 1
+    },
+    "qualification": {
+      "rust": {
+        "passed": 333,
+        "failed": 0,
+        "default_ignored": 1,
+        "ignored_real_engine_case_passed_separately": true
+      },
+      "ui_tests_passed": 108,
+      "python_engine_tests_passed": 17,
+      "rust_process_lifecycle_tests_passed": 5,
+      "real_http": {
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "games": 6,
+        "duration_seconds": 37.933,
+        "study_progress_during_scan_ms": 6.1
+      },
+      "architecture_contract": "passed",
+      "bins_and_examples": "passed",
+      "browser": {
+        "status": "blocked",
+        "reason": "Chromium Unix socket creation denied in executor; no visual pass claimed"
+      }
+    },
+    "qualification_artifacts": {
+      "cargo_profile": "dev",
+      "tempo_sha256": "490d5a80b42f1c237d1e094f5e5d825c02aa2447fa8986ce6310221868bf78be",
+      "ui_js_sha256": "7cbc6525d8705d4156e651ce86fa3879f7cb448dc9188984c05afec50dbeef47",
+      "ui_css_sha256": "6f0b27ffbb137b0030ad7bf7da6728a221d4c1964509552290b1b2cfbd75ca76",
+      "http_log": "hanging-material/final-http.log"
+    },
+    "qualification_record": "STATE.md#hanging-material-candidate--november-20-2026",
+    "next_operation": "Run the optional Chromium walkthrough on a permitted host, then coordinate integration of the compatible baseline and feature PRs. Managed installation is a separate authorized operation."
   }
 }
