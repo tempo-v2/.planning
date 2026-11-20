@@ -3211,22 +3211,30 @@ registration and kept `recovery-start-niswgz8t` as the stopped-time backup.
 
 This candidate uses the Study-focus checkpoint backend and all of its
 non-UI pins. [Core #8](https://github.com/tempo-v2/tempo-core-components/pull/8)
-has verified head `e6efeee48d39a2a189ae277a56275a8dc174269d`.
+has verified head `dad0ea4797b5c137cf804b082037b092a6e67992`.
 [Tempo UI #40](https://github.com/tempo-v2/tempo-ui/pull/40) has verified head
-`27ea145cc29c92ef5537d11bd91d00f07379bf35`. Both PRs target `main`.
+`2a0c0286a49aa12a7a241f6c4f5fea73fa84f562`. Both PRs target `main`.
 Tempo UI vendors the byte-identical Core 0.2.4 package with SHA-256
-`5debea5c685ddc6199e3fb716747a4242cfac7e0e1e1cabffdfddfac0c1e244c`.
+`9971c41100e96082a55ef96dd925a7d443dc641c7961d96cffd798e3eb82c9ee`.
 
 The packaged Core Chrome consumer and all 128 UI tests passed. Both UI
 bundles built. Chrome verified initial and resized vertical centering on all
-seven main boards, size and square targeting, short Games and both short tactic editing views,
+seven main boards, size and square targeting, short Games and all three
+tactics views,
 and handle absence on a narrow viewport, a wide touch-first viewport and
 an import preview. Study kept its size through a move and sent no command
 during resizing. The repertoire response accepted a pending recommendation
 after the drag. The Phone Study WebKit journey passed with the handle absent.
 Browser journeys used disposable databases.
 
-The first independent Astra review caught a corner-square input regression and centering issues in short tactic editor windows. The revised candidate positions the handle outside the chess surface, reserves its width within Core, and puts the tactic editor controls beside their board on desktop. Tempo UI sizes its own frame track and uses one viewport and pointer eligibility decision. The repertoire response consumes a surface-only notification without a DOM payload.
+The independent Astra reviews found a blocked corner square, a surface signal
+leaking React pointer data, and short-window layout problems in the tactic
+builder, setup and detail. Core now reserves space outside the chess surface
+for the handle and invokes the surface consumer with zero arguments. Tempo UI
+owns a single viewport and device rule, sizes its own tracks and puts desktop
+tactic controls beside their boards. The packed browser check verified a
+legal move from h1 at the 240 px floor and a zero-argument surface signal.
+The tactic detail journey verified a real resize at 1000 × 500.
 
 The two implementation PRs are open. The managed installation is still
 `workspace-d29667030ac522f8838b`.
