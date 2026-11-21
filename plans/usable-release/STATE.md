@@ -4401,7 +4401,7 @@ The installed idle worker published version 2 of the pictured fork. It stores Qh
 | Component | Published candidate | Commit |
 | --- | --- | --- |
 | Tempo | [#53](https://github.com/tempo-v2/tempo/pull/53) | `108c17b73102f908a19941147ba5ade5447dd07b` |
-| Tempo UI | [#54](https://github.com/tempo-v2/tempo-ui/pull/54) | `2ecd13eba9acff87a9c532ee837565b6f2c5e28e` |
+| Tempo UI | [#54](https://github.com/tempo-v2/tempo-ui/pull/54) | `c65d6c082b93a943c884b171acc4761f50905857` |
 
 Assemble those two heads with the preceding tactical payoff Chess and Store
 merges. The other component commits are Learning
@@ -4419,7 +4419,10 @@ ingress, packaged phone Study WebKit, and full desktop coverage Chrome
 passed. At 320 and 375 px, packaged phone Build verified ranked gaps, board
 input, Save line, Save response only, both loss cases for scans and saves,
 stale-preview refresh, gap-read-only retry after Save, and return to the
-original Study attempt. Existing learning and Study rows were preserved.
+original Study attempt. A direct Build launch initializes Study on first entry.
+During an existing Study visit a trip through Build retains the completed
+result and its Continue action without sending Next or issuing a new attempt.
+Existing learning and Study rows were preserved.
 The independent review reproduced the stale-preview problem before the fix
 and verified the typed refresh path. Serial browser runs passed after one
 concurrent run timed out during engine startup.
