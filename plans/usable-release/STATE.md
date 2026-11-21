@@ -3418,3 +3418,86 @@ revisions. The combined release requires fresh evidence.
 bindings, existing targets, Learning, attempts, assessments and receipts.
 Prior retargeting or separate introductions cannot be reconstructed reliably
 from the retained data. Historical cleanup was outside this release's scope.
+
+### Integrated candidate
+
+- **M1 and M3.** The assembled consumers preserve the retained Finding and
+  Decision bindings, including unissued, issued, cancelled and abandoned
+  requests. Next still applies the active/version/eligibility fences and
+  records Queue's proposed ordering with the issued attempt. Replay, Skip,
+  distinct occurrences and rollback are covered by the independent exact-build
+  rerun.
+- **M2.** Chess prepares the exact identity, source ownership and proposed
+  content. Learning supplies the introduction transition. Store's addressed
+  commit includes the authorized effects, receipt and report invalidation.
+  Two disposable sizes varied current content, old versions, attempts,
+  assessments, receipts and game evidence independently. SQLite used the
+  target, identity and source indexes. Missing/exact lookups measured 49/69
+  VM steps at both sizes and zero full-scan steps. A new target wrote one row
+  each to current content, history and Learning. Pinned rescans wrote zero
+  rows to those tables. Exact replay and a stale revision wrote zero rows.
+- **D1 and D2.** Store fences capture with persisted archive and evidence
+  generations. The worker keeps one compact generation, four filter
+  snapshots and up to four top-30 anchors per filter. A cold generation
+  builds facts once. Warm pages reuse aggregate/bootstrap and ranking
+  results. Status reads can check freshness without rebuilding the report.
+  Same-count rescans advance evidence without reloading archive PGNs.
+  The UI owns the manual snapshot and handles stale, failed and late reads.
+  Position details read the exact finding and live training link.
+- **Diagnostics.** The integrated observational changes supersede Tempo
+  [#40](https://github.com/tempo-v2/tempo/pull/40), Store
+  [#21](https://github.com/tempo-v2/tempo-store/pull/21), UI
+  [#36](https://github.com/tempo-v2/tempo-ui/pull/36) and Planning
+  [#47](https://github.com/tempo-v2/.planning/pull/47). A delivery ID
+  correlates HTTP, Store and worker phases and is independent of a durable
+  command. The offline export keeps bounded allowlisted fields and
+  canonical process labels.
+
+The locked workspace passed 437 Rust tests and doctests with two existing
+engine tests ignored by the ordinary suite. The independent reviewer reran
+39 focused application, Store and analytics checks. The dependency-direction
+gate and four self-tests passed. All 143 UI tests and the desktop/phone build
+passed with the locked Core 0.2.4 package, and an independent focused UI
+suite passed 35 checks. The optimized candidate used the exact source trees
+and artifact set in the manifest.
+
+The retaining-copy rehearsal migrated the schema-14 database from the
+registered artifact pair. All 45 preexisting application tables matched by
+row counts and hashes, including the active attempt, Learning and receipts.
+SQLite integrity and foreign keys passed. For the 2,317-game archive, seven
+full report replies matched the prior installed behavior, including filters,
+cohorts, keyset pages, exact similarity and addressed training detail.
+One Mac measurement put the cold report at 220 ms, a warm older page at
+1.26 ms and an addressed detail at 0.75 ms. The concurrent stamped Study
+read took 0.52 ms. These timings describe this archive and host.
+
+With the previous installed browser and binary on separate retained copies,
+both a committed Answer with its reply lost and a pending unsent Answer
+recovered from the original browser envelope against the upgraded candidate.
+Each scenario produced one durable assessment and receipt. An independent
+six-game Chrome and Stockfish journey with the prior UI and candidate backend
+also passed, including report/detail, Study, exact replay and Next.
+
+The independent optimized diagnostics checks passed four controlled
+HTTP/SQLite scenarios and one real transport restart/replay case. The
+collector passed 16 tests, including offline export and process label
+redaction. The controlled fault establishes diagnostic capability.
+
+On the populated disposable database, a burst of seven cold report
+requests admitted two and returned typed `report_busy` for five. Normal
+Stockfish admission then produced two committed tactical acceptances.
+Recorded cold aggregate work overlapped acceptance, and a generation
+change produced the explicit stale response. Across 243 concurrent Study
+progress reads, the median was 0.64 ms and the maximum was 54.42 ms.
+The 186 report requests took at most 235.99 ms. Foreign keys, SQLite
+integrity and active-attempt identity remained intact.
+
+Chrome on the paired candidate verified query pending state, late response
+fencing, an addressed detail read, stale pagination and manual refresh after
+accepting a backdated game. Refreshed results included the new game.
+
+The Mac evidence is in the isolated workspace's
+`.local/remaining-audit-20261120/evidence` directory. It includes the locked
+workspace and optimized build logs, baseline/candidate report comparison,
+retained-copy Answer replay and the concurrent and mounted browser rehearsals.
+The data copy and registration files are kept local.
