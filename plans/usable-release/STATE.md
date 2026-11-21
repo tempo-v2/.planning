@@ -3738,9 +3738,6 @@ Reused Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, Study
 | Desktop JavaScript | `7779357c4289464b58bfa295c22d0d018ad61aca6281461f4d7a1cdc0c0048d4` |
 | Phone JavaScript | `d75483e9e5a42a894c9a59b63386916e016deed2aadc0f54cfdfe68313302777` |
 
-Publication is at the draft PR stage. A release operation would use this
-compatible source set and rehearse the migration against the then-current
-registered backup.
 
 ### Strict interface review follow-up
 
@@ -3767,3 +3764,39 @@ and versioned forecast rows. The mounted Games test exercised scanning,
 merged backlog, signed response, rescan, restart and scan recovery on the
 same optimized binary used for the connected Study journeys. The schema-16
 installation is the prior artifact in the replay checks above.
+
+### Merged and installed on November 21, 2026
+
+The third fresh Astra approved the exact combined source set after checking
+Queue ownership, the repeated-position boundary, the two schema transitions,
+and the mounted Study and Games consumers. Independent verification passed
+the seven native Study scenarios and Queue regression, desktop and phone
+journeys, display-name invariance and all eight prior-release recovery cases.
+The six code PRs and the qualification ledger merged into main. Each remote
+merge tree matched its reviewed head.
+
+| Component | PR | Verified main merge |
+| --- | --- | --- |
+| tempo-chess | [#25](https://github.com/tempo-v2/tempo-chess/pull/25) | `54f64a7a002b28a28f787653bc6d792c423d2e7d` |
+| tempo-learning | [#9](https://github.com/tempo-v2/tempo-learning/pull/9) | `ee542cc1971f40de2de7a80edad9f51f2f6eecdc` |
+| tempo-queue | [#14](https://github.com/tempo-v2/tempo-queue/pull/14) | `74e09a1ea1cc2ca9bdf308b8fb7cc75963378214` |
+| tempo-store | [#26](https://github.com/tempo-v2/tempo-store/pull/26) | `10f16634600553bbe3c186d51369c31ad3ebdd05` |
+| tempo | [#46](https://github.com/tempo-v2/tempo/pull/46) | `ed2a5417423c4543bd20f85d4c87ce020b44a010` |
+| tempo-ui | [#43](https://github.com/tempo-v2/tempo-ui/pull/43) | `fe7b81260092c67a87ba184aa905ff088d2b121c` |
+| .planning | [#57](https://github.com/tempo-v2/.planning/pull/57) | `3005a742c7e10125e5b3674136cac7354afd5d35` |
+
+The managed launcher rebuilt from those merge trees and reproduced the full
+qualified artifact set. A disposable rehearsal checked the registered
+schema-16 database, desktop and phone startup. The launcher installed
+`workspace-4a7550d7f5cf89ba434d` on port 41822 and saved the previous
+registration and stopped-time backup in `recovery-start-419498cj`.
+
+The registered listener uses schema 17 and the retained database
+inode, dataset and active Study attempt. All 50
+existing application tables matched the stopped-time backup. SQLite quick
+check and foreign-key checks passed. Read-only Study status on desktop and
+phone reported the retained dataset. The listener served all
+22 desktop and 24 phone assets
+byte for byte. Chrome and WebKit exercised the installed artifact pair on
+disposable data, including the three-review run, warm-up Skip, correction
+and exact recovery. The separate post-game lab listeners kept their ports.
