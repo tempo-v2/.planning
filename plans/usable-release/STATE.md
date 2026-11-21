@@ -3964,10 +3964,10 @@ Assemble these heads on schema 18, including the installed Games tabs and Study 
 
 | Component | Published candidate | Verified head |
 | --- | --- | --- |
-| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `94a3fe182c7f06c5c2f5487d9a92574ee1f66811` |
+| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `f790ab5965c48735cb3ee3c0cb6de74cea7f2fa1` |
 | Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `5facc3b147ffdeb9d91fdcd301edc39c0e163358` |
-| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `e051239fa682f4617f1d01494c4955457e2a38a8` |
-| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `0848731847c829a9529e61e6cbc67149c4428ab2` |
+| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `9c06215ab302594d4e19656077e8f6a7871a7060` |
+| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `c2ec67bdf9b2ac5706e533bd5ca16ca67c9b20dc` |
 
 Reuse Core `a5f8f320313d6650700617eb24ca83ec2f3cb827` and its packaged
 0.2.4 tarball, Learning `ee542cc1971f40de2de7a80edad9f51f2f6eecdc`,
@@ -4008,7 +4008,7 @@ used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
 
 | Candidate artifact | SHA-256 |
 | --- | --- |
-| Optimized Tempo | `05faa5c688a5085edea826c004def436086bb72d52f154875eab4310667d2941` |
+| Optimized Tempo | `562317298bdd145009e06ad91515c3edbffbd052e5a22a65227d6aa3665313db` |
 | Desktop JavaScript | `0602e457b5066feb01571a4d411546dac2bafccd4dace8f2cbdd4ac70074a80c` |
 | Phone JavaScript | `40b108fea34c67af63247b25de5d73084ca279c07987b024311f011a8426d3c4` |
 
@@ -4032,3 +4032,14 @@ can follow a legal opponent move into a position with a verified learner
 reply. The mounted Coverage regression reaches the move-three reply and
 exports the same route that the player reviewed. The locked combined build
 and all 145 UI tests passed on the installed schema-18 baseline.
+
+
+The third fresh Astra reproduced a mismatch between the forecast preview and
+the PGN appended by Save response only. Both signed save paths now use the
+Chess-owned coverage anchor. The FEN, opening route, heading and export
+describe the same preview. Marked Analysis accepts the exact Chess-verified
+forecast route as an anchor alongside its existing authored-route contract.
+The continuation worker receives the saved response catalog, and the
+single-position editor retains its separate presentation context. The
+transposition journey now verifies the heading, authorized marked preview,
+export and persisted PGN with one receipt.
