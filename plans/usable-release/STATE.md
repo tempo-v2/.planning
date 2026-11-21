@@ -4279,3 +4279,62 @@ byte for byte. Both Study status reads and both SQLite integrity checks
 passed. The stopped-time backup and prior registration are in
 `recovery-start-8ibh9sbt`. Schema 18, dataset, database inode, active attempt,
 and the fingerprints of all 52 tables matched that backup.
+
+## Compact Tempo controls candidate
+
+| Behavior | Owner, inputs and lifetime |
+| --- | --- |
+| Show a button hint | Core handles 500 ms mouse hover and immediate keyboard focus on an enabled button. The caller supplies the action description and any binding it handles. Escape, loss of the anchor, and unmount dismiss the hint. Hint state lives in the mounted browser control. |
+| Make common controls compact | Tempo UI groups replay, details, bookmarking, and board tools on desktop and Phone Study. Icons use the existing action handlers, availability, and addresses. The Games replay arrows also step the board from a focused replay control. |
+
+| Component | Verified candidate head | Pull request |
+| --- | --- | --- |
+| Tempo Core 0.2.5 | `b66af6e6e69a3516d97dd0e9b912cef8feed4f01` | [Core #9](https://github.com/tempo-v2/tempo-core-components/pull/9) |
+| Tempo UI | `56f0cd1748ede24fb694e30628d048797f1d5ebb` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
+
+The UI lock installs the bundled Core tarball with SHA-256
+`d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc`.
+The disposable browser journeys use the optimized source-independent tactic feedback
+backend from `fe39e8883f55f6f7938d42b89d4f5a4dc5bd73d5`, SHA-256
+`ee886e303f70807a149863e827ba24999f24f0ff0607f4426e511e45c5a71c57`.
+
+- The packed Core consumer passed Chrome and WebKit checks for hint timing,
+  focus, Escape, clipping, offscreen dismissal, and single-tap activation.
+- The locked desktop and phone build and all 148 UI tests passed. Phone
+  Study in WebKit kept each utility row on one line at 320 and 375 px with
+  44 px targets. Continue stayed below the board. Mark recovery kept one
+  receipt, and recovery after an accepted answer sent only Next.
+- Chrome exercised focused Games replay shortcuts, Study flip and saved
+  reviews, tactic capture and pagination, Analysis, Coverage dialog
+  dismissal, and Games draft and move-evidence behavior.
+
+The initial independent review found a hint could linger after its anchor
+scrolled offscreen and a focused Games replay control ignored its advertised
+arrow key. A fresh independent review confirmed the fixes on the published
+heads and reran the packed Core, Games Workbench, and Phone Study checks.
+
+### Merged and installed on November 21, 2026
+
+A fresh Astra review cleared the strict interfaces and coupling on the
+combined published candidate, including the newer source-independent tactic
+feedback. Its packed Core, Phone Study, Games Workbench, and Saved Reviews
+checks passed. The locked build and all 148 UI tests also passed.
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Tempo Core | `71cbd2b1e4a3514f42a1f0293506ad71e0343d93` | [Core #9](https://github.com/tempo-v2/tempo-core-components/pull/9) |
+| Tempo UI | `35562186d8c32f1947db7f384faa31ea0de26ecc` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
+
+Both main trees matched the reviewed heads. The managed launcher rehearsed
+and installed `workspace-12d119da2c68d03793a3` on port 41822, with the same
+optimized backend bytes as the previous checkpoint. The invocation reused
+the eight-second desktop readiness window. Recovery backup
+`recovery-start-wvmq39ny` contains the previous registration and stopped-time
+database snapshot.
+
+The registered listener served all 22 desktop and 24 Phone Study assets
+byte for byte against the qualified build. Both Study status reads passed,
+and the private phone endpoint served the installed bundle. The live schema
+18 database kept its inode, dataset, and active attempt. All 52 application
+tables matched the stopped-time backup. SQLite quick and foreign-key checks
+passed.
