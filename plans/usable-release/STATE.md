@@ -3960,14 +3960,14 @@ combined build. Binary SHA-256
 | Draft a likely continuation | The accepted Games plan puts one line under review from the selected first reply through the scan's learner move. The selected report fixes the depth. Chess validates the anchor and owns move legality and saved replies. Tempo uses the coverage blend for the opponent and the existing learner recommendation with a Stockfish fallback. The background preview is transient and carries the content revision. Chess provides the exact lead-in used for the draft, and the UI replays it when exporting the viewed line. |
 | Save and continue | The existing signed additive Save appends one PGN route and commits a receipt with it. Store checks content revision and preserves existing learner identities and state. The UI replays the identical command if acceptance is uncertain. After acceptance it only reloads the highest-ranked remaining gap in the same list. |
 
-Assemble these heads together on the schema-17 release baseline.
+Assemble these heads on schema 18, including the installed Games tabs and Study card origins release.
 
 | Component | Published candidate | Verified head |
 | --- | --- | --- |
-| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `2184061975f529da0bfd477cfea970223ec576d9` |
-| Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `e0d25c0e27872fa7a77cd4679135136d46bbbec1` |
-| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `c30385b1c6ca752529c531028ffc6e0a353d30e0` |
-| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `624a3c206ba992ae0942fabd2e76b38db6bf6a0e` |
+| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `94a3fe182c7f06c5c2f5487d9a92574ee1f66811` |
+| Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `5facc3b147ffdeb9d91fdcd301edc39c0e163358` |
+| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `e051239fa682f4617f1d01494c4955457e2a38a8` |
+| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `0848731847c829a9529e61e6cbc67149c4428ab2` |
 
 Reuse Core `a5f8f320313d6650700617eb24ca83ec2f3cb827` and its packaged
 0.2.4 tarball, Learning `ee542cc1971f40de2de7a80edad9f51f2f6eecdc`,
@@ -4008,9 +4008,9 @@ used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
 
 | Candidate artifact | SHA-256 |
 | --- | --- |
-| Optimized Tempo | `980c790ed9898b5c11c5d85ba827a4daa1e475f4ef1e41d72c0e22b375b0af4d` |
-| Desktop JavaScript | `b488d1760a88fd345a3c4afae375fbe62fcf7c455174c86ac5bd0c6ceb10fad7` |
-| Phone JavaScript | `31e898c7c70dab1bfc9b888803ec872647ecba0d8db8eced45b686ceaff93fa0` |
+| Optimized Tempo | `05faa5c688a5085edea826c004def436086bb72d52f154875eab4310667d2941` |
+| Desktop JavaScript | `0602e457b5066feb01571a4d411546dac2bafccd4dace8f2cbdd4ac70074a80c` |
+| Phone JavaScript | `40b108fea34c67af63247b25de5d73084ca279c07987b024311f011a8426d3c4` |
 
 
 ### Strict interface review revisions
@@ -4023,3 +4023,12 @@ the current repertoire and scan. The preview's Lichess export also dropped
 the opening history. Chess now supplies the exact anchor route for the
 preview, which the UI validates and replays for export. The draft identity
 and signed Save envelope retain their existing formats.
+
+
+The second fresh Astra verified both fixes and found a scan could reach a gap
+ahead of its authored move number via a prepared transposition. Chess now
+applies the same saved-reply decision in the lead-in and the scan. The route
+can follow a legal opponent move into a position with a verified learner
+reply. The mounted Coverage regression reaches the move-three reply and
+exports the same route that the player reviewed. The locked combined build
+and all 145 UI tests passed on the installed schema-18 baseline.
