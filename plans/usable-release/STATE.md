@@ -3589,8 +3589,7 @@ retained it, and a delayed start carrying a prior report ID was rejected.
 
 A disposable two-move scan used live Lichess Explorer and the pinned Maia
 runtime at its one opponent position. It reported 57.1% coverage and zero
-unresolved probability. Twenty concurrent Study Resume checks completed
-within 1.25 ms each in that run.
+unresolved probability.
 
 The optimized binary from the same source set passed the browser scan journey.
 Its SHA-256 is
@@ -3629,4 +3628,19 @@ The local scan worker owns background execution.
 | Chess | `13fb1b162b6c02911c67ad7c8dfb4b25b7d4fe09` |
 | Store | `5bf98f65aa8ba7d05ef426f55d146553cdcc36d1` |
 | Tempo | `34844fe85dfa5132213f47432b648b7d38a46d58` |
-| UI | `f3d14fddabb0bfc702c8776b26440ac51c807309` |
+| UI | `e0d681f1cb975c6a84816232d772593b8b2b9794` |
+
+A missing gap kind in a legacy Games reply uses the historical editor.
+A present kind must be recognized before Games offers Fix Response.
+The client preserves a recognized explicit kind in the draft command.
+
+The revised heads passed 443 Rust tests and doctests with two existing
+engine checks ignored. Both lost-start cases passed in Chrome. A request
+that never reached Tempo was retried with identical bytes. A lost response
+after acceptance reconciled without another POST. The Store-backed public
+application list exposed a forecast-only row and opened the signed editor.
+The same optimized binary passed both legacy signed Save replay cases on a
+fresh backup of the registered database. Live Explorer and pinned Maia
+each supplied evidence for a disposable one-position scan. All 25 concurrent
+Study Status reads completed within 1.16 ms and identified the expected
+dataset. The revised UI passed 144 tests, including the unknown-kind case.
