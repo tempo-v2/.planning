@@ -3853,3 +3853,31 @@ Coverage. Tab changes preserve drafts and do not rerun game commands.
 
 Candidate status is reviewed and published for integration. The managed
 installation is a separate release step.
+
+### Games tabs installed on November 21, 2026
+
+A fresh Astra reviewer traced routing, tab ownership, job lifetimes and
+pending-request recovery through the mounted Games page. All 43 focused
+Games evidence tests passed independently. The reviewer found no blockers
+in the reviewed source.
+
+[Tempo UI #48](https://github.com/tempo-v2/tempo-ui/pull/48) merged as
+`9db62f94c35ce9a54764b17aeef7d5b65196fa57`.
+[Planning #63](https://github.com/tempo-v2/.planning/pull/63) merged as
+`c7f46a4aa62b89b8f1052aff6fab296eaa943b83`.
+Both merge trees matched their reviewed heads.
+
+The managed launcher installed `workspace-582dafaf513210a4ad34` on
+port 41822. The build reused the registered backend and the packaged
+Core 0.2.4. The launcher completed its disposable rehearsal and readiness
+checks with five-second HTTP deadlines after the default rehearsal timed
+out. The stopped-time backup and previous registration are retained in
+`recovery-start-m2mvgxn4`.
+
+The running service served all 22 desktop and 24 phone files byte for byte
+against the merged-source build. The two desktop text bundles differed from
+the review build only in generated dependency paths. Desktop and phone
+Study status returned the retained dataset. The database inode, schema 17,
+active Study attempt and all 51 table contents matched the stopped-time
+backup. SQLite quick check and foreign-key checks passed. The release build
+also passed the Chrome Games journey on disposable data.
