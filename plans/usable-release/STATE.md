@@ -4084,3 +4084,24 @@ surfaces reported the retained dataset. The database inode, schema
 application tables matched the stopped-time backup. SQLite quick check and
 foreign-key checks passed. The live Games read returned its first
 100 gaps in the expected ranked order.
+
+## Fixed desktop navigation candidate
+
+Tempo UI now has a fixed 40 px bar, with a 44 px menu on narrow and touch
+layouts. Pages use the viewport below it. The Games shortcuts use the Games
+tab IDs, and the shared page transition respects locks and draft confirmations
+from the current view. A direct Games visit can open Saved for review through
+the catalog read before entering Study.
+
+Commit `481a8d46ea523fe174214e277f6d6f9809347fea` is published for review. The
+candidate uses the Coverage Lines release backend from
+`0ad7607d66716297414f74f86d27fc81e6671986`, schema 18 and the packaged Core
+Components 0.2.4. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The guarded build and all 146 UI tests passed. Chrome on disposable data
+verified wide, short and touch layouts, Games tab and review history, dirty
+repertoire cancellation, Coverage Analysis exit, and Saved for review. Study
+kept the board stable and retried only Next after a saved answer. Phone Study
+passed its WebKit touch, continuation and access checks.
+Independent Chrome review verified that a lost accepted Teach acknowledgement
+replayed the original request with exactly one durable receipt.
