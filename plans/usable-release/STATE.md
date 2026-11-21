@@ -3674,3 +3674,96 @@ Read-only Study resumed the retained attempt. Games returned coverage
 status for both active repertoires, and Chrome opened the installed scan
 form and verified the 90% and move-8 defaults. Provider and authoring
 checks ran on disposable data.
+
+## Connected repertoire reviews
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Reconnect repertoire decisions | The accepted Study plan keeps Queue's first ordinary due pick. Chess supplies consecutive occurrences from the current saved PGN with both answers verified. Multiple predecessors leave the first review without a warm-up. A fork with multiple eligible replies, a repeated target, or a gap ends the run. Names, comments, and variation order have no effect. |
+| Choose practice or review | Learning interprets the latest applied human Test on the current answer version and current due and corrective facts. One familiar predecessor may be practiced without scheduling or deferring it. Queue can link up to three independently due ordinary reviews. Existing priority work takes its usual turn. A Test miss ends the run and isolates that target until a later applied clean result. |
+| Resume an issued run | Tempo issues ordinary Practice or Test attempts, pins each authorized opponent reply, and exposes a warm-up presentation to opted-in clients. Store fences the bounded cursor with dataset, version, attempt and revision checks. Each answer and its receipt commit with its own result. Next resumes an active attempt or advances the persisted run. |
+
+The first release covers automatic warm-up and short scheduled runs through the
+desktop and phone Study entry points. Full-variation Practice is a follow-up.
+Once selected, the exact path remains pinned while its moves, versions and
+eligibility still match. A newly available alternative does not replace it.
+
+### Published candidate and acceptance
+
+The compatible candidate uses Study wire 5 with an opt-in run presentation and
+SQLite schema 17. Assemble these heads on the installed repertoire coverage
+release with its workspace lock and packaged Core 0.2.4.
+
+| Component | Verified source | Draft PR |
+| --- | --- | --- |
+| tempo-chess | `3d599189d75cd1d99e672ec0d81cb5c8f4a04fea` | [#25](https://github.com/tempo-v2/tempo-chess/pull/25) |
+| tempo-learning | `ca9a3baa531b12c63903a149372e2c25952eda14` | [#9](https://github.com/tempo-v2/tempo-learning/pull/9) |
+| tempo-queue | `4b485f4d1c1feb99758213b7642161e3385a0536` | [#14](https://github.com/tempo-v2/tempo-queue/pull/14) |
+| tempo-store | `4e7b8075ecd0b1404ce310ab7716389ed5ae1870` | [#26](https://github.com/tempo-v2/tempo-store/pull/26) |
+| tempo-ui | `1537bc0e9ad3911214b32024f0815fd0f75e6d5f` | [#43](https://github.com/tempo-v2/tempo-ui/pull/43) |
+| tempo | `1934d7793e30c382b63a40449b409e7ca66edb8d` | [#46](https://github.com/tempo-v2/tempo/pull/46) |
+
+Reused Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, Study
+`ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and Core
+`a5f8f320313d6650700617eb24ca83ec2f3cb827`.
+
+- The locked Rust workspace passed 453 tests and doctests with two existing
+  ignored tests. The packaged UI passed 145 tests. The dependency-direction
+  gate and optimized build passed.
+- Native SQLite Study verified the warm-up, three separate assessments, a miss
+  followed by isolated recall, forks and transpositions, comment-only and
+  semantic edits, suspension, priority interruptions, and identical commands,
+  receipts and learning for present, renamed and omitted exercise names.
+- Chromium desktop and WebKit phone played an ungraded warm-up and three
+  reviews on the same board. Chrome also covered Skip warm-up, correction,
+  retry of only Next after an accepted result and immutable Answer replay when
+  its response was lost. The mounted clean, missed and Teach journeys matched
+  across all three display-name variants.
+- Six accepted-lost and unaccepted journeys with the exact previous registered
+  binary and UI covered Answer, additional tactics allowance and repertoire
+  save. Two further Answer journeys used copies of the registered schema-16
+  database and its old browser recovery envelope. Each accepted one grade and
+  one receipt. Direct migrations preserved all 50 tables from schema 16 and
+  all 48 tables from schema 15. SQLite quick check and foreign keys passed.
+- The first fresh Astra review traced the published diffs through the SQLite
+  and mounted clients. It required Queue to own the warm-up proposal and
+  issuance effects and reproduced a run crossing a repeated position.
+  The fixes below passed the native, mounted browser, and previous-release
+  checks on the updated pair. SQLite confirmed the bounded latest-Test query
+  uses the new index.
+
+| Qualified artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo executable | `02ad730616d53e9c67ef801ef711dc77390f23c937111778baf1dc25892135c7` |
+| Desktop JavaScript | `7779357c4289464b58bfa295c22d0d018ad61aca6281461f4d7a1cdc0c0048d4` |
+| Phone JavaScript | `d75483e9e5a42a894c9a59b63386916e016deed2aadc0f54cfdfe68313302777` |
+
+Publication is at the draft PR stage. A release operation would use this
+compatible source set and rehearse the migration against the then-current
+registered backup.
+
+### Strict interface review follow-up
+
+Queue owns the warm-up choice and its effects on the regular review turn,
+deferral, and tactics practice rotation. Tempo supplies the familiar,
+verified predecessor of Queue's ordinary due pick and maps the returned
+warm-up to an ungraded Study Practice attempt. The wire presentation derives
+from that declared activity. A repeated target on a surviving authored route
+ends expansion at that step even when another variation can continue. The
+ordering of the two variations has no effect.
+
+The Queue regression exercises warm-up deferral, the regular review turn,
+priority requests, and tactics practice rotation. The native Study regression
+plays the same repeated-position boundary with both PGN variation orders.
+
+### Combined with the installed repertoire coverage release
+
+The second fresh Astra approved the Queue ownership and repeated-target
+fixes. Coverage merged and became the registered schema-16 release before
+this feature's merge. The updated branches build with those published
+components. SQLite applies the coverage migration at 15 to 16 and adds
+Study run storage at 16 to 17. The current branch preserves both receipts
+and versioned forecast rows. The mounted Games test exercised scanning,
+merged backlog, signed response, rescan, restart and scan recovery on the
+same optimized binary used for the connected Study journeys. The schema-16
+installation is the prior artifact in the replay checks above.
