@@ -4389,3 +4389,52 @@ The managed service installed checkpoint `workspace-cc9e4ebef2187a942646` on por
 The first cutover attempt ran out of disk space while copying the recovery database. The previous registration was restarted and responded before the retry. The successful run released the completed disposable rehearsal copy before creating its verified stopped-time backup. The installer preserved the three separate postgame lab listeners.
 
 The installed idle worker published version 2 of the pictured fork. It stores Qh5+, autoplays ...g6 and requires Qxc5. The original fulfilled request, Learning state, assessment, receipts and version 1 history match the stopped-time backup. Live foreign-key validation passed after the upgrade.
+
+## Phone repertoire Build
+
+| Behavior | Basis and owner | Inputs, independence and lifetime |
+| --- | --- | --- |
+| Scan and rank likely missing replies | The approved phone Build scope reuses the Games coverage scan. Tempo estimates and orders first-gap reach. Chess decides legal transitions and missing replies. | The chosen repertoire, target, learner move depth and opponent evidence determine the result. Display names and phone layout are independent. Store retains the latest forecast, and rescan is explicit. |
+| Preview and append a reply or line | Build reuses the signed gap editor. Tempo admits only a verified forecast gap on the configured private phone surface and signs the exact additive change. Store accepts it through the existing content transaction. | The dataset, repertoire, current document revision, forecast gap and legal selected reply determine the draft. Preview leaves Study and Learning untouched. The signed command and receipt survive reload and restart. |
+| Continue after Save | The shared UI editor owns delivery recovery and the Build view loads the next ranked gap after acceptance. Study uses its existing controller on return. | Retry an uncertain Save with its original command. Once accepted, retry the gap read. An earlier coverage estimate stays visible until the next explicit scan. |
+
+| Component | Published candidate | Commit |
+| --- | --- | --- |
+| Tempo | [#53](https://github.com/tempo-v2/tempo/pull/53) | `108c17b73102f908a19941147ba5ade5447dd07b` |
+| Tempo UI | [#54](https://github.com/tempo-v2/tempo-ui/pull/54) | `c65d6c082b93a943c884b171acc4761f50905857` |
+
+Assemble those two heads with the preceding tactical payoff Chess and Store
+merges. The other component commits are Learning
+`ee542cc1971f40de2de7a80edad9f51f2f6eecdc`, Queue
+`74e09a1ea1cc2ca9bdf308b8fb7cc75963378214`, Study
+`ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, Types
+`a8e46c9b9442f1180ec33b8035cef1c713414b66`, and Core
+`71cbd2b1e4a3514f42a1f0293506ad71e0343d93` with vendored Core 0.2.5. The
+workspace lock is `workspace-remaining-audit.Cargo.lock` with SHA-256
+`ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`.
+The UI uses its published lock. The schema remains 18.
+
+The optimized Tempo suite, 148 UI tests, architecture gate, phone HTTP
+ingress, packaged phone Study WebKit, and full desktop coverage Chrome
+passed. At 320 and 375 px, packaged phone Build verified ranked gaps, board
+input, Save line, Save response only, both loss cases for scans and saves,
+stale-preview refresh, gap-read-only retry after Save, and return to the
+original Study attempt. A direct Build launch initializes Study on first entry.
+During an existing Study visit a trip through Build retains the completed
+result and its Continue action without sending Next or issuing a new attempt.
+Existing learning and Study rows were preserved.
+The independent review reproduced the stale-preview problem before the fix
+and verified the typed refresh path. Serial browser runs passed after one
+concurrent run timed out during engine startup.
+
+On disposable copies of the retained schema-18 database, the previously
+registered desktop bundle and binary from
+`workspace-cc9e4ebef2187a942646` produced signed gap commands for
+accepted-with-response-lost and never-delivered Saves. The candidate replayed
+the original bytes and opened the next gap with exactly one receipt in each
+case. The accepted case returned the original receipt reply. A separate
+disposable scan received live evidence from both Maia and Lichess Explorer.
+
+Publication is for coordinated review. The managed service still serves
+`workspace-cc9e4ebef2187a942646`. Installation and physical iPhone
+acceptance are pending.
