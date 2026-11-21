@@ -4043,3 +4043,44 @@ The continuation worker receives the saved response catalog, and the
 single-position editor retains its separate presentation context. The
 transposition journey now verifies the heading, authorized marked preview,
 export and persisted PGN with one receipt.
+
+
+### Approved, merged and installed on November 21, 2026
+
+The fourth fresh Astra approved the exact four code heads after independently
+running the packaged Chrome journey. It verified that the transposed
+heading, export, marked preview and saved PGN followed the same Chess route.
+The mounted feature also retained the game count after an opponent endpoint
+edit, replayed a lost Save with one receipt, and retried only the next load
+after acceptance. The dependency gate and all 145 UI tests passed. The
+combined Games workbench and Saved for review browser journeys passed.
+
+Both accepted-lost and unaccepted single-response commands from the
+previously registered `workspace-b917da6ebc3f10036d30` browser replayed
+against the exact optimized candidate from disposable clones of its live
+schema-18 database. They reused the original Save bytes, left exactly one
+receipt, preserved existing learning and Study records, and opened the next
+gap. The accepted case returned the original receipt reply.
+
+| Component | Pull request | Verified main merge |
+| --- | --- | --- |
+| tempo-chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `b23b37fb6d256c65c40596266121b4a33fb47114` |
+| tempo-store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `443122e2946725571a3c142eec710b910aa21e99` |
+| tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `0ad7607d66716297414f74f86d27fc81e6671986` |
+| tempo-ui | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `ec3f8c5d441abbd4c0f490fe558c7e00ee1edcb4` |
+
+The remote merge trees matched the independently reviewed heads. The managed
+launcher rebuilt those sources and matched the reviewed binary and every
+UI asset before rehearsing on a disposable copy. It installed
+`workspace-eb9e0c464f15fde74483` on port 41822 and saved the
+stopped-time database and previous registration in `recovery-start-g3nqoqmp`.
+The readiness probes allowed five seconds for this invocation, and the
+launcher released its disposable copy before retaining the recovery backup.
+
+The running listener matched all 22
+desktop and 24 phone assets. Both Study
+surfaces reported the retained dataset. The database inode, schema
+18, active attempt and all 52
+application tables matched the stopped-time backup. SQLite quick check and
+foreign-key checks passed. The live Games read returned its first
+100 gaps in the expected ranked order.
