@@ -2116,5 +2116,71 @@
       "one_minute_no_increment": 523,
       "backup": "recovery-start-qoee13ij"
     }
+  },
+  "remaining-audit-release-2026-11-20": {
+    "status": "Baseline pinned. Integrated qualification pending.",
+    "baseline": {
+      ".planning": "9d1ed12f9c90136e8ab09e7311ce25f2be2604e4",
+      "tempo": "e39a797f83eaf398b21b43df37372f13d308f12c",
+      "tempo-chess": "e1b23ee430e3a1dea8895db673d2ca0769986b67",
+      "tempo-core-components": "a5f8f320313d6650700617eb24ca83ec2f3cb827",
+      "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
+      "tempo-queue": "5aad5035c05e6b4d85a6574a02151e06c079f550",
+      "tempo-store": "28446c2f6028bf97d20d5ac4fe5479c0a99c1a14",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-ui": "7a156014f9fee2cba9cfa2d8e19cdbb358f187cc"
+    },
+    "scoped_pull_requests": {
+      ".planning": 56,
+      "tempo": 45,
+      "tempo-queue": 13,
+      "tempo-store": 25,
+      "tempo-ui": 42
+    },
+    "diagnostics_sources": {
+      ".planning": {
+        "pull_request": 47,
+        "commit": "ef27eae6f23d3274cf78cea7d670858180f1ee07"
+      },
+      "tempo": {
+        "pull_request": 40,
+        "commit": "53550a7a2ef6725e11d8028939e49be5642196ab"
+      },
+      "tempo-store": {
+        "pull_request": 21,
+        "commit": "a44b2c485840306ef149ed74dbe5e2dc3e4b0154"
+      },
+      "tempo-ui": {
+        "pull_request": 36,
+        "commit": "9e613e747c0c0760579196fe52e9252d95b120bd"
+      }
+    },
+    "workspace_inputs": {
+      "workspace_manifest": {
+        "path": ".planning/workspace.template.toml",
+        "sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072"
+      },
+      "workspace_lock": {
+        "path": ".planning/plans/usable-release/workspace-remaining-audit.Cargo.lock",
+        "sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c"
+      },
+      "ui_lock": {
+        "path": "tempo-ui/package-lock.json",
+        "sha256": "31cfd692d2271cd7b82d26342ed403a60ae34724edc1ca5215402b6cbd22ae1a"
+      },
+      "core_package": {
+        "path": "tempo-ui/vendor/tempo-v2-core-components-0.2.4.tgz",
+        "sha256": "9971c41100e96082a55ef96dd925a7d443dc641c7961d96cffd798e3eb82c9ee"
+      }
+    },
+    "prior_installation": {
+      "artifact_pair": "workspace-587a3ebb0de530457b3e",
+      "artifact_pair_sha256": "587a3ebb0de530457b3e667ce1b46f069080a9c955eb9640317c6255d7ae7ec6",
+      "dataset_schema": 14,
+      "study_wire": 5,
+      "verified_retained_copy": true
+    },
+    "historical_disposition": "LEGACY RETAINED BY POLICY"
   }
 }

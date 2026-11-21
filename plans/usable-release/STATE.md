@@ -3397,3 +3397,24 @@ Learning, stale-content eligibility, and M3 restart and rollback.
 
 D2 remains separate. M2 and D1 remain deferred. No merge, installation,
 live data changes, schema migration or historical cleanup.
+
+## Remaining audit release, November 20, 2026
+
+The release assignment supersedes the prior timeboxes and publication
+endpoint. The M1 retained-binding rule and M3 Queue-proposed ordering effect
+still govern. The target is one independently qualified release on the
+registered Mac.
+
+The baseline is Tempo [#45](https://github.com/tempo-v2/tempo/pull/45),
+Store [#25](https://github.com/tempo-v2/tempo-store/pull/25),
+Queue [#13](https://github.com/tempo-v2/tempo-queue/pull/13), Planning
+[#56](https://github.com/tempo-v2/.planning/pull/56), and the reviewed D2
+change in UI [#42](https://github.com/tempo-v2/tempo-ui/pull/42). The
+manifest identifies their starting heads and the diagnostic candidates.
+The prior 244-test integrated result and D2 evidence apply to their recorded
+revisions. The combined release requires fresh evidence.
+
+**LEGACY RETAINED BY POLICY.** Migration must preserve stored occurrence
+bindings, existing targets, Learning, attempts, assessments and receipts.
+Prior retargeting or separate introductions cannot be reconstructed reliably
+from the retained data. Historical cleanup was outside this release's scope.
