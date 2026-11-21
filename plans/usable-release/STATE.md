@@ -4338,3 +4338,30 @@ and the private phone endpoint served the installed bundle. The live schema
 18 database kept its inode, dataset, and active attempt. All 52 application
 tables matched the stopped-time backup. SQLite quick and foreign-key checks
 passed.
+
+### Generated tactical continuations and Study explanations, November 21, 2026
+
+The two reported positions establish the product rule. A generated puzzle should let the learner play the material-winning capture or deliver mate. After a miss, the correction should explain what the issued sequence accomplishes while leaving later answers playable.
+
+- In the first position, White plays Qh5+, Black replies ...g6, and White takes the bishop with Qxc5. The first correction identifies the fork of the e8 king and c5 bishop. In the second position, ...Qxh3 takes the h3 pawn. The defended bishop on e3 and pawn on d3 do not support a skewer explanation.
+- Game analysis keeps its existing admission rules and report identity. Tempo obtains a separate best-defense variation for an accepted root during background analysis. The search is limited to depth 18 or 500,000 nodes, requires depth 12, and supplies at most 16 plies. Chess checks legality, net material from the starting position, recaptures and actual mate. An inconclusive search retains the short definition.
+- Chess uses the issued solution and current decision to produce a display clue. Relative pins and skewers need a material payoff supported by the continuation. A mating line can be identified without disclosing later moves. Imported solutions keep their supplied length. Labels and source display text do not select the clue.
+- Store publishes a verified retained extension as one new version under the same target. Pending requests, an active attempt and a version-bound correction defer publication. Historical definitions, accepted requests and Learning stay attached to their original identities. A related game finding can be carried forward through the verified version relationship. The original report and issuance attribution remain independently addressable.
+
+| Component | Candidate head | Pull request |
+| --- | --- | --- |
+| Chess | `d8007b93ef69fd3871832f4d1ac46ba901b95daf` | [Chess #30](https://github.com/tempo-v2/tempo-chess/pull/30) |
+| Store | `af760c2d98444c82b928a132dec510ee59063b79` | [Store #31](https://github.com/tempo-v2/tempo-store/pull/31) |
+| Tempo | `297d6bdfef52925039b67325dbd2000d584d18fc` | [Tempo #52](https://github.com/tempo-v2/tempo/pull/52) |
+| UI | `23b8d9cd704bbeb9c564c4515939ccfb88f615cb` | [UI #53](https://github.com/tempo-v2/tempo-ui/pull/53) |
+
+The assembly used Types `a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning `ee542cc1971f` and UI's packaged Core 0.2.5. The optimized executable SHA-256 was `6941cae2fcf7553b53368aa2ec63e2f0728bb1dce2aa435d1fe496dca3625e8c`. The desktop bundle was `442586bf640d4ed0dfaaae75bd29046700c268bf474898676b748f5c4576c2c2` and the Phone bundle was `944f7ad1dc56705bc76dd4858d3e62441c110a0f9f6797007352b715b180c279`.
+
+**Qualification**
+
+- 109 Chess tests, the focused SQLite version/rollback test, all 24 Tempo tactical-analysis tests including both native Stockfish cases, and 148 UI tests passed. A newly imported game produced the extended fork before its first request issued.
+- Mounted Chrome exercised both reported positions, a mating setup, a clean fork and a fork after a miss, one assessment, clue arrows, hidden later answers, display-name invariance, exact Answer replay and interrupted Next. Phone WebKit exercised touch Study and tactic feedback in both Test and Practice. Independent review verified the four published heads and reran the Chrome journey on the candidate executable.
+- On a disposable copy of the registered schema-18 database, the idle worker upgraded the pictured fork from v1 to v2. It preserved the previous history row, request, assessments, receipts and schedule. A restart produced no duplicate version. On an isolated copy with the card made due for verification, an ordinary v2 Test played through Qxc5 and still linked to the original game at half-move 13. Its fulfilled request retained v1.
+- The previous registered release was `workspace-12d119da2c68d03793a3`. All six pending-command cases for Answer, allowance and repertoire save passed with its binary and assets. Accepted-but-lost and never-delivered Answers also replayed on separate copies of its retained database. Its browser bundle accepted a response carrying the new optional mating clue and completed the attempt.
+
+The component changes are published on feature branches. Merge and installation are separate release steps.
