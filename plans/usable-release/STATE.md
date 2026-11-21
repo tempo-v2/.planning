@@ -3461,7 +3461,7 @@ passed with the locked Core 0.2.4 package, and an independent focused UI
 suite passed 35 checks. The optimized candidate used the exact source trees
 and artifact set in the manifest.
 
-The retaining-copy rehearsal migrated the schema-14 database from the
+The retained-copy rehearsal migrated the schema-14 database from the
 registered artifact pair. All 45 preexisting application tables matched by
 row counts and hashes, including the active attempt, Learning and receipts.
 SQLite integrity and foreign keys passed. For the 2,317-game archive, seven
@@ -3501,3 +3501,40 @@ The Mac evidence is in the isolated workspace's
 workspace and optimized build logs, baseline/candidate report comparison,
 retained-copy Answer replay and the concurrent and mounted browser rehearsals.
 The data copy and registration files are kept local.
+
+### Qualified release merged and installed
+
+The managed launcher reproduced the qualified artifact hash and rehearsed on
+a disposable database using the registered desktop and phone surfaces and
+engine dependencies. The reviewed source landed in dependency order. Each
+remote main tree matched the exact reviewed tree in the candidate manifest.
+
+| Component | Release PR | Verified main merge |
+| --- | --- | --- |
+| Chess | [#24](https://github.com/tempo-v2/tempo-chess/pull/24) | `376db59658a2f1354248279a4cddc2eeadd8196b` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `7a79e413f519d2b3396f4fd8a90e0b946bb904d9` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `b4f04ef140820e224682fec0b9fa827511affc60` |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `265362618fb9486623ee24f44cd8f5413272020c` |
+| UI | [#42](https://github.com/tempo-v2/tempo-ui/pull/42) | `5e6a9742c0063ea7b84d6ee2fa0857bdf6cf82d0` |
+
+`make start` replaced the owned listener on port 41822 and left the
+unrelated development listeners running. The registered process served
+`workspace-692fdc88f2fadf494a7b`, including the exact optimized binary and
+all 22 desktop and 24 phone files. The previous binary/UI registration
+and verified stopped-time database copy are in `recovery-start-x08vvc90`.
+Installed readback matched the stopped-time backup on all 45 preexisting
+application tables. The database inode, dataset and active attempt
+were preserved. SQLite quick check and foreign keys passed at schema 15.
+
+Read-only Study resumed the retained attempt. Personal Tactics returned a
+matching report generation and 32 fully analyzed games out of 2,317.
+The personal-tactics detector was available. Analysis was enabled and
+reported waiting for Study to leave the foreground. The registered browser
+exported its diagnostic ring with the Chrome context offline. The native
+collector recorded the registered PID and the correlated report response.
+The controlled and installed evidence establishes diagnostic capability.
+The cause of the historical timeout remains undetermined.
+
+**LEGACY RETAINED BY POLICY.** The migration and installed readback
+preserved authoritative data. A later historical correction would require
+its own evidence and decision.

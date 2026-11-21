@@ -143,8 +143,9 @@ the matching binary and a disposable SQLite database.
 ## Remaining audit release
 
 Use the `remaining-audit-release-2026-11-20` entry in the
-[manifest](manifest.json) to assemble the component revisions, workspace
-template, Cargo lock and packaged Core 0.2.4 in an isolated workspace.
+[manifest](manifest.json) to assemble the merged component revisions,
+workspace template, Cargo lock and packaged Core 0.2.4 in an isolated
+workspace. The merged trees match the reviewed candidate trees.
 Build the binary with `cargo build --release --locked -p tempo` and the
 paired UI with `make build-ui`. The [run ledger](STATE.md#remaining-audit-release-november-20-2026)
 records the evidence against that assembly and the registered installation.

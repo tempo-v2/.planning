@@ -2118,7 +2118,7 @@
     }
   },
   "remaining-audit-release-2026-11-20": {
-    "status": "Integrated candidate. Exact source and artifact pins.",
+    "status": "Qualified, merged and verified installed on the registered Mac.",
     "baseline": {
       ".planning": "9d1ed12f9c90136e8ab09e7311ce25f2be2604e4",
       "tempo": "e39a797f83eaf398b21b43df37372f13d308f12c",
@@ -2265,6 +2265,40 @@
       "rust": "1.98.1",
       "node": "26.12.0",
       "host": "aarch64-apple-darwin"
+    },
+    "merged_repositories": {
+      "tempo": "265362618fb9486623ee24f44cd8f5413272020c",
+      "tempo-chess": "376db59658a2f1354248279a4cddc2eeadd8196b",
+      "tempo-core-components": "a5f8f320313d6650700617eb24ca83ec2f3cb827",
+      "tempo-learning": "4fb305325acd4a533d2617b871651f6ffc11a9a3",
+      "tempo-queue": "7a79e413f519d2b3396f4fd8a90e0b946bb904d9",
+      "tempo-store": "b4f04ef140820e224682fec0b9fa827511affc60",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-ui": "5e6a9742c0063ea7b84d6ee2fa0857bdf6cf82d0"
+    },
+    "installed": {
+      "artifact_pair": "workspace-692fdc88f2fadf494a7b",
+      "artifact_pair_sha256": "692fdc88f2fadf494a7bfe140be0a8be9dbfc245e132203543db2ec292b356e4",
+      "pid": 58468,
+      "port": 41822,
+      "schema": 15,
+      "dataset_and_active_attempt_preserved": true,
+      "database_inode_preserved": true,
+      "preserved_tables": 45,
+      "sqlite_checks": "ok",
+      "desktop_files": 22,
+      "phone_files": 24,
+      "report_games": 2317,
+      "report_analyzed_games": 32,
+      "engine_detector_available": true,
+      "analysis_status": "ready",
+      "analysis_paused": false,
+      "analysis_wait_reason": "study_in_front",
+      "correlated_study_and_report": true,
+      "recovery": "recovery-start-x08vvc90",
+      "browser_export_offline": true,
+      "host_export_verified": true
     }
   }
 }
