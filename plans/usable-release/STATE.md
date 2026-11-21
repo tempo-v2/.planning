@@ -4131,3 +4131,75 @@ The managed service served all 22 desktop and 24 Phone Study assets byte
 for byte against the reviewed build. Both surfaces returned the retained
 dataset through Study status. Chrome on the live desktop confirmed the
 fixed bar and direct Games tab navigation without starting Study.
+
+## Study explanations for missed game tactics
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Explain an accepted missed move | The approved Study plan covers game tactics in Practice and scheduled Test. Tempo uses the accepted Answer's cursor and issued definition. A retained game finding or independently verified capture record establishes origin. Display names, theme labels, and subsequent reports have no role. |
+| Retain proof across import and issuance | The Tempo 1 converter reads the kind, identity, board, and moves from one recorded capture request. Tempo's import adapter compiles the complete legal line and matches the canonical definition before attaching evidence. Chess preserves the typed fact across equivalent definitions. A replacement requires proof for its own definition. Store snapshots the fact when it issues the card. |
+| Show the relationship on the playable position | Chess applies the one disclosed correction and verifies the resulting relationship. The shared Study UI maps the typed roles and squares to text and board shapes. History inspection hides this live correction's clue and the next accepted move clears it. |
+| Recover the original Answer | The optional Study v5 reply field is negotiated by `X-Tempo-Study-Tactic-Explanation`. On replay, the immutable definition, issued attribution, and stored Answer supply the evidence. The client recovery envelope retains the original command and exact submission identity. |
+
+### Review and verification
+
+The first fresh Astra reproduced a clue assembled from unrelated import
+aliases and a king-fork clue over two defended targets. In the revised
+candidate, flat tags are display metadata. Per-capture evidence must match the
+retained source and complete legal definition. Study omits king forks, whose
+legal threats the reused geometry cannot establish.
+
+The next fresh Astra cleared the four exact code heads and found no
+additional blockers. Independent Chrome verified the later pin, split aliases
+and a mismatched capture line, flipped-board correction, history, exact
+Answer retry, and Retry Next. The mounted present, renamed, and omitted-name
+cases sent matching commands and produced matching durable outcomes for clean
+completion, a miss, and Teach. WebKit covered review and Practice on Phone
+Study. The native king-counterexample regression passed.
+
+The locked optimized build, dependency gate, 374 native tests and doctests,
+148 UI tests, and five converter tests passed. Two existing engine tests were
+ignored. All six previous-client recovery cases passed, including the saved
+allowance response. Both Answer cases also replayed on disposable copies of the
+registered schema-18 database from `workspace-642a00df5faa79064842`.
+
+### Merged and installed on November 21, 2026
+
+| Component | Reviewed source | Verified main merge | PR |
+| --- | --- | --- | --- |
+| Chess | `ad022f42b4474d2a8371f2b56589f296133f82a8` | `5fd994ccb295af6dc0ca45a6b9239cf667d778ea` | [#28](https://github.com/tempo-v2/tempo-chess/pull/28) |
+| Store | `59990838e5a9b9af933d8ef4cd6e1f619bcc1fa3` | `87653ad882135db5ebc7c35a5f71d18b45031c05` | [#30](https://github.com/tempo-v2/tempo-store/pull/30) |
+| Tempo | `2d1d83e98ee390688a1ff041857da0ef7e0c7cd9` | `4d7a155e45e2c07afb8e81f6a7a9d7fe87efa11e` | [#50](https://github.com/tempo-v2/tempo/pull/50) |
+| Tempo UI | `1cdea04e34c1e7841e461000658a52f6c8770bdb` | `3e1573c0c5056f58c78fccc3391155f68bdcf43c` | [#50](https://github.com/tempo-v2/tempo-ui/pull/50) |
+
+The main merge trees matched the reviewed sources. This build reuses the
+Learning, Queue, Study, Types, and packaged Core Components 0.2.4 pins from
+the Coverage Lines and Fixed Desktop Navigation releases. The workspace lock
+SHA-256 is `ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`
+and the UI lock SHA-256 is
+`31cfd692d2271cd7b82d26342ed403a60ae34724edc1ca5215402b6cbd22ae1a`.
+
+| Installed artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo | `e95885cc9b11675768718bc06ab4b035a8f17326ab8b76231e4a3547879a4ce8` |
+| Desktop JavaScript | `cb19019f0d50bcab6c65201d1a4575d1ad0a00bc99ac36f85c7a068c538ae58e` |
+| Phone JavaScript | `c6d8fcac5b1b2db37fb114e76ee735e18887f43cc29500d3cded68cda6eaa972` |
+
+The managed launcher installed `workspace-c15e29a396023a240b45` on port
+41822 and retained the previous registration and stopped-time SQLite backup
+in `recovery-start-d6zld0qt`. Readback matched schema 18, the dataset,
+database inode, active attempt, and all 52 tables at startup. SQLite quick
+and foreign-key checks passed. The listener served all 22 desktop and
+24 Phone Study assets byte for byte, and both Study status reads passed.
+
+The private archive supplied 25 retained captures with exact matched source
+identities and definitions. A disposable rehearsal of
+`backfill-game-capture-origins` added their proof and preserved all 50
+other tables, with zero additions on a repeat. The managed installation
+then recorded the same 25 facts and a subsequent preview found zero
+remaining. Catalog definitions, versions, active attempt, receipts,
+assessments, and learning matched the backup after recording the proof.
+The registered background analyzer completed pending work during this
+comparison, advancing five tactical-analysis tables through its normal
+writer. The remaining 45 tables matched the backup, and SQLite integrity
+and foreign-key checks passed again.
