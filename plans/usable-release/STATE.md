@@ -3363,3 +3363,37 @@ restart, and failed-binding rollback are verified.
 D2 is a separate reviewed report-snapshot candidate in [UI #42](https://github.com/tempo-v2/tempo-ui/pull/42)
 at `7a156014f9fee2cba9cfa2d8e19cdbb358f187cc`. M2 and D1 remain deferred.
 No merge, installation, live data changes or historical cleanup were performed.
+
+### Narrow M1 continuation, November 21, 2026
+
+The continuation started at 00:46 UTC. Normal implementation freezes at
+01:26 UTC, and the hard stop is 01:46 UTC.
+
+The revised acceptance policy supersedes the earlier unissued-replacement
+expectation. A rescan retains the occurrence's stored target and version
+even before issuance and after cancellation or abandonment. The report
+can show a different preferred answer. Invalidation may cancel priority,
+while catalog and ordinary Learning remain intact. Distinct occurrences
+can still acquire their own requests. Active content, current version and
+eligibility checks still govern issuance.
+
+This applies to the binding currently stored. Older retargeting may have
+overwritten a first binding, and earlier scans may already have introduced
+extra targets. This continuation leaves that history as stored.
+
+| Compatible component | Published draft | Reviewed head |
+| --- | --- | --- |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `e39a797f83eaf398b21b43df37372f13d308f12c` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `28446c2f6028bf97d20d5ac4fe5479c0a99c1a14` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `5aad5035c05e6b4d85a6574a02151e06c079f550` |
+
+The integrated locked suites passed 244 tests with two existing engine
+tests ignored. Independent review reran the tactical and Queue suites,
+including the Queue doctest, and the dependency-direction gate passed.
+The new normal regression checks B in the report, A in actual Next, and
+an empty queue after completing A. Other checks cover retained issued and
+fulfilled bindings, cancellation and Skip, exact replay, unchanged
+Learning, stale-content eligibility, and M3 restart and rollback.
+
+D2 remains separate. M2 and D1 remain deferred. No merge, installation,
+live data changes, schema migration or historical cleanup.
