@@ -4249,5 +4249,33 @@ old desktop bundle also accepted a reply containing the new motif and
 completed the review. The accepted-but-lost and never-delivered Answer
 cases replayed against disposable copies of the registered schema-18
 database, with one receipt and one assessment each. No catalog refresh,
-migration, or live data changes were needed. The PRs are open as one
-candidate for a coordinated rollout.
+migration, or live data changes were needed.
+
+### Merged and installed on November 21, 2026
+
+A fresh Astra review cleared the exact published diffs for the strict
+component interfaces and independently ran the mounted Chrome journey.
+GitHub main readback matched each reviewed tree after merging.
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Chess | `9fef1cda9b044d1929a3ab5a4bedbfb36a74f47f` | [#29](https://github.com/tempo-v2/tempo-chess/pull/29) |
+| Tempo | `fe39e8883f55f6f7938d42b89d4f5a4dc5bd73d5` | [#51](https://github.com/tempo-v2/tempo/pull/51) |
+| Tempo UI | `4cc5a8f92f1ebf88774b2226c4156e16b114ca2b` | [#51](https://github.com/tempo-v2/tempo-ui/pull/51) |
+| Candidate ledger | `982c88bd28c1ec759046570bf31aed4a4f9896f4` | [#67](https://github.com/tempo-v2/.planning/pull/67) |
+
+The rebuild from the verified merge trees passed the desktop Chrome and
+Phone WebKit journeys and all six previous-client pending-command cases.
+The managed installer rehearsed and installed `workspace-4fc560562ed4443ee7a1`
+on port 41822. The first desktop read during rehearsal needed a longer
+timeout, so the release invocation gave that read up to eight seconds
+while retaining the managed checks and backup steps.
+
+The installed optimized binary SHA-256 is
+`ee886e303f70807a149863e827ba24999f24f0ff0607f4426e511e45c5a71c57`.
+Desktop and Phone JavaScript matched the candidate hashes above. The
+registered listener served all 22 desktop assets and 24 Phone Study assets
+byte for byte. Both Study status reads and both SQLite integrity checks
+passed. The stopped-time backup and prior registration are in
+`recovery-start-8ibh9sbt`. Schema 18, dataset, database inode, active attempt,
+and the fingerprints of all 52 tables matched that backup.
