@@ -4204,6 +4204,82 @@ comparison, advancing five tactical-analysis tables through its normal
 writer. The remaining 45 tables matched the backup, and SQLite integrity
 and foreign-key checks passed again.
 
+## Study tactic feedback across sources
+
+An accepted wrong submitted move in an active tactic Test or Practice may
+explain the prescribed move from the issued definition. The Study application
+owns when that move can be disclosed and Chess owns the proof. Changing the
+issued move or board can change the result. Card names, source tags, and
+capture attribution are independent of this decision. A verified immediate
+capture with no legal recapture is the fallback after the existing motifs.
+
+This display-only projection uses the existing negotiated reply extension.
+Pending commands and saved receipts keep their existing identities and effects,
+and a client that does not understand a motif can still use the correction.
+Phone and desktop render the same semantic evidence alongside the board.
+
+### Reviewed and qualified candidate
+
+| Component | Candidate source | Pull request |
+| --- | --- | --- |
+| Chess | `5142e76235343b38263a1acb2f5137b9c9095ebf` | [#29](https://github.com/tempo-v2/tempo-chess/pull/29) |
+| Tempo | `d79bd469ac7485a547bfc9d1b66e75fe01daf61c` | [#51](https://github.com/tempo-v2/tempo/pull/51) |
+| Tempo UI | `5598a8d96a747bd2d268d87b9aef6e1cc69c633d` | [#51](https://github.com/tempo-v2/tempo-ui/pull/51) |
+
+Build these three heads together with the retained Store at `87653ad`,
+Learning at `ee542cc`, Queue at `74e09a1`, Study at `ddf6839`, Types at
+`a8e46c9`, and packaged Core Components 0.2.4. Both lockfiles match the
+previous installation. The tested optimized executable begins SHA-256
+`7e93ebb17d38d909`; desktop and Phone JavaScript begin `7a10a565737b48f0`
+and `e0ec2cdf8244f5e2`, respectively.
+
+Fresh independent Astra reviews cleared the consuming path and the final
+heads. Native Chess and Tempo, the dependency gate, and 148 UI tests passed.
+Chrome exercised the later pin with present, changed and omitted names and
+with split source tags. It verified the hanging-piece label, blue correction
+arrow and green ring on an imported tactic, history suppression, exact
+Answer replay, and retrying only Next after accepted completion. Clean and
+Teach name invariance reuse the preceding release evidence. Their paths
+cannot enter the changed miss projection. Phone WebKit verified the
+imported mate-in-one clue directly below the board after a miss in both
+Test and Practice, and Practice preserved the schedule.
+
+All six pending-command cases from the installed release recovered. The
+old desktop bundle also accepted a reply containing the new motif and
+completed the review. The accepted-but-lost and never-delivered Answer
+cases replayed against disposable copies of the registered schema-18
+database, with one receipt and one assessment each. No catalog refresh,
+migration, or live data changes were needed.
+
+### Merged and installed on November 21, 2026
+
+A fresh Astra review cleared the exact published diffs for the strict
+component interfaces and independently ran the mounted Chrome journey.
+GitHub main readback matched each reviewed tree after merging.
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Chess | `9fef1cda9b044d1929a3ab5a4bedbfb36a74f47f` | [#29](https://github.com/tempo-v2/tempo-chess/pull/29) |
+| Tempo | `fe39e8883f55f6f7938d42b89d4f5a4dc5bd73d5` | [#51](https://github.com/tempo-v2/tempo/pull/51) |
+| Tempo UI | `4cc5a8f92f1ebf88774b2226c4156e16b114ca2b` | [#51](https://github.com/tempo-v2/tempo-ui/pull/51) |
+| Candidate ledger | `982c88bd28c1ec759046570bf31aed4a4f9896f4` | [#67](https://github.com/tempo-v2/.planning/pull/67) |
+
+The rebuild from the verified merge trees passed the desktop Chrome and
+Phone WebKit journeys and all six previous-client pending-command cases.
+The managed installer rehearsed and installed `workspace-4fc560562ed4443ee7a1`
+on port 41822. The first desktop read during rehearsal needed a longer
+timeout, so the release invocation gave that read up to eight seconds
+while retaining the managed checks and backup steps.
+
+The installed optimized binary SHA-256 is
+`ee886e303f70807a149863e827ba24999f24f0ff0607f4426e511e45c5a71c57`.
+Desktop and Phone JavaScript matched the candidate hashes above. The
+registered listener served all 22 desktop assets and 24 Phone Study assets
+byte for byte. Both Study status reads and both SQLite integrity checks
+passed. The stopped-time backup and prior registration are in
+`recovery-start-8ibh9sbt`. Schema 18, dataset, database inode, active attempt,
+and the fingerprints of all 52 tables matched that backup.
+
 ## Compact Tempo controls candidate
 
 | Behavior | Owner, inputs and lifetime |
@@ -4214,13 +4290,13 @@ and foreign-key checks passed again.
 | Component | Verified candidate head | Pull request |
 | --- | --- | --- |
 | Tempo Core 0.2.5 | `b66af6e6e69a3516d97dd0e9b912cef8feed4f01` | [Core #9](https://github.com/tempo-v2/tempo-core-components/pull/9) |
-| Tempo UI | `3ec95db8744b1891f49f30e29dafb729d8e4eddd` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
+| Tempo UI | `56f0cd1748ede24fb694e30628d048797f1d5ebb` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
 
 The UI lock installs the bundled Core tarball with SHA-256
 `d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc`.
-The disposable browser journeys use the optimized Study explanations
-backend from `4d7a155e45e2c07afb8e81f6a7a9d7fe87efa11e`, SHA-256
-`e95885cc9b11675768718bc06ab4b035a8f17326ab8b76231e4a3547879a4ce8`.
+The disposable browser journeys use the optimized source-independent tactic feedback
+backend from `fe39e8883f55f6f7938d42b89d4f5a4dc5bd73d5`, SHA-256
+`ee886e303f70807a149863e827ba24999f24f0ff0607f4426e511e45c5a71c57`.
 
 - The packed Core consumer passed Chrome and WebKit checks for hint timing,
   focus, Escape, clipping, offscreen dismissal, and single-tap activation.
