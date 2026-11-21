@@ -4084,3 +4084,61 @@ surfaces reported the retained dataset. The database inode, schema
 application tables matched the stopped-time backup. SQLite quick check and
 foreign-key checks passed. The live Games read returned its first
 100 gaps in the expected ranked order.
+
+## Study explanations for missed game tactics
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Explain an accepted missed move | The approved Study plan covers game tactics in Practice and scheduled Test. Tempo projects the issued decision after an incorrect Answer using the receipt's position and cursor. The issued game binding or the retained Tempo 1 capture record and game kind establishes origin. Pre-attribution attempts can use their exact historical request binding. Display names, theme labels, and subsequent reports have no role. |
+| Show the relationship on the playable position | Chess applies the one disclosed correction and verifies the resulting relationship. The shared Study UI maps the typed pieces and their squares to text and board shapes. The clue belongs to that live correction. History inspection hides it, and the next accepted move clears it. |
+| Recover the original Answer | The optional Study v5 reply field is negotiated by `X-Tempo-Study-Tactic-Explanation`. Previously issued definitions and the stored Answer result supply the evidence on replay. The original Answer envelope, typed receipt, and accepted grade remain the durable authorities. |
+
+### Matched candidate
+
+This candidate builds on the installed Coverage Lines release,
+`workspace-eb9e0c464f15fde74483`. Use the following heads together and
+reuse its Store `443122e2946725571a3c142eec710b910aa21e99`, Learning,
+Queue, Study, Types, and packaged Core Components 0.2.4.
+
+| Component | Tested commit | Draft PR |
+| --- | --- | --- |
+| Chess | `754fa20d7ad45d33d66bfc131a521fda45223dca` | [#28](https://github.com/tempo-v2/tempo-chess/pull/28) |
+| Tempo | `c3d29e2f452856101687f5280912bfd30255a755` | [#50](https://github.com/tempo-v2/tempo/pull/50) |
+| Tempo UI | `2dc9e49b40bef2cc8cc81f1f14313bc06ae37e59` | [#50](https://github.com/tempo-v2/tempo-ui/pull/50) |
+
+The workspace lock SHA-256 is
+`ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`.
+The UI lock SHA-256 is
+`31cfd692d2271cd7b82d26342ed403a60ae34724edc1ca5215402b6cbd22ae1a`.
+
+| Qualified artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo binary | `f5665ad7c1a37d07afc0372005aa29fbb0e399333cb76f88966cef9f64c19d71` |
+| Desktop JavaScript | `03ff41e325d612cd13a0adf4815038446a9e6f46ea046b3e998065a6eb53850f` |
+| Phone JavaScript | `ce68c242d7b6c99cf5d14d7d8a5c41fe6b7006c44a3ee6b14acada36f052c133` |
+
+### Qualification
+
+- The locked optimized build and dependency gate passed. The Chess and Tempo
+  suites passed 316 tests and doctests, with two existing engine tests ignored.
+  The packaged UI built and all 147 UI tests passed.
+- The desktop journey verified the pin after the second decision, the two
+  rings and rays on the flipped board, and the history toggle. The present,
+  renamed, and omitted-name cases sent identical commands and produced
+  matching receipts, grades, and schedule fields. A lost Answer reply
+  replayed by its original bytes. An interrupted Next retried only Next
+  after the single Again.
+- Phone Study in WebKit displayed the mate explanation after a scheduled miss
+  and a Practice miss. Practice preserved the assessment count and learning
+  rows. Independent WebKit review also exercised the pin, history, and touch
+  correction in Practice.
+- The independent reviewer traced the disclosure and geometry through the
+  combined source set and repeated the mounted desktop and six exact
+  predecessor recovery journeys, including the serialized allowance reply.
+  Both prior-client Answer cases also passed on a fresh disposable SQLite
+  backup of the registered schema-18 dataset. The candidate recovered the
+  original command once whether it had been accepted before the switch or
+  had never reached the prior server.
+
+The matched candidate is qualified and published for coordinated review.
+Installation is a separate release operation.
