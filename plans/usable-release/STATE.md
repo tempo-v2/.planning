@@ -4093,7 +4093,7 @@ tab IDs, and the shared page transition respects locks and draft confirmations
 from the current view. A direct Games visit can open Saved for review through
 the catalog read before entering Study.
 
-Commit `481a8d46ea523fe174214e277f6d6f9809347fea` is published for review. The
+Commit `b552ce74da03d6858ccc42522d92f062ff8fb27f` is published for review. The
 candidate uses the Coverage Lines release backend from
 `0ad7607d66716297414f74f86d27fc81e6671986`, schema 18 and the packaged Core
 Components 0.2.4. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
@@ -4105,3 +4105,11 @@ kept the board stable and retried only Next after a saved answer. Phone Study
 passed its WebKit touch, continuation and access checks.
 Independent Chrome review verified that a lost accepted Teach acknowledgement
 replayed the original request with exactly one durable receipt.
+
+Fresh review reproduced a history exit bypass and a stale Analysis board after
+Games Back. Browser traversal now checks the current page's existing exit
+guards before committing the destination. Chrome verified that declining
+Forward restores the entry and the unsaved repertoire text, and that accepting
+Forward opens the original Games tab. Accepted Games Back closes Analysis
+and restores the prior tab. Existing Study history and exact recovery passed
+on disposable data.
