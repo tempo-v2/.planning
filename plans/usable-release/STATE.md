@@ -4371,3 +4371,21 @@ The component changes are published on feature branches. Merge and installation 
 - A continuation search starts only after the authoritative detector completion. Its own deadline or cancellation leaves the completed position available for normal acceptance and the original puzzle can still issue. The zero-budget engine test exercises that fallback through the durable job and Study issuance.
 - Store checks pending requests, active work and version-bound corrections before the worker spends engine time, and rechecks the same facts in the write transaction. Publication distinguishes a temporary hold, a superseded basis, a conflicting definition and a committed extension.
 - The job dispatcher waits for a retained payoff worker before starting a durable detection deadline. Each retained search yields a dispatch turn to the detector. Only a direct game-analysis request that actually queues work cancels optional payoff work. The dispatch fact is internal to the runtime and a replay of a running request retains its existing HTTP response.
+
+#### Merged and installed on November 21, 2026
+
+A fresh Astra review cleared the published Chess, Store, Tempo, UI and Planning heads after the dispatch fixes. It independently reran the detector replay contract and the Chrome Study journey. All 25 native tactical-analysis tests passed in a serial run against the reviewed source. The installed component trees match the reviewed trees.
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Chess | `e1542ac67f7e0c69735f5c9abe3871fcc62fa1eb` | [#30](https://github.com/tempo-v2/tempo-chess/pull/30) |
+| Store | `606456dda59c06f54c37749e1358f1de8ab0d538` | [#31](https://github.com/tempo-v2/tempo-store/pull/31) |
+| Tempo | `d952d215cbedb66810ea6b1493f11183c4865705` | [#52](https://github.com/tempo-v2/tempo/pull/52) |
+| UI | `052817d781e9c0b0ba7c19cdffcc1acc7ac7516d` | [#53](https://github.com/tempo-v2/tempo-ui/pull/53) |
+| Candidate ledger | `2d4277d11ac566f193570f253e770e2b8b47f03e` | [#70](https://github.com/tempo-v2/.planning/pull/70) |
+
+The managed service installed checkpoint `workspace-cc9e4ebef2187a942646` on port 41822. The registered listener served the qualified binary and all 22 desktop and 24 Phone assets. Both Study status reads passed. The database kept its inode, dataset, schema 18 and active attempt. All 52 table fingerprints matched the stopped-time backup in `recovery-start-73j30u4x`, and integrity and foreign-key checks passed.
+
+The first cutover attempt ran out of disk space while copying the recovery database. The previous registration was restarted and responded before the retry. The successful run released the completed disposable rehearsal copy before creating its verified stopped-time backup. The installer preserved the three separate postgame lab listeners.
+
+The installed idle worker published version 2 of the pictured fork. It stores Qh5+, autoplays ...g6 and requires Qxc5. The original fulfilled request, Learning state, assessment, receipts and version 1 history match the stopped-time backup. Live foreign-key validation passed after the upgrade.
