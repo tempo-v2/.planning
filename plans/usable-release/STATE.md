@@ -3538,3 +3538,68 @@ The cause of the historical timeout remains undetermined.
 **LEGACY RETAINED BY POLICY.** The migration and installed readback
 preserved authoritative data. A later historical correction would require
 its own evidence and decision.
+
+## Connected repertoire reviews
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Reconnect repertoire decisions | The accepted Study plan keeps Queue's first ordinary due pick. Chess supplies consecutive occurrences from the current saved PGN with both answers verified. Multiple predecessors leave the first review without a warm-up. A fork with multiple eligible replies, a repeated target, or a gap ends the run. Names, comments, and variation order have no effect. |
+| Choose practice or review | Learning interprets the latest applied human Test on the current answer version and current due and corrective facts. One familiar predecessor may be practiced without scheduling or deferring it. Queue can link up to three independently due ordinary reviews. Existing priority work takes its usual turn. A Test miss ends the run and isolates that target until a later applied clean result. |
+| Resume an issued run | Tempo issues ordinary Practice or Test attempts, pins each authorized opponent reply, and exposes a warm-up presentation to opted-in clients. Store fences the bounded cursor with dataset, version, attempt and revision checks. Each answer and its receipt commit with its own result. Next resumes an active attempt or advances the persisted run. |
+
+The first release covers automatic warm-up and short scheduled runs through the
+desktop and phone Study entry points. Full-variation Practice is a follow-up.
+Once selected, the exact path remains pinned while its moves, versions and
+eligibility still match. A newly available alternative does not replace it.
+
+### Published candidate and acceptance
+
+The compatible candidate uses Study wire 5 with an opt-in run presentation and
+SQLite schema 16. Assemble the following feature heads with the registered
+schema-15 release's workspace lock and packaged Core 0.2.4.
+
+| Component | Verified source | Draft PR |
+| --- | --- | --- |
+| tempo-chess | `b55143b980029ce737652f50521add6c17099090` | [#25](https://github.com/tempo-v2/tempo-chess/pull/25) |
+| tempo-learning | `ca9a3baa531b12c63903a149372e2c25952eda14` | [#9](https://github.com/tempo-v2/tempo-learning/pull/9) |
+| tempo-queue | `c0df5aa62bab8316e6a2672e4ad9ec20a4e5aec1` | [#14](https://github.com/tempo-v2/tempo-queue/pull/14) |
+| tempo-store | `bdc0477f624b76e0874831ee18d3b6091bc571ba` | [#26](https://github.com/tempo-v2/tempo-store/pull/26) |
+| tempo-ui | `e05e67d4ba57e0d0ea48ff078d6bda0cf6539d6c` | [#43](https://github.com/tempo-v2/tempo-ui/pull/43) |
+| tempo | `005ff5ab8bd3486624c902e5cfcd5f4ae3f39696` | [#46](https://github.com/tempo-v2/tempo/pull/46) |
+
+Reused Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, Study
+`ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and Core
+`a5f8f320313d6650700617eb24ca83ec2f3cb827`.
+
+- The locked Rust workspace passed 445 tests and doctests with two existing
+  ignored tests. The packaged UI passed 144 tests. The dependency-direction
+  gate and optimized build passed.
+- Native SQLite Study verified the warm-up, three separate assessments, a miss
+  followed by isolated recall, forks and transpositions, comment-only and
+  semantic edits, suspension, priority interruptions, and identical commands,
+  receipts and learning for present, renamed and omitted exercise names.
+- Chromium desktop and WebKit phone played an ungraded warm-up and three
+  reviews on the same board. Chrome also covered Skip warm-up, correction,
+  retry of only Next after an accepted result and immutable Answer replay when
+  its response was lost. The mounted clean, missed and Teach journeys matched
+  across all three display-name variants.
+- Six accepted-lost and unaccepted journeys with the exact previous registered
+  binary and UI covered Answer, additional tactics allowance and repertoire
+  save. Two further Answer journeys used copies of the registered schema-15
+  database and its old browser recovery envelope. Each accepted one grade and
+  one receipt. A direct migration of the retained copy preserved all 48
+  existing application tables. SQLite quick check and foreign keys passed.
+- Independent review read back the six exact published heads, inspected the
+  consuming path and reran the native, browser and previous-release checks.
+  It found no actionable correctness, ownership or coupling issues. SQLite
+  confirmed the bounded latest-Test query uses the new index.
+
+| Qualified artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo executable | `d5abd293f8a9aac53d63f7d8be365df48a0dbe270da4a261e0266734d1488135` |
+| Desktop JavaScript | `28a0a5628121b601e141ea31ce5cfc4dd79d9769242dfe9423fd20ef89601972` |
+| Phone JavaScript | `d75483e9e5a42a894c9a59b63386916e016deed2aadc0f54cfdfe68313302777` |
+
+Publication is at the draft PR stage. A release operation would use this
+compatible source set and rehearse the migration against the then-current
+registered backup.
