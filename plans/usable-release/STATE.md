@@ -3827,3 +3827,45 @@ held its exact bounds and Study sent one Answer and one Next. WebKit on the
 qualified candidate verified that Phone Study's Continue and Retry controls
 stayed below the board. That run used direct HTTP access checks in place of
 the older assertions about route names in the diagnostics bundle.
+
+### Study card origins and removal, November 21, 2026
+
+Study now offers Card details after a miss or completion on desktop and phone.
+Saved for review can exclude a tactic from future Study and still open its
+saved position. Removing a saved mark remains a separate action.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Disclose an issued card's origin | The requested post-answer context is a read owned by Tempo. The dataset, attempt, revision and issued version address the disclosure. A stored miss allows source categories during correction. Full details use issued content history and the retained game binding when available. Saved Analysis uses its existing disclosure checks and also permits reviewing an explicitly excluded tactic after the active attempt has ended. Capture attribution, titles and themes are presentation data. |
+| Exclude a saved tactic from Study | The user's removal choice applies to the dataset and canonical tactic target. Store validates the mark against that target and atomically saves the exclusion, clears a matching active attempt without a new assessment, and records the exact command receipt. Queue sees only eligible candidates across introductions, reviews, Practice and game-linked requests. Existing learning and spent allowances are retained. Reimport and rescan of the same target preserve the exclusion. |
+
+| Component | Tested commit | Review |
+| --- | --- | --- |
+| Tempo | `b96d5660c2bebba004e6a1dea8d99f9dab31210d` | [Tempo #48](https://github.com/tempo-v2/tempo/pull/48) |
+| Store | `5903f6093f9ce47cfd46b4249519866e7a679e28` | [Store #28](https://github.com/tempo-v2/tempo-store/pull/28) |
+| UI | `028f7e089491df3b0a5f9be88d736b7940b4d86d` | [UI #46](https://github.com/tempo-v2/tempo-ui/pull/46) |
+
+Use the Chess, Learning, Queue, Study and Types pins from the connected
+repertoire release and the packaged Core 0.2.4 dependency from the Study
+completion checkmark release. That checkmark change is in the qualified
+UI base. The workspace Cargo lock SHA-256 is
+`ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`.
+The UI package lock SHA-256 is
+`31cfd692d2271cd7b82d26342ed403a60ae34724edc1ca5215402b6cbd22ae1a`.
+
+The candidate passed 113 Tempo tests, 52 Store tests and 145 UI tests.
+Two pre-existing tests requiring a tactical engine setup were skipped. The
+focused tactical test checked source evidence, version changes, preserved
+learning and suppression after a rescan. Independent review checked the
+mounted Study and Saved for review consumers, the disclosure boundary and
+the addressed exclusion transaction.
+
+Chrome and WebKit exercised Card details and blind-card protection. Chrome
+also exercised cancellation, an accepted removal with a lost reply,
+inspection after removal, stale answers, and restart and reimport. The
+installed `workspace-e61e13268f69e36fdf37` artifact pair supplied six
+accepted-lost and unaccepted command cases, which replayed on the candidate.
+On a disposable backup, schema 17 advanced to 18 and all 52 existing
+SQLite tables, including the active attempt and receipts, matched before and
+after. Study status, SQLite quick check and foreign-key checks passed.
+The feature awaits merge and managed installation.
