@@ -4113,3 +4113,21 @@ Forward restores the entry and the unsaved repertoire text, and that accepting
 Forward opens the original Games tab. Accepted Games Back closes Analysis
 and restores the prior tab. Existing Study history and exact recovery passed
 on disposable data.
+
+### Merged and installed on November 21, 2026
+
+Fresh Astra approved the final head after independently running the Games
+workbench and Coverage browser journeys. The reviewed source tree merged as
+`64c486cd327521ea14fc03dbaf3bec32a243ee8a`. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The managed launcher rehearsed the release with the byte-identical Coverage
+Lines backend, then installed `workspace-642a00df5faa79064842` on port 41822.
+It retained the stopped-time backup and prior registration in
+`recovery-start-tr3t1wqk`. The live schema 18 database kept its inode, dataset,
+and active Study attempt. All 52 application tables matched the backup.
+SQLite quick check and foreign-key checks passed.
+
+The managed service served all 22 desktop and 24 Phone Study assets byte
+for byte against the reviewed build. Both surfaces returned the retained
+dataset through Study status. Chrome on the live desktop confirmed the
+fixed bar and direct Games tab navigation without starting Study.
