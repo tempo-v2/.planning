@@ -4312,3 +4312,29 @@ The initial independent review found a hint could linger after its anchor
 scrolled offscreen and a focused Games replay control ignored its advertised
 arrow key. A fresh independent review confirmed the fixes on the published
 heads and reran the packed Core, Games Workbench, and Phone Study checks.
+
+### Merged and installed on November 21, 2026
+
+A fresh Astra review cleared the strict interfaces and coupling on the
+combined published candidate, including the newer source-independent tactic
+feedback. Its packed Core, Phone Study, Games Workbench, and Saved Reviews
+checks passed. The locked build and all 148 UI tests also passed.
+
+| Component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Tempo Core | `71cbd2b1e4a3514f42a1f0293506ad71e0343d93` | [Core #9](https://github.com/tempo-v2/tempo-core-components/pull/9) |
+| Tempo UI | `35562186d8c32f1947db7f384faa31ea0de26ecc` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
+
+Both main trees matched the reviewed heads. The managed launcher rehearsed
+and installed `workspace-12d119da2c68d03793a3` on port 41822, with the same
+optimized backend bytes as the previous checkpoint. The invocation reused
+the eight-second desktop readiness window. Recovery backup
+`recovery-start-wvmq39ny` contains the previous registration and stopped-time
+database snapshot.
+
+The registered listener served all 22 desktop and 24 Phone Study assets
+byte for byte against the qualified build. Both Study status reads passed,
+and the private phone endpoint served the installed bundle. The live schema
+18 database kept its inode, dataset, and active attempt. All 52 application
+tables matched the stopped-time backup. SQLite quick and foreign-key checks
+passed.
