@@ -3827,3 +3827,63 @@ held its exact bounds and Study sent one Answer and one Next. WebKit on the
 qualified candidate verified that Phone Study's Continue and Retry controls
 stayed below the board. That run used direct HTTP access checks in place of
 the older assertions about route names in the diagnostics bundle.
+
+## One-line repertoire coverage fixes
+
+| Decision | Authority, inputs and lifetime |
+| --- | --- |
+| Rank the backlog | Tempo orders current fixable scan gaps by the saved chance of reaching the first missing reply from the opening position. An observed count annotates a matching row. Observed-only rows follow in count order. The exact gap identity breaks ties. Existing scan estimates survive an edit and carry the earlier-scan label until a rescan. |
+| Draft a likely continuation | The accepted Games plan puts one line under review from the selected first reply through the scan's learner move. The selected report fixes the depth. Chess validates the anchor and owns move legality and saved replies. Tempo uses the coverage blend for the opponent and the existing learner recommendation with a Stockfish fallback. The background preview is transient and carries the content revision. |
+| Save and continue | The existing signed additive Save appends one PGN route and commits a receipt with it. Store checks content revision and preserves existing learner identities and state. The UI replays the identical command if acceptance is uncertain. After acceptance it only reloads the highest-ranked remaining gap in the same list. |
+
+Assemble these heads together on the schema-17 release baseline.
+
+| Component | Published candidate | Verified head |
+| --- | --- | --- |
+| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `eee80c49b3122c45d6d7d9c6b511d818b5bb286c` |
+| Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `e0d25c0e27872fa7a77cd4679135136d46bbbec1` |
+| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `fa37d2b1003020c5b2544063d27623eb93e3e962` |
+| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `ebd832e3c17729eb46c950bf6756dfca5b8f7b9f` |
+
+Reuse Core `a5f8f320313d6650700617eb24ca83ec2f3cb827` and its packaged
+0.2.4 tarball, Learning `ee542cc1971f40de2de7a80edad9f51f2f6eecdc`,
+Queue `74e09a1ea1cc2ca9bdf308b8fb7cc75963378214`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and
+Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`. The locked Rust assembly
+used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
+
+- All 145 UI tests, the packaged desktop and phone build, and the dependency
+  direction gate passed. Native continuation tests covered both colors at
+  move eight and a custom depth, plus a transposed answer and a shorter line
+  when evidence ran out.
+- Chrome used saved Maia distributions and local Stockfish on a disposable
+  database. It verified the mixed list's probability order, the connected
+  board preview, one durable content receipt, preserved Learning and attempts,
+  exact replay after lost acceptance, and retry of only the next-gap load
+  after the save was accepted. The coverage scan, rescan and restart journey
+  also passed against the final optimized binary and packaged UI.
+- Independent review followed the ranking, signed preview and recovery
+  through the mounted Games UI. It found a suspension fence and a preview
+  board/export mismatch. The candidate checks participation when signing
+  and exports the position being viewed. The prior registered binary and UI
+  replayed two saved single-response Games commands across the upgrade on
+  disposable schema-17 data. The independent reviewer repeated the pair on
+  clones of the recorded installation's archived database using the optimized
+  candidate. Both preserved the exact command and Learning and advanced the
+  browser after one durable receipt. Six other previous-release command
+  journeys also passed.
+- The locked Rust workspace passed 453 tests and doctests, with two existing
+  engine checks ignored. The tactics archive timing check hit its settle
+  deadline in debug and passed on an optimized build.
+- The Chrome fixture exposed simultaneous starting-position and line searches.
+  The continuation now allows the starting search to release the shared
+  Stockfish slot, bounded by the preview deadline.
+- Archived retained-catalog saves took more than ten seconds, so the Gap
+  Editor now allows 30 seconds for the existing signed Save to settle before
+  presenting exact-command recovery.
+
+| Candidate artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo | `1dc71776fade43b79c26357238fcde48e8ed2a7a7183ec97e1e7b4a702b1f083` |
+| Desktop JavaScript | `f68a5be3952959b99fb6b939428f6b2da30ec66c468e52365d71695bb60ce0f2` |
+| Phone JavaScript | `31e898c7c70dab1bfc9b888803ec872647ecba0d8db8eced45b686ceaff93fa0` |
