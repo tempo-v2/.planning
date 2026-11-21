@@ -3330,3 +3330,211 @@ schema 14 were preserved. SQLite integrity and foreign keys passed. All 22
 desktop and 24 phone files matched the installed artifacts, and both clients
 reported Study status for the same dataset. The rollback registration and
 verified database copy are in `recovery-start-qoee13ij`.
+
+## Bounded hardening, November 20, 2026
+
+The run started at 23:42 UTC on November 20 with a hard stop at 01:42 UTC
+on November 21. **Partial candidate. Core is not ready.**
+
+| Compatible component | Published draft | Exact candidate head |
+| --- | --- | --- |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `2410513e56a2d915bc3c6931cb97146a73aeef6e` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `6992170493d15cfca02e5c2dea69716e8a5f413a` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `5aad5035c05e6b4d85a6574a02151e06c079f550` |
+
+The locked assembly used these heads together with unchanged Chess
+`e1b23ee`, Learning `4fb3053`, Study `ddf6839`, and Types `a8e46c9`.
+It passed 238 unit and integration tests and the dependency-direction gate.
+Independent review on the same heads reran the tactical and Queue checks
+and confirmed exact issue and receipt replay across restart.
+
+Both supplied M1 cases failed on current main. The candidate preserves the
+original issued or fulfilled binding and prevents the revised answer from
+showing up in ordinary Next. The unissued replacement still fails at Next
+after solving the replacement. A restore-and-scan regression proves that
+an existing ungraded introduction and one newly made by the scan can yield
+the same saved request and Learning. Safe withdrawal needs a durable link
+to the introducing request and a rule for already-retained unknown ownership.
+
+For M3, Queue proposes the ordering effect at selection. Store records it
+with the exact issuance and request binding. Request → regular due → request,
+restart, and failed-binding rollback are verified.
+
+D2 is a separate reviewed report-snapshot candidate in [UI #42](https://github.com/tempo-v2/tempo-ui/pull/42)
+at `7a156014f9fee2cba9cfa2d8e19cdbb358f187cc`. M2 and D1 remain deferred.
+No merge, installation, live data changes or historical cleanup were performed.
+
+### Narrow M1 continuation, November 21, 2026
+
+The continuation started at 00:46 UTC. Normal implementation freezes at
+01:26 UTC, and the hard stop is 01:46 UTC.
+
+The revised acceptance policy supersedes the earlier unissued-replacement
+expectation. A rescan retains the occurrence's stored target and version
+even before issuance and after cancellation or abandonment. The report
+can show a different preferred answer. Invalidation may cancel priority,
+while catalog and ordinary Learning remain intact. Distinct occurrences
+can still acquire their own requests. Active content, current version and
+eligibility checks still govern issuance.
+
+This applies to the binding currently stored. Older retargeting may have
+overwritten a first binding, and earlier scans may already have introduced
+extra targets. This continuation leaves that history as stored.
+
+| Compatible component | Published draft | Reviewed head |
+| --- | --- | --- |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `e39a797f83eaf398b21b43df37372f13d308f12c` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `28446c2f6028bf97d20d5ac4fe5479c0a99c1a14` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `5aad5035c05e6b4d85a6574a02151e06c079f550` |
+
+The integrated locked suites passed 244 tests with two existing engine
+tests ignored. Independent review reran the tactical and Queue suites,
+including the Queue doctest, and the dependency-direction gate passed.
+The new normal regression checks B in the report, A in actual Next, and
+an empty queue after completing A. Other checks cover retained issued and
+fulfilled bindings, cancellation and Skip, exact replay, unchanged
+Learning, stale-content eligibility, and M3 restart and rollback.
+
+D2 remains separate. M2 and D1 remain deferred. No merge, installation,
+live data changes, schema migration or historical cleanup.
+
+## Remaining audit release, November 20, 2026
+
+The release assignment supersedes the prior timeboxes and publication
+endpoint. The M1 retained-binding rule and M3 Queue-proposed ordering effect
+still govern. The target is one independently qualified release on the
+registered Mac.
+
+The baseline is Tempo [#45](https://github.com/tempo-v2/tempo/pull/45),
+Store [#25](https://github.com/tempo-v2/tempo-store/pull/25),
+Queue [#13](https://github.com/tempo-v2/tempo-queue/pull/13), Planning
+[#56](https://github.com/tempo-v2/.planning/pull/56), and the reviewed D2
+change in UI [#42](https://github.com/tempo-v2/tempo-ui/pull/42). The
+manifest identifies their starting heads and the diagnostic candidates.
+The prior 244-test integrated result and D2 evidence apply to their recorded
+revisions. The combined release requires fresh evidence.
+
+**LEGACY RETAINED BY POLICY.** Migration must preserve stored occurrence
+bindings, existing targets, Learning, attempts, assessments and receipts.
+Prior retargeting or separate introductions cannot be reconstructed reliably
+from the retained data. Historical cleanup was outside this release's scope.
+
+### Integrated candidate
+
+- **M1 and M3.** The assembled consumers preserve the retained Finding and
+  Decision bindings, including unissued, issued, cancelled and abandoned
+  requests. Next still applies the active/version/eligibility fences and
+  records Queue's proposed ordering with the issued attempt. Replay, Skip,
+  distinct occurrences and rollback are covered by the independent exact-build
+  rerun.
+- **M2.** Chess prepares the exact identity, source ownership and proposed
+  content. Learning supplies the introduction transition. Store's addressed
+  commit includes the authorized effects, receipt and report invalidation.
+  Two disposable sizes varied current content, old versions, attempts,
+  assessments, receipts and game evidence independently. SQLite used the
+  target, identity and source indexes. Missing/exact lookups measured 49/69
+  VM steps at both sizes and zero full-scan steps. A new target wrote one row
+  each to current content, history and Learning. Pinned rescans wrote zero
+  rows to those tables. Exact replay and a stale revision wrote zero rows.
+- **D1 and D2.** Store fences capture with persisted archive and evidence
+  generations. The worker keeps one compact generation, four filter
+  snapshots and up to four top-30 anchors per filter. A cold generation
+  builds facts once. Warm pages reuse aggregate/bootstrap and ranking
+  results. Status reads can check freshness without rebuilding the report.
+  Same-count rescans advance evidence without reloading archive PGNs.
+  The UI owns the manual snapshot and handles stale, failed and late reads.
+  Position details read the exact finding and live training link.
+- **Diagnostics.** The integrated observational changes supersede Tempo
+  [#40](https://github.com/tempo-v2/tempo/pull/40), Store
+  [#21](https://github.com/tempo-v2/tempo-store/pull/21), UI
+  [#36](https://github.com/tempo-v2/tempo-ui/pull/36) and Planning
+  [#47](https://github.com/tempo-v2/.planning/pull/47). A delivery ID
+  correlates HTTP, Store and worker phases and is independent of a durable
+  command. The offline export keeps bounded allowlisted fields and
+  canonical process labels.
+
+The locked workspace passed 437 Rust tests and doctests with two existing
+engine tests ignored by the ordinary suite. The independent reviewer reran
+39 focused application, Store and analytics checks. The dependency-direction
+gate and four self-tests passed. All 143 UI tests and the desktop/phone build
+passed with the locked Core 0.2.4 package, and an independent focused UI
+suite passed 35 checks. The optimized candidate used the exact source trees
+and artifact set in the manifest.
+
+The retained-copy rehearsal migrated the schema-14 database from the
+registered artifact pair. All 45 preexisting application tables matched by
+row counts and hashes, including the active attempt, Learning and receipts.
+SQLite integrity and foreign keys passed. For the 2,317-game archive, seven
+full report replies matched the prior installed behavior, including filters,
+cohorts, keyset pages, exact similarity and addressed training detail.
+One Mac measurement put the cold report at 220 ms, a warm older page at
+1.26 ms and an addressed detail at 0.75 ms. The concurrent stamped Study
+read took 0.52 ms. These timings describe this archive and host.
+
+With the previous installed browser and binary on separate retained copies,
+both a committed Answer with its reply lost and a pending unsent Answer
+recovered from the original browser envelope against the upgraded candidate.
+Each scenario produced one durable assessment and receipt. An independent
+six-game Chrome and Stockfish journey with the prior UI and candidate backend
+also passed, including report/detail, Study, exact replay and Next.
+
+The independent optimized diagnostics checks passed four controlled
+HTTP/SQLite scenarios and one real transport restart/replay case. The
+collector passed 16 tests, including offline export and process label
+redaction. The controlled fault establishes diagnostic capability.
+
+On the populated disposable database, a burst of seven cold report
+requests admitted two and returned typed `report_busy` for five. Normal
+Stockfish admission then produced two committed tactical acceptances.
+Recorded cold aggregate work overlapped acceptance, and a generation
+change produced the explicit stale response. Across 243 concurrent Study
+progress reads, the median was 0.64 ms and the maximum was 54.42 ms.
+The 186 report requests took at most 235.99 ms. Foreign keys, SQLite
+integrity and active-attempt identity remained intact.
+
+Chrome on the paired candidate verified query pending state, late response
+fencing, an addressed detail read, stale pagination and manual refresh after
+accepting a backdated game. Refreshed results included the new game.
+
+The Mac evidence is in the isolated workspace's
+`.local/remaining-audit-20261120/evidence` directory. It includes the locked
+workspace and optimized build logs, baseline/candidate report comparison,
+retained-copy Answer replay and the concurrent and mounted browser rehearsals.
+The data copy and registration files are kept local.
+
+### Qualified release merged and installed
+
+The managed launcher reproduced the qualified artifact hash and rehearsed on
+a disposable database using the registered desktop and phone surfaces and
+engine dependencies. The reviewed source landed in dependency order. Each
+remote main tree matched the exact reviewed tree in the candidate manifest.
+
+| Component | Release PR | Verified main merge |
+| --- | --- | --- |
+| Chess | [#24](https://github.com/tempo-v2/tempo-chess/pull/24) | `376db59658a2f1354248279a4cddc2eeadd8196b` |
+| Queue | [#13](https://github.com/tempo-v2/tempo-queue/pull/13) | `7a79e413f519d2b3396f4fd8a90e0b946bb904d9` |
+| Store | [#25](https://github.com/tempo-v2/tempo-store/pull/25) | `b4f04ef140820e224682fec0b9fa827511affc60` |
+| Tempo | [#45](https://github.com/tempo-v2/tempo/pull/45) | `265362618fb9486623ee24f44cd8f5413272020c` |
+| UI | [#42](https://github.com/tempo-v2/tempo-ui/pull/42) | `5e6a9742c0063ea7b84d6ee2fa0857bdf6cf82d0` |
+
+`make start` replaced the owned listener on port 41822 and left the
+unrelated development listeners running. The registered process served
+`workspace-692fdc88f2fadf494a7b`, including the exact optimized binary and
+all 22 desktop and 24 phone files. The previous binary/UI registration
+and verified stopped-time database copy are in `recovery-start-x08vvc90`.
+Installed readback matched the stopped-time backup on all 45 preexisting
+application tables. The database inode, dataset and active attempt
+were preserved. SQLite quick check and foreign keys passed at schema 15.
+
+Read-only Study resumed the retained attempt. Personal Tactics returned a
+matching report generation and 32 fully analyzed games out of 2,317.
+The personal-tactics detector was available. Analysis was enabled and
+reported waiting for Study to leave the foreground. The registered browser
+exported its diagnostic ring with the Chrome context offline. The native
+collector recorded the registered PID and the correlated report response.
+The controlled and installed evidence establishes diagnostic capability.
+The cause of the historical timeout remains undetermined.
+
+**LEGACY RETAINED BY POLICY.** The migration and installed readback
+preserved authoritative data. A later historical correction would require
+its own evidence and decision.

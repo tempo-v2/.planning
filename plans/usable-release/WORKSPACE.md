@@ -139,3 +139,20 @@ Use the workspace template, Cargo lock and Core package described above.
 Run `cargo build --release --locked -p tempo` and, in the UI repository, run
 `npm ci` and `npm run build`. For local qualification, serve that UI build with
 the matching binary and a disposable SQLite database.
+
+## Remaining audit release
+
+Use the `remaining-audit-release-2026-11-20` entry in the
+[manifest](manifest.json) to assemble the merged component revisions,
+workspace template, Cargo lock and packaged Core 0.2.4 in an isolated
+workspace. The merged trees match the reviewed candidate trees.
+Build the binary with `cargo build --release --locked -p tempo` and the
+paired UI with `make build-ui`. The [run ledger](STATE.md#remaining-audit-release-november-20-2026)
+records the evidence against that assembly and the registered installation.
+
+The diagnostic tests use disposable data. Run
+`python3 -B tempo/tests/runtime_diagnostics.py -v` and
+`node --test tempo/tests/diagnostics_recovery.mjs` with `TEMPO_BIN` pointing
+to the built binary and `TEMPO_UI` pointing to the built UI. Run the bounded
+collector checks with
+`python3 -B -m unittest discover -s tempo/tools/tests -p test_diagnose.py`.
