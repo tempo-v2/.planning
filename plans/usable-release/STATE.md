@@ -4203,3 +4203,36 @@ The registered background analyzer completed pending work during this
 comparison, advancing five tactical-analysis tables through its normal
 writer. The remaining 45 tables matched the backup, and SQLite integrity
 and foreign-key checks passed again.
+
+## Compact Tempo controls candidate
+
+| Behavior | Owner, inputs and lifetime |
+| --- | --- |
+| Show a button hint | Core handles 500 ms mouse hover and immediate keyboard focus on an enabled button. The caller supplies the action description and any binding it handles. Escape, loss of the anchor, and unmount dismiss the hint. Hint state lives in the mounted browser control. |
+| Make common controls compact | Tempo UI groups replay, details, bookmarking, and board tools on desktop and Phone Study. Icons use the existing action handlers, availability, and addresses. The Games replay arrows also step the board from a focused replay control. |
+
+| Component | Verified candidate head | Pull request |
+| --- | --- | --- |
+| Tempo Core 0.2.5 | `b66af6e6e69a3516d97dd0e9b912cef8feed4f01` | [Core #9](https://github.com/tempo-v2/tempo-core-components/pull/9) |
+| Tempo UI | `3ec95db8744b1891f49f30e29dafb729d8e4eddd` | [UI #52](https://github.com/tempo-v2/tempo-ui/pull/52) |
+
+The UI lock installs the bundled Core tarball with SHA-256
+`d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc`.
+The disposable browser journeys use the optimized Study explanations
+backend from `4d7a155e45e2c07afb8e81f6a7a9d7fe87efa11e`, SHA-256
+`e95885cc9b11675768718bc06ab4b035a8f17326ab8b76231e4a3547879a4ce8`.
+
+- The packed Core consumer passed Chrome and WebKit checks for hint timing,
+  focus, Escape, clipping, offscreen dismissal, and single-tap activation.
+- The locked desktop and phone build and all 148 UI tests passed. Phone
+  Study in WebKit kept each utility row on one line at 320 and 375 px with
+  44 px targets. Continue stayed below the board. Mark recovery kept one
+  receipt, and recovery after an accepted answer sent only Next.
+- Chrome exercised focused Games replay shortcuts, Study flip and saved
+  reviews, tactic capture and pagination, Analysis, Coverage dialog
+  dismissal, and Games draft and move-evidence behavior.
+
+The initial independent review found a hint could linger after its anchor
+scrolled offscreen and a focused Games replay control ignored its advertised
+arrow key. A fresh independent review confirmed the fixes on the published
+heads and reran the packed Core, Games Workbench, and Phone Study checks.
