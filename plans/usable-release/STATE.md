@@ -3827,3 +3827,29 @@ held its exact bounds and Study sent one Answer and one Next. WebKit on the
 qualified candidate verified that Phone Study's Continue and Retry controls
 stayed below the board. That run used direct HTTP access checks in place of
 the older assertions about route names in the diagnostics bundle.
+
+## Games tabs candidate
+
+Games opens on Library and keeps Library, Import, Analysis, and Coverage within
+reach while scrolling. Tempo UI owns the selected view. The browser history
+entry restores it on reload and returns game reviews to their source tab.
+An explicit tab destination uses the Games-owned ID. Valid review links still
+address the original game and board cursor. The saved gap editor resumes in
+Coverage. Tab changes preserve drafts and do not rerun game commands.
+
+- [Tempo UI #48](https://github.com/tempo-v2/tempo-ui/pull/48) uses
+  `868be21322e1697fbe4204100e35f70e72ac8d9c` on the installed UI baseline
+  `e704c731874013e22d59cccc24561b6267d84efa`.
+- The guarded build used the vendored Core Components 0.2.4 package.
+  Chrome tested against the registered release's Tempo backend
+  `ed2a5417423c4543bd20f85d4c87ce020b44a010` on disposable schema-17 data.
+- All 145 UI tests passed. Chrome verified the narrow-screen sticky strip,
+  keyboard navigation, retained PGN file and paste drafts, source-tab return
+  and refresh results. Coverage and suspension journeys passed, including an
+  exact scan retry and recovered gap Save. Dynamic analysis used a fixture.
+- The four prior-client Refresh cases preserved the original bytes and
+  committed once each. Independent review ran 60 focused tests and verified
+  direct navigation, hidden panels and draft retention in 320 px Chrome.
+
+Candidate status is reviewed and published for integration. The managed
+installation is a separate release step.
