@@ -4084,3 +4084,50 @@ surfaces reported the retained dataset. The database inode, schema
 application tables matched the stopped-time backup. SQLite quick check and
 foreign-key checks passed. The live Games read returned its first
 100 gaps in the expected ranked order.
+
+## Fixed desktop navigation candidate
+
+Tempo UI now has a fixed 40 px bar, with a 44 px menu on narrow and touch
+layouts. Pages use the viewport below it. The Games shortcuts use the Games
+tab IDs, and the shared page transition respects locks and draft confirmations
+from the current view. A direct Games visit can open Saved for review through
+the catalog read before entering Study.
+
+Commit `b552ce74da03d6858ccc42522d92f062ff8fb27f` is published for review. The
+candidate uses the Coverage Lines release backend from
+`0ad7607d66716297414f74f86d27fc81e6671986`, schema 18 and the packaged Core
+Components 0.2.4. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The guarded build and all 146 UI tests passed. Chrome on disposable data
+verified wide, short and touch layouts, Games tab and review history, dirty
+repertoire cancellation, Coverage Analysis exit, and Saved for review. Study
+kept the board stable and retried only Next after a saved answer. Phone Study
+passed its WebKit touch, continuation and access checks.
+Independent Chrome review verified that a lost accepted Teach acknowledgement
+replayed the original request with exactly one durable receipt.
+
+Fresh review reproduced a history exit bypass and a stale Analysis board after
+Games Back. Browser traversal now checks the current page's existing exit
+guards before committing the destination. Chrome verified that declining
+Forward restores the entry and the unsaved repertoire text, and that accepting
+Forward opens the original Games tab. Accepted Games Back closes Analysis
+and restores the prior tab. Existing Study history and exact recovery passed
+on disposable data.
+
+### Merged and installed on November 21, 2026
+
+Fresh Astra approved the final head after independently running the Games
+workbench and Coverage browser journeys. The reviewed source tree merged as
+`64c486cd327521ea14fc03dbaf3bec32a243ee8a`. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The managed launcher rehearsed the release with the byte-identical Coverage
+Lines backend, then installed `workspace-642a00df5faa79064842` on port 41822.
+It retained the stopped-time backup and prior registration in
+`recovery-start-tr3t1wqk`. The live schema 18 database kept its inode, dataset,
+and active Study attempt. All 52 application tables matched the backup.
+SQLite quick check and foreign-key checks passed.
+
+The managed service served all 22 desktop and 24 Phone Study assets byte
+for byte against the reviewed build. Both surfaces returned the retained
+dataset through Study status. Chrome on the live desktop confirmed the
+fixed bar and direct Games tab navigation without starting Study.
