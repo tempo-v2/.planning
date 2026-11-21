@@ -3800,3 +3800,30 @@ phone reported the retained dataset. The listener served all
 byte for byte. Chrome and WebKit exercised the installed artifact pair on
 disposable data, including the three-review run, warm-up Skip, correction
 and exact recovery. The separate post-game lab listeners kept their ports.
+
+### Study completion checkmark, November 21, 2026
+
+The desktop checkmark added height to its centered board container and made
+the board jump 9.5 pixels after a clean review. Study UI now uses the existing
+positioned checkmark overlay on desktop and phone. The render path takes the
+same completion cue from Study, and the phone layout still reserves space for
+its controls. A fresh Astra review of `f02f4caa360d5fa7f7243d3e9519ad4eae940a71`
+found no interface or coupling issues. The reviewed tree merged as
+`e704c731874013e22d59cccc24561b6267d84efa`. [Tempo UI #45](https://github.com/tempo-v2/tempo-ui/pull/45)
+
+The installation pairs that UI with Core Components 0.2.4 and the byte-identical
+Tempo backend from `ed2a5417423c4543bd20f85d4c87ce020b44a010`. The managed
+launcher completed its disposable rehearsal using five-second readiness
+deadlines for this invocation after the default deadline timed out. It
+installed `workspace-e61e13268f69e36fdf37` on port 41822 and saved the stopped-time
+backup and prior registration in `recovery-start-53vchggh`.
+
+All 22 desktop and 24 phone assets matched the reviewed build byte for byte.
+Read-only desktop and phone Study status returned the retained dataset. The
+database inode, schema 17, active attempt and all 51 table contents matched
+the stopped-time backup. SQLite quick and foreign-key checks passed. Chrome
+on the installed artifact pair, using disposable data, verified that the board
+held its exact bounds and Study sent one Answer and one Next. WebKit on the
+qualified candidate verified that Phone Study's Continue and Retry controls
+stayed below the board. That run used direct HTTP access checks in place of
+the older assertions about route names in the diagnostics bundle.
