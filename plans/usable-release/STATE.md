@@ -3951,3 +3951,136 @@ and 24 Phone Study assets byte for byte. Both surfaces
 reported the retained dataset. The installed binary and UI matched the
 combined build. Binary SHA-256
 `a9d54c9c34a0a09e6e320a747ee977c22725847db7c8f533e1e7d143ff6ac0e0`.
+
+## One-line repertoire coverage fixes
+
+| Decision | Authority, inputs and lifetime |
+| --- | --- |
+| Rank the backlog | Tempo orders current fixable scan gaps by the saved chance of reaching the first missing reply from the opening position. A retained observed count annotates the same stable gap independently of eligibility. A scan-backed fix uses the forecast authoring contract. Observed-only rows follow in count order. The exact gap identity breaks ties. Existing scan estimates survive an edit and carry the earlier-scan label until a rescan. |
+| Draft a likely continuation | The accepted Games plan puts one line under review from the selected first reply through the scan's learner move. The selected report fixes the depth. Chess validates the anchor and owns move legality and saved replies. Tempo uses the coverage blend for the opponent and the existing learner recommendation with a Stockfish fallback. The background preview is transient and carries the content revision. Chess provides the exact lead-in used for the draft, and the UI replays it when exporting the viewed line. |
+| Save and continue | The existing signed additive Save appends one PGN route and commits a receipt with it. Store checks content revision and preserves existing learner identities and state. The UI replays the identical command if acceptance is uncertain. After acceptance it only reloads the highest-ranked remaining gap in the same list. |
+
+Assemble these heads on schema 18, including the installed Games tabs and Study card origins release.
+
+| Component | Published candidate | Verified head |
+| --- | --- | --- |
+| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `f790ab5965c48735cb3ee3c0cb6de74cea7f2fa1` |
+| Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `5facc3b147ffdeb9d91fdcd301edc39c0e163358` |
+| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `9c06215ab302594d4e19656077e8f6a7871a7060` |
+| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `c2ec67bdf9b2ac5706e533bd5ca16ca67c9b20dc` |
+
+Reuse Core `a5f8f320313d6650700617eb24ca83ec2f3cb827` and its packaged
+0.2.4 tarball, Learning `ee542cc1971f40de2de7a80edad9f51f2f6eecdc`,
+Queue `74e09a1ea1cc2ca9bdf308b8fb7cc75963378214`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and
+Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`. The locked Rust assembly
+used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
+
+- All 145 UI tests, the packaged desktop and phone build, and the dependency
+  direction gate passed. Native continuation tests covered both colors at
+  move eight and a custom depth, plus a transposed answer and a shorter line
+  when evidence ran out.
+- Chrome used saved Maia distributions and local Stockfish on a disposable
+  database. It verified the mixed list's probability order, the connected
+  board preview, one durable content receipt, preserved Learning and attempts,
+  exact replay after lost acceptance, and retry of only the next-gap load
+  after the save was accepted. The coverage scan, rescan and restart journey
+  also passed against the original optimized candidate and packaged UI.
+- Independent review followed the ranking, signed preview and recovery
+  through the mounted Games UI. It found a suspension fence and a preview
+  board/export mismatch. The candidate checks participation when signing
+  and exports the position being viewed. The prior registered binary and UI
+  replayed two saved single-response Games commands across the upgrade on
+  disposable schema-17 data. The independent reviewer repeated the pair on
+  clones of the recorded installation's archived database using the optimized
+  candidate. Both preserved the exact command and Learning and advanced the
+  browser after one durable receipt. Six other previous-release command
+  journeys also passed.
+- The locked Rust workspace passed 453 tests and doctests, with two existing
+  engine checks ignored. The tactics archive timing check hit its settle
+  deadline in debug and passed on an optimized build.
+- The Chrome fixture exposed simultaneous starting-position and line searches.
+  The continuation now allows the starting search to release the shared
+  Stockfish slot, bounded by the preview deadline.
+- Archived retained-catalog saves took more than ten seconds, so the Gap
+  Editor now allows 30 seconds for the existing signed Save to settle before
+  presenting exact-command recovery.
+
+| Candidate artifact | SHA-256 |
+| --- | --- |
+| Optimized Tempo | `562317298bdd145009e06ad91515c3edbffbd052e5a22a65227d6aa3665313db` |
+| Desktop JavaScript | `0602e457b5066feb01571a4d411546dac2bafccd4dace8f2cbdd4ac70074a80c` |
+| Phone JavaScript | `40b108fea34c67af63247b25de5d73084ca279c07987b024311f011a8426d3c4` |
+
+
+### Strict interface review revisions
+
+The first fresh Astra review reproduced two issues in the original candidate.
+A matching game's count disappeared when its opponent move became an authored
+endpoint that still needed a reply. Tempo now projects retained counts by
+stable gap identity and derives eligibility and the authoring operation from
+the current repertoire and scan. The preview's Lichess export also dropped
+the opening history. Chess now supplies the exact anchor route for the
+preview, which the UI validates and replays for export. The draft identity
+and signed Save envelope retain their existing formats.
+
+
+The second fresh Astra verified both fixes and found a scan could reach a gap
+ahead of its authored move number via a prepared transposition. Chess now
+applies the same saved-reply decision in the lead-in and the scan. The route
+can follow a legal opponent move into a position with a verified learner
+reply. The mounted Coverage regression reaches the move-three reply and
+exports the same route that the player reviewed. The locked combined build
+and all 145 UI tests passed on the installed schema-18 baseline.
+
+
+The third fresh Astra reproduced a mismatch between the forecast preview and
+the PGN appended by Save response only. Both signed save paths now use the
+Chess-owned coverage anchor. The FEN, opening route, heading and export
+describe the same preview. Marked Analysis accepts the exact Chess-verified
+forecast route as an anchor alongside its existing authored-route contract.
+The continuation worker receives the saved response catalog, and the
+single-position editor retains its separate presentation context. The
+transposition journey now verifies the heading, authorized marked preview,
+export and persisted PGN with one receipt.
+
+
+### Approved, merged and installed on November 21, 2026
+
+The fourth fresh Astra approved the exact four code heads after independently
+running the packaged Chrome journey. It verified that the transposed
+heading, export, marked preview and saved PGN followed the same Chess route.
+The mounted feature also retained the game count after an opponent endpoint
+edit, replayed a lost Save with one receipt, and retried only the next load
+after acceptance. The dependency gate and all 145 UI tests passed. The
+combined Games workbench and Saved for review browser journeys passed.
+
+Both accepted-lost and unaccepted single-response commands from the
+previously registered `workspace-b917da6ebc3f10036d30` browser replayed
+against the exact optimized candidate from disposable clones of its live
+schema-18 database. They reused the original Save bytes, left exactly one
+receipt, preserved existing learning and Study records, and opened the next
+gap. The accepted case returned the original receipt reply.
+
+| Component | Pull request | Verified main merge |
+| --- | --- | --- |
+| tempo-chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `b23b37fb6d256c65c40596266121b4a33fb47114` |
+| tempo-store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `443122e2946725571a3c142eec710b910aa21e99` |
+| tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `0ad7607d66716297414f74f86d27fc81e6671986` |
+| tempo-ui | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `ec3f8c5d441abbd4c0f490fe558c7e00ee1edcb4` |
+
+The remote merge trees matched the independently reviewed heads. The managed
+launcher rebuilt those sources and matched the reviewed binary and every
+UI asset before rehearsing on a disposable copy. It installed
+`workspace-eb9e0c464f15fde74483` on port 41822 and saved the
+stopped-time database and previous registration in `recovery-start-g3nqoqmp`.
+The readiness probes allowed five seconds for this invocation, and the
+launcher released its disposable copy before retaining the recovery backup.
+
+The running listener matched all 22
+desktop and 24 phone assets. Both Study
+surfaces reported the retained dataset. The database inode, schema
+18, active attempt and all 52
+application tables matched the stopped-time backup. SQLite quick check and
+foreign-key checks passed. The live Games read returned its first
+100 gaps in the expected ranked order.
