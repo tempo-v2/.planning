@@ -3538,3 +3538,139 @@ The cause of the historical timeout remains undetermined.
 **LEGACY RETAINED BY POLICY.** The migration and installed readback
 preserved authoritative data. A later historical correction would require
 its own evidence and decision.
+
+## Repertoire coverage scan
+
+| Behavior | Basis and owner | Inputs, independence and lifetime |
+| --- | --- | --- |
+| Estimate coverage through the chosen learner move | User-approved Games scan. Chess supplies legal transitions and the saved response at each canonical position. Tempo blends Explorer and Maia and stops each path at its first missing response. | The active verified repertoire, its color, opening depth and opponent move evidence determine coverage. Display names and PGN comments are irrelevant. A terminal line needs no further response. |
+| Publish suggested first gaps up to the target shortfall | User-approved target prioritization. Tempo ranks first gaps by their probability from the start. Store atomically replaces one report per repertoire. | The selected target governs the number of suggestions. The dataset and verified repertoire input fence publication. Reports survive restart. After an edit the last estimate is stale and suggestions are checked against current chess content. |
+| Fix a missing response | Games uses the existing signed additive Preview and Save operation. Chess verifies the legal anchor and need for a response. | The current document and the addressed legal position determine the draft. An accepted Save retains its existing receipt and replay rules. The scan publishes forecast records. |
+
+The desktop Games entry accepts one active verified standard-start repertoire
+per manual scan. The inputs default to 90% through the learner's eighth move.
+Tempo uses Lichess Rapid's 1400–1599 bucket and the existing Maia Rapid 1500
+model with a prior weight of 100. Both the first-gap estimate and the unresolved
+mass are measured from the standard initial position. The existing signed
+Save can make a previously missing branch reachable. Another explicit scan
+evaluates that branch.
+
+Schema 16 stores the latest report and gap identities per dataset and
+repertoire. The write checks the current verified input and the prior report
+identity in one transaction. The existing Games list merges estimates with
+recorded counts. Current chess content determines whether a stale suggestion
+can still be opened. Forecasts are derived local data and can be regenerated
+after restoring a portable export.
+
+| Component | Draft PR | Verified head |
+| --- | --- | --- |
+| Chess | [#26](https://github.com/tempo-v2/tempo-chess/pull/26) | `ea97595462078e1be94fcd31566b87aff2603906` |
+| Store | [#27](https://github.com/tempo-v2/tempo-store/pull/27) | `d9895877ae7032edfb78c7b3e77ac208d71cbd77` |
+| Tempo | [#47](https://github.com/tempo-v2/tempo/pull/47) | `d4e428f1f688e13e9264ef15e59252cf463c0e31` |
+| UI | [#44](https://github.com/tempo-v2/tempo-ui/pull/44) | `70acf73cecb370f850daf566211262f3fc8944f5` |
+
+The assembled candidate uses Core `a5f8f320313d6650700617eb24ca83ec2f3cb827`
+and its vendored 0.2.4 tarball, Learning `4fb305325acd4a533d2617b871651f6ffc11a9a3`,
+Queue `7a79e413f519d2b3396f4fd8a90e0b946bb904d9`,
+Study `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and
+Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`.
+It uses the retained remaining-audit Cargo lockfile and the UI's locked
+dependencies.
+
+The locked workspace passed 442 Rust tests and doctests, with two existing
+engine tests ignored. All 143 UI tests, the desktop and phone build, and the
+dependency-direction gate passed. Chrome exercised the new scan and the
+existing Fix Response flow. The scan wrote forecasts while the fixture's
+learning, attempts, assessments, saved content receipts and observed gaps
+matched their pre-scan rows. The browser found both a forecast-only row and a
+row with observed games, saved a response through the signed editor, and
+rescanned from 60% to 85% coverage. Rename kept the report current, restart
+retained it, and a delayed start carrying a prior report ID was rejected.
+
+A disposable two-move scan used live Lichess Explorer and the pinned Maia
+runtime at its one opponent position. It reported 57.1% coverage and zero
+unresolved probability.
+
+The optimized binary from the same source set passed the browser scan journey.
+Its SHA-256 is
+`17c15ab934ef9eb028410404698662e875c34ebee318b3dd0f98a3687dcde64c`.
+Independent review checked the four published heads, including the actual
+backlog, authoring, and migration paths.
+
+Independent recovery qualification used an online backup of the registered
+schema-15 database and the previously installed binary and browser assets.
+The optimized candidate reached schema 16 with SQLite quick check and
+foreign-key checks passing and 11 preexisting table hashes matching before
+replay. Two old-browser sessions replayed their original signed Gap Save
+bytes after restart, one after a lost accepted response and one after a
+request that never reached the old server. The accepted replay added zero
+content receipts and the unaccepted replay added one. Both browser sessions
+settled, with Study attempts, assessments, receipts and game evidence
+preserved.
+
+The four component PRs form a single candidate. This entry records source
+publication and disposable qualification. Merge and managed installation
+remain pending.
+
+### Strict interface review follow-up
+
+Chess owns whether a legal successor has a saved response, is terminal, or
+needs a response. The scan and Fix Response consume this classification.
+During delivery recovery the browser retains the immutable submitted scan.
+Only a status or report for that scan confirms acceptance. An older report
+remains displayable, and retry resends the same scan identity and parameters.
+Tempo owns the merged Games backlog. Every caller uses the same application
+operation, which obtains the observed and forecast facts through Store.
+The local scan worker owns background execution.
+
+| Component | Revised review head |
+| --- | --- |
+| Chess | `13fb1b162b6c02911c67ad7c8dfb4b25b7d4fe09` |
+| Store | `5bf98f65aa8ba7d05ef426f55d146553cdcc36d1` |
+| Tempo | `34844fe85dfa5132213f47432b648b7d38a46d58` |
+| UI | `e0d681f1cb975c6a84816232d772593b8b2b9794` |
+
+A missing gap kind in a legacy Games reply uses the historical editor.
+A present kind must be recognized before Games offers Fix Response.
+The client preserves a recognized explicit kind in the draft command.
+
+The revised heads passed 443 Rust tests and doctests with two existing
+engine checks ignored. Both lost-start cases passed in Chrome. A request
+that never reached Tempo was retried with identical bytes. A lost response
+after acceptance reconciled without another POST. The Store-backed public
+application list exposed a forecast-only row and opened the signed editor.
+The same optimized binary passed both legacy signed Save replay cases on a
+fresh backup of the registered database. Live Explorer and pinned Maia
+each supplied evidence for a disposable one-position scan. All 25 concurrent
+Study Status reads completed within 1.16 ms and identified the expected
+dataset. The revised UI passed 144 tests, including the unknown-kind case.
+
+### Merged and installed
+
+Three fresh Astra reviews traced component decisions and the actual Games
+consumer. The last review approved the exact revised heads after independent
+Chrome checks of both scan delivery cases, typed gap drafts and signed
+preview. The published runtime PRs merged into main with trees identical
+to their reviewed heads.
+
+| Component | Verified main merge |
+| --- | --- |
+| Chess | `53e08bc72e74044ec5fb227e7458ae1a40571d14` |
+| Store | `646912c8333cb4382172e1828aed70d993954c32` |
+| Tempo | `c4f0b678b24d209f00ad33c4aa77944971de9a61` |
+| UI | `b62ae6da3243df0cc99e627c8d0228bc9557d9ad` |
+
+`make start` installed `workspace-d0a77637b0613aadb029` at port 41822.
+The running binary matched the qualified SHA-256
+`55b1c9d5e7f5b1b2314cc87b8a6fdb5c4080be740c5ae263bf040be19fdae791`.
+The registered process served all 22 desktop and 24 phone files byte
+for byte. The prior registration and stopped-time database backup are in
+`recovery-start-6jvss7wm`. All 48 preexisting table counts and hashes
+matched the backup. The dataset identity, active attempt, and database inode
+matched across the schema-15 to schema-16 upgrade. SQLite quick check and
+foreign-key checks passed.
+
+Read-only Study resumed the retained attempt. Games returned coverage
+status for both active repertoires, and Chrome opened the installed scan
+form and verified the 90% and move-8 defaults. Provider and authoring
+checks ran on disposable data.
