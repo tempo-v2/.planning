@@ -4435,6 +4435,35 @@ the original bytes and opened the next gap with exactly one receipt in each
 case. The accepted case returned the original receipt reply. A separate
 disposable scan received live evidence from both Maia and Lichess Explorer.
 
-Publication is for coordinated review. The managed service still serves
-`workspace-cc9e4ebef2187a942646`. Installation and physical iPhone
-acceptance are pending.
+### Reviewed, merged and installed
+
+The first fresh Astra review found that returning from Build with a completed
+Study result issued Next. The follow-up preserves the mounted visit in the
+shared shell. A second fresh Astra approved the exact published heads after
+running packaged phone Study, the shell cases, phone ingress, and nine
+mounted metadata-invariance journeys for clean, corrected, and Teach
+outcomes.
+
+| Component | Pull request | Verified main merge |
+| --- | --- | --- |
+| Tempo | [#53](https://github.com/tempo-v2/tempo/pull/53) | `7c5531031c5d9a6397fc6e1b2208c0e22407f5d2` |
+| Tempo UI | [#54](https://github.com/tempo-v2/tempo-ui/pull/54) | `bc1d92fc9723c25e05cb79f2317e1308cc53c4bc` |
+| Planning | [#72](https://github.com/tempo-v2/.planning/pull/72) | `b0560239de63379ffcd63655b9b67d3d3810a0d1` |
+
+The three merge trees match the approved heads. The managed launcher installed
+`workspace-ee43c26e1197cc490ed1` on port 41822 and saved the stopped-time
+backup in `recovery-start-9gmt_hqk`. The first rehearsal timed out before
+cutover. The retry used up to eight seconds for readiness reads and released
+the disposable rehearsal copy before creating the retained backup.
+
+The listener matched all 22 desktop and 24 phone assets. The private HTTPS
+route returned the new phone bundle and catalogue for the retained dataset.
+The phone ingress also returned the addressed coverage status and gap list.
+The dataset, database inode, schema 18 and active attempt were preserved.
+All 52 tables matched the stopped-time backup. SQLite quick check and
+foreign-key checks passed.
+
+The installed binary matched the managed rebuild. Its bytes differed from
+the pre-install workspace executable, so phone HTTP and both packaged
+WebKit journeys were rerun successfully with the installed binary and UI
+on disposable data. Physical iPhone acceptance remains pending.
