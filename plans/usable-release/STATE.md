@@ -3882,6 +3882,76 @@ active Study attempt and all 51 table contents matched the stopped-time
 backup. SQLite quick check and foreign-key checks passed. The release build
 also passed the Chrome Games journey on disposable data.
 
+### Study card origins and removal, November 21, 2026
+
+Study now offers Card details after a miss or completion on desktop and phone.
+Saved for review can exclude a tactic from future Study and still open its
+saved position. Removing a saved mark remains a separate action.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Disclose an issued card's origin | The requested post-answer context is a read owned by Tempo. The dataset, attempt, revision and issued version address the disclosure. A stored miss allows source categories during correction. New attempts snapshot current source facts and an exact issuing game request or explicitly related game. Older attempts use retained issued content and a historical attempt binding when available. Saved mark checks and fresh details reads share the same authorization. An explicitly excluded tactic may be reviewed after its active attempt ends. Visible rich details and Saved Analysis recheck the addressed disclosure every 1.5 seconds and hide on lost authorization or read failure. Opening details requests current authority. Capture attribution, titles and themes are presentation data. |
+| Exclude a saved tactic from Study | The user's removal choice applies to the dataset and canonical tactic target. Tempo requests Study's no-grade abandonment for a matching active attempt. Store validates the addressed mark, prepared transition and revision, then saves the exclusion, active transition and exact command receipt atomically. Queue sees only eligible candidates across introductions, reviews, Practice and game-linked requests. Existing learning and spent allowances are retained. Reimport and rescan of the same target preserve the exclusion. Games and Capture report only work eligible to appear in Study. |
+
+| Component | Tested commit | Review |
+| --- | --- | --- |
+| Tempo | `6f6ad4806f2f350aee670c5f0cd2e68fa4184549` | [Tempo #48](https://github.com/tempo-v2/tempo/pull/48) |
+| Store | `bf8772bd7013e8bfba09deb64a3383e9bceb402a` | [Store #28](https://github.com/tempo-v2/tempo-store/pull/28) |
+| UI | `10de21d6ede706f06953ff3d16993a2e327355ce` | [UI #46](https://github.com/tempo-v2/tempo-ui/pull/46) |
+
+Use the Chess, Learning, Queue, Study and Types pins from the connected
+repertoire release and the packaged Core 0.2.4 dependency from the Study
+completion checkmark release. That checkmark change is in the qualified
+UI base. The workspace Cargo lock SHA-256 is
+`ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`.
+The UI package lock SHA-256 is
+`31cfd692d2271cd7b82d26342ed403a60ae34724edc1ca5215402b6cbd22ae1a`.
+
+The implementation passed 114 Tempo tests and 52 Store tests. The final
+disclosure candidate passed 145 UI tests and its mounted browser checks.
+Two pre-existing tests requiring a tactical engine setup were skipped. The
+focused tactical test checked source evidence, version changes, preserved
+learning and suppression after a rescan. Other focused checks exercised exact per-game attribution, capture metadata before and after issue, and rejected Store writes without a valid revision or abandonment. Independent review checked the
+mounted Study and Saved for review consumers, the disclosure boundary and
+the addressed exclusion transaction.
+
+Chrome and WebKit exercised Card details and blind-card protection. Chrome
+also exercised cancellation, an accepted removal with a lost reply,
+inspection after removal, stale answers, restart and reimport, and denial of old disclosures and new detail reads when another client starts a blind attempt. The mounted Study consumer also passed display-name invariance for clean reviews, misses and Teach. The
+installed `workspace-582dafaf513210a4ad34` artifact pair supplied six
+accepted-lost and unaccepted command cases, which replayed on the candidate.
+Four fresh Astra reviews traced the Study card feature through its interfaces.
+The final feature review cleared the addressed disclosure and transaction
+boundaries. An additional fresh integration review cleared the merged UI
+combination after Games tabs joined main. The optimized combined build
+passed desktop Chrome and Phone Study WebKit, the Games workbench, and
+six pending-command replays from the installed Games tabs baseline.
+
+#### Merged and installed on November 21, 2026
+
+| Runtime component | Verified main merge | Pull request |
+| --- | --- | --- |
+| Tempo | `4e37421ab72651e89a5dad57ec5cd795c8e127ec` | [#48](https://github.com/tempo-v2/tempo/pull/48) |
+| Store | `b3ea523fe038753ce4b6dfa1aaddcd683f27f330` | [#28](https://github.com/tempo-v2/tempo-store/pull/28) |
+| UI | `07fd57feb40df5530ca936f920a992e68d99f02b` | [#46](https://github.com/tempo-v2/tempo-ui/pull/46) |
+
+The Tempo and Store merge trees matched the cleared versions. The UI merge
+kept the cleared Study paths and included the installed Games tabs change
+from [Tempo UI #48](https://github.com/tempo-v2/tempo-ui/pull/48).
+
+After the disposable upgrade rehearsal, the managed launcher installed
+`workspace-b917da6ebc3f10036d30` on port 41822. It saved the
+stopped-time database backup and previous registration in
+`recovery-start-681t6dxm`. The live file kept its dataset and inode
+and advanced to schema 18. All 52
+pre-existing SQLite tables, including attempts, learning and receipts,
+matched the backup row for row. SQLite quick check and foreign-key checks
+passed. The registered listener served all 22 desktop
+and 24 Phone Study assets byte for byte. Both surfaces
+reported the retained dataset. The installed binary and UI matched the
+combined build. Binary SHA-256
+`a9d54c9c34a0a09e6e320a747ee977c22725847db7c8f533e1e7d143ff6ac0e0`.
+
 ## One-line repertoire coverage fixes
 
 | Decision | Authority, inputs and lifetime |
