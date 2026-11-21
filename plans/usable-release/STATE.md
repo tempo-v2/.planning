@@ -3832,18 +3832,18 @@ the older assertions about route names in the diagnostics bundle.
 
 | Decision | Authority, inputs and lifetime |
 | --- | --- |
-| Rank the backlog | Tempo orders current fixable scan gaps by the saved chance of reaching the first missing reply from the opening position. An observed count annotates a matching row. Observed-only rows follow in count order. The exact gap identity breaks ties. Existing scan estimates survive an edit and carry the earlier-scan label until a rescan. |
-| Draft a likely continuation | The accepted Games plan puts one line under review from the selected first reply through the scan's learner move. The selected report fixes the depth. Chess validates the anchor and owns move legality and saved replies. Tempo uses the coverage blend for the opponent and the existing learner recommendation with a Stockfish fallback. The background preview is transient and carries the content revision. |
+| Rank the backlog | Tempo orders current fixable scan gaps by the saved chance of reaching the first missing reply from the opening position. A retained observed count annotates the same stable gap independently of eligibility. A scan-backed fix uses the forecast authoring contract. Observed-only rows follow in count order. The exact gap identity breaks ties. Existing scan estimates survive an edit and carry the earlier-scan label until a rescan. |
+| Draft a likely continuation | The accepted Games plan puts one line under review from the selected first reply through the scan's learner move. The selected report fixes the depth. Chess validates the anchor and owns move legality and saved replies. Tempo uses the coverage blend for the opponent and the existing learner recommendation with a Stockfish fallback. The background preview is transient and carries the content revision. Chess provides the exact lead-in used for the draft, and the UI replays it when exporting the viewed line. |
 | Save and continue | The existing signed additive Save appends one PGN route and commits a receipt with it. Store checks content revision and preserves existing learner identities and state. The UI replays the identical command if acceptance is uncertain. After acceptance it only reloads the highest-ranked remaining gap in the same list. |
 
 Assemble these heads together on the schema-17 release baseline.
 
 | Component | Published candidate | Verified head |
 | --- | --- | --- |
-| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `eee80c49b3122c45d6d7d9c6b511d818b5bb286c` |
+| Chess | [#27](https://github.com/tempo-v2/tempo-chess/pull/27) | `2184061975f529da0bfd477cfea970223ec576d9` |
 | Store | [#29](https://github.com/tempo-v2/tempo-store/pull/29) | `e0d25c0e27872fa7a77cd4679135136d46bbbec1` |
-| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `fa37d2b1003020c5b2544063d27623eb93e3e962` |
-| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `ebd832e3c17729eb46c950bf6756dfca5b8f7b9f` |
+| Tempo | [#49](https://github.com/tempo-v2/tempo/pull/49) | `c30385b1c6ca752529c531028ffc6e0a353d30e0` |
+| Desktop and phone UI | [#47](https://github.com/tempo-v2/tempo-ui/pull/47) | `624a3c206ba992ae0942fabd2e76b38db6bf6a0e` |
 
 Reuse Core `a5f8f320313d6650700617eb24ca83ec2f3cb827` and its packaged
 0.2.4 tarball, Learning `ee542cc1971f40de2de7a80edad9f51f2f6eecdc`,
@@ -3861,7 +3861,7 @@ used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
   board preview, one durable content receipt, preserved Learning and attempts,
   exact replay after lost acceptance, and retry of only the next-gap load
   after the save was accepted. The coverage scan, rescan and restart journey
-  also passed against the final optimized binary and packaged UI.
+  also passed against the original optimized candidate and packaged UI.
 - Independent review followed the ranking, signed preview and recovery
   through the mounted Games UI. It found a suspension fence and a preview
   board/export mismatch. The candidate checks participation when signing
@@ -3884,6 +3884,18 @@ used `workspace-remaining-audit.Cargo.lock` and the UI's published lock.
 
 | Candidate artifact | SHA-256 |
 | --- | --- |
-| Optimized Tempo | `1dc71776fade43b79c26357238fcde48e8ed2a7a7183ec97e1e7b4a702b1f083` |
-| Desktop JavaScript | `f68a5be3952959b99fb6b939428f6b2da30ec66c468e52365d71695bb60ce0f2` |
+| Optimized Tempo | `980c790ed9898b5c11c5d85ba827a4daa1e475f4ef1e41d72c0e22b375b0af4d` |
+| Desktop JavaScript | `b488d1760a88fd345a3c4afae375fbe62fcf7c455174c86ac5bd0c6ceb10fad7` |
 | Phone JavaScript | `31e898c7c70dab1bfc9b888803ec872647ecba0d8db8eced45b686ceaff93fa0` |
+
+
+### Strict interface review revisions
+
+The first fresh Astra review reproduced two issues in the original candidate.
+A matching game's count disappeared when its opponent move became an authored
+endpoint that still needed a reply. Tempo now projects retained counts by
+stable gap identity and derives eligibility and the authoring operation from
+the current repertoire and scan. The preview's Lichess export also dropped
+the opening history. Chess now supplies the exact anchor route for the
+preview, which the UI validates and replays for export. The draft identity
+and signed Save envelope retain their existing formats.
