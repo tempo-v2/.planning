@@ -4203,3 +4203,51 @@ The registered background analyzer completed pending work during this
 comparison, advancing five tactical-analysis tables through its normal
 writer. The remaining 45 tables matched the backup, and SQLite integrity
 and foreign-key checks passed again.
+
+## Study tactic feedback across sources
+
+An accepted wrong submitted move in an active tactic Test or Practice may
+explain the prescribed move from the issued definition. The Study application
+owns when that move can be disclosed and Chess owns the proof. Changing the
+issued move or board can change the result. Card names, source tags, and
+capture attribution are independent of this decision. A verified immediate
+capture with no legal recapture is the fallback after the existing motifs.
+
+This display-only projection uses the existing negotiated reply extension.
+Pending commands and saved receipts keep their existing identities and effects,
+and a client that does not understand a motif can still use the correction.
+Phone and desktop render the same semantic evidence alongside the board.
+
+### Reviewed and qualified candidate
+
+| Component | Candidate source | Pull request |
+| --- | --- | --- |
+| Chess | `5142e76235343b38263a1acb2f5137b9c9095ebf` | [#29](https://github.com/tempo-v2/tempo-chess/pull/29) |
+| Tempo | `d79bd469ac7485a547bfc9d1b66e75fe01daf61c` | [#51](https://github.com/tempo-v2/tempo/pull/51) |
+| Tempo UI | `5598a8d96a747bd2d268d87b9aef6e1cc69c633d` | [#51](https://github.com/tempo-v2/tempo-ui/pull/51) |
+
+Build these three heads together with the retained Store at `87653ad`,
+Learning at `ee542cc`, Queue at `74e09a1`, Study at `ddf6839`, Types at
+`a8e46c9`, and packaged Core Components 0.2.4. Both lockfiles match the
+previous installation. The tested optimized executable begins SHA-256
+`7e93ebb17d38d909`; desktop and Phone JavaScript begin `7a10a565737b48f0`
+and `e0ec2cdf8244f5e2`, respectively.
+
+Fresh independent Astra reviews cleared the consuming path and the final
+heads. Native Chess and Tempo, the dependency gate, and 148 UI tests passed.
+Chrome exercised the later pin with present, changed and omitted names and
+with split source tags. It verified the hanging-piece label, blue correction
+arrow and green ring on an imported tactic, history suppression, exact
+Answer replay, and retrying only Next after accepted completion. Clean and
+Teach name invariance reuse the preceding release evidence. Their paths
+cannot enter the changed miss projection. Phone WebKit verified the
+imported mate-in-one clue directly below the board after a miss in both
+Test and Practice, and Practice preserved the schedule.
+
+All six pending-command cases from the installed release recovered. The
+old desktop bundle also accepted a reply containing the new motif and
+completed the review. The accepted-but-lost and never-delivered Answer
+cases replayed against disposable copies of the registered schema-18
+database, with one receipt and one assessment each. No catalog refresh,
+migration, or live data changes were needed. The PRs are open as one
+candidate for a coordinated rollout.
