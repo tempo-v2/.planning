@@ -3644,3 +3644,33 @@ fresh backup of the registered database. Live Explorer and pinned Maia
 each supplied evidence for a disposable one-position scan. All 25 concurrent
 Study Status reads completed within 1.16 ms and identified the expected
 dataset. The revised UI passed 144 tests, including the unknown-kind case.
+
+### Merged and installed
+
+Three fresh Astra reviews traced component decisions and the actual Games
+consumer. The last review approved the exact revised heads after independent
+Chrome checks of both scan delivery cases, typed gap drafts and signed
+preview. The published runtime PRs merged into main with trees identical
+to their reviewed heads.
+
+| Component | Verified main merge |
+| --- | --- |
+| Chess | `53e08bc72e74044ec5fb227e7458ae1a40571d14` |
+| Store | `646912c8333cb4382172e1828aed70d993954c32` |
+| Tempo | `c4f0b678b24d209f00ad33c4aa77944971de9a61` |
+| UI | `b62ae6da3243df0cc99e627c8d0228bc9557d9ad` |
+
+`make start` installed `workspace-d0a77637b0613aadb029` at port 41822.
+The running binary matched the qualified SHA-256
+`55b1c9d5e7f5b1b2314cc87b8a6fdb5c4080be740c5ae263bf040be19fdae791`.
+The registered process served all 22 desktop and 24 phone files byte
+for byte. The prior registration and stopped-time database backup are in
+`recovery-start-6jvss7wm`. All 48 preexisting table counts and hashes
+matched the backup. The dataset identity, active attempt, and database inode
+matched across the schema-15 to schema-16 upgrade. SQLite quick check and
+foreign-key checks passed.
+
+Read-only Study resumed the retained attempt. Games returned coverage
+status for both active repertoires, and Chrome opened the installed scan
+form and verified the 90% and move-8 defaults. Provider and authoring
+checks ran on disposable data.
