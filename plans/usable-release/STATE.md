@@ -4085,6 +4085,53 @@ application tables matched the stopped-time backup. SQLite quick check and
 foreign-key checks passed. The live Games read returned its first
 100 gaps in the expected ranked order.
 
+## Fixed desktop navigation candidate
+
+Tempo UI now has a fixed 40 px bar, with a 44 px menu on narrow and touch
+layouts. Pages use the viewport below it. The Games shortcuts use the Games
+tab IDs, and the shared page transition respects locks and draft confirmations
+from the current view. A direct Games visit can open Saved for review through
+the catalog read before entering Study.
+
+Commit `b552ce74da03d6858ccc42522d92f062ff8fb27f` is published for review. The
+candidate uses the Coverage Lines release backend from
+`0ad7607d66716297414f74f86d27fc81e6671986`, schema 18 and the packaged Core
+Components 0.2.4. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The guarded build and all 146 UI tests passed. Chrome on disposable data
+verified wide, short and touch layouts, Games tab and review history, dirty
+repertoire cancellation, Coverage Analysis exit, and Saved for review. Study
+kept the board stable and retried only Next after a saved answer. Phone Study
+passed its WebKit touch, continuation and access checks.
+Independent Chrome review verified that a lost accepted Teach acknowledgement
+replayed the original request with exactly one durable receipt.
+
+Fresh review reproduced a history exit bypass and a stale Analysis board after
+Games Back. Browser traversal now checks the current page's existing exit
+guards before committing the destination. Chrome verified that declining
+Forward restores the entry and the unsaved repertoire text, and that accepting
+Forward opens the original Games tab. Accepted Games Back closes Analysis
+and restores the prior tab. Existing Study history and exact recovery passed
+on disposable data.
+
+### Merged and installed on November 21, 2026
+
+Fresh Astra approved the final head after independently running the Games
+workbench and Coverage browser journeys. The reviewed source tree merged as
+`64c486cd327521ea14fc03dbaf3bec32a243ee8a`. [Tempo UI #49](https://github.com/tempo-v2/tempo-ui/pull/49)
+
+The managed launcher rehearsed the release with the byte-identical Coverage
+Lines backend, then installed `workspace-642a00df5faa79064842` on port 41822.
+It retained the stopped-time backup and prior registration in
+`recovery-start-tr3t1wqk`. The live schema 18 database kept its inode, dataset,
+and active Study attempt. All 52 application tables matched the backup.
+SQLite quick check and foreign-key checks passed.
+
+The managed service served all 22 desktop and 24 Phone Study assets byte
+for byte against the reviewed build. Both surfaces returned the retained
+dataset through Study status. Chrome on the live desktop confirmed the
+fixed bar and direct Games tab navigation without starting Study.
+
 ## Study explanations for missed game tactics
 
 | Behavior | Basis, owner, inputs, and lifetime |
@@ -4095,16 +4142,16 @@ foreign-key checks passed. The live Games read returned its first
 
 ### Matched candidate
 
-This candidate builds on the installed Coverage Lines release,
-`workspace-eb9e0c464f15fde74483`. Use the following heads together and
-reuse its Store `443122e2946725571a3c142eec710b910aa21e99`, Learning,
+This candidate builds on the installed Fixed Desktop Navigation release,
+`workspace-642a00df5faa79064842`. That release reuses the Coverage Lines
+backend. Use the following heads together and reuse Store `443122e2946725571a3c142eec710b910aa21e99`, Learning,
 Queue, Study, Types, and packaged Core Components 0.2.4.
 
 | Component | Tested commit | Draft PR |
 | --- | --- | --- |
 | Chess | `754fa20d7ad45d33d66bfc131a521fda45223dca` | [#28](https://github.com/tempo-v2/tempo-chess/pull/28) |
 | Tempo | `c3d29e2f452856101687f5280912bfd30255a755` | [#50](https://github.com/tempo-v2/tempo/pull/50) |
-| Tempo UI | `2dc9e49b40bef2cc8cc81f1f14313bc06ae37e59` | [#50](https://github.com/tempo-v2/tempo-ui/pull/50) |
+| Tempo UI | `15d92260fecb590d27c24cb0ffe85e484afacb8f` | [#50](https://github.com/tempo-v2/tempo-ui/pull/50) |
 
 The workspace lock SHA-256 is
 `ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`.
@@ -4114,14 +4161,14 @@ The UI lock SHA-256 is
 | Qualified artifact | SHA-256 |
 | --- | --- |
 | Optimized Tempo binary | `f5665ad7c1a37d07afc0372005aa29fbb0e399333cb76f88966cef9f64c19d71` |
-| Desktop JavaScript | `03ff41e325d612cd13a0adf4815038446a9e6f46ea046b3e998065a6eb53850f` |
-| Phone JavaScript | `ce68c242d7b6c99cf5d14d7d8a5c41fe6b7006c44a3ee6b14acada36f052c133` |
+| Desktop JavaScript | `cb19019f0d50bcab6c65201d1a4575d1ad0a00bc99ac36f85c7a068c538ae58e` |
+| Phone JavaScript | `c6d8fcac5b1b2db37fb114e76ee735e18887f43cc29500d3cded68cda6eaa972` |
 
 ### Qualification
 
-- The locked optimized build and dependency gate passed. The Chess and Tempo
-  suites passed 316 tests and doctests, with two existing engine tests ignored.
-  The packaged UI built and all 147 UI tests passed.
+- The locked optimized build and dependency gate passed. The matched Chess
+  and Tempo suites passed 316 tests and doctests, with two existing engine
+  tests ignored. The final packaged UI built and all 148 UI tests passed.
 - The desktop journey verified the pin after the second decision, the two
   rings and rays on the flipped board, and the history toggle. The present,
   renamed, and omitted-name cases sent identical commands and produced
