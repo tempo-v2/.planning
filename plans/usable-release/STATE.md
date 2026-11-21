@@ -3828,6 +3828,60 @@ qualified candidate verified that Phone Study's Continue and Retry controls
 stayed below the board. That run used direct HTTP access checks in place of
 the older assertions about route names in the diagnostics bundle.
 
+## Games tabs candidate
+
+Games opens on Library and keeps Library, Import, Analysis, and Coverage within
+reach while scrolling. Tempo UI owns the selected view. The browser history
+entry restores it on reload and returns game reviews to their source tab.
+An explicit tab destination uses the Games-owned ID. Valid review links still
+address the original game and board cursor. The saved gap editor resumes in
+Coverage. Tab changes preserve drafts and do not rerun game commands.
+
+- [Tempo UI #48](https://github.com/tempo-v2/tempo-ui/pull/48) uses
+  `868be21322e1697fbe4204100e35f70e72ac8d9c` on the installed UI baseline
+  `e704c731874013e22d59cccc24561b6267d84efa`.
+- The guarded build used the vendored Core Components 0.2.4 package.
+  Chrome tested against the registered release's Tempo backend
+  `ed2a5417423c4543bd20f85d4c87ce020b44a010` on disposable schema-17 data.
+- All 145 UI tests passed. Chrome verified the narrow-screen sticky strip,
+  keyboard navigation, retained PGN file and paste drafts, source-tab return
+  and refresh results. Coverage and suspension journeys passed, including an
+  exact scan retry and recovered gap Save. Dynamic analysis used a fixture.
+- The four prior-client Refresh cases preserved the original bytes and
+  committed once each. Independent review ran 60 focused tests and verified
+  direct navigation, hidden panels and draft retention in 320 px Chrome.
+
+Candidate status is reviewed and published for integration. The managed
+installation is a separate release step.
+
+### Games tabs installed on November 21, 2026
+
+A fresh Astra reviewer traced routing, tab ownership, job lifetimes and
+pending-request recovery through the mounted Games page. All 43 focused
+Games evidence tests passed independently. The reviewer found no blockers
+in the reviewed source.
+
+[Tempo UI #48](https://github.com/tempo-v2/tempo-ui/pull/48) merged as
+`9db62f94c35ce9a54764b17aeef7d5b65196fa57`.
+[Planning #63](https://github.com/tempo-v2/.planning/pull/63) merged as
+`c7f46a4aa62b89b8f1052aff6fab296eaa943b83`.
+Both merge trees matched their reviewed heads.
+
+The managed launcher installed `workspace-582dafaf513210a4ad34` on
+port 41822. The build reused the registered backend and the packaged
+Core 0.2.4. The launcher completed its disposable rehearsal and readiness
+checks with five-second HTTP deadlines after the default rehearsal timed
+out. The stopped-time backup and previous registration are retained in
+`recovery-start-m2mvgxn4`.
+
+The running service served all 22 desktop and 24 phone files byte for byte
+against the merged-source build. The two desktop text bundles differed from
+the review build only in generated dependency paths. Desktop and phone
+Study status returned the retained dataset. The database inode, schema 17,
+active Study attempt and all 51 table contents matched the stopped-time
+backup. SQLite quick check and foreign-key checks passed. The release build
+also passed the Chrome Games journey on disposable data.
+
 ### Study card origins and removal, November 21, 2026
 
 Study now offers Card details after a miss or completion on desktop and phone.
