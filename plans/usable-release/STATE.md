@@ -3612,3 +3612,21 @@ preserved.
 The four component PRs form a single candidate. This entry records source
 publication and disposable qualification. Merge and managed installation
 remain pending.
+
+### Strict interface review follow-up
+
+Chess owns whether a legal successor has a saved response, is terminal, or
+needs a response. The scan and Fix Response consume this classification.
+During delivery recovery the browser retains the immutable submitted scan.
+Only a status or report for that scan confirms acceptance. An older report
+remains displayable, and retry resends the same scan identity and parameters.
+Tempo owns the merged Games backlog. Every caller uses the same application
+operation, which obtains the observed and forecast facts through Store.
+The local scan worker owns background execution.
+
+| Component | Revised review head |
+| --- | --- |
+| Chess | `13fb1b162b6c02911c67ad7c8dfb4b25b7d4fe09` |
+| Store | `5bf98f65aa8ba7d05ef426f55d146553cdcc36d1` |
+| Tempo | `34844fe85dfa5132213f47432b648b7d38a46d58` |
+| UI | `f3d14fddabb0bfc702c8776b26440ac51c807309` |
