@@ -3562,16 +3562,16 @@ schema-15 release's workspace lock and packaged Core 0.2.4.
 | --- | --- | --- |
 | tempo-chess | `b55143b980029ce737652f50521add6c17099090` | [#25](https://github.com/tempo-v2/tempo-chess/pull/25) |
 | tempo-learning | `ca9a3baa531b12c63903a149372e2c25952eda14` | [#9](https://github.com/tempo-v2/tempo-learning/pull/9) |
-| tempo-queue | `c0df5aa62bab8316e6a2672e4ad9ec20a4e5aec1` | [#14](https://github.com/tempo-v2/tempo-queue/pull/14) |
+| tempo-queue | `4b485f4d1c1feb99758213b7642161e3385a0536` | [#14](https://github.com/tempo-v2/tempo-queue/pull/14) |
 | tempo-store | `bdc0477f624b76e0874831ee18d3b6091bc571ba` | [#26](https://github.com/tempo-v2/tempo-store/pull/26) |
 | tempo-ui | `e05e67d4ba57e0d0ea48ff078d6bda0cf6539d6c` | [#43](https://github.com/tempo-v2/tempo-ui/pull/43) |
-| tempo | `005ff5ab8bd3486624c902e5cfcd5f4ae3f39696` | [#46](https://github.com/tempo-v2/tempo/pull/46) |
+| tempo | `0d7452686b2c1914f87e719ac69fdd8ddaada2ea` | [#46](https://github.com/tempo-v2/tempo/pull/46) |
 
 Reused Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, Study
 `ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb`, and Core
 `a5f8f320313d6650700617eb24ca83ec2f3cb827`.
 
-- The locked Rust workspace passed 445 tests and doctests with two existing
+- The locked Rust workspace passed 447 tests and doctests with two existing
   ignored tests. The packaged UI passed 144 tests. The dependency-direction
   gate and optimized build passed.
 - Native SQLite Study verified the warm-up, three separate assessments, a miss
@@ -3589,17 +3589,33 @@ Reused Types `a8e46c9b9442f1180ec33b8035cef1c713414b66`, Study
   database and its old browser recovery envelope. Each accepted one grade and
   one receipt. A direct migration of the retained copy preserved all 48
   existing application tables. SQLite quick check and foreign keys passed.
-- Independent review read back the six exact published heads, inspected the
-  consuming path and reran the native, browser and previous-release checks.
-  It found no actionable correctness, ownership or coupling issues. SQLite
-  confirmed the bounded latest-Test query uses the new index.
+- The first fresh Astra review traced the published diffs through the SQLite
+  and mounted clients. It required Queue to own the warm-up proposal and
+  issuance effects and reproduced a run crossing a repeated position.
+  The fixes below passed the native, mounted browser, and previous-release
+  checks on the updated pair. SQLite confirmed the bounded latest-Test query
+  uses the new index.
 
 | Qualified artifact | SHA-256 |
 | --- | --- |
-| Optimized Tempo executable | `d5abd293f8a9aac53d63f7d8be365df48a0dbe270da4a261e0266734d1488135` |
+| Optimized Tempo executable | `a307fc50dc2087bcabeaed963e724d183b091caa965a52146ebbfc66a40e1540` |
 | Desktop JavaScript | `28a0a5628121b601e141ea31ce5cfc4dd79d9769242dfe9423fd20ef89601972` |
 | Phone JavaScript | `d75483e9e5a42a894c9a59b63386916e016deed2aadc0f54cfdfe68313302777` |
 
 Publication is at the draft PR stage. A release operation would use this
 compatible source set and rehearse the migration against the then-current
 registered backup.
+
+### Strict interface review follow-up
+
+Queue owns the warm-up choice and its effects on the regular review turn,
+deferral, and tactics practice rotation. Tempo supplies the familiar,
+verified predecessor of Queue's ordinary due pick and maps the returned
+warm-up to an ungraded Study Practice attempt. The wire presentation derives
+from that declared activity. A repeated target on a surviving authored route
+ends expansion at that step even when another variation can continue. The
+ordering of the two variations has no effect.
+
+The Queue regression exercises warm-up deferral, the regular review turn,
+priority requests, and tactics practice rotation. The native Study regression
+plays the same repeated-position boundary with both PGN variation orders.
