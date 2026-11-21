@@ -4352,10 +4352,10 @@ The two reported positions establish the product rule. A generated puzzle should
 | --- | --- | --- |
 | Chess | `d8007b93ef69fd3871832f4d1ac46ba901b95daf` | [Chess #30](https://github.com/tempo-v2/tempo-chess/pull/30) |
 | Store | `c82cb1a623ce8e98e5153cb2eeb990dce780bc7f` | [Store #31](https://github.com/tempo-v2/tempo-store/pull/31) |
-| Tempo | `44413edd1da3dfbc38820114f7d520b907ac613e` | [Tempo #52](https://github.com/tempo-v2/tempo/pull/52) |
+| Tempo | `0bf0daf1a5bc5fa29486fc42c1437974d040768a` | [Tempo #52](https://github.com/tempo-v2/tempo/pull/52) |
 | UI | `23b8d9cd704bbeb9c564c4515939ccfb88f615cb` | [UI #53](https://github.com/tempo-v2/tempo-ui/pull/53) |
 
-The assembly used Types `a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning `ee542cc1971f` and UI's packaged Core 0.2.5. The optimized executable SHA-256 was `52b6251915e8c554f090b45a4250dd5d37cbef884fa3cfdcb4aae98896f4783a`. The desktop bundle was `442586bf640d4ed0dfaaae75bd29046700c268bf474898676b748f5c4576c2c2` and the Phone bundle was `944f7ad1dc56705bc76dd4858d3e62441c110a0f9f6797007352b715b180c279`.
+The assembly used Types `a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning `ee542cc1971f` and UI's packaged Core 0.2.5. The optimized executable SHA-256 was `ec394b1b52feac69652699d45f1e882f508e8f6787773488c600e25e823be9b8`. The desktop bundle was `442586bf640d4ed0dfaaae75bd29046700c268bf474898676b748f5c4576c2c2` and the Phone bundle was `944f7ad1dc56705bc76dd4858d3e62441c110a0f9f6797007352b715b180c279`.
 
 **Qualification**
 
@@ -4370,4 +4370,4 @@ The component changes are published on feature branches. Merge and installation 
 
 - A continuation search starts only after the authoritative detector completion. Its own deadline or cancellation leaves the completed position available for normal acceptance and the original puzzle can still issue. The zero-budget engine test exercises that fallback through the durable job and Study issuance.
 - Store checks pending requests, active work and version-bound corrections before the worker spends engine time, and rechecks the same facts in the write transaction. Publication distinguishes a temporary hold, a superseded basis, a conflicting definition and a committed extension.
-- The job dispatcher waits for a retained payoff worker before starting a durable detection deadline. Each retained search yields a dispatch turn to the detector. A direct game-analysis request cancels optional payoff work.
+- The job dispatcher waits for a retained payoff worker before starting a durable detection deadline. Each retained search yields a dispatch turn to the detector. Only a direct game-analysis request that actually queues work cancels optional payoff work. The dispatch fact is internal to the runtime and a replay of a running request retains its existing HTTP response.
