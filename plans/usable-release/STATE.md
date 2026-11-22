@@ -5362,3 +5362,14 @@ simplified supported product before dependent implementation.
   answer. The exact pair passed 55 Tempo contracts, four HTTP cases and
   the real SQLite Store read probe. Fresh Next still uses the transitional
   selector pending the ready-plan consumer. No installation.
+- [Store #56](https://github.com/tempo-v2/tempo-store/pull/56) `30b65a0`
+  releases durable Resume Skipped on the separate capability branch.
+  It addresses dataset, Study day and submission identity. Acceptance
+  records that day's cutoff and versioned receipt in one transaction.
+  Exact replay after restart and rollover leaves a later deferral intact.
+  The real SQLite test injects a late receipt failure and checks rollback,
+  then exercises stale day, wrong dataset, changed payload and an
+  unsupported stored receipt version. All 83 Store tests and three
+  doctests passed. The actual UI has yet to adopt the addressed command
+  and separate acceptance from Next. The paired manifest remains on
+  Store #55 until that capability is admitted. No installation.
