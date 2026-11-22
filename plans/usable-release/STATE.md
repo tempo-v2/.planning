@@ -5014,19 +5014,43 @@ simplified supported product before dependent implementation.
   exercises real HTTP and SQLite. Four checks passed, including rejection of
   stdio and recovery of an exact answer with one durable grade. Library and
   Queue/Study fixture removal remain open.
-- T10 ingress betas preserve stable targets, normalized alias membership and
-  legacy absence: Chess `ae95b199b2cd2d642353ec3fe5da1b22cbfbc7f5` and
-  Tempo `64ff3eaf0804f6c51e199d01f66747a0897aa568`. The prior codec revision
-  passed three tests. Combined ingress checks, the reserved schema 22 to 23
-  current-row migration, and Study consumer adoption are pending.
-- T09 shell and Capture context shipped to review in
+- T10 published offline ingress, current-row migration and Chess vocabulary in
+  [Tempo #63](https://github.com/tempo-v2/tempo/pull/63)
+  `df6f5edfec6d3eea227a4cba9fd4774b8c41e3af`,
+  [Store #41](https://github.com/tempo-v2/tempo-store/pull/41)
+  `ff5e159d7e8d9eff6d3a3b20cd0225475a037fd5` and
+  [Chess #36](https://github.com/tempo-v2/tempo-chess/pull/36)
+  `df5304f75c5f1d92b1c1538c616d53fb2f9e5505`. Rebuilt all Rust dependencies
+  in a fresh target with Learning `1d757470`. All 69 scoped Rust checks and
+  five converter tests passed. The disposable schema upgrade preserves issued
+  attempts, historical content, Learning and receipts byte for byte and rolls
+  back malformed required rows. Runtime admission adoption is in progress.
+- T09 published shell, Capture and Games context in
   [UI #60](https://github.com/tempo-v2/tempo-ui/pull/60)
-  `a44ab6492915ee3aea24e03a6ed0a98af2d540c2`. All 153 UI tests passed.
-  Mounted cases exercise exact pending-command replay through context failure,
-  authoritative stale rejection and a bounded reroute to the new identity.
-  Games identity and remaining page/controller scoping remain open. T13 owns
-  fixture retirement and T10 owns taxonomy and migration. Heavy tests remain
-  serial.
+  `4d87636c24f6b5daf72d48562f4386cd667da977`. All 157 UI tests passed.
+  Mounted evidence protects exact pending payloads and confirms retained plain
+  replay, manual import and library browsing without Study or Repertoire
+  identity calls. Remaining shell/controller scoping and optional polling
+  retirement are open.
+- T50 moved the installation guard to the one Tempo tooling owner with
+  [Tempo #62](https://github.com/tempo-v2/tempo/pull/62)
+  `4f58634de40f066967896df4929ed11fca889447` and
+  [UI #61](https://github.com/tempo-v2/tempo-ui/pull/61)
+  `b9123489c8472fde03d4f2dad21a0884f4b3f27b`. All five protection tests
+  passed and a disposable desktop/phone build used the shared guard.
+- T51 current setup and verification use [one manifest](current-assembly.json).
+  A fresh temporary workspace fetched all nine published component pins,
+  verified both locks, packaged Core and canonical guidance, and resolved all
+  seven Rust workspace packages with the locked manifest. The same verifier
+  rejected an intentionally stale guidance copy and passed after restoring it.
+  Its reviewed assembly is distinct from the installed baseline and does not
+  qualify installation. T54 still owns the normal release gate.
+- T13 library/Queue/Study retirement is implemented locally; run it together
+  with T10 adoption before claiming compiled behavior. T42 has an unpublished
+  cap draft `916d080`. The current HTTP dependency may finish reading a
+  body during request cleanup, so a declared byte limit alone cannot protect
+  the command owner. T42 remains open for deadline-safe ingress and evidence.
+  Heavy tests remain serial.
 
 ### Connected-run retirement
 
