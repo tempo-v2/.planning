@@ -22,7 +22,7 @@
   },
   "review": {
     "components": {
-      "tempo": "2fd964351100012eb25141668f88e3bfeb65de6f",
+      "tempo": "4f3b347b51e5d0fccb82be085340b6036986b4a4",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
@@ -44,6 +44,6 @@
     "sqlite_schema": 27,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-27 combined review of authored PGN independence and historical backfill retirement, including prior installed Chrome and staged full archive checks; no installation qualification"
+    "qualification": "Schema-27 combined review includes historical backfill retirement, authored PGN independence and context/static admission independent of foreground writes; no installation qualification"
   }
 }

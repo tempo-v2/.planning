@@ -5494,3 +5494,11 @@ simplified supported product before dependent implementation.
   passed. The direct full schema-22 archive upgrade hit disk I/O while
   local space was constrained. Direct schema-22 to 27 upgrade passed on
   the actual previous-installed browser fixtures. No managed install.
+- [Tempo #91](https://github.com/tempo-v2/tempo/pull/91) `4f3b347` is
+  current with the same schema-27 Store and UI. Existing authorization
+  applies before serving static assets or the bounded read-only context
+  lane. A real disposable SQLite write lock held a foreground Settings
+  save. Context and static assets still returned before release, and the
+  original Save subsequently committed. Five Node and 12 Python
+  diagnostics passed, including private-phone access and correlated
+  asset diagnostics. Fair prepared apply remains separate. No installation.
