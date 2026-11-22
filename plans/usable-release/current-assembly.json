@@ -22,12 +22,12 @@
   },
   "review": {
     "components": {
-      "tempo": "7ab7368bb77ac39685a50e6bc5beff12b4201440",
+      "tempo": "1642eb722cb15a7de75aafefb9ab913f8a65113c",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "b198c968646cababc143a8311532abb4a240fbd3",
       "tempo-queue": "0363fcb6b1b0ce021078113ee14e2299935ec92c",
-      "tempo-store": "274a4860f813909bef13a5095a2a9c8aad6800a2",
+      "tempo-store": "7f6e39eae097bbb130b53c6df31bbf4aa3ba1202",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
       "tempo-ui": "1e96728ab8538afedb165dd1d369eecfbb3cfb83"
@@ -44,6 +44,6 @@
     "sqlite_schema": 26,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-26 combined review includes tactical archive protection, human correction acceptance, portable Tempo API and Stockfish gap-line retirement; no installation qualification"
+    "qualification": "Schema-26 combined review includes tactical and Stockfish retirements, coherent policy and deferral capture, and normal Next active Resume adoption; no installation qualification"
   }
 }

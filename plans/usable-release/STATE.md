@@ -5351,3 +5351,14 @@ simplified supported product before dependent implementation.
   three doctests passed. Calendar fencing and active issued identity remain
   necessary for a complete capture. This Store-only capability is separately
   tested until the paired consumer successor admits it. No installation.
+- [Tempo #85](https://github.com/tempo-v2/tempo/pull/85) `1642eb7` and
+  [Store #55](https://github.com/tempo-v2/tempo-store/pull/55) `7f6e39e`
+  advance the current paired manifest with unchanged UI #69. Normal
+  HTTP Next and the internal issuer check active retained attempts first
+  through the addressed Resume path. Real HTTP returns the same issued
+  work with unreadable Learning and policy. Missing and incompatible
+  identities produce explicit errors without writes. The scoped legacy
+  Practice closure adds no grade and still replays an accepted original
+  answer. The exact pair passed 55 Tempo contracts, four HTTP cases and
+  the real SQLite Store read probe. Fresh Next still uses the transitional
+  selector pending the ready-plan consumer. No installation.
