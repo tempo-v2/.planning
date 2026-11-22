@@ -5472,3 +5472,25 @@ simplified supported product before dependent implementation.
   It passed 18 Queue and four matching existing Tempo adapter tests. The
   summary does not read, construct or order plan entries. Bounded Store
   publication and real Progress screen adoption remain open. No installation.
+
+### Historical backfill retirement and schema-27 review
+
+- [Tempo #90](https://github.com/tempo-v2/tempo/pull/90) `2fd9643` and
+  [UI #72](https://github.com/tempo-v2/tempo-ui/pull/72) `bba81c5` are the
+  current paired pins with Store #62, Learning #12 and Queue #19. They remove
+  historical backfill workers, controls and provider execution. The retained
+  readback resolves exact accepted prior Start and Retry and reports unfinished
+  work as stopped. Never-accepted commands return retirement. Both builds,
+  the focused Rust checks, three HTTP cases, private-phone admission and all
+  120 UI tests passed. Actual previous-installation Chrome recovered the
+  accepted-lost and never-delivered Start and Retry envelopes through both
+  recovery stores, and the same candidate supported current manual PGN
+  import and replay.
+- A fresh disposable copy of the rehearsed schema-26 archive migrated to 27.
+  It replayed all four original accepted Starts and two accepted Retries,
+  preserving 104 completed and 15 stopped windows. Stored jobs, recognized
+  accounts, Games records and receipts, comparisons, Learning and Study
+  receipts remained byte-identical. SQLite quick and foreign-key checks
+  passed. The direct full schema-22 archive upgrade hit disk I/O while
+  local space was constrained. Direct schema-22 to 27 upgrade passed on
+  the actual previous-installed browser fixtures. No managed install.
