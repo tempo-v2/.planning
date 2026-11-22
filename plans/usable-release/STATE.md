@@ -5105,7 +5105,7 @@ simplified supported product before dependent implementation.
 
 - [Tempo #67](https://github.com/tempo-v2/tempo/pull/67) `4538e22560ae9b320c1dcb7aeebeb7483c6b883e`
   and [UI #62](https://github.com/tempo-v2/tempo-ui/pull/62)
-  `5762692f33eccaf01a4ecc9777c662e82fbdd9b8` are the current review heads in
+  `42336036c59595b72f4f89e2ba0c438357c8171f` are the current review heads in
   [the single assembly manifest](current-assembly.json). The backend contains
   typed admission, fixture retirement, the later context checks, addressed
   Resume and issued content, bounded ingress, and the shared guard. The UI
@@ -5122,3 +5122,15 @@ simplified supported product before dependent implementation.
   receipt recovery, prepared Next, independent Progress and projection-free
   acceptance remain open. These checks qualify the listed review slices.
   The installed baseline has not changed.
+- [Types #2](https://github.com/tempo-v2/tempo-types/pull/2) and
+  [Queue #16](https://github.com/tempo-v2/tempo-queue/pull/16) release the
+  work-token and plan records used in this review assembly. Their 23 unit tests
+  and one doctest passed. [Queue #17](https://github.com/tempo-v2/tempo-queue/pull/17)
+  and [Store #44](https://github.com/tempo-v2/tempo-store/pull/44) subsequently
+  released the pure stable builder and schema-24 staging capability. They
+  passed their own suites and remain outside the schema-23 combined pins
+  pending coherent-capture and runtime adoption.
+- T13 deletion audit found the old `init-practice` alias still registered.
+  Its bounded removal is assigned. T39 read-only report and worker retirement
+  is assigned as a deletion slice, with shared tactical paths and persisted
+  receipt compatibility kept in their owning packets.

@@ -30,7 +30,7 @@
       "tempo-store": "c9efc50ad72065388e6a5ed4c77d50c9920c8433",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "5762692f33eccaf01a4ecc9777c662e82fbdd9b8"
+      "tempo-ui": "42336036c59595b72f4f89e2ba0c438357c8171f"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
