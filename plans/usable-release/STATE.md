@@ -4467,3 +4467,52 @@ The installed binary matched the managed rebuild. Its bytes differed from
 the pre-install workspace executable, so phone HTTP and both packaged
 WebKit journeys were rerun successfully with the installed binary and UI
 on disposable data. Physical iPhone acceptance remains pending.
+
+## Winning exchange in Study feedback
+
+In the reported puzzle Black plays `...Qxd4 Qxd4 ...Nxd4` and wins the
+knight. The earlier explanation pointed out the pin on f2. The clue now
+explains that Black has two attackers on d4 and only White's queen can
+recapture. Study marks d4 and d1 on the existing board.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Explain the material gain from the revealed capture | The reported puzzle establishes the teaching rule. Chess proves that the issued capture has one legal immediate defender, a legal second attacker in the original position, and a legal retake by that attacker leaving a settled material gain. The proof is limited to the exchange square and ordinary captures. The verified exchange outranks incidental patterns. |
+| Show the clue after a miss | Tempo uses the existing authorized correction for Test and Practice. The optional payload carries the target and defender from the issued position. The UI renders those facts on desktop and phone. Display names and source labels are independent of the proof. |
+| Recover an interrupted Answer | The typed receipt retains the grading result. On replay, Tempo projects the clue from the immutable issued definition. The prior UI accepts the reply and omits the unfamiliar optional clue. Clients without clue negotiation receive the original correction shape. |
+
+| Component | Verified candidate head | Pull request |
+| --- | --- | --- |
+| Chess | `e8b973a4d7fba14830bccd0967563be48fad5faf` | [Chess #31](https://github.com/tempo-v2/tempo-chess/pull/31) |
+| Tempo UI | `acef4fa25ad9996141b0e8d80f15921089669880` | [UI #55](https://github.com/tempo-v2/tempo-ui/pull/55) |
+
+The assembly used Tempo `7c5531031c5d`, Store `606456dda59c`, Types
+`a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning
+`ee542cc1971f` and the packaged Core 0.2.5 from `71cbd2b1e4a3`.
+The debug executable SHA-256 was
+`4db059cd5c55e7b77043da570b5366efd3e9ccf34c3903b649f6e90908331b3a`.
+The packaged desktop and phone JS hashes were
+`02fecccd239faac5d1b5ed568aaf5b454e83af1eb33f7cedbbc16957331ae968`
+and `27b1d0ba89962162593313bf5caf94b83c3102a8d3153af684a8ce5b401c7061`.
+
+- The full Chess suite passed 130 checks including doctests. The UI build,
+  148 UI tests and the architecture gate passed.
+- Chrome exercised the exact reported puzzle, with its display name present,
+  renamed and omitted. It checked identical ordered commands, receipts and
+  assessment and Learning effects, with wall-clock milliseconds normalized.
+  The second decision remained playable. Interrupted Next retried only Next.
+- Packaged Phone WebKit exercised the exact exchange in Daily Study and
+  Practice. Both decisions remained playable and only Test produced an
+  assessment.
+- Disposable copies of the registered schema-18 database reproduced the
+  exact puzzle under the prior installed binary and assets from
+  `workspace-ee43c26e1197cc490ed1`. Accepted-but-lost and never-delivered
+  Answers replayed with their original bytes and one durable assessment.
+  The accepted receipt stayed byte-for-byte identical. The previous UI
+  also accepted the candidate's response and finished the two decisions.
+  No live learning data was changed.
+- Independent Guardian review checked the published Chess and UI heads,
+  the actual disclosure and consumer path, and reran the focused Chess,
+  Chrome, WebKit, metadata and previous-release recovery checks.
+
+The component PRs are open. Merge and managed installation remain separate.
