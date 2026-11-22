@@ -5134,3 +5134,40 @@ simplified supported product before dependent implementation.
   Its bounded removal is assigned. T39 read-only report and worker retirement
   is assigned as a deletion slice, with shared tactical paths and persisted
   receipt compatibility kept in their owning packets.
+
+### Schema-24 review successor
+
+- [Tempo #68](https://github.com/tempo-v2/tempo/pull/68) and
+  [UI #63](https://github.com/tempo-v2/tempo-ui/pull/63) removed the personal
+  tactics report worker and UI. Both old endpoints return explicit retirement
+  without dispatching Store work. Those revisions also removed the old
+  initializer alias; the current fixture proves it creates no database.
+  Retained Study, context, Games and private-phone checks passed. Report-only
+  maintenance and other retired tactical workers remain separate.
+- [Queue #18](https://github.com/tempo-v2/tempo-queue/pull/18) `0363fcb` and
+  [Tempo #69](https://github.com/tempo-v2/tempo/pull/69) `16c56ed` remove the
+  rotating tactic ranker. Only the offline import report retains legacy pack
+  fields. Exact combined schema-24 testing passed 14 Queue tests, four
+  offline importer tests, 55 Tempo contracts and one phone HTTP case.
+- [Store #45](https://github.com/tempo-v2/tempo-store/pull/45) `c35a242`
+  writes versioned Study receipts and reads the exact legacy form. All 72
+  Store tests and three doctests passed. [Tempo #70](https://github.com/tempo-v2/tempo/pull/70)
+  `12611b9` exercised accepted and never-delivered Teach against the actual
+  previous installed backend and a disposable database. Valid retries worked
+  without a plan or summary. The original accepted receipt stayed byte-identical;
+  the previously unsent command accepted once in the new form. The full
+  previous-release browser matrix and T20 acceptance are open.
+- [Tempo #71](https://github.com/tempo-v2/tempo/pull/71) `0dfaf8b` and
+  [UI #64](https://github.com/tempo-v2/tempo-ui/pull/64) `8c2fc5b`
+  are the current combined review successors. They remove the interactive
+  position-evidence worker, panels and requests. Five runtime diagnostics and
+  all 155 UI tests passed. The disposable Chrome flow exercised actual game
+  import, replay, repertoire authoring and mobile resume with zero retired
+  endpoint calls. An unused private Stockfish helper remains for its retirement
+  owner. None of the cleanup has been installed.
+- [Store #46](https://github.com/tempo-v2/tempo-store/pull/46) `2861ec4`
+  passed three coherent-capture tests, 72 Store unit tests and three doctests,
+  including a second-connection WAL race. This capability remains separately
+  staged. It explicitly reports incomplete until durable day authority is
+  supplied by T19/T20. Prepared Next, independent Progress and production
+  acceptance adoption remain open.
