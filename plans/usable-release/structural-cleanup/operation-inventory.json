@@ -1,0 +1,833 @@
+{
+  "status": "Current source census; decisions in feature-disposition.json and operation-contract.md",
+  "source": {
+    ".planning": "e3394f113c8d7ec4cf24ca3e95dcc93443565356",
+    "tempo": "33f8d119ab31d7bea4f84310bfd62a3a02494376",
+    "tempo-store": "065b626f315a7145a7d64119a59c6c93e817df6e",
+    "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
+    "tempo-learning": "ee542cc1971f40de2de7a80edad9f51f2f6eecdc",
+    "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+    "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
+    "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+    "tempo-ui": "82c6f6eb3e58104e0f81df0767195aa4353bc909",
+    "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93"
+  },
+  "routes": [
+    {
+      "path": "/api/analysis/evidence",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/position_evidence.js"
+      ],
+      "proposal": "retire",
+      "handler": 652
+    },
+    {
+      "path": "/api/analysis/result",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/position_evidence.js"
+      ],
+      "proposal": "retire",
+      "handler": 653
+    },
+    {
+      "path": "/api/games",
+      "methods": [
+        "GET"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js"
+      ],
+      "proposal": "rebuild",
+      "handler": 651
+    },
+    {
+      "path": "/api/games/backfill",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 660
+    },
+    {
+      "path": "/api/games/backfill/retry",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 661
+    },
+    {
+      "path": "/api/games/choose",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 658
+    },
+    {
+      "path": "/api/games/coverage",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 663
+    },
+    {
+      "path": "/api/games/coverage/starting-line",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 665
+    },
+    {
+      "path": "/api/games/coverage/starting-line/save",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 666
+    },
+    {
+      "path": "/api/games/coverage/status",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 664
+    },
+    {
+      "path": "/api/games/detection",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_detection.js"
+      ],
+      "proposal": "retire",
+      "handler": 612
+    },
+    {
+      "path": "/api/games/detection-result",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_detection.js"
+      ],
+      "proposal": "retire",
+      "handler": 612
+    },
+    {
+      "path": "/api/games/detectors",
+      "methods": [
+        "GET"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_detection.js"
+      ],
+      "proposal": "retire",
+      "handler": 612
+    },
+    {
+      "path": "/api/games/gap-analysis",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 672
+    },
+    {
+      "path": "/api/games/gap-analysis/status",
+      "methods": [
+        "POST"
+      ],
+      "phone": "exclusive",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 673
+    },
+    {
+      "path": "/api/games/gap-draft",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 668
+    },
+    {
+      "path": "/api/games/gap-explorer",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 674
+    },
+    {
+      "path": "/api/games/gap-line",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 669
+    },
+    {
+      "path": "/api/games/gap-line/status",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 670
+    },
+    {
+      "path": "/api/games/gaps",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 667
+    },
+    {
+      "path": "/api/games/import",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "rebuild",
+      "handler": 656
+    },
+    {
+      "path": "/api/games/job",
+      "methods": [
+        "GET"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "rebuild",
+      "handler": 655
+    },
+    {
+      "path": "/api/games/library",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "rebuild",
+      "handler": 654
+    },
+    {
+      "path": "/api/games/model",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 662
+    },
+    {
+      "path": "/api/games/refresh",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "rebuild",
+      "handler": 657
+    },
+    {
+      "path": "/api/games/reprocess",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "retire",
+      "handler": 659
+    },
+    {
+      "path": "/api/games/review",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/game_commands.js (prefix composition)"
+      ],
+      "proposal": "rebuild",
+      "handler": 671
+    },
+    {
+      "path": "/api/games/tactics",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/tactical_history.js"
+      ],
+      "proposal": "retire",
+      "handler": 561
+    },
+    {
+      "path": "/api/games/tactics/command",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/tactical_history.js"
+      ],
+      "proposal": "retire",
+      "handler": 519
+    },
+    {
+      "path": "/api/games/tactics/position",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/tactical_history.js"
+      ],
+      "proposal": "retire",
+      "handler": 543
+    },
+    {
+      "path": "/api/games/tactics/report",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/tactical_history.js"
+      ],
+      "proposal": "retire",
+      "handler": 557
+    },
+    {
+      "path": "/api/repertoires",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/repertoire_commands.js"
+      ],
+      "proposal": "rebuild",
+      "handler": 1004
+    },
+    {
+      "path": "/api/study",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/study_transport.js"
+      ],
+      "proposal": "rebuild",
+      "handler": 968
+    },
+    {
+      "path": "/api/study-progress",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/StudyProgress.jsx"
+      ],
+      "proposal": "rebuild",
+      "handler": 956
+    },
+    {
+      "path": "/api/study/analysis-context",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/StudyAnalysisEntry.jsx"
+      ],
+      "proposal": "retire",
+      "handler": 677
+    },
+    {
+      "path": "/api/study/analysis-line",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/StudyLineExport.jsx"
+      ],
+      "proposal": "retire",
+      "handler": 678
+    },
+    {
+      "path": "/api/study/card-details",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/StudyCardDetails.jsx"
+      ],
+      "proposal": "retire",
+      "handler": 679
+    },
+    {
+      "path": "/api/study/game-context",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/study_game_context.js"
+      ],
+      "proposal": "retire",
+      "handler": 676
+    },
+    {
+      "path": "/api/study/presence",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/use_study_presence.js"
+      ],
+      "proposal": "retire",
+      "handler": 513
+    },
+    {
+      "path": "/api/study/relevance",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/StudyPage.jsx"
+      ],
+      "proposal": "retire",
+      "handler": 675
+    },
+    {
+      "path": "/api/study/review-mark",
+      "methods": [
+        "POST"
+      ],
+      "phone": "allowed",
+      "ui_literal_consumers": [
+        "tempo-ui/saved_review_commands.js"
+      ],
+      "proposal": "retire",
+      "handler": 938
+    },
+    {
+      "path": "/api/study/saved-reviews",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/saved_review_commands.js"
+      ],
+      "proposal": "retire",
+      "handler": 938
+    },
+    {
+      "path": "/api/tactic-settings",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/TacticSettingsPage.jsx"
+      ],
+      "proposal": "rebuild",
+      "handler": 912
+    },
+    {
+      "path": "/api/tactics",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/tactic_commands.js"
+      ],
+      "proposal": "rebuild",
+      "handler": 1004
+    },
+    {
+      "path": "/api/tactics-collection",
+      "methods": [
+        "POST"
+      ],
+      "phone": "desktop",
+      "ui_literal_consumers": [
+        "tempo-ui/TacticsCollectionPage.jsx"
+      ],
+      "proposal": "rebuild",
+      "handler": 923
+    }
+  ],
+  "cli": {
+    "backfill-game-capture-origins": "retire",
+    "backfill-personal-tactics": "retire",
+    "backfill-study-lead-ins": "retire",
+    "configure": "retire",
+    "import-tactics": "rebuild",
+    "init": "retain",
+    "init-practice": "retire",
+    "serve": "retain",
+    "split-black-repertoire": "retire",
+    "stdio": "retire"
+  },
+  "command_variants": {
+    "StudyCommand": {
+      "source": "tempo/src/commands/study_command.rs",
+      "variants": {
+        "Next": "rebuild",
+        "StudyStatus": "rebuild",
+        "Resume": "rebuild",
+        "Answer": "rebuild",
+        "Acknowledge": "rebuild",
+        "GiveUp": "rebuild",
+        "Skip": "rebuild",
+        "ResumeSkipped": "rebuild",
+        "PracticeTactics": "retire",
+        "LearnMoreTactics": "retire",
+        "Concede": "retire",
+        "Abandon": "retire"
+      },
+      "observed_retirement_lifetime": {
+        "Concede": "study_controller concedeForAnalysis, used to enter analysis from scheduled review; command-specific receipt; see T34",
+        "Abandon": "study_controller abandon, render_study fallback; separate legacy mode; command-specific receipt; see T34"
+      }
+    },
+    "RepertoireCommand": {
+      "source": "tempo/src/commands/repertoire_command.rs",
+      "variants": {
+        "List": "rebuild",
+        "ReadDocument": "rebuild",
+        "EditPreview": "rebuild",
+        "Preview": "rebuild",
+        "Save": "rebuild",
+        "Rename": "rebuild",
+        "SetActivity": "rebuild",
+        "MarkedPreview": "retire",
+        "ResetProgress": "retire"
+      }
+    },
+    "TacticCaptureCommand": {
+      "source": "tempo/src/commands/tactic_capture_command.rs",
+      "variants": {
+        "Preview": "rebuild",
+        "Save": "rebuild"
+      }
+    },
+    "SavedStudyReviewCommand": {
+      "source": "tempo/src/application/saved_reviews.rs",
+      "variants": {
+        "List": "retire",
+        "Open": "retire",
+        "Check": "retire",
+        "CardDetails": "retire",
+        "Remove": "retire",
+        "ExcludeTactic": "retire"
+      }
+    },
+    "TacticalCommand": {
+      "source": "tempo/src/tactical_jobs.rs",
+      "variants": {
+        "Enqueue": "retire",
+        "Pause": "retire",
+        "Resume": "retire",
+        "Retry": "retire"
+      }
+    },
+    "TacticsRead": {
+      "source": "tempo/src/application/tactics_collection.rs",
+      "variants": {
+        "List": "rebuild",
+        "Detail": "rebuild"
+      }
+    },
+    "TacticSettingsCommand": {
+      "source": "tempo/src/local_runtime/tactic_settings.rs",
+      "variants": {
+        "Get": "rebuild",
+        "Save": "rebuild"
+      }
+    },
+    "PreviousCoverageLineRequest": {
+      "source": "tempo/src/local_runtime/http.rs:729",
+      "variants": {
+        "Read": "retire",
+        "Save": "retire"
+      }
+    }
+  },
+  "workers": [
+    {
+      "name": "Stockfish discovery and PersonalTacticsDetector registration",
+      "source": "tempo/src/local_runtime.rs:110",
+      "proposal": "retire"
+    },
+    {
+      "name": "bootstrap model inputs",
+      "source": "tempo/src/local_runtime.rs:161",
+      "proposal": "retire"
+    },
+    {
+      "name": "legacy game request reconciliation",
+      "source": "tempo/src/local_runtime.rs:162",
+      "proposal": "retire"
+    },
+    {
+      "name": "choice encounter reconciliation",
+      "source": "tempo/src/local_runtime.rs:163",
+      "proposal": "retire"
+    },
+    {
+      "name": "phone assets and identity gate",
+      "source": "tempo/src/local_runtime/http.rs:42",
+      "proposal": "unknown"
+    },
+    {
+      "name": "desktop UI assembly and listening",
+      "source": "tempo/src/local_runtime/http.rs:40",
+      "proposal": "retain"
+    },
+    {
+      "name": "tactical report worker",
+      "source": "tempo/src/local_runtime/http.rs:62",
+      "proposal": "retire"
+    },
+    {
+      "name": "Games refresh worker and job/loop apply",
+      "source": "tempo/src/local_runtime/http.rs:63",
+      "proposal": "rebuild"
+    },
+    {
+      "name": "detection and detector results",
+      "source": "tempo/src/local_runtime/http.rs:64",
+      "proposal": "retire"
+    },
+    {
+      "name": "tactical enrollment/payoff/power/Study presence",
+      "source": "tempo/src/local_runtime/http.rs:65",
+      "proposal": "retire"
+    },
+    {
+      "name": "game review backfill",
+      "source": "tempo/src/local_runtime/http.rs:66",
+      "proposal": "retire"
+    },
+    {
+      "name": "model projection and automatic marker scheduling",
+      "source": "tempo/src/local_runtime/http.rs:67",
+      "proposal": "retire"
+    },
+    {
+      "name": "gap analysis worker",
+      "source": "tempo/src/local_runtime/http.rs:68",
+      "proposal": "retire"
+    },
+    {
+      "name": "position evidence worker",
+      "source": "tempo/src/local_runtime/http.rs:69",
+      "proposal": "retire"
+    },
+    {
+      "name": "coverage and gap line worker",
+      "source": "tempo/src/local_runtime/http.rs:74",
+      "proposal": "retire"
+    },
+    {
+      "name": "gap Explorer worker",
+      "source": "tempo/src/local_runtime/http.rs:75",
+      "proposal": "retire"
+    }
+  ],
+  "receipt_families": [
+    {
+      "table": "receipts",
+      "readers": "typed Study receipts, reprojected by Study handler; reads: addressed load_study, load_snapshot bulk, saved-review reveal EXISTS, reset DELETE; reset deletes both attempt-linked and external receipt families via repertoire_resets.rs",
+      "client_lifetime": "Study controller pending command; separate known acceptance and Next retry",
+      "proposal": "rebuild"
+    },
+    {
+      "table": "content_receipts",
+      "readers": "JSON; repertoire preview token, tactic capture request hash, accepted content replay, legacy partition JSON migration; repertoire suspension reads/writes the same table using command identity, independent from Preview Save tokens",
+      "client_lifetime": "repertoire/tactics sessionStorage and IndexedDB overflow, gap save continuation and game review editor save; repertoire suspension command recovery uses the same browser manager with distinct semantics",
+      "proposal": "rebuild"
+    },
+    {
+      "table": "game_receipts",
+      "readers": "stored game report and acceptance counts with fingerprint, application game_evidence report_from_receipt",
+      "client_lifetime": "Games import/refresh/choose/reprocess command envelopes; retire unsupported variants with typed recovery",
+      "proposal": "rebuild"
+    },
+    {
+      "table": "saved_review_receipts",
+      "readers": "saved_review_receipt; saved-review marks/removal/exclusion",
+      "client_lifetime": "saved_review_commands.js pending mark/remove/exclude; retire with typed resolution and archive",
+      "proposal": "retire"
+    }
+  ],
+  "other_consumers": [
+    {
+      "consumer": "private phone issuer",
+      "source": "tempo/src/local_runtime/http.rs PhoneStudy::exposes plus tempo-ui phone shell",
+      "proposal": "unknown",
+      "resolution": "T03 separately chooses phone Study and Phone Build. Filter and parity rules follow those choices."
+    },
+    {
+      "consumer": "public Rust Tempo components/fixture ports and local_runtime::serve_with_detectors",
+      "source": "tempo/src/lib.rs, tempo/src/main.rs, tempo/tests",
+      "proposal": "unknown",
+      "resolution": "T02/T13 search remote workspace dependents and launcher registrations before final deletion. Local workspace has no other primary runtime dependency."
+    },
+    {
+      "consumer": "built 0.2.5 Core package",
+      "source": "tempo-ui/package.json and build.mjs",
+      "proposal": "retain"
+    },
+    {
+      "consumer": "managed lifecycle and disposable harness",
+      "source": "tempo/tools/local_development.py, tempo/tools/diagnose.py, root Makefile, Planning qualification scripts",
+      "proposal": "rebuild"
+    },
+    {
+      "consumer": "portable export/restore",
+      "source": "tempo/src/portable_snapshot.rs and Tempo portable methods, no HTTP/CLI registration directly",
+      "proposal": "retire",
+      "resolution": "Preserve SQLite full archive and existing migration provenance."
+    },
+    {
+      "consumer": "normalized tactic import CLI",
+      "source": "tempo/tools/tactics/README.md",
+      "proposal": "rebuild",
+      "resolution": "Explicit offline batch import; retire old CLI only if batch intake is intentionally removed or has a supported replacement."
+    },
+    {
+      "consumer": "active listener observation",
+      "source": ".local/study-relevance-install/.planning/plans/usable-release/STATE.md:4935",
+      "proposal": "retain",
+      "resolution": "lsof/launch property list identified workspace-e1c18810c03bd3ad05db; checkpoint lacks source.json, use release record as source association."
+    },
+    {
+      "consumer": "installed boot/client recovery format",
+      "source": "tempo-ui/App.jsx and study_controller.js",
+      "proposal": "rebuild",
+      "resolution": "Keep exact immutable sessionStorage tempo-study-recovery-v4 pending Study commands if retained and bound by attempt identity; an analysis visit is distinct metadata with retirement handling."
+    }
+  ],
+  "unknowns": [
+    {
+      "decision": "Private phone Study independently from Phone Build",
+      "owner": "T03",
+      "next": "Confirm supported phone surfaces and remove only the retired allowlist, callers, resources and assets."
+    },
+    {
+      "decision": "Independent external consumers for Rust exports and CLI import-tactics",
+      "owner": "T02/T13",
+      "next": "Search current org integration consumers and lifecycle invocations. No evidence of an external caller from local package graph alone."
+    }
+  ],
+  "structural_checks": [
+    "Compared all 45 exact path literals from request dispatcher (excluding telemetry mapping) with inventory. Cross-checked every explicit method/path match arm; manually checked outer route branches and phone allowlist.",
+    "Cross-checked local workspace Cargo declaration for Tempo dependents; no additional production member references discovered. External consumers are still an owned unknown.",
+    "Classified actual UI imports via direct path references and game_commands.js prefix composition; excluded diagnostics-only path references.",
+    "Cross-checked top-level main.rs CLI match arms, startup constructor and loop workers, receipt DDL and named read paths."
+  ]
+}

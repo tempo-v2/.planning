@@ -4942,3 +4942,30 @@ checked tables matched the stopped-time backup in both directions,
 including content, Learning, assessments, receipts, games, and saved
 reviews. SQLite quick check and foreign-key checks passed. The backup
 and previous registration are in `recovery-start-o8ik55sn`.
+
+## Structural cleanup execution
+
+The cleanup starts from the currently installed Store #36 assembly and
+current published integration revisions in [current assembly](current-assembly.json).
+Unrelated implementation is paused for this run. No existing checkout was reset.
+The [operation contract](structural-cleanup/operation-contract.md) records the
+simplified supported product before dependent implementation.
+
+- T01 checked the registered listener binary and SHA-256, the served desktop index
+  against the installed artifact, and all ten live GitHub main refs. The historical
+  audit probe inspected earlier local checkouts and skipped unverified query
+  extraction. Its result does not repeat or invalidate Store #36.
+- A fresh read-only SQLite online backup from the running schema-22 dataset passed
+  integrity and foreign-key checks. The full backup is held locally with restricted
+  permissions. Portable export is outside recovery.
+- T02 owns the current operation/consumer census. T06 owns test-only SQLite probes.
+  Coordinator retains schema sequence, public interfaces, application composition,
+  locks and manifests. One heavy test run may execute at a time.
+
+- T02 census covers 45 routes, 10 CLI modes, 39 command variants, 16 startup and
+  worker paths, and four receipt families. Current product dispositions accompany
+  the census. T13, T34 and T37 own external-consumer and previous-release lifetime
+  investigations before removal.
+- T03 review covered managed phone, allowance authority, authored-frontier and
+  correction semantics, replay identity and operation ceilings. The contract
+  records all decisions before T04/T05 and downstream implementation.

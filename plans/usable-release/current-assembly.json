@@ -1,0 +1,23 @@
+{
+  "role": "Structural cleanup baseline, not a cleanup candidate",
+  "components": {
+    "tempo": "33f8d119ab31d7bea4f84310bfd62a3a02494376",
+    "tempo-store": "065b626f315a7145a7d64119a59c6c93e817df6e",
+    "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
+    "tempo-learning": "ee542cc1971f40de2de7a80edad9f51f2f6eecdc",
+    "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
+    "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+    "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+    "tempo-ui": "82c6f6eb3e58104e0f81df0767195aa4353bc909",
+    "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
+    ".planning": "96e73ecf483bc10b20ad5434f109e0e906c6336c"
+  },
+  "installed": {
+    "checkpoint": "workspace-e1c18810c03bd3ad05db",
+    "sqlite_schema": 22,
+    "backend_sha256": "c5c7e27765ee4cfee61010c03012a10297f87e5ae92eb8b5fe5687004eea2edf",
+    "disk_workspace_manifest_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+    "disk_cargo_lock_sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c",
+    "disk_ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34"
+  }
+}
