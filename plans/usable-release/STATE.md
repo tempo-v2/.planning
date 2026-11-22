@@ -5024,7 +5024,11 @@ simplified supported product before dependent implementation.
   in a fresh target with Learning `1d757470`. All 69 scoped Rust checks and
   five converter tests passed. The disposable schema upgrade preserves issued
   attempts, historical content, Learning and receipts byte for byte and rolls
-  back malformed required rows. Runtime admission adoption is in progress.
+  back malformed required rows. Actual Study admission now uses only typed
+  membership for new tactics and stable target order in
+  [Tempo #64](https://github.com/tempo-v2/tempo/pull/64) `c419f90593a89aef017d7ec9f223fc0d4ef9bc53`.
+  The former pack parsing now runs only for the schema-1 offline import report.
+  Due-capture priority remains for T17/T21 to remove.
 - T09 published shell, Capture and Games context in
   [UI #60](https://github.com/tempo-v2/tempo-ui/pull/60)
   `4d87636c24f6b5daf72d48562f4386cd667da977`. All 157 UI tests passed.
@@ -5045,8 +5049,16 @@ simplified supported product before dependent implementation.
   rejected an intentionally stale guidance copy and passed after restoring it.
   Its reviewed assembly is distinct from the installed baseline and does not
   qualify installation. T54 still owns the normal release gate.
-- T13 library/Queue/Study retirement is implemented locally; run it together
-  with T10 adoption before claiming compiled behavior. T42 has an unpublished
+- The same Tempo #64 candidate removed the standalone fixture application,
+  with [Queue #15](https://github.com/tempo-v2/tempo-queue/pull/15) `f53fbbb730e8a510223e59303f3f7a69796e774a`,
+  [Study #4](https://github.com/tempo-v2/tempo-study/pull/4) `9756fce36b373af24b15cb6bf3ad171052ac5f5d`
+  and [Chess #37](https://github.com/tempo-v2/tempo-chess/pull/37) `33958d575d6949fdd5fef77065f02db0165f94d7`.
+  The exact compatible assembly used Store `ff5e159`, Learning `1d75747`,
+  Types `a8e46c9` and the existing lock. It passed 54 Tempo contracts,
+  356 library tests and the disposable desktop/private-phone context journey.
+  Five existing real-engine tests remained ignored and no engine or live
+  installation claim follows from those checks.
+- T42 has an unpublished
   cap draft `916d080`. The current HTTP dependency may finish reading a
   body during request cleanup, so a declared byte limit alone cannot protect
   the command owner. T42 remains open for deadline-safe ingress and evidence.
