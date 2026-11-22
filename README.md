@@ -45,15 +45,16 @@ workspace before agent work. From the workspace root:
 
 ```sh
 test -e AGENTS.md || cp .planning/agent-guidance/AGENTS.md AGENTS.md
+python3 .planning/scripts/check_guidance_identity.py AGENTS.md
 ```
 
-If a root copy already exists, merge the canonical guidance into it and retain
-any applicable local instructions. Update the tracked canonical copy when the
-shared guidance changes.
+If the check reports a stale copy, preserve applicable local instructions in
+their scoped repository wrappers before replacing the assembly copy. Update the
+tracked canonical copy when shared guidance changes.
 
-Read the tracked canonical file at the start of each task even when a copied
-root file already exists. The planning repository's root AGENTS.md points to
-that one source. Changes here are not automatically installed on another machine.
+Read the tracked canonical file at the start of each task. The planning
+repository's root AGENTS.md and component wrappers point to it. Changes here
+are applied when the assembly refreshes its copy.
 
 Bootstrap creates a local virtual workspace and local Cargo patches for the
 unpublished sibling packages. Package manifests retain standalone metadata and

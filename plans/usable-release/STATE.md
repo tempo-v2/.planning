@@ -4969,3 +4969,9 @@ simplified supported product before dependent implementation.
 - T03 review covered managed phone, allowance authority, authored-frontier and
   correction semantics, replay identity and operation ceilings. The contract
   records all decisions before T04/T05 and downstream implementation.
+- T06 test capability released for review in [Store #37](https://github.com/tempo-v2/tempo-store/pull/37)
+  at `cca526807e9f32353cf562fd8e710723003924c3`. The author and coordinator each ran
+  all 20 focused tactical tests. The work regression recorded identical index
+  steps and zero full-scan steps across its two unrelated-state sizes.
+- T04 adopts canonical cleanup guidance and a current/missing/stale identity
+  check. The current workspace guidance is preserved pending assembly adoption.
