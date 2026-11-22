@@ -4560,9 +4560,9 @@ the exact exchange in Chrome and packaged Phone WebKit on disposable data.
 
 ### Candidate source assembly
 
-- [tempo-chess](https://github.com/tempo-v2/tempo-chess/pull/32) `5e8f06c2ddd40fb3f351efe3edb6aa66f98f0f50`
+- [tempo-chess](https://github.com/tempo-v2/tempo-chess/pull/32) `9cb3f8d1e48ebbbb4354bcfe4da4b5a9678ff1aa`
 - [tempo-store](https://github.com/tempo-v2/tempo-store/pull/32) `9747044ef8e16d475edd4861218f9013596912cb`
-- [tempo](https://github.com/tempo-v2/tempo/pull/54) `8013f6e0eff2e6e614f328d7f7852c4ba22de087`
+- [tempo](https://github.com/tempo-v2/tempo/pull/54) `8cb1e5cf1055335868be3ade318b067de32e4eec`
 - [tempo-ui](https://github.com/tempo-v2/tempo-ui/pull/56) `89eb02fb5e518d2003d4a1778ef6c3b324e4e348`
 
 The assembly uses Learning `ee542cc1971f`, Queue `74e09a1ea1cc`, Study `ddf6839af0fa`, Types `a8e46c9b9442` and the packaged Core 0.2.5 from `71cbd2b1e4a3`. Store upgrades schema 18 to 19. Study commands and replies continue to use the existing wire version. The Personal tactics report adds optional counts while existing readers can continue to use the previous report fields.
@@ -4606,3 +4606,20 @@ Stockfish search adjustment was exercised separately by the tactics
 integration suite. The UI build and all 148 UI tests passed. An independent
 review traced the committed qualification and report paths and ran the
 focused Chess regression tests.
+
+#### Fresh interface reviews
+
+- After a checking payoff, a later setup must realize a motif the earlier
+  tactic enabled. Chess compares against the legal winning motif already
+  available before the payoff. A discovered check also needs to enable the
+  actual capture rather than leave an already-winning capture available.
+- A completed search with zero demonstrated opportunities adds neither an
+  unclear result nor pending work to the simple tactics totals. The Games
+  projection uses the verified motif set.
+- A material lesson ends at its last complete payoff if the mating tail
+  would allow an earlier mate that the final-board replay cannot address.
+- The tightened proof reproduced 498 of the 499 previously admitted archive
+  lines, including the pictured fork and the five-decision chain. One
+  previously kept discovered-check card is now withheld. A fresh engine
+  search for that card confirmed the decision. The revised tally for the
+  same snapshot is 386 kept, 60 shortened, 52 extended and 548 withheld.
