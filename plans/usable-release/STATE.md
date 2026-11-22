@@ -5456,3 +5456,19 @@ simplified supported product before dependent implementation.
   membership valid. The exact Store passed 93 tests, three doctests and
   four matching Tempo adapter tests. Production has yet to adopt this
   capability. No managed install.
+- Separately qualified [Tempo #89](https://github.com/tempo-v2/tempo/pull/89)
+  `95e165f` and [Store #62](https://github.com/tempo-v2/tempo-store/pull/62)
+  `0dc9b4c` release schema 27 authored-source pairing. The real editor
+  read no longer needs model authority, and startup no longer reconstructs
+  missing legacy pairings. The exact pair passed 94 Store tests, three
+  doctests, 58 Tempo tests and five HTTP acceptance/recovery cases. On the
+  already rehearsed schema-26 copy of the previous archive, all six original
+  authored PGNs served unchanged after migration even with model inputs
+  unavailable. SQLite quick and foreign-key checks passed. A legacy
+  unverified source remains unavailable until replaced by verified
+  authoring. Full model worker and caller retirement remains open.
+- [Queue #20](https://github.com/tempo-v2/tempo-queue/pull/20) `d4e591e` adds
+  independent summary classification from the same pre-order eligibility.
+  It passed 18 Queue and four matching existing Tempo adapter tests. The
+  summary does not read, construct or order plan entries. Bounded Store
+  publication and real Progress screen adoption remain open. No installation.
