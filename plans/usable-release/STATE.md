@@ -5239,3 +5239,14 @@ simplified supported product before dependent implementation.
   then accepts once. Both HTTP cases, 77 Store tests and three doctests
   passed. The schema-25 pair remains separate from the current UI pins;
   Skip, assessment/correction and further acceptance effects remain open.
+- The current schema-24 pins supersede the detector-only heads above.
+  [Tempo #76](https://github.com/tempo-v2/tempo/pull/76) `bd2fca6` and
+  [UI #66](https://github.com/tempo-v2/tempo-ui/pull/66) `ec44e83` retire fresh
+  Practice and Learn More admission while keeping exact accepted
+  allowance replay. The retained recovery owner kept the saved command
+  and resolved the original effect. An unaccepted previous request was
+  rejected without a new durable effect. The exact composition passed
+  56 Tempo contracts, 151 UI tests and the UI build, three loopback HTTP
+  checks and six Chromium journeys using the prior installed app and
+  backend on disposable data. Legacy issued Practice and its old
+  immediate-recall source still require retirement. No managed install.
