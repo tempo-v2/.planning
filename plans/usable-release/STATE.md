@@ -4866,6 +4866,42 @@ ambiguous one-move game lesson has no training plan. An exact authored
 match or retained longer lesson can still serve as before. The final
 Chess review head is `a43c2bb15698d8c3ad30dd7ddca76e51434ebc65`.
 
+### Reviewed, merged and installed on November 22, 2026
+
+The fourth fresh Astra review cleared the final interfaces and behavior.
+It reran all 17 Chess payoff tests, the retained-content and Store upgrade
+regressions, both correction projections and the issued-version contract.
+The locked workspace passed 495 tests and doctests across two runs. The
+archive report test reached its assertions and passed after an isolated
+rerun following fixture setup timeouts under build load. Five cases stayed
+ignored by default. The unchanged packaged UI had passed all 148 tests.
+The final optimized pair passed the schema-21 rehearsal, including
+refreshing the previous same-day due count, both Chrome Show move
+recovery cases, and both Phone WebKit Practice reveal paths.
+
+| Component | Merged PR | Verified main commit |
+| --- | --- | --- |
+| tempo-chess | [PR](https://github.com/tempo-v2/tempo-chess/pull/35) | `becee471325ece0a382d4e482263e2b87670a23d` |
+| tempo-store | [PR](https://github.com/tempo-v2/tempo-store/pull/35) | `6190660a67504dccea9617154f86fd5c7e3bd671` |
+| tempo | [PR](https://github.com/tempo-v2/tempo/pull/57) | `33f8d119ab31d7bea4f84310bfd62a3a02494376` |
+| tempo-ui | [PR](https://github.com/tempo-v2/tempo-ui/pull/58) | `82c6f6eb3e58104e0f81df0767195aa4353bc909` |
+| .planning | [PR](https://github.com/tempo-v2/.planning/pull/80) | `7966d9bc8192e008fbef3e49f1f6c1be2301e701` |
+
+All five merge trees matched the reviewed source. The managed launcher
+installed `workspace-14d369622d72f12c66af` on port 41822, with SQLite
+schema 22. The installed executable SHA-256 was
+`2536f1b466f53dccf3e87292db2f47330302c4cf56bf6d6e33650aaa86af8f1d`. The registered listener served
+all 46 desktop and phone assets byte-for-byte. Desktop
+and private phone Study reported the retained dataset.
+
+The live readback found 42 newly withheld verdicts,
+including the reported …Nxd4 / …Nxh4 card. The dataset, database inode,
+active attempt, content versions, attempts, assessments, learning, games,
+receipts, saved reviews, requests, manual exclusions, repertoire lineage
+and coverage starts matched the stopped-time snapshot. The Study revision
+advanced and SQLite quick and foreign-key checks passed. The snapshot
+and prior launch registration are in `recovery-start-9wz2d2qg`.
+
 ## Indexed Study relevance read
 
 The Store read continues to return saved personal relevance and verified
