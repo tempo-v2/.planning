@@ -4991,27 +4991,37 @@ simplified supported product before dependent implementation.
   capability contracts and the T08 health/context consumer. Subsequent tasks
   retain their packet prerequisites. No cleanup candidate was merged or installed.
 
-### Active packet reservations
+### Context and retained Learning
 
-- T08 installer draft `4359fc4fd89e6ff2dd96b91b9d2552c096a323d0` in
-  `cleanup/health-context` checks dataset/schema context readiness and the
-  registered running binary and UI independently of Study. Two disposable
-  endpoint tests passed. Do not publish or install this increment until the
-  real context handler and its consumer checks land. The HTTP file is held by T14.
-- T10 Chess producer `8783d59cb327c8c10eb3242f98a79dfa72863b7a` has three
-  passing normalization tests. Durable facts, offline conversion sequence and
-  actual import and Study adoption remain open. Do not close the finding while
-  selection still interprets provenance.
-- T11 Learning `64cab7f4f48ae24c3e1b7367d0be8c3790ad7136` passed 25 unit
-  tests and one doctest. The application retains the old Test caller until
-  T14 releases its submit-file lease. The separate Tempo draft `f6fcf42`
-  removes the completed personal-tactics backfill registration and implementation;
-  its retained manual-capture contract still needs the combined test. The legacy
-  corrective Games bridge is scheduled for deletion with its consumer.
-- T14 owns connected-run retirement across Tempo, Store and UI. Review found
-  live full-snapshot and obsolete UI branches requiring removal. T14 owns the
-  current sole heavy-test slot. The Store base for T14 is the exact companion
-  to Tempo #58, Store `9abd554a06e72beb229f0acd2b1e5ef9fa2c5139`.
+- T08 adopted context on desktop and authenticated phone and through managed
+  readiness in [Tempo #60](https://github.com/tempo-v2/tempo/pull/60)
+  `726ef278095a0c43f00f285c1101c8d9b55a45ae` and
+  [Store #40](https://github.com/tempo-v2/tempo-store/pull/40)
+  `0cbcd4b3b486149fe87cfa05f61c2b0cbfb2d565`. The HTTP route passed while Study
+  policy was unreadable, rejected the wrong phone owner, and reported the actual
+  schema. The Store identity check and two disposable installer cases passed.
+  T46 still owns independent cold startup and T09 owns UI consumption.
+- T11 retained Test uses the configured lifecycle in Tempo #60 and
+  [Learning #10](https://github.com/tempo-v2/tempo-learning/pull/10)
+  `1d75747031ff35959d3adf31719f8429e9d46270`. All 61 application contracts,
+  25 Learning unit tests and one doctest passed on the combined assembly.
+  The completed personal-tactics backfill command was removed. The existing
+  fixture bridge remains until T13 eliminates its callers and the legacy Games
+  bridge is retired with its consumer. Persisted shapes are unchanged.
+- T13 removed live stdio registration and its demo in
+  [Tempo #61](https://github.com/tempo-v2/tempo/pull/61)
+  `9185321f4cf29b006086ba8c29ee16c8e4578b41`. The existing boundary test now
+  exercises real HTTP and SQLite. Four checks passed, including rejection of
+  stdio and recovery of an exact answer with one durable grade. Library and
+  Queue/Study fixture removal remain open.
+- T10 ingress betas preserve stable targets, normalized alias membership and
+  legacy absence: Chess `ae95b199b2cd2d642353ec3fe5da1b22cbfbc7f5` and
+  Tempo `64ff3eaf0804f6c51e199d01f66747a0897aa568`. The prior codec revision
+  passed three tests. Combined ingress checks, the reserved schema 22 to 23
+  current-row migration, and Study consumer adoption are pending.
+- T09 owns retained shell and Capture context, with exact pending-command
+  identity independent of context availability. T13 owns fixture removal and
+  T10 owns taxonomy and migration. Heavy tests remain serial.
 
 ### Connected-run retirement
 
