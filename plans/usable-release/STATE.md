@@ -5382,3 +5382,14 @@ simplified supported product before dependent implementation.
   production capture still reports incomplete and the current paired
   manifest remains on Store #55. The calendar fence, retained eligibility
   and producer invalidations are still needed before issuing prepared work.
+- [Tempo #86](https://github.com/tempo-v2/tempo/pull/86) `715a1d8` and
+  [UI #70](https://github.com/tempo-v2/tempo-ui/pull/70) `fc2d657` are
+  current paired pins. They remove coverage scan jobs, refresh polling
+  for those jobs and the last Lichess gap Explorer caller. Former routes
+  return typed retirement without worker, application or Store work.
+  Saved gaps and starting-line saves remain. Both starting-line URLs
+  returned the same saved revision on an exact retry. Builds, 132 UI
+  tests, ten diagnostics and private-phone HTTP passed. Desktop Chrome
+  and private-phone WebKit recovered original signed saves from the
+  previous installation. Saved coverage readers, Maia and Phone Build
+  remain within later retirement scopes.
