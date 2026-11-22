@@ -4736,3 +4736,35 @@ quick check and foreign keys passed. The immediate pre-split backup is in
 A signed forecast edit also depends on the repertoire remaining active and
 verified at the time of commit. The same Store guard applies to desktop and
 phone. A normal authored-content edit retains its existing scope.
+
+The first Astra review identified receipt-format coupling, stale forecast
+Save authorization, and the need to check verified source authority. The
+second review reproduced the remaining desktop suspension gap and checked
+the public editor contract. A third fresh Astra reviewer cleared the combined
+runtime after the suspension and removed-prefix fixes.
+
+| Component | Merged pull requests | Verified main |
+| --- | --- | --- |
+| Chess | [#33](https://github.com/tempo-v2/tempo-chess/pull/33), [#34](https://github.com/tempo-v2/tempo-chess/pull/34) | `f62d2bba248862862f1fe72c65d5df69a361dda4` |
+| Store | [#33](https://github.com/tempo-v2/tempo-store/pull/33), [#34](https://github.com/tempo-v2/tempo-store/pull/34) | `4cac8713da331115fdf53e6bcdd32d27c5d4af32` |
+| Tempo | [#55](https://github.com/tempo-v2/tempo/pull/55), [#56](https://github.com/tempo-v2/tempo/pull/56) | `c24ca5a65cfc409d7138cb1e1a919773619ba1bf` |
+| UI | [#57](https://github.com/tempo-v2/tempo-ui/pull/57) | `801daf2793c86b64f1e2381ffb2d9db18cdc1386` |
+
+Each remote main tree matched its reviewed version. The schema-20 copy
+retained all 23 partition links on upgrade to schema 21 and recovered both
+an accepted and an undelivered prior-version signed Save. The public editor
+contract rejected unaccepted saves for a changed scope or suspended book,
+and replayed an accepted save. The Store suite passed 53 tests and the UI
+suite passed 148. The merged optimized executable passed packaged Chrome
+and both phone WebKit recovery journeys on disposable data.
+
+Managed Tempo is running `workspace-e94d03d7261d1a57a771` on port 41822.
+The executable SHA-256 is
+`e59bb3ca3b677ade6ed70644082fc7f783c4ce4ec761452dcc6eb196bddb885a`.
+After the launcher's readiness timeout during migration, direct readback
+confirmed the registered listener and private phone ingress. The executable
+and all 46 served assets matched the qualified build. The schema-20 rollback
+backup and prior registration are in `recovery-start-_52qr0g0`. The live
+schema-21 database kept its dataset, active attempt, Study records, new
+repertoires and three coverage starts. All 23 partition links matched the
+pre-upgrade receipt mapping. SQLite quick and foreign-key checks passed.
