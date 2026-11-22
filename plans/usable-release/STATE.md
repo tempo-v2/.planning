@@ -5373,3 +5373,12 @@ simplified supported product before dependent implementation.
   doctests passed. The actual UI has yet to adopt the addressed command
   and separate acceptance from Next. The paired manifest remains on
   Store #55 until that capability is admitted. No installation.
+- [Store #57](https://github.com/tempo-v2/tempo-store/pull/57) `bb3eb2a`
+  adds the active attempt and its exact issued-work token to coherent
+  capture. A prepared human miss binds its correction from that attempt's
+  immutable assessment. A newer Learning revision, rollover and restart
+  leave the captured binding unchanged. Legacy tokenless active work
+  remains explicit. All 85 Store tests and three doctests passed. The
+  production capture still reports incomplete and the current paired
+  manifest remains on Store #55. The calendar fence, retained eligibility
+  and producer invalidations are still needed before issuing prepared work.
