@@ -4549,3 +4549,60 @@ attempt and database inode survived the restart. All 52 application
 tables matched the stopped-time snapshot. SQLite quick and foreign-key
 checks passed. The installed binary and assets independently reproduced
 the exact exchange in Chrome and packaged Phone WebKit on disposable data.
+
+## Recognizable tactics through the payoff
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Issue a connected lesson through its material gain or verified short mate | The approved recognizable-tactics plan. Chess uses the legal board, concrete motif participants and credible defensive replies. A link needs an observable tactical effect. Labels, aggregate engine scores beyond the first-move quality check, and raw line length do not establish a link. Study grades the resulting issued definition. |
+| Requalify retained generated training | Tempo requests Chess's decision using the retained game binding. Store applies it to future delivery with the current version checked in the transaction. Historical definitions, attempts, receipts, game links, manual exclusions and Learning retain their identities. |
+| Count simple opportunities at actual game decisions | The verified learner turn and played move determine found, missed, alternative or unclear. A continuation explored for Study does not create a game decision. |
+
+### Candidate source assembly
+
+- [tempo-chess](https://github.com/tempo-v2/tempo-chess/pull/32) `5e8f06c2ddd40fb3f351efe3edb6aa66f98f0f50`
+- [tempo-store](https://github.com/tempo-v2/tempo-store/pull/32) `9747044ef8e16d475edd4861218f9013596912cb`
+- [tempo](https://github.com/tempo-v2/tempo/pull/54) `8013f6e0eff2e6e614f328d7f7852c4ba22de087`
+- [tempo-ui](https://github.com/tempo-v2/tempo-ui/pull/56) `89eb02fb5e518d2003d4a1778ef6c3b324e4e348`
+
+The assembly uses Learning `ee542cc1971f`, Queue `74e09a1ea1cc`, Study `ddf6839af0fa`, Types `a8e46c9b9442` and the packaged Core 0.2.5 from `71cbd2b1e4a3`. Store upgrades schema 18 to 19. Study commands and replies continue to use the existing wire version. The Personal tactics report adds optional counts while existing readers can continue to use the previous report fields.
+
+The full continuation can be used as engine evidence. Study receives only the verified prefix. Chess checks all immediate defenses to the proposed capture or threat, and follows local exchanges and immediate checking replies as needed. The retained archive advances on the existing background analysis window. Game positions with unfinished recognition evidence are reported as awaiting verification.
+
+### Qualification on November 22, 2026
+
+| Retained game-generated cards | Count | Representative behavior |
+| --- | ---: | --- |
+| Kept | 387 | Bxf2 takes a loose pawn in one move. |
+| Shortened | 60 | The reported card now ends with Bxe8. The following rook move, pawn capture and queen trade do not belong to the fork. |
+| Extended | 52 | A checking pawn capture sets up a pin that wins the queen, then a checking fork wins another pawn in a five-decision lesson. |
+| Withheld | 547 | The candidate line could not prove a connected material gain or short mate, or the replacement would collide with a retained target. |
+| Deferred | 0 | All 1,046 generated targets in this snapshot received a verdict. Eight other game-linked targets were outside the game-owned repair set. |
+
+The first pass needed 75 continuation searches retried. The final search
+retains the deepest exact iteration available when it stops at a bound,
+using the existing minimum depth and node limits. All 75 settled on retry.
+SQLite quick and foreign-key checks passed. The full snapshot comparison
+matched the 14 examined preserved tables, including Learning, attempts,
+assessments, receipts and manual exclusions. Every existing definition,
+the issued request bindings and the active pointer survived.
+
+The new-card integration ended the pictured lesson at Bxe8 after restarting
+mid-attempt and recorded one Good. The retained repair independently issued
+the same three learner moves through HTTP, recorded one Good and returned
+the original game link. Games counted the actual initial learner turn once.
+The five-decision chain passed through the normal grader.
+
+With the previous installed schema-18 executable and assets, Chrome
+recovered accepted-but-lost and never-delivered Answers after the schema-19
+upgrade. The request bytes and accepted reply stayed exact. The previous and
+candidate clients advanced the already-issued six-decision card with one
+durable assessment. Packaged Chrome and Phone WebKit also passed the
+existing disclosure and correction journeys, including the display-name
+variants and interrupted Next on Chrome.
+
+The assembled Rust workspace passed 487 tests and doctests. The final
+Stockfish search adjustment was exercised separately by the tactics
+integration suite. The UI build and all 148 UI tests passed. An independent
+review traced the committed qualification and report paths and ran the
+focused Chess regression tests.
