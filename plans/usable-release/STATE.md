@@ -5424,3 +5424,12 @@ simplified supported product before dependent implementation.
   [Tempo #87](https://github.com/tempo-v2/tempo/pull/87) suspension and
   manual Capture contracts passed. Calendar/worker adoption, exact fresh
   issuance and removal of remaining legacy writers still gate ready plans.
+- [Store #60](https://github.com/tempo-v2/tempo-store/pull/60) `82be4fa`
+  fences accepted Study changes once per transaction. Active-slot changes,
+  first-Teach spend and changes in captured Learning eligibility can
+  invalidate both projections, including acceptance of an older tokenless
+  attempt. Intermediate moves and exact replay leave compatible work alone.
+  The exact backend passed 90 Store tests, three doctests and five real HTTP
+  cases, including previous-binary Teach, exact Skip and both correction
+  journeys. This Store successor is staged for the next paired manifest.
+  Prepared issuance, fair publication and independent Progress remain open.
