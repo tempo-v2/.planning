@@ -137,3 +137,15 @@ T18 owns the compact coherent read and staged publication. T19/T20 provide
 durable write-side authority and atomic epoch advancement. An interim build
 without those facts stays unavailable to fresh Next. T43 owns physical writer
 admission and fair scheduling.
+
+A prepared human Test uses the configured Learning assessment once. A new
+accepted miss opens one human correction at the next miss revision for the
+issued answer version. A newly accepted human miss supersedes any open
+legacy Games review or recall sequence for that target. Earlier accepted
+assessments, receipts and archived data remain recoverable. A correction
+started by the active Test stays bound to that exact revision across restart,
+rollover and generation retirement. An exact later Repair uses its own
+issued correction token. Completing either closes the matching human
+correction and preserves its saved schedule and assessment. A stale or
+legacy token cannot close newer work. Prior issued legacy activity continues
+through its finite compatible acceptance and replay.
