@@ -5414,3 +5414,13 @@ simplified supported product before dependent implementation.
   four Tempo adapter tests and two Settings calendar tests passed on the
   exact Store #58 and Learning #12 pair. The adapter is built for tests
   only while production capture remains incomplete.
+- [Store #59](https://github.com/tempo-v2/tempo-store/pull/59) `c6e0f6f`
+  fences prepared membership and summary on retained content and
+  participation changes in the existing acceptance transactions. Display
+  edits preserve both epochs. Relevant version, availability, authored
+  occurrence order, effective qualification and suspension changes fence
+  stale projections, and late receipt failure rolls everything back.
+  The exact Store passed 89 tests and three doctests. The matching
+  [Tempo #87](https://github.com/tempo-v2/tempo/pull/87) suspension and
+  manual Capture contracts passed. Calendar/worker adoption, exact fresh
+  issuance and removal of remaining legacy writers still gate ready plans.
