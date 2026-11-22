@@ -5171,3 +5171,15 @@ simplified supported product before dependent implementation.
   staged. It explicitly reports incomplete until durable day authority is
   supplied by T19/T20. Prepared Next, independent Progress and production
   acceptance adoption remain open.
+- [Tempo #72](https://github.com/tempo-v2/tempo/pull/72)
+  `2ddd462be66b1feec7237b28c7536a718697e686` adopts addressed replay from
+  [Store #47](https://github.com/tempo-v2/tempo-store/pull/47)
+  `8864597a11070bfb7842818eb39cddc97b01b030` for Answer, Give Up, Concede,
+  Acknowledge, Skip and Abandon. The active dataset fences replay, and new
+  work rechecks receipts against concurrent acceptance. All 55 Tempo
+  contracts and two actual prior-binary Teach HTTP cases passed on these
+  exact heads. Accepted replay succeeded with unreadable Learning. Dataset
+  mismatch stayed explicit, and never-delivered Teach accepted once with an
+  absent plan and summary. The current paired UI manifest remains pinned
+  to the last verified composition. Full prior-release recovery,
+  projection-independent new acceptance and installation remain open.
