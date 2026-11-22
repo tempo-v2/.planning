@@ -22,7 +22,7 @@
   },
   "review": {
     "components": {
-      "tempo": "447c91a4b3f34d17eb2c8b3e88d2357d15d41439",
+      "tempo": "b97df13ac74882f111fc116659f6341e98404543",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "1d75747031ff35959d3adf31719f8429e9d46270",
@@ -30,7 +30,7 @@
       "tempo-store": "8864597a11070bfb7842818eb39cddc97b01b030",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "d1d65411754de8aa08047aedae893cc6a9b0faa4"
+      "tempo-ui": "3ab86a4b1bbf8f41066f6fd99ef34901ebea4296"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
@@ -44,6 +44,6 @@
     "sqlite_schema": 24,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Combined review of addressed replay, retired position evidence, standalone gap analysis and one-off CLI removal, with prior context and Study slices; no installation qualification"
+    "qualification": "Combined review of admitted context, receipt and Study slices, plus position evidence, standalone gap analysis, one-off maintenance and manual Games detector retirement; no installation qualification"
   }
 }

@@ -5213,3 +5213,29 @@ simplified supported product before dependent implementation.
   state is present, but capture remains incomplete until the effective
   profile and current acceptance and issuance producers adopt it. No
   cleanup artifact has been installed.
+
+### Manual detector retirement and atomic first Teach
+
+- [Tempo #76](https://github.com/tempo-v2/tempo/pull/76) `b97df13` and
+  [UI #66](https://github.com/tempo-v2/tempo-ui/pull/66) `3ab86a4` are the
+  schema-24 review successor in the single manifest. The manual Games detector
+  and panel are gone. Three former routes return typed retirement without
+  dispatching detector, application or SQLite work. Both builds, 151 UI tests,
+  four shared detector tests, seven runtime diagnostics, private-phone HTTP
+  and Chrome Games replay and authoring passed. A normal manual tactic
+  Preview and exact Save retry also passed. Two older broad suites still
+  expect the retired position-evidence route or an input above the existing
+  2 MiB cap. Neither suite qualifies its old expectation. Automatic tactical
+  jobs, Study presence, coverage continuation and engines remain open.
+- [Store #49](https://github.com/tempo-v2/tempo-store/pull/49) `7bb210c`
+  adopts first-Teach authority in the normal acceptance transaction. It
+  records an applied introduction on the acceptance day, atomically with
+  the attempt, Learning and receipt. It writes a dirty projection state
+  even without a plan or summary. [Tempo #77](https://github.com/tempo-v2/tempo/pull/77)
+  `86cca91` exercises that exact backend pair using commands originally
+  issued by the actual previous binary. An accepted command replays
+  unchanged. A database trigger failure on spend rolls back receipt,
+  Learning and attempt, and the original previously unsent command
+  then accepts once. Both HTTP cases, 77 Store tests and three doctests
+  passed. The schema-25 pair remains separate from the current UI pins;
+  Skip, assessment/correction and further acceptance effects remain open.
