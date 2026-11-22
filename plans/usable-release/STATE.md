@@ -5404,3 +5404,13 @@ simplified supported product before dependent implementation.
   four doctests. Calendar observation has yet to be wired into the live
   prepared-plan host, and capture still reports incomplete until the
   actual invalidation producers are ready.
+- [Queue #19](https://github.com/tempo-v2/tempo-queue/pull/19) `cf18f19` and
+  [Tempo #87](https://github.com/tempo-v2/tempo/pull/87) `505b1ec` release
+  the stable input adapter and explicit introduction/relearning distinction.
+  Queue suppresses only exact active work, including when its due priority
+  cannot be established. The adapter respects authored prerequisites and
+  separate caps, and its fixture consumes the actual retained Learning
+  producer rather than a copied eligibility predicate. All 16 Queue tests,
+  four Tempo adapter tests and two Settings calendar tests passed on the
+  exact Store #58 and Learning #12 pair. The adapter is built for tests
+  only while production capture remains incomplete.
