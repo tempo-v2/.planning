@@ -5012,3 +5012,17 @@ simplified supported product before dependent implementation.
   live full-snapshot and obsolete UI branches requiring removal. T14 owns the
   current sole heavy-test slot. The Store base for T14 is the exact companion
   to Tempo #58, Store `9abd554a06e72beb229f0acd2b1e5ef9fa2c5139`.
+
+### Connected-run retirement
+
+- T14 removed connected-run issuance and opt-in handling across
+  [Tempo #59](https://github.com/tempo-v2/tempo/pull/59) `4338b3718fae736749a4ffc927d14c7b543b69d6`,
+  [Store #39](https://github.com/tempo-v2/tempo-store/pull/39) `b792843aaf8dd22b3b4efee44bfd83fc41501eac`
+  and [UI #59](https://github.com/tempo-v2/tempo-ui/pull/59) `279a22c0fac78af77bec0616a0b26df6405f9f91`.
+  Two Tempo cases, a real SQLite malformed-row isolation case and 149 UI tests
+  passed. Disposable HTTP verified equivalent issuance with both old-header
+  variants (excluding generated IDs), an unchanged retained active Test and
+  previous installed warm-up receipt replay with zero added effects.
+  Archive rows/encodings remain inert. T34 still owns full prior-release replay,
+  T38 legacy reset cleanup, and T27/T57 final unreachability of retired helpers.
+  The reviewed drafts are published and the managed installation is unchanged.

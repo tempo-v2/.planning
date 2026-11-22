@@ -51,3 +51,35 @@ The basis is dataset, study day/calendar/policy, content availability/version an
 Check that the envelope addresses the current dataset before receipt resolution. For the correct dataset, consult the original operation family and submission identity, compare the immutable payload and return any accepted result before current attempt/version or projection checks. A changed payload for the same submission identity conflicts. Any finite retired-command recovery follows these same checks. Old projections fall back only to a bounded, truthful acceptance envelope if the former view depends on retired data. UI keeps one unresolved durable command owner across navigation, retries the original payload and does not synthesize another command on a lost reply. A known acceptance followed by failed Next retries Next alone. Retained typed and serialized receipt encodings and browser recovery envelopes are inventoried and tested before wire changes. Retired-route acceptance is protected with finite read-only receipt resolution where older clients can have pending writes. Unaccepted retired commands receive explicit retirement. For legacy pending commands over new input caps, use bounded existing receipt resolution by original identity and fingerprint. If no accepted receipt exists, return over-budget and preserve the local draft for explicit resubmission. Unknown external callers are investigated under T13/T37 before deleting their reachable interfaces.
 
 For each contract test, alter one semantic fact such as issued revision, obligation revision, suspension or day and expect the corresponding issue/reject/rebuild transition. Then poison unrelated historical rows, presentation metadata or retired evidence without changing the operation result or touching those reads. Exercise actual consumers and real SQLite on disposable copies. A missing plan/summary must leave acceptance available; no full-selector or snapshot fallback.
+
+## Persistence capability boundaries
+
+T05 releases each capability separately. An operation receives its own port or
+concrete input facts. The composition root alone may assemble more than one port.
+The older all-purpose Store remains transitional until the real consumers move.
+
+| Capability | Required address and fact boundary | Failure and delivery |
+| --- | --- | --- |
+| Dataset identity | Singleton dataset ID. The runtime context owner may additionally read actual schema in the same SQLite statement. | Missing or unreadable metadata is unavailable. No attempt, content or Learning read. |
+| Study resume | Dataset and active pointer or explicit attempt ID, then the issued target/version and current admissibility for that attempt. | Missing or incompatible activity is distinct from empty work. Does not contact a plan or ranker. |
+| Study acceptance | Original command identity and fingerprint. For new work, exact attempt revision, issued target/version, required Learning row and obligation identity. | Existing matching receipt wins before evaluating current work. New successful mutation writes attempt, Learning if applicable, receipt and bounded projection delta or dirty signal atomically. |
+| Content authoring | Dataset, addressed authored document and relevant metadata or content revision, and validated bounded changes. | Same-value conditional metadata set is idempotent. Reject unrelated or excess change before entering the writer. A stale signed content preview needs a new preview. |
+| Manual Games apply | Dataset, import command ID and fingerprint, and prepared valid addressed game records. | Batch is indivisible, replayable, and has no Study effects. A query of job status reads its envelope only. |
+| Explicit administration | Separate operator entry point and matching archive/dataset identity. | Full data may be inspected or converted here. No adapter can substitute this capability for a missing foreground one. |
+
+The runtime durable writer takes an immutable, operation-specific proposal.
+Its input contains the relevant address/basis and either the original command
+identity or the captured projection basis. It must be possible to validate the
+proposal's row limit before enqueueing. The queue retains at most eight waiting
+proposals, with one separately counted executing transaction. Admission checks
+the original request deadline and a two-second queue budget on a monotonic clock.
+If the proposal expires while waiting, the writer claims neither the proposal
+nor its data and records an explicit pre-acceptance outcome. Once the writer
+claims a valid proposal, transport cancellation is independent of its short
+transaction. Committed results resolve by receipt or by a fenced projection
+head; a dropped response never makes a second mutation valid. The runtime
+writer serializes bounded foreground and background turns; computation and
+provider I/O remain outside it. T43 owns the running queue and must demonstrate
+that continuous foreground work cannot starve a ready apply. T61–T63 own
+actual publication adoption. Fixtures provide explicit narrow methods and
+must fail on unsupported capability without invoking snapshot or catalog reads.
