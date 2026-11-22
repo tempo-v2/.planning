@@ -4520,3 +4520,32 @@ attacker count and a broader material outcome than the proof establishes.
 The revised copy states the lower bound and limits the gain to the exchange
 square. The Chess API documentation and regression cases now describe the
 same scope. The revised component PRs are open.
+
+### Reviewed, merged and installed
+
+A second fresh Astra review cleared the exact revised Chess, UI and
+Planning heads for interface ownership and coupling. The reviewer reran
+the scoped Chess and UI tests, the mounted Chrome and phone WebKit
+journeys, and all three previous-release Answer replay cases on disposable
+database copies. The verified merge trees match those reviewed heads.
+
+| Component | Pull request | Verified main merge |
+| --- | --- | --- |
+| Chess | [#31](https://github.com/tempo-v2/tempo-chess/pull/31) | `a6afe4f78ab844e69bc40be42c8cac5e63fdd2b9` |
+| Tempo UI | [#55](https://github.com/tempo-v2/tempo-ui/pull/55) | `dc19b05177e89af8e880da14f3fe0c2d8363976d` |
+| Candidate ledger | [#74](https://github.com/tempo-v2/.planning/pull/74) | `45b4de414a7ce27bc4ffb1c2b5575f28ae9466cd` |
+
+The managed launcher installed `workspace-676c127ccf257f4139ab` on port
+41822. The release reused the eight-second readiness probes and preserved
+the three separate lab listeners. The stopped-time database and prior
+registration are in `recovery-start-7jcroi2l`.
+
+The installed executable matched the reviewed assembly's optimized build
+at SHA-256 `ba37bc335eb3f93c613bf0f3e4f4b5487c60373c3de201432be984a9315a353e`.
+The listener served all 22 desktop and 24 phone assets byte-for-byte.
+Desktop and phone Study reported the retained dataset. The private phone
+route also served the installed bundle. Schema 18, dataset, active
+attempt and database inode survived the restart. All 52 application
+tables matched the stopped-time snapshot. SQLite quick and foreign-key
+checks passed. The installed binary and assets independently reproduced
+the exact exchange in Chrome and packaged Phone WebKit on disposable data.
