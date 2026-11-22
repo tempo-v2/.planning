@@ -5092,3 +5092,11 @@ simplified supported product before dependent implementation.
   replacing the request dispatcher ingress so the app write owner will receive
   prepared bodies, independent of socket cleanup. These slices are active and
   have no installation result.
+- T12 compact Study content and exact issued definition provider are published
+  in [Store #43](https://github.com/tempo-v2/tempo-store/pull/43)
+  `c9efc50ad72065388e6a5ed4c77d50c9920c8433` and adopted for explicit Resume
+  in [Tempo #66](https://github.com/tempo-v2/tempo/pull/66)
+  `5cd0269d0635637de97d9c2680ada9690e87817e`. Three SQLite projection tests,
+  all 54 application contracts and the disposable desktop/private-phone
+  journey passed. The latter resumed the same guided activity with unreadable
+  Learning and optional history bytes. Batch and Next adoption remain T17/T18/T21.
