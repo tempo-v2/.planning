@@ -4865,3 +4865,44 @@ after resolution establishes the actual lesson and its ownership. A new
 ambiguous one-move game lesson has no training plan. An exact authored
 match or retained longer lesson can still serve as before. The final
 Chess review head is `a43c2bb15698d8c3ad30dd7ddca76e51434ebc65`.
+
+## Indexed Study relevance read
+
+The Store read continues to return saved personal relevance and verified
+modeled reach for the current dataset and answer version. Queue retains
+ownership of ranking. SQLite materializes verified modeled rows once, so
+the join can use a temporary covering index on target ID. The change uses
+the existing public interface and has no schema or wire migration.
+
+A fresh Astra review cleared the Store boundary and checked producer-side
+target uniqueness and the verified-input join. The review independently
+compared both query forms on 3,516 distinct targets. The retained schema-22
+read also returned 3,516 identical rows, with a five-run median of 712 ms
+before the change and 23 ms after it. The earlier candidate passed 53
+Store tests, 29 Queue tests, four doctests, 42 Study contract tests and
+the focused model-projection test.
+
+[Store PR #36](https://github.com/tempo-v2/tempo-store/pull/36) merged to
+main at `065b626f315a7145a7d64119a59c6c93e817df6e`. The fetched merge
+tree `5f60bff31f92643508b700d1d336dd0949ea8c6a` matched the assembled
+candidate. This release uses the same schema-22 Tempo, Chess, UI, Core,
+Learning, Queue, Study and Types pins as the preceding installation, with
+this replacement Store pin and the same workspace lock.
+
+On matched disposable copies of the schema-22 dataset, the combined
+optimized build returned the same Study card and Progress values. Fresh
+Next took 1,344 ms on the previous build and 291 ms on the candidate.
+Progress took 1,426 ms and 604 ms, respectively. These are local samples.
+The full catalog read still contributes to fresh Next.
+
+On November 22, 2026, the managed launcher installed
+`workspace-e1c18810c03bd3ad05db` on port 41822. The installed backend
+SHA-256 is `c5c7e27765ee4cfee61010c03012a10297f87e5ae92eb8b5fe5687004eea2edf`.
+All 46 desktop and phone assets matched the preceding installation and
+the built artifact. Live desktop and private phone Study endpoints
+reported the retained dataset, and the desktop Progress endpoint replied.
+The database kept schema 22, its file inode and active attempt. The 13
+checked tables matched the stopped-time backup in both directions,
+including content, Learning, assessments, receipts, games, and saved
+reviews. SQLite quick check and foreign-key checks passed. The backup
+and previous registration are in `recovery-start-o8ik55sn`.
