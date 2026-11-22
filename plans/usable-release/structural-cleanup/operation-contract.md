@@ -149,3 +149,17 @@ issued correction token. Completing either closes the matching human
 correction and preserves its saved schedule and assessment. A stale or
 legacy token cannot close newer work. Prior issued legacy activity continues
 through its finite compatible acceptance and replay.
+
+Prepared ordering uses the saved ordinary schedule and exact version of the
+answer. Previously recorded Games obligations remain historical. Their old
+ladder does not supply prepared work or suppress otherwise valid ordinary
+scheduled work. A current human correction retains its priority and blocks
+ordinary work for that exact version until it closes.
+
+A repertoire Teach candidate must be the first unresolved occurrence on an
+eligible authored route. An unavailable or unresolved earlier occurrence
+blocks its successors on that route. Another eligible route may reach the same
+target independently. A changed answer that was introduced historically can
+require current-version Teach without charging another first introduction.
+Tactic themes govern first entry only. Queue applies the independent opening
+and tactic introduction caps and preserves stable ordering within each group.
