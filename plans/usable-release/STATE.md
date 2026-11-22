@@ -5183,3 +5183,33 @@ simplified supported product before dependent implementation.
   absent plan and summary. The current paired UI manifest remains pinned
   to the last verified composition. Full prior-release recovery,
   projection-independent new acceptance and installation remain open.
+
+### Addressed replay and standalone gap retirement assembly
+
+- [Tempo #74](https://github.com/tempo-v2/tempo/pull/74) `b71d9150` includes
+  addressed Study receipt replay and retires the standalone gap-analysis job.
+  [UI #65](https://github.com/tempo-v2/tempo-ui/pull/65) `d1d6541` removes its
+  real Games consumers. Both former HTTP routes return typed retirement.
+  Six runtime diagnostics, the phone route/owner check, all 154 UI tests and
+  a real Chrome flow passed. Chrome verified manual reply, navigation and
+  exact Save recovery after a lost accepted response with no gap-job call.
+  Coverage continuation and tactical workers remain separate.
+- [Tempo #75](https://github.com/tempo-v2/tempo/pull/75) `447c91a`, UI #65 and
+  Store #47 are current in the single manifest. Tempo #75 removes the
+  one-off game-capture origins and Study lead-in backfills and black
+  repertoire split. The former commands return retirement before touching a
+  database. This exact successor passed 56 Tempo contracts, six diagnostics,
+  two previous-binary Teach HTTP recovery cases, one private-phone HTTP case,
+  and the same actual Chrome Save journey with unchanged UI artifacts.
+  Repertoire Reset remains open.
+- Separately staged schema-25 authority and retained tactics Settings CAS
+  are published in [Store #48](https://github.com/tempo-v2/tempo-store/pull/48)
+  `971ec4d` and [Tempo #73](https://github.com/tempo-v2/tempo/pull/73)
+  `8f7bafa`. Tests are scoped to the equivalent pre-rebase patches
+  Store `f73d4da` and Tempo `89d4e58`: 77 Store tests, three doctests and
+  the actual Settings handler passed. The broader Tempo library run passed
+  108 tests, ignored five and hit three process-permission failures in
+  engine cleanup. The rebased heads await exact combined checks. Durable day
+  state is present, but capture remains incomplete until the effective
+  profile and current acceptance and issuance producers adopt it. No
+  cleanup artifact has been installed.
