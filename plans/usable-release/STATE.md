@@ -4823,3 +4823,17 @@ with identical saved learning and no scheduled assessment.
 Portable snapshot restore remains outside this upgrade. Its format does
 not carry game tactic request or qualification records. The candidate
 has been built and tested separately from the running installation.
+
+### Astra review correction
+
+The first fresh review found a position where either knight capture takes a
+rook, then the opponent can take a pawn. Each move retains four points.
+The initial check compared the competing capture's proved four points with
+the prescribed capture's immediate five. Chess now uses the existing
+forcing-reply and exchange proof on both moves. It finds the greatest
+material balance the prescribed capture can retain, then checks whether a
+different legal capture can retain at least that balance. The regression
+also checks a position where the competing capture retains less.
+
+The corrected Chess candidate is `746d484093ea0d8b129c7d6d5f34b653212754ba`.
+The application, Store and UI candidate heads above are unchanged.
