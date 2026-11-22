@@ -4623,3 +4623,35 @@ focused Chess regression tests.
   previously kept discovered-check card is now withheld. A fresh engine
   search for that card confirmed the decision. The revised tally for the
   same snapshot is 386 kept, 60 shortened, 52 extended and 548 withheld.
+
+### Reviewed, merged and installed on November 22, 2026
+
+The third fresh Astra review cleared the final runtime heads after the
+two review rounds. It passed 13 Chess payoff tests, three Tempo report
+tests and 18 Store tactical analysis tests. The Game-to-Study suite
+passed 26 cases after the first review fixes. The final discovered-check
+fix passed its focused Chess checks and the archive replay above.
+
+| Component | Pull request | Verified main merge |
+| --- | --- | --- |
+| tempo-chess | [PR](https://github.com/tempo-v2/tempo-chess/pull/32) | `b37fa00f37560b846dbab5eebb0fd2581a53c998` |
+| tempo-store | [PR](https://github.com/tempo-v2/tempo-store/pull/32) | `0f6eaca7492bbf296bcf9cab9d6708453b529e10` |
+| tempo | [PR](https://github.com/tempo-v2/tempo/pull/54) | `64027dd96fcee6e1ac944bdf56353add7017aaba` |
+| tempo-ui | [PR](https://github.com/tempo-v2/tempo-ui/pull/56) | `58221fc1fb7e1586456c5fcce68fb4f1fb31bcac` |
+| .planning | [PR](https://github.com/tempo-v2/.planning/pull/76) | `9f272d2a0ca0c603a16242d32beec24282cb7315` |
+
+Each merge tree matches its reviewed head. The managed launcher installed
+`workspace-12d72e3bad5274125c09` on port 41822, using schema 19.
+The binary SHA-256 is `639215a0862ffb45070218a652227aa0112da3b96565dc4be9dbaab1405418d6`.
+The service returned Study status for the retained dataset and served all
+22 desktop and 24 phone assets byte-for-byte. Private phone ingress
+returned the installed bundle. The dataset identity and registered database
+inode were preserved. All 52 pre-existing tables matched the stopped-time
+backup, and SQLite quick and foreign-key checks passed.
+
+The backup and prior registration are in
+`recovery-start-ylxupfcd`. The exact installed artifacts
+issued the three-decision fork on a disposable copy, returned the original
+game link and saved one Good at Bxe8. The live background requalification
+started after installation. The pictured live card was still pending at
+readback.
