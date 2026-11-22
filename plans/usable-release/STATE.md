@@ -4858,3 +4858,10 @@ The revised runtime heads are Chess `e17b0f2697702c4d1a45c6da0069164c1857d9c1`,
 Store `b5102b7612787dcc9e2362c73f90a85bb2c9223f`, Tempo
 `9656c2137f53dc81f3030a17e3b5d89fbec916bd`, and UI
 `cdc8c43d1ed5d3c9844e91e85ad8c8adba86aa31`.
+
+The next review checked the reverse resolution. Chess now limits the
+early proposal step to proving the candidate payoff. It checks ambiguity
+after resolution establishes the actual lesson and its ownership. A new
+ambiguous one-move game lesson has no training plan. An exact authored
+match or retained longer lesson can still serve as before. The final
+Chess review head is `a43c2bb15698d8c3ad30dd7ddca76e51434ebc65`.
