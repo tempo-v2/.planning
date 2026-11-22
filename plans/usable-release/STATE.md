@@ -4699,3 +4699,13 @@ dataset and active attempt. SQLite quick check and foreign keys passed.
 A rollback backup and prior registration are in
 `recovery-start-sfwzumu9`. Running readback confirmed Italian starts after
 `1.e4`, Caro-Kann after `1.e4 c6`, and e4e5 after `1.e4 e5`.
+
+The final installed executable passed the packaged Chrome and Phone WebKit
+checks on disposable data. After the live Study attempt cleared the edit
+fence, a new preflight passed and the split was applied. The live catalog
+kept 241 Caro-Kann routes and gained 9 Slav / vs. 1.d4 routes and 14 Black
+vs. Other First Moves routes. The original apply token replayed without an
+additional write. All earlier attempts, assessments and receipts were
+present and unchanged. All three coverage starts survived, and SQLite
+quick check and foreign keys passed. The immediate pre-split backup is in
+`recovery-repertoire-split-7rrzhg5o`.
