@@ -22,15 +22,15 @@
   },
   "review": {
     "components": {
-      "tempo": "bd2fca64d723a3b72e56dd31ae32831d3ad90669",
+      "tempo": "f28d9551d6db7ec87d162efab4fc5b02d9dd2b5d",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "1d75747031ff35959d3adf31719f8429e9d46270",
       "tempo-queue": "0363fcb6b1b0ce021078113ee14e2299935ec92c",
-      "tempo-store": "8864597a11070bfb7842818eb39cddc97b01b030",
+      "tempo-store": "62ffb4626a4816acd0a16f122129a722ed047b68",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "ec44e834115a2b6dd0927785ad5e9069495bd74d"
+      "tempo-ui": "8b2b3319317bef30258ab6c9016c831efdc27da1"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
@@ -41,9 +41,9 @@
     "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
     "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
     "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
-    "sqlite_schema": 24,
+    "sqlite_schema": 26,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-24 combined review of context, receipt and Study slices, manual Games detector retirement and optional Study admission retirement; no installation qualification"
+    "qualification": "Schema-26 combined review includes Settings, exact issued Skip tests and retired tactical runtime and SQL writers, with populated previous-installation archive verification; no installation qualification"
   }
 }

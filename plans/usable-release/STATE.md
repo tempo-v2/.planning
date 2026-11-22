@@ -5290,3 +5290,15 @@ simplified supported product before dependent implementation.
   two cases use the actual previous binary's Teach commands. Production
   prepared issuance, replacement of legacy tokenless Skip and durable
   Resume Skipped remain open. No managed install.
+- Schema 26 closes the tactical report write residue. [Store #52](https://github.com/tempo-v2/tempo-store/pull/52)
+  `62ffb46` removes all 18 obsolete triggers and the last explicit counter
+  bump; their historical tables and rows remain. [Tempo #81](https://github.com/tempo-v2/tempo/pull/81)
+  `f28d955`, Store #52, UI #68 and unchanged Queue #18 are now in the single
+  review manifest. The exact binary passed 79 Store tests, eight diagnostics
+  including manual Capture, real Games replay and three acceptance/recovery
+  HTTP cases. The disposable schema-22 archive reached schema 26, passed SQLite
+  quick and foreign-key checks and preserved all 11 tactical tables through
+  startup, active Resume, retired controls and a valid new manual import.
+  The import retried its identical body once after a typed busy response and
+  accepted once. Study authority rows stayed unchanged through startup and
+  Resume. Gap-line, coverage and provider retirement remain separate.
