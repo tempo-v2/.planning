@@ -4472,8 +4472,8 @@ on disposable data. Physical iPhone acceptance remains pending.
 
 In the reported puzzle Black plays `...Qxd4 Qxd4 ...Nxd4` and wins the
 knight. The earlier explanation pointed out the pin on f2. The clue now
-explains that Black has two attackers on d4 and only White's queen can
-recapture. Study marks d4 and d1 on the existing board.
+explains that Black has at least two attackers on d4 and only White's queen
+can recapture. Study marks d4 and d1 on the existing board.
 
 | Behavior | Basis, owner, inputs and lifetime |
 | --- | --- |
@@ -4483,19 +4483,19 @@ recapture. Study marks d4 and d1 on the existing board.
 
 | Component | Verified candidate head | Pull request |
 | --- | --- | --- |
-| Chess | `e8b973a4d7fba14830bccd0967563be48fad5faf` | [Chess #31](https://github.com/tempo-v2/tempo-chess/pull/31) |
-| Tempo UI | `acef4fa25ad9996141b0e8d80f15921089669880` | [UI #55](https://github.com/tempo-v2/tempo-ui/pull/55) |
+| Chess | `f30b74fa5462271ac10d5dac39cfb9b63e811b94` | [Chess #31](https://github.com/tempo-v2/tempo-chess/pull/31) |
+| Tempo UI | `a906a8ac7d347eff3b2aad68c24894b9ec10c3ca` | [UI #55](https://github.com/tempo-v2/tempo-ui/pull/55) |
 
 The assembly used Tempo `7c5531031c5d`, Store `606456dda59c`, Types
 `a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning
 `ee542cc1971f` and the packaged Core 0.2.5 from `71cbd2b1e4a3`.
 The debug executable SHA-256 was
-`4db059cd5c55e7b77043da570b5366efd3e9ccf34c3903b649f6e90908331b3a`.
+`f43f14942723af0a552bb04fc34927c235daf6571c6dd1e1518d7ef95d238989`.
 The packaged desktop and phone JS hashes were
-`02fecccd239faac5d1b5ed568aaf5b454e83af1eb33f7cedbbc16957331ae968`
-and `27b1d0ba89962162593313bf5caf94b83c3102a8d3153af684a8ce5b401c7061`.
+`6f86c868d916a8844b748ae38af4daa5bf34690f98135fd6273811badfef640c`
+and `5f11979fe25eb26ae365228fe36c453336f88d7797ed355fba5c9b17e8916b61`.
 
-- The full Chess suite passed 130 checks including doctests. The UI build,
+- The full Chess suite passed 131 checks including doctests. The UI build,
   148 UI tests and the architecture gate passed.
 - Chrome exercised the exact reported puzzle, with its display name present,
   renamed and omitted. It checked identical ordered commands, receipts and
@@ -4515,4 +4515,8 @@ and `27b1d0ba89962162593313bf5caf94b83c3102a8d3153af684a8ce5b401c7061`.
   the actual disclosure and consumer path, and reran the focused Chess,
   Chrome, WebKit, metadata and previous-release recovery checks.
 
-The component PRs are open. Merge and managed installation remain separate.
+The first fresh Astra interface review found that the clue implied an exact
+attacker count and a broader material outcome than the proof establishes.
+The revised copy states the lower bound and limits the gain to the exchange
+square. The Chess API documentation and regression cases now describe the
+same scope. The revised component PRs are open.
