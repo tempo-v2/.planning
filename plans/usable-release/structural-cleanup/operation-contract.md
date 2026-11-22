@@ -104,3 +104,36 @@ membership-dirty plans return preparing. Done requires proved complete
 membership and an exhausted checked order. A prepared generation publishes
 only if its originally captured basis is still authoritative. Generation is a
 publication locator and never part of a receipt's durable work identity.
+
+### Authority required for a prepared day
+
+Store owns the durable facts from which a plan is captured. A fresh plan
+requires the committed profile, the observed study day and compatible policy
+epoch, exact current content and Learning, authored prerequisites, spent
+introductions, effective deferrals, and any authoritative issued work. Capture
+these in one transaction before building an order. Missing required facts mean
+preparing. In particular, a missing quota or deferral authority is distinct
+from a present zero or empty set.
+
+Opening and tactic spend are separate counts for the acceptance day. An
+accepted first Teach increments the corresponding count in the same
+transaction as its effect and receipt. Issuance, replay, review, repair and
+manual capture do not spend this allowance. A previously issued lesson may
+complete across rollover even if the current allowance is spent; remaining
+work is bounded at zero. Migration seeds historical spend only from explicit
+accepted first-Teach evidence. It does not infer a Teach from imported
+Learning, a capture, display metadata, or a previously viewed card.
+
+New Skip writes a day-local deferral for the exact obligation. Resume Skipped
+advances the accepted day-local cutoff once, and a later deferral remains
+effective. The older in-memory skip state has no durable authority to migrate.
+An accepted legacy Skip still replays its receipt without a newly invented
+deferral. Likewise a legacy attempt without an exact issued token still
+resumes or accepts through its recorded state; any incompatible projection is
+marked dirty. No authoritative attempt or receipt depends on plan generation
+rows.
+
+T18 owns the compact coherent read and staged publication. T19/T20 provide
+durable write-side authority and atomic epoch advancement. An interim build
+without those facts stays unavailable to fresh Next. T43 owns physical writer
+admission and fair scheduling.
