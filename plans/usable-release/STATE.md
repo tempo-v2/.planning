@@ -4655,3 +4655,47 @@ issued the three-decision fork on a disposable copy, returned the original
 game link and saved one Good at Bxe8. The live background requalification
 started after installation. The pictured live card was still pending at
 readback.
+
+### Conditional repertoire coverage
+
+One exact saved starting line belongs to each repertoire in the active
+dataset. The setting uses the authored move sequence and scope revision.
+Chess validates that sequence and supplies the absolute learner move number.
+Tempo starts all probability at the resulting opponent position after any
+required prepared learner move. Store invalidates a forecast when the scope
+revision changes, even if later edits restore the same moves. A prior report
+or pending command without the scope carries revision zero and the initial
+position. A displayed repertoire label cannot change these decisions.
+
+| Component | Split change | Coverage change |
+| --- | --- | --- |
+| Chess | [#33](https://github.com/tempo-v2/tempo-chess/pull/33) `aa6639a` | [#34](https://github.com/tempo-v2/tempo-chess/pull/34) `46d4f23` |
+| Store | [#33](https://github.com/tempo-v2/tempo-store/pull/33) `91fc17e` | [#34](https://github.com/tempo-v2/tempo-store/pull/34) `ebd7992` |
+| Tempo | [#55](https://github.com/tempo-v2/tempo/pull/55) `eaa66bd` | [#56](https://github.com/tempo-v2/tempo/pull/56) `e91ad88` |
+| UI | | [#57](https://github.com/tempo-v2/tempo-ui/pull/57) `941afe7` |
+
+The managed workspace combines both changes over the recognizable-tactics
+release, with Tempo `6fd6e8d`, Store `e203102`, Chess `bde3e96`,
+and UI `941afe7`. The other component pins and workspace lock are from
+that same installed release. The GitHub feature pull requests are open.
+
+The independent optimized split rehearsal preserved all 23 moved Learning
+states, 270 accepted failure keys, and the original attempt, assessment,
+receipt and game observations. All 22 moved corrective targets still resolve
+to their original raw game and played move subject to the reset boundary.
+The live split preflight found an open attempt on a moved target and deferred
+the edit. Finish that attempt and repeat the live preflight before applying.
+
+The conditional estimate, forecast retirement and signed editor contracts
+passed. The Store suite passed 53 tests. The UI suite passed 148 tests.
+Packaged Chrome and Phone WebKit covered the starting line picker, gap
+editing and exact command recovery. Both an accepted and an undelivered legacy
+coverage request recovered with original whole-game scope when moving from the
+previous installed binary to schema 20 on disposable copies.
+
+The managed launcher installed `workspace-b0d3ec28b5c64b6f6757` on 41822.
+The registered database migrated from schema 19 to 20 and retained its
+dataset and active attempt. SQLite quick check and foreign keys passed.
+A rollback backup and prior registration are in
+`recovery-start-sfwzumu9`. Running readback confirmed Italian starts after
+`1.e4`, Caro-Kann after `1.e4 c6`, and e4e5 after `1.e4 e5`.
