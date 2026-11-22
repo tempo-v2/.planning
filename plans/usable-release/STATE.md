@@ -4655,3 +4655,116 @@ issued the three-decision fork on a disposable copy, returned the original
 game link and saved one Good at Bxe8. The live background requalification
 started after installation. The pictured live card was still pending at
 readback.
+
+
+### Black repertoire split and conditional coverage
+
+| Behavior | Basis, owner, inputs, independence and lifetime |
+| --- | --- |
+| Split the selected Black book | The user chose first-move groups e4, d4, and other. Chess determines legal routes, independent of labels and transpositions. Tempo maps the same canonical position and reply to its new target and copies its saved Learning state. Store validates revisions and commits documents, catalog, Learning and the mapping together. Historical attempts and assessments retain their issued identities. |
+| Scan from a saved opening line | The user chose one saved route per repertoire and the absolute learner move deadline. Chess resolves the legal route and move number. Tempo assigns all probability at that position, independent of its frequency in whole games. Store binds published forecasts to the selected route. Old reports and pending requests preserve their initial-position semantics. |
+
+The partition preview found 241 Caro-Kann, 9 Slav, and 14 other routes.
+All retained Caro-Kann routes begin e4 c6. The schema-19 disposable rehearsal
+preserved 23 destination Learning states, the 270 corresponding game failure
+keys and the original attempt, assessment and receipt rows. The replay used
+the original preview token and left the same three books. SQLite integrity
+and foreign keys passed. The installed artifact must carry Store's guided
+repair lineage lookup before the split is applied to managed data.
+
+### Conditional repertoire coverage
+
+One exact saved starting line belongs to each repertoire in the active
+dataset. The setting uses the authored move sequence and scope revision.
+Chess validates that sequence and supplies the absolute learner move number.
+Tempo starts all probability at the resulting opponent position after any
+required prepared learner move. Store invalidates a forecast when the scope
+revision changes, even if later edits restore the same moves. A prior report
+or pending command without the scope carries revision zero and the initial
+position. A displayed repertoire label cannot change these decisions.
+
+| Component | Split change | Coverage change |
+| --- | --- | --- |
+| Chess | [#33](https://github.com/tempo-v2/tempo-chess/pull/33) `aa6639a` | [#34](https://github.com/tempo-v2/tempo-chess/pull/34) `46d4f23` |
+| Store | [#33](https://github.com/tempo-v2/tempo-store/pull/33) `91fc17e` | [#34](https://github.com/tempo-v2/tempo-store/pull/34) `ebd7992` |
+| Tempo | [#55](https://github.com/tempo-v2/tempo/pull/55) `eaa66bd` | [#56](https://github.com/tempo-v2/tempo/pull/56) `e91ad88` |
+| UI | | [#57](https://github.com/tempo-v2/tempo-ui/pull/57) `941afe7` |
+
+The managed workspace combines both changes over the recognizable-tactics
+release, with Tempo `6fd6e8d`, Store `e203102`, Chess `bde3e96`,
+and UI `941afe7`. The other component pins and workspace lock are from
+that same installed release. The GitHub feature pull requests are open.
+
+The independent optimized split rehearsal preserved all 23 moved Learning
+states, 270 accepted failure keys, and the original attempt, assessment,
+receipt and game observations. All 22 moved corrective targets still resolve
+to their original raw game and played move subject to the reset boundary.
+The live split preflight found an open attempt on a moved target and deferred
+the edit. Finish that attempt and repeat the live preflight before applying.
+
+The conditional estimate, forecast retirement and signed editor contracts
+passed. The Store suite passed 53 tests. The UI suite passed 148 tests.
+Packaged Chrome and Phone WebKit covered the starting line picker, gap
+editing and exact command recovery. Both an accepted and an undelivered legacy
+coverage request recovered with original whole-game scope when moving from the
+previous installed binary to schema 20 on disposable copies.
+
+The managed launcher installed `workspace-b0d3ec28b5c64b6f6757` on 41822.
+The registered database migrated from schema 19 to 20 and retained its
+dataset and active attempt. SQLite quick check and foreign keys passed.
+A rollback backup and prior registration are in
+`recovery-start-sfwzumu9`. Running readback confirmed Italian starts after
+`1.e4`, Caro-Kann after `1.e4 c6`, and e4e5 after `1.e4 e5`.
+
+The final installed executable passed the packaged Chrome and Phone WebKit
+checks on disposable data. After the live Study attempt cleared the edit
+fence, a new preflight passed and the split was applied. The live catalog
+kept 241 Caro-Kann routes and gained 9 Slav / vs. 1.d4 routes and 14 Black
+vs. Other First Moves routes. The original apply token replayed without an
+additional write. All earlier attempts, assessments and receipts were
+present and unchanged. All three coverage starts survived, and SQLite
+quick check and foreign keys passed. The immediate pre-split backup is in
+`recovery-repertoire-split-7rrzhg5o`.
+
+#### Fresh interface review and corrections
+
+| Behavior | Basis, owner, inputs, independence and lifetime |
+| --- | --- |
+| Resolve a moved correction | The committed split maps an exact destination answer version to its source answer version and cutover time. Store owns this relation and resolves it alongside reset and miss boundaries. Receipt text and repertoire labels cannot affect it. Migrate the already installed split once, using the historical receipt format only for that migration. |
+| Commit a forecast edit | The forecast editor authorizes its addressed report for the selected starting line. A newly authorized but unaccepted Save requires that report and scope to remain current when Store commits. An accepted Save replays its immutable receipt. Keep the previous installed token protocol readable for commands already issued. |
+
+A signed forecast edit also depends on the repertoire remaining active and
+verified at the time of commit. The same Store guard applies to desktop and
+phone. A normal authored-content edit retains its existing scope.
+
+The first Astra review identified receipt-format coupling, stale forecast
+Save authorization, and the need to check verified source authority. The
+second review reproduced the remaining desktop suspension gap and checked
+the public editor contract. A third fresh Astra reviewer cleared the combined
+runtime after the suspension and removed-prefix fixes.
+
+| Component | Merged pull requests | Verified main |
+| --- | --- | --- |
+| Chess | [#33](https://github.com/tempo-v2/tempo-chess/pull/33), [#34](https://github.com/tempo-v2/tempo-chess/pull/34) | `f62d2bba248862862f1fe72c65d5df69a361dda4` |
+| Store | [#33](https://github.com/tempo-v2/tempo-store/pull/33), [#34](https://github.com/tempo-v2/tempo-store/pull/34) | `4cac8713da331115fdf53e6bcdd32d27c5d4af32` |
+| Tempo | [#55](https://github.com/tempo-v2/tempo/pull/55), [#56](https://github.com/tempo-v2/tempo/pull/56) | `c24ca5a65cfc409d7138cb1e1a919773619ba1bf` |
+| UI | [#57](https://github.com/tempo-v2/tempo-ui/pull/57) | `801daf2793c86b64f1e2381ffb2d9db18cdc1386` |
+
+Each remote main tree matched its reviewed version. The schema-20 copy
+retained all 23 partition links on upgrade to schema 21 and recovered both
+an accepted and an undelivered prior-version signed Save. The public editor
+contract rejected unaccepted saves for a changed scope or suspended book,
+and replayed an accepted save. The Store suite passed 53 tests and the UI
+suite passed 148. The merged optimized executable passed packaged Chrome
+and both phone WebKit recovery journeys on disposable data.
+
+Managed Tempo is running `workspace-e94d03d7261d1a57a771` on port 41822.
+The executable SHA-256 is
+`e59bb3ca3b677ade6ed70644082fc7f783c4ce4ec761452dcc6eb196bddb885a`.
+After the launcher's readiness timeout during migration, direct readback
+confirmed the registered listener and private phone ingress. The executable
+and all 46 served assets matched the qualified build. The schema-20 rollback
+backup and prior registration are in `recovery-start-_52qr0g0`. The live
+schema-21 database kept its dataset, active attempt, Study records, new
+repertoires and three coverage starts. All 23 partition links matched the
+pre-upgrade receipt mapping. SQLite quick and foreign-key checks passed.
