@@ -5250,3 +5250,16 @@ simplified supported product before dependent implementation.
   checks and six Chromium journeys using the prior installed app and
   backend on disposable data. Legacy issued Practice and its old
   immediate-recall source still require retirement. No managed install.
+- The separate schema-25 Settings candidate is published as
+  [Tempo #78](https://github.com/tempo-v2/tempo/pull/78) `3d58b63` and
+  [UI #67](https://github.com/tempo-v2/tempo-ui/pull/67) `80e481e`, tested
+  against Store `7bb210c` and Queue `0363fcb`. The real Settings handler
+  passed both focused tests. The locked build, real Chrome Settings journey
+  and both previous-binary Teach HTTP cases passed. Desktop Settings is
+  the shared owner of opening and tactic caps. The browser observed a cap
+  change in live Next without restart, preserved unrelated profile data,
+  and showed the retired CLI directing the user to Settings. The older
+  Phone Study and Saved Reviews Playwright fixtures still carry retired
+  Practice expectations. Only the exact Settings and prior-binary checks
+  above qualify this candidate so far; the paired review manifest remains
+  at the broader schema-24 composition until the next admission.
