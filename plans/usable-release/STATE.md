@@ -4768,3 +4768,100 @@ backup and prior registration are in `recovery-start-_52qr0g0`. The live
 schema-21 database kept its dataset, active attempt, Study records, new
 repertoires and three coverage starts. All 23 partition links matched the
 pre-upgrade receipt mapping. SQLite quick and foreign-key checks passed.
+
+## Clarity for simple capture drills
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Withhold a game-generated, one-move hanging-material lesson when another legal capture independently keeps at least the same material gain | The approved capture-drill plan. Chess uses the issued board, proposed move, verified motif and existing checks for forcing replies and material retention. Engine ordering, card labels and game attribution do not decide ambiguity. A second defensible capture changes admission. A rename does not. Store persists the verdict for the current version through the existing qualification gate while retaining prior definitions, attempts, receipts and learning. |
+| Explain a revealed tactic on both correction paths | The approved capture-drill plan. Tempo projects the existing optional Chess explanation after a submitted miss or Show move in active Test or Practice, using the pinned version. Blind delivery still omits it. The desktop and phone render the same feedback. Replays preserve the command identity and accepted assessment. |
+
+### Candidate and verification
+
+| Component | Draft PR | Candidate commit |
+| --- | --- | --- |
+| tempo-chess | [PR](https://github.com/tempo-v2/tempo-chess/pull/35) | `e9272e26063a17d8382522a2b9bc5897c5d4eb1d` |
+| tempo-store | [PR](https://github.com/tempo-v2/tempo-store/pull/35) | `0d6593733790aec0e244124b7fe745e47d8cf4bd` |
+| tempo | [PR](https://github.com/tempo-v2/tempo/pull/57) | `204e7f0398ec12e5b7a9a0f22f4d4684526db624` |
+| tempo-ui | [PR](https://github.com/tempo-v2/tempo-ui/pull/58) | `cdc8c43d1ed5d3c9844e91e85ad8c8adba86aa31` |
+
+Assemble these heads with Types `a8e46c9b9442`, Study `ddf6839af0fa`,
+Queue `74e09a1ea1cc`, Learning `ee542cc1971f`, and the packaged Core 0.2.5
+from `71cbd2b1e4a3`. The workspace lock matches the conditional-repertoire
+coverage assembly (SHA-256 `ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`).
+
+The installed schema-21 baseline was `workspace-e94d03d7261d1a57a771`.
+Its disposable copy migrated to schema 22 and withheld 20 cards, including
+the reported …Nxd4 / …Nxh4 position. The clear …Bxf2 example stayed
+eligible. The reported card issued before migration. After migration the
+same issued attempt could resume, and future Study and Practice issuance
+excluded the card. That scenario also exercised a retained request
+whose card needed a new qualification row. Bidirectional comparisons
+matched content and version history, game records, attempts, assessments,
+learning, receipts, saved reviews, pending request bindings and the active
+pointer. SQLite quick and foreign-key checks passed.
+
+Independent review traced new qualification, retained ownership and the
+consumer paths. The assembled locked Rust workspace passed 491 tests and
+doctests, with five engine or integration cases ignored by default. The
+rebased desktop and phone bundles built successfully, and all 148 UI
+tests passed. The Chess regression exercised the reported card, a unique
+capture, and an immediately defended alternative. The existing Chrome
+journey on the assembled candidate compared ordered commands and durable
+results with the original, renamed, and omitted display name. It also
+passed previous-release concession recovery and interrupted Next.
+
+On the installed baseline and disposable retained data, Chrome recovered a
+schema-21 Show move command both when it was accepted but its reply was
+lost and when the request never arrived. The candidate sent the original
+command bytes, completed with one Again, and displayed the optional clue.
+The accepted typed receipt was byte-identical in SQLite. The reprojected
+reply added only the optional clue. Packaged Phone WebKit displayed
+Hanging pawn after both Show move and a submitted miss in Practice,
+with identical saved learning and no scheduled assessment.
+
+Portable snapshot restore remains outside this upgrade. Its format does
+not carry game tactic request or qualification records. The candidate
+has been built and tested separately from the running installation.
+
+### Astra review correction
+
+The first fresh review found a position where either knight capture takes a
+rook, then the opponent can take a pawn. Each move retains four points.
+The initial check compared the competing capture's proved four points with
+the prescribed capture's immediate five. Chess now uses the existing
+forcing-reply and exchange proof on both moves. It finds the greatest
+material balance the prescribed capture can retain, then checks whether a
+different legal capture can retain at least that balance. The regression
+also checks a position where the competing capture retains less.
+
+The corrected Chess candidate is `746d484093ea0d8b129c7d6d5f34b653212754ba`.
+The application, Store and UI candidate heads above are unchanged.
+
+The initial review also reproduced two boundary failures. A verified
+longer line could resolve to an older quarantined one-move game card,
+then reactivate that card. A same-day Study progress stamp could remain
+valid after the migration changed eligibility. Chess now exposes the
+qualified game proposal as a distinct value. Its planner checks the
+resolved definition and can return no training plan. Tempo still records
+the finding and preserves any existing request binding. Independent
+authored content and allowable longer lessons retain their existing
+resolution. Chess re-proves older standalone moves whose stored motif is
+absent, and a mating capture can satisfy the same material-retention floor.
+
+Store uses the same revision and evidence invalidation for migration and
+normal qualification publication. A migration that withholds cards bumps
+the Study revision once in the same transaction. It preserves the active
+attempt, per-attempt revisions, content versions and existing receipts.
+
+The revised runtime heads are Chess `e17b0f2697702c4d1a45c6da0069164c1857d9c1`,
+Store `b5102b7612787dcc9e2362c73f90a85bb2c9223f`, Tempo
+`9656c2137f53dc81f3030a17e3b5d89fbec916bd`, and UI
+`cdc8c43d1ed5d3c9844e91e85ad8c8adba86aa31`.
+
+The next review checked the reverse resolution. Chess now limits the
+early proposal step to proving the candidate payoff. It checks ambiguity
+after resolution establishes the actual lesson and its ownership. A new
+ambiguous one-move game lesson has no training plan. An exact authored
+match or retained longer lesson can still serve as before. The final
+Chess review head is `a43c2bb15698d8c3ad30dd7ddca76e51434ebc65`.
