@@ -83,3 +83,24 @@ provider I/O remain outside it. T43 owns the running queue and must demonstrate
 that continuous foreground work cannot starve a ready apply. T61–T63 own
 actual publication adoption. Fixtures provide explicit narrow methods and
 must fail on unsupported capability without invoking snapshot or catalog reads.
+
+## Work identity and projection publication
+
+A newly issued activity carries an immutable token with plan day, target,
+issued version, activity kind and exact obligation revision. A first accepted
+Test miss keeps that Test token and records a distinct, newly revisioned
+correction token on the same attempt. Finishing correction closes only that
+bound correction. An old attempt cannot clear a newer obligation. A prior
+release attempt with no token still resolves through its accepted command or
+retained authoritative state. If the accepted transition cannot name exact
+projection work, it marks the projection dirty.
+
+Deferral has its own acceptance day and matches the token's exact target,
+version, kind and obligation revision. It can survive the current day's plan
+rebuild, while the original issued token remains unchanged. A newer obligation
+can be issued despite that deferral. Rank-only invalidation affects the plan
+basis and leaves the required-work summary basis unchanged. Missing or
+membership-dirty plans return preparing. Done requires proved complete
+membership and an exhausted checked order. A prepared generation publishes
+only if its originally captured basis is still authoritative. Generation is a
+publication locator and never part of a receipt's durable work identity.

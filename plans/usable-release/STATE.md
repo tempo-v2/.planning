@@ -5077,3 +5077,18 @@ simplified supported product before dependent implementation.
   Archive rows/encodings remain inert. T34 still owns full prior-release replay,
   T38 legacy reset cleanup, and T27/T57 final unreachability of retired helpers.
   The reviewed drafts are published and the managed installation is unchanged.
+
+### Addressed Study and plan preparation
+
+- Explicit Resume uses the addressed compatibility capability in
+  [Tempo #65](https://github.com/tempo-v2/tempo/pull/65) `ca0da162d153e156efd58df57c7cda822066ef20`
+  and [Store #42](https://github.com/tempo-v2/tempo-store/pull/42)
+  `6a130fa8f9149915835712b430d8b15574048dc6`. A real SQLite authorizer
+  verified the addressed read without Learning or assessment access. All
+  54 application contracts passed. The disposable HTTP consumer resumed the
+  same issued attempt while Learning was unreadable.
+- T15 owns the pure work-token, basis and update types. T16 is designing
+  schema 24 for those exact types and the captured epoch fence. T42 is
+  replacing the request dispatcher ingress so the app write owner will receive
+  prepared bodies, independent of socket cleanup. These slices are active and
+  have no installation result.
