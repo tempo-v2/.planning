@@ -5502,3 +5502,18 @@ simplified supported product before dependent implementation.
   original Save subsequently committed. Five Node and 12 Python
   diagnostics passed, including private-phone access and correlated
   asset diagnostics. Fair prepared apply remains separate. No installation.
+- A direct full schema-22 archive copy subsequently upgraded to schema 27
+  after unused build output was reclaimed. The exact #91 runtime served
+  all six original authored PGNs with model authority unavailable.
+  SQLite quick and foreign-key checks passed. This direct run qualifies
+  the full authored-read upgrade. The earlier detailed historical
+  backfill invariance result remains scoped to its staged archive copy.
+- [Store #63](https://github.com/tempo-v2/tempo-store/pull/63) `a227644`
+  publishes schema-28 independent summary storage. It bounds the payload
+  to one row per dataset and publishes against the captured dataset,
+  civil day and summary epoch. The SQLite probe denied rank, plan and
+  Learning reads on summary lookup. Exact retry, stale fencing and
+  rollback after an injected late failure passed among 95 Store tests
+  and three doctests. The production publisher and Progress/Study Status
+  users remain open. This capability is outside the current schema-27
+  paired pins. No installation.
