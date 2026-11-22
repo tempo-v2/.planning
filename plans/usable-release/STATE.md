@@ -5019,9 +5019,14 @@ simplified supported product before dependent implementation.
   Tempo `64ff3eaf0804f6c51e199d01f66747a0897aa568`. The prior codec revision
   passed three tests. Combined ingress checks, the reserved schema 22 to 23
   current-row migration, and Study consumer adoption are pending.
-- T09 owns retained shell and Capture context, with exact pending-command
-  identity independent of context availability. T13 owns fixture removal and
-  T10 owns taxonomy and migration. Heavy tests remain serial.
+- T09 shell and Capture context shipped to review in
+  [UI #60](https://github.com/tempo-v2/tempo-ui/pull/60)
+  `a44ab6492915ee3aea24e03a6ed0a98af2d540c2`. All 153 UI tests passed.
+  Mounted cases exercise exact pending-command replay through context failure,
+  authoritative stale rejection and a bounded reroute to the new identity.
+  Games identity and remaining page/controller scoping remain open. T13 owns
+  fixture retirement and T10 owns taxonomy and migration. Heavy tests remain
+  serial.
 
 ### Connected-run retirement
 
