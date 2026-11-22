@@ -5302,3 +5302,28 @@ simplified supported product before dependent implementation.
   The import retried its identical body once after a typed busy response and
   accepted once. Study authority rows stayed unchanged through startup and
   Resume. Gap-line, coverage and provider retirement remain separate.
+
+### Portable retirement and exact human correction
+
+- [Tempo #82](https://github.com/tempo-v2/tempo/pull/82) `841fc17` removes
+  the public portable JSON export/restore API and codec. Recovery uses full
+  SQLite archives. The exact predecessor build passed 134 Tempo tests,
+  three HTTP checks and six prior-installation browser recovery journeys.
+  The executable rejected four legacy portable command spellings without
+  creating files. Unused private Store/Learning helpers and historical
+  compatibility remain separately scoped.
+- The current schema-26 manifest moves to [Tempo #83](https://github.com/tempo-v2/tempo/pull/83)
+  `43bb449`, [Store #53](https://github.com/tempo-v2/tempo-store/pull/53)
+  `274a486`, and [Learning #11](https://github.com/tempo-v2/tempo-learning/pull/11)
+  `b198c96`; UI #68 is unchanged. The exact candidate passed 27 Learning,
+  79 Store and 52 Tempo contract tests, four doctests, five real HTTP cases
+  and six actual prior-installation Chromium journeys. The two correction
+  cases seed an exact prepared Test token and exercise a real legal wrong
+  move or Give Up. After restart the original attempt completes the
+  persisted correction with one assessment and no change to the already
+  accepted schedule. The current UI #68 passed 133 units and built both
+  artifacts on the previous matching UI revision. Its exact assets were
+  reused in the six current browser journeys.
+- Prepared issuance has yet to create those tokens in normal runtime.
+  Durable Resume Skipped, summary publication/read adoption and the old
+  fresh-selector deletion remain open. These changes are uninstalled.
