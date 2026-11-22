@@ -5327,3 +5327,27 @@ simplified supported product before dependent implementation.
 - Prepared issuance has yet to create those tokens in normal runtime.
   Durable Resume Skipped, summary publication/read adoption and the old
   fresh-selector deletion remain open. These changes are uninstalled.
+
+### Stockfish gap-line retirement and coherent capture
+
+- [Tempo #84](https://github.com/tempo-v2/tempo/pull/84) `7ab7368` and
+  [UI #69](https://github.com/tempo-v2/tempo-ui/pull/69) `1e96728` are
+  the current schema-26 paired review pins. The gap-line start/status
+  routes and desktop/phone callers are removed. There is no remaining
+  Stockfish production route, implementation or selector. Nine runtime
+  diagnostics, private-phone HTTP, 133 UI tests and both built artifacts
+  passed. The same current UI sources were used for a Chrome manual-reply
+  journey. Disposable previous-installation Chrome and private iPhone WebKit
+  verified exact original signed whole-line Save after upgrade. The phone
+  exercise includes accepted-lost and never-delivered cases; the desktop
+  exercise includes the accepted-lost case. No preview request was needed
+  for the saved command. General coverage, its providers, single reply and
+  Phone Build remain within their own retirement scopes.
+- [Store #54](https://github.com/tempo-v2/tempo-store/pull/54) `50c612b`
+  captures only the saved calendar, opening and tactic caps, and effective
+  themes, plus exact day deferrals above the accepted cutoff, in the same
+  deferred read as the plan basis. The capture distinguishes missing and
+  malformed policy from a valid empty work set. All 82 Store tests and
+  three doctests passed. Calendar fencing and active issued identity remain
+  necessary for a complete capture. This Store-only capability is separately
+  tested until the paired consumer successor admits it. No installation.

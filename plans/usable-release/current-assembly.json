@@ -22,7 +22,7 @@
   },
   "review": {
     "components": {
-      "tempo": "43bb44925bb203a876e978bab5914083fdbc5396",
+      "tempo": "7ab7368bb77ac39685a50e6bc5beff12b4201440",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "b198c968646cababc143a8311532abb4a240fbd3",
@@ -30,7 +30,7 @@
       "tempo-store": "274a4860f813909bef13a5095a2a9c8aad6800a2",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "8b2b3319317bef30258ab6c9016c831efdc27da1"
+      "tempo-ui": "1e96728ab8538afedb165dd1d369eecfbb3cfb83"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
@@ -44,6 +44,6 @@
     "sqlite_schema": 26,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-26 combined review includes tactical archive protection, portable Tempo API retirement and prepared human correction acceptance; no installation qualification"
+    "qualification": "Schema-26 combined review includes tactical archive protection, human correction acceptance, portable Tempo API and Stockfish gap-line retirement; no installation qualification"
   }
 }
