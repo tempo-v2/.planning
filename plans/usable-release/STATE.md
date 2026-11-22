@@ -5433,3 +5433,26 @@ simplified supported product before dependent implementation.
   cases, including previous-binary Teach, exact Skip and both correction
   journeys. This Store successor is staged for the next paired manifest.
   Prepared issuance, fair publication and independent Progress remain open.
+
+### Remote refresh retirement and bounded prepared issuance
+
+- [Tempo #88](https://github.com/tempo-v2/tempo/pull/88) `12bda8d` and
+  [UI #71](https://github.com/tempo-v2/tempo-ui/pull/71) `90753b3` replace
+  the current schema-26 review pins with Store #60, Learning #12 and Queue
+  #19. They remove the remote refresh worker and job polling. An exact
+  accepted refresh returns its original receipt result. An exact
+  never-accepted request returns retirement without a provider or status
+  poll. Both builds, 133 UI tests, 11 diagnostics, private-phone HTTP,
+  real Games replay and current Chrome Game Workbench passed. Four
+  previous-installation Chrome cases exercised accepted-lost and
+  never-delivered commands from inline storage and IndexedDB. The same
+  candidate performed retained manual PGN import and replay. Historical
+  backfill and its shared provider still have their own retirement gate.
+- [Store #61](https://github.com/tempo-v2/tempo-store/pull/61) `5dbea2f`
+  stages the bounded ready-read and exact issuance transaction separately.
+  At most 32 entries are checked and only the selected definition is
+  hydrated. Issue saves the original attempt identity, active pointer and
+  Ready-to-Issued transition together. Rank-only drift leaves admitted
+  membership valid. The exact Store passed 93 tests, three doctests and
+  four matching Tempo adapter tests. Production has yet to adopt this
+  capability. No managed install.

@@ -22,15 +22,15 @@
   },
   "review": {
     "components": {
-      "tempo": "715a1d8e78a7f3332a6d7b1023e064e445791799",
+      "tempo": "12bda8d359a02dd9a71caa927216ef736cb56816",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
-      "tempo-learning": "b198c968646cababc143a8311532abb4a240fbd3",
-      "tempo-queue": "0363fcb6b1b0ce021078113ee14e2299935ec92c",
-      "tempo-store": "7f6e39eae097bbb130b53c6df31bbf4aa3ba1202",
+      "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
+      "tempo-queue": "cf18f19cf6fe2892720e2882fa96033d20f522f1",
+      "tempo-store": "82be4fae65d17109fa6b88bcf543592c17ac4d29",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "fc2d65791c945af66f5692fc5623f6367c4bfdf2"
+      "tempo-ui": "90753b339081ca42c5b66dea6199e700f102e1f9"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
@@ -44,6 +44,6 @@
     "sqlite_schema": 26,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-26 combined review includes addressed active Next and retired tactical, Stockfish, coverage-scan and gap Explorer paths; no installation qualification"
+    "qualification": "Schema-26 combined review includes retired remote refresh with exact legacy recovery and retained manual Games import, and addressed Study and projection fencing; no installation qualification"
   }
 }
