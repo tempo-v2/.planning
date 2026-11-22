@@ -22,12 +22,12 @@
   },
   "review": {
     "components": {
-      "tempo": "c419ccbc3cbeea46d11bcdbcbc917471e15222b6",
+      "tempo": "5b541678f72dc2e5d5940fcdeba1ff5dd1fbd4b5",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
       "tempo-queue": "d4e591ebd7875a240297ea49ab692f7059c6c6fd",
-      "tempo-store": "a8abe6c27d32253d96897513605d40ba74c79b58",
+      "tempo-store": "ba53882093724a1299a35aaa869edf39d70ddf84",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
       "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4"
@@ -44,6 +44,6 @@
     "sqlite_schema": 28,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-28 combined review includes repertoire Reset retirement, exact old Reset replay and independent summary persistence; no installation qualification"
+    "qualification": "Schema-28 combined review includes Reset retirement, independent context and summary storage, and Settings using the application write owner; no installation qualification"
   }
 }

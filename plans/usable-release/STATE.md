@@ -5536,3 +5536,14 @@ simplified supported product before dependent implementation.
   changed identity and unaccepted requests remained explicit. Schema-28
   summary persistence is present. Its actual publisher and screen
   adoption remain open. No managed installation.
+- [Tempo #93](https://github.com/tempo-v2/tempo/pull/93) `5b54167` and
+  [Store #65](https://github.com/tempo-v2/tempo-store/pull/65) `ba53882`
+  are current with unchanged UI #73 and Queue #20. The actual Settings
+  writer uses the same Store connection as Study. The former Settings
+  connection now reads only remaining model metadata. Existing Settings
+  validation, compare-and-set and exact no-op behavior remain. The exact
+  candidate passed two Settings tests, three real loopback admission
+  checks and Chrome Settings. In the SQLite-lock check, context/assets
+  responded independently and the original Settings write then committed.
+  Reset recovery evidence is scoped to the tested predecessor. The
+  prepared-plan publisher is still separate. No managed installation.
