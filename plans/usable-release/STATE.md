@@ -4655,3 +4655,18 @@ issued the three-decision fork on a disposable copy, returned the original
 game link and saved one Good at Bxe8. The live background requalification
 started after installation. The pictured live card was still pending at
 readback.
+
+### Black repertoire split and conditional coverage
+
+| Behavior | Basis, owner, inputs, independence and lifetime |
+| --- | --- |
+| Split the selected Black book | The user chose first-move groups e4, d4, and other. Chess determines legal routes, independent of labels and transpositions. Tempo maps the same canonical position and reply to its new target and copies its saved Learning state. Store validates revisions and commits documents, catalog, Learning and the mapping together. Historical attempts and assessments retain their issued identities. |
+| Scan from a saved opening line | The user chose one saved route per repertoire and the absolute learner move deadline. Chess resolves the legal route and move number. Tempo assigns all probability at that position, independent of its frequency in whole games. Store binds published forecasts to the selected route. Old reports and pending requests preserve their initial-position semantics. |
+
+The partition preview found 241 Caro-Kann, 9 Slav, and 14 other routes.
+All retained Caro-Kann routes begin e4 c6. The schema-19 disposable rehearsal
+preserved 23 destination Learning states, the 270 corresponding game failure
+keys and the original attempt, assessment and receipt rows. The replay used
+the original preview token and left the same three books. SQLite integrity
+and foreign keys passed. The installed artifact must carry Store's guided
+repair lineage lookup before the split is applied to managed data.
