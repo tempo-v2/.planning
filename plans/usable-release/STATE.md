@@ -4975,3 +4975,18 @@ simplified supported product before dependent implementation.
   steps and zero full-scan steps across its two unrelated-state sizes.
 - T04 adopts canonical cleanup guidance and a current/missing/stale identity
   check. The current workspace guidance is preserved pending assembly adoption.
+- T05 released its dataset identity slice in [Store #38](https://github.com/tempo-v2/tempo-store/pull/38)
+  at `9abd554a06e72beb229f0acd2b1e5ef9fa2c5139`, stacked on Store #37.
+  Study, authoring, Games acceptance, administration and writer admission
+  capabilities remain open.
+- T07 adopted the identity read in the real Games caller in [Tempo #58](https://github.com/tempo-v2/tempo/pull/58)
+  at `366a2e0fed5f922c7d06a163c1bc0eb2da15efdb`. The compatible test assembly
+  uses those two commits and every other baseline pin and lock. The SQLite
+  authorizer allowed only the dataset identity read. Disposable Games Review
+  passed with poisoned Study attempt, Learning, run and policy records and
+  rejected a stale dataset. The new assertion failed on the prior installed
+  binary. The relevant repertoire suspension Rust contract also passed.
+- The runtime still uses the existing Study selector and status-driven Games
+  apply. No feature retirement has been verified. Continue with remaining T05
+  capability contracts and the T08 health/context consumer. Subsequent tasks
+  retain their packet prerequisites. No cleanup candidate was merged or installed.
