@@ -4768,3 +4768,58 @@ backup and prior registration are in `recovery-start-_52qr0g0`. The live
 schema-21 database kept its dataset, active attempt, Study records, new
 repertoires and three coverage starts. All 23 partition links matched the
 pre-upgrade receipt mapping. SQLite quick and foreign-key checks passed.
+
+## Clarity for simple capture drills
+
+| Behavior | Basis, owner, inputs, and lifetime |
+| --- | --- |
+| Withhold a game-generated, one-move hanging-material lesson when another legal capture independently keeps at least the same material gain | The approved capture-drill plan. Chess uses the issued board, proposed move, verified motif and existing checks for forcing replies and material retention. Engine ordering, card labels and game attribution do not decide ambiguity. A second defensible capture changes admission. A rename does not. Store persists the verdict for the current version through the existing qualification gate while retaining prior definitions, attempts, receipts and learning. |
+| Explain a revealed tactic on both correction paths | The approved capture-drill plan. Tempo projects the existing optional Chess explanation after a submitted miss or Show move in active Test or Practice, using the pinned version. Blind delivery still omits it. The desktop and phone render the same feedback. Replays preserve the command identity and accepted assessment. |
+
+### Candidate and verification
+
+| Component | Draft PR | Candidate commit |
+| --- | --- | --- |
+| tempo-chess | [PR](https://github.com/tempo-v2/tempo-chess/pull/35) | `e9272e26063a17d8382522a2b9bc5897c5d4eb1d` |
+| tempo-store | [PR](https://github.com/tempo-v2/tempo-store/pull/35) | `0d6593733790aec0e244124b7fe745e47d8cf4bd` |
+| tempo | [PR](https://github.com/tempo-v2/tempo/pull/57) | `204e7f0398ec12e5b7a9a0f22f4d4684526db624` |
+| tempo-ui | [PR](https://github.com/tempo-v2/tempo-ui/pull/58) | `cdc8c43d1ed5d3c9844e91e85ad8c8adba86aa31` |
+
+Assemble these heads with Types `a8e46c9b9442`, Study `ddf6839af0fa`,
+Queue `74e09a1ea1cc`, Learning `ee542cc1971f`, and the packaged Core 0.2.5
+from `71cbd2b1e4a3`. The workspace lock matches the conditional-repertoire
+coverage assembly (SHA-256 `ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c`).
+
+The installed schema-21 baseline was `workspace-e94d03d7261d1a57a771`.
+Its disposable copy migrated to schema 22 and withheld 20 cards, including
+the reported …Nxd4 / …Nxh4 position. The clear …Bxf2 example stayed
+eligible. The reported card issued before migration. After migration the
+same issued attempt could resume, and future Study and Practice issuance
+excluded the card. That scenario also exercised a retained request
+whose card needed a new qualification row. Bidirectional comparisons
+matched content and version history, game records, attempts, assessments,
+learning, receipts, saved reviews, pending request bindings and the active
+pointer. SQLite quick and foreign-key checks passed.
+
+Independent review traced new qualification, retained ownership and the
+consumer paths. The assembled locked Rust workspace passed 491 tests and
+doctests, with five engine or integration cases ignored by default. The
+rebased desktop and phone bundles built successfully, and all 148 UI
+tests passed. The Chess regression exercised the reported card, a unique
+capture, and an immediately defended alternative. The existing Chrome
+journey on the assembled candidate compared ordered commands and durable
+results with the original, renamed, and omitted display name. It also
+passed previous-release concession recovery and interrupted Next.
+
+On the installed baseline and disposable retained data, Chrome recovered a
+schema-21 Show move command both when it was accepted but its reply was
+lost and when the request never arrived. The candidate sent the original
+command bytes, completed with one Again, and displayed the optional clue.
+The accepted typed receipt was byte-identical in SQLite. The reprojected
+reply added only the optional clue. Packaged Phone WebKit displayed
+Hanging pawn after both Show move and a submitted miss in Practice,
+with identical saved learning and no scheduled assessment.
+
+Portable snapshot restore remains outside this upgrade. Its format does
+not carry game tactic request or qualification records. The candidate
+has been built and tested separately from the running installation.
