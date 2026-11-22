@@ -4467,3 +4467,56 @@ The installed binary matched the managed rebuild. Its bytes differed from
 the pre-install workspace executable, so phone HTTP and both packaged
 WebKit journeys were rerun successfully with the installed binary and UI
 on disposable data. Physical iPhone acceptance remains pending.
+
+## Winning exchange in Study feedback
+
+In the reported puzzle Black plays `...Qxd4 Qxd4 ...Nxd4` and wins the
+knight. The earlier explanation pointed out the pin on f2. The clue now
+explains that Black has at least two attackers on d4 and only White's queen
+can recapture. Study marks d4 and d1 on the existing board.
+
+| Behavior | Basis, owner, inputs and lifetime |
+| --- | --- |
+| Explain the material gain from the revealed capture | The reported puzzle establishes the teaching rule. Chess proves that the issued capture has one legal immediate defender, a legal second attacker in the original position, and a legal retake by that attacker leaving a settled material gain. The proof is limited to the exchange square and ordinary captures. The verified exchange outranks incidental patterns. |
+| Show the clue after a miss | Tempo uses the existing authorized correction for Test and Practice. The optional payload carries the target and defender from the issued position. The UI renders those facts on desktop and phone. Display names and source labels are independent of the proof. |
+| Recover an interrupted Answer | The typed receipt retains the grading result. On replay, Tempo projects the clue from the immutable issued definition. The prior UI accepts the reply and omits the unfamiliar optional clue. Clients without clue negotiation receive the original correction shape. |
+
+| Component | Verified candidate head | Pull request |
+| --- | --- | --- |
+| Chess | `f30b74fa5462271ac10d5dac39cfb9b63e811b94` | [Chess #31](https://github.com/tempo-v2/tempo-chess/pull/31) |
+| Tempo UI | `a906a8ac7d347eff3b2aad68c24894b9ec10c3ca` | [UI #55](https://github.com/tempo-v2/tempo-ui/pull/55) |
+
+The assembly used Tempo `7c5531031c5d`, Store `606456dda59c`, Types
+`a8e46c9b9442`, Study `ddf6839af0fa`, Queue `74e09a1ea1cc`, Learning
+`ee542cc1971f` and the packaged Core 0.2.5 from `71cbd2b1e4a3`.
+The debug executable SHA-256 was
+`f43f14942723af0a552bb04fc34927c235daf6571c6dd1e1518d7ef95d238989`.
+The packaged desktop and phone JS hashes were
+`6f86c868d916a8844b748ae38af4daa5bf34690f98135fd6273811badfef640c`
+and `5f11979fe25eb26ae365228fe36c453336f88d7797ed355fba5c9b17e8916b61`.
+
+- The full Chess suite passed 131 checks including doctests. The UI build,
+  148 UI tests and the architecture gate passed.
+- Chrome exercised the exact reported puzzle, with its display name present,
+  renamed and omitted. It checked identical ordered commands, receipts and
+  assessment and Learning effects, with wall-clock milliseconds normalized.
+  The second decision remained playable. Interrupted Next retried only Next.
+- Packaged Phone WebKit exercised the exact exchange in Daily Study and
+  Practice. Both decisions remained playable and only Test produced an
+  assessment.
+- Disposable copies of the registered schema-18 database reproduced the
+  exact puzzle under the prior installed binary and assets from
+  `workspace-ee43c26e1197cc490ed1`. Accepted-but-lost and never-delivered
+  Answers replayed with their original bytes and one durable assessment.
+  The accepted receipt stayed byte-for-byte identical. The previous UI
+  also accepted the candidate's response and finished the two decisions.
+  No live learning data was changed.
+- Independent Guardian review checked the published Chess and UI heads,
+  the actual disclosure and consumer path, and reran the focused Chess,
+  Chrome, WebKit, metadata and previous-release recovery checks.
+
+The first fresh Astra interface review found that the clue implied an exact
+attacker count and a broader material outcome than the proof establishes.
+The revised copy states the lower bound and limits the gain to the exchange
+square. The Chess API documentation and regression cases now describe the
+same scope. The revised component PRs are open.
