@@ -5263,3 +5263,30 @@ simplified supported product before dependent implementation.
   Practice expectations. Only the exact Settings and prior-binary checks
   above qualify this candidate so far; the paired review manifest remains
   at the broader schema-24 composition until the next admission.
+
+### Tactical retirement and durable issued Skip
+
+- [Tempo #79](https://github.com/tempo-v2/tempo/pull/79) `8d6e0a0` and
+  [UI #68](https://github.com/tempo-v2/tempo-ui/pull/68) `8b2b331` remove the
+  automatic tactical worker, tactical controls and Study presence heartbeat.
+  [Store #50](https://github.com/tempo-v2/tempo-store/pull/50) `c78a94f`
+  removes tactical enrollment from manual Games import. The schema-25
+  candidate passed eight diagnostics, private-phone HTTP, Games replay and
+  Chrome, both prior-binary Teach cases and six previous-release Chromium
+  recovery cases. A disposable copy of the full schema-22 archive kept its
+  authoritative tactical and Study rows through migration, startup, active
+  Resume, retired controls and manual import. The import still advanced an
+  obsolete report counter through SQL triggers. The candidate remains outside
+  the paired review manifest until schema 26 removes those triggers and the
+  explicit counter bump, with a fresh archive comparison. Authored-source
+  pairing previously reserved schema 26 and now owns schema 27.
+- [Store #51](https://github.com/tempo-v2/tempo-store/pull/51) `0c06729` and
+  [Tempo #80](https://github.com/tempo-v2/tempo/pull/80) `7bdf660` persist
+  an optional exact issued-work token and commit matching Skip deferrals with
+  the original receipt, without a plan or summary. 78 Store tests, three
+  doctests, 56 Tempo contracts and three real HTTP cases passed. The Skip
+  test seeds the future issuer's stored token, interrupts the deferral write
+  and proves rollback before a successful exact retry and replay. The other
+  two cases use the actual previous binary's Teach commands. Production
+  prepared issuance, replacement of legacy tokenless Skip and durable
+  Resume Skipped remain open. No managed install.
