@@ -5100,3 +5100,25 @@ simplified supported product before dependent implementation.
   all 54 application contracts and the disposable desktop/private-phone
   journey passed. The latter resumed the same guided activity with unreadable
   Learning and optional history bytes. Batch and Next adoption remain T17/T18/T21.
+
+### Exact combined review assembly
+
+- [Tempo #67](https://github.com/tempo-v2/tempo/pull/67) `4538e22560ae9b320c1dcb7aeebeb7483c6b883e`
+  and [UI #62](https://github.com/tempo-v2/tempo-ui/pull/62)
+  `5762692f33eccaf01a4ecc9777c662e82fbdd9b8` are the current review heads in
+  [the single assembly manifest](current-assembly.json). The backend contains
+  typed admission, fixture retirement, the later context checks, addressed
+  Resume and issued content, bounded ingress, and the shared guard. The UI
+  contains Games/Capture context, the shared guard and the saved-import fix.
+- The exact backend composition passed 54 application contracts, three
+  loopback HTTP cases, and four diagnostics cases. The exact UI passed all
+  159 tests and built desktop and phone assets. A disposable paired instance
+  served schema-23 context and byte-identical JavaScript from that build.
+  The saved import can retry the exact envelope while context is unavailable.
+  A known mismatch stays explicit, a failed delivery retains the original
+  envelope, and new imports require context.
+- The bounded ingress handles body and socket lifetimes ahead of the
+  application. PGN preparation, fair apply scheduling, legacy oversized
+  receipt recovery, prepared Next, independent Progress and projection-free
+  acceptance remain open. These checks qualify the listed review slices.
+  The installed baseline has not changed.

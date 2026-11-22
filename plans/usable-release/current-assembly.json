@@ -22,28 +22,28 @@
   },
   "review": {
     "components": {
-      "tempo": "4f58634de40f066967896df4929ed11fca889447",
-      "tempo-store": "0cbcd4b3b486149fe87cfa05f61c2b0cbfb2d565",
-      "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
+      "tempo": "4538e22560ae9b320c1dcb7aeebeb7483c6b883e",
+      "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
+      "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "1d75747031ff35959d3adf31719f8429e9d46270",
-      "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
-      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
-      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
-      "tempo-ui": "b9123489c8472fde03d4f2dad21a0884f4b3f27b",
-      "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93"
+      "tempo-queue": "9663d0cd6aa07b7932699b4d6d2c9d8a0b94a362",
+      "tempo-store": "c9efc50ad72065388e6a5ed4c77d50c9920c8433",
+      "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
+      "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
+      "tempo-ui": "5762692f33eccaf01a4ecc9777c662e82fbdd9b8"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
-    "cargo_lock": "plans/usable-release/workspace-remaining-audit.Cargo.lock",
+    "cargo_lock": "plans/usable-release/workspace-structural-cleanup.Cargo.lock",
     "workspace_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
-    "cargo_lock_sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c",
+    "cargo_lock_sha256": "6660888df18b72fbe2d82c1adbb12ba66bcd392ab010d2754a8e74e9b480dad0",
     "ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34",
     "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
     "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
     "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
-    "sqlite_schema": 22,
+    "sqlite_schema": 23,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Review assembly, not qualified for installation"
+    "qualification": "Combined review assembly. Scoped verification does not qualify installation."
   }
 }

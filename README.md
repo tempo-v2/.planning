@@ -61,12 +61,8 @@ Rust process or database. `cargo test -p tempo --test contracts` checks applicat
 composition. `node --test tempo/tests/ui_boundary.mjs` checks the real Rust/UI
 protocol after building `tempo`.
 
-The full qualification script is for the initial cross-repository contract and
-changes spanning its boundaries. It checks the dependency graph, negative
-architecture cases, workspace migration, Rust contracts/lints and warning-free documentation, UI behavior, and
-the actual stdio round trip. It does not qualify real PGN parsing, FSRS, SQLite
-constraints/durability, or browser rendering.
-
-The demo is process-local and uses known chess fixtures. Its JSON-line transport
-can also be inspected with `cargo run -p tempo -- stdio`. The normal next/answer
-path has no game-provider dependency.
+Run the current assembly verifier before qualifying a review build. The live
+boundary check uses managed HTTP with disposable SQLite. The original
+scaffold qualification belongs to its historical source profile. The current
+release gate is being assembled under T54; see the [review ledger](plans/usable-release/STATE.md)
+for checks already run against exact revisions.
