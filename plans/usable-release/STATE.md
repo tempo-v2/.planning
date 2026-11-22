@@ -4709,3 +4709,10 @@ additional write. All earlier attempts, assessments and receipts were
 present and unchanged. All three coverage starts survived, and SQLite
 quick check and foreign keys passed. The immediate pre-split backup is in
 `recovery-repertoire-split-7rrzhg5o`.
+
+#### Fresh interface review and corrections
+
+| Behavior | Basis, owner, inputs, independence and lifetime |
+| --- | --- |
+| Resolve a moved correction | The committed split maps an exact destination answer version to its source answer version and cutover time. Store owns this relation and resolves it alongside reset and miss boundaries. Receipt text and repertoire labels cannot affect it. Migrate the already installed split once, using the historical receipt format only for that migration. |
+| Commit a forecast edit | The forecast editor authorizes its addressed report for the selected starting line. A newly authorized but unaccepted Save requires that report and scope to remain current when Store commits. An accepted Save replays its immutable receipt. Keep the previous installed token protocol readable for commands already issued. |
