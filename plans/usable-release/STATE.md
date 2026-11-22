@@ -5517,3 +5517,22 @@ simplified supported product before dependent implementation.
   and three doctests. The production publisher and Progress/Study Status
   users remain open. This capability is outside the current schema-27
   paired pins. No installation.
+
+### Repertoire Reset retirement and schema-28 review
+
+- [Store #64](https://github.com/tempo-v2/tempo-store/pull/64) `a8abe6c`,
+  [Tempo #92](https://github.com/tempo-v2/tempo/pull/92) `c419ccb` and
+  [UI #73](https://github.com/tempo-v2/tempo-ui/pull/73) `a11cad2` are
+  the paired schema-28 review pins with Queue #20. The Reset writer and
+  current control are gone. Exact prior accepted reset returns its old
+  result by dataset, repertoire and command identity. Unaccepted Reset
+  returns terminal retirement. Historical boundaries remain readable
+  by their retained consumers.
+- The exact composition passed 95 Store tests, three doctests, focused
+  prior-choice and issued-definition Tempo contracts, and the previous
+  actually installed schema-22 binary plus candidate HTTP and desktop
+  Chrome recovery. Current UI had no Reset control, the original pending
+  replay left newer Learning and receipts unchanged, and wrong dataset,
+  changed identity and unaccepted requests remained explicit. Schema-28
+  summary persistence is present. Its actual publisher and screen
+  adoption remain open. No managed installation.

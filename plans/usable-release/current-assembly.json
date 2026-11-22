@@ -22,15 +22,15 @@
   },
   "review": {
     "components": {
-      "tempo": "4f3b347b51e5d0fccb82be085340b6036986b4a4",
+      "tempo": "c419ccbc3cbeea46d11bcdbcbc917471e15222b6",
       "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
       "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
       "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
-      "tempo-queue": "cf18f19cf6fe2892720e2882fa96033d20f522f1",
-      "tempo-store": "0dc9b4c54c000cf5228c4414542157e848585cfc",
+      "tempo-queue": "d4e591ebd7875a240297ea49ab692f7059c6c6fd",
+      "tempo-store": "a8abe6c27d32253d96897513605d40ba74c79b58",
       "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
       "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "bba81c5aba55e37d3b6113a542c8d4ee55b54e8f"
+      "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4"
     },
     "planning": "The clean checkout containing this manifest",
     "workspace_template": "workspace.template.toml",
@@ -41,9 +41,9 @@
     "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
     "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
     "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
-    "sqlite_schema": 27,
+    "sqlite_schema": 28,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Schema-27 combined review includes historical backfill retirement, authored PGN independence and context/static admission independent of foreground writes; no installation qualification"
+    "qualification": "Schema-28 combined review includes repertoire Reset retirement, exact old Reset replay and independent summary persistence; no installation qualification"
   }
 }
