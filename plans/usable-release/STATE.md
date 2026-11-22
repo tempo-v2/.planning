@@ -5393,3 +5393,14 @@ simplified supported product before dependent implementation.
   and private-phone WebKit recovered original signed saves from the
   previous installation. Saved coverage readers, Maia and Phone Build
   remain within later retirement scopes.
+- [Store #58](https://github.com/tempo-v2/tempo-store/pull/58) `843d022`
+  fences civil-day observation to the current dataset and its persisted
+  timezone. Observation attempted with a superseded timezone leaves the
+  basis unchanged. [Learning #12](https://github.com/tempo-v2/tempo-learning/pull/12)
+  `9658880` supplies ordinary saved FSRS eligibility independently of
+  obsolete Games-only obligations. The actual Store capture uses this
+  projection and preserves priority for exact current human correction.
+  The exact capability pair passed 28 Learning tests, 87 Store tests and
+  four doctests. Calendar observation has yet to be wired into the live
+  prepared-plan host, and capture still reports incomplete until the
+  actual invalidation producers are ready.
