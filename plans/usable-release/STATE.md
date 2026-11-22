@@ -4990,3 +4990,25 @@ simplified supported product before dependent implementation.
   apply. No feature retirement has been verified. Continue with remaining T05
   capability contracts and the T08 health/context consumer. Subsequent tasks
   retain their packet prerequisites. No cleanup candidate was merged or installed.
+
+### Active packet reservations
+
+- T08 installer draft `4359fc4fd89e6ff2dd96b91b9d2552c096a323d0` in
+  `cleanup/health-context` checks dataset/schema context readiness and the
+  registered running binary and UI independently of Study. Two disposable
+  endpoint tests passed. Do not publish or install this increment until the
+  real context handler and its consumer checks land. The HTTP file is held by T14.
+- T10 Chess producer `8783d59cb327c8c10eb3242f98a79dfa72863b7a` has three
+  passing normalization tests. Durable facts, offline conversion sequence and
+  actual import and Study adoption remain open. Do not close the finding while
+  selection still interprets provenance.
+- T11 Learning `64cab7f4f48ae24c3e1b7367d0be8c3790ad7136` passed 25 unit
+  tests and one doctest. The application retains the old Test caller until
+  T14 releases its submit-file lease. The separate Tempo draft `f6fcf42`
+  removes the completed personal-tactics backfill registration and implementation;
+  its retained manual-capture contract still needs the combined test. The legacy
+  corrective Games bridge is scheduled for deletion with its consumer.
+- T14 owns connected-run retirement across Tempo, Store and UI. Review found
+  live full-snapshot and obsolete UI branches requiring removal. T14 owns the
+  current sole heavy-test slot. The Store base for T14 is the exact companion
+  to Tempo #58, Store `9abd554a06e72beb229f0acd2b1e5ef9fa2c5139`.
