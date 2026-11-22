@@ -4837,3 +4837,24 @@ also checks a position where the competing capture retains less.
 
 The corrected Chess candidate is `746d484093ea0d8b129c7d6d5f34b653212754ba`.
 The application, Store and UI candidate heads above are unchanged.
+
+The initial review also reproduced two boundary failures. A verified
+longer line could resolve to an older quarantined one-move game card,
+then reactivate that card. A same-day Study progress stamp could remain
+valid after the migration changed eligibility. Chess now exposes the
+qualified game proposal as a distinct value. Its planner checks the
+resolved definition and can return no training plan. Tempo still records
+the finding and preserves any existing request binding. Independent
+authored content and allowable longer lessons retain their existing
+resolution. Chess re-proves older standalone moves whose stored motif is
+absent, and a mating capture can satisfy the same material-retention floor.
+
+Store uses the same revision and evidence invalidation for migration and
+normal qualification publication. A migration that withholds cards bumps
+the Study revision once in the same transaction. It preserves the active
+attempt, per-attempt revisions, content versions and existing receipts.
+
+The revised runtime heads are Chess `e17b0f2697702c4d1a45c6da0069164c1857d9c1`,
+Store `b5102b7612787dcc9e2362c73f90a85bb2c9223f`, Tempo
+`9656c2137f53dc81f3030a17e3b5d89fbec916bd`, and UI
+`cdc8c43d1ed5d3c9844e91e85ad8c8adba86aa31`.
