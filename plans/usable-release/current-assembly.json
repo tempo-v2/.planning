@@ -1,0 +1,49 @@
+{
+  "role": "One source manifest for the current review assembly and the separate running baseline",
+  "components": {
+    "tempo": "33f8d119ab31d7bea4f84310bfd62a3a02494376",
+    "tempo-store": "065b626f315a7145a7d64119a59c6c93e817df6e",
+    "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
+    "tempo-learning": "ee542cc1971f40de2de7a80edad9f51f2f6eecdc",
+    "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
+    "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+    "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+    "tempo-ui": "82c6f6eb3e58104e0f81df0767195aa4353bc909",
+    "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
+    ".planning": "96e73ecf483bc10b20ad5434f109e0e906c6336c"
+  },
+  "installed": {
+    "checkpoint": "workspace-e1c18810c03bd3ad05db",
+    "sqlite_schema": 22,
+    "backend_sha256": "c5c7e27765ee4cfee61010c03012a10297f87e5ae92eb8b5fe5687004eea2edf",
+    "disk_workspace_manifest_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+    "disk_cargo_lock_sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c",
+    "disk_ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34"
+  },
+  "review": {
+    "components": {
+      "tempo": "5b541678f72dc2e5d5940fcdeba1ff5dd1fbd4b5",
+      "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
+      "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
+      "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
+      "tempo-queue": "d4e591ebd7875a240297ea49ab692f7059c6c6fd",
+      "tempo-store": "ba53882093724a1299a35aaa869edf39d70ddf84",
+      "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
+      "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
+      "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4"
+    },
+    "planning": "The clean checkout containing this manifest",
+    "workspace_template": "workspace.template.toml",
+    "cargo_lock": "plans/usable-release/workspace-structural-cleanup.Cargo.lock",
+    "workspace_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+    "cargo_lock_sha256": "6660888df18b72fbe2d82c1adbb12ba66bcd392ab010d2754a8e74e9b480dad0",
+    "ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34",
+    "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
+    "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
+    "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
+    "sqlite_schema": 28,
+    "study_wire": 5,
+    "content_wire": 4,
+    "qualification": "Schema-28 combined review includes Reset retirement, independent context and summary storage, and Settings using the application write owner; no installation qualification"
+  }
+}

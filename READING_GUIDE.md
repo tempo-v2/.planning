@@ -142,10 +142,10 @@ for the existing command. Cross-component Rust and live Rust/UI tests remain
 separate because they describe interactions spanning components.
 
 Build the Rust reading surface with `cargo doc --workspace --no-deps --open`.
-The full qualification command is `python3 .planning/scripts/qualify_scaffold.py .`;
-it runs contract tests, compile examples, formatting, strict Clippy, warning-free
-rustdoc, dependency checks, UI scenarios, and the live Rust/UI boundary. Routine
-component changes can use the relevant package/scenario instead.
+Use the [workspace instructions](README.md#workspace-setup) to verify the pinned
+review assembly before a build. Use the affected package tests and the managed
+HTTP boundary fixture for current behavior. The scaffold qualification script
+belongs to its historical source profile.
 
 ## Keep this shape when adding code
 

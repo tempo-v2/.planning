@@ -4942,3 +4942,608 @@ checked tables matched the stopped-time backup in both directions,
 including content, Learning, assessments, receipts, games, and saved
 reviews. SQLite quick check and foreign-key checks passed. The backup
 and previous registration are in `recovery-start-o8ik55sn`.
+
+## Structural cleanup execution
+
+The cleanup starts from the currently installed Store #36 assembly and
+current published integration revisions in [current assembly](current-assembly.json).
+Unrelated implementation is paused for this run. No existing checkout was reset.
+The [operation contract](structural-cleanup/operation-contract.md) records the
+simplified supported product before dependent implementation.
+
+- T01 checked the registered listener binary and SHA-256, the served desktop index
+  against the installed artifact, and all ten live GitHub main refs. The historical
+  audit probe inspected earlier local checkouts and skipped unverified query
+  extraction. Its result does not repeat or invalidate Store #36.
+- A fresh read-only SQLite online backup from the running schema-22 dataset passed
+  integrity and foreign-key checks. The full backup is held locally with restricted
+  permissions. Portable export is outside recovery.
+- T02 owns the current operation/consumer census. T06 owns test-only SQLite probes.
+  Coordinator retains schema sequence, public interfaces, application composition,
+  locks and manifests. One heavy test run may execute at a time.
+
+- T02 census covers 45 routes, 10 CLI modes, 39 command variants, 16 startup and
+  worker paths, and four receipt families. Current product dispositions accompany
+  the census. T13, T34 and T37 own external-consumer and previous-release lifetime
+  investigations before removal.
+- T03 review covered managed phone, allowance authority, authored-frontier and
+  correction semantics, replay identity and operation ceilings. The contract
+  records all decisions before T04/T05 and downstream implementation.
+- T06 test capability released for review in [Store #37](https://github.com/tempo-v2/tempo-store/pull/37)
+  at `cca526807e9f32353cf562fd8e710723003924c3`. The author and coordinator each ran
+  all 20 focused tactical tests. The work regression recorded identical index
+  steps and zero full-scan steps across its two unrelated-state sizes.
+- T04 adopts canonical cleanup guidance and a current/missing/stale identity
+  check. The current workspace guidance is preserved pending assembly adoption.
+- T05 released its dataset identity slice in [Store #38](https://github.com/tempo-v2/tempo-store/pull/38)
+  at `9abd554a06e72beb229f0acd2b1e5ef9fa2c5139`, stacked on Store #37.
+  Study, authoring, Games acceptance, administration and writer admission
+  capabilities remain open.
+- T07 adopted the identity read in the real Games caller in [Tempo #58](https://github.com/tempo-v2/tempo/pull/58)
+  at `366a2e0fed5f922c7d06a163c1bc0eb2da15efdb`. The compatible test assembly
+  uses those two commits and every other baseline pin and lock. The SQLite
+  authorizer allowed only the dataset identity read. Disposable Games Review
+  passed with poisoned Study attempt, Learning, run and policy records and
+  rejected a stale dataset. The new assertion failed on the prior installed
+  binary. The relevant repertoire suspension Rust contract also passed.
+- The runtime still uses the existing Study selector and status-driven Games
+  apply. No feature retirement has been verified. Continue with remaining T05
+  capability contracts and the T08 health/context consumer. Subsequent tasks
+  retain their packet prerequisites. No cleanup candidate was merged or installed.
+
+### Context and retained Learning
+
+- T08 adopted context on desktop and authenticated phone and through managed
+  readiness in [Tempo #60](https://github.com/tempo-v2/tempo/pull/60)
+  `726ef278095a0c43f00f285c1101c8d9b55a45ae` and
+  [Store #40](https://github.com/tempo-v2/tempo-store/pull/40)
+  `0cbcd4b3b486149fe87cfa05f61c2b0cbfb2d565`. The HTTP route passed while Study
+  policy was unreadable, rejected the wrong phone owner, and reported the actual
+  schema. The Store identity check and two disposable installer cases passed.
+  T46 still owns independent cold startup and T09 owns UI consumption.
+- T11 retained Test uses the configured lifecycle in Tempo #60 and
+  [Learning #10](https://github.com/tempo-v2/tempo-learning/pull/10)
+  `1d75747031ff35959d3adf31719f8429e9d46270`. All 61 application contracts,
+  25 Learning unit tests and one doctest passed on the combined assembly.
+  The completed personal-tactics backfill command was removed. The existing
+  fixture bridge remains until T13 eliminates its callers and the legacy Games
+  bridge is retired with its consumer. Persisted shapes are unchanged.
+- T13 removed live stdio registration and its demo in
+  [Tempo #61](https://github.com/tempo-v2/tempo/pull/61)
+  `9185321f4cf29b006086ba8c29ee16c8e4578b41`. The existing boundary test now
+  exercises real HTTP and SQLite. Four checks passed, including rejection of
+  stdio and recovery of an exact answer with one durable grade. Library and
+  Queue/Study fixture removal remain open.
+- T10 published offline ingress, current-row migration and Chess vocabulary in
+  [Tempo #63](https://github.com/tempo-v2/tempo/pull/63)
+  `df6f5edfec6d3eea227a4cba9fd4774b8c41e3af`,
+  [Store #41](https://github.com/tempo-v2/tempo-store/pull/41)
+  `ff5e159d7e8d9eff6d3a3b20cd0225475a037fd5` and
+  [Chess #36](https://github.com/tempo-v2/tempo-chess/pull/36)
+  `df5304f75c5f1d92b1c1538c616d53fb2f9e5505`. Rebuilt all Rust dependencies
+  in a fresh target with Learning `1d757470`. All 69 scoped Rust checks and
+  five converter tests passed. The disposable schema upgrade preserves issued
+  attempts, historical content, Learning and receipts byte for byte and rolls
+  back malformed required rows. Actual Study admission now uses only typed
+  membership for new tactics and stable target order in
+  [Tempo #64](https://github.com/tempo-v2/tempo/pull/64) `c419f90593a89aef017d7ec9f223fc0d4ef9bc53`.
+  The former pack parsing now runs only for the schema-1 offline import report.
+  Due-capture priority remains for T17/T21 to remove.
+- T09 published shell, Capture and Games context in
+  [UI #60](https://github.com/tempo-v2/tempo-ui/pull/60)
+  `4d87636c24f6b5daf72d48562f4386cd667da977`. All 157 UI tests passed.
+  Mounted evidence protects exact pending payloads and confirms retained plain
+  replay, manual import and library browsing without Study or Repertoire
+  identity calls. Remaining shell/controller scoping and optional polling
+  retirement are open.
+- T50 moved the installation guard to the one Tempo tooling owner with
+  [Tempo #62](https://github.com/tempo-v2/tempo/pull/62)
+  `4f58634de40f066967896df4929ed11fca889447` and
+  [UI #61](https://github.com/tempo-v2/tempo-ui/pull/61)
+  `b9123489c8472fde03d4f2dad21a0884f4b3f27b`. All five protection tests
+  passed and a disposable desktop/phone build used the shared guard.
+- T51 current setup and verification use [one manifest](current-assembly.json).
+  A fresh temporary workspace fetched all nine published component pins,
+  verified both locks, packaged Core and canonical guidance, and resolved all
+  seven Rust workspace packages with the locked manifest. The same verifier
+  rejected an intentionally stale guidance copy and passed after restoring it.
+  Its reviewed assembly is distinct from the installed baseline and does not
+  qualify installation. T54 still owns the normal release gate.
+- The same Tempo #64 candidate removed the standalone fixture application,
+  with [Queue #15](https://github.com/tempo-v2/tempo-queue/pull/15) `f53fbbb730e8a510223e59303f3f7a69796e774a`,
+  [Study #4](https://github.com/tempo-v2/tempo-study/pull/4) `9756fce36b373af24b15cb6bf3ad171052ac5f5d`
+  and [Chess #37](https://github.com/tempo-v2/tempo-chess/pull/37) `33958d575d6949fdd5fef77065f02db0165f94d7`.
+  The exact compatible assembly used Store `ff5e159`, Learning `1d75747`,
+  Types `a8e46c9` and the existing lock. It passed 54 Tempo contracts,
+  356 library tests and the disposable desktop/private-phone context journey.
+  Five existing real-engine tests remained ignored and no engine or live
+  installation claim follows from those checks.
+- T42 has an unpublished
+  cap draft `916d080`. The current HTTP dependency may finish reading a
+  body during request cleanup, so a declared byte limit alone cannot protect
+  the command owner. T42 remains open for deadline-safe ingress and evidence.
+  Heavy tests remain serial.
+
+### Connected-run retirement
+
+- T14 removed connected-run issuance and opt-in handling across
+  [Tempo #59](https://github.com/tempo-v2/tempo/pull/59) `4338b3718fae736749a4ffc927d14c7b543b69d6`,
+  [Store #39](https://github.com/tempo-v2/tempo-store/pull/39) `b792843aaf8dd22b3b4efee44bfd83fc41501eac`
+  and [UI #59](https://github.com/tempo-v2/tempo-ui/pull/59) `279a22c0fac78af77bec0616a0b26df6405f9f91`.
+  Two Tempo cases, a real SQLite malformed-row isolation case and 149 UI tests
+  passed. Disposable HTTP verified equivalent issuance with both old-header
+  variants (excluding generated IDs), an unchanged retained active Test and
+  previous installed warm-up receipt replay with zero added effects.
+  Archive rows/encodings remain inert. T34 still owns full prior-release replay,
+  T38 legacy reset cleanup, and T27/T57 final unreachability of retired helpers.
+  The reviewed drafts are published and the managed installation is unchanged.
+
+### Addressed Study and plan preparation
+
+- Explicit Resume uses the addressed compatibility capability in
+  [Tempo #65](https://github.com/tempo-v2/tempo/pull/65) `ca0da162d153e156efd58df57c7cda822066ef20`
+  and [Store #42](https://github.com/tempo-v2/tempo-store/pull/42)
+  `6a130fa8f9149915835712b430d8b15574048dc6`. A real SQLite authorizer
+  verified the addressed read without Learning or assessment access. All
+  54 application contracts passed. The disposable HTTP consumer resumed the
+  same issued attempt while Learning was unreadable.
+- T15 owns the pure work-token, basis and update types. T16 is designing
+  schema 24 for those exact types and the captured epoch fence. T42 is
+  replacing the request dispatcher ingress so the app write owner will receive
+  prepared bodies, independent of socket cleanup. These slices are active and
+  have no installation result.
+- T12 compact Study content and exact issued definition provider are published
+  in [Store #43](https://github.com/tempo-v2/tempo-store/pull/43)
+  `c9efc50ad72065388e6a5ed4c77d50c9920c8433` and adopted for explicit Resume
+  in [Tempo #66](https://github.com/tempo-v2/tempo/pull/66)
+  `5cd0269d0635637de97d9c2680ada9690e87817e`. Three SQLite projection tests,
+  all 54 application contracts and the disposable desktop/private-phone
+  journey passed. The latter resumed the same guided activity with unreadable
+  Learning and optional history bytes. Batch and Next adoption remain T17/T18/T21.
+
+### Exact combined review assembly
+
+- [Tempo #67](https://github.com/tempo-v2/tempo/pull/67) `4538e22560ae9b320c1dcb7aeebeb7483c6b883e`
+  and [UI #62](https://github.com/tempo-v2/tempo-ui/pull/62)
+  `42336036c59595b72f4f89e2ba0c438357c8171f` are the current review heads in
+  [the single assembly manifest](current-assembly.json). The backend contains
+  typed admission, fixture retirement, the later context checks, addressed
+  Resume and issued content, bounded ingress, and the shared guard. The UI
+  contains Games/Capture context, the shared guard and the saved-import fix.
+- The exact backend composition passed 54 application contracts, three
+  loopback HTTP cases, and four diagnostics cases. The exact UI passed all
+  159 tests and built desktop and phone assets. A disposable paired instance
+  served schema-23 context and byte-identical JavaScript from that build.
+  The saved import can retry the exact envelope while context is unavailable.
+  A known mismatch stays explicit, a failed delivery retains the original
+  envelope, and new imports require context.
+- The bounded ingress handles body and socket lifetimes ahead of the
+  application. PGN preparation, fair apply scheduling, legacy oversized
+  receipt recovery, prepared Next, independent Progress and projection-free
+  acceptance remain open. These checks qualify the listed review slices.
+  The installed baseline has not changed.
+- [Types #2](https://github.com/tempo-v2/tempo-types/pull/2) and
+  [Queue #16](https://github.com/tempo-v2/tempo-queue/pull/16) release the
+  work-token and plan records used in this review assembly. Their 23 unit tests
+  and one doctest passed. [Queue #17](https://github.com/tempo-v2/tempo-queue/pull/17)
+  and [Store #44](https://github.com/tempo-v2/tempo-store/pull/44) subsequently
+  released the pure stable builder and schema-24 staging capability. They
+  passed their own suites and remain outside the schema-23 combined pins
+  pending coherent-capture and runtime adoption.
+- T13 deletion audit found the old `init-practice` alias still registered.
+  Its bounded removal is assigned. T39 read-only report and worker retirement
+  is assigned as a deletion slice, with shared tactical paths and persisted
+  receipt compatibility kept in their owning packets.
+
+### Schema-24 review successor
+
+- [Tempo #68](https://github.com/tempo-v2/tempo/pull/68) and
+  [UI #63](https://github.com/tempo-v2/tempo-ui/pull/63) removed the personal
+  tactics report worker and UI. Both old endpoints return explicit retirement
+  without dispatching Store work. Those revisions also removed the old
+  initializer alias; the current fixture proves it creates no database.
+  Retained Study, context, Games and private-phone checks passed. Report-only
+  maintenance and other retired tactical workers remain separate.
+- [Queue #18](https://github.com/tempo-v2/tempo-queue/pull/18) `0363fcb` and
+  [Tempo #69](https://github.com/tempo-v2/tempo/pull/69) `16c56ed` remove the
+  rotating tactic ranker. Only the offline import report retains legacy pack
+  fields. Exact combined schema-24 testing passed 14 Queue tests, four
+  offline importer tests, 55 Tempo contracts and one phone HTTP case.
+- [Store #45](https://github.com/tempo-v2/tempo-store/pull/45) `c35a242`
+  writes versioned Study receipts and reads the exact legacy form. All 72
+  Store tests and three doctests passed. [Tempo #70](https://github.com/tempo-v2/tempo/pull/70)
+  `12611b9` exercised accepted and never-delivered Teach against the actual
+  previous installed backend and a disposable database. Valid retries worked
+  without a plan or summary. The original accepted receipt stayed byte-identical;
+  the previously unsent command accepted once in the new form. The full
+  previous-release browser matrix and T20 acceptance are open.
+- [Tempo #71](https://github.com/tempo-v2/tempo/pull/71) `0dfaf8b` and
+  [UI #64](https://github.com/tempo-v2/tempo-ui/pull/64) `8c2fc5b`
+  are the current combined review successors. They remove the interactive
+  position-evidence worker, panels and requests. Five runtime diagnostics and
+  all 155 UI tests passed. The disposable Chrome flow exercised actual game
+  import, replay, repertoire authoring and mobile resume with zero retired
+  endpoint calls. An unused private Stockfish helper remains for its retirement
+  owner. None of the cleanup has been installed.
+- [Store #46](https://github.com/tempo-v2/tempo-store/pull/46) `2861ec4`
+  passed three coherent-capture tests, 72 Store unit tests and three doctests,
+  including a second-connection WAL race. This capability remains separately
+  staged. It explicitly reports incomplete until durable day authority is
+  supplied by T19/T20. Prepared Next, independent Progress and production
+  acceptance adoption remain open.
+- [Tempo #72](https://github.com/tempo-v2/tempo/pull/72)
+  `2ddd462be66b1feec7237b28c7536a718697e686` adopts addressed replay from
+  [Store #47](https://github.com/tempo-v2/tempo-store/pull/47)
+  `8864597a11070bfb7842818eb39cddc97b01b030` for Answer, Give Up, Concede,
+  Acknowledge, Skip and Abandon. The active dataset fences replay, and new
+  work rechecks receipts against concurrent acceptance. All 55 Tempo
+  contracts and two actual prior-binary Teach HTTP cases passed on these
+  exact heads. Accepted replay succeeded with unreadable Learning. Dataset
+  mismatch stayed explicit, and never-delivered Teach accepted once with an
+  absent plan and summary. The current paired UI manifest remains pinned
+  to the last verified composition. Full prior-release recovery,
+  projection-independent new acceptance and installation remain open.
+
+### Addressed replay and standalone gap retirement assembly
+
+- [Tempo #74](https://github.com/tempo-v2/tempo/pull/74) `b71d9150` includes
+  addressed Study receipt replay and retires the standalone gap-analysis job.
+  [UI #65](https://github.com/tempo-v2/tempo-ui/pull/65) `d1d6541` removes its
+  real Games consumers. Both former HTTP routes return typed retirement.
+  Six runtime diagnostics, the phone route/owner check, all 154 UI tests and
+  a real Chrome flow passed. Chrome verified manual reply, navigation and
+  exact Save recovery after a lost accepted response with no gap-job call.
+  Coverage continuation and tactical workers remain separate.
+- [Tempo #75](https://github.com/tempo-v2/tempo/pull/75) `447c91a`, UI #65 and
+  Store #47 are current in the single manifest. Tempo #75 removes the
+  one-off game-capture origins and Study lead-in backfills and black
+  repertoire split. The former commands return retirement before touching a
+  database. This exact successor passed 56 Tempo contracts, six diagnostics,
+  two previous-binary Teach HTTP recovery cases, one private-phone HTTP case,
+  and the same actual Chrome Save journey with unchanged UI artifacts.
+  Repertoire Reset remains open.
+- Separately staged schema-25 authority and retained tactics Settings CAS
+  are published in [Store #48](https://github.com/tempo-v2/tempo-store/pull/48)
+  `971ec4d` and [Tempo #73](https://github.com/tempo-v2/tempo/pull/73)
+  `8f7bafa`. Tests are scoped to the equivalent pre-rebase patches
+  Store `f73d4da` and Tempo `89d4e58`: 77 Store tests, three doctests and
+  the actual Settings handler passed. The broader Tempo library run passed
+  108 tests, ignored five and hit three process-permission failures in
+  engine cleanup. The rebased heads await exact combined checks. Durable day
+  state is present, but capture remains incomplete until the effective
+  profile and current acceptance and issuance producers adopt it. No
+  cleanup artifact has been installed.
+
+### Manual detector retirement and atomic first Teach
+
+- [Tempo #76](https://github.com/tempo-v2/tempo/pull/76) `b97df13` and
+  [UI #66](https://github.com/tempo-v2/tempo-ui/pull/66) `3ab86a4` are the
+  schema-24 review successor in the single manifest. The manual Games detector
+  and panel are gone. Three former routes return typed retirement without
+  dispatching detector, application or SQLite work. Both builds, 151 UI tests,
+  four shared detector tests, seven runtime diagnostics, private-phone HTTP
+  and Chrome Games replay and authoring passed. A normal manual tactic
+  Preview and exact Save retry also passed. Two older broad suites still
+  expect the retired position-evidence route or an input above the existing
+  2 MiB cap. Neither suite qualifies its old expectation. Automatic tactical
+  jobs, Study presence, coverage continuation and engines remain open.
+- [Store #49](https://github.com/tempo-v2/tempo-store/pull/49) `7bb210c`
+  adopts first-Teach authority in the normal acceptance transaction. It
+  records an applied introduction on the acceptance day, atomically with
+  the attempt, Learning and receipt. It writes a dirty projection state
+  even without a plan or summary. [Tempo #77](https://github.com/tempo-v2/tempo/pull/77)
+  `86cca91` exercises that exact backend pair using commands originally
+  issued by the actual previous binary. An accepted command replays
+  unchanged. A database trigger failure on spend rolls back receipt,
+  Learning and attempt, and the original previously unsent command
+  then accepts once. Both HTTP cases, 77 Store tests and three doctests
+  passed. The schema-25 pair remains separate from the current UI pins;
+  Skip, assessment/correction and further acceptance effects remain open.
+- The current schema-24 pins supersede the detector-only heads above.
+  [Tempo #76](https://github.com/tempo-v2/tempo/pull/76) `bd2fca6` and
+  [UI #66](https://github.com/tempo-v2/tempo-ui/pull/66) `ec44e83` retire fresh
+  Practice and Learn More admission while keeping exact accepted
+  allowance replay. The retained recovery owner kept the saved command
+  and resolved the original effect. An unaccepted previous request was
+  rejected without a new durable effect. The exact composition passed
+  56 Tempo contracts, 151 UI tests and the UI build, three loopback HTTP
+  checks and six Chromium journeys using the prior installed app and
+  backend on disposable data. Legacy issued Practice and its old
+  immediate-recall source still require retirement. No managed install.
+- The separate schema-25 Settings candidate is published as
+  [Tempo #78](https://github.com/tempo-v2/tempo/pull/78) `3d58b63` and
+  [UI #67](https://github.com/tempo-v2/tempo-ui/pull/67) `80e481e`, tested
+  against Store `7bb210c` and Queue `0363fcb`. The real Settings handler
+  passed both focused tests. The locked build, real Chrome Settings journey
+  and both previous-binary Teach HTTP cases passed. Desktop Settings is
+  the shared owner of opening and tactic caps. The browser observed a cap
+  change in live Next without restart, preserved unrelated profile data,
+  and showed the retired CLI directing the user to Settings. The older
+  Phone Study and Saved Reviews Playwright fixtures still carry retired
+  Practice expectations. Only the exact Settings and prior-binary checks
+  above qualify this candidate so far; the paired review manifest remains
+  at the broader schema-24 composition until the next admission.
+
+### Tactical retirement and durable issued Skip
+
+- [Tempo #79](https://github.com/tempo-v2/tempo/pull/79) `8d6e0a0` and
+  [UI #68](https://github.com/tempo-v2/tempo-ui/pull/68) `8b2b331` remove the
+  automatic tactical worker, tactical controls and Study presence heartbeat.
+  [Store #50](https://github.com/tempo-v2/tempo-store/pull/50) `c78a94f`
+  removes tactical enrollment from manual Games import. The schema-25
+  candidate passed eight diagnostics, private-phone HTTP, Games replay and
+  Chrome, both prior-binary Teach cases and six previous-release Chromium
+  recovery cases. A disposable copy of the full schema-22 archive kept its
+  authoritative tactical and Study rows through migration, startup, active
+  Resume, retired controls and manual import. The import still advanced an
+  obsolete report counter through SQL triggers. The candidate remains outside
+  the paired review manifest until schema 26 removes those triggers and the
+  explicit counter bump, with a fresh archive comparison. Authored-source
+  pairing previously reserved schema 26 and now owns schema 27.
+- [Store #51](https://github.com/tempo-v2/tempo-store/pull/51) `0c06729` and
+  [Tempo #80](https://github.com/tempo-v2/tempo/pull/80) `7bdf660` persist
+  an optional exact issued-work token and commit matching Skip deferrals with
+  the original receipt, without a plan or summary. 78 Store tests, three
+  doctests, 56 Tempo contracts and three real HTTP cases passed. The Skip
+  test seeds the future issuer's stored token, interrupts the deferral write
+  and proves rollback before a successful exact retry and replay. The other
+  two cases use the actual previous binary's Teach commands. Production
+  prepared issuance, replacement of legacy tokenless Skip and durable
+  Resume Skipped remain open. No managed install.
+- Schema 26 closes the tactical report write residue. [Store #52](https://github.com/tempo-v2/tempo-store/pull/52)
+  `62ffb46` removes all 18 obsolete triggers and the last explicit counter
+  bump; their historical tables and rows remain. [Tempo #81](https://github.com/tempo-v2/tempo/pull/81)
+  `f28d955`, Store #52, UI #68 and unchanged Queue #18 are now in the single
+  review manifest. The exact binary passed 79 Store tests, eight diagnostics
+  including manual Capture, real Games replay and three acceptance/recovery
+  HTTP cases. The disposable schema-22 archive reached schema 26, passed SQLite
+  quick and foreign-key checks and preserved all 11 tactical tables through
+  startup, active Resume, retired controls and a valid new manual import.
+  The import retried its identical body once after a typed busy response and
+  accepted once. Study authority rows stayed unchanged through startup and
+  Resume. Gap-line, coverage and provider retirement remain separate.
+
+### Portable retirement and exact human correction
+
+- [Tempo #82](https://github.com/tempo-v2/tempo/pull/82) `841fc17` removes
+  the public portable JSON export/restore API and codec. Recovery uses full
+  SQLite archives. The exact predecessor build passed 134 Tempo tests,
+  three HTTP checks and six prior-installation browser recovery journeys.
+  The executable rejected four legacy portable command spellings without
+  creating files. Unused private Store/Learning helpers and historical
+  compatibility remain separately scoped.
+- The current schema-26 manifest moves to [Tempo #83](https://github.com/tempo-v2/tempo/pull/83)
+  `43bb449`, [Store #53](https://github.com/tempo-v2/tempo-store/pull/53)
+  `274a486`, and [Learning #11](https://github.com/tempo-v2/tempo-learning/pull/11)
+  `b198c96`; UI #68 is unchanged. The exact candidate passed 27 Learning,
+  79 Store and 52 Tempo contract tests, four doctests, five real HTTP cases
+  and six actual prior-installation Chromium journeys. The two correction
+  cases seed an exact prepared Test token and exercise a real legal wrong
+  move or Give Up. After restart the original attempt completes the
+  persisted correction with one assessment and no change to the already
+  accepted schedule. The current UI #68 passed 133 units and built both
+  artifacts on the previous matching UI revision. Its exact assets were
+  reused in the six current browser journeys.
+- Prepared issuance has yet to create those tokens in normal runtime.
+  Durable Resume Skipped, summary publication/read adoption and the old
+  fresh-selector deletion remain open. These changes are uninstalled.
+
+### Stockfish gap-line retirement and coherent capture
+
+- [Tempo #84](https://github.com/tempo-v2/tempo/pull/84) `7ab7368` and
+  [UI #69](https://github.com/tempo-v2/tempo-ui/pull/69) `1e96728` are
+  the current schema-26 paired review pins. The gap-line start/status
+  routes and desktop/phone callers are removed. There is no remaining
+  Stockfish production route, implementation or selector. Nine runtime
+  diagnostics, private-phone HTTP, 133 UI tests and both built artifacts
+  passed. The same current UI sources were used for a Chrome manual-reply
+  journey. Disposable previous-installation Chrome and private iPhone WebKit
+  verified exact original signed whole-line Save after upgrade. The phone
+  exercise includes accepted-lost and never-delivered cases; the desktop
+  exercise includes the accepted-lost case. No preview request was needed
+  for the saved command. General coverage, its providers, single reply and
+  Phone Build remain within their own retirement scopes.
+- [Store #54](https://github.com/tempo-v2/tempo-store/pull/54) `50c612b`
+  captures only the saved calendar, opening and tactic caps, and effective
+  themes, plus exact day deferrals above the accepted cutoff, in the same
+  deferred read as the plan basis. The capture distinguishes missing and
+  malformed policy from a valid empty work set. All 82 Store tests and
+  three doctests passed. Calendar fencing and active issued identity remain
+  necessary for a complete capture. This Store-only capability is separately
+  tested until the paired consumer successor admits it. No installation.
+- [Tempo #85](https://github.com/tempo-v2/tempo/pull/85) `1642eb7` and
+  [Store #55](https://github.com/tempo-v2/tempo-store/pull/55) `7f6e39e`
+  advance the current paired manifest with unchanged UI #69. Normal
+  HTTP Next and the internal issuer check active retained attempts first
+  through the addressed Resume path. Real HTTP returns the same issued
+  work with unreadable Learning and policy. Missing and incompatible
+  identities produce explicit errors without writes. The scoped legacy
+  Practice closure adds no grade and still replays an accepted original
+  answer. The exact pair passed 55 Tempo contracts, four HTTP cases and
+  the real SQLite Store read probe. Fresh Next still uses the transitional
+  selector pending the ready-plan consumer. No installation.
+- [Store #56](https://github.com/tempo-v2/tempo-store/pull/56) `30b65a0`
+  releases durable Resume Skipped on the separate capability branch.
+  It addresses dataset, Study day and submission identity. Acceptance
+  records that day's cutoff and versioned receipt in one transaction.
+  Exact replay after restart and rollover leaves a later deferral intact.
+  The real SQLite test injects a late receipt failure and checks rollback,
+  then exercises stale day, wrong dataset, changed payload and an
+  unsupported stored receipt version. All 83 Store tests and three
+  doctests passed. The actual UI has yet to adopt the addressed command
+  and separate acceptance from Next. The paired manifest remains on
+  Store #55 until that capability is admitted. No installation.
+- [Store #57](https://github.com/tempo-v2/tempo-store/pull/57) `bb3eb2a`
+  adds the active attempt and its exact issued-work token to coherent
+  capture. A prepared human miss binds its correction from that attempt's
+  immutable assessment. A newer Learning revision, rollover and restart
+  leave the captured binding unchanged. Legacy tokenless active work
+  remains explicit. All 85 Store tests and three doctests passed. The
+  production capture still reports incomplete and the current paired
+  manifest remains on Store #55. The calendar fence, retained eligibility
+  and producer invalidations are still needed before issuing prepared work.
+- [Tempo #86](https://github.com/tempo-v2/tempo/pull/86) `715a1d8` and
+  [UI #70](https://github.com/tempo-v2/tempo-ui/pull/70) `fc2d657` are
+  current paired pins. They remove coverage scan jobs, refresh polling
+  for those jobs and the last Lichess gap Explorer caller. Former routes
+  return typed retirement without worker, application or Store work.
+  Saved gaps and starting-line saves remain. Both starting-line URLs
+  returned the same saved revision on an exact retry. Builds, 132 UI
+  tests, ten diagnostics and private-phone HTTP passed. Desktop Chrome
+  and private-phone WebKit recovered original signed saves from the
+  previous installation. Saved coverage readers, Maia and Phone Build
+  remain within later retirement scopes.
+- [Store #58](https://github.com/tempo-v2/tempo-store/pull/58) `843d022`
+  fences civil-day observation to the current dataset and its persisted
+  timezone. Observation attempted with a superseded timezone leaves the
+  basis unchanged. [Learning #12](https://github.com/tempo-v2/tempo-learning/pull/12)
+  `9658880` supplies ordinary saved FSRS eligibility independently of
+  obsolete Games-only obligations. The actual Store capture uses this
+  projection and preserves priority for exact current human correction.
+  The exact capability pair passed 28 Learning tests, 87 Store tests and
+  four doctests. Calendar observation has yet to be wired into the live
+  prepared-plan host, and capture still reports incomplete until the
+  actual invalidation producers are ready.
+- [Queue #19](https://github.com/tempo-v2/tempo-queue/pull/19) `cf18f19` and
+  [Tempo #87](https://github.com/tempo-v2/tempo/pull/87) `505b1ec` release
+  the stable input adapter and explicit introduction/relearning distinction.
+  Queue suppresses only exact active work, including when its due priority
+  cannot be established. The adapter respects authored prerequisites and
+  separate caps, and its fixture consumes the actual retained Learning
+  producer rather than a copied eligibility predicate. All 16 Queue tests,
+  four Tempo adapter tests and two Settings calendar tests passed on the
+  exact Store #58 and Learning #12 pair. The adapter is built for tests
+  only while production capture remains incomplete.
+- [Store #59](https://github.com/tempo-v2/tempo-store/pull/59) `c6e0f6f`
+  fences prepared membership and summary on retained content and
+  participation changes in the existing acceptance transactions. Display
+  edits preserve both epochs. Relevant version, availability, authored
+  occurrence order, effective qualification and suspension changes fence
+  stale projections, and late receipt failure rolls everything back.
+  The exact Store passed 89 tests and three doctests. The matching
+  [Tempo #87](https://github.com/tempo-v2/tempo/pull/87) suspension and
+  manual Capture contracts passed. Calendar/worker adoption, exact fresh
+  issuance and removal of remaining legacy writers still gate ready plans.
+- [Store #60](https://github.com/tempo-v2/tempo-store/pull/60) `82be4fa`
+  fences accepted Study changes once per transaction. Active-slot changes,
+  first-Teach spend and changes in captured Learning eligibility can
+  invalidate both projections, including acceptance of an older tokenless
+  attempt. Intermediate moves and exact replay leave compatible work alone.
+  The exact backend passed 90 Store tests, three doctests and five real HTTP
+  cases, including previous-binary Teach, exact Skip and both correction
+  journeys. This Store successor is staged for the next paired manifest.
+  Prepared issuance, fair publication and independent Progress remain open.
+
+### Remote refresh retirement and bounded prepared issuance
+
+- [Tempo #88](https://github.com/tempo-v2/tempo/pull/88) `12bda8d` and
+  [UI #71](https://github.com/tempo-v2/tempo-ui/pull/71) `90753b3` replace
+  the current schema-26 review pins with Store #60, Learning #12 and Queue
+  #19. They remove the remote refresh worker and job polling. An exact
+  accepted refresh returns its original receipt result. An exact
+  never-accepted request returns retirement without a provider or status
+  poll. Both builds, 133 UI tests, 11 diagnostics, private-phone HTTP,
+  real Games replay and current Chrome Game Workbench passed. Four
+  previous-installation Chrome cases exercised accepted-lost and
+  never-delivered commands from inline storage and IndexedDB. The same
+  candidate performed retained manual PGN import and replay. Historical
+  backfill and its shared provider still have their own retirement gate.
+- [Store #61](https://github.com/tempo-v2/tempo-store/pull/61) `5dbea2f`
+  stages the bounded ready-read and exact issuance transaction separately.
+  At most 32 entries are checked and only the selected definition is
+  hydrated. Issue saves the original attempt identity, active pointer and
+  Ready-to-Issued transition together. Rank-only drift leaves admitted
+  membership valid. The exact Store passed 93 tests, three doctests and
+  four matching Tempo adapter tests. Production has yet to adopt this
+  capability. No managed install.
+- Separately qualified [Tempo #89](https://github.com/tempo-v2/tempo/pull/89)
+  `95e165f` and [Store #62](https://github.com/tempo-v2/tempo-store/pull/62)
+  `0dc9b4c` release schema 27 authored-source pairing. The real editor
+  read no longer needs model authority, and startup no longer reconstructs
+  missing legacy pairings. The exact pair passed 94 Store tests, three
+  doctests, 58 Tempo tests and five HTTP acceptance/recovery cases. On the
+  already rehearsed schema-26 copy of the previous archive, all six original
+  authored PGNs served unchanged after migration even with model inputs
+  unavailable. SQLite quick and foreign-key checks passed. A legacy
+  unverified source remains unavailable until replaced by verified
+  authoring. Full model worker and caller retirement remains open.
+- [Queue #20](https://github.com/tempo-v2/tempo-queue/pull/20) `d4e591e` adds
+  independent summary classification from the same pre-order eligibility.
+  It passed 18 Queue and four matching existing Tempo adapter tests. The
+  summary does not read, construct or order plan entries. Bounded Store
+  publication and real Progress screen adoption remain open. No installation.
+
+### Historical backfill retirement and schema-27 review
+
+- [Tempo #90](https://github.com/tempo-v2/tempo/pull/90) `2fd9643` and
+  [UI #72](https://github.com/tempo-v2/tempo-ui/pull/72) `bba81c5` are the
+  current paired pins with Store #62, Learning #12 and Queue #19. They remove
+  historical backfill workers, controls and provider execution. The retained
+  readback resolves exact accepted prior Start and Retry and reports unfinished
+  work as stopped. Never-accepted commands return retirement. Both builds,
+  the focused Rust checks, three HTTP cases, private-phone admission and all
+  120 UI tests passed. Actual previous-installation Chrome recovered the
+  accepted-lost and never-delivered Start and Retry envelopes through both
+  recovery stores, and the same candidate supported current manual PGN
+  import and replay.
+- A fresh disposable copy of the rehearsed schema-26 archive migrated to 27.
+  It replayed all four original accepted Starts and two accepted Retries,
+  preserving 104 completed and 15 stopped windows. Stored jobs, recognized
+  accounts, Games records and receipts, comparisons, Learning and Study
+  receipts remained byte-identical. SQLite quick and foreign-key checks
+  passed. The direct full schema-22 archive upgrade hit disk I/O while
+  local space was constrained. Direct schema-22 to 27 upgrade passed on
+  the actual previous-installed browser fixtures. No managed install.
+- [Tempo #91](https://github.com/tempo-v2/tempo/pull/91) `4f3b347` is
+  current with the same schema-27 Store and UI. Existing authorization
+  applies before serving static assets or the bounded read-only context
+  lane. A real disposable SQLite write lock held a foreground Settings
+  save. Context and static assets still returned before release, and the
+  original Save subsequently committed. Five Node and 12 Python
+  diagnostics passed, including private-phone access and correlated
+  asset diagnostics. Fair prepared apply remains separate. No installation.
+- A direct full schema-22 archive copy subsequently upgraded to schema 27
+  after unused build output was reclaimed. The exact #91 runtime served
+  all six original authored PGNs with model authority unavailable.
+  SQLite quick and foreign-key checks passed. This direct run qualifies
+  the full authored-read upgrade. The earlier detailed historical
+  backfill invariance result remains scoped to its staged archive copy.
+- [Store #63](https://github.com/tempo-v2/tempo-store/pull/63) `a227644`
+  publishes schema-28 independent summary storage. It bounds the payload
+  to one row per dataset and publishes against the captured dataset,
+  civil day and summary epoch. The SQLite probe denied rank, plan and
+  Learning reads on summary lookup. Exact retry, stale fencing and
+  rollback after an injected late failure passed among 95 Store tests
+  and three doctests. The production publisher and Progress/Study Status
+  users remain open. This capability is outside the current schema-27
+  paired pins. No installation.
+
+### Repertoire Reset retirement and schema-28 review
+
+- [Store #64](https://github.com/tempo-v2/tempo-store/pull/64) `a8abe6c`,
+  [Tempo #92](https://github.com/tempo-v2/tempo/pull/92) `c419ccb` and
+  [UI #73](https://github.com/tempo-v2/tempo-ui/pull/73) `a11cad2` are
+  the paired schema-28 review pins with Queue #20. The Reset writer and
+  current control are gone. Exact prior accepted reset returns its old
+  result by dataset, repertoire and command identity. Unaccepted Reset
+  returns terminal retirement. Historical boundaries remain readable
+  by their retained consumers.
+- The exact composition passed 95 Store tests, three doctests, focused
+  prior-choice and issued-definition Tempo contracts, and the previous
+  actually installed schema-22 binary plus candidate HTTP and desktop
+  Chrome recovery. Current UI had no Reset control, the original pending
+  replay left newer Learning and receipts unchanged, and wrong dataset,
+  changed identity and unaccepted requests remained explicit. Schema-28
+  summary persistence is present. Its actual publisher and screen
+  adoption remain open. No managed installation.
+- [Tempo #93](https://github.com/tempo-v2/tempo/pull/93) `5b54167` and
+  [Store #65](https://github.com/tempo-v2/tempo-store/pull/65) `ba53882`
+  are current with unchanged UI #73 and Queue #20. The actual Settings
+  writer uses the same Store connection as Study. The former Settings
+  connection now reads only remaining model metadata. Existing Settings
+  validation, compare-and-set and exact no-op behavior remain. The exact
+  candidate passed two Settings tests, three real loopback admission
+  checks and Chrome Settings. In the SQLite-lock check, context/assets
+  responded independently and the original Settings write then committed.
+  Reset recovery evidence is scoped to the tested predecessor. The
+  prepared-plan publisher is still separate. No managed installation.

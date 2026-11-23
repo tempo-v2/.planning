@@ -13,7 +13,16 @@ Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
 See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
 for development and the explicit installed lifecycle.
 
-## Match the interface candidate
+## Assemble the current review candidate
+
+From an empty workspace with this Planning checkout at `.planning`, run
+`python3 -B .planning/scripts/current_workspace.py .`. Its
+[manifest](current-assembly.json) records the exact review revisions and
+separately identifies the installed baseline. The same program's `--verify`
+mode checks those revisions, the locks, packaged Core and canonical guidance
+without changing the workspace. Use that check before any review build.
+
+## Reconstruct the historical interface candidate
 
 Use the `interface-execution-2026-11-19` entry in [manifest.json](manifest.json)
 with the workspace template and `workspace-corrective-portability.Cargo.lock`.
