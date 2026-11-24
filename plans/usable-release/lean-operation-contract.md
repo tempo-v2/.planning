@@ -1,6 +1,6 @@
 # Lean operation contract
 
-Baseline is Tempo `4f97e742b0f259ba3c26109d69aa365d570439f8`, Lean schema 2. Keep live data, first-answer Good/Again, FSRS, the repeat deck, opening preferences, provider imports, and scanner-driven tactic publication. This contract governs Lean. The older structural-cleanup contract remains evidence for the predecessor.
+Tempo #104 used `4f97e742b0f259ba3c26109d69aa365d570439f8` on Lean schema 2 as its baseline. Keep live data, first-answer Good/Again, FSRS, the repeat deck, opening preferences, provider imports, and scanner-driven tactic publication. This contract governs Lean. The older structural-cleanup contract remains evidence for the predecessor.
 
 | Operation | Owner and permitted facts | Effect and lifetime |
 | --- | --- | --- |
@@ -14,11 +14,18 @@ The runtime has one write connection, at most eight waiting proposals, two secon
 
 Display titles, provenance, optional game metadata and equivalent representation do not change acceptance or queue policy. A changed authoritative due time, card availability, saved rank or committed repeat position may change selection. Qualification uses the real HTTP and browser consumers, read-only SQL access checks and row budgets, writer contention, restarted imports, and original pending Answer envelopes from the preceding installed build on disposable data.
 
-## Implementation handoff
+## Schema-3 handoff for Tempo #104
 
-[Tempo #104](https://github.com/tempo-v2/tempo/pull/104) carries the runtime and UI implementation. It uses schema 3 with the existing Core 0.2.2 package. The existing managed Lean executable remains the schema-2 migration predecessor. The current live database must remain under its existing owner until an authorized cutover of the reviewed build.
+[Tempo #104](https://github.com/tempo-v2/tempo/pull/104) shipped schema 3 with
+Core 0.2.2 and migrated from schema 2.
 
-## Follow-up operation rules
+## Schema-4 follow-up operation rules
+
+[Tempo #107](https://github.com/tempo-v2/tempo/pull/107) advances the managed
+schema-3 predecessor `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` to schema 4.
+The [assembly manifest](current-assembly.json) records the qualified candidate
+and installed artifacts. Keep the live database under its existing owner
+until the managed cutover.
 
 | Operation | Owner and permitted facts | Independence, limits and lifetime |
 | --- | --- | --- |
