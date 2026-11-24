@@ -24,7 +24,7 @@ Core 0.2.2 and migrated from schema 2.
 [Tempo #107](https://github.com/tempo-v2/tempo/pull/107) advances the managed
 schema-3 predecessor `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` to schema 4.
 The [assembly manifest](current-assembly.json) records the qualified and
-installed artifacts. The schema-4 merge is serving on the managed Mac.
+installed artifacts. The schema-4 merge is the managed predecessor to schema 5.
 
 | Operation | Owner and permitted facts | Independence, limits and lifetime |
 | --- | --- | --- |
@@ -42,3 +42,23 @@ the final rejected total keeps the greater of the previously recorded total
 and the replay count. Staged and predecessor inline PGN retain their byte
 boundary across restart. The worker stages surviving inline data before the
 next record and commits the representation change with requeue.
+
+## Schema-5 operation bounds
+
+[Tempo #108](https://github.com/tempo-v2/tempo/pull/108) preserves the schema-4
+Learning and Study operation rules. The schema-5 merge is serving on the managed Mac.
+
+| Operation | Owner and permitted facts | Independence, limits and lifetime |
+| --- | --- | --- |
+| Games turns | Games runs one inventory, provider download, PGN record, scanned game, or publication turn under the same 60-second deadline. The writer uses two-second admission for recovery and claims. | A provider download retains the 32 MiB cap. A nonempty window is staged durably before record processing. Game acceptance or rejection is atomic with its byte offset and ready order. An unsupported game counts once at its physical boundary. The next claim records a failed turn atomically. Unclaimed work expires while a claimed write resolves its result. Restart and Retry reuse the retained file and checkpoint. |
+| Repertoire picker | Openings owns the existing repertoire and practice-color identity and the first authored line as its display example. | The editor reads 50 choices per indexed page with a separate physical read slot, 250 ms deadline and two-million-step SQL limit. A selected choice survives refresh, and branching uses the saved opening's exact repertoire and practice color. Migration seeds the durable projection and an opening save applies its projection row in the same transaction. The projection write counts toward the online row limit. |
+
+Local filesystem calls retain their physical worker until they return.
+The turn deadline prevents new work after expiry. A successful claimed
+write is interpreted by its durable result.
+
+An unfinished predecessor PGN upload with a saved rejection may point
+inside the rejected record. Schema 5 keeps its existing staged bytes,
+cursor and counters, and marks it for one-record turns from the beginning.
+Archive identity deduplicates previously accepted records. Once replay
+finishes, the job stores the physical rejection count.
