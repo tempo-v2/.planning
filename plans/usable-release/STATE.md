@@ -18,12 +18,22 @@ semantics and work bounds.
 - The short PGN job completed while the long job had archived 2 of 300 games.
   Interrupted and uninterrupted runs matched all 301 archive rows, 301
   capture rows and 302 tactic rows. Study accepted Again and advanced during
-  Games work. A focused retry fixture reused the saved scan findings.
+  Games work. A focused retry fixture reused the saved scan findings. The
+  migrated inline-PGN case resumed its original byte offset and cleaned up
+  the staged file after completing the remaining record.
 - Chrome captured both original Answer envelope cases from the installed
   predecessor and recovered one grade on the candidate. Interrupted Next
   retained the result and retried only Next. Chrome also checked counts,
   authored lead-in playback, Games poll coalescing and visibility, and late
   Study context rejection.
+- Fresh independent review cleared `c69ea57e34da6dad4dd34b4bc127eb8a391625f5`.
+  Its indexed-claim probe held at 17–18 SQLite VM steps as completed jobs
+  grew by 100,000. A 120-request context burst returned bounded refusals
+  and independent counts, Games status and Answer stayed usable. A local
+  provider fixture resumed only the unprocessed frozen window.
+- A disposable probe separated queue wait from execution. With a synthetic
+  75 ms writer blocker, Next waited 77.0 ms and ran for 3.3 ms. Idle Again
+  waited 0.02 ms and ran for 1.3 ms. These measurements describe the probe.
 
 The deployment step uses a stopped, verified backup of the managed database
 and staged uploads. Keep the schema-3 executable with its pre-upgrade backup.
