@@ -6,7 +6,7 @@ packages are separate.
 
 ## Start here
 
-Start with the canonical agent guidance and the current release/workspace ledger.
+Read the canonical agent guidance, current state and exact assembly manifest, then open the selected restart task.
 Identify the accepted behavior and selected runtime before choosing implementation
 inputs. A dependency diagram establishes allowed imports; it does not authorize
 a consumer to invent policy from an available field.
@@ -14,7 +14,7 @@ a consumer to invent policy from an available field.
 | Document | Purpose |
 | --- | --- |
 | [agent-guidance/AGENTS.md](agent-guidance/AGENTS.md) | Current working instructions, including behavior authority before implementation |
-| [plans/usable-release/STATE.md](plans/usable-release/STATE.md) and [WORKSPACE.md](plans/usable-release/WORKSPACE.md) | Release history, source/artifact handoff and scope to reconcile with the current task |
+| [plans/usable-release/STATE.md](plans/usable-release/STATE.md) and [WORKSPACE.md](plans/usable-release/WORKSPACE.md) | Current source and installation identities, release gates and setup |
 | [READING_GUIDE.md](READING_GUIDE.md) | Scaffold-era concept map; use current component paths and scope |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Ownership and allowed dependency graph |
 | [INTERFACES.md](INTERFACES.md) | Production interface and ownership map, followed by retained scaffold history |
@@ -47,7 +47,7 @@ scaffold checks are historical tools for reconstructing their own profile.
 
 ## Reading and contributing
 
-Begin with [READING_GUIDE.md](READING_GUIDE.md). Each component README maps a
+Use the affected component README. Each component README maps a
 question or public concept to a source file and a runnable example. Rust files
 start with purpose/when-to-use documentation and keep usage scenarios in their
 own `#[cfg(test)]` module. Public root imports remain convenient; implementation
@@ -64,5 +64,5 @@ protocol after building `tempo`.
 Run the current assembly verifier before qualifying a review build. The live
 boundary check uses managed HTTP with disposable SQLite. The original
 scaffold qualification belongs to its historical source profile. The current
-release gate is being assembled under T54; see the [review ledger](plans/usable-release/STATE.md)
-for checks already run against exact revisions.
+release gate is being assembled under T54; see the [current state](plans/usable-release/STATE.md)
+for open gates and links to prior evidence.
