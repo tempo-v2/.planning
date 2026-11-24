@@ -14,9 +14,10 @@ a consumer to invent policy from an available field.
 | --- | --- |
 | [agent-guidance/AGENTS.md](agent-guidance/AGENTS.md) | Current working instructions, including behavior authority before implementation |
 | [plans/usable-release/STATE.md](plans/usable-release/STATE.md) and [WORKSPACE.md](plans/usable-release/WORKSPACE.md) | Release history, source/artifact handoff and scope to reconcile with the current task |
+| [Lean operation contract](plans/usable-release/lean-operation-contract.md) | Current runtime ownership, operation behavior and work limits |
 | [READING_GUIDE.md](READING_GUIDE.md) | Scaffold-era concept map; use current component paths and scope |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Ownership and allowed dependency graph |
-| [INTERFACES.md](INTERFACES.md) | Production interface and ownership map, followed by retained scaffold history |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Predecessor ownership and dependency graph |
+| [INTERFACES.md](INTERFACES.md) | Predecessor interface and ownership map, followed by retained scaffold history |
 | [BEHAVIOR.md](BEHAVIOR.md) | Historical scaffold expectations B01–B15; some learning policies were superseded |
 | [contracts/dependencies.json](contracts/dependencies.json) | Machine-readable dependency rules |
 | [VERIFICATION.md](VERIFICATION.md) | Source baseline, executed checks and remaining limits |
@@ -31,11 +32,9 @@ for development. Managed installation is a separate release operation.
 
 ## Reading and contributing
 
-Begin with [READING_GUIDE.md](READING_GUIDE.md). Each component README maps a
-question or public concept to a source file and a runnable example. Rust files
-start with purpose/when-to-use documentation and keep usage scenarios in their
-own `#[cfg(test)]` module. Public root imports remain convenient; implementation
-files are named for the concepts they explain.
+For Lean, start with the [operation contract](plans/usable-release/lean-operation-contract.md)
+and the README at the pinned Tempo revision. The
+[reading guide](READING_GUIDE.md) maps the older multi-repository components.
 
 ## Development checks
 
