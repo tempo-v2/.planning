@@ -1,5 +1,26 @@
 # Tempo workspace and development
 
+## Tempo Lean
+
+The [assembly manifest](current-assembly.json) pins the current Lean candidate
+and the separately observed managed installation. Lean builds from one Tempo
+checkout with the UI and packaged Core inside it. Check out the candidate
+commit in a separate worktree and run:
+
+```sh
+npm --prefix ui ci
+npm --prefix ui run build
+cargo build --release --locked
+target/release/tempo serve /path/to/disposable.sqlite3 42823 --no-worker
+```
+
+Run migration checks against a consistent copy of the predecessor database
+and its staged upload directory. The registered service and retained dataset
+belong to the managed release. The instructions below reconstruct the retired
+multi-repository runtime in isolation.
+
+## Historical multi-repository tooling
+
 Use the matching Tempo and UI tooling in an assembled workspace. The
 root Makefile includes `tempo/tools/local.mk`. With the single-service
 launcher from [Tempo #17](https://github.com/tempo-v2/tempo/pull/17),
@@ -13,7 +34,7 @@ Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
 See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
 for development and the explicit installed lifecycle.
 
-## Assemble the current review candidate
+## Assemble the predecessor review candidate
 
 From an empty workspace with this Planning checkout at `.planning`, run
 `python3 -B .planning/scripts/current_workspace.py .`. Its

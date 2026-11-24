@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble or verify the pinned current Tempo review workspace."""
+"""Reconstruct or verify the historical multi-repository Tempo review workspace."""
 
 import argparse
 import hashlib
@@ -29,7 +29,7 @@ def require_digest(path, expected):
 
 
 def load_review():
-    review = json.loads(MANIFEST.read_text())["review"]
+    review = json.loads(MANIFEST.read_text())["predecessor_assembly"]["review"]
     pins = review["components"]
     if pins.keys() != COMPONENTS or not all(re.fullmatch("[0-9a-f]{40}", pin) for pin in pins.values()):
         raise SetupError("Current assembly must pin every runtime component by full commit")
