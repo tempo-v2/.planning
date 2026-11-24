@@ -3,12 +3,12 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede",
-    "sqlite_schema": 3,
-    "binary_sha256": "c6ea3777b01fbea951cd34517382b2baf38f4d2252ebf6e9e76754a92fc50fe6",
+    "commit": "1fa39971574b37c1ecfcbd45214d114d99ddbcb2",
+    "sqlite_schema": 4,
+    "binary_sha256": "a46cc185f5094f7b8180fe1d9d07702fc900da86f3aca3f86c34433dc7d916bc",
     "assets": {
       "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac",
-      "assets/app.js": "1ca34bf662d4273dd6999af53b7a087b017db097b34315552fbd8c4c19369d14",
+      "assets/app.js": "95f2b1de2df2607f0a61482935daab6553d9b0e366334e5f4565cf6351173f1a",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     }
   },
@@ -74,6 +74,16 @@
       "study_wire": 5,
       "content_wire": 4,
       "qualification": "Schema-28 combined review includes Reset retirement, independent context and summary storage, and Settings using the application write owner; no installation qualification"
+    }
+  },
+  "previous_lean_installation": {
+    "commit": "48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede",
+    "sqlite_schema": 3,
+    "binary_sha256": "c6ea3777b01fbea951cd34517382b2baf38f4d2252ebf6e9e76754a92fc50fe6",
+    "assets": {
+      "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac",
+      "assets/app.js": "1ca34bf662d4273dd6999af53b7a087b017db097b34315552fbd8c4c19369d14",
+      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     }
   }
 }

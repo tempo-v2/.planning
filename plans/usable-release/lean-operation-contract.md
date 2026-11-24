@@ -23,9 +23,8 @@ Core 0.2.2 and migrated from schema 2.
 
 [Tempo #107](https://github.com/tempo-v2/tempo/pull/107) advances the managed
 schema-3 predecessor `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` to schema 4.
-The [assembly manifest](current-assembly.json) records the qualified candidate
-and installed artifacts. Keep the live database under its existing owner
-until the managed cutover.
+The [assembly manifest](current-assembly.json) records the qualified and
+installed artifacts. The schema-4 merge is serving on the managed Mac.
 
 | Operation | Owner and permitted facts | Independence, limits and lifetime |
 | --- | --- | --- |
