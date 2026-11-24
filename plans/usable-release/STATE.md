@@ -1,10 +1,39 @@
 # Tempo V2 usable release
 
+## Lean architecture cleanup
+
+[Tempo #107](https://github.com/tempo-v2/tempo/pull/107) carries the schema-4
+candidate in the [assembly manifest](current-assembly.json), including Study
+counts from [#105](https://github.com/tempo-v2/tempo/pull/105). The managed
+installation remains `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` on schema 3.
+Use the [Lean operation contract](lean-operation-contract.md) for current
+semantics and work bounds.
+
+- Locked Rust tests, strict Clippy, the production UI build, and the optimized
+  executable build passed. Production Next and Again retained bounded SQLite
+  work with 100,000 unrelated cards and selected the correct committed slot.
+- A full online copy of the managed database migrated with no worker running.
+  All 20 predecessor tables matched in both directions on predecessor columns.
+  Integrity and foreign keys passed.
+- The short PGN job completed while the long job had archived 2 of 300 games.
+  Interrupted and uninterrupted runs matched all 301 archive rows, 301
+  capture rows and 302 tactic rows. Study accepted Again and advanced during
+  Games work. A focused retry fixture reused the saved scan findings.
+- Chrome captured both original Answer envelope cases from the installed
+  predecessor and recovered one grade on the candidate. Interrupted Next
+  retained the result and retried only Next. Chrome also checked counts,
+  authored lead-in playback, Games poll coalescing and visibility, and late
+  Study context rejection.
+
+The deployment step uses a stopped, verified backup of the managed database
+and staged uploads. Keep the schema-3 executable with its pre-upgrade backup.
+The candidate hashes describe the qualification build.
+
 ## Lean operation-boundary cleanup
 
 [Tempo #104](https://github.com/tempo-v2/tempo/pull/104) publishes candidate `2ab49b04b96f21e7b6b293461d41971b7a6fceb5` against managed predecessor `4f97e742b0f259ba3c26109d69aa365d570439f8`. The [Lean operation contract](lean-operation-contract.md) governs this candidate. It uses schema 3 and vendored Core 0.2.2.
 
-The candidate exercises the single write connection, indexed prepared issuance, exact Answer replay, delayed repeat placement, provider separation, bounded Games apply and offline large opening import. A full disposable schema-2 database comparison retained all rows in the 17 predecessor tables. SQLite integrity and foreign keys passed. Previous-version Chrome recovery covered accepted-but-lost and never-delivered Answer followed by a failed and retried Next. Disposable HTTP covered writer saturation, optional provider replacement, staged PGN restart, and over-budget opening and offline import. Tempo #104 merged as `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` and the optimized build of that exact main revision is installed. The single registered Lean service at port 41823 runs schema 3 with the retained dataset. A stopped schema-2 backup passed integrity and foreign-key checks. The live comparison matched every row in all 17 predecessor tables, and HTTP served matching HTML, JavaScript and CSS. Study counts [Tempo #105](https://github.com/tempo-v2/tempo/pull/105) remains a separate open change.
+The candidate exercises the single write connection, indexed prepared issuance, exact Answer replay, delayed repeat placement, provider separation, bounded Games apply and offline large opening import. A full disposable schema-2 database comparison retained all rows in the 17 predecessor tables. SQLite integrity and foreign keys passed. Previous-version Chrome recovery covered accepted-but-lost and never-delivered Answer followed by a failed and retried Next. Disposable HTTP covered writer saturation, optional provider replacement, staged PGN restart, and over-budget opening and offline import. Tempo #104 merged as `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` and the optimized build of that exact main revision is installed. The single registered Lean service at port 41823 runs schema 3 with the retained dataset. A stopped schema-2 backup passed integrity and foreign-key checks. The live comparison matched every row in all 17 predecessor tables, and HTTP served matching HTML, JavaScript and CSS. Study counts [Tempo #105](https://github.com/tempo-v2/tempo/pull/105) was subsequently merged on main.
 
 The consolidated packet dated 2026-11-17 governs this run. Existing local Tempo and Chess successors already supplied the real board projection. The selected workspace compiled with its original lock before implementation. Tempo UI was cloned at the packet's exact referenced head, moved out of Tempo, and qualified against packaged Core 0.2.1.
 

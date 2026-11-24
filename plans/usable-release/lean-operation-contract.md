@@ -17,3 +17,22 @@ Display titles, provenance, optional game metadata and equivalent representation
 ## Implementation handoff
 
 [Tempo #104](https://github.com/tempo-v2/tempo/pull/104) carries the runtime and UI implementation. It uses schema 3 with the existing Core 0.2.2 package. The existing managed Lean executable remains the schema-2 migration predecessor. The current live database must remain under its existing owner until an authorized cutover of the reviewed build.
+
+## Follow-up operation rules
+
+| Operation | Owner and permitted facts | Independence, limits and lifetime |
+| --- | --- | --- |
+| Committed repeat lookup | Queue reads the saved repeat slots and active card identities. | Slot and active state determine the result. Catalog growth outside the deck adds no work. Next still hydrates one issued card. |
+| Study context and Games status | Each reader serves only its own read operation. Context is addressed by attempt, and status reports durable jobs. | Each family has one physical slot, immediate admission, zero SQLite lock wait, a 250 ms deadline and a two-million-step budget. Failure or browser cancellation has no durable effect. The browser drops obsolete reads by identity or visibility. |
+| Games job turns | The runner owns rotation at one provider window, PGN record, scanned game, or publication batch. Store owns the indexed ready order and commits progress and requeue together. | Only ready order selects the next job. Restart retains jobs, checkpoints, and ordering. Archive acceptance, scanning and tactic publication remain separate. Provider inventory is frozen for the job after discovery, and the account checkpoint advances on job completion. |
+
+A full archive rescan captures the archive high-water mark on its first turn.
+Newly archived games receive their own scans. An interrupted claim retains its
+previous place until a completed turn returns it to the tail. A provider
+inventory is discovered in its own turn. A schema-3 Chess.com job that had
+already advanced its ordinal revisits all applicable windows because the old
+inventory is unavailable. Canonical game acceptance deduplicates replay, and
+the final rejected total keeps the greater of the previously recorded total
+and the replay count. Staged and predecessor inline PGN retain their byte
+boundary across restart. The worker stages surviving inline data before the
+next record and commits the representation change with requeue.
