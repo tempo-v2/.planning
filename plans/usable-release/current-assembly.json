@@ -22,11 +22,11 @@
   },
   "review": {
     "components": {
-      "tempo": "34bdb2a4b7032bbe040e1152e4747e2c0657af8b",
-      "tempo-store": "ba53882093724a1299a35aaa869edf39d70ddf84",
-      "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4",
+      "tempo": "1a67493e2f4f297b2495e8ccfb688eb2ddb1fd06",
+      "tempo-store": "aad3bd6af4f5e2017e59909e4c4c949dc3c3f424",
+      "tempo-ui": "c86cccac8cab4b3d1ae5ed13adf5d561ce4bca3b",
       "tempo-queue": "33e21161135e78f8a23c88d103c5b183cc8da429",
-      "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
+      "tempo-learning": "840802e624a251d8b2fc8fd151b8560042b8d03c",
       "tempo-study": "518982447bac7d13d0de7f4ec84392dbf9bc267f",
       "tempo-chess": "87e720fd48ea1e8465f5f7921bfee8fcbe90f0a4",
       "tempo-types": "419ece08a2871de703122edcda57d80c73b1489d",
@@ -44,7 +44,7 @@
     "sqlite_schema": 28,
     "study_wire": 5,
     "content_wire": 4,
-    "qualification": "Continuation with known prepared issuance and consumer adoption gaps. Schema 28 is a source configuration; the recorded installation remains schema 22."
+    "qualification": "Published continuation source pins. Exact combined assembly, artifact verification, and release qualification are pending. Capture remains Incomplete. The recorded installation remains schema 22."
   },
   "merged_sources": {
     ".planning": "f71f80fa7c168993a8d5979be10102bc70fd64ae",
