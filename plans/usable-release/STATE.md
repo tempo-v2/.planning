@@ -1,12 +1,42 @@
 # Tempo V2 usable release
 
+## Lean Games and repertoire operation bounds
+
+[Tempo #108](https://github.com/tempo-v2/tempo/pull/108) merged schema 5 at
+`0cce44a58ec8e6557bd614e2e935b0e00cf3e9da`. The managed Mac serves that exact
+revision with the retained database. The source tree matches independently
+reviewed head `4774aa22d652177643d166b502f981777e67bcce`. The
+[assembly manifest](current-assembly.json) records the exact artifacts.
+
+- All 20 locked Rust tests, strict Clippy and the optimized build with
+  packaged Core 0.2.2 passed. The runtime fixtures covered expired writer
+  admission, timeout while reading a provider body, and resuming an
+  interrupted schema-4 upload whose offset pointed into a rejected game.
+- A disposable local provider feed accepted 700 games and rejected two
+  records exactly once, including an unsupported variant. Restart reused
+  the staged file. A manual upload completed alongside provider work.
+  Following writer contention, the worker recorded a failed provider turn,
+  finished a different job, and accepted the original provider job on retry.
+- Chrome verified that paging and a delayed refresh preserve the selected
+  repertoire and practice color. Branching outside page one used the original
+  repertoire and its canonical display example. The previous-release Study
+  browser checks covered accepted-but-lost and never-delivered Answers and
+  showed that interrupted Next retried only Next.
+- The stopped schema-4 database backup passed integrity and foreign-key
+  checks. The migration preserved all 21 predecessor tables in both
+  directions on predecessor columns and reproduced every repertoire choice.
+  Verified one launchd service, schema 5, all served artifact hashes, and
+  read-only responses for health, Study, counts, Games jobs, opening
+  preferences and repertoire choices. Retained the exact schema-4
+  executable with its pre-upgrade backup.
+
 ## Lean architecture cleanup
 
 [Tempo #107](https://github.com/tempo-v2/tempo/pull/107) merged schema 4 at
 `1fa39971574b37c1ecfcbd45214d114d99ddbcb2`, with a source tree equal to
-the qualified head. The managed service now runs this merge revision with
-the retained database. See the [assembly manifest](current-assembly.json)
-for the installed build and the qualification artifact identities.
+the qualified head. The managed service ran this merge revision before the
+schema-5 cutover. [Planning #90](https://github.com/tempo-v2/.planning/pull/90)
+records its installed and qualification artifact identities.
 
 - Rebuilt with the locked inputs in the managed release directory. The served
   HTML, JavaScript and CSS matched the qualified build. The binary hash
