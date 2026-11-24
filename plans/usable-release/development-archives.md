@@ -9,7 +9,7 @@ git fetch origin tag <tag>
 git switch --detach <tag>
 ```
 
-The Lean qualification scripts, logs, and disposable database copies are preserved locally under `~/Library/Application Support/Tempo Development Archives/2026-11-24/qualification`. This material contains local data. The installed service and rollback backups are under Tempo Lean's managed application directory.
+The Lean qualification scripts, logs, and disposable database copies are preserved locally under `~/Library/Application Support/Tempo Development Archives/2026-11-24/qualification`. The retired Endgames checkout’s built runtime assets are in the sibling `retire-endgames-assets` directory. This material contains local data. The installed service and rollback backups are under Tempo Lean's managed application directory.
 
 | Repository | Archive tag | Commit |
 | --- | --- | --- |
@@ -26,3 +26,4 @@ The Lean qualification scripts, logs, and disposable database copies are preserv
 | tempo-v2/tempo | [archive/2026-11-24/lean-compliance](https://github.com/tempo-v2/tempo/tree/archive/2026-11-24/lean-compliance) | `2ab49b04b96f21e7b6b293461d41971b7a6fceb5` |
 | tempo-v2/tempo | [archive/2026-11-24/bounded-study-detached](https://github.com/tempo-v2/tempo/tree/archive/2026-11-24/bounded-study-detached) | `b051bb0b65a560ba85d281a58fe21592c4ae33d6` |
 | tempo-v2/.planning | [archive/2026-11-24/lean-contract](https://github.com/tempo-v2/.planning/tree/archive/2026-11-24/lean-contract) | `2f8222ca01c9bcd82690ee20ab4da33fd9cc70ba` |
+| aaweaver-actuary/tempo | [archive/2026-11-24/retire-endgames](https://github.com/aaweaver-actuary/tempo/tree/archive/2026-11-24/retire-endgames) | `f0729727e4795ddae9e008d12b392204bc755f9d` |
