@@ -1,5 +1,11 @@
 # Tempo V2 usable release
 
+## Lean operation-boundary cleanup
+
+[Tempo #104](https://github.com/tempo-v2/tempo/pull/104) publishes candidate `2ab49b04b96f21e7b6b293461d41971b7a6fceb5` against managed predecessor `4f97e742b0f259ba3c26109d69aa365d570439f8`. The [Lean operation contract](lean-operation-contract.md) governs this candidate. It uses schema 3 and vendored Core 0.2.2.
+
+The candidate exercises the single write connection, indexed prepared issuance, exact Answer replay, delayed repeat placement, provider separation, bounded Games apply and offline large opening import. A full disposable schema-2 database comparison retained all rows in the 17 predecessor tables. SQLite integrity and foreign keys passed. Previous-version Chrome recovery covered accepted-but-lost and never-delivered Answer followed by a failed and retried Next. Disposable HTTP covered writer saturation, optional provider replacement, staged PGN restart, and over-budget opening and offline import. The managed installation remains on schema 2. Merge and cutover are outstanding.
+
 The consolidated packet dated 2026-11-17 governs this run. Existing local Tempo and Chess successors already supplied the real board projection. The selected workspace compiled with its original lock before implementation. Tempo UI was cloned at the packet's exact referenced head, moved out of Tempo, and qualified against packaged Core 0.2.1.
 
 ## Opening checkpoint
