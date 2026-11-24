@@ -2,12 +2,22 @@
 
 ## Lean architecture cleanup
 
-[Tempo #107](https://github.com/tempo-v2/tempo/pull/107) carries the schema-4
-candidate in the [assembly manifest](current-assembly.json), including Study
-counts from [#105](https://github.com/tempo-v2/tempo/pull/105). The managed
-installation remains `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` on schema 3.
-Use the [Lean operation contract](lean-operation-contract.md) for current
-semantics and work bounds.
+[Tempo #107](https://github.com/tempo-v2/tempo/pull/107) merged schema 4 at
+`1fa39971574b37c1ecfcbd45214d114d99ddbcb2`, with a source tree equal to
+the qualified head. The managed service now runs this merge revision with
+the retained database. See the [assembly manifest](current-assembly.json)
+for the installed build and the qualification artifact identities.
+
+- Rebuilt with the locked inputs in the managed release directory. The served
+  HTML, JavaScript and CSS matched the qualified build. The binary hash
+  identifies the managed build with its release-specific asset path.
+- Rehearsed with a full disposable copy. The stopped schema-3 backup
+  passed integrity and foreign-key checks. The actual migration preserved
+  all 20 predecessor tables in both directions on predecessor columns,
+  and integrity and foreign keys passed before the worker started.
+- Verified one registered Lean listener, schema 4, and successful read-only
+  responses for health, current Study, Study counts, Games status and opening
+  settings. The schema-3 release and matching stopped backup are retained.
 
 - Locked Rust tests, strict Clippy, the production UI build, and the optimized
   executable build passed. Production Next and Again retained bounded SQLite
@@ -35,9 +45,8 @@ semantics and work bounds.
   75 ms writer blocker, Next waited 77.0 ms and ran for 3.3 ms. Idle Again
   waited 0.02 ms and ran for 1.3 ms. These measurements describe the probe.
 
-The deployment step uses a stopped, verified backup of the managed database
-and staged uploads. Keep the schema-3 executable with its pre-upgrade backup.
-The candidate hashes describe the qualification build.
+The schema-3 executable and matching pre-upgrade backup remain the recovery
+pair for this cutover.
 
 ## Lean operation-boundary cleanup
 
