@@ -62,3 +62,15 @@ inside the rejected record. Schema 5 keeps its existing staged bytes,
 cursor and counters, and marks it for one-record turns from the beginning.
 Archive identity deduplicates previously accepted records. Once replay
 finishes, the job stores the physical rejection count.
+
+## Schema-6 Games admission and Study count bounds
+
+[Tempo #109](https://github.com/tempo-v2/tempo/pull/109) ships these rules on
+schema 6. The [assembly manifest](current-assembly.json) records the serving
+artifacts and the retained schema-5 predecessor.
+
+| Operation | Owner and permitted inputs | Effect, independence and lifetime |
+| --- | --- | --- |
+| Games commands | Games accepts provider and operation for an import or archive scan on `POST /api/games/jobs`. PGN intake accepts player name and PGN on `POST /api/games/uploads`. | The ordinary endpoint enforces 16 KiB before decoding. Only PGN intake uses the existing upload slots, deadline and 64 MiB decoded PGN limit. Rejected requests leave no job or staged upload. Existing durable jobs retain their original identity, file and checkpoint. |
+| Games admission | Store checks the four-job capacity using active user-started jobs. Provider imports and archive scans reuse a matching active provider, operation and player at available capacity. | Capacity checks stop at four matches. The keyed duplicate lookup and capacity check use a partial index over active user-started jobs. Queued children and finished jobs do not add lookup work. Retry uses the same capacity rule and keeps the original job. |
+| Study counts | Queue retains its current due, unseen, pause and committed-work semantics. Store uses one read snapshot. The UI renders each total as exact through 10,000 and as 10,000+ above it. | Read at most 10,001 candidates per kind and eligibility class, plus bounded committed work. The wire uses a number for an exact total and `{"at_least":10000}` for a capped total. Rank and display changes have no effect. This read is never required to issue or accept a review. |
