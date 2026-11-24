@@ -65,6 +65,10 @@ finishes, the job stores the physical rejection count.
 
 ## Schema-6 Games admission and Study count bounds
 
+[Tempo #109](https://github.com/tempo-v2/tempo/pull/109) ships these rules on
+schema 6. The [assembly manifest](current-assembly.json) records the serving
+artifacts and the retained schema-5 predecessor.
+
 | Operation | Owner and permitted inputs | Effect, independence and lifetime |
 | --- | --- | --- |
 | Games commands | Games accepts provider and operation for an import or archive scan on `POST /api/games/jobs`. PGN intake accepts player name and PGN on `POST /api/games/uploads`. | The ordinary endpoint enforces 16 KiB before decoding. Only PGN intake uses the existing upload slots, deadline and 64 MiB decoded PGN limit. Rejected requests leave no job or staged upload. Existing durable jobs retain their original identity, file and checkpoint. |

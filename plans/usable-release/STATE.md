@@ -1,5 +1,63 @@
 # Tempo V2 usable release
 
+## Lean Games admission and Study count bounds
+
+[Tempo #109](https://github.com/tempo-v2/tempo/pull/109) merged schema 6 at
+`0c9ed8b3324a40f7e88653aea4366c6e030c8c00`. The serving build has the source tree
+independently reviewed at `92b434e09611e7d7e1b9ff12708c252211db240d` and uses Core 0.2.2.
+The [assembly manifest](current-assembly.json) pins the candidate and managed
+artifacts separately. The [Lean operation contract](lean-operation-contract.md)
+records the accepted count cap and request limits.
+
+- All 22 locked Rust tests, strict Clippy, the packaged UI build and the locked
+  optimized build passed. A fresh Astra reviewer cleared the published source
+  and contract and independently exercised HTTP, browser, database and
+  predecessor recovery checks.
+- The installed binary, running on disposable data, accepted ordinary Games
+  requests at 16 KiB and rejected one byte above it with fixed and chunked
+  bodies. The dedicated upload route accepted 64 MiB and rejected one byte
+  above it before staging. Chrome used the correct route for provider import,
+  archive scan, upload and retry of the original job.
+- Capacity, duplicate hit and duplicate miss took 50, 52 and 62 SQLite VM
+  steps with and without 100,000 unrelated child and finished jobs. A local
+  provider feed resumed its staged window, accepted 700 games, rejected two
+  records once, and rotated with a manual upload. A separate interruption test
+  showed identical archive, capture and tactic rows after restart, and Study
+  accepted and advanced during Games work.
+- Both counts were capped on a 100,000-card fixture in 360,236 SQLite VM steps.
+  The managed binary returned both capped values in a 4.9 ms disposable HTTP
+  observation. Chrome rendered mixed capped and exact totals and kept Answer
+  and Next usable when counts failed. It also replayed the actual schema-5
+  Answer for both a lost response and an undelivered submission. Interrupted
+  Next retained the accepted result and retried only Next.
+- Rehearsal and the managed migration preserved all 22 predecessor tables in
+  both directions. Integrity and foreign keys passed. A schema-5 upload
+  resumed from its original committed file and byte checkpoint. The matching
+  schema-5 executable and verified stopped backup remain available for
+  recovery. After cutover, one launchd listener served the verified binary
+  and matching HTML, JavaScript and CSS. Health, Study, counts, Games status,
+  opening preferences and the repertoire picker returned successful reads.
+
+### Architecture report card
+
+**Overall grade A for the examined Lean boundaries.** The intake limits and
+writer lookup bounds now hold on the real Games entry points, and the optional
+Study count stays within its query and time budgets as eligible rows grow.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | Next resumes or uses indexed prepared membership. The committed Next and Again tests held with 100,000 unrelated cards. |
+| Chess, Learning and acceptance | A | A single committed result owns FSRS, the receipt and repeat placement. The restart and replay checks retained one grade. |
+| Study UI, Core and recovery | A | The production client uses packaged Core, replays the original schema-5 Answer, and retries only Next after an accepted grade. |
+| Games, scanner and Tactics | A | The worker independently resumes archive, scan and publication through persisted progress. Status stays read-only and Study advances during Games work. |
+| Optional reads | A | Counts use bounded exact or capped results, and failure has no effect on grading or continuation. The existing context, Games status and picker slots retain their bounds. |
+| Openings and Settings | A | The opening identity constraint, indexed picker and saved preference ownership retain schema-5 evidence. The installed routes returned successful reads. |
+| Request limits and shared writer | A | Fixed and chunked ordinary commands enforce 16 KiB. The dedicated upload keeps 64 MiB. The admission index keeps work constant as unrelated work grows. |
+
+Synthetic writes, failures and scale measurements used disposable databases.
+Managed verification used the migration comparison, artifact identity and
+read-only HTTP.
+
 ## Lean Games and repertoire operation bounds
 
 [Tempo #108](https://github.com/tempo-v2/tempo/pull/108) merged schema 5 at
