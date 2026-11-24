@@ -16,6 +16,14 @@ Reads must not secretly apply jobs, accept grades, import content or change allo
 
 Routine commands use addressed state and writes. Full snapshots, whole-history validation and global catalog rewrites belong only to explicitly named batch/admin work. PGN interpretation is permitted for an addressed authoring/import/export operation whose actual purpose requires it and whose budget declares it; it is forbidden as incidental work in Next, summary, status or unrelated browsing. Never add a broad fallback to a narrow interface. Unsupported operations return a typed unsupported/unavailable result. Existing user and packet authorization covers the work it actually grants; these classifications do not create repetitive approval steps.
 
+### Extend Tempo through owned interfaces
+
+- Define the smallest typed interface the consumer needs. Specify the owner, permitted inputs, returned facts, empty and failed outcomes, and any version or retry guarantees. Keep source-specific policy, formats, credentials, and private persistence inside the owning adapter.
+- A game provider supplies games. A detector supplies findings. The job runner owns retries and checkpoints, Games owns game acceptance, and the catalog owns publication. At the first additional implementation, give it the same owned interface before adding provider or detector branches to downstream callers. Use ordinary functions or concrete types where they suffice.
+- Study consumes published, versioned exercises and owns attempts and grading. Adding or swapping a game provider, detector, or optional analysis source must require zero changes to Study selection, issuance, or grading. Fetch optional game or analysis context separately from accepting or advancing a review.
+- Keep dependencies pointed from the caller to the owned interface. Pass typed values across component boundaries. Keep implementation handles and unrelated tables behind their owner. Keep concrete wiring in the application or job composition code. Extend an interface for a demonstrated consumer need and keep it specific to that operation.
+- Verify through the real consumer that a new or substituted source can deliver valid input and that an empty or failed optional source leaves unrelated commands and their durable effects independent. Include the expected difference when an authoritative input changes. Review actual calls, reads, and writes along with imports.
+
 ## 3. Enforce the prepared-order Study contract
 
 Queue owns one rebuildable ordered plan and its bounded priority updates. Learning owns current availability and every Learning transition. Store enforces addressed identities, versions, constraints and atomic accepted effects. Chess owns legal interpretation. Study, if retained, owns attempt progression and the first accepted assessment.
