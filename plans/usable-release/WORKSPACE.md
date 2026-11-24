@@ -20,6 +20,13 @@ From an empty workspace with this Planning checkout at `.planning`, run
 [manifest](current-assembly.json) records the exact review revisions and
 separately identifies the installed baseline. The same program's `--verify`
 mode checks those revisions, the locks, packaged Core and canonical guidance
-without changing the workspace. Use that check before any review build.
+without changing the workspace. Use that check before combined qualification.
+
+Pass `--source COMPONENT=PATH` for each local Git object store. The assembler
+checks for the pinned commit even if the source checkout has a different HEAD
+or local edits. It fetches from GitHub only when the exact commit is absent from
+all supplied stores. Add `--offline` to report missing pins without a network
+request. Rerun with additional sources to resume. Already assembled components
+must still match their pins and be clean.
 
 Historical assembly and recovery instructions are available in the [prior workspace instructions](https://github.com/tempo-v2/.planning/blob/f71f80fa7c168993a8d5979be10102bc70fd64ae/plans/usable-release/WORKSPACE.md) and the [prior release ledger](https://github.com/tempo-v2/.planning/blob/f71f80fa7c168993a8d5979be10102bc70fd64ae/plans/usable-release/STATE.md).

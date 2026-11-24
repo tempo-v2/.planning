@@ -7,8 +7,9 @@ import json
 from pathlib import Path
 import re
 import sys
+from tempfile import TemporaryDirectory
 
-from bootstrap_tempo import SetupError, check_repository, checked
+from bootstrap_tempo import SetupError, check_repository, checked, run
 
 
 PLANNING = Path(__file__).resolve().parents[1]
@@ -39,14 +40,17 @@ def load_review():
     return review
 
 
+def verify_checkout(repository, name, pin):
+    check_repository(repository, name)
+    if checked(["git", "rev-parse", "HEAD"], cwd=repository) != pin:
+        raise SetupError(f"Wrong revision for {name}. Expected {pin}.")
+    if checked(["git", "status", "--porcelain"], cwd=repository):
+        raise SetupError(f"Worktree has local changes: {name}")
+
+
 def verify(workspace, review):
     for name, pin in review["components"].items():
-        repository = workspace / name
-        check_repository(repository, name)
-        if checked(["git", "rev-parse", "HEAD"], cwd=repository) != pin:
-            raise SetupError(f"Wrong revision for {name}. Expected {pin}.")
-        if checked(["git", "status", "--porcelain"], cwd=repository):
-            raise SetupError(f"Worktree has local changes: {name}")
+        verify_checkout(workspace / name, name, pin)
     require_digest(workspace / "Cargo.toml", review["workspace_sha256"])
     require_digest(workspace / "Cargo.lock", review["cargo_lock_sha256"])
     require_digest(workspace / "AGENTS.md", review["guidance_sha256"])
@@ -56,26 +60,60 @@ def verify(workspace, review):
     print(f"Verified review assembly with Planning {checked(['git', 'rev-parse', 'HEAD'], cwd=PLANNING)}")
 
 
-def assemble(workspace, review, protocol):
-    if any(entry.name != ".planning" for entry in workspace.iterdir()):
-        raise SetupError("Assembly requires a new workspace containing only its .planning checkout")
+def parse_sources(values):
+    sources = {}
+    for value in values:
+        name, separator, path = value.partition("=")
+        if name not in COMPONENTS or not separator or not path:
+            raise SetupError(f"Expected --source COMPONENT=PATH, got {value!r}")
+        sources.setdefault(name, []).append(Path(path).expanduser().resolve())
+    return sources
+
+
+def has_commit(source, pin):
+    return run(["git", "-C", source, "cat-file", "-e", f"{pin}^{{commit}}"]).returncode == 0
+
+
+def assemble(workspace, review, protocol, sources, offline):
+    files = {
+        "Cargo.toml": (PLANNING / review["workspace_template"]).read_bytes(),
+        "Cargo.lock": (PLANNING / review["cargo_lock"]).read_bytes(),
+        "AGENTS.md": (PLANNING / "agent-guidance/AGENTS.md").read_bytes(),
+        "Makefile": b"include tempo/tools/local.mk\n",
+    }
+    for filename, content in files.items():
+        path = workspace / filename
+        if path.is_symlink() or (path.exists() and path.read_bytes() != content):
+            raise SetupError(f"Existing workspace file differs: {path}")
+    missing = []
     for name, pin in review["components"].items():
+        repository = workspace / name
+        if repository.exists() or repository.is_symlink():
+            verify_checkout(repository, name, pin)
+            continue
+        source = next((path for path in sources.get(name, ()) if path.is_dir() and has_commit(path, pin)), None)
+        if source is None and offline:
+            missing.append(f"{name} {pin}")
+            continue
         origin = f"https://github.com/tempo-v2/{name}.git"
         if protocol == "ssh":
             origin = f"git@github.com:tempo-v2/{name}.git"
-        repository = workspace / name
-        repository.mkdir()
-        checked(["git", "init", "--quiet"], cwd=repository)
-        checked(["git", "remote", "add", "origin", origin], cwd=repository)
-        checked(["git", "fetch", "--depth=1", "origin", pin], cwd=repository)
-        checked(["git", "checkout", "--detach", "FETCH_HEAD"], cwd=repository)
-    for destination, source in (
-        ("Cargo.toml", PLANNING / review["workspace_template"]),
-        ("Cargo.lock", PLANNING / review["cargo_lock"]),
-        ("AGENTS.md", PLANNING / "agent-guidance/AGENTS.md"),
-    ):
-        (workspace / destination).write_bytes(source.read_bytes())
-    (workspace / "Makefile").write_text("include tempo/tools/local.mk\n")
+        with TemporaryDirectory(prefix=f".{name}-", dir=workspace) as stage:
+            staged = Path(stage) / name
+            staged.mkdir()
+            checked(["git", "init", "--quiet"], cwd=staged)
+            checked(["git", "remote", "add", "origin", origin], cwd=staged)
+            checked(["git", "fetch", "--depth=1", str(source) if source else "origin", pin], cwd=staged)
+            checked(["git", "checkout", "--detach", "FETCH_HEAD"], cwd=staged)
+            verify_checkout(staged, name, pin)
+            staged.rename(repository)
+    if missing:
+        raise SetupError("Exact commits unavailable offline:\n" + "\n".join(missing))
+    for filename, content in files.items():
+        path = workspace / filename
+        if not path.exists():
+            with path.open("xb") as output:
+                output.write(content)
 
 
 def main():
@@ -83,6 +121,9 @@ def main():
     parser.add_argument("workspace", type=Path)
     parser.add_argument("--verify", action="store_true")
     parser.add_argument("--protocol", choices=("https", "ssh"), default="https")
+    parser.add_argument("--source", action="append", default=[], metavar="COMPONENT=PATH",
+                        help="try this local Git object store before GitHub; repeat as needed")
+    parser.add_argument("--offline", action="store_true", help="report missing exact commits without remote fetches")
     args = parser.parse_args()
     workspace = args.workspace.resolve()
     if (workspace / ".planning").resolve() != PLANNING:
@@ -91,7 +132,7 @@ def main():
         raise SetupError("Planning checkout has local changes")
     review = load_review()
     if not args.verify:
-        assemble(workspace, review, args.protocol)
+        assemble(workspace, review, args.protocol, parse_sources(args.source), args.offline)
     verify(workspace, review)
 
 
