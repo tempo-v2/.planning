@@ -34,8 +34,9 @@ reviewed head `4774aa22d652177643d166b502f981777e67bcce`. The
 
 [Tempo #107](https://github.com/tempo-v2/tempo/pull/107) merged schema 4 at
 `1fa39971574b37c1ecfcbd45214d114d99ddbcb2`, with a source tree equal to
-the qualified head. The managed service ran this merge revision before the schema-5 cutover. See the [assembly manifest](current-assembly.json)
-for the installed build and the qualification artifact identities.
+the qualified head. The managed service ran this merge revision before the
+schema-5 cutover. [Planning #90](https://github.com/tempo-v2/.planning/pull/90)
+records its installed and qualification artifact identities.
 
 - Rebuilt with the locked inputs in the managed release directory. The served
   HTML, JavaScript and CSS matched the qualified build. The binary hash
