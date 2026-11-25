@@ -152,3 +152,21 @@ admission and apply budgets continue to cover the resumed work.
 | Qualify one suggested solution | Chess accepts the validated position, proposed legal roots and scores for all legal moves from a single depth-10 search. An alternative at most 30 CP worse, or preserving the same forced mate, makes the position ambiguous. The best move must be a detector candidate. | The outcome is independent of the motif and display data. Incomplete, terminal or inconsistent evidence cannot establish a verdict. The same rule can serve other generated tactics. |
 | Apply one game finding | Games supplies the original game occurrence and move. The catalog publishes only a qualifying capture that differs from the played move. The existing writer validates the exact dataset, detector finding and rule identity, then commits evidence and the catalog or queue change together. | Fresh findings wait for evidence. Existing cards keep eligibility until evaluated. Retirement excludes future issuance and repeats, while narrowing preserves identity and old issued answers. Accepted receipts are replayable. An exact re-delivery or archive rescan retains the committed verdict. |
 | Supply analysis | A separately launched worker shares one admitted engine slot with a five-second search deadline per position. Tempo exposes a private owner-only Unix socket with 64 KiB messages and background writer admission. | The server never launches Stockfish. Worker loss does not block Games acceptance or Study. A transient failure requeues with backoff, and late results are checked against the addressed work token. |
+
+## Schema-15 worker and coverage reads
+
+The Store projects the seven exact tactic worker counters from durable
+qualification changes. Migration seeds the projection while the service
+is stopped. The status client uses a separate owner-only socket and one
+250 ms request budget. Work delivery has its own socket and keeps the
+existing writer admission and exact verdict replay. Detector batches
+accept at most 40 findings and at most 128 affected rows with triggers.
+
+The Coverage owner publishes indexed chunks of 30 gaps with the saved
+forecast, keeping its identity, order, model and command receipts.
+Pagination reads at most two chunks and no Learning. Personally studied
+coverage reads the compact dependencies and current Learning in a separate
+bounded snapshot. Only accepted reviews on saved paths affect that score.
+Predecessor combined reads compose the same projections. Apply retains
+its original model and revision fence. No Study write depends on these
+coverage projections.
