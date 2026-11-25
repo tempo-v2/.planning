@@ -24,9 +24,8 @@ dataset and active Study attempt were verified. The
 
 [Tempo #130](https://github.com/tempo-v2/tempo/pull/130) and
 [Tempo #131](https://github.com/tempo-v2/tempo/pull/131) shipped at
-`9be76dff41fedc7f52d5aa481fbea92ae112189b` with Core 0.2.2. Both managed processes use that
-release. The [assembly manifest](current-assembly.json) records their
-hashes, the served assets, and the stopped predecessor backup.
+`9be76dff41fedc7f52d5aa481fbea92ae112189b` with Core 0.2.2. Both managed processes used that release. The
+[assembly manifest](current-assembly.json) retains its hashes and backup.
 
 Openings → Gaps can repair a pasted continuation with the saved reply
 or stage a separately confirmed repertoire replacement. The replacement
