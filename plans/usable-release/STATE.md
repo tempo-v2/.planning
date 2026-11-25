@@ -1,5 +1,26 @@
 # Tempo V2 usable release
 
+## Lean archive rescan bounds
+
+[Tempo #112](https://github.com/tempo-v2/tempo/pull/112) pins candidate
+`f765748b1107daee7fcbb845af522c27452ecbf3` for the schema-8
+[archive rescan contract](lean-operation-contract.md#schema-8-archive-rescan-cursor).
+The schema-7 build remains the managed installation while this candidate is reviewed.
+
+- The bundled SQLite hit, exhausted range and 64-row page used 24, 11 and
+  459 VM steps before 100,000 post-cutoff games, and 18, 14 and 459 after.
+  Raising the cutoff selected the newly eligible game.
+- The runner retained a partly applied schema-7 seal and both detector
+  jobs' frozen membership. It restarted after committing a page of
+  previously completed games and preserved the exact findings and parent count.
+  Study Next and Answer completed during recovery.
+- Disposable migration preserved all 23 predecessor tables and 16,768
+  retained games. The schema-7 executable refused schema 8. A staged
+  upload resumed its original ID, file and byte offset.
+- 31 locked Rust tests, strict Clippy, packaged Core 0.2.2, the optimized
+  executable and Chromium Answer recovery passed. Independent review
+  and managed install remain pending.
+
 ## Lean bounded browsing
 
 [Tempo #111](https://github.com/tempo-v2/tempo/pull/111) head `f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f`
