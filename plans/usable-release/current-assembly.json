@@ -13,7 +13,7 @@
     }
   },
   "candidate": {
-    "commit": "f9e1312f38cddf0977353ca9e60764622b976d1d",
+    "commit": "f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f",
     "pull_request": "https://github.com/tempo-v2/tempo/pull/111",
     "sqlite_schema": 7,
     "cargo_lock_sha256": "c6608a9637ad04af427e7c3918f03ed8e22d32db63e4c1e51dcdd7c140ae6020",
@@ -21,12 +21,12 @@
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "built_assets": {
-      "index.html": "8717452c3845c640bfa52ad87c3bb51c8b3dcf874e7180923ac9a2cc25862ab1",
-      "assets/app.js": "069739a0735b215de6178b18878c87f1e18a03dd4e77a4400a32021be9e4e3e7",
+      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
+      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
     "built_binary_sha256": "e05b4cc5311e9486c7d3e4fae102bc6be05d63253bb5cf444d288afe569fa98e",
-    "qualification": "Implementation checks passed. Independent architecture review and managed cutover pending."
+    "qualification": "Implementation checks passed. Fixed initial independent findings and reran Chromium. Fresh review and managed cutover pending."
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
