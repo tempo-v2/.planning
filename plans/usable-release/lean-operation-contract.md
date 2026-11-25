@@ -219,7 +219,10 @@ pending command. A late reply can settle only its own journal entry. Labels,
 draft edits, view navigation and optional scans do not establish acceptance.
 An uncertain reply retains the original request for exact replay across
 navigation or reload. Other mounted views observe journal changes without
-sending commands. The initiating view alone may start the optional follow-up
-scan. A reopened view displays the acknowledged Save and can retry the scan
+sending commands. Transient delivery progress and errors expire when their
+command settles. The mounted view that receives and records a valid Save
+reply from its own delivery attempt may start the optional follow-up scan.
+An explicit retry is a delivery attempt. A view that only observes an
+acknowledgement displays the accepted Save and can retry the scan
 independently. The 32 MiB model limits cover the JSON request and forecast
 response streams. Service diagnostics use stderr.
