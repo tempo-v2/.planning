@@ -43,6 +43,12 @@ separately identifies the installed baseline. The same program's `--verify`
 mode checks those revisions, the locks, packaged Core and canonical guidance
 without changing the workspace. Use that check before any review build.
 
+Repeat `--source COMPONENT=PATH` to use existing local Git object stores.
+`--offline` reports missing pinned commits without contacting remotes.
+Re-running assembly reuses already verified, exact checkouts and rejects
+dirty or mismatched inputs. The recipe uses the predecessor's pinned
+guidance and assembly files.
+
 ## Reconstruct the historical interface candidate
 
 Use the `interface-execution-2026-11-19` entry in [manifest.json](manifest.json)
