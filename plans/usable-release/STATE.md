@@ -1,14 +1,22 @@
 # Tempo V2 usable release
 
-## Maia repertoire gaps and Study order candidate
+## Installed Maia repertoire gaps and Study order
 
-[Tempo #116](https://github.com/tempo-v2/tempo/pull/116) at
-`a1a5971fd87dfea2c9194bffe387029873d1e831` adds Openings → Gaps and
-the additive PGN editor (schema 9). [Tempo #117](https://github.com/tempo-v2/tempo/pull/117)
-at `786b446a0b158fe8651cd150953bac5919e89e31` adds explicit forecast
-adoption in Study (schema 10). Both include main `d895f6d` and consume packaged
-Core 0.2.2. The recorded installation during qualification remained `1f3d258`,
-schema 8. These two PRs are published candidates.
+[Tempo #116](https://github.com/tempo-v2/tempo/pull/116) merged at
+`6041ec9f395700518073bc9b09c783e6e455edd5` with Openings → Gaps and additive
+PGN authoring. [Tempo #117](https://github.com/tempo-v2/tempo/pull/117) merged at
+`fed4db1fc6186e3bd162cb90efcd69c20bfbc79a` with explicit Study rank adoption. Fresh
+Astra cleared `5ebc1e780ec4ad2f4d515260e4447f3c806e0ca5`. Its tree matches the
+final merge and includes the independently merged Stockfish workspace member.
+Review fixes separated pending Save and Apply from browsing state, isolated
+PGN previews across tabs, and preserved explicit Retry semantics.
+
+The managed LaunchAgent serves this release on port 41823 with schema 10 and
+Core 0.2.2. The stopped backup and migrated database matched across all 23
+predecessor tables. SQLite integrity, foreign keys, served asset hashes and
+read-only endpoints passed. The [manifest](current-assembly.json) pins the
+release and backup. The exact installed artifact rehearsed the migration and
+model scan on a copy before switching the service.
 
 Maia-2 Rapid 1500/1500 predicts opponent moves after the selected starting line.
 Openings supplies the learner response. Authored coverage requires an answer through
@@ -19,8 +27,10 @@ worker uses Python 3.12, maia2 0.11.0, torch 2.8.0 and Rapid weights with SHA-25
 `65aae8465eed5e65df66a24ea7370715579f9e5435098d06fe18bdb1e267e997`.
 Host provisioning is documented in the Tempo README.
 
-All 34 combined Rust tests, two Python forecast tests, strict Clippy and the UI
-build passed. Chromium followed the generated Lichess link, restored the draft,
+All 34 Tempo tests, seven Stockfish contract tests (including the native
+Stockfish 19 check), two Python forecast tests, strict Clippy and the UI build
+passed. Five focused mounted browser checks covered interrupted Save and Apply,
+failed report reads, and two-tab preview/command isolation. Chromium followed the generated Lichess link, restored the draft,
 rejected unrelated PGN, and replayed a lost Save acknowledgement with one durable
 effect. A 20 KiB annotated transposition PGN added one response and excluded an
 unrelated variation. Lichess returned HTTP 403 to the automated browser. The
