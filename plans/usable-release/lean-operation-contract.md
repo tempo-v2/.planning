@@ -14,6 +14,18 @@ The runtime has one write connection, at most eight waiting proposals, two secon
 
 Display titles, provenance, optional game metadata and equivalent representation do not change acceptance or queue policy. A changed authoritative due time, card availability, saved rank or committed repeat position may change selection. Qualification uses the real HTTP and browser consumers, read-only SQL access checks and row budgets, writer contention, restarted imports, and original pending Answer envelopes from the preceding installed build on disposable data.
 
+## Standalone position analysis
+
+The Stockfish library owns position analysis and the CLI is its first
+consumer. The Lean runtime does not depend on the library. Scope is standard
+chess FEN and per-request analysis evidence. Callers own any blunder
+threshold and product action. Repeating a request starts a fresh search and
+does not create a saved result.
+
+| Operation and owner | Inputs and effect | Independence, limits and lifetime |
+| --- | --- | --- |
+| Evaluate a position, Stockfish analysis | Accept one complete standard FEN and typed depth and coverage. All legal moves are the default. The caller may ask for the top 1–10 or a distinct legal candidate set. A successful reply carries the engine version, engine-ranked lines at one completed depth, and White-relative centipawns or mate winner and distance. Zero legal roots yield a terminal result without a process. | One physical slot per shared instance, immediate admission, five-second startup and search deadline, one Stockfish thread and 16 MiB hash. CLI input is capped at 16 KiB and engine output at 4 MiB. Cancellation and failures retain the slot until the child is reaped, including when the caller runtime shuts down. Results are transient. Callers own thresholds and product effects. |
+
 ## Schema-3 handoff for Tempo #104
 
 [Tempo #104](https://github.com/tempo-v2/tempo/pull/104) shipped schema 3 with

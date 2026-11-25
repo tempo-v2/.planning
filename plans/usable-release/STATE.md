@@ -1,5 +1,34 @@
 # Tempo V2 usable release
 
+## Standalone Stockfish analysis
+
+[Tempo #118](https://github.com/tempo-v2/tempo/pull/118) adds
+`tempo-stockfish-analysis` 0.1.0 at
+`69d702f9ce8a1dd9e2111e0ce6c76e7d6627e7bd`, based on Lean main
+`d895f6dfe80cd9e9d96b53a702e4540c05b0ac98`. The JSON CLI is the first
+consumer. There is no installed artifact associated with this entry.
+
+The [operation contract](lean-operation-contract.md#standalone-position-analysis)
+records the supported inputs, engine budget, and ownership boundary.
+
+All seven contract tests passed with native Stockfish 19 enabled. The CLI
+returned all 20 starting moves and the exact 48-move set for Kiwipete. The
+suite also checked targeted comparison, Black-to-move normalization, mate,
+promotion, terminal positions, invalid and variant FEN rejection before
+launch, contention, cancellation, timeout, and subprocess cleanup.
+The Astra review reproduced malformed standard FEN accepted by the parser,
+contradictory coverage options, and a valid engine progress message treated
+as a failed score. The candidate rejects those requests before launch and
+keeps progress messages separate from scored lines. A second review
+reproduced admission before reaping when the caller runtime shuts down.
+The worker now owns reaping independently of the caller runtime. The new
+regression failed on the previous head and passed on this candidate.
+Clippy passed with warnings denied. The Lean application and packaged Core
+0.2.2 UI built, and the normal runtime returned HTTP 200 from a disposable
+database with Stockfish absent from PATH. The serving package dependency
+tree excludes the analysis crate. There is no route, settings, schema, or
+managed-install change.
+
 ## Study drop preview candidate
 
 [Tempo #115](https://github.com/tempo-v2/tempo/pull/115) publishes
