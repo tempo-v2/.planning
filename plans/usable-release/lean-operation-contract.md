@@ -24,7 +24,7 @@ does not create a saved result.
 
 | Operation and owner | Inputs and effect | Independence, limits and lifetime |
 | --- | --- | --- |
-| Evaluate a position, Stockfish analysis | Accept one complete standard FEN and typed depth and coverage. All legal moves are the default. The caller may ask for the top 1–10 or a distinct legal candidate set. A successful reply carries the engine version, engine-ranked lines at one completed depth, and White-relative centipawns or mate winner and distance. Zero legal roots yield a terminal result without a process. | One physical slot per shared instance, immediate admission, five-second startup and search deadline, one Stockfish thread and 16 MiB hash. CLI input is capped at 16 KiB and engine output at 4 MiB. Cancellation and failures retain the slot until the child is reaped. Results are transient. Callers own thresholds and product effects. |
+| Evaluate a position, Stockfish analysis | Accept one complete standard FEN and typed depth and coverage. All legal moves are the default. The caller may ask for the top 1–10 or a distinct legal candidate set. A successful reply carries the engine version, engine-ranked lines at one completed depth, and White-relative centipawns or mate winner and distance. Zero legal roots yield a terminal result without a process. | One physical slot per shared instance, immediate admission, five-second startup and search deadline, one Stockfish thread and 16 MiB hash. CLI input is capped at 16 KiB and engine output at 4 MiB. Cancellation and failures retain the slot until the child is reaped, including when the caller runtime shuts down. Results are transient. Callers own thresholds and product effects. |
 
 ## Schema-3 handoff for Tempo #104
 
