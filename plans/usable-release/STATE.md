@@ -1,5 +1,37 @@
 # Tempo V2 usable release
 
+## Lean schema 7 Game and Answer representations
+
+[Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `f12bff7e5f5a5b1aa87f5166f04c9f79ed2828e2`
+uses the [schema-7 operation contract](lean-operation-contract.md) and packaged
+Core 0.2.2. The [assembly manifest](current-assembly.json) identifies the
+qualified candidate and the serving schema-6 predecessor.
+
+- All 27 locked Rust tests, strict Clippy, the packaged UI build and the
+  optimized executable build passed. Occurrence lookup stayed bounded with
+  100,000 unrelated and 100,000 same-fingerprint rows. SQLite counted 128
+  affected rows on the maximum final capture apply, including ready-order
+  triggers and parent progress.
+- A disposable copy converted all 16,768 archived games. SQLite integrity and
+  foreign keys passed. All predecessor semantic rows matched in both
+  directions. Packed route payloads used 3,146,978 bytes, from 8,712,290.
+  The explicit offline migration refused the serving lock. A schema-6 upload
+  resumed its original file, identity and byte offset on schema 7.
+- Real HTTP used manual PGN and frozen local Lichess and Chess.com downloads.
+  It reused one archive identity, kept independent detector progress through
+  comparison failure, retried the sealed analysis after an opening edit, and
+  observed the new input on an explicit rescan. A substituted detector
+  retained its new versioned finding without changing the accepted puzzle.
+  The Stats proof used the addressed Game reader.
+- Chromium replayed both original schema-6 Answer cases, recovered the
+  two-tab delayed response and an incomplete success reply, and retried only
+  Next after acceptance. Original, renamed and blank titles yielded the same
+  Good/Again commands, receipts, relative schedules, and continuation.
+- First independent Astra pass at `33bc0a0` identified incomplete receipt
+  handling, duplicated Game reconstruction and an oversized terminal capture
+  transaction. These are corrected in the candidate above and covered by
+  the browser and SQLite checks. Fresh exact-head review follows.
+
 ## Lean Games admission and Study count bounds
 
 [Tempo #109](https://github.com/tempo-v2/tempo/pull/109) merged schema 6 at
