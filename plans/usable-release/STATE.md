@@ -5,7 +5,8 @@
 [Tempo #112](https://github.com/tempo-v2/tempo/pull/112) pins candidate
 `f765748b1107daee7fcbb845af522c27452ecbf3` for the schema-8
 [archive rescan contract](lean-operation-contract.md#schema-8-archive-rescan-cursor).
-The schema-7 build remains the managed installation while this candidate is reviewed.
+Astra independently cleared this head and [Planning #96](https://github.com/tempo-v2/.planning/pull/96).
+Tempo main merged the identical tree at `6c7a8d289ec9db68936ef6860d3743742ad16eed`.
 
 - The bundled SQLite hit, exhausted range and 64-row page used 24, 11 and
   459 VM steps before 100,000 post-cutoff games, and 18, 14 and 459 after.
@@ -18,8 +19,32 @@ The schema-7 build remains the managed installation while this candidate is revi
   retained games. The schema-7 executable refused schema 8. A staged
   upload resumed its original ID, file and byte offset.
 - 31 locked Rust tests, strict Clippy, packaged Core 0.2.2, the optimized
-  executable and Chromium Answer recovery passed. Independent review
-  and managed install remain pending.
+  executable and Chromium Answer recovery passed. The exact managed build
+  reran the disposable Games and Chromium suites before cutover.
+
+### Installed schema-8 report card
+
+The stopped schema-7 backup and executable remain available together.
+The locked cutover preserved all 23 predecessor tables and validated
+staged-file references, integrity and foreign keys. One registered service
+serves the matching executable and three assets. Health and nine read-only
+endpoints responded successfully. The [manifest](current-assembly.json)
+records both installations.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | The locked suite retained prepared-queue isolation and bounded issuance. Real Next and Answer succeeded during scan recovery. |
+| Chess, Learning and acceptance | A | Exact Answer replay preserved one grade and schedule, and the cutover preserved the Learning rows. |
+| Study UI, Core and recovery | A | Packaged Core 0.2.2, schema-7 Answers, mixed tabs, display-name invariance and retry after interrupted Next passed in Chromium. |
+| Games, detectors and Tactics | A | SQLite used the ordinal primary-key range for one game or one bounded compatibility page. Lookup work stayed bounded with 100,000 later games. A partly applied seal and both detector jobs recovered with exact membership, findings and parent counts. |
+| Optional reads and browsing | A | Real HTTP and Chromium checks covered addressed replay, bounded pages, cancellation and read-only retry. |
+| Openings and Settings | A | Cutover kept the exact catalog and preference rows. The installed routes served them successfully. |
+| Request limits and shared writer | A | The writer admission and detector apply budget checks passed. A compatibility page requeues only its own job with the existing writer. |
+
+**Overall A for the seven assessed Lean boundaries.** Scale, failure
+injection and synthetic commands ran on disposable databases. The installed
+checks covered cutover preservation, process and artifact identity, and
+read-only service behavior.
 
 ## Lean bounded browsing
 

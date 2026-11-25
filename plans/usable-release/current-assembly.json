@@ -3,15 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "2264e963674138e61b02e3ff8dda88f3379ad5c1",
-    "sqlite_schema": 7,
-    "binary_sha256": "0c1680c57ab2a25059fd230160965a61fab7a088defeb72ddd4deb4803b23baa",
+    "commit": "6c7a8d289ec9db68936ef6860d3743742ad16eed",
+    "sqlite_schema": 8,
+    "binary_sha256": "4aaf4c9773c62de6086950aa5e2f35c27757837a7629000605bb42e6f7a534e5",
     "assets": {
       "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
       "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T060810.844780Z-before-lean-schema-7/tempo.sqlite3"
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T064823.251721Z-before-lean-schema-8/tempo.sqlite3"
   },
   "candidate": {
     "commit": "f765748b1107daee7fcbb845af522c27452ecbf3",
@@ -27,7 +27,8 @@
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
     "built_binary_sha256": "a69806edaec1e90a4b6c527bc7393c2190e10c764b5dc1bded50b2149a8c6bee",
-    "qualification": "Locked tests, Chromium, production runner and disposable retained-copy migration passed. Independent review and managed installation are pending."
+    "qualification": "Exact published heads cleared independent Astra review. The merged managed build passed the Games and Chromium suites on disposable data and matched the serving executable and assets.",
+    "merged_commit": "6c7a8d289ec9db68936ef6860d3743742ad16eed"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
