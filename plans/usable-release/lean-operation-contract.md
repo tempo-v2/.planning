@@ -144,3 +144,11 @@ only advances that lane and returns it to the ready queue. An existing
 sealed game finishes with its saved file, detector version and offset
 before its legacy checkpoint is converted. The 60-second turn, writer
 admission and apply budgets continue to cover the resumed work.
+
+## Generated tactic qualification
+
+| Operation | Owner and permitted facts | Independence, limits and lifetime |
+| --- | --- | --- |
+| Qualify one suggested solution | Chess accepts the validated position, proposed legal roots and scores for all legal moves from a single depth-10 search. An alternative at most 30 CP worse, or preserving the same forced mate, makes the position ambiguous. The best move must be a detector candidate. | The outcome is independent of the motif and display data. Incomplete, terminal or inconsistent evidence cannot establish a verdict. The same rule can serve other generated tactics. |
+| Apply one game finding | Games supplies the original game occurrence and move. The catalog publishes only a qualifying capture that differs from the played move. The existing writer validates the exact dataset, detector finding and rule identity, then commits evidence and the catalog or queue change together. | Fresh findings wait for evidence. Existing cards keep eligibility until evaluated. Retirement excludes future issuance and repeats, while narrowing preserves identity and old issued answers. Accepted receipts are replayable. An exact re-delivery or archive rescan retains the committed verdict. |
+| Supply analysis | A separately launched worker shares one admitted engine slot with a five-second search deadline per position. Tempo exposes a private owner-only Unix socket with 64 KiB messages and background writer admission. | The server never launches Stockfish. Worker loss does not block Games acceptance or Study. A transient failure requeues with backoff, and late results are checked against the addressed work token. |
