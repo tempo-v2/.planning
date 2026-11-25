@@ -4,6 +4,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -125,6 +126,10 @@ def main():
                         help="try this local Git object store before GitHub; repeat as needed")
     parser.add_argument("--offline", action="store_true", help="report missing exact commits without remote fetches")
     args = parser.parse_args()
+    if args.offline:
+        # Even local partial clones can fetch promised objects from GitHub.
+        os.environ["GIT_NO_LAZY_FETCH"] = "1"
+        os.environ["GIT_ALLOW_PROTOCOL"] = "file"
     workspace = args.workspace.resolve()
     if (workspace / ".planning").resolve() != PLANNING:
         raise SetupError("Use the .planning checkout inside the selected workspace")
