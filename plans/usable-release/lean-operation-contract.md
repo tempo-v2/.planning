@@ -170,3 +170,20 @@ bounded snapshot. Only accepted reviews on saved paths affect that score.
 Predecessor combined reads compose the same projections. Apply retains
 its original model and revision fence. No Study write depends on these
 coverage projections.
+
+## Schema-16 tactic submissions and coverage model identity
+
+A worker that has engine evidence retains the exact Submit message in
+memory in drain and watch. A known verdict confirms the stored outcome.
+An explicit stale-work reply releases the obsolete token. Explicit invalid
+evidence uses the existing addressed retry. Busy admission, busy or locked
+storage, a lost reply and an unrecognized acknowledgement keep the same
+submission pending. Replaying a committed token returns its verdict without
+another catalog or counter effect. Restart without a committed verdict can
+reanalyze an eligible finding.
+
+Coverage persists the saved forecast model identity. The report read and
+an unapplied rank change both compare that identity with the current model.
+A saved Apply receipt continues to replay. Migration derives identities
+from retained forecasts. Human-readable labels and inherited header flags
+cannot affect model eligibility.
