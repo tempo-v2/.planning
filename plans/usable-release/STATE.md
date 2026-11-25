@@ -2,12 +2,12 @@
 
 ## Lean schema 7 Game and Answer representations
 
-[Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `f12bff7e5f5a5b1aa87f5166f04c9f79ed2828e2`
+[Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `693388c5a1453f3357afd9fefa5dd9184535d7f0`
 uses the [schema-7 operation contract](lean-operation-contract.md) and packaged
 Core 0.2.2. The [assembly manifest](current-assembly.json) identifies the
 qualified candidate and the serving schema-6 predecessor.
 
-- All 27 locked Rust tests, strict Clippy, the packaged UI build and the
+- All 28 locked Rust tests, strict Clippy, the packaged UI build and the
   optimized executable build passed. Occurrence lookup stayed bounded with
   100,000 unrelated and 100,000 same-fingerprint rows. SQLite counted 128
   affected rows on the maximum final capture apply, including ready-order
@@ -20,17 +20,24 @@ qualified candidate and the serving schema-6 predecessor.
 - Real HTTP used manual PGN and frozen local Lichess and Chess.com downloads.
   It reused one archive identity, kept independent detector progress through
   comparison failure, retried the sealed analysis after an opening edit, and
-  observed the new input on an explicit rescan. A substituted detector
+  observed the new input on an explicit rescan. Named rounds distinguished
+  separate occurrences, with exact repeats and placeholder rounds reusing an
+  existing game. A substituted detector
   retained its new versioned finding without changing the accepted puzzle.
   The Stats proof used the addressed Game reader.
 - Chromium replayed both original schema-6 Answer cases, recovered the
   two-tab delayed response and an incomplete success reply, and retried only
   Next after acceptance. Original, renamed and blank titles yielded the same
-  Good/Again commands, receipts, relative schedules, and continuation.
+  Good/Again commands, receipts, relative schedules, and continuation. A
+  still-loaded schema-6 tab cleared its old scalar after cutover while the
+  reloaded schema-7 tab retained and replayed its newer intent.
 - First independent Astra pass at `33bc0a0` identified incomplete receipt
   handling, duplicated Game reconstruction and an oversized terminal capture
   transaction. These are corrected in the candidate above and covered by
-  the browser and SQLite checks. Fresh exact-head review follows.
+  the browser and SQLite checks. The second review at `f12bff7` confirmed
+  those checks and found that nonnumeric rounds collapsed. The candidate
+  above now preserves named rounds and exercises them through HTTP. Fresh
+  exact-head review follows.
 
 ## Lean Games admission and Study count bounds
 

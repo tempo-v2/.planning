@@ -13,7 +13,7 @@
     }
   },
   "candidate": {
-    "commit": "f12bff7e5f5a5b1aa87f5166f04c9f79ed2828e2",
+    "commit": "693388c5a1453f3357afd9fefa5dd9184535d7f0",
     "pull_request": "https://github.com/tempo-v2/tempo/pull/110",
     "sqlite_schema": 7,
     "cargo_lock_sha256": "c6608a9637ad04af427e7c3918f03ed8e22d32db63e4c1e51dcdd7c140ae6020",
@@ -25,7 +25,7 @@
       "assets/app.js": "7d8cac7bc1a844d703397a3efd6dad1d10a96d61d0307860c548efb70bac6d86",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
-    "built_binary_sha256": "04e30b093e8b1aba58d7631fb656dd4bf15d09d99fc405b4625367515cb0ff8f"
+    "built_binary_sha256": "7ccafec99b014e39e31958140612e8c821517c7ce1f611e58ef47eb5b5572f09"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
