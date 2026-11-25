@@ -1,5 +1,25 @@
 # Tempo V2 usable release
 
+## Installed shared Study and Tactics layout
+
+[Tempo #128](https://github.com/tempo-v2/tempo/pull/128) shipped at
+`21b704baab82d18a5441f063b244de76df0cab48` on Lean schema 14 and Core 0.2.2.
+Ordinary Study, full-line Study and Tactics share the board layout.
+The desktop board stays anchored on the left. Feedback, promotion,
+replay and navigation controls sit on the right. Phone controls stack
+below the board.
+
+Fresh Astra cleared the reviewed tree after the replay focus correction
+and integration with the schema-14 generated tactics release. Chromium
+on the optimized release verified desktop board bounds and scroll,
+mobile stacking, replay focus and Next-only retry. Predecessor recovery
+passed on disposable data.
+
+The managed switch took a verified stopped backup and served the expected
+assets and existing catalog on schema 14. The tactic worker retained its
+release and reconnected to the replacement server. See the
+[assembly manifest](current-assembly.json) for artifact and backup details.
+
 ## Installed online batch saving for large gaps
 
 [Tempo #121](https://github.com/tempo-v2/tempo/pull/121) installed at
