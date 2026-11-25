@@ -112,3 +112,23 @@ A page refresh supersedes earlier list reads. Only the current selection
 may apply a replay response. A failed read preserves the last successful
 view and cannot undo a saved command. Existing response shapes and pending
 schema-6 Answer envelopes remain compatible.
+
+## Schema-8 archive rescan cursor
+
+Games owns a frozen archive rescan. The parent captures one inclusive
+archive ordinal cutoff for both detector jobs. Store seeks by ordinal
+within that cutoff. Games visits one new game per turn and advances that
+lane's checkpoint with the final durable apply. Games arriving after the
+cutoff get their own scans and add no work to this lookup. Ordinal defines
+traversal only. Game identity, detector versions and published tactic
+identity retain their existing meanings.
+
+Schema 8 versions the durable cursor with the existing offline database
+fence. Migration leaves the archive and job rows intact. A resumed
+game-ID cursor retains its cutoff and completed ID prefix while the
+runner walks pages of at most 64 ordinals. A plain predecessor ID
+without a cutoff freezes one before resuming. A page of completed games
+only advances that lane and returns it to the ready queue. An existing
+sealed game finishes with its saved file, detector version and offset
+before its legacy checkpoint is converted. The 60-second turn, writer
+admission and apply budgets continue to cover the resumed work.
