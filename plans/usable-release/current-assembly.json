@@ -3,15 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "0d6e288027dee3204850676da57f0cb3b2622ce6",
-    "sqlite_schema": 12,
-    "binary_sha256": "3c24f1d65277e5937af05a5c5b67d3b9f330ce49960a336e210ad934e3fe51bc",
+    "commit": "7358fba69835d7b4c415a3638db49e26da8c6727",
+    "sqlite_schema": 13,
+    "binary_sha256": "f62ceb6b970aaddd4f29b4d21ec5821a12fd60320cc73a8efc54a7cfd4e844be",
     "assets": {
-      "index.html": "497df21ccafb21600e9524829415fc52ea51eeacab7caf98a31adfc43c2065f8",
-      "assets/app.js": "c7b74dee83b261fe822b6b2a2bd2e595e457f288d7f8200aaa37ba17887003df",
+      "index.html": "2386701e76e80812257374e29005dcfe6e7f03efc48311e2e670ce9d29bf37d2",
+      "assets/app.js": "5b0f17f874307278b858d07d0ef42500f828918fe2deb3310e6355e1ed467584",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T154350.992966Z-before-lichess-packs/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T161739.640251Z-before-lichess-recovery/tempo.sqlite3",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -21,20 +21,19 @@
     }
   },
   "candidate": {
-    "commit": "0d6e288027dee3204850676da57f0cb3b2622ce6",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/120",
-    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/123",
-    "sqlite_schema": 12,
+    "commit": "d1a48988e1a703a43873401660e8754448039227",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/125",
+    "sqlite_schema": 13,
     "cargo_lock_sha256": "de465b225b245f28b04c372064e24b6904ca2769945276819b6d38fb1dae5208",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "built_assets": {
-      "index.html": "497df21ccafb21600e9524829415fc52ea51eeacab7caf98a31adfc43c2065f8",
-      "assets/app.js": "c7b74dee83b261fe822b6b2a2bd2e595e457f288d7f8200aaa37ba17887003df",
+      "index.html": "2386701e76e80812257374e29005dcfe6e7f03efc48311e2e670ce9d29bf37d2",
+      "assets/app.js": "5b0f17f874307278b858d07d0ef42500f828918fe2deb3310e6355e1ed467584",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "built_binary_sha256": "3c24f1d65277e5937af05a5c5b67d3b9f330ce49960a336e210ad934e3fe51bc",
+    "built_binary_sha256": "f62ceb6b970aaddd4f29b4d21ec5821a12fd60320cc73a8efc54a7cfd4e844be",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -42,8 +41,8 @@
       "themes": 74,
       "puzzles": 18214
     },
-    "qualification": "39 Rust tests and strict Clippy passed. Independent Chromium and HTTP covered first play, scheduled full-line Study, predecessor recovery, refresh and repeat placement. Mobile Chromium covered pack progression. Stopped migration and import preserved all 29 predecessor tables.",
-    "merged_commit": "0d6e288027dee3204850676da57f0cb3b2622ce6"
+    "qualification": "Fresh Astra cleared the exact reviewed tree. The release build passed retained predecessor Chromium recovery, malformed move and Next-only checks. The managed install compared all 38 predecessor tables.",
+    "merged_commit": "7358fba69835d7b4c415a3638db49e26da8c6727"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",

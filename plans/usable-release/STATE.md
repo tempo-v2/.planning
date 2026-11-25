@@ -1,5 +1,26 @@
 # Tempo V2 usable release
 
+## Installed full-line Study recovery
+
+[Tempo #125](https://github.com/tempo-v2/tempo/pull/125) shipped at
+`7358fba69835d7b4c415a3638db49e26da8c6727` on Lean schema 13 and Core 0.2.2.
+It clears a rejected predecessor Answer after a reload and resumes the issued
+full-line puzzle. Chess rejects missing and malformed actions without grading
+and accepts an alternate final checkmate when the prescribed move also mates.
+New Starts bind their catalog revision. Historical Starts and accepted Move
+receipts remain recoverable.
+
+Fresh Astra cleared the exact source tree. Chromium against the optimized
+release verified predecessor recovery on retained data, a rejected old-tab
+Answer, canonical moves, alternate mate, and Retry Next after an accepted
+result. Synthetic results were recorded only in disposable databases.
+
+The stopped backup and schema migration preserved the prior fields and rows
+of all 38 tables, including Learning, the active attempt, and the Lichess
+catalog. SQLite integrity and foreign keys passed. The registered service
+served the expected UI hashes and unchanged 74-theme catalog. See the
+[assembly manifest](current-assembly.json) for the artifacts and backup.
+
 ## Installed Lichess packs and full-solution Study
 
 [Tempo #120](https://github.com/tempo-v2/tempo/pull/120) and
