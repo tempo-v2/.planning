@@ -1,5 +1,24 @@
 # Tempo V2 usable release
 
+## Lean bounded browsing
+
+[Tempo #111](https://github.com/tempo-v2/tempo/pull/111) head `f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f`
+adds the read contract to the schema-7 runtime. The Mac still serves schema 6.
+The planned release moves directly from that installation to the combined
+candidate.
+
+- 30 locked Rust tests, strict Clippy, packaged Core UI and optimized build passed.
+- Chromium replayed the original schema-6 Answers, exercised mixed tabs and
+  Next-only retry, and confirmed archive refresh coalescing and read-only retry.
+- Real HTTP exercised Games identity, detector recovery, pagination and addressed
+  replay. The optimized build preserved all 16,768 games and predecessor rows
+  on a disposable copy, and resumed the schema-6 upload from its original checkpoint.
+- Initial independent review found that a malformed current Study reply could
+  trigger Next and a failed read after definitive Answer resolution could
+  resend the command. Both have mounted Chromium regressions and are fixed
+  in this head. Fresh independent review and installation remain pending.
+
+
 ## Lean schema 7 Game and Answer representations
 
 [Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `693388c5a1453f3357afd9fefa5dd9184535d7f0`
