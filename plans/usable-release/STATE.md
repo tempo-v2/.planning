@@ -1,5 +1,29 @@
 # Tempo V2 usable release
 
+## Standalone Stockfish analysis
+
+[Tempo #118](https://github.com/tempo-v2/tempo/pull/118) adds
+`tempo-stockfish-analysis` 0.1.0 at
+`3b6f408b22760d89a817f8f8ff682b49977c4cb7`, based on Lean main
+`d895f6dfe80cd9e9d96b53a702e4540c05b0ac98`. The JSON CLI is the first
+consumer. There is no installed artifact associated with this entry.
+
+| Operation and owner | Inputs and effect | Independence, limits and lifetime |
+| --- | --- | --- |
+| Evaluate a position, Stockfish analysis | Accept one complete standard FEN and typed depth and coverage. All legal moves are the default. The caller may ask for the top 1–10 or a distinct legal candidate set. A successful reply carries the engine version, engine-ranked lines at one completed depth, and White-relative centipawns or mate winner and distance. Zero legal roots yield a terminal result without a process. | One physical slot per shared instance, immediate admission, five-second startup and search deadline, one Stockfish thread and 16 MiB hash. CLI input is capped at 16 KiB and engine output at 4 MiB. Cancellation and failures retain the slot until the child is reaped. Results are transient. Callers own thresholds and product effects. |
+
+All five contract tests passed with native Stockfish 19 enabled. The CLI
+returned all 20 starting moves and the exact 48-move set for Kiwipete. The
+suite also checked targeted comparison, Black-to-move normalization, mate,
+promotion, terminal positions, invalid and variant FEN rejection before
+launch, contention, cancellation, timeout, and subprocess cleanup. An
+independent reviewer cleared the final candidate and reran the same suite.
+Clippy passed with warnings denied. The Lean application and packaged Core
+0.2.2 UI built, and the normal runtime returned HTTP 200 from a disposable
+database with Stockfish absent from PATH. The serving package dependency
+tree excludes the analysis crate. There is no route, settings, schema, or
+managed-install change.
+
 ## Study drop preview candidate
 
 [Tempo #115](https://github.com/tempo-v2/tempo/pull/115) publishes
