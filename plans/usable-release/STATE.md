@@ -1,12 +1,31 @@
 # Tempo V2 usable release
 
+## Installed repertoire gap review fixes
+
+[Tempo #132](https://github.com/tempo-v2/tempo/pull/132) is serving at
+`d65f18ede624af49f2a788d8d19feaf69c7815f2` on Lean schema 16 and Core 0.2.2.
+Gap preview retains verified recorded routes when it reaches the current-route
+search limit. An unreachable suffix cannot cause an independent saved
+continuation to be trimmed. Cyclic conflicts and work limits have explicit
+preview responses that leave the PGN editable.
+
+Fresh Astra cleared `8d16bc1`. All 53 Tempo tests and strict Clippy
+passed. Chromium on the optimized release verified in-place correction,
+confirmed replacement, and replay from the immediately preceding installed
+release on disposable data.
+
+The managed switch retained all 43 tables against the stopped backup.
+SQLite integrity and foreign keys passed. The registered listener and tactic
+worker use the published release, served asset bytes matched, and the retained
+dataset and active Study attempt were verified. The
+[assembly manifest](current-assembly.json) records the artifacts and backup.
+
 ## Installed schema-16 gap conflict resolution and worker replay
 
 [Tempo #130](https://github.com/tempo-v2/tempo/pull/130) and
-[Tempo #131](https://github.com/tempo-v2/tempo/pull/131) now serve at
-`9be76dff41fedc7f52d5aa481fbea92ae112189b` with Core 0.2.2. Both managed processes use that
-release. The [assembly manifest](current-assembly.json) records their
-hashes, the served assets, and the stopped predecessor backup.
+[Tempo #131](https://github.com/tempo-v2/tempo/pull/131) shipped at
+`9be76dff41fedc7f52d5aa481fbea92ae112189b` with Core 0.2.2. Both managed processes used that release. The
+[assembly manifest](current-assembly.json) retains its hashes and backup.
 
 Openings → Gaps can repair a pasted continuation with the saved reply
 or stage a separately confirmed repertoire replacement. The replacement
