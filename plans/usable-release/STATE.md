@@ -1,5 +1,54 @@
 # Tempo V2 usable release
 
+## Installed Maia repertoire gaps and Study order
+
+[Tempo #116](https://github.com/tempo-v2/tempo/pull/116) merged at
+`6041ec9f395700518073bc9b09c783e6e455edd5` with Openings → Gaps and additive
+PGN authoring. [Tempo #117](https://github.com/tempo-v2/tempo/pull/117) merged at
+`fed4db1fc6186e3bd162cb90efcd69c20bfbc79a` with explicit Study rank adoption. Fresh
+Astra cleared `5ebc1e780ec4ad2f4d515260e4447f3c806e0ca5`. Its tree matches the
+final merge and includes the independently merged Stockfish workspace member.
+Review fixes separated pending Save and Apply from browsing state, isolated
+PGN previews across tabs, and preserved explicit Retry semantics.
+
+The managed LaunchAgent serves this release on port 41823 with schema 10 and
+Core 0.2.2. The stopped backup and migrated database matched across all 23
+predecessor tables. SQLite integrity, foreign keys, served asset hashes and
+read-only endpoints passed. The [manifest](current-assembly.json) pins the
+release and backup. The exact installed artifact rehearsed the migration and
+model scan on a copy before switching the service.
+
+Maia-2 Rapid 1500/1500 predicts opponent moves after the selected starting line.
+Openings supplies the learner response. Authored coverage requires an answer through
+the chosen learner move, and studied coverage requires an accepted Good or Again
+on every current response there. Conflicts and the scan budget leave explicit
+unresolved probability. Opening names have no bearing on these decisions. The
+worker uses Python 3.12, maia2 0.11.0, torch 2.8.0 and Rapid weights with SHA-256
+`65aae8465eed5e65df66a24ea7370715579f9e5435098d06fe18bdb1e267e997`.
+Host provisioning is documented in the Tempo README.
+
+All 34 Tempo tests, seven Stockfish contract tests (including the native
+Stockfish 19 check), two Python forecast tests, strict Clippy and the UI build
+passed. Five focused mounted browser checks covered interrupted Save and Apply,
+failed report reads, and two-tab preview/command isolation. Chromium followed the generated Lichess link, restored the draft,
+rejected unrelated PGN, and replayed a lost Save acknowledgement with one durable
+effect. A 20 KiB annotated transposition PGN added one response and excluded an
+unrelated variation. Lichess returned HTTP 403 to the automated browser. The
+remaining external check is to open the provided line in Lichess and export an
+edited PGN there.
+
+On disposable data the selected reply raised authored coverage from 7.01% to
+36.31%. A real Again review raised studied coverage to 29.30%. An independent
+3,000-card interrupted apply preserved the previous order before publication,
+then recovered across restart with one receipt. With 4,095 higher-ranked future
+reviews the due selector used 24 indexed probes. The mounted Study suite passed
+accepted and undelivered predecessor Answer recovery on copies of the installed
+database, interrupted Next, and the merged Study drop-preview journeys.
+
+On a migrated copy of the retained Gustafsson repertoire, the scan after
+1.e4 e5 2.Nf3 through White's move 10 took 7.7 seconds on the qualification
+host. It returned 2,063 distinct first gaps, 2.334% confirmed authored coverage
+and 0.625% unresolved probability. These are conditional model estimates.
 ## Standalone Stockfish analysis
 
 [Tempo #118](https://github.com/tempo-v2/tempo/pull/118) adds
