@@ -6063,3 +6063,43 @@ verified. The prior omitted extra-tactics value retained its effective
 default on the first save.
 
 This evidence covers the predecessor multi-repository candidate. Integration of its component PRs is tracked separately.
+
+## Installed unique-solution qualification for generated tactics
+
+[Tempo #127](https://github.com/tempo-v2/tempo/pull/127) installed
+`493918320d1ceec19cedb9b11e0c1ab6a66d2459` on schema 14 with Core 0.2.2
+and the Maia-3 UI from its immediately preceding release. A separately
+registered `com.tempo-v2.lean.tactics` worker uses Stockfish 19. The
+serving package dependency graph excludes Stockfish. Both registered
+processes and the served asset hashes were verified.
+
+The shared Chess qualifier requires a unique best proposed move from all
+legal roots at depth 10. A gap of 30 centipawns or less is equivalent,
+including quiet alternatives. Moves preserving the same forced mate also
+count as equivalent. Games remains the source of capture findings. The
+catalog applies one verified verdict at a time before publishing new
+cards, narrows existing answer sets under their original identity, and
+removes failed cards from the active catalog and Study queue while
+retaining their receipts and learning records.
+
+Fresh Astra cleared source `7da8b5e62b611afbd2f7feb6bf87f2fb62c8160a`.
+The 45 Tempo Rust tests, seven Stockfish contract tests including the native
+test, strict Clippy and the packaged UI build passed. A disposable HTTP
+journey imported a game with the worker absent, held publication while the
+engine was unavailable, published with Stockfish 19, and graded and replayed
+one Study Answer after restart. A disposable catalog preview evaluated
+442 findings and removed 120 cards, narrowed 15 and kept 307. Matching
+preview evidence was reapplied through the production writer.
+
+The stopped backup was
+`20261125T164924.809386Z-before-unique-tactics/tempo.sqlite3`. The migration
+preserved the dataset, current attempt, and the counts of cards, learning,
+attempts, games, tactics, and Lichess versions. SQLite integrity and foreign
+keys passed. The reported `Qf6` position is five centipawns ahead of
+`bxc6` at depth 10. All 34 matching occurrences were retired, and their
+three saved reviews were retained.
+
+The worker was observed advancing through the remaining historical catalog.
+Incomplete positions stay unresolved for automatic retry under the same
+bound. Worker status reports the live kept, narrowed, removed and unresolved
+counts. This release scans retained findings without an archive rescan.
