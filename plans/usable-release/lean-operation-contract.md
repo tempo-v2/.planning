@@ -187,3 +187,25 @@ an unapplied rank change both compare that identity with the current model.
 A saved Apply receipt continues to replay. Migration derives identities
 from retained forecasts. Human-readable labels and inherited header flags
 cannot affect model eligibility.
+
+## Coverage scan lifetime and bounded Apply
+
+A scan belongs to the Gaps request until publication. Leaving Gaps or losing
+the request cancels uncommitted computation. A saved opening and a report
+already committed retain their own identities. Coverage admits one physical
+scan with a 300-second budget from admission through publication and 32 MiB
+each for model input and output. On cancellation, expiry, failure, or service
+shutdown the owner terminates and reaps its child before releasing admission.
+A fresh cached report reuses its current dataset, repertoire revision, model
+and normalized scan identity. A stale scan cannot publish.
+
+Apply owns one atomic order change for the exact saved forecast, guarded by
+saved model, repertoire revision and active rank bank. Only reached card IDs,
+their existing effective slots, forecast probabilities, and the indexed
+global maximum effective opening rank determine new placements. Ties retain
+the existing slot order and deterministic card-ID order. Both ranked and
+unranked reached cards keep the predecessor interpretation. Prior bank
+differences are reconciled before staging any new placements, including after
+interruption. Store writes at most 128 rows per turn and activates with the
+command receipt. Replaying an accepted command uses the retained receipt.
+Unrelated openings, display details, and tactics add no scan to rank preparation.
