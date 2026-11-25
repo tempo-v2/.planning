@@ -3,14 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "0c9ed8b3324a40f7e88653aea4366c6e030c8c00",
-    "sqlite_schema": 6,
-    "binary_sha256": "adbb1d81734e3640ba30346d43fad240a7631ac3953e213b338b4a6216a0cd21",
+    "commit": "2264e963674138e61b02e3ff8dda88f3379ad5c1",
+    "sqlite_schema": 7,
+    "binary_sha256": "0c1680c57ab2a25059fd230160965a61fab7a088defeb72ddd4deb4803b23baa",
     "assets": {
-      "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac",
-      "assets/app.js": "261971e80930d64e992846afdb022d472fa970b4976aa65eeacc8a1125266d5a",
+      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
+      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
-    }
+    },
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T060810.844780Z-before-lean-schema-7/tempo.sqlite3"
   },
   "candidate": {
     "commit": "f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f",
@@ -26,7 +27,8 @@
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
     "built_binary_sha256": "e05b4cc5311e9486c7d3e4fae102bc6be05d63253bb5cf444d288afe569fa98e",
-    "qualification": "Implementation checks passed. Fixed initial independent findings and reran Chromium. Fresh review and managed cutover pending."
+    "qualification": "Fresh independent review cleared the combined candidate. The exact locked managed build passed disposable migration and mounted-browser qualification, then passed installed artifact and read-only checks.",
+    "merged_commit": "2264e963674138e61b02e3ff8dda88f3379ad5c1"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
@@ -78,12 +80,12 @@
     }
   },
   "previous_lean_installation": {
-    "commit": "0cce44a58ec8e6557bd614e2e935b0e00cf3e9da",
-    "sqlite_schema": 5,
-    "binary_sha256": "de9c04fba2ef215d22a712bcb084d1d11148d97f78f7e7b944108be7242bc8eb",
+    "commit": "0c9ed8b3324a40f7e88653aea4366c6e030c8c00",
+    "sqlite_schema": 6,
+    "binary_sha256": "adbb1d81734e3640ba30346d43fad240a7631ac3953e213b338b4a6216a0cd21",
     "assets": {
       "index.html": "3ebea9985d4af80e7b7dcd0fc7039b81592935057d96022ff359658413c2f9ac",
-      "assets/app.js": "46d85c452bb0e3001af078a1d6a3a20b6acd5ffe2409bd96f39a62c518874547",
+      "assets/app.js": "261971e80930d64e992846afdb022d472fa970b4976aa65eeacc8a1125266d5a",
       "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     }
   },
