@@ -1,6 +1,24 @@
 # Tempo V2 usable release
 
-## Installed offline import for large gap continuations
+## Installed online batch saving for large gaps
+
+[Tempo #121](https://github.com/tempo-v2/tempo/pull/121) installed at
+`f98e346ccb09271c55ebcab5671354e60e497609` with schema 11 and Core 0.2.2.
+Openings → Gaps uses **Save to repertoire** for large PGNs. Openings validates
+the full continuation and commits bounded writes with their durable checkpoint.
+Retry uses the original command. A change to authored replies during the save
+fences subsequent batches and reports the committed progress. A line name or an
+additional line that uses only existing replies does not affect that fence.
+
+Fresh Astra cleared `362a4fffe6dc5b32365c93792535ca2f9fabe158`. The reported PGN
+saved 45 lines and 90 replies online on retained copies. HTTP resumed after
+interruption at 9 lines, and Chromium recovered after a lost final acknowledgement
+and reload. Both returned one receipt and preserved Learning. All 36 Tempo tests,
+strict Clippy, the UI build, and mounted predecessor Answer recovery passed.
+The stopped backup and installed database matched across all 28 predecessor
+tables. The [manifest](current-assembly.json) records the artifact and backup.
+
+## Previous offline import release
 
 [Tempo #119](https://github.com/tempo-v2/tempo/pull/119) merged and installed at
 `b048e28823cec0c09559da8989b425980e2d1f12` with Core 0.2.2 and schema 10. Large gap
