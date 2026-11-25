@@ -24,6 +24,20 @@ Routine commands use addressed state and writes. Full snapshots, whole-history v
 - Keep dependencies pointed from the caller to the owned interface. Pass typed values across component boundaries. Keep implementation handles and unrelated tables behind their owner. Keep concrete wiring in the application or job composition code. Extend an interface for a demonstrated consumer need and keep it specific to that operation.
 - Verify through the real consumer that a new or substituted source can deliver valid input and that an empty or failed optional source leaves unrelated commands and their durable effects independent. Include the expected difference when an authoritative input changes. Review actual calls, reads, and writes along with imports.
 
+### Review blocker: settings have one source of truth
+
+Every user-configurable Tempo preference must be editable in Settings and have
+one authoritative saved value, one owner, and one validation and save path for
+its declared scope. Hidden preferences, competing defaults, independent
+writers, and overrides via CLI flags, environment variables, or config files
+are forbidden. A feature shortcut may use the same setting through its owner.
+Review new and changed settings by tracing the Settings control through the
+authoritative value to the actual consumer.
+
+This rule applies to user preferences. Host setup, access provisioning,
+credentials, fixed product rules, and inputs to individual operations fall
+outside that scope.
+
 ## 3. Enforce the prepared-order Study contract
 
 Queue owns one rebuildable ordered plan and its bounded priority updates. Learning owns current availability and every Learning transition. Store enforces addressed identities, versions, constraints and atomic accepted effects. Chess owns legal interpretation. Study, if retained, owns attempt progression and the first accepted assessment.
