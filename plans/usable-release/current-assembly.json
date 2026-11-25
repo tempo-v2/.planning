@@ -3,33 +3,47 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "f98e346ccb09271c55ebcab5671354e60e497609",
-    "sqlite_schema": 11,
-    "binary_sha256": "e1e0f09bb6e79567b1798f277bf454f72b73e79012886f81749917ae97b1ed6c",
+    "commit": "0d6e288027dee3204850676da57f0cb3b2622ce6",
+    "sqlite_schema": 12,
+    "binary_sha256": "3c24f1d65277e5937af05a5c5b67d3b9f330ce49960a336e210ad934e3fe51bc",
     "assets": {
-      "index.html": "bfaea777f90cb43ea85c2a0aa321d5caffc23222c8e1827300f6f62bdf70f029",
-      "assets/app.js": "a9541fa29a6c667d711aa5df0709208f3834c3a4f22129840960e3ba6ac653bf",
+      "index.html": "497df21ccafb21600e9524829415fc52ea51eeacab7caf98a31adfc43c2065f8",
+      "assets/app.js": "c7b74dee83b261fe822b6b2a2bd2e595e457f288d7f8200aaa37ba17887003df",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T152313.077903Z-before-online-gap-batches/tempo.sqlite3"
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T154350.992966Z-before-lichess-packs/tempo.sqlite3",
+    "lichess_catalog": {
+      "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
+      "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
+      "packs": 1332,
+      "themes": 74,
+      "puzzles": 18214
+    }
   },
   "candidate": {
-    "commit": "362a4fffe6dc5b32365c93792535ca2f9fabe158",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/121",
-    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/117",
-    "sqlite_schema": 11,
-    "cargo_lock_sha256": "df95acf43623c8a933c0a51a59b9c90434a4934e53e023abd66bbf042c1acadc",
+    "commit": "0d6e288027dee3204850676da57f0cb3b2622ce6",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/120",
+    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/123",
+    "sqlite_schema": 12,
+    "cargo_lock_sha256": "de465b225b245f28b04c372064e24b6904ca2769945276819b6d38fb1dae5208",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "built_assets": {
-      "index.html": "bfaea777f90cb43ea85c2a0aa321d5caffc23222c8e1827300f6f62bdf70f029",
-      "assets/app.js": "a9541fa29a6c667d711aa5df0709208f3834c3a4f22129840960e3ba6ac653bf",
+      "index.html": "497df21ccafb21600e9524829415fc52ea51eeacab7caf98a31adfc43c2065f8",
+      "assets/app.js": "c7b74dee83b261fe822b6b2a2bd2e595e457f288d7f8200aaa37ba17887003df",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "built_binary_sha256": "e1e0f09bb6e79567b1798f277bf454f72b73e79012886f81749917ae97b1ed6c",
-    "qualification": "Fresh Astra cleared the exact source. Retained-copy HTTP and mounted Chromium saved the reported 45 lines and 90 replies, replayed one receipt after restart or lost response, and preserved Learning. All 28 predecessor tables matched the stopped backup at installation.",
-    "merged_commit": "f98e346ccb09271c55ebcab5671354e60e497609"
+    "built_binary_sha256": "3c24f1d65277e5937af05a5c5b67d3b9f330ce49960a336e210ad934e3fe51bc",
+    "lichess_catalog": {
+      "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
+      "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
+      "packs": 1332,
+      "themes": 74,
+      "puzzles": 18214
+    },
+    "qualification": "39 Rust tests and strict Clippy passed. Independent Chromium and HTTP covered first play, scheduled full-line Study, predecessor recovery, refresh and repeat placement. Mobile Chromium covered pack progression. Stopped migration and import preserved all 29 predecessor tables.",
+    "merged_commit": "0d6e288027dee3204850676da57f0cb3b2622ce6"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",

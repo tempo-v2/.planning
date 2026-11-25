@@ -1,5 +1,37 @@
 # Tempo V2 usable release
 
+## Installed Lichess packs and full-solution Study
+
+[Tempo #120](https://github.com/tempo-v2/tempo/pull/120) and
+[Tempo #123](https://github.com/tempo-v2/tempo/pull/123) shipped together at
+`0d6e288027dee3204850676da57f0cb3b2622ce6` on Lean schema 12 and Core 0.2.2.
+The verified catalog has 1,332 20-puzzle packs across 74 themes and 18,214
+distinct puzzles. Tactics recommends the easiest unfinished pack, allows
+direct selection of harder bands, and offers the next unfinished harder
+pack at completion. Refresh replaces membership and keeps issued solutions,
+accepted receipts, and per-puzzle progress.
+
+Chess owns full-line scoring for Tactics first play and subsequent Study.
+The first miss uses Again and the existing repeat placement, including
+durable ordered deferral when the deck is full. A clean first solve
+initializes FSRS and persists one 7–20 local study-day due date. Practice
+and pack browsing leave Learning alone. Tactics leaves the issued Study
+attempt in place.
+
+All 39 Rust tests, strict Clippy, the collector fixture and the locked UI
+build passed. Independent Chromium and HTTP verified a lost final reply,
+exact retry, full-line restart, alternate mate and promotion, active
+Study isolation, shared progress, refresh, deferred repeats, and Next-only
+retry. Chromium also replayed accepted-lost and undelivered Answers from
+the actually installed schema-11 predecessor on disposable retained data.
+Mobile Chromium completed a pack and opened the next band directly.
+
+The stopped backup and catalog import preserved all 29 predecessor tables.
+The active LaunchAgent served the schema-12 assets and catalog index.
+Readback verified 74 themes and 20 members in the first Fork pack.
+The [assembly manifest](current-assembly.json) records the backup and
+the binary, UI, lockfile, Core and catalog checksums.
+
 ## Installed online batch saving for large gaps
 
 [Tempo #121](https://github.com/tempo-v2/tempo/pull/121) installed at
