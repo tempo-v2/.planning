@@ -1,8 +1,42 @@
 # Tempo V2 usable release
 
+## Installed schema-17 Coverage bounds
+
+[Tempo #135](https://github.com/tempo-v2/tempo/pull/135) serves at
+`375de983463633d4dff148e2a7b0987f4570523d` with Core 0.2.2. The merged tree
+matches independently reviewed `d8d95e9` and includes the opening editor from
+[Tempo #134](https://github.com/tempo-v2/tempo/pull/134).
+The [assembly manifest](current-assembly.json) pins the server, worker,
+served assets and stopped schema-16 backup.
+
+**Installed architecture report card · A across the eight assessed boundaries.**
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | The candidate and predecessor issued the same due and new openings after maximum-size, overlapping, disjoint, and empty Applies. The prepared selector and committed-deck bounds passed. |
+| Chess, Learning, and durable acceptance | A | An Answer, its exact replay and Next completed during a held model scan. Both delivery states of predecessor Study commands passed on disposable data. |
+| Study UI, Core, and recovery | A | The packaged UI uses Core 0.2.2. The Study controller and Answer journal match the predecessor. Its mounted recovery evidence below covers lost and undelivered Answer, metadata invariance and Next-only retry. Mounted Gaps navigation cancelled uncommitted scans and retained the completed Save and its acknowledgement. |
+| Games, detectors, and tactic publication | A | The unchanged detector row-budget and replay checks passed. Worker and server status remained independent during a scan. The combined editor and matched worker also passed a native Stockfish and mounted Chromium journey. |
+| Browsing and optional reads | A | Live read-only requests returned both the gap page and studied summary for all 21 retained reports. Coverage paging keeps its separate bounded reader. |
+| Openings, Settings, and shared writer | A | Rank preparation used 69 SQLite VM steps before and after adding 20,000 unrelated rows. The bank switch and receipt commit together. A forced interruption after 256 staged cards preserved the visible order across restart. Repeated and previously undelivered Apply commands each produced one receipt. The existing Settings policy and 128-row writer turns remain in use. |
+| Coverage scan execution | A | The release ran Maia and reused the cached report with the model unavailable. A 25,800,119-byte maximum-shape fixture fit the 32 MiB limit. Blocked startup and pipes, oversized output, disconnect, deadline and shutdown exercised cleanup. Cancellation at the writer fence produced zero reports. A committed scan reused its identity. |
+| Release provenance | A | The registered server and tactic worker ran the merged binaries. Health was ready, all three served asset hashes matched, SQLite integrity and foreign keys passed, and the active Study attempt was retained. |
+
+The stopped comparison covered all 43 predecessor tables, allowed only the
+inactive-bank alignment, and verified the new rank inputs for all 21 saved
+forecasts. Qualification included 55 Tempo unit tests, five similarity
+integration tests, the Stockfish suite, strict Clippy and packaged UI build.
+The native Stockfish check timed out once under concurrent load and passed
+on rerun. An initial concurrent optional read returned an unidentified
+non-200 during independent qualification. The instrumented rerun passed.
+
+Faults, synthetic answers, rank changes and browser recovery ran on disposable
+databases. The release verification used read-only requests against the
+installed dataset.
+
 ## Installed repertoire gap review fixes
 
-[Tempo #132](https://github.com/tempo-v2/tempo/pull/132) is serving at
+[Tempo #132](https://github.com/tempo-v2/tempo/pull/132) shipped at
 `d65f18ede624af49f2a788d8d19feaf69c7815f2` on Lean schema 16 and Core 0.2.2.
 Gap preview retains verified recorded routes when it reaches the current-route
 search limit. An unreachable suffix cannot cause an independent saved
