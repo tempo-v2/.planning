@@ -35,7 +35,7 @@ def load_review():
         raise SetupError("Current assembly must pin every runtime component by full commit")
     require_digest(PLANNING / review["workspace_template"], review["workspace_sha256"])
     require_digest(PLANNING / review["cargo_lock"], review["cargo_lock_sha256"])
-    require_digest(PLANNING / "agent-guidance/AGENTS.md", review["guidance_sha256"])
+    require_digest(PLANNING / review["guidance_path"], review["guidance_sha256"])
     return review
 
 
@@ -72,7 +72,7 @@ def assemble(workspace, review, protocol):
     for destination, source in (
         ("Cargo.toml", PLANNING / review["workspace_template"]),
         ("Cargo.lock", PLANNING / review["cargo_lock"]),
-        ("AGENTS.md", PLANNING / "agent-guidance/AGENTS.md"),
+        ("AGENTS.md", PLANNING / review["guidance_path"]),
     ):
         (workspace / destination).write_bytes(source.read_bytes())
     (workspace / "Makefile").write_text("include tempo/tools/local.mk\n")

@@ -72,6 +72,7 @@
       "ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34",
       "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
       "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
+      "guidance_path": "plans/usable-release/structural-cleanup/predecessor-guidance.md",
       "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
       "sqlite_schema": 28,
       "study_wire": 5,
