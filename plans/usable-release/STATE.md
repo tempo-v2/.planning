@@ -1,5 +1,32 @@
 # Tempo V2 usable release
 
+## Lean delivery and preparation boundaries
+
+**Serving grade B. Qualified merged grade A** across the seven examined
+boundaries. The Mac serves schema 8 at `6c7a8d289ec9db68936ef6860d3743742ad16eed`.
+Its executable and three served asset hashes matched the installed manifest.
+[Tempo #114](https://github.com/tempo-v2/tempo/pull/114) was reviewed by fresh
+Astra at `3f6747ed7c1110f3bd89f17c43ae5b00cfd413ed` and merged the identical
+tree at `1f3d2585e7b47178af990cab137b14617dd650c1`. The qualified build uses
+schema 8 and packaged Core 0.2.2. The [manifest](current-assembly.json) pins
+the serving release and qualified source separately.
+
+| Boundary | Serving | Qualified merge | Evidence |
+| --- | --- | --- | --- |
+| Study, Queue and Store | A | A | Native checks kept prepared issuance bounded and excluded Games and live rank reads from Study commands. |
+| Chess, Learning and acceptance | A | A | Exact Answer replay preserved one grade, schedule, receipt and repeat placement. |
+| Study UI, Core and recovery | C | A | An unplayable Answer reply originally cleared the journal and crashed the board. Chromium now preserves the exact intent, recovers both predecessor delivery states and retries interrupted Next separately. |
+| Games, detectors and Tactics | A | A | The HTTP suite exercised canonical archive identity, separate detector results, sealed retry, rescan and tactic publication. It also resumed an interrupted upload at its original checkpoint. |
+| Optional reads and browsing | B | A | Chromium discarded stale previews and file reads. Invalid positions and move tokens preserved the draft. Only Save committed the selected route. |
+| Openings and Settings | A | A | The examined reads and writes retained authoritative repertoire identities and saved preferences. A name edit left the selected preview route applicable. |
+| Request limits and shared writer | B | A | The HTTP router kept Study and content commands available under saturated staging. Additional staging returned a typed unavailable reply and created no job. Reintroducing the shared semaphore made the regression fail. |
+
+All 33 locked Rust tests, strict Clippy, optimized build, packaged UI,
+mounted Chromium and HTTP qualification passed. Answer recovery and the
+interrupted upload used disposable data. A retained database copy preserved
+all 23 tables and 16,768 games. Health and nine read routes returned HTTP 200
+on the serving release.
+
 ## Lean archive rescan bounds
 
 [Tempo #112](https://github.com/tempo-v2/tempo/pull/112) pins candidate
