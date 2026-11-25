@@ -3,33 +3,33 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "fed4db1fc6186e3bd162cb90efcd69c20bfbc79a",
+    "commit": "b048e28823cec0c09559da8989b425980e2d1f12",
     "sqlite_schema": 10,
-    "binary_sha256": "4b4aace2602e5f96cdf5f94cb771b956b4ea7b2d2c2798c39bbe1511beda1f8e",
+    "binary_sha256": "e63f6793001a653fec698584f76a602d273b04b1eea62f7f5e1326f5617d4ff2",
     "assets": {
-      "index.html": "bd9b1e78c2ba901797c2c84171de6d5a4696d89f383ac919b1dad3f8f58ed73c",
-      "assets/app.js": "d7c4939c109ac215983f0a349e3c3661f8ae4ff29ec88e69df12d965b77bc73a",
+      "index.html": "6fb3560f39f7445806ce8a73545f5b45be0bcc86edf1c674d52f4504151956ff",
+      "assets/app.js": "d43ca6cfa0439c7651901a871ce7d2dbfac15223690155132cf774ae12ea5feb",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T143114.839870Z-before-coverage/tempo.sqlite3"
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T151028.574528Z-before-large-gap/tempo.sqlite3"
   },
   "candidate": {
-    "commit": "5ebc1e780ec4ad2f4d515260e4447f3c806e0ca5",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/117",
-    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/116",
+    "commit": "38497efeb6874219f723d4f0d3eb68eca47b7554",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/119",
+    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/117",
     "sqlite_schema": 10,
     "cargo_lock_sha256": "df95acf43623c8a933c0a51a59b9c90434a4934e53e023abd66bbf042c1acadc",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "built_assets": {
-      "index.html": "bd9b1e78c2ba901797c2c84171de6d5a4696d89f383ac919b1dad3f8f58ed73c",
-      "assets/app.js": "d7c4939c109ac215983f0a349e3c3661f8ae4ff29ec88e69df12d965b77bc73a",
+      "index.html": "6fb3560f39f7445806ce8a73545f5b45be0bcc86edf1c674d52f4504151956ff",
+      "assets/app.js": "d43ca6cfa0439c7651901a871ce7d2dbfac15223690155132cf774ae12ea5feb",
       "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "built_binary_sha256": "4b4aace2602e5f96cdf5f94cb771b956b4ea7b2d2c2798c39bbe1511beda1f8e",
-    "qualification": "Fresh Astra cleared the integrated source, which has the same tree as the merge. Combined workspace tests and recovery journeys passed. The final optimized artifact migrated and scanned a retained database copy before installation.",
-    "merged_commit": "fed4db1fc6186e3bd162cb90efcd69c20bfbc79a"
+    "built_binary_sha256": "e63f6793001a653fec698584f76a602d273b04b1eea62f7f5e1326f5617d4ff2",
+    "qualification": "Fresh Astra cleared the exact source. Retained-copy browser export and stopped-service import accepted 45 branches and 90 new replies, replayed one receipt, and preserved learning. Installation compared all 28 predecessor tables.",
+    "merged_commit": "b048e28823cec0c09559da8989b425980e2d1f12"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",

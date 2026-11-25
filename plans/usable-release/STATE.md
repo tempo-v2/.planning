@@ -1,5 +1,23 @@
 # Tempo V2 usable release
 
+## Installed offline import for large gap continuations
+
+[Tempo #119](https://github.com/tempo-v2/tempo/pull/119) merged and installed at
+`b048e28823cec0c09559da8989b425980e2d1f12` with Core 0.2.2 and schema 10. Large gap
+previews expose an offline download with the same draft, gap selection and
+command identity. The stopped-service importer uses the same revision, conflict
+and atomic receipt checks as online Save. Online preview and offline import
+enforce separate expanded-tree limits.
+
+The reported PGN previewed 90 new replies and imported all 45 matching lines
+on disposable retained copies. Chromium verified the exact export, repetition
+returned one receipt, and learning records were preserved. The installed
+browser also offered the export for the supplied PGN. Fresh Astra cleared
+`38497efeb6874219f723d4f0d3eb68eca47b7554`. All 35 Tempo tests and strict
+Clippy passed. A stopped backup and bidirectional comparison verified all
+28 predecessor tables during installation. The reported PGN was not committed
+to the live repertoire. See the [manifest](current-assembly.json).
+
 ## Installed Maia repertoire gaps and Study order
 
 [Tempo #116](https://github.com/tempo-v2/tempo/pull/116) merged at
