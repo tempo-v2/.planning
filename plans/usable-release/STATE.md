@@ -1,5 +1,296 @@
 # Tempo V2 usable release
 
+## Lean archive rescan bounds
+
+[Tempo #112](https://github.com/tempo-v2/tempo/pull/112) pins candidate
+`f765748b1107daee7fcbb845af522c27452ecbf3` for the schema-8
+[archive rescan contract](lean-operation-contract.md#schema-8-archive-rescan-cursor).
+Astra independently cleared this head and [Planning #96](https://github.com/tempo-v2/.planning/pull/96).
+Tempo main merged the identical tree at `6c7a8d289ec9db68936ef6860d3743742ad16eed`.
+
+- The bundled SQLite hit, exhausted range and 64-row page used 24, 11 and
+  459 VM steps before 100,000 post-cutoff games, and 18, 14 and 459 after.
+  Raising the cutoff selected the newly eligible game.
+- The runner retained a partly applied schema-7 seal and both detector
+  jobs' frozen membership. It restarted after committing a page of
+  previously completed games and preserved the exact findings and parent count.
+  Study Next and Answer completed during recovery.
+- Disposable migration preserved all 23 predecessor tables and 16,768
+  retained games. The schema-7 executable refused schema 8. A staged
+  upload resumed its original ID, file and byte offset.
+- 31 locked Rust tests, strict Clippy, packaged Core 0.2.2, the optimized
+  executable and Chromium Answer recovery passed. The exact managed build
+  reran the disposable Games and Chromium suites before cutover.
+
+### Installed schema-8 report card
+
+The stopped schema-7 backup and executable remain available together.
+The locked cutover preserved all 23 predecessor tables and validated
+staged-file references, integrity and foreign keys. One registered service
+serves the matching executable and three assets. Health and nine read-only
+endpoints responded successfully. The [manifest](current-assembly.json)
+records both installations.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | The locked suite retained prepared-queue isolation and bounded issuance. Real Next and Answer succeeded during scan recovery. |
+| Chess, Learning and acceptance | A | Exact Answer replay preserved one grade and schedule, and the cutover preserved the Learning rows. |
+| Study UI, Core and recovery | A | Packaged Core 0.2.2, schema-7 Answers, mixed tabs, display-name invariance and retry after interrupted Next passed in Chromium. |
+| Games, detectors and Tactics | A | SQLite used the ordinal primary-key range for one game or one bounded compatibility page. Lookup work stayed bounded with 100,000 later games. A partly applied seal and both detector jobs recovered with exact membership, findings and parent counts. |
+| Optional reads and browsing | A | Real HTTP and Chromium checks covered addressed replay, bounded pages, cancellation and read-only retry. |
+| Openings and Settings | A | Cutover kept the exact catalog and preference rows. The installed routes served them successfully. |
+| Request limits and shared writer | A | The writer admission and detector apply budget checks passed. A compatibility page requeues only its own job with the existing writer. |
+
+**Overall A for the seven assessed Lean boundaries.** Scale, failure
+injection and synthetic commands ran on disposable databases. The installed
+checks covered cutover preservation, process and artifact identity, and
+read-only service behavior.
+
+## Lean bounded browsing
+
+[Tempo #111](https://github.com/tempo-v2/tempo/pull/111) head `f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f`
+adds the read contract to the schema-7 runtime. The Mac moved directly from schema 6 to the combined build at
+`2264e963674138e61b02e3ff8dda88f3379ad5c1`.
+
+- 30 locked Rust tests, strict Clippy, packaged Core UI and optimized build passed.
+- Chromium replayed the original schema-6 Answers, exercised mixed tabs and
+  Next-only retry, and confirmed archive refresh coalescing and read-only retry.
+- Real HTTP exercised Games identity, detector recovery, pagination and addressed
+  replay. The optimized build preserved all 16,768 games and predecessor rows
+  on a disposable copy, and resumed the schema-6 upload from its original checkpoint.
+- Initial independent review found that a malformed current Study reply could
+  trigger Next and a failed read after definitive Answer resolution could
+  resend the command. Both have mounted Chromium regressions and are fixed
+  in this head. Fresh independent review cleared Tempo `f03d7a3` and
+  Planning `493426d`. The exact managed build passed both suites again.
+
+
+### Installed evidence and architecture report card
+
+A stopped, checked schema-6 backup was retained before the offline migration.
+The migration comparison preserved all 22 predecessor tables, with archive
+routes converted to the packed representation, and passed integrity and
+foreign-key checks. One registered listener serves the matching executable
+and assets. Health and nine read-only endpoints returned successful replies.
+The [assembly manifest](current-assembly.json) pins both installations.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | Prepared issuance and Again remain bounded as unrelated cards grow. Archive reads are excluded from Next and Answer. |
+| Chess, Learning and acceptance | A | Answer replay preserves one durable grade, schedule and repeat disposition. |
+| Study UI, Core and recovery | A | Packaged Core, original schema-6 envelopes, malformed read handling, mixed tabs and Next-only retry passed with the installed executable on disposable data. |
+| Games, detectors and Tactics | A | The same occurrence with different provenance reused one game. Capture survived comparison failure, and comparison retried its sealed result. |
+| Optional reads and browsing | A | Bounded read families retained their slots through cancellation. Mounted Games coalesced polling invalidation. Real HTTP served 50 maximum-length routes with stable pagination, and SQLite lock failure left health ready. |
+| Openings and Settings | A | The existing ownership and saved preferences survived the migration. Installed catalog and Settings reads succeeded. |
+| Request limits and shared writer | A | The writer and detector apply budgets passed. Admission and staged file ownership remain separate from optional reads. |
+
+**Overall A for the examined Lean architecture.** Synthetic faults and
+commands were exercised on disposable data with the same managed artifact.
+Live evidence is confined to migration, process and artifact identity, and
+read-only smoke checks.
+
+## Lean schema 7 Game and Answer representations
+
+[Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `693388c5a1453f3357afd9fefa5dd9184535d7f0`
+uses the [schema-7 operation contract](lean-operation-contract.md) and packaged
+Core 0.2.2. The [assembly manifest](current-assembly.json) identifies the
+qualified candidate and the serving schema-6 predecessor.
+
+- All 28 locked Rust tests, strict Clippy, the packaged UI build and the
+  optimized executable build passed. Occurrence lookup stayed bounded with
+  100,000 unrelated and 100,000 same-fingerprint rows. SQLite counted 128
+  affected rows on the maximum final capture apply, including ready-order
+  triggers and parent progress.
+- A disposable copy converted all 16,768 archived games. SQLite integrity and
+  foreign keys passed. All predecessor semantic rows matched in both
+  directions. Packed route payloads used 3,146,978 bytes, from 8,712,290.
+  The explicit offline migration refused the serving lock. A schema-6 upload
+  resumed its original file, identity and byte offset on schema 7.
+- Real HTTP used manual PGN and frozen local Lichess and Chess.com downloads.
+  It reused one archive identity, kept independent detector progress through
+  comparison failure, retried the sealed analysis after an opening edit, and
+  observed the new input on an explicit rescan. Named rounds distinguished
+  separate occurrences, with exact repeats and placeholder rounds reusing an
+  existing game. A substituted detector
+  retained its new versioned finding without changing the accepted puzzle.
+  The Stats proof used the addressed Game reader.
+- Chromium replayed both original schema-6 Answer cases, recovered the
+  two-tab delayed response and an incomplete success reply, and retried only
+  Next after acceptance. Original, renamed and blank titles yielded the same
+  Good/Again commands, receipts, relative schedules, and continuation. A
+  still-loaded schema-6 tab cleared its old scalar after cutover while the
+  reloaded schema-7 tab retained and replayed its newer intent.
+- First independent Astra pass at `33bc0a0` identified incomplete receipt
+  handling, duplicated Game reconstruction and an oversized terminal capture
+  transaction. These are corrected in the candidate above and covered by
+  the browser and SQLite checks. The second review at `f12bff7` confirmed
+  those checks and found that nonnumeric rounds collapsed. The candidate
+  above now preserves named rounds and exercises them through HTTP.
+- A fresh Astra review cleared Tempo `693388c5` and Planning `21ddff04`.
+  It independently matched the optimized executable hash and reran all
+  28 Rust tests, both qualification tools, and the retained-database
+  rehearsal. Tempo #110 merged at
+  `79ed7b4cc307cc8a092a2fc696975325078d5fde`. Its tree matches the reviewed
+  candidate, and remote main was verified.
+
+### Architecture report card for the merged candidate
+
+**Overall A for the examined boundaries.** The managed installation is
+still serving the schema-6 predecessor. The grades apply to the exact
+qualified schema-7 source and artifacts.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | Next and Answer preserve bounded prepared selection and repeat placement as the catalog grows. The SQL probe excludes archive reads. |
+| Chess, Learning, and acceptance | A | One first accepted effect persists with its repeat disposition. Exact replays and competing submissions preserve one grade. |
+| Study UI, Core, and recovery | A | Packaged Core, per-intent journal, preceding receipt recovery, incomplete reply handling, mixed tabs, and Next-only retry passed in Chromium. |
+| Games, detectors, and Tactics | A | All three intake paths share archive identity. Replay, Stats, and detector input share Game IR. Versioned detector retry preserves the sealed snapshot and published puzzle. |
+| Optional views | A | Counts, source context, repertoire picker, and Games status retain independent bounded readers. Games status reports the parent scan and active user work without advancing jobs. |
+| Openings and Settings | A | Repertoire and preference ownership stayed intact. The migration preserved those rows, and sealed detector retry exercised authored changes through Openings. |
+| Request limits and shared writer | A | Bounds stayed in force. Reclamation failure and staged-file ownership were exercised while real Study Next and Answer completed. The largest capture transaction used 128 rows including triggers. |
+
+## Lean Games admission and Study count bounds
+
+[Tempo #109](https://github.com/tempo-v2/tempo/pull/109) merged schema 6 at
+`0c9ed8b3324a40f7e88653aea4366c6e030c8c00`. The serving build has the source tree
+independently reviewed at `92b434e09611e7d7e1b9ff12708c252211db240d` and uses Core 0.2.2.
+The [assembly manifest](current-assembly.json) pins the candidate and managed
+artifacts separately. The [Lean operation contract](lean-operation-contract.md)
+records the accepted count cap and request limits.
+
+- All 22 locked Rust tests, strict Clippy, the packaged UI build and the locked
+  optimized build passed. A fresh Astra reviewer cleared the published source
+  and contract and independently exercised HTTP, browser, database and
+  predecessor recovery checks.
+- The installed binary, running on disposable data, accepted ordinary Games
+  requests at 16 KiB and rejected one byte above it with fixed and chunked
+  bodies. The dedicated upload route accepted 64 MiB and rejected one byte
+  above it before staging. Chrome used the correct route for provider import,
+  archive scan, upload and retry of the original job.
+- Capacity, duplicate hit and duplicate miss took 50, 52 and 62 SQLite VM
+  steps with and without 100,000 unrelated child and finished jobs. A local
+  provider feed resumed its staged window, accepted 700 games, rejected two
+  records once, and rotated with a manual upload. A separate interruption test
+  showed identical archive, capture and tactic rows after restart, and Study
+  accepted and advanced during Games work.
+- Both counts were capped on a 100,000-card fixture in 360,236 SQLite VM steps.
+  The managed binary returned both capped values in a 4.9 ms disposable HTTP
+  observation. Chrome rendered mixed capped and exact totals and kept Answer
+  and Next usable when counts failed. It also replayed the actual schema-5
+  Answer for both a lost response and an undelivered submission. Interrupted
+  Next retained the accepted result and retried only Next.
+- Rehearsal and the managed migration preserved all 22 predecessor tables in
+  both directions. Integrity and foreign keys passed. A schema-5 upload
+  resumed from its original committed file and byte checkpoint. The matching
+  schema-5 executable and verified stopped backup remain available for
+  recovery. After cutover, one launchd listener served the verified binary
+  and matching HTML, JavaScript and CSS. Health, Study, counts, Games status,
+  opening preferences and the repertoire picker returned successful reads.
+
+### Architecture report card
+
+**Overall grade A for the examined Lean boundaries.** The intake limits and
+writer lookup bounds now hold on the real Games entry points, and the optional
+Study count stays within its query and time budgets as eligible rows grow.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | Next resumes or uses indexed prepared membership. The committed Next and Again tests held with 100,000 unrelated cards. |
+| Chess, Learning and acceptance | A | A single committed result owns FSRS, the receipt and repeat placement. The restart and replay checks retained one grade. |
+| Study UI, Core and recovery | A | The production client uses packaged Core, replays the original schema-5 Answer, and retries only Next after an accepted grade. |
+| Games, scanner and Tactics | A | The worker independently resumes archive, scan and publication through persisted progress. Status stays read-only and Study advances during Games work. |
+| Optional reads | A | Counts use bounded exact or capped results, and failure has no effect on grading or continuation. The existing context, Games status and picker slots retain their bounds. |
+| Openings and Settings | A | The opening identity constraint, indexed picker and saved preference ownership retain schema-5 evidence. The installed routes returned successful reads. |
+| Request limits and shared writer | A | Fixed and chunked ordinary commands enforce 16 KiB. The dedicated upload keeps 64 MiB. The admission index keeps work constant as unrelated work grows. |
+
+Synthetic writes, failures and scale measurements used disposable databases.
+Managed verification used the migration comparison, artifact identity and
+read-only HTTP.
+
+## Lean Games and repertoire operation bounds
+
+[Tempo #108](https://github.com/tempo-v2/tempo/pull/108) merged schema 5 at
+`0cce44a58ec8e6557bd614e2e935b0e00cf3e9da`. The managed Mac serves that exact
+revision with the retained database. The source tree matches independently
+reviewed head `4774aa22d652177643d166b502f981777e67bcce`. The
+[assembly manifest](current-assembly.json) records the exact artifacts.
+
+- All 20 locked Rust tests, strict Clippy and the optimized build with
+  packaged Core 0.2.2 passed. The runtime fixtures covered expired writer
+  admission, timeout while reading a provider body, and resuming an
+  interrupted schema-4 upload whose offset pointed into a rejected game.
+- A disposable local provider feed accepted 700 games and rejected two
+  records exactly once, including an unsupported variant. Restart reused
+  the staged file. A manual upload completed alongside provider work.
+  Following writer contention, the worker recorded a failed provider turn,
+  finished a different job, and accepted the original provider job on retry.
+- Chrome verified that paging and a delayed refresh preserve the selected
+  repertoire and practice color. Branching outside page one used the original
+  repertoire and its canonical display example. The previous-release Study
+  browser checks covered accepted-but-lost and never-delivered Answers and
+  showed that interrupted Next retried only Next.
+- The stopped schema-4 database backup passed integrity and foreign-key
+  checks. The migration preserved all 21 predecessor tables in both
+  directions on predecessor columns and reproduced every repertoire choice.
+  Verified one launchd service, schema 5, all served artifact hashes, and
+  read-only responses for health, Study, counts, Games jobs, opening
+  preferences and repertoire choices. Retained the exact schema-4
+  executable with its pre-upgrade backup.
+
+## Lean architecture cleanup
+
+[Tempo #107](https://github.com/tempo-v2/tempo/pull/107) merged schema 4 at
+`1fa39971574b37c1ecfcbd45214d114d99ddbcb2`, with a source tree equal to
+the qualified head. The managed service ran this merge revision before the
+schema-5 cutover. [Planning #90](https://github.com/tempo-v2/.planning/pull/90)
+records its installed and qualification artifact identities.
+
+- Rebuilt with the locked inputs in the managed release directory. The served
+  HTML, JavaScript and CSS matched the qualified build. The binary hash
+  identifies the managed build with its release-specific asset path.
+- Rehearsed with a full disposable copy. The stopped schema-3 backup
+  passed integrity and foreign-key checks. The actual migration preserved
+  all 20 predecessor tables in both directions on predecessor columns,
+  and integrity and foreign keys passed before the worker started.
+- Verified one registered Lean listener, schema 4, and successful read-only
+  responses for health, current Study, Study counts, Games status and opening
+  settings. The schema-3 release and matching stopped backup are retained.
+
+- Locked Rust tests, strict Clippy, the production UI build, and the optimized
+  executable build passed. Production Next and Again retained bounded SQLite
+  work with 100,000 unrelated cards and selected the correct committed slot.
+- A full online copy of the managed database migrated with no worker running.
+  All 20 predecessor tables matched in both directions on predecessor columns.
+  Integrity and foreign keys passed.
+- The short PGN job completed while the long job had archived 2 of 300 games.
+  Interrupted and uninterrupted runs matched all 301 archive rows, 301
+  capture rows and 302 tactic rows. Study accepted Again and advanced during
+  Games work. A focused retry fixture reused the saved scan findings. The
+  migrated inline-PGN case resumed its original byte offset and cleaned up
+  the staged file after completing the remaining record.
+- Chrome captured both original Answer envelope cases from the installed
+  predecessor and recovered one grade on the candidate. Interrupted Next
+  retained the result and retried only Next. Chrome also checked counts,
+  authored lead-in playback, Games poll coalescing and visibility, and late
+  Study context rejection.
+- Fresh independent review cleared `c69ea57e34da6dad4dd34b4bc127eb8a391625f5`.
+  Its indexed-claim probe held at 17–18 SQLite VM steps as completed jobs
+  grew by 100,000. A 120-request context burst returned bounded refusals
+  and independent counts, Games status and Answer stayed usable. A local
+  provider fixture resumed only the unprocessed frozen window.
+- A disposable probe separated queue wait from execution. With a synthetic
+  75 ms writer blocker, Next waited 77.0 ms and ran for 3.3 ms. Idle Again
+  waited 0.02 ms and ran for 1.3 ms. These measurements describe the probe.
+
+The schema-3 executable and matching pre-upgrade backup remain the recovery
+pair for this cutover.
+
+## Lean operation-boundary cleanup
+
+[Tempo #104](https://github.com/tempo-v2/tempo/pull/104) publishes candidate `2ab49b04b96f21e7b6b293461d41971b7a6fceb5` against managed predecessor `4f97e742b0f259ba3c26109d69aa365d570439f8`. The [Lean operation contract](lean-operation-contract.md) governs this candidate. It uses schema 3 and vendored Core 0.2.2.
+
+The candidate exercises the single write connection, indexed prepared issuance, exact Answer replay, delayed repeat placement, provider separation, bounded Games apply and offline large opening import. A full disposable schema-2 database comparison retained all rows in the 17 predecessor tables. SQLite integrity and foreign keys passed. Previous-version Chrome recovery covered accepted-but-lost and never-delivered Answer followed by a failed and retried Next. Disposable HTTP covered writer saturation, optional provider replacement, staged PGN restart, and over-budget opening and offline import. Tempo #104 merged as `48328ad4b49bbd91fadf2bcd2aa83df9cbea1ede` and the optimized build of that exact main revision is installed. The single registered Lean service at port 41823 runs schema 3 with the retained dataset. A stopped schema-2 backup passed integrity and foreign-key checks. The live comparison matched every row in all 17 predecessor tables, and HTTP served matching HTML, JavaScript and CSS. Study counts [Tempo #105](https://github.com/tempo-v2/tempo/pull/105) was subsequently merged on main.
+
 The consolidated packet dated 2026-11-17 governs this run. Existing local Tempo and Chess successors already supplied the real board projection. The selected workspace compiled with its original lock before implementation. Tempo UI was cloned at the packet's exact referenced head, moved out of Tempo, and qualified against packaged Core 0.2.1.
 
 ## Opening checkpoint

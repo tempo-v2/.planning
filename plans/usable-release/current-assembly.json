@@ -1,49 +1,109 @@
 {
-  "role": "One source manifest for the current review assembly and the separate running baseline",
-  "components": {
-    "tempo": "33f8d119ab31d7bea4f84310bfd62a3a02494376",
-    "tempo-store": "065b626f315a7145a7d64119a59c6c93e817df6e",
-    "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
-    "tempo-learning": "ee542cc1971f40de2de7a80edad9f51f2f6eecdc",
-    "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
-    "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
-    "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
-    "tempo-ui": "82c6f6eb3e58104e0f81df0767195aa4353bc909",
-    "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
-    ".planning": "96e73ecf483bc10b20ad5434f109e0e906c6336c"
-  },
+  "profile": "lean",
+  "repository": "tempo-v2/tempo",
+  "core_version": "0.2.2",
   "installed": {
-    "checkpoint": "workspace-e1c18810c03bd3ad05db",
-    "sqlite_schema": 22,
-    "backend_sha256": "c5c7e27765ee4cfee61010c03012a10297f87e5ae92eb8b5fe5687004eea2edf",
-    "disk_workspace_manifest_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
-    "disk_cargo_lock_sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c",
-    "disk_ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34"
-  },
-  "review": {
-    "components": {
-      "tempo": "5b541678f72dc2e5d5940fcdeba1ff5dd1fbd4b5",
-      "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
-      "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
-      "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
-      "tempo-queue": "d4e591ebd7875a240297ea49ab692f7059c6c6fd",
-      "tempo-store": "ba53882093724a1299a35aaa869edf39d70ddf84",
-      "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
-      "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
-      "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4"
+    "commit": "6c7a8d289ec9db68936ef6860d3743742ad16eed",
+    "sqlite_schema": 8,
+    "binary_sha256": "4aaf4c9773c62de6086950aa5e2f35c27757837a7629000605bb42e6f7a534e5",
+    "assets": {
+      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
+      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
+      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
     },
-    "planning": "The clean checkout containing this manifest",
-    "workspace_template": "workspace.template.toml",
-    "cargo_lock": "plans/usable-release/workspace-structural-cleanup.Cargo.lock",
-    "workspace_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
-    "cargo_lock_sha256": "6660888df18b72fbe2d82c1adbb12ba66bcd392ab010d2754a8e74e9b480dad0",
-    "ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34",
-    "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
-    "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
-    "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
-    "sqlite_schema": 28,
-    "study_wire": 5,
-    "content_wire": 4,
-    "qualification": "Schema-28 combined review includes Reset retirement, independent context and summary storage, and Settings using the application write owner; no installation qualification"
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T064823.251721Z-before-lean-schema-8/tempo.sqlite3"
+  },
+  "candidate": {
+    "commit": "f765748b1107daee7fcbb845af522c27452ecbf3",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/112",
+    "sqlite_schema": 8,
+    "cargo_lock_sha256": "c6608a9637ad04af427e7c3918f03ed8e22d32db63e4c1e51dcdd7c140ae6020",
+    "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
+    "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
+    "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+    "built_assets": {
+      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
+      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
+      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
+    },
+    "built_binary_sha256": "a69806edaec1e90a4b6c527bc7393c2190e10c764b5dc1bded50b2149a8c6bee",
+    "qualification": "Exact published heads cleared independent Astra review. The merged managed build passed the Games and Chromium suites on disposable data and matched the serving executable and assets.",
+    "merged_commit": "6c7a8d289ec9db68936ef6860d3743742ad16eed"
+  },
+  "predecessor_assembly": {
+    "role": "One source manifest for the current review assembly and the separate running baseline",
+    "components": {
+      "tempo": "33f8d119ab31d7bea4f84310bfd62a3a02494376",
+      "tempo-store": "065b626f315a7145a7d64119a59c6c93e817df6e",
+      "tempo-queue": "74e09a1ea1cc2ca9bdf308b8fb7cc75963378214",
+      "tempo-learning": "ee542cc1971f40de2de7a80edad9f51f2f6eecdc",
+      "tempo-chess": "becee471325ece0a382d4e482263e2b87670a23d",
+      "tempo-study": "ddf6839af0fa027aa8e2a67ca6baa3831dfb9deb",
+      "tempo-types": "a8e46c9b9442f1180ec33b8035cef1c713414b66",
+      "tempo-ui": "82c6f6eb3e58104e0f81df0767195aa4353bc909",
+      "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
+      ".planning": "96e73ecf483bc10b20ad5434f109e0e906c6336c"
+    },
+    "installed": {
+      "checkpoint": "workspace-e1c18810c03bd3ad05db",
+      "sqlite_schema": 22,
+      "backend_sha256": "c5c7e27765ee4cfee61010c03012a10297f87e5ae92eb8b5fe5687004eea2edf",
+      "disk_workspace_manifest_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+      "disk_cargo_lock_sha256": "ba4ccbbdd3b9e4fa6fd9c40ff8ac2b851f580273eaa00e7f76ab38ce507e765c",
+      "disk_ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34"
+    },
+    "review": {
+      "components": {
+        "tempo": "5b541678f72dc2e5d5940fcdeba1ff5dd1fbd4b5",
+        "tempo-chess": "33958d575d6949fdd5fef77065f02db0165f94d7",
+        "tempo-core-components": "71cbd2b1e4a3514f42a1f0293506ad71e0343d93",
+        "tempo-learning": "9658880991134660b2e7493ada79b3710f46a96e",
+        "tempo-queue": "d4e591ebd7875a240297ea49ab692f7059c6c6fd",
+        "tempo-store": "ba53882093724a1299a35aaa869edf39d70ddf84",
+        "tempo-study": "9756fce36b373af24b15cb6bf3ad171052ac5f5d",
+        "tempo-types": "10c551788a5cd58f60995138f604a96f44c64b31",
+        "tempo-ui": "a11cad28dc9c80d1dc3d4bc5db5eca134b09acb4"
+      },
+      "planning": "The clean checkout containing this manifest",
+      "workspace_template": "workspace.template.toml",
+      "cargo_lock": "plans/usable-release/workspace-structural-cleanup.Cargo.lock",
+      "workspace_sha256": "acd0b4dee6074bbc9d4c75c586b15b24cdeb7bab4d142b33b426d4f6badf3072",
+      "cargo_lock_sha256": "6660888df18b72fbe2d82c1adbb12ba66bcd392ab010d2754a8e74e9b480dad0",
+      "ui_lock_sha256": "619b22c5587c27f7db6e8fc94e57c938910f7cb9c93ebd5fcc3d0f15e0991a34",
+      "core_package": "vendor/tempo-v2-core-components-0.2.5.tgz",
+      "core_package_sha256": "d6677336130b4e478ff497dee4b7ae0d85c840cca20d1317de1578591c0f7dfc",
+      "guidance_sha256": "031248d19625b3da603fd89f71101ba1a7c10c0972e5f5039565d788f35f8a21",
+      "sqlite_schema": 28,
+      "study_wire": 5,
+      "content_wire": 4,
+      "qualification": "Schema-28 combined review includes Reset retirement, independent context and summary storage, and Settings using the application write owner; no installation qualification"
+    }
+  },
+  "previous_lean_installation": {
+    "commit": "2264e963674138e61b02e3ff8dda88f3379ad5c1",
+    "sqlite_schema": 7,
+    "binary_sha256": "0c1680c57ab2a25059fd230160965a61fab7a088defeb72ddd4deb4803b23baa",
+    "assets": {
+      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
+      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
+      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
+    },
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T060810.844780Z-before-lean-schema-7/tempo.sqlite3"
+  },
+  "schema_7_base": {
+    "commit": "693388c5a1453f3357afd9fefa5dd9184535d7f0",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/110",
+    "sqlite_schema": 7,
+    "cargo_lock_sha256": "c6608a9637ad04af427e7c3918f03ed8e22d32db63e4c1e51dcdd7c140ae6020",
+    "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
+    "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
+    "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
+    "qualified_assets": {
+      "index.html": "b301885515bb39bf04a1e0fb67e023510bfad0ab70bf7a082c2494d3e41e5785",
+      "assets/app.js": "7d8cac7bc1a844d703397a3efd6dad1d10a96d61d0307860c548efb70bac6d86",
+      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
+    },
+    "built_binary_sha256": "7ccafec99b014e39e31958140612e8c821517c7ce1f611e58ef47eb5b5572f09",
+    "merged_commit": "79ed7b4cc307cc8a092a2fc696975325078d5fde"
   }
 }
