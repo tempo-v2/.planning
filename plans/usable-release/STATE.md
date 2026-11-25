@@ -3,9 +3,8 @@
 ## Lean bounded browsing
 
 [Tempo #111](https://github.com/tempo-v2/tempo/pull/111) head `f03d7a323cadd9e207277c28e6d6b1ec9bc2c29f`
-adds the read contract to the schema-7 runtime. The Mac still serves schema 6.
-The planned release moves directly from that installation to the combined
-candidate.
+adds the read contract to the schema-7 runtime. The Mac moved directly from schema 6 to the combined build at
+`2264e963674138e61b02e3ff8dda88f3379ad5c1`.
 
 - 30 locked Rust tests, strict Clippy, packaged Core UI and optimized build passed.
 - Chromium replayed the original schema-6 Answers, exercised mixed tabs and
@@ -16,8 +15,33 @@ candidate.
 - Initial independent review found that a malformed current Study reply could
   trigger Next and a failed read after definitive Answer resolution could
   resend the command. Both have mounted Chromium regressions and are fixed
-  in this head. Fresh independent review and installation remain pending.
+  in this head. Fresh independent review cleared Tempo `f03d7a3` and
+  Planning `493426d`. The exact managed build passed both suites again.
 
+
+### Installed evidence and architecture report card
+
+A stopped, checked schema-6 backup was retained before the offline migration.
+The migration comparison preserved all 22 predecessor tables, with archive
+routes converted to the packed representation, and passed integrity and
+foreign-key checks. One registered listener serves the matching executable
+and assets. Health and nine read-only endpoints returned successful replies.
+The [assembly manifest](current-assembly.json) pins both installations.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue and Store | A | Prepared issuance and Again remain bounded as unrelated cards grow. Archive reads are excluded from Next and Answer. |
+| Chess, Learning and acceptance | A | Answer replay preserves one durable grade, schedule and repeat disposition. |
+| Study UI, Core and recovery | A | Packaged Core, original schema-6 envelopes, malformed read handling, mixed tabs and Next-only retry passed with the installed executable on disposable data. |
+| Games, detectors and Tactics | A | The same occurrence with different provenance reused one game. Capture survived comparison failure, and comparison retried its sealed result. |
+| Optional reads and browsing | A | Bounded read families retained their slots through cancellation. Mounted Games coalesced polling invalidation. Real HTTP served 50 maximum-length routes with stable pagination, and SQLite lock failure left health ready. |
+| Openings and Settings | A | The existing ownership and saved preferences survived the migration. Installed catalog and Settings reads succeeded. |
+| Request limits and shared writer | A | The writer and detector apply budgets passed. Admission and staged file ownership remain separate from optional reads. |
+
+**Overall A for the examined Lean architecture.** Synthetic faults and
+commands were exercised on disposable data with the same managed artifact.
+Live evidence is confined to migration, process and artifact identity, and
+read-only smoke checks.
 
 ## Lean schema 7 Game and Answer representations
 
