@@ -36,7 +36,7 @@ records both installations.
 | Study, Queue and Store | A | The locked suite retained prepared-queue isolation and bounded issuance. Real Next and Answer succeeded during scan recovery. |
 | Chess, Learning and acceptance | A | Exact Answer replay preserved one grade and schedule, and the cutover preserved the Learning rows. |
 | Study UI, Core and recovery | A | Packaged Core 0.2.2, schema-7 Answers, mixed tabs, display-name invariance and retry after interrupted Next passed in Chromium. |
-| Games, detectors and Tactics | A | SQLite used the ordinal primary-key range for one game or one bounded compatibility page. Post-cutoff growth added no scan work. A partly applied seal and both detector jobs recovered with exact membership, findings and parent counts. |
+| Games, detectors and Tactics | A | SQLite used the ordinal primary-key range for one game or one bounded compatibility page. Lookup work stayed bounded with 100,000 later games. A partly applied seal and both detector jobs recovered with exact membership, findings and parent counts. |
 | Optional reads and browsing | A | Real HTTP and Chromium checks covered addressed replay, bounded pages, cancellation and read-only retry. |
 | Openings and Settings | A | Cutover kept the exact catalog and preference rows. The installed routes served them successfully. |
 | Request limits and shared writer | A | The writer admission and detector apply budget checks passed. A compatibility page requeues only its own job with the existing writer. |
