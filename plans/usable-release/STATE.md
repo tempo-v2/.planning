@@ -1,5 +1,34 @@
 # Tempo V2 usable release
 
+## Installed schema-16 gap conflict resolution and worker replay
+
+[Tempo #130](https://github.com/tempo-v2/tempo/pull/130) and
+[Tempo #131](https://github.com/tempo-v2/tempo/pull/131) now serve at
+`9be76dff41fedc7f52d5aa481fbea92ae112189b` with Core 0.2.2. Both managed processes use that
+release. The [assembly manifest](current-assembly.json) records their
+hashes, the served assets, and the stopped predecessor backup.
+
+Openings → Gaps can repair a pasted continuation with the saved reply
+or stage a separately confirmed repertoire replacement. The replacement
+keeps prior lines, Study attempts, and Learning history available.
+Both tactic worker modes replay the same evidence through uncertain
+Submit replies. The report view and Apply use the saved forecast model
+identity to make the same freshness decision.
+
+Fresh Astra cleared the combined head `c80156e`. All 52 Tempo tests,
+seven Stockfish tests, strict Clippy and the packaged UI build passed.
+Mounted Chromium exercised conflict resolution, a lost replacement
+reply, and predecessor command replay. Disposable native probes verified
+worker replay and preserved verdicts. Seven retained coverage reports
+matched through HTTP, and a deliberately incorrect display flag had
+no effect on eligibility.
+
+The stopped copy and migrated database matched across the predecessor
+columns of all 42 tables. SQLite integrity and foreign keys passed.
+The managed checks verified the listener, both registered processes,
+served asset hashes and read-only routes. Synthetic actions ran only on
+disposable data.
+
 ## Installed schema-15 tactic status and coverage bounds
 
 [Tempo #129](https://github.com/tempo-v2/tempo/pull/129) merged and serves at

@@ -3,15 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "09ff14a68030573e4bcd01e282ce8371b7705c65",
-    "sqlite_schema": 15,
-    "binary_sha256": "34fa22902302c1a411e7c59155fa876ba99f7bd5bcf28672ad606959f3afc7e9",
+    "commit": "9be76dff41fedc7f52d5aa481fbea92ae112189b",
+    "sqlite_schema": 16,
+    "binary_sha256": "a29a7932930085c413dba73cdf3549e78a7c9d215b9d3b8ffa34de12a32d427c",
     "assets": {
-      "index.html": "f447c48fec2b1a8db17182ef7430c5175e54fa6c918936d62f716a1163a7cdb9",
-      "assets/app.js": "310d9b131459e5b71700f5ad17031fd11e1abe932ae9592b8222f800f7cf80b4",
-      "assets/app.css": "3c14ed2c83a475abfca985b37be0f60bd65018bbaf75626141147ef182a41325"
+      "index.html": "46d0df203a1d252dafa7d4b91f450498924eac954892063a41bf74866594bf0a",
+      "assets/app.js": "b099fdab85cda6d00b373b45794feb4bda9b74f650d03902f1ab9b7e458e5670",
+      "assets/app.css": "10a86253ba1bc145956c5a8c51a9b695b24a8c1509bf0a49d1f6bb86cd9b9cbb"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T171823.359776Z-before-schema15/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T174435.207433Z-before-schema16/tempo.sqlite3",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -29,37 +29,38 @@
     },
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
-      "binary_sha256": "ce45ccb7f192fcdaca117d8c2a29fee3dcff5ee058128264f95e1a7e7c9a53af",
+      "binary_sha256": "8bb33056b177ec497d170b6be10272e35f0f3e78b6cfb894ae64264236675c61",
       "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
       "activation_counts": {
         "kept": 1517,
         "narrowed": 66,
         "published": 0,
         "rejected_unpublished": 0,
-        "removed": 718,
-        "retrying": 4,
-        "unresolved": 4
+        "removed": 719,
+        "retrying": 3,
+        "unresolved": 3
       },
-      "verified_pid": 12889,
-      "release": "09ff14a68030573e4bcd01e282ce8371b7705c65"
+      "verified_pid": 17608,
+      "release": "9be76dff41fedc7f52d5aa481fbea92ae112189b"
     }
   },
   "candidate": {
-    "commit": "90e614a4ca31cbb35a2f41d903e97c6ba139544b",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/129",
-    "merged_commit": "09ff14a68030573e4bcd01e282ce8371b7705c65",
-    "sqlite_schema": 15,
+    "commit": "c80156e4bae7a8258e68150eeecd5a850bf00aeb",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/131",
+    "companion_pull_request": "https://github.com/tempo-v2/tempo/pull/130",
+    "merged_commit": "9be76dff41fedc7f52d5aa481fbea92ae112189b",
+    "sqlite_schema": 16,
     "cargo_lock_sha256": "3d401525fc44fdbf919bbf81f520d4a2adb6272d62884e052de5dd49c0c481ba",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "built_assets": {
-      "index.html": "f447c48fec2b1a8db17182ef7430c5175e54fa6c918936d62f716a1163a7cdb9",
-      "assets/app.js": "310d9b131459e5b71700f5ad17031fd11e1abe932ae9592b8222f800f7cf80b4",
-      "assets/app.css": "3c14ed2c83a475abfca985b37be0f60bd65018bbaf75626141147ef182a41325"
+      "index.html": "46d0df203a1d252dafa7d4b91f450498924eac954892063a41bf74866594bf0a",
+      "assets/app.js": "b099fdab85cda6d00b373b45794feb4bda9b74f650d03902f1ab9b7e458e5670",
+      "assets/app.css": "10a86253ba1bc145956c5a8c51a9b695b24a8c1509bf0a49d1f6bb86cd9b9cbb"
     },
-    "built_binary_sha256": "34fa22902302c1a411e7c59155fa876ba99f7bd5bcf28672ad606959f3afc7e9",
-    "qualification": "47 Tempo and seven Stockfish tests, strict Clippy, packaged UI, mounted Chromium Study and Gaps, retained-copy HTTP and migration, isolated socket and native verdict replay."
+    "built_binary_sha256": "a29a7932930085c413dba73cdf3549e78a7c9d215b9d3b8ffa34de12a32d427c",
+    "qualification": "Fresh Astra reviewed the integrated candidate. 52 Tempo and seven Stockfish tests, strict Clippy, packaged UI, mounted Chromium recovery, and retained-copy migration passed."
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
@@ -112,15 +113,15 @@
     }
   },
   "previous_lean_installation": {
-    "commit": "21b704baab82d18a5441f063b244de76df0cab48",
-    "sqlite_schema": 14,
-    "binary_sha256": "6bebcb2c093c984b19ac3cda127bef47d9c2c85f5f990b2f5e799e62d8e0b8b9",
+    "commit": "09ff14a68030573e4bcd01e282ce8371b7705c65",
+    "sqlite_schema": 15,
+    "binary_sha256": "34fa22902302c1a411e7c59155fa876ba99f7bd5bcf28672ad606959f3afc7e9",
     "assets": {
-      "index.html": "6be900c563fba8ee6530127405344122e2f28e356d669650aaca8741e7b14a69",
-      "assets/app.js": "6eebcf69c879a57f3b3895ffcf37fc84facc88c9e4145b2e967e9e7636d5a7d2",
+      "index.html": "f447c48fec2b1a8db17182ef7430c5175e54fa6c918936d62f716a1163a7cdb9",
+      "assets/app.js": "310d9b131459e5b71700f5ad17031fd11e1abe932ae9592b8222f800f7cf80b4",
       "assets/app.css": "3c14ed2c83a475abfca985b37be0f60bd65018bbaf75626141147ef182a41325"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T165954.465333Z-before-study-layout/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T171823.359776Z-before-schema15/tempo.sqlite3",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -138,19 +139,19 @@
     },
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
-      "binary_sha256": "fb7f2842966b3c289662e9bf82338d9ebefd5205a3d4f14b9d08496cb45483d3",
+      "binary_sha256": "ce45ccb7f192fcdaca117d8c2a29fee3dcff5ee058128264f95e1a7e7c9a53af",
       "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
       "activation_counts": {
-        "kept": 0,
-        "narrowed": 0,
+        "kept": 1517,
+        "narrowed": 66,
         "published": 0,
         "rejected_unpublished": 0,
-        "removed": 0,
-        "retrying": 0,
-        "unresolved": 2305
+        "removed": 718,
+        "retrying": 4,
+        "unresolved": 4
       },
-      "verified_pid": 6341,
-      "release": "493918320d1ceec19cedb9b11e0c1ab6a66d2459"
+      "verified_pid": 12889,
+      "release": "09ff14a68030573e4bcd01e282ce8371b7705c65"
     }
   },
   "schema_7_base": {
