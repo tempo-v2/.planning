@@ -1,23 +1,46 @@
 # Tempo V2 usable release
 
-## Gaps acknowledgement recovery
+## Installed Gaps acknowledgement recovery
 
-A fresh review reproduced a stale retry prompt on the installed schema-17
-release when a committed Save reply arrived after Gaps reopened. The receipt
-and saved continuation were present. The Gaps journal follow-up addresses
-that delivery gap. Installed UI recovery remains below A until the new
-package and managed cutover are verified.
+[Tempo #136](https://github.com/tempo-v2/tempo/pull/136) serves at
+`f1f9c7b8b5dda8250d64629891a93a56e4b128a2`, schema 17 and Core 0.2.2.
+Fresh Astra cleared Tempo `3b832d10` with Planning `8af25fc0` from
+[Planning #111](https://github.com/tempo-v2/.planning/pull/111).
+Both merge trees match their reviewed counterparts. The
+[assembly manifest](current-assembly.json) records the running binaries,
+served asset hashes and stopped schema-17 backup.
 
-## Installed schema-17 Coverage bounds
+**Installed architecture report card · A across the eight assessed boundaries.**
 
-[Tempo #135](https://github.com/tempo-v2/tempo/pull/135) serves at
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | The prepared selector, committed-deck bounds and opening-order evidence from the Coverage release apply to the same backend sources and lockfile. The active Study attempt was retained at cutover. |
+| Chess, Learning, and durable acceptance | A | Packaged replay against the installed predecessor preserved accepted and initially undelivered Study and Save command behavior. The existing grading and Learning evidence applies to the same backend sources. |
+| Study UI, Core, and recovery | A | Packaged Chromium covered held Save and replacement replies during remount, cross-tab settlement, malformed acknowledgements, later-page retry, and stale feedback. Retry scan stayed available independently of obsolete transport. The same Study controller and Core package carry forward their mounted Study evidence. |
+| Games, detectors, and tactic publication | A | Prior detector and Stockfish qualification applies to the same sources, and the registered tactic worker started from the installed release at the retained progress counts. |
+| Browsing and optional reads | A | Both live read-only views passed for all 27 retained reports. Packaged Chromium proved an obsolete gaps page or preview could finish without clearing the current report or blocking recovery. |
+| Openings, Settings, and shared writer | A | Browser Apply retained the exact command after an incomplete reply, and a late reply preserved a newer command. The same rank planning, writer and bank-switch code carry forward their prior bounded-work and atomicity evidence. |
+| Coverage scan execution | A | Packaged browser cancellation passed for ordinary and post-Save scans. The same model runner carries forward its prior native Maia, cache, deadline and physical cleanup evidence. |
+| Release provenance | A | The single registered listener and tactic worker use the verified release. Readiness and all three served asset hashes matched. Backup comparison preserved every row in 44 tables, including all 27 rank inputs. SQLite integrity and foreign keys passed. |
+
+The new fault and replay checks used disposable databases. Live checks read
+the installed database and served views. Native Maia and the broader backend
+qualification were reused from the Coverage release below after verifying
+the source and dependency pins.
+
+## Previous schema-17 Coverage bounds
+
+[Tempo #135](https://github.com/tempo-v2/tempo/pull/135) shipped at
 `375de983463633d4dff148e2a7b0987f4570523d` with Core 0.2.2. The merged tree
 matches independently reviewed `d8d95e9` and includes the opening editor from
 [Tempo #134](https://github.com/tempo-v2/tempo/pull/134).
 The [assembly manifest](current-assembly.json) pins the server, worker,
-served assets and stopped schema-16 backup.
+served artifacts for the current release. The preserved schema-16 backup
+was recorded in [Planning #110](https://github.com/tempo-v2/.planning/pull/110).
 
-**Installed architecture report card · A across the eight assessed boundaries.**
+The earlier report card assigned eight As. Fresh Astra later reproduced
+the remount acknowledgement defect and lowered the recovery grade until
+the follow-up release above.
 
 | Boundary | Grade | Evidence |
 | --- | --- | --- |
