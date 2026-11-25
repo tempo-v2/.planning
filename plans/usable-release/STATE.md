@@ -52,7 +52,7 @@ qualified schema-7 source and artifacts.
 
 | Boundary | Grade | Evidence |
 | --- | --- | --- |
-| Study, Queue, and Store | A | Real Next and Answer preserve prepared selection and bounded repeat placement with unrelated archive growth. |
+| Study, Queue, and Store | A | Next and Answer preserve bounded prepared selection and repeat placement as the catalog grows. The SQL probe excludes archive reads. |
 | Chess, Learning, and acceptance | A | One first accepted effect persists with its repeat disposition. Exact replays and competing submissions preserve one grade. |
 | Study UI, Core, and recovery | A | Packaged Core, per-intent journal, preceding receipt recovery, incomplete reply handling, mixed tabs, and Next-only retry passed in Chromium. |
 | Games, detectors, and Tactics | A | All three intake paths share archive identity. Replay, Stats, and detector input share Game IR. Versioned detector retry preserves the sealed snapshot and published puzzle. |
