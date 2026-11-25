@@ -1,5 +1,23 @@
 # Tempo V2 usable release
 
+## Study drop preview candidate
+
+[Tempo #115](https://github.com/tempo-v2/tempo/pull/115) publishes
+`c71e810a39fa5a2c33fb8af76f4afc7f36ad7126` on the serving Lean baseline with
+the same packaged Core 0.2.2. Study displays a legal drop before waiting for
+the Answer journal. The chosen promotion piece appears on the destination
+square using the move's promotion code. The journal commits the original
+intent before network delivery.
+
+Chromium reproduced the capture reset on the serving build using disposable
+data. The candidate passed frame checks for capture, quiet moves, illegal
+drops, capture promotion, and correction. A lost accepted response replayed
+the same Answer and left one grade. The mounted Answer suite also passed
+predecessor recovery on synthetic databases and Next-only retry.
+
+The recorded serving release is
+`1f3d2585e7b47178af990cab137b14617dd650c1`.
+
 ## Lean delivery and preparation boundaries
 
 **Baseline grade B. Qualified and installed grade A** across the seven examined
