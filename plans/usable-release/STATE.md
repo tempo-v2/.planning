@@ -36,8 +36,29 @@ qualified candidate and the serving schema-6 predecessor.
   transaction. These are corrected in the candidate above and covered by
   the browser and SQLite checks. The second review at `f12bff7` confirmed
   those checks and found that nonnumeric rounds collapsed. The candidate
-  above now preserves named rounds and exercises them through HTTP. Fresh
-  exact-head review follows.
+  above now preserves named rounds and exercises them through HTTP.
+- A fresh Astra review cleared Tempo `693388c5` and Planning `21ddff04`.
+  It independently matched the optimized executable hash and reran all
+  28 Rust tests, both qualification tools, and the retained-database
+  rehearsal. Tempo #110 merged at
+  `79ed7b4cc307cc8a092a2fc696975325078d5fde`. Its tree matches the reviewed
+  candidate, and remote main was verified.
+
+### Architecture report card for the merged candidate
+
+**Overall A for the examined boundaries.** The managed installation is
+still serving the schema-6 predecessor. The grades apply to the exact
+qualified schema-7 source and artifacts.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | Real Next and Answer preserve prepared selection and bounded repeat placement with unrelated archive growth. |
+| Chess, Learning, and acceptance | A | One first accepted effect persists with its repeat disposition. Exact replays and competing submissions preserve one grade. |
+| Study UI, Core, and recovery | A | Packaged Core, per-intent journal, preceding receipt recovery, incomplete reply handling, mixed tabs, and Next-only retry passed in Chromium. |
+| Games, detectors, and Tactics | A | All three intake paths share archive identity. Replay, Stats, and detector input share Game IR. Versioned detector retry preserves the sealed snapshot and published puzzle. |
+| Optional views | A | Counts, source context, repertoire picker, and Games status retain independent bounded readers. Games status reports the parent scan and active user work without advancing jobs. |
+| Openings and Settings | A | Repertoire and preference ownership stayed intact. The migration preserved those rows, and sealed detector retry exercised authored changes through Openings. |
+| Request limits and shared writer | A | Bounds stayed in force. Reclamation failure and staged-file ownership were exercised while real Study Next and Answer completed. The largest capture transaction used 128 rows including triggers. |
 
 ## Lean Games admission and Study count bounds
 
