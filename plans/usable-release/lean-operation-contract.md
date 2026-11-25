@@ -209,3 +209,17 @@ differences are reconciled before staging any new placements, including after
 interruption. Store writes at most 128 rows per turn and activates with the
 command receipt. Replaying an accepted command uses the retained receipt.
 Unrelated openings, display details, and tactics add no scan to rank preparation.
+
+### Gaps command recovery
+
+Gaps owns browser delivery and acknowledgement for the exact pending Save,
+replacement or Apply command. Tempo's validated matching reply establishes
+acceptance. The journal records the addressed outcome before removing that
+pending command. A late reply can settle only its own journal entry. Labels,
+draft edits, view navigation and optional scans do not establish acceptance.
+An uncertain reply retains the original request for exact replay across
+navigation or reload. Other mounted views observe journal changes without
+sending commands. The initiating view alone may start the optional follow-up
+scan. A reopened view displays the acknowledged Save and can retry the scan
+independently. The 32 MiB model limits cover the JSON request and forecast
+response streams. Service diagnostics use stderr.

@@ -1,5 +1,13 @@
 # Tempo V2 usable release
 
+## Gaps acknowledgement recovery
+
+A fresh review reproduced a stale retry prompt on the installed schema-17
+release when a committed Save reply arrived after Gaps reopened. The receipt
+and saved continuation were present. The Gaps journal follow-up addresses
+that delivery gap. Installed UI recovery remains below A until the new
+package and managed cutover are verified.
+
 ## Installed schema-17 Coverage bounds
 
 [Tempo #135](https://github.com/tempo-v2/tempo/pull/135) serves at
