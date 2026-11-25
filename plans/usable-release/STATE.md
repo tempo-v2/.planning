@@ -1,5 +1,45 @@
 # Tempo V2 usable release
 
+## Maia repertoire gaps and Study order candidate
+
+[Tempo #116](https://github.com/tempo-v2/tempo/pull/116) at
+`a1a5971fd87dfea2c9194bffe387029873d1e831` adds Openings → Gaps and
+the additive PGN editor (schema 9). [Tempo #117](https://github.com/tempo-v2/tempo/pull/117)
+at `786b446a0b158fe8651cd150953bac5919e89e31` adds explicit forecast
+adoption in Study (schema 10). Both include main `d895f6d` and consume packaged
+Core 0.2.2. The recorded installation during qualification remained `1f3d258`,
+schema 8. These two PRs are published candidates.
+
+Maia-2 Rapid 1500/1500 predicts opponent moves after the selected starting line.
+Openings supplies the learner response. Authored coverage requires an answer through
+the chosen learner move, and studied coverage requires an accepted Good or Again
+on every current response there. Conflicts and the scan budget leave explicit
+unresolved probability. Opening names have no bearing on these decisions. The
+worker uses Python 3.12, maia2 0.11.0, torch 2.8.0 and Rapid weights with SHA-256
+`65aae8465eed5e65df66a24ea7370715579f9e5435098d06fe18bdb1e267e997`.
+Host provisioning is documented in the Tempo README.
+
+All 34 combined Rust tests, two Python forecast tests, strict Clippy and the UI
+build passed. Chromium followed the generated Lichess link, restored the draft,
+rejected unrelated PGN, and replayed a lost Save acknowledgement with one durable
+effect. A 20 KiB annotated transposition PGN added one response and excluded an
+unrelated variation. Lichess returned HTTP 403 to the automated browser. The
+remaining external check is to open the provided line in Lichess and export an
+edited PGN there.
+
+On disposable data the selected reply raised authored coverage from 7.01% to
+36.31%. A real Again review raised studied coverage to 29.30%. An independent
+3,000-card interrupted apply preserved the previous order before publication,
+then recovered across restart with one receipt. With 4,095 higher-ranked future
+reviews the due selector used 24 indexed probes. The mounted Study suite passed
+accepted and undelivered predecessor Answer recovery on copies of the installed
+database, interrupted Next, and the merged Study drop-preview journeys.
+
+On a migrated copy of the retained Gustafsson repertoire, the scan after
+1.e4 e5 2.Nf3 through White's move 10 took 7.7 seconds on the qualification
+host. It returned 2,063 distinct first gaps, 2.334% confirmed authored coverage
+and 0.625% unresolved probability. These are conditional model estimates.
+
 ## Study drop preview candidate
 
 [Tempo #115](https://github.com/tempo-v2/tempo/pull/115) publishes
