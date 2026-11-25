@@ -112,15 +112,15 @@
     }
   },
   "previous_lean_installation": {
-    "commit": "d65f18ede624af49f2a788d8d19feaf69c7815f2",
-    "sqlite_schema": 16,
-    "binary_sha256": "5191b337dffb6eed9017b4d8aaa6f8d9cf71d9b3d54dfc2c6e8ad648c55405d1",
+    "commit": "375de983463633d4dff148e2a7b0987f4570523d",
+    "sqlite_schema": 17,
+    "binary_sha256": "6b5d0d23aec6cfa5b7e4f341301e3d9f1aba10d0eb3fec934735c07a8b36d382",
     "assets": {
-      "index.html": "c9efcc31f89aba3d1b4b86bc7965c9cdad01fc98af7adb2ac8a0c1ac47ffce4b",
-      "assets/app.js": "f139f3ef8decf27fb8ee55cb9b6316f53cd93a5352d76b3417ad2ad64d781d35",
-      "assets/app.css": "10a86253ba1bc145956c5a8c51a9b695b24a8c1509bf0a49d1f6bb86cd9b9cbb"
+      "index.html": "c2b2cafa60363c04b9f75ac169bac22bb595c91e367c9b9ae021cd39119bc351",
+      "assets/app.js": "a3169694554bebaaf04ba0947febe34a58f6cb13a1f1646627ff147e33a0fdfc",
+      "assets/app.css": "bbeb58d9508b6017b1fb28c173cbc44ad673e0ffe60a7c7f5884f3b1bcd6e680"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T182031.452014Z-before-gap-review-fixes/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T201254.677155Z-before-schema17/tempo.sqlite3",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -138,7 +138,7 @@
     },
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
-      "binary_sha256": "8bb33056b177ec497d170b6be10272e35f0f3e78b6cfb894ae64264236675c61",
+      "binary_sha256": "47b6cd30dc34f045d52266065719af2cfbe6bd2115278315ec781a3a13ff3970",
       "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
       "activation_counts": {
         "kept": 1517,
@@ -149,8 +149,8 @@
         "retrying": 3,
         "unresolved": 3
       },
-      "verified_pid": 19454,
-      "release": "d65f18ede624af49f2a788d8d19feaf69c7815f2"
+      "verified_pid": 29124,
+      "release": "375de983463633d4dff148e2a7b0987f4570523d"
     }
   },
   "schema_7_base": {
