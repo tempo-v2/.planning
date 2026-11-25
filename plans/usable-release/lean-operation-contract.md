@@ -87,3 +87,28 @@ they interpret.
 | Detection, Games runner | Give each versioned detector the addressed game. Comparison also receives a coherent set of authored reply/version facts from Openings. Capture uses only the game. Commit a sealed result and its cursor before applying batches. | Apply at most 117 observations and 128 affected rows per write, including queue trigger writes. Retrying a sealed turn uses its exact facts. Failed work does not undo its sibling. Versioned findings coexist; Tactics retains its original game/ply publication identity. Replay and the Stats qualification consumer use the same Game reader. |
 | Answer, Study | Translate predecessor wire into a dataset, attempt and explicit play or reveal. Study accepts the first valid action once and replays exact intent. Store records a typed accepted receipt with the original repeat disposition in the Learning transaction. | A display edit and optional Games failure have no effect. Legacy receipts retain their original interpretation. The browser journals each intent durably before sending, clears only matching resolution, and retries Next separately. Incomplete success replies retain the intent, and display context stays optional. Imported predecessor envelopes retain their original request. |
 | File staging, Games I/O owner | Reserve bounded capacity before staging; pass only an ID and memory-only lease to the writer. Reclaim after all leases finish and a fresh indexed durable-reference check succeeds. | No cleanup I/O runs under writer admission or on the writer. Keep two foreground staging slots and one worker slot, with four provisional/orphan file reservations and at most 256 MiB. Retryable exhaustion affects staging; uncertain ownership retains the file. |
+
+## Schema-7 bounded browsing
+
+The application admits each interactive read into its own bounded reader.
+Games owns archive and replay, Openings and Tactics own their catalogues,
+Settings owns saved preferences, and Study owns current-attempt projection.
+The route, cursor or record identity determines which addressed facts the
+reader loads. Reads make no durable changes. Archive display text cannot
+influence identity, grading, selection, or durable jobs. The UI owns
+cancellation, invalidation, and the current page or selection.
+
+Each read family has one physical slot, immediate admission, zero SQLite
+lock wait, a 250 ms deadline through serialization, two million cumulative
+SQLite steps, and a 2 MiB JSON response limit. The existing Study context
+and opponent-move reads share their context slot. Busy, expired, and budget
+failures return the existing typed unavailable reply. A cancelled caller
+does not free a running slot early. Archive pages keep 50 rows and opening
+and tactic pages keep 100. Game projections cap player labels at 256
+characters and dates at 64 characters, and omit source URLs over 2 KiB.
+The original archive and its semantic identities remain intact.
+
+A page refresh supersedes earlier list reads. Only the current selection
+may apply a replay response. A failed read preserves the last successful
+view and cannot undo a saved command. Existing response shapes and pending
+schema-6 Answer envelopes remain compatible.
