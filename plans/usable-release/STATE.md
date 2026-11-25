@@ -1,5 +1,65 @@
 # Tempo V2 usable release
 
+## Lean schema 7 Game and Answer representations
+
+[Tempo #110](https://github.com/tempo-v2/tempo/pull/110) candidate `693388c5a1453f3357afd9fefa5dd9184535d7f0`
+uses the [schema-7 operation contract](lean-operation-contract.md) and packaged
+Core 0.2.2. The [assembly manifest](current-assembly.json) identifies the
+qualified candidate and the serving schema-6 predecessor.
+
+- All 28 locked Rust tests, strict Clippy, the packaged UI build and the
+  optimized executable build passed. Occurrence lookup stayed bounded with
+  100,000 unrelated and 100,000 same-fingerprint rows. SQLite counted 128
+  affected rows on the maximum final capture apply, including ready-order
+  triggers and parent progress.
+- A disposable copy converted all 16,768 archived games. SQLite integrity and
+  foreign keys passed. All predecessor semantic rows matched in both
+  directions. Packed route payloads used 3,146,978 bytes, from 8,712,290.
+  The explicit offline migration refused the serving lock. A schema-6 upload
+  resumed its original file, identity and byte offset on schema 7.
+- Real HTTP used manual PGN and frozen local Lichess and Chess.com downloads.
+  It reused one archive identity, kept independent detector progress through
+  comparison failure, retried the sealed analysis after an opening edit, and
+  observed the new input on an explicit rescan. Named rounds distinguished
+  separate occurrences, with exact repeats and placeholder rounds reusing an
+  existing game. A substituted detector
+  retained its new versioned finding without changing the accepted puzzle.
+  The Stats proof used the addressed Game reader.
+- Chromium replayed both original schema-6 Answer cases, recovered the
+  two-tab delayed response and an incomplete success reply, and retried only
+  Next after acceptance. Original, renamed and blank titles yielded the same
+  Good/Again commands, receipts, relative schedules, and continuation. A
+  still-loaded schema-6 tab cleared its old scalar after cutover while the
+  reloaded schema-7 tab retained and replayed its newer intent.
+- First independent Astra pass at `33bc0a0` identified incomplete receipt
+  handling, duplicated Game reconstruction and an oversized terminal capture
+  transaction. These are corrected in the candidate above and covered by
+  the browser and SQLite checks. The second review at `f12bff7` confirmed
+  those checks and found that nonnumeric rounds collapsed. The candidate
+  above now preserves named rounds and exercises them through HTTP.
+- A fresh Astra review cleared Tempo `693388c5` and Planning `21ddff04`.
+  It independently matched the optimized executable hash and reran all
+  28 Rust tests, both qualification tools, and the retained-database
+  rehearsal. Tempo #110 merged at
+  `79ed7b4cc307cc8a092a2fc696975325078d5fde`. Its tree matches the reviewed
+  candidate, and remote main was verified.
+
+### Architecture report card for the merged candidate
+
+**Overall A for the examined boundaries.** The managed installation is
+still serving the schema-6 predecessor. The grades apply to the exact
+qualified schema-7 source and artifacts.
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | Next and Answer preserve bounded prepared selection and repeat placement as the catalog grows. The SQL probe excludes archive reads. |
+| Chess, Learning, and acceptance | A | One first accepted effect persists with its repeat disposition. Exact replays and competing submissions preserve one grade. |
+| Study UI, Core, and recovery | A | Packaged Core, per-intent journal, preceding receipt recovery, incomplete reply handling, mixed tabs, and Next-only retry passed in Chromium. |
+| Games, detectors, and Tactics | A | All three intake paths share archive identity. Replay, Stats, and detector input share Game IR. Versioned detector retry preserves the sealed snapshot and published puzzle. |
+| Optional views | A | Counts, source context, repertoire picker, and Games status retain independent bounded readers. Games status reports the parent scan and active user work without advancing jobs. |
+| Openings and Settings | A | Repertoire and preference ownership stayed intact. The migration preserved those rows, and sealed detector retry exercised authored changes through Openings. |
+| Request limits and shared writer | A | Bounds stayed in force. Reclamation failure and staged-file ownership were exercised while real Study Next and Answer completed. The largest capture transaction used 128 rows including triggers. |
+
 ## Lean Games admission and Study count bounds
 
 [Tempo #109](https://github.com/tempo-v2/tempo/pull/109) merged schema 6 at
