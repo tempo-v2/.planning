@@ -3,15 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "6c7a8d289ec9db68936ef6860d3743742ad16eed",
+    "commit": "1f3d2585e7b47178af990cab137b14617dd650c1",
     "sqlite_schema": 8,
-    "binary_sha256": "4aaf4c9773c62de6086950aa5e2f35c27757837a7629000605bb42e6f7a534e5",
+    "binary_sha256": "94170ecc882f2df972bd0af8ba58cc3e422618f088363af1a89eab0cba11d17b",
     "assets": {
-      "index.html": "cc40134d48e5ab9e5058a500968deae35f45a90f0571cd866daa746750f38ef5",
-      "assets/app.js": "549a4f6761dbefbcc5888d631d677eb94217740ff2c47d97ff0cd814f7cf402f",
-      "assets/app.css": "2700b0f4a5bd9a79865e0c914dda5130a20133f8240743d2ad2e0c6d5131e243"
+      "index.html": "35a4f1d0fe24a3edd65fa5f852fbbc53c939ec074cae4575f9dcb04338a68e4a",
+      "assets/app.js": "85241bcf46c730c9d0fd64dfd13c92abd7fc2fccc21fcc7bee680da09533ccae",
+      "assets/app.css": "96beb20d5f203d5df1a9ed89847ac60d0f1056871c4db298e445112f52de5c66"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T064823.251721Z-before-lean-schema-8/tempo.sqlite3"
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T130103.675275Z-before-lean-main-sync/tempo.sqlite3"
   },
   "candidate": {
     "commit": "3f6747ed7c1110f3bd89f17c43ae5b00cfd413ed",
