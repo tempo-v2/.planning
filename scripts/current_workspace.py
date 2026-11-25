@@ -30,13 +30,13 @@ def require_digest(path, expected):
 
 
 def load_review():
-    review = json.loads(MANIFEST.read_text())["review"]
+    review = json.loads(MANIFEST.read_text())["predecessor_assembly"]["review"]
     pins = review["components"]
     if pins.keys() != COMPONENTS or not all(re.fullmatch("[0-9a-f]{40}", pin) for pin in pins.values()):
         raise SetupError("Current assembly must pin every runtime component by full commit")
     require_digest(PLANNING / review["workspace_template"], review["workspace_sha256"])
     require_digest(PLANNING / review["cargo_lock"], review["cargo_lock_sha256"])
-    require_digest(PLANNING / "agent-guidance/AGENTS.md", review["guidance_sha256"])
+    require_digest(PLANNING / review["guidance_path"], review["guidance_sha256"])
     return review
 
 
@@ -78,7 +78,7 @@ def assemble(workspace, review, protocol, sources, offline):
     files = {
         "Cargo.toml": (PLANNING / review["workspace_template"]).read_bytes(),
         "Cargo.lock": (PLANNING / review["cargo_lock"]).read_bytes(),
-        "AGENTS.md": (PLANNING / "agent-guidance/AGENTS.md").read_bytes(),
+        "AGENTS.md": (PLANNING / review["guidance_path"]).read_bytes(),
         "Makefile": b"include tempo/tools/local.mk\n",
     }
     for filename, content in files.items():
