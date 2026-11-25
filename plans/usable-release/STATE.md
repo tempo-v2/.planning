@@ -28,6 +28,7 @@ Stockfish 19. Strict Clippy and the packaged UI build passed. Fault injection,
 synthetic commands, and recovery ran on disposable databases. Live checks
 used the stopped snapshot comparison and read-only requests. Four retained
 findings were in retry backoff when the matched worker was activated.
+A later live status read showed three unresolved and one more retired card.
 
 ## Installed shared Study and Tactics layout
 
