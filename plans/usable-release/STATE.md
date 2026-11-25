@@ -1,5 +1,34 @@
 # Tempo V2 usable release
 
+## Installed schema-15 tactic status and coverage bounds
+
+[Tempo #129](https://github.com/tempo-v2/tempo/pull/129) merged and serves at
+`09ff14a68030573e4bcd01e282ce8371b7705c65` with the matched tactic worker,
+Core 0.2.2, and SQLite schema 15. Independent review examined `90e614a`.
+The merged tree matches that head. The stopped backup preserves all 39
+predecessor tables. SQLite integrity, foreign keys, registered process
+identity, served asset hashes, and read-only endpoint checks passed.
+The [assembly manifest](current-assembly.json) records the exact artifacts.
+
+**Overall A across the eight assessed boundaries.**
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study, Queue, and Store | A | Prepared-order work bounds, excluded Games reads, and deferred repeats passed on the combined source. |
+| Chess, Learning, and acceptance | A | Native scoring, exact Answer recovery and issued-answer preservation passed. |
+| Study UI, Core, and recovery | A | Mounted Chromium passed predecessor lost and undelivered Answers, mixed tabs, display-name invariance, and Next-only retry. |
+| Games, detectors, and tactic publication | A | The detector stays within 128 affected rows, including counter changes. Archived game acceptance stays independent of the tactic companion. |
+| Tactic worker status and dispatch | A | The bundled SQLite singleton query stayed flat with 100,000 additional finished findings. A held status connection did not block Next or verdict replay. Native evidence committed after a lost reply and replayed across restart. An unavailable status socket left work intake available. |
+| Optional reads and coverage | A | SQL authorization checks denied Learning and full-report reads during paging. All seven retained reports matched. The maximum-size disposable probe read a summary over 300,000 path references and served a cross-chunk page within the read budget. Mounted Chromium paged while summary was held, then recovered summary after a 503. |
+| Openings, Settings, and shared writer | A | Predecessor Save and Apply recovered in both delivery states with one receipt each. Writer admission, fairness, and bounded detector writes passed. |
+| Release provenance | A | The server and worker run the matched schema-15 release. Both hashes, served assets, the backup, and package pins are recorded here. |
+
+All 47 Tempo tests and seven Stockfish tests passed, including native
+Stockfish 19. Strict Clippy and the packaged UI build passed. Fault injection,
+synthetic commands, and recovery ran on disposable databases. Live checks
+used the stopped snapshot comparison and read-only requests. Four retained
+findings were in retry backoff when the matched worker was activated.
+
 ## Installed shared Study and Tactics layout
 
 [Tempo #128](https://github.com/tempo-v2/tempo/pull/128) shipped at
