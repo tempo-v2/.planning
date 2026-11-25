@@ -1,111 +1,28 @@
-# AGENTS.md — Tempo 2 working instructions
+# Tempo engineering instructions
 
-## Purpose
+This file is the current project contract. Historical plans and old tests are evidence of previous behavior, not requirements to preserve every feature. Follow explicit current user decisions and the selected task packet when they supersede historical guidance. During structural cleanup, feature simplification and retirement are permitted; unrelated feature expansion is paused.
 
-Tempo 2 is a small application for one active user. Make the requested feature work, keep the code understandable, and publish the result so the next person or agent can continue from it.
+## 1. Start with the actual source and operation
 
-Prefer the simplest implementation that satisfies the actual requirement. Preserve the existing component boundaries and learning data. Do not turn a small feature into an architecture project.
+Read this file, the selected worker packet, the current assembly manifest, and applicable local instructions. The selected Planning checkout owns the canonical bytes of this guidance. In an assembled workspace, verify its root copy with `python3 .planning/scripts/check_guidance_identity.py AGENTS.md` and record the reported SHA-256 with the Planning revision. Repository entry points may add local instructions and refer to this canonical file. Workers verify their checkout, dirty files and relevant released dependencies. The coordinator verifies running-artifact identity once per baseline/install; an unrelated component worker does not repeat it. A clean checkout, default branch, or old prompt SHA does not identify the installed application. Preserve other workers' changes and use the coordinator's file reservations.
 
-## 0. Establish behavior before choosing its implementation
+Name the operation being changed. State its semantic owner, permitted input facts, read/write set, maximum work, relevant version/day/obligation identity, failure behavior and freshness rule in the operation contract. Use existing contracts when unchanged. Do not derive a product rule from a display field, identifier spelling, optional metadata, a fixture, or an available database column.
 
-Before adding or changing a decision that affects commands, workflow, eligibility, priority, authorization, identity, learning, persistence, recovery, or a claim that an outcome was accepted, state the intended rule before choosing its predicate. This applies to small conditions, defaults and adapters inside existing code as well as new interfaces. Being the implementation owner does not authorize inventing the product rule.
+## 2. Give each operation only its own capabilities
 
-Use a few lines or a small table in the existing task/PR; group related decisions rather than documenting every branch:
+Pure domain code receives values and returns decisions; it cannot obtain storage, browser, process or network handles. Application handlers receive the smallest coherent storage capability they need. No universal application context, full Snapshot, complete Catalog or all-purpose Store handle in an interactive helper.
 
-| Question | Required answer |
-| --- | --- |
-| Behavior | What observable operation, transition or durable effect is intended? |
-| Basis and owner | Which current requirement or accepted contract establishes it, for which runtime/profile/release, and which component owns the decision? |
-| Inputs | Which declared semantic facts may determine it, and who establishes those facts? |
-| Independence | What nearby presentation, representation or context may change without changing that decision? |
-| Lifetime | Can any input, result or pending command survive import, caching, persistence, restart or a release change; who must still interpret it? |
+Reads must not secretly apply jobs, accept grades, import content or change allowances. Separate an explicit command from querying its status. A missing narrow interface is a task at its owner; do not compensate by loading the entire application and extracting one field.
 
-Existing code, fixtures and examples show what was built; they are not sufficient authority that every observed distinction is intended. A positive example does not establish an exclusive category: “a clean tactic continues” does not establish “only tactics continue.” Preserve user data and accepted semantics. Establish the basis of an undocumented distinction touched by the task before carrying it forward.
+Routine commands use addressed state and writes. Full snapshots, whole-history validation and global catalog rewrites belong only to explicitly named batch/admin work. PGN interpretation is permitted for an addressed authoring/import/export operation whose actual purpose requires it and whose budget declares it; it is forbidden as incidental work in Next, summary, status or unrelated browsing. Never add a broad fallback to a narrow interface. Unsupported operations return a typed unsupported/unavailable result. Existing user and packet authorization covers the work it actually grants; these classifications do not create repetitive approval steps.
 
-Apply the same discipline when writing implementation prompts, acceptance criteria or handoffs. State the semantic rule and label illustrative examples; do not turn an example or existing quirk into a new requirement for the next agent.
+### Extend Tempo through owned interfaces
 
-Treat data according to its declared role in the decision. Display text, stable identity, policy inputs, authoritative results and delivery state can coexist in one response without becoming interchangeable. Do not derive policy from correlations, names, optional-field presence, message wording, identifier spelling or incidental representation unless that derivation is itself an explicit owned contract. Missing or unknown data has the outcome declared by that contract; it must not silently select a different activity, identity, permission or mutation.
-
-Give decision code only the semantic inputs it needs. Prefer a small function or value in the existing owner over passing an unrestricted view/content/storage object. If a required fact or operation is missing, complete the smallest contract at its owner before implementing the consumer. Trace any derived value to its basis: adding an enum, capability, adapter or shared helper does not fix an unjustified inference in its producer. Do not duplicate an owner's transition by constructing convenient default state in a caller.
-
-Before implementation, identify both a semantic change that should alter the result and an irrelevant change that must not. Derive expected observations from the stated rule, then exercise the actual consumer. Tests that repeat the chosen predicate or only preserve correlated fixtures cannot establish the rule.
-
-Use task intent and current accepted contracts to resolve ordinary reversible implementation choices autonomously. Layout, styling, local mechanics and code organization need no separate approval when their semantic effects are unchanged. When a material policy choice is unresolved, identify it explicitly and continue independent work; ask a focused question only if competing interpretations materially change intent and cannot be resolved from the authorized scope. Do not fill the gap with a hidden fallback.
-
-These rules apply across Tempo. The Study-specific examples and checks below illustrate them; they are not an exhaustive list of forbidden shortcuts.
-
-## 1. Completion includes publication
-
-For any task that changes repository code, tests or documentation, do not report completion until the intended changes are committed and one of these outcomes is verified:
-
-1. **Feature branch:** the branch is pushed and a pull request is open against the correct integration branch. An existing open PR for that branch may be updated. Its head must contain the intended commits. You must verify the PR contains the intended changes before reporting completion.
-2. **Main:** when direct-main work or merging is authorized and consistent with the repository workflow, the intended result is pushed to main and the remote commit is verified.
-
-The usual path is a feature branch and PR. This rule does not instruct you to bypass protection, force-push shared history, merge an unreviewed change, or choose an older main branch as the base.
-
-A local commit, a passing test suite, a pushed branch without its required PR, or an unverified push does not meet this completion rule. In a multi-repository change, publish every changed repository and link the corresponding PRs/commits. Record the compatible component versions needed to build the result.
-
-Verify publication by reading back the remote branch/PR or main reference. Report the actual commit IDs and PR URLs. Keep **implemented**, **tested**, **published**, **merged**, and **installed** as separate statuses.
-
-If access, an approval restriction or another genuine blocker prevents publication, preserve the work and report **blocked — unpublished**, the specific cause, and the exact remaining step. Do not silently call the task complete. Continue all other authorized work first, and do not request authorization already provided in the session.
-
-For a read-only review or a proven no-change result, deliver the findings/evidence without manufacturing a code change or empty PR. If the task requests a repository report, publish that report under the same rule.
-
-## 2. Start from the actual current work
-
-Read applicable repository instructions and the current release/run ledger. Inspect the current branch, recent relevant commits, worktree status and local changes before editing.
-
-Read the tracked canonical guidance for each task: `.planning/agent-guidance/AGENTS.md` from the assembled workspace, or `agent-guidance/AGENTS.md` inside this planning repository. An older copied root file does not replace it; retain applicable local additions.
-
-Establish the active contract and its scope before using a historical example or current implementation as a specification. Explicit current user decisions and accepted contracts for the selected runtime govern behavior. Source pins and tests establish implementation/evidence; scaffold documents and earlier prompts may describe another profile or a superseded policy. Resolve a conflict explicitly rather than selecting the most convenient source or treating the newest filename as authority.
-
-Use the latest agreed implementation as the base. Reference SHAs in an old prompt are comparison evidence, not instructions to reset or downgrade newer code. A default branch is not automatically the active integration baseline.
-
-Preserve unrelated and in-progress changes. Do not reset, stash, delete, overwrite or stage another worker's files simply to make the checkout clean. Use a task branch/worktree and explicit file ownership where needed. Separate development/test outputs from artifacts served by the managed installation. Use the guarded development entry points for local startup and build. Installed lifecycle authority comes from the managed registration and explicit release operation, including while the service is stopped.
-
-Reconcile reported new work once, narrow the remaining task, and proceed. Do not repeat repository-wide discovery after every small change.
-
-## 3. Keep responsibilities in their existing components
-
-| Component | Owns | Must not own |
-| --- | --- | --- |
-| Core Components | Reusable board, controls, layout and local input behavior | Study workflow, HTTP, persistence, grading or scheduling |
-| Tempo UI | Pages, presentation state, preferences, shortcuts, sound, transport and exact-command recovery | Eligibility, chess grading, FSRS or database access |
-| Tempo application | Commands, public replies, coordination, safe projections and transaction orchestration | A second implementation of domain rules |
-| Chess | Legal moves, positions, notation, PGN/content interpretation and chess grading | Queue policy, database connections or browser state |
-| Study | Generic attempt progression and sticky whole-attempt assessment | Chess-specific rules, scheduling or storage |
-| Learning | Learning transitions, teaching policy and scheduler adapter | UI behavior or queue presentation order |
-| Queue | Selection, eligibility projection, ordering and deferral | Chess/FSRS implementations or durable transaction execution |
-| Store | Bounded reads, atomic writes, constraints and receipts | Deciding what an answer means or how to schedule it |
-| Types | Small stable shared identifiers and values | A universal framework or collection of every component's internals |
-| Planning | Shared contracts, source/artifact handoff and one useful ledger | Another execution or runtime subsystem |
-
-Use public interfaces between components. Do not reach into another component's private modules or database tables. Domain logic receives values; it does not fetch data through Store/HTTP/browser handles.
-
-Consume Core through its built, versioned package in the normal app. Source-tree aliases are not a substitute for qualifying the package boundary.
-
-## 4. Design small, explicit interfaces
-
-Apply section 0 before changing behavior through any interface, including an existing one. When defining or changing its contract, state:
-
-- Who calls it and who owns the decision?
-- What exact inputs are required?
-- What result is returned, including empty, invalid and failed outcomes?
-- What state can it change?
-- Which identity/version/time facts make the operation valid?
-- What happens when a write is delivered again?
-
-Then choose the smallest concrete type/function/trait that expresses that contract. Reuse an existing operation when it has the same meaning. Keep reads separate from commands with side effects.
-
-Use named values instead of ambiguous Boolean switches or loosely structured dictionaries at public boundaries. Add short producer/consumer and “when to use this” explanations where they help. Prefer files named for one concept or operation, with focused examples next to public Rust types/functions.
-
-An interface is not complete because it compiles. Exercise it through its real consumer. Test the external behavior and important failure cases, rather than duplicating the implementation in a test.
-
-Keep persisted identity, uniqueness and reference integrity in Store's real primary-key, unique and foreign-key constraints, rather than relying on UI conventions alone.
-
-Do not introduce a generic event bus, service locator, universal repository abstraction, plugin framework, large configuration language, alternate scheduler or duplicate controller for a hypothetical future feature. Add abstraction when a concrete current need justifies it.
-
-Keep one authoritative production path for each responsibility. When replacing a path, remove or explicitly retire the old path instead of leaving two competing implementations active. Keep test/demo adapters clearly outside normal runtime composition; do not use them as silent production fallbacks.
+- Define the smallest typed interface the consumer needs. Specify the owner, permitted inputs, returned facts, empty and failed outcomes, and any version or retry guarantees. Keep source-specific policy, formats, credentials, and private persistence inside the owning adapter.
+- A game provider supplies games. A detector supplies findings. The job runner owns retries and checkpoints, and Games owns game acceptance. The selected profile’s operation contract identifies the publication owner and its intake. At the first additional implementation, give it the same owned interface before adding provider or detector branches to downstream callers. Use ordinary functions or concrete types where they suffice.
+- Study consumes published, versioned exercises and owns attempt progression and the first accepted assessment. Chess owns legal interpretation and grades the issued moves. Adding or swapping a game provider, detector, or optional analysis source must require zero changes to Study selection, issuance, or grading. Fetch optional game or analysis context separately from accepting or advancing a review.
+- Keep dependencies pointed from the caller to the owned interface. Pass typed values across component boundaries. Keep implementation handles and unrelated tables behind their owner. Keep concrete wiring in the application or job composition code. Extend an interface for a demonstrated consumer need and keep it specific to that operation.
+- Verify through the real consumer that a new or substituted source can deliver valid input and that an empty or failed optional source leaves unrelated commands and their durable effects independent. Include the expected difference when an authoritative input changes. Review actual calls, reads, and writes along with imports.
 
 ### Review blocker: settings have one source of truth
 
@@ -121,91 +38,52 @@ This rule applies to user preferences. Host setup, access provisioning,
 credentials, fixed product rules, and inputs to individual operations fall
 outside that scope.
 
-### Review blocker: presentation data must not become policy
+## 3. Enforce the prepared-order Study contract
 
-Block a change when shared Study code chooses behavior from a title, name, display label, source/provenance string, content family, identifier spelling, or the presence/absence of optional display data until the author identifies the decision's owner and the explicit contract that carries it. An ownership explanation is not enough if the implementation still uses a display field as a proxy: change the consumer to use the semantic contract.
+Queue owns one rebuildable ordered plan and its bounded priority updates. Learning owns current availability and every Learning transition. Store enforces addressed identities, versions, constraints and atomic accepted effects. Chess owns legal interpretation. Study, if retained, owns attempt progression and the first accepted assessment.
 
-`exercise_name` has one job: display. Giving the same exercise a name, renaming it or omitting that name must not change its commands, grading, scheduling, allowance accounting, acknowledgement, continuation or recovery. Do not infer “tactic” from an absent repertoire name. Do not rename such a proxy and leave the policy implicit.
+Next resumes an active attempt first; otherwise it consumes an indexed prepared plan, performs the declared bounded validity checks, and hydrates the chosen version. It never reads game relevance, parses repertoire PGN, loads all definitions/Learning, or invokes an engine/provider. Missing/stale plans yield explicit preparing state and a coalesced background rebuild. No live-selector fallback.
 
-Study workflow uses the declared activity mode, completion state, authoritative whole-attempt assessment and move feedback as appropriate. Teach acknowledgement follows the Teach contract. A correct final move is not proof of a clean attempt: earlier misses remain part of the saved outcome. A UI success cue or automatic continuation must respect that distinction.
+An accepted transition advances only its exact activity/work/obligation identity, retained with authoritative attempt/Learning facts rather than a disposable plan row. An older answer cannot clear a newer miss for the same target/version. Intermediate moves and ungraded Practice do not consume unrelated scheduled work. Receipt and Learning/attempt effect commit atomically with a compatible addressed projection delta or a dirty/rebuild marker; replay has zero new effects. A missing/stale plan or summary must not block valid Answer/Teach/Games acceptance.
 
-Content-specific behavior can be legitimate in its owning component: for example, Chess interprets repertoire content, and Queue can apply an explicitly declared admission policy. Keep that distinction in typed, validated facts with a documented producer and consumer. Human-facing provenance and identifier conventions must not quietly substitute for eligibility, priority or learning facts. Prefer a small adapter or value type over a new framework.
+Capture coherent planner inputs and their basis together; build outside write transactions. Stage rows and reclaim old generations in bounded write chunks; final publication is a short completeness check and head switch against the original basis. Failed/stale builds cannot overwrite newer work. Rank-only refresh may use the existing order. Membership-dirty selection defaults to preparing until a complete plan or proved bounded update is available. Updating summaries cannot authorize optional work from a stale zero. Qualification hold/release and reset are eligibility changes, even when produced by analysis; evidence-only ranking changes are not. Summary and order have explicit separate freshness states.
 
-The same rule applies to errors. Carry recovery capabilities and issue kinds explicitly from their owner; do not enable, disable or route actions by matching human-facing message text. Browser recovery belongs to its UI controller, so this rule does not imply moving every interaction decision to the server.
+## 4. Keep optional work optional
 
-### Trace the decision through the actual consumer
+Analysis, explanations, provenance, reports and provider/model refresh cannot gate unrelated acceptance, health, context, status or browsing. A browser timeout/abort does not by itself cancel server work. Every retained disposable job has bounded admission and a whole-operation deadline including queue, lock, pipe and resource waits. Cancellation retains the slot until physical completion is acknowledged. Uncancellable dependencies require bounded isolation/termination or retirement. Fence late results and fairly schedule durable apply work; an accepted durable command resolves through its receipt rather than being silently abandoned.
 
-For changes at a shared workflow or metadata/policy boundary, follow the value and the decision through:
+Keep one durable write owner and short transactions. Declare input/output byte limits, queue capacity/wait, physical worker slots and total deadlines as well as SQL/row budgets. Reject new work before durable acceptance when capacity is unavailable; never discard an already accepted command because its delivery timed out. Do not hide broad work behind a mutex, an unbounded thread, a status poll, an invalidation callback or startup reconciliation. Optional startup work must not prevent basic health/context from being available.
 
-1. The producer and any import/normalization adapter, including reimport, alias merging and metadata-preservation behavior.
-2. The persisted record, schema/defaults and receipt representation.
-3. The wire response, version and client validator.
-4. The actual consumer: render conditions, selectors, timers, keyboard actions and emitted commands.
-5. The accepted durable outcome and retry/restart behavior.
+Each UI page/controller declares its endpoint/source set, query identity, invalidation topics, visibility/polling rule and cleanup. Dataset identity comes from the small application context operation. Hidden optional panels do not start engines/providers merely by mounting. Test permitted calls and maximum in-flight deliveries through the mounted consumer; cancel or coalesce obsolete disposable reads while preserving unresolved durable commands.
 
-Reviewing a shared grader or a package dependency graph does not cover downstream policy. Search old field names, aliases, nullable fields, message comparisons and ID/provenance parsing as well as the new type. Identify each branch that can change behavior, its owner and its semantic input. If two exercises share an activity contract, a content-family difference in their flow needs an explicit product/domain rule.
+A failed optional view projection must not turn a known accepted write into an ambiguous command. Carry acceptance identity separately from loading the next activity or enrichment. Keep required blind-test secrets server-side and use issued content versions for retained attempts.
 
-Keep this evidence short and concrete in the PR: decision/owner/contract, producer → storage → wire → consumer, and the relevant verification results. Missing ownership or an implicit policy input blocks approval; documentation alone does not cure an implementation violation.
+## 5. Prefer one real path and delete the replaced path
 
-## 5. Preserve the current learning and content contracts
+Keep the smallest supported production model. Do not preserve fixture runtime branches, public fake APIs, completed maintenance commands, compatibility adapters or unused features solely because tests mention them. Before retirement, inventory actual registrations/callers, independent consumers and retained data/commands; provide an archive or finite migration when needed.
 
-Keep Teach, scheduled Test and Practice distinct. Teaching acknowledgement is not a successful recall grade. A tactic has one whole-puzzle result; a correction does not turn an earlier miss into a clean result. Practice leaves scheduling and introduction allowances unchanged.
+Every replacement task names the old caller/path that disappears. Interfaces without consumer adoption are capability releases, not completed fixes. No permanent duplicate selector, scheduler, controller or silent production fallback. No generic event bus, plugin framework, service mesh, universal repository or configuration language without a concrete demonstrated need.
 
-Keep existing content/learning identity, version checks, quota accounting and the configured study calendar. Current policy comes from the current accepted contract, not a retired example. Do not restore old mandatory same-day repeats or forced-tomorrow review rules as incidental cleanup.
+Keep Types to small stable values. Keep optional analysis attachments out of general content/selection shapes. Keep authored-document validity separate from model readiness. Preserve original data in a verified archive where features are retired; deletion of functionality does not require deletion of the only data copy.
 
-The UI renders authoritative outcomes and selection facts. It must not reconstruct the scheduler or count displayed cards as accepted introductions. A changing opening frontier is not a fixed session total.
+## 6. Prove independence through the real consumer
 
-Preserve the current dataset, imported content and learning accumulated since delivery. Old permission to discard Tempo 1 history is not permission to reset Tempo 2.
+For an affected operation, prove both a relevant change that must alter behavior and an irrelevant change/failure that must not. Extend the real SQLite tactical-acceptance pattern: poison unrelated payloads, deny forbidden reads, count actual writes and SQL work, and grow unrelated data. A test that returns the same counts while still reading relevance does not prove independence.
 
-## 6. Make retries and presentation truthful
+Use deterministic limits from the operation contract: forbidden calls/reads equal zero; bounded candidate checks and content hydration; no unrelated writes; no inline batch computation. Use fresh connections or explicit statement-cache handling for preparation-time SQL authorizer tests. Measure runtime queue wait separately from handling and commit time.
 
-Separate an accepted result from loading the next activity. If a result was saved but Next fails, show the saved result and retry Next. If acceptance is uncertain, retry the original immutable command rather than issuing a new grading operation.
+Run the smallest meaningful component/consumer/persistence checks for the change. Test races, replay and failure rollback at actual storage/protocol boundaries where affected. Do not count a fixture demo, unchanged stamp, test total or import graph as proof of another operation. The regression must fail when the original forbidden dependency is deliberately reintroduced.
 
-Preserve dataset, target, content-version, attempt and revision checks. Changes to wire responses must account for saved receipts and pending commands; do not break them by adding mandatory fields without compatibility.
+## 7. Coordinator, workers and review
 
-Treat history, preferences, summaries and catalog browsing as reads/presentation unless an explicit command says otherwise. They must not silently grade, skip, introduce or reschedule.
+One coordinator owns scope, task state, contracts, interface releases, shared-file reservations, integration and heavy test scheduling. Workers receive one bounded packet with exact files/symbols, prerequisites, first change, forbidden shortcuts, tests and handoff. Workers cannot silently broaden an interface, invent policy, edit another reservation or waive acceptance to finish.
 
-Never send a hidden answer key to a blind-test client and rely on CSS to conceal it. Expose only the context and moves authorized at that stage. Use the issued content version when explaining or replaying an attempt.
+An independent reviewer checks the actual consumer, declared work/failure boundary and deletion of the old path. New findings are assigned a disposition; they are not hidden or automatically turned into a new framework. If blocked, state the missing contract/source/capability and complete independent authorized work.
 
-Cancel stale input, promotion choices and timers when their owning activity changes. Keep board viewing state separate from the authoritative attempt.
+## 8. Completion means the chosen outcome is verified
 
-## 7. Verify according to the change
+Commit changes across every changed repository. Verify each pushed branch and its open pull request against the current integration branch, or verify the remote main commit when direct-main work or merging is authorized. Read the remote result back and confirm it contains the intended changes. Record exact commits, pull request links and compatible component versions in the handoff. If publication is blocked, preserve the work and report what prevented publication and the exact remaining step. Read-only reviews and proven no-change outcomes require no code commit or pull request.
 
-Run the smallest meaningful checks that cover changed behavior and concrete risks.
+Report implemented, tested, published, merged, installed and observed as separate states. Record exact source/assembly/artifact, meaningful checks and remaining limits. Do not claim project-wide freedom from coupling from a scoped review.
 
-- Pure component/appearance work uses component checks.
-- Interaction changes get a focused browser journey where needed.
-- Public interface changes get consumer/contract checks.
-- Persistence changes get the affected transaction, constraint or migration checks.
-- A changed Core package is checked as an installed artifact in its consumer.
-
-Do not require database/lifecycle suites for unrelated UI changes. Do not repeat broad tests when unchanged source and dependencies already have valid evidence. Record what was reused and why. Do not declare live runtime behavior verified from source alone.
-
-Use disposable data for synthetic grades, clock changes, failure injection and destructive content cases. Use the supported lifecycle for an authorized installation and verify the running artifact combination separately.
-
-### Required checks for affected Study and wire boundaries
-
-These checks apply when a change affects the boundary described in section 4, including removal of an accidental dependency. They are not a blanket requirement for unrelated appearance work.
-
-- **Metadata invariance:** run the same completed exercise with its display name present, changed and omitted through the actual consumer. Clone the same baseline and control clock/ID allocation so comparisons are meaningful. Compare the ordered command sequence, identity/replay behavior and durable assessment, learning and receipt effects; they must match, allowing the expected display-only metadata differences. Use relevant activity and assessment cases, including clean completion, completion after a miss, and Teach acknowledgement. Hold semantic inputs fixed. Do not test a copied predicate instead of the consumer or assume a validator test proves UI behavior.
-- **Accepted answer, interrupted Next:** save the answer, interrupt/fail Next, then Retry. Verify that Retry sends only Next, preserves the saved result, and does not send another Answer/Acknowledge or create another grade. Separately, when acceptance is uncertain, verify replay of the original immutable command and identity before continuation.
-- **Previous-release recovery:** for a wire change, replay pending commands from the previous actually installed release against a disposable copy of its saved database. Cover accepted commands whose response was lost as well as unaccepted pending commands. Inventory typed receipts that are reprojected, serialized wire replies that are returned verbatim, and client recovery envelopes; test each affected representation. Verify the original command identity, one durable effect, a client-accepted response and successful recovery. A current-version restart test or a compatible field alias does not establish this.
-- **Compatible candidate:** when fixes and feature work have diverged, qualify the combined intended candidate and record its component/artifact versions. Do not count a fix tested on an older main branch as qualification of the newer UX release, or drop another branch's correctness checks while integrating it.
-
-Use the smallest representative set that covers the affected contracts, and reuse unchanged evidence where justified. A fixture transport can establish a consumer decision or rejection; it cannot establish a real saved-database replay. State that limit. If a required material check cannot run, report the specific unverified behavior and do not claim that runtime change is ready to release. A documentation-only change can be published with those runtime limits clearly recorded.
-
-Measure a suspected interactive bottleneck before redesigning it. Prefer bounded reads and indexed operations; avoid whole-history validation or full-catalog polling on every move. Do not add a cache or service just because it might be faster.
-
-## 8. Keep coordination and review proportional
-
-Use one implementation owner by default. Parallel workers need disjoint files/worktrees and explicit integration ownership. Do not create a hierarchy of managers for a small feature.
-
-Use a focused independent Guardian-like review for significant changes. Start with the behavior/basis/owner/input decision from section 0 while the design is still small; then inspect implementation and evidence. Its job is to catch invented policy, ownership drift, duplicated rules and real correctness risks. For the boundaries in sections 4 and 7, the reviewer must inspect the actual consuming path and run the required focused checks; the author reporting a shared-grader test is not sufficient. It is not a paperwork gate or an instruction to expand scope.
-
-Keep one existing run ledger current. Handoffs should identify the actual source, changed behavior, checks, publication evidence and first unfinished step.
-
-## 9. Final report
-
-State what changed and why, what meaningful checks passed, what limitations remain, and the publication evidence required by section 1. Report installation only when it was actually performed and observed.
-
-For a PR, explain the user-visible problem, the change and resulting behavior. Link companion PRs when needed. Leave the repository and handoff understandable enough that another agent does not have to reconstruct the work.
+The cleanup closes only when every supported production operation has an owner and an enforced contract, retired paths have no live registration/fallback, integrated race and work tests pass, and the installed composition matches the reviewed one. Keep one current manifest and concise ledger. Archive history separately instead of appending conflicting current instructions.

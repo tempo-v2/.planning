@@ -1,5 +1,26 @@
 # Tempo workspace and development
 
+## Tempo Lean
+
+The [assembly manifest](current-assembly.json) pins the current Lean candidate
+and the separately observed managed installation. Lean builds from one Tempo
+checkout with the UI and packaged Core inside it. Check out the candidate
+commit in a separate worktree and run:
+
+```sh
+npm --prefix ui ci
+npm --prefix ui run build
+cargo build --release --locked
+target/release/tempo serve /path/to/disposable.sqlite3 42823 --no-worker
+```
+
+Run migration checks against a consistent copy of the predecessor database
+and its staged upload directory. The registered service and retained dataset
+belong to the managed release. The instructions below reconstruct the retired
+multi-repository runtime in isolation.
+
+## Historical multi-repository tooling
+
 Use the matching Tempo and UI tooling in an assembled workspace. The
 root Makefile includes `tempo/tools/local.mk`. With the single-service
 launcher from [Tempo #17](https://github.com/tempo-v2/tempo/pull/17),
@@ -13,7 +34,16 @@ Create a new explicit development file with `make init-dev TEMPO_DB=PATH`.
 See [Mac operating instructions](https://github.com/tempo-v2/tempo/blob/main/OPENING.md)
 for development and the explicit installed lifecycle.
 
-## Match the interface candidate
+## Assemble the predecessor review candidate
+
+From an empty workspace with this Planning checkout at `.planning`, run
+`python3 -B .planning/scripts/current_workspace.py .`. Its
+[manifest](current-assembly.json) records the exact review revisions and
+separately identifies the installed baseline. The same program's `--verify`
+mode checks those revisions, the locks, packaged Core and canonical guidance
+without changing the workspace. Use that check before any review build.
+
+## Reconstruct the historical interface candidate
 
 Use the `interface-execution-2026-11-19` entry in [manifest.json](manifest.json)
 with the workspace template and `workspace-corrective-portability.Cargo.lock`.
@@ -139,3 +169,20 @@ Use the workspace template, Cargo lock and Core package described above.
 Run `cargo build --release --locked -p tempo` and, in the UI repository, run
 `npm ci` and `npm run build`. For local qualification, serve that UI build with
 the matching binary and a disposable SQLite database.
+
+## Remaining audit release
+
+Use the `remaining-audit-release-2026-11-20` entry in the
+[manifest](manifest.json) to assemble the merged component revisions,
+workspace template, Cargo lock and packaged Core 0.2.4 in an isolated
+workspace. The merged trees match the reviewed candidate trees.
+Build the binary with `cargo build --release --locked -p tempo` and the
+paired UI with `make build-ui`. The [run ledger](STATE.md#remaining-audit-release-november-20-2026)
+records the evidence against that assembly and the registered installation.
+
+The diagnostic tests use disposable data. Run
+`python3 -B tempo/tests/runtime_diagnostics.py -v` and
+`node --test tempo/tests/diagnostics_recovery.mjs` with `TEMPO_BIN` pointing
+to the built binary and `TEMPO_UI` pointing to the built UI. Run the bounded
+collector checks with
+`python3 -B -m unittest discover -s tempo/tools/tests -p test_diagnose.py`.

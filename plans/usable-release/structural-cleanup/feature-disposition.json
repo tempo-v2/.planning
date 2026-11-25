@@ -1,0 +1,149 @@
+{
+  "status": "Coordinator decisions",
+  "existing_routes": {
+    "/api/analysis/evidence": "retire",
+    "/api/analysis/result": "retire",
+    "/api/games": "rebuild",
+    "/api/games/backfill": "retire",
+    "/api/games/backfill/retry": "retire",
+    "/api/games/choose": "retire",
+    "/api/games/coverage": "retire",
+    "/api/games/coverage/starting-line": "retire",
+    "/api/games/coverage/starting-line/save": "retire",
+    "/api/games/coverage/status": "retire",
+    "/api/games/detection": "retire",
+    "/api/games/detection-result": "retire",
+    "/api/games/detectors": "retire",
+    "/api/games/gap-analysis": "retire",
+    "/api/games/gap-analysis/status": "retire",
+    "/api/games/gap-draft": "retire",
+    "/api/games/gap-explorer": "retire",
+    "/api/games/gap-line": "retire",
+    "/api/games/gap-line/status": "retire",
+    "/api/games/gaps": "retire",
+    "/api/games/import": "rebuild",
+    "/api/games/job": "rebuild",
+    "/api/games/library": "rebuild",
+    "/api/games/model": "retire",
+    "/api/games/refresh": "retire",
+    "/api/games/reprocess": "retire",
+    "/api/games/review": "rebuild",
+    "/api/games/tactics": "retire",
+    "/api/games/tactics/command": "retire",
+    "/api/games/tactics/position": "retire",
+    "/api/games/tactics/report": "retire",
+    "/api/repertoires": "rebuild",
+    "/api/study": "rebuild",
+    "/api/study-progress": "rebuild",
+    "/api/study/analysis-context": "retire",
+    "/api/study/analysis-line": "retire",
+    "/api/study/card-details": "retire",
+    "/api/study/game-context": "retire",
+    "/api/study/presence": "retire",
+    "/api/study/relevance": "retire",
+    "/api/study/review-mark": "retire",
+    "/api/study/saved-reviews": "retire",
+    "/api/tactic-settings": "rebuild",
+    "/api/tactics": "rebuild",
+    "/api/tactics-collection": "rebuild"
+  },
+  "new_operations": [
+    "health and application context",
+    "explicit manual Games apply",
+    "read-only accepted receipt resolution"
+  ],
+  "cli": {
+    "backfill-game-capture-origins": "retire",
+    "backfill-personal-tactics": "retire",
+    "backfill-study-lead-ins": "retire",
+    "configure": "retire",
+    "import-tactics": "rebuild",
+    "init": "retain",
+    "init-practice": "retire",
+    "serve": "retain",
+    "split-black-repertoire": "retire",
+    "stdio": "retire"
+  },
+  "command_variants": {
+    "StudyCommand": {
+      "Next": "rebuild",
+      "StudyStatus": "rebuild",
+      "Resume": "rebuild",
+      "Answer": "rebuild",
+      "Acknowledge": "rebuild",
+      "GiveUp": "rebuild",
+      "Skip": "rebuild",
+      "ResumeSkipped": "rebuild",
+      "PracticeTactics": "retire",
+      "LearnMoreTactics": "retire",
+      "Concede": "retire",
+      "Abandon": "retire"
+    },
+    "RepertoireCommand": {
+      "List": "rebuild",
+      "ReadDocument": "rebuild",
+      "EditPreview": "rebuild",
+      "Preview": "rebuild",
+      "Save": "rebuild",
+      "Rename": "rebuild",
+      "SetActivity": "rebuild",
+      "MarkedPreview": "retire",
+      "ResetProgress": "retire"
+    },
+    "TacticCaptureCommand": {
+      "Preview": "rebuild",
+      "Save": "rebuild"
+    },
+    "SavedStudyReviewCommand": {
+      "List": "retire",
+      "Open": "retire",
+      "Check": "retire",
+      "CardDetails": "retire",
+      "Remove": "retire",
+      "ExcludeTactic": "retire"
+    },
+    "TacticalCommand": {
+      "Enqueue": "retire",
+      "Pause": "retire",
+      "Resume": "retire",
+      "Retry": "retire"
+    },
+    "TacticsRead": {
+      "List": "rebuild",
+      "Detail": "rebuild"
+    },
+    "TacticSettingsCommand": {
+      "Get": "rebuild",
+      "Save": "rebuild"
+    },
+    "PreviousCoverageLineRequest": {
+      "Read": "retire",
+      "Save": "retire"
+    }
+  },
+  "startup_workers": {
+    "Stockfish discovery and PersonalTacticsDetector registration": "retire",
+    "bootstrap model inputs": "retire",
+    "legacy game request reconciliation": "retire",
+    "choice encounter reconciliation": "retire",
+    "phone assets and identity gate": "rebuild",
+    "desktop UI assembly and listening": "retain",
+    "tactical report worker": "retire",
+    "Games refresh worker and job/loop apply": "retire",
+    "detection and detector results": "retire",
+    "tactical enrollment/payoff/power/Study presence": "retire",
+    "game review backfill": "retire",
+    "model projection and automatic marker scheduling": "retire",
+    "gap analysis worker": "retire",
+    "position evidence worker": "retire",
+    "coverage and gap line worker": "retire",
+    "gap Explorer worker": "retire"
+  },
+  "phone": "Keep private phone Study using shared context and Study owners; retire Phone Build.",
+  "recovery": "Verified complete SQLite archive; preserve receipts and active retained activity as specified in operation-contract.md.",
+  "owned_investigations": {
+    "T13": "Independent consumers of public Rust API before removal",
+    "T34": "Previous-release Study receipts and browser recovery, including retired command aliases",
+    "T37": "Retired route and non-Study receipt/consumer lifetime removal proof"
+  }
+}
