@@ -1,5 +1,37 @@
 # Tempo V2 usable release
 
+## Schema-18 architecture follow-up
+
+Installed baseline remains [Tempo #137](https://github.com/tempo-v2/tempo/pull/137),
+`b29557924301dc5a00e444ad230fe938ef380413`, schema 17, Core 0.2.2. The approved
+release combines Coverage and upload isolation, Study recovery, and opening
+identity in one cutover. The live read-only inventory found 83 redundant
+authored lines within existing repertoires and no cross-repertoire duplicate
+card groups. The new operation rules are in the
+[Lean operation contract](lean-operation-contract.md#schema-18-architecture-follow-up).
+Implementation and combined qualification are in progress.
+
+## Installed Coverage gap review
+
+[Tempo #137](https://github.com/tempo-v2/tempo/pull/137) serves at
+`b29557924301dc5a00e444ad230fe938ef380413`, schema 17 with Core 0.2.2.
+Fresh Astra cleared the matching tree at `aa0fc86` after the later-page
+review focus fix. Selecting a gap reviews familiar replies in Tempo.
+Stockfish supplies comparable scores and winning mates. Use reply stages
+PGN, and the existing Preview and Save flow publishes the continuation.
+
+Packaged Chromium with native Stockfish passed review, focus, late-result
+fencing, and extension of a staged reply at a repeated position. The
+installed predecessor's lost-acknowledgement and undelivered Save commands
+replayed on a retained-data copy. All-root searches can hit the five-second
+deadline. Manual PGN and explicit Lichess remain available.
+
+The managed cutover verified the stopped backup and retained all 44 tables
+and 32 forecasts. Integrity, foreign keys, the active Study attempt,
+registered server and worker, and all three asset hashes passed. Live reads
+returned a covered gap and a ranked Stockfish result. The
+[assembly manifest](current-assembly.json) records the artifacts and backup.
+
 ## Installed Gaps acknowledgement recovery
 
 [Tempo #136](https://github.com/tempo-v2/tempo/pull/136) serves at
