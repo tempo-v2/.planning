@@ -3,15 +3,15 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "b2c8851ac252422c846a8bc10dda882aa73d4687",
+    "commit": "48d255f1388f98dc8323df2f9dc1576b027d4d9e",
     "sqlite_schema": 18,
-    "binary_sha256": "616cf2d4b1ba12556a9738c49411bca5757afeb798263c2c8b7c3e7210cd724c",
+    "binary_sha256": "652ed733ba64f2b53a2bf1adae95c87f617fff27baaadb7e0dbbf16e4abc7f31",
     "assets": {
-      "index.html": "60c9ef273586759d9ee47253e57932dfd08cb2ab9e6ca49fb7646db4caae7c15",
-      "assets/app.js": "cd71e602513241809bef1f8ccd9c822da44564895c5ac27f9560b1fd44380ff0",
-      "assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
+      "index.html": "58a173bfc2c174a82e077e036cc104bb004dc030d2d284757bc91fe4ec922b0a",
+      "assets/app.js": "fe107cfdd0bd8f995d2b074b2ebe45d525d262371b6a5f9edbfc959a8efd509c",
+      "assets/app.css": "efc89df493cb6c9dc34672292666edd65db02059a9b0940e176ae0418cd00bb6"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261126T042537.172755Z-before-schema18/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261126T130433.196015Z-before-tactics-accordion/tempo.sqlite3",
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
       "binary_sha256": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
@@ -48,30 +48,31 @@
       "predecessor_rows": 198186,
       "historical_aliases": 83,
       "active_authored_lines": 1605,
-      "archive_flag_transfers": 0
+      "archive_flag_transfers": 0,
+      "release": "b2c8851ac252422c846a8bc10dda882aa73d4687"
     },
-    "verified_coverage_reports": 38
+    "verified_coverage_reports": 38,
+    "previous_commit": "b2c8851ac252422c846a8bc10dda882aa73d4687",
+    "verified_pid": 67611
   },
   "candidate": {
-    "commit": "e740bbc6f899e72ee766c7764ff6b85a03b9b8fa",
-    "predecessor": "b29557924301dc5a00e444ad230fe938ef380413",
+    "commit": "ae76f02350132c48e28bb0c7e7787749bc36dc99",
+    "predecessor": "b2c8851ac252422c846a8bc10dda882aa73d4687",
     "sqlite_schema": 18,
     "core_version": "0.2.2",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/138",
-    "qualification": "Fresh Astra cleared the pinned combined tree. The merged release passed packaged Chromium predecessor replay for Study Answer, Move, Reveal, Tactics Start and Gaps Save, Replace and Apply, plus native halted-batch recovery. The stopped migration preserved all 44 tables, the active Study attempt and original opening identities. Both registered processes, live readiness, and served asset hashes matched.",
-    "merged_commit": "b2c8851ac252422c846a8bc10dda882aa73d4687",
-    "reviewed_tree": "d68c9659983937b7611ff94730177e92305fd6ad",
-    "planning_commit": "ae0963d5f4b4f0807bd8e853cc6b13c9a6b5e0c3",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/139",
+    "merged_commit": "48d255f1388f98dc8323df2f9dc1576b027d4d9e",
+    "reviewed_tree": "b0380362d1a8aab26a1b48399ba025c70cf0741d",
+    "qualification": "Fresh Astra cleared the exact reviewed tree. Built merged release passed Chromium Tactics browsing, recovery from failed and delayed reads, Start, Resume, Practice and next-band focus on disposable schema 18 data. The managed switch verified a stopped backup, retained table rows, SQLite integrity and foreign keys, unchanged tactic worker identity and served asset hashes.",
     "cargo_lock_sha256": "3d401525fc44fdbf919bbf81f520d4a2adb6272d62884e052de5dd49c0c481ba",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "artifacts": {
-      "bin/tempo": "616cf2d4b1ba12556a9738c49411bca5757afeb798263c2c8b7c3e7210cd724c",
-      "bin/tempo-tactic-worker": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
-      "ui/dist/index.html": "60c9ef273586759d9ee47253e57932dfd08cb2ab9e6ca49fb7646db4caae7c15",
-      "ui/dist/assets/app.js": "cd71e602513241809bef1f8ccd9c822da44564895c5ac27f9560b1fd44380ff0",
-      "ui/dist/assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
+      "bin/tempo": "652ed733ba64f2b53a2bf1adae95c87f617fff27baaadb7e0dbbf16e4abc7f31",
+      "ui/dist/index.html": "58a173bfc2c174a82e077e036cc104bb004dc030d2d284757bc91fe4ec922b0a",
+      "ui/dist/assets/app.js": "fe107cfdd0bd8f995d2b074b2ebe45d525d262371b6a5f9edbfc959a8efd509c",
+      "ui/dist/assets/app.css": "efc89df493cb6c9dc34672292666edd65db02059a9b0940e176ae0418cd00bb6"
     }
   },
   "predecessor_assembly": {
