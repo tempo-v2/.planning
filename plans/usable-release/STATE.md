@@ -8,7 +8,7 @@ Games shows per-repertoire adherence and jumps to the board before a
 learner decision. The [operation contract](lean-operation-contract.md#schema-19-games-repertoire-feedback)
 defines the snapshot, completion, retry and Study boundaries.
 
-At Tempo `2d8213d4e5fe87dca140402b243cefb8313d104b`, the locked Rust
+The locked Rust
 workspace, UI and Python checks passed. Packaged Chromium exercised
 individual requests, Black replay from a nonstandard move number,
 failed refresh, retry, late responses, import, archive backfill, and
@@ -17,7 +17,12 @@ dataset, migration retained 236,311 rows across 44 predecessor tables.
 Chromium resumed a sealed predecessor comparison and compared a retained
 imported game with 2 followed, 1 differed and 15 unassessed moves.
 
-Independent review, merge and managed cutover are pending. The observed
+Astra found that a temporary staging read error could discard a valid sealed
+report. Tempo `5d292fb0acfb90bc4a51d898907e2965bd5b7da8` preserves that
+checkpoint. A mounted worker regression restored file access after a reply edit
+and verified that Retry kept the original basis.
+
+Re-review, merge and managed cutover are pending. The observed
 running predecessor is Tempo `087c3bf7e4e4e2ec191d8f5f882be902507502ab`,
 schema 18.
 
