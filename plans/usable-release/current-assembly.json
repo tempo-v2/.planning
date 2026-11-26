@@ -170,11 +170,11 @@
     "merged_commit": "79ed7b4cc307cc8a092a2fc696975325078d5fde"
   },
   "schema18_candidate": {
-    "commit": "5004df94359be07a427afa4b7ffa736677794b36",
+    "commit": "c66a338dc5ebcdd952fd8092f01cd5ca7366175b",
     "predecessor": "b29557924301dc5a00e444ad230fe938ef380413",
     "sqlite_schema": 18,
     "core_version": "0.2.2",
     "pull_request": "https://github.com/tempo-v2/tempo/pull/138",
-    "qualification": "Combined candidate submitted for independent review. Installation pending."
+    "qualification": "Initial Astra findings have targeted regressions. Fresh combined review and final artifact qualification pending."
   }
 }
