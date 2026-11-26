@@ -1,5 +1,37 @@
 # Tempo V2 usable release
 
+## Installed Lean schema 19 with repertoire feedback
+
+[Tempo #141](https://github.com/tempo-v2/tempo/pull/141) serves at
+`40b87f4df0881e3f57b6d6a7278ad692202b57d0` with schema 19 and Core 0.2.2.
+Fresh Astra cleared `5d292fb0acfb90bc4a51d898907e2965bd5b7da8` and the
+[Planning contract](https://github.com/tempo-v2/.planning/pull/117) at
+`872f3993211cc4ac7dad3f0d7d1bd6bab7f8f92b`. The merged tree matches the
+reviewed tree. [The operation contract](lean-operation-contract.md#schema-19-games-repertoire-feedback)
+records how Games compares authored replies, publishes a complete report,
+and resumes the original sealed work after a temporary file error.
+
+The managed cutover from `087c3bf7e4e4e2ec191d8f5f882be902507502ab`
+preserved all 236,311 rows across 44 predecessor tables, including
+Learning records, receipts, and the active Study attempt. SQLite integrity,
+foreign keys, the registered server and tactic worker, and hashes for all
+three served UI assets passed. [The assembly manifest](current-assembly.json)
+records the stopped backup, pins and artifacts.
+
+Locked CI and packaged Chromium passed score and replay checks, including
+Black replay from a nonstandard move number, delayed responses after
+selection changed, failed refresh, sealed retry, import and archive backfill.
+On disposable schema-18 data, the new release resumed a sealed Games
+checkpoint and replayed both predecessor delivery states for Study Answer,
+full-line commands, and Gaps Save, Replace and Apply.
+
+In the installed Games screen, one retained imported game showed
+2 of 3 repertoire decisions followed
+(66.7%), 1 mismatch,
+and 15 unassessed learner moves. The first mismatch
+action jumped to the position before the move and showed the original
+played and expected moves. The journey issued no Study commands.
+
 ## Installed Lean schema 18
 
 [Tempo #138](https://github.com/tempo-v2/tempo/pull/138) serves at
