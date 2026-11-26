@@ -3,15 +3,31 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "b29557924301dc5a00e444ad230fe938ef380413",
-    "sqlite_schema": 17,
-    "binary_sha256": "33c08eef8aeec94744d8728e5f82e91d5cc54901f14f498fa841915af93d4ac4",
+    "commit": "b2c8851ac252422c846a8bc10dda882aa73d4687",
+    "sqlite_schema": 18,
+    "binary_sha256": "616cf2d4b1ba12556a9738c49411bca5757afeb798263c2c8b7c3e7210cd724c",
     "assets": {
-      "index.html": "f7bf601c17120b459aa619a778d132b70e718cfd66e72ac6968f4a76d6dd0e49",
-      "assets/app.js": "1eccfc4d8f93caff76db2f833d46120d0e1825f5b2bb17542450050cf3839e2e",
+      "index.html": "60c9ef273586759d9ee47253e57932dfd08cb2ab9e6ca49fb7646db4caae7c15",
+      "assets/app.js": "cd71e602513241809bef1f8ccd9c822da44564895c5ac27f9560b1fd44380ff0",
       "assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T220635.167993Z-before-coverage-gap-review/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261126T042537.172755Z-before-schema18/tempo.sqlite3",
+    "tactic_worker": {
+      "label": "com.tempo-v2.lean.tactics",
+      "binary_sha256": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
+      "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
+      "activation_counts": {
+        "kept": 1517,
+        "narrowed": 66,
+        "published": 1,
+        "rejected_unpublished": 1,
+        "removed": 719,
+        "retrying": 3,
+        "unresolved": 3
+      },
+      "verified_pid": 56977,
+      "release": "b2c8851ac252422c846a8bc10dda882aa73d4687"
+    },
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -27,39 +43,36 @@
       ],
       "weights_sha256": "ba14208b2992d85502f5fb501934abf6aaaeb355e9f3fdf90e326911f562524f"
     },
-    "tactic_worker": {
-      "label": "com.tempo-v2.lean.tactics",
-      "binary_sha256": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
-      "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
-      "activation_counts": {
-        "kept": 1517,
-        "narrowed": 66,
-        "published": 0,
-        "rejected_unpublished": 0,
-        "removed": 719,
-        "retrying": 3,
-        "unresolved": 3
-      },
-      "verified_pid": 40447,
-      "release": "b29557924301dc5a00e444ad230fe938ef380413"
-    }
+    "migration": {
+      "predecessor_tables": 44,
+      "predecessor_rows": 198186,
+      "historical_aliases": 83,
+      "active_authored_lines": 1605,
+      "archive_flag_transfers": 0
+    },
+    "verified_coverage_reports": 38
   },
   "candidate": {
-    "commit": "aa0fc8635b0540c3fd125ba4aad711a854b710ed",
-    "merged_commit": "b29557924301dc5a00e444ad230fe938ef380413",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/137",
-    "sqlite_schema": 17,
+    "commit": "e740bbc6f899e72ee766c7764ff6b85a03b9b8fa",
+    "predecessor": "b29557924301dc5a00e444ad230fe938ef380413",
+    "sqlite_schema": 18,
+    "core_version": "0.2.2",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/138",
+    "qualification": "Fresh Astra cleared the pinned combined tree. The merged release passed packaged Chromium predecessor replay for Study Answer, Move, Reveal, Tactics Start and Gaps Save, Replace and Apply, plus native halted-batch recovery. The stopped migration preserved all 44 tables, the active Study attempt and original opening identities. Both registered processes, live readiness, and served asset hashes matched.",
+    "merged_commit": "b2c8851ac252422c846a8bc10dda882aa73d4687",
+    "reviewed_tree": "d68c9659983937b7611ff94730177e92305fd6ad",
+    "planning_commit": "ae0963d5f4b4f0807bd8e853cc6b13c9a6b5e0c3",
     "cargo_lock_sha256": "3d401525fc44fdbf919bbf81f520d4a2adb6272d62884e052de5dd49c0c481ba",
     "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
     "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
-    "built_assets": {
-      "index.html": "f7bf601c17120b459aa619a778d132b70e718cfd66e72ac6968f4a76d6dd0e49",
-      "assets/app.js": "1eccfc4d8f93caff76db2f833d46120d0e1825f5b2bb17542450050cf3839e2e",
-      "assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
-    },
-    "built_binary_sha256": "33c08eef8aeec94744d8728e5f82e91d5cc54901f14f498fa841915af93d4ac4",
-    "qualification": "Fresh Astra cleared the matching tree. Packaged Chromium and real Stockfish verified focus, stale-response fencing, staged mate continuation, and predecessor Save replay on a retained database copy. Cutover retained 44 tables and 32 forecasts. Live registered processes, assets, gap review and Stockfish were verified."
+    "artifacts": {
+      "bin/tempo": "616cf2d4b1ba12556a9738c49411bca5757afeb798263c2c8b7c3e7210cd724c",
+      "bin/tempo-tactic-worker": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
+      "ui/dist/index.html": "60c9ef273586759d9ee47253e57932dfd08cb2ab9e6ca49fb7646db4caae7c15",
+      "ui/dist/assets/app.js": "cd71e602513241809bef1f8ccd9c822da44564895c5ac27f9560b1fd44380ff0",
+      "ui/dist/assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
+    }
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
@@ -112,15 +125,15 @@
     }
   },
   "previous_lean_installation": {
-    "commit": "f1f9c7b8b5dda8250d64629891a93a56e4b128a2",
+    "commit": "b29557924301dc5a00e444ad230fe938ef380413",
     "sqlite_schema": 17,
-    "binary_sha256": "953428f5b0376237fc6a962bb0142045e301dc03a18465a9aa737a41f3e0ba68",
+    "binary_sha256": "33c08eef8aeec94744d8728e5f82e91d5cc54901f14f498fa841915af93d4ac4",
     "assets": {
-      "index.html": "b2555ff7a3168289b86e2a8dc1f27ce08831eddd08f2b6a83d6815680c8db747",
-      "assets/app.js": "00254b320922cdac0bea195addcfd30224d28f2e2e906ac1ac6b3ae5fdeb34e0",
-      "assets/app.css": "bbeb58d9508b6017b1fb28c173cbc44ad673e0ffe60a7c7f5884f3b1bcd6e680"
+      "index.html": "f7bf601c17120b459aa619a778d132b70e718cfd66e72ac6968f4a76d6dd0e49",
+      "assets/app.js": "1eccfc4d8f93caff76db2f833d46120d0e1825f5b2bb17542450050cf3839e2e",
+      "assets/app.css": "451994efc6a34fe1fde7198eaf845ee2797cf9ee3a84651b912d02d400bc5676"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T205339.697938Z-before-gaps-recovery/tempo.sqlite3",
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261125T220635.167993Z-before-coverage-gap-review/tempo.sqlite3",
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
       "revision": "8b16d5f9f9cbff2189afd8fe7cd193179220f58a4ec46b6f04b5b19390107bbc",
@@ -138,7 +151,7 @@
     },
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
-      "binary_sha256": "8bb33056b177ec497d170b6be10272e35f0f3e78b6cfb894ae64264236675c61",
+      "binary_sha256": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
       "engine": "Stockfish 19 by the Stockfish developers (see AUTHORS file)",
       "activation_counts": {
         "kept": 1517,
@@ -149,8 +162,8 @@
         "retrying": 3,
         "unresolved": 3
       },
-      "verified_pid": 34255,
-      "release": "f1f9c7b8b5dda8250d64629891a93a56e4b128a2"
+      "verified_pid": 40447,
+      "release": "b29557924301dc5a00e444ad230fe938ef380413"
     }
   },
   "schema_7_base": {
@@ -168,13 +181,5 @@
     },
     "built_binary_sha256": "7ccafec99b014e39e31958140612e8c821517c7ce1f611e58ef47eb5b5572f09",
     "merged_commit": "79ed7b4cc307cc8a092a2fc696975325078d5fde"
-  },
-  "schema18_candidate": {
-    "commit": "e740bbc6f899e72ee766c7764ff6b85a03b9b8fa",
-    "predecessor": "b29557924301dc5a00e444ad230fe938ef380413",
-    "sqlite_schema": 18,
-    "core_version": "0.2.2",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/138",
-    "qualification": "The candidate verifies each full-line Move acknowledgement and the complete legal input or consistent terminal board. Fresh combined review and final artifact qualification pending."
   }
 }

@@ -1,15 +1,40 @@
 # Tempo V2 usable release
 
-## Schema-18 architecture follow-up
+## Installed Lean schema 18
 
-Installed baseline remains [Tempo #137](https://github.com/tempo-v2/tempo/pull/137),
-`b29557924301dc5a00e444ad230fe938ef380413`, schema 17, Core 0.2.2. The approved
-release combines Coverage and upload isolation, Study recovery, and opening
-identity in one cutover. The live read-only inventory found 83 redundant
-authored lines within existing repertoires and no cross-repertoire duplicate
-card groups. The new operation rules are in the
-[Lean operation contract](lean-operation-contract.md#schema-18-architecture-follow-up).
-Implementation and combined qualification are in progress.
+[Tempo #138](https://github.com/tempo-v2/tempo/pull/138) serves at
+`b2c8851ac252422c846a8bc10dda882aa73d4687`, schema 18 with Core 0.2.2.
+Fresh Astra cleared `e740bbc` with [Planning #114](https://github.com/tempo-v2/.planning/pull/114)
+at `ae0963d`. The merged source tree matches the reviewed tree. The
+[Lean operation contract](lean-operation-contract.md#schema-18-architecture-follow-up)
+records the owner and semantics of each changed operation.
+
+The single managed cutover preserved 198,186 predecessor rows across all
+44 tables, including all cards, Learning, attempts, receipts, and the active
+Study attempt. The catalog now has 1,605 active authored lines and 83 retained
+aliases. The original line IDs, names, routes, and semantic revisions survive.
+No archived representative needed an activity transfer on the installed data.
+A disposable migration verified that a required transfer preserves the
+predecessor archive flag. The [manifest](current-assembly.json) records the
+stopped schema-17 backup, artifact hashes, and version pins.
+
+**Installed architecture report card · A across the nine assessed boundaries.**
+
+| Boundary | Grade | Evidence |
+| --- | --- | --- |
+| Study issuance, Queue, and Store | A | Prepared-selector and committed-work checks passed in the integrated Rust suite. Read-only Current served the retained attempt with its explicit activity mode. |
+| Chess, Learning, and accepted results | A | Packaged Chromium preserved ordinary Answer effects through title changes, malformed delivery, exact replay, and interrupted Next. The stopped comparison preserved Learning and receipts. |
+| Study browser recovery | A | Exact packaged replay covered accepted and undelivered predecessor Move, Reveal and Tactics Start. Tab closure retained the command. Incomplete legal choices, inconsistent transitions, and invalid acknowledgements retained the original journal for Retry. |
+| Games archive, detectors, and tactic publication | A | Existing bounded archive and detector tests passed. The matched tactic worker returned the retained durable status through its separate socket. |
+| Games and Tactics admission | A | Opposing held HTTP bodies exercised independent receive slots. Addressed cleanup passed failed unlink and restart tests. A disposable interrupted predecessor upload resumed with its file and offset unchanged. |
+| Coverage optional review and browsing | A | Packaged Chromium kept manual PGN available on malformed evidence, fetched one repertoire page by default, and restored an off-page choice by address. Native Stockfish review and optional failure paths passed. Both live projections returned for all 38 retained reports. |
+| Repertoire authoring and identity | A | Canonical identity kept authored line titles and history. Both predecessor Save, Replace and Apply delivery states replayed in Chromium. A partially completed Gaps batch retained the original alias ID and resumed from its exact cursor. |
+| Settings, Coverage scan, and rank Apply | A | Saved preference authorities and bounded rank staging carried forward. Native Maia preflight, mounted cancellation, and predecessor Apply replay passed. |
+| Core packaging and release provenance | A | Registered server and tactic worker, schema, SQLite integrity and foreign keys, and all three served asset hashes matched the verified installation. |
+
+Faults, synthetic commands and browser replay used disposable databases.
+The serving installation was checked through read-only endpoints and the
+stopped backup. The assessment covers the named paths and work bounds.
 
 ## Installed Coverage gap review
 
