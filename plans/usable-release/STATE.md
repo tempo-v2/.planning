@@ -1,8 +1,22 @@
 # Tempo V2 usable release
 
-## Installed Lean schema 18
+## Installed Tactics pack accordion
 
-[Tempo #138](https://github.com/tempo-v2/tempo/pull/138) serves at
+[Tempo #139](https://github.com/tempo-v2/tempo/pull/139) serves at
+`48d255f1388f98dc8323df2f9dc1576b027d4d9e` with schema 18 and Core 0.2.2.
+Tactics opens with a read-only board and rating-band accordion. Returning
+from play reopens the band and restores keyboard focus.
+
+Fresh Astra cleared the matching tree at `ae76f02`. The packaged browser
+journey passed on a disposable schema 18 copy. The managed server switch
+verified the stopped backup and its retained table rows, SQLite integrity,
+foreign keys, served asset hashes, and worker status. The tactic worker
+continues to run from the schema 18 release below. The
+[manifest](current-assembly.json) records the installed artifact combination.
+
+## Schema 18 cutover
+
+[Tempo #138](https://github.com/tempo-v2/tempo/pull/138) was installed at
 `b2c8851ac252422c846a8bc10dda882aa73d4687`, schema 18 with Core 0.2.2.
 Fresh Astra cleared `e740bbc` with [Planning #114](https://github.com/tempo-v2/.planning/pull/114)
 at `ae0963d`. The merged source tree matches the reviewed tree. The
@@ -15,7 +29,7 @@ Study attempt. The catalog now has 1,605 active authored lines and 83 retained
 aliases. The original line IDs, names, routes, and semantic revisions survive.
 No archived representative needed an activity transfer on the installed data.
 A disposable migration verified that a required transfer preserves the
-predecessor archive flag. The [manifest](current-assembly.json) records the
+predecessor archive flag. [Planning #115](https://github.com/tempo-v2/.planning/pull/115) records the
 stopped schema-17 backup, artifact hashes, and version pins.
 
 **Installed architecture report card · A across the nine assessed boundaries.**
