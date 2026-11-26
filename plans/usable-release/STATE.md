@@ -1,30 +1,36 @@
 # Tempo V2 usable release
 
-## Lean schema-19 repertoire feedback candidate
+## Installed Lean schema 19 with repertoire feedback
 
-[Tempo #141](https://github.com/tempo-v2/tempo/pull/141) starts from
-`087c3bf7e4e4e2ec191d8f5f882be902507502ab` and uses Core 0.2.2.
-Games shows per-repertoire adherence and jumps to the board before a
-learner decision. The [operation contract](lean-operation-contract.md#schema-19-games-repertoire-feedback)
-defines the snapshot, completion, retry and Study boundaries.
+[Tempo #141](https://github.com/tempo-v2/tempo/pull/141) serves at
+`40b87f4df0881e3f57b6d6a7278ad692202b57d0` with schema 19 and Core 0.2.2.
+Fresh Astra cleared `5d292fb0acfb90bc4a51d898907e2965bd5b7da8` and the
+[Planning contract](https://github.com/tempo-v2/.planning/pull/117) at
+`872f3993211cc4ac7dad3f0d7d1bd6bab7f8f92b`. The merged tree matches the
+reviewed tree. [The operation contract](lean-operation-contract.md#schema-19-games-repertoire-feedback)
+records how Games compares authored replies, publishes a complete report,
+and resumes the original sealed work after a temporary file error.
 
-The locked Rust
-workspace, UI and Python checks passed. Packaged Chromium exercised
-individual requests, Black replay from a nonstandard move number,
-failed refresh, retry, late responses, import, archive backfill, and
-Study storage isolation. On a disposable copy of the installed schema-18
-dataset, migration retained 236,311 rows across 44 predecessor tables.
-Chromium resumed a sealed predecessor comparison and compared a retained
-imported game with 2 followed, 1 differed and 15 unassessed moves.
+The managed cutover from `087c3bf7e4e4e2ec191d8f5f882be902507502ab`
+preserved all 236,311 rows across 44 predecessor tables, including
+Learning records, receipts, and the active Study attempt. SQLite integrity,
+foreign keys, the registered server and tactic worker, and hashes for all
+three served UI assets passed. [The assembly manifest](current-assembly.json)
+records the stopped backup, pins and artifacts.
 
-Astra found that a temporary staging read error could discard a valid sealed
-report. Tempo `5d292fb0acfb90bc4a51d898907e2965bd5b7da8` preserves that
-checkpoint. A mounted worker regression restored file access after a reply edit
-and verified that Retry kept the original basis.
+Locked CI and packaged Chromium passed score and replay checks, including
+Black replay from a nonstandard move number, delayed responses after
+selection changed, failed refresh, sealed retry, import and archive backfill.
+On disposable schema-18 data, the new release resumed a sealed Games
+checkpoint and replayed both predecessor delivery states for Study Answer,
+full-line commands, and Gaps Save, Replace and Apply.
 
-Re-review, merge and managed cutover are pending. The observed
-running predecessor is Tempo `087c3bf7e4e4e2ec191d8f5f882be902507502ab`,
-schema 18.
+In the installed Games screen, one retained imported game showed
+2 of 3 repertoire decisions followed
+(66.7%), 1 mismatch,
+and 15 unassessed learner moves. The first mismatch
+action jumped to the position before the move and showed the original
+played and expected moves. The journey issued no Study commands.
 
 ## Installed Lean schema 18
 
