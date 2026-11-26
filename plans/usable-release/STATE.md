@@ -1,5 +1,26 @@
 # Tempo V2 usable release
 
+## Lean schema-19 repertoire feedback candidate
+
+[Tempo #141](https://github.com/tempo-v2/tempo/pull/141) starts from
+`087c3bf7e4e4e2ec191d8f5f882be902507502ab` and uses Core 0.2.2.
+Games shows per-repertoire adherence and jumps to the board before a
+learner decision. The [operation contract](lean-operation-contract.md#schema-19-games-repertoire-feedback)
+defines the snapshot, completion, retry and Study boundaries.
+
+At Tempo `2d8213d4e5fe87dca140402b243cefb8313d104b`, the locked Rust
+workspace, UI and Python checks passed. Packaged Chromium exercised
+individual requests, Black replay from a nonstandard move number,
+failed refresh, retry, late responses, import, archive backfill, and
+Study storage isolation. On a disposable copy of the installed schema-18
+dataset, migration retained 236,311 rows across 44 predecessor tables.
+Chromium resumed a sealed predecessor comparison and compared a retained
+imported game with 2 followed, 1 differed and 15 unassessed moves.
+
+Independent review, merge and managed cutover are pending. The observed
+running predecessor is Tempo `087c3bf7e4e4e2ec191d8f5f882be902507502ab`,
+schema 18.
+
 ## Installed Lean schema 18
 
 [Tempo #138](https://github.com/tempo-v2/tempo/pull/138) serves at
