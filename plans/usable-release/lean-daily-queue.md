@@ -1,6 +1,6 @@
 # Lean daily Study queue
 
-Basis: the accepted daily queue implementation plan, Lean schema 19 at Tempo `40b87f4df0881e3f57b6d6a7278ad692202b57d0`, and Planning `e9e3d5c`. The serving Lean profile owns this increment. Canonical guidance SHA-256 at that revision is `d276d245eb860ab5b8cfa365b8bcb2c4b4d78c2aafb7e3b60f86d5012d45bf0c`.
+This contract follows the accepted daily queue implementation plan, Lean schema 19 at Tempo `40b87f4df0881e3f57b6d6a7278ad692202b57d0`, and Planning `e9e3d5c`. The serving Lean profile owns this increment. Canonical guidance SHA-256 at that revision is `d276d245eb860ab5b8cfa365b8bcb2c4b4d78c2aafb7e3b60f86d5012d45bf0c`.
 
 | Operation and owner | Semantic inputs and result | Lifetime and independence |
 | --- | --- | --- |
