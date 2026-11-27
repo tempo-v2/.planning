@@ -2,6 +2,8 @@
 
 Tempo #104 used `4f97e742b0f259ba3c26109d69aa365d570439f8` on Lean schema 2 as its baseline. Keep live data, first-answer Good/Again, FSRS, the repeat deck, opening preferences, provider imports, and scanner-driven tactic publication. This contract governs Lean. The older structural-cleanup contract remains evidence for the predecessor.
 
+The [daily Study queue contract](lean-daily-queue.md) supersedes the prior selection and prepared-membership rules for the daily queue increment.
+
 | Operation | Owner and permitted facts | Effect and lifetime |
 | --- | --- | --- |
 | Study resume and Next | Study identifies the active attempt. Queue uses the committed deck, prepared availability, due times, previous card kind and saved new-opening policy. | Resume first. Check at most 32 prepared entries and hydrate at most one definition. Missing or stale membership means preparing. Done requires a complete exhausted order. No catalog fallback. |
