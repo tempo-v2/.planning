@@ -3,7 +3,7 @@
 ## Lean optional daily rank isolation candidate
 
 [Tempo #149](https://github.com/tempo-v2/tempo/pull/149) at
-`308ebff8799c5f6837d8a7af3bf4344c808431ba` separates Maia transport and
+`c235e7812bdee515da99685c342217e8f9c6bf07` separates Maia transport and
 publication from required preparation. The candidate uses schema 22,
 the existing Daily Queue registration, and Core 0.2.2. Pair the server
 and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
@@ -23,7 +23,7 @@ migration, row counts, integrity and foreign keys, and both predecessor
 delivery states for ordinary Answer.
 
 The qualified debug server and worker binary SHA-256 is
-`36dc578004853c228f1d4176d1df12a5457f6ef8b69c1610e777ce1aeb8f99f6`.
+`9414cbae1f5d7d8009919f4e7927f6c52582b459efea1f29fabd589c6785a0ed`.
 The built app bundle SHA-256 is
 `8f816e9d80d6395fd53406c408b5301792813accac0b5b9567d70bb896b7d055`.
 
