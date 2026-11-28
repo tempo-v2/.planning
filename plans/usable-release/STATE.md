@@ -1,5 +1,46 @@
 # Tempo V2 usable release
 
+## Lean optional daily rank isolation candidate
+
+[Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
+transport and publication from required preparation. The integrated candidate
+is `4d5464596ab0fbae986b095b82ed32d2ad9de237` on Lean main
+`d54b71470c279fd0d69c464529c9c8b0bf8f2f44`. It includes Study move review
+and Chess.com puzzle PGN import. The candidate uses schema 24,
+the existing Daily Queue registration, and Core 0.2.2. Pair the server
+and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
+defines claim, staging, and publication authority.
+
+The earlier isolation candidate `c235e7812bdee515da99685c342217e8f9c6bf07`
+provided the evidence below. The integrated candidate will be qualified against
+the supported schema-21 and schema-23 predecessors. Focused regressions passed for an oversized
+claim that cannot trigger another capture, and for ordinary publication and
+Study Next/Answer with forecast staging reads denied. The saved apply lease
+is checked before converting its remaining duration.
+
+The held-socket HTTP check exercised rollover, opening invalidation,
+Next, and exact Answer replay while due work, tactics, and fallback
+openings remained available. The partial-cursor regression verified
+exact redelivery and rank publication from persisted staging. A separate
+process test interrupted the second staging batch, restarted the service
+with 64 unexposed ranks, and completed a single 72-rank publication by
+redelivering the exact result. A disposable native Maia worker published a
+complete two-card rank over the new socket. The locked Rust workspace suite,
+strict Clippy, and packaged UI build passed.
+Disposable copies of the installed schema-21 database passed repeated
+migration, row counts, integrity and foreign keys, and both predecessor
+delivery states for ordinary Answer.
+
+The qualified debug server and worker binary SHA-256 is
+`9414cbae1f5d7d8009919f4e7927f6c52582b459efea1f29fabd589c6785a0ed`.
+The built app bundle SHA-256 is
+`8f816e9d80d6395fd53406c408b5301792813accac0b5b9567d70bb896b7d055`.
+
+At integration, Tempo main used schema 23 and the installed service used schema 21.
+Before a managed cutover, archive the old forecast files with the stopped
+backup and reconfirm the migration number against any intervening merge.
+The held-handoff test held socket delivery. The staging process test
+interrupted a batch and exercised restart and exact resumption.
 
 ## Study move review candidate
 
