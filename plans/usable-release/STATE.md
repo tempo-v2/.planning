@@ -21,7 +21,7 @@ that installation.
   a transposed route, stale preview rejection and the 128-write limit. An
   independent Astra review inspected the Study consumer and save transaction.
 - The qualified debug binary SHA-256 is
-  `5d45f04dc86eead051f60a8c635120a2422a7faa98161dfcc7040f81c931e5d5`.
+  `9ab19758173da0ad2154ea96a29c6f8bdd42e3ad83af25530757ebc153fc7fb5`.
   The packaged app asset SHA-256 is
   `97a771ef21c3a482dd72287fd53b67c45613ac0c2dc78f21547a3ca19f14a9b5`.
 
