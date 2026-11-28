@@ -257,3 +257,11 @@ leave the comparison basis unchanged. A repeated position at a new ply remains
 a separate learner decision. The browser uses the archived learner side and
 zero-based pre-move ply for replay. Ordinary Study Next and Answer never read
 feedback. No comparison writes Learning, attempts, receipts or queue state.
+
+## Review an opening move from Study
+
+| Operation and owner | Accepted rule | Version, work and failure |
+| --- | --- | --- |
+| Mark and open, Study UI and Study | Marking only holds the addressed opening card after its accepted answer. Existing Reveal grades Again. The active, completed opening attempt supplies its issued answer. Title, authorship and evidence never determine grading or scheduling. | The mark is in-memory and attempt-scoped. No new wire fields on existing Study commands or receipts. The optional review starts only when opened. |
+| Compare saved reply, Openings and analysis readers | Show the current authored reply only when it matches the issued answer and a saved route proves authorship in this repertoire. Show a score for every legal root and similarity from another canonical position in the same repertoire and practice color. Route labels are display data. | Fence each independent optional source by dataset, attempt, answer identity and the reply and line revisions. Existing 250 ms optional reads and five-second engine slot apply. Missing evidence has no effect on grading, preview or Save. |
+| Preview and confirm changed reply, Openings and Store | A legal different reply uses the existing continuation and conflict rules. Removal truncates every route which authors the addressed reply before its first owned occurrence. Retire only unsupported reply versions. The user confirms the exact before/after impact. | Requests are at most 16 KiB. Reuse the bounded content preparation slots, ten-second preparation wait, route limits and one 128-write transaction. An over-budget or stale plan has no durable effect. Verify the completed attempt and revisions again at commit. Commit the receipt with the change. Exact replay resolves before current-state checks and produces zero new writes. Accepted Study history is retained. |
