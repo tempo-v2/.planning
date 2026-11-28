@@ -1,5 +1,26 @@
 # Tempo V2 usable release
 
+## Study opening guide candidate
+
+[Tempo #143](https://github.com/tempo-v2/tempo/pull/143) at
+`e7274a0d735c08bfc5c4aeabfb328288d74548c2` adds a yellow arrow and move
+notation to the first unanswered exposure of an opening repertoire card.
+The first accepted Answer ends the guide. The candidate uses schema 20
+and vendored Core 0.2.2 with the existing Answer and scheduling behavior.
+
+- Locked Rust tests, strict Clippy and the packaged UI build passed.
+- Chromium covered both colors, the opening lead-in, reload, title
+  invariance, blind reviews and tactics, and Next-only retry. Disposable
+  copies of installed `9ac6752731687e7089769c8754e01c70ba422847` covered
+  accepted-but-unacknowledged and undelivered Answer recovery.
+- Independent review verified the indexed Learning probe, issued-answer
+  precedence, invalid-guide omission and one durable effect on replay.
+- The qualified debug binary SHA-256 is
+  `2b0f4af34a93bf46e5947d30e8c09e64aea7189cc9df0a784d2ee07757bf4f57`.
+  Its packaged app asset SHA-256 is
+  `230668f79e94c144efbb67b906706adc84e284d0a30e2b336f1eee0d9d2028ee`.
+  The installed release is recorded below.
+
 ## Installed Lean schema 20 with the daily queue
 
 [Tempo #142](https://github.com/tempo-v2/tempo/pull/142) merged at
