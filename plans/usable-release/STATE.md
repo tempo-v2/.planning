@@ -1,7 +1,7 @@
 # Tempo V2 usable release
 
 
-## Study move review candidate
+## Installed Study move review
 
 [Tempo #148](https://github.com/tempo-v2/tempo/pull/148) at
 `9b7f105cee87596dde44f2a6429498211630bba8` adds post-answer review,
@@ -24,6 +24,19 @@ that installation.
   `9ab19758173da0ad2154ea96a29c6f8bdd42e3ad83af25530757ebc153fc7fb5`.
   The packaged app asset SHA-256 is
   `97a771ef21c3a482dd72287fd53b67c45613ac0c2dc78f21547a3ca19f14a9b5`.
+
+The managed service on port 41823 now runs Tempo `2f31c53093fa6ad5f70d6f310c9bff696c1e89c2`, whose tree
+matches the fresh Astra review of `9b7f105cee87596dde44f2a6429498211630bba8`. [Planning #125](https://github.com/tempo-v2/.planning/pull/125)
+merged the operation contract and source qualification.
+
+A disposable same-schema rehearsal matched all retained rows. The managed
+cutover verified a stopped backup of 244,805 rows across
+51 tables and retained Study attempt 953.
+SQLite integrity and foreign keys passed. The serving binary, tactic worker,
+Daily Queue worker, app assets and seven board sounds matched the managed
+release. Live Chromium verified the opening review control and that an
+unanswered card could not expose review evidence. The [assembly manifest](current-assembly.json)
+pins the installed artifacts and backup.
 
 ## Study opening guide candidate
 
