@@ -1,5 +1,29 @@
 # Tempo V2 usable release
 
+## Lean optional daily rank isolation candidate
+
+[Tempo #149](https://github.com/tempo-v2/tempo/pull/149) at
+`308ebff8799c5f6837d8a7af3bf4344c808431ba` separates Maia transport and
+publication from required preparation. The candidate uses schema 22,
+the existing Daily Queue registration, and Core 0.2.2. Pair the server
+and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
+defines claim, staging, and publication authority.
+
+The held-socket HTTP check exercised rollover, opening invalidation,
+Next, and exact Answer replay while due work, tactics, and fallback
+openings remained available. The partial-cursor regression verified
+exact redelivery and rank publication from persisted staging. A disposable
+native Maia worker published a complete two-card rank over the new socket.
+Disposable copies of the installed schema-21 database passed repeated
+migration, row counts, integrity and foreign keys, and both predecessor
+delivery states for ordinary Answer.
+
+Tempo main and the installed service still serve schema 21.
+Before a managed cutover, qualify a process restart during partial
+staging and a hold between real staging batches. Archive the old
+forecast files with the stopped backup. Reconfirm the migration number
+against any intervening merge.
+
 ## Study opening guide candidate
 
 [Tempo #143](https://github.com/tempo-v2/tempo/pull/143) at
