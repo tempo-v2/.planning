@@ -1,5 +1,39 @@
 # Tempo V2 usable release
 
+## Lean daily queue candidate
+
+[Tempo #142](https://github.com/tempo-v2/tempo/pull/142) at
+`87c8bc83e8f808b6a9f1de7ea0a89a0e3c87e3f4` combines the schema-20 Store,
+shared Study consumers, independently supervised Maia worker, and vendored
+Core 0.2.2. [Planning #118](https://github.com/tempo-v2/.planning/pull/118)
+records the [daily queue operation contract](lean-daily-queue.md). The
+installed baseline is still recorded in the following section.
+
+- Optimized Chromium candidate binary SHA-256
+  `3be24a8f52a4c5f7484fb76a3c316581781c1912762821c459e43c632c5a248c`.
+  The UI app asset SHA-256 is
+  `6b9b7970389e96a2d16d7ad3be68db24fbfbecfb7b923b737c254a9f8d6c3e31`.
+  Mounted Study passed title invariance, command replay, overlapping tabs,
+  and Next-only retry. The actual schema-19 predecessor passed both
+  delivery-loss cases for ordinary Answer, full-line Study and Gaps on
+  disposable retained copies.
+- Native retained-data qualification on the same source used archive-built
+  binary SHA-256 `a8e1eded6db9678012b09fe06f643e1326f57f82f42e25ee31f62126e9675e2d`.
+  Migration preserved 236,314 rows across 45 predecessor table projections
+  and passed integrity and foreign-key checks. It resumed the retained
+  attempt and showed due work without new allocations on cutover day.
+- Maia profile `maia3-5m-1500-authored-history-v2` published an exact
+  7,893-card order in 7.51 seconds warm, with 7,465 estimates and 428
+  unscored cards. With the worker stopped across simulated rollover,
+  Study issued due work, a saved-ranked opening, and a new tactic.
+  Authoring fenced a late result. Worker date divergence and child reaping
+  passed with Study still available.
+- Fresh Astra cleared the exact candidate. The final independent pass rebuilt
+  it and passed 89 Tempo Rust tests and four daily forecast tests. It verified
+  that a held opening reservation keeps Next preparing during an intake pause,
+  then issues after revalidation while retaining the previously accepted result.
+  Hosted CI and strict Clippy passed on the same source.
+
 ## Installed Lean schema 19 with repertoire feedback
 
 [Tempo #141](https://github.com/tempo-v2/tempo/pull/141) serves at
