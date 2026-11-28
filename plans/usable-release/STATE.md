@@ -2,12 +2,17 @@
 
 ## Lean optional daily rank isolation candidate
 
-[Tempo #149](https://github.com/tempo-v2/tempo/pull/149) at
-`c235e7812bdee515da99685c342217e8f9c6bf07` separates Maia transport and
-publication from required preparation. The candidate uses schema 22,
+[Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
+transport and publication from required preparation. The integrated candidate
+is `60d086237ba3ea80c4fbfdfee3108cd710c557d9` against the installed
+Study move review release `2f31c53093fa6ad5f70d6f310c9bff696c1e89c2`. The candidate uses schema 22,
 the existing Daily Queue registration, and Core 0.2.2. Pair the server
 and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
 defines claim, staging, and publication authority.
+
+The earlier isolation candidate `c235e7812bdee515da99685c342217e8f9c6bf07`
+provided the evidence below. The integrated candidate will be qualified against
+the installed Study move review release.
 
 The held-socket HTTP check exercised rollover, opening invalidation,
 Next, and exact Answer replay while due work, tactics, and fallback
@@ -27,11 +32,35 @@ The qualified debug server and worker binary SHA-256 is
 The built app bundle SHA-256 is
 `8f816e9d80d6395fd53406c408b5301792813accac0b5b9567d70bb896b7d055`.
 
-Tempo main and the installed service still serve schema 21.
+At integration, Tempo main and the installed service were at schema 21.
 Before a managed cutover, archive the old forecast files with the stopped
 backup and reconfirm the migration number against any intervening merge.
 The held-handoff test held socket delivery. The staging process test
 interrupted a batch and exercised restart and exact resumption.
+
+## Study move review candidate
+
+[Tempo #148](https://github.com/tempo-v2/tempo/pull/148) at
+`9b7f105cee87596dde44f2a6429498211630bba8` adds post-answer review,
+replacement and removal of an opening reply directly from Study.
+The candidate uses schema 21 and packaged Core 0.2.2. The installed
+predecessor is Tempo `5ca62757876449a59f554f0da05b853fa8537699`.
+[Planning #124](https://github.com/tempo-v2/.planning/pull/124) records
+that installation.
+
+- Locked Rust workspace tests, strict Clippy and the packaged UI build passed.
+- Packaged Chromium covered desktop and phone, native Stockfish evaluation
+  of every legal root, similarity evidence, manual removal with both evidence
+  sources unavailable, title-only invariance, Next-only retry and a two-tab
+  save with a lost response. Both delivery states of a pending Answer recovered
+  from disposable SQLite backups of the installed predecessor.
+- Focused transaction checks verified retained Study history, a card kept by
+  a transposed route, stale preview rejection and the 128-write limit. An
+  independent Astra review inspected the Study consumer and save transaction.
+- The qualified debug binary SHA-256 is
+  `9ab19758173da0ad2154ea96a29c6f8bdd42e3ad83af25530757ebc153fc7fb5`.
+  The packaged app asset SHA-256 is
+  `97a771ef21c3a482dd72287fd53b67c45613ac0c2dc78f21547a3ca19f14a9b5`.
 
 ## Study opening guide candidate
 
