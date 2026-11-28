@@ -1,5 +1,31 @@
 # Tempo V2 usable release
 
+## Installed Lean schema 24 with isolated daily ranking
+
+[Tempo #149](https://github.com/tempo-v2/tempo/pull/149) merged at
+`de25b64a4e6a340ad9a7fc6c3f571f4ae4e59cc7`. The merge tree matches fresh Astra's
+cleared Tempo head `4d5464596ab0fbae986b095b82ed32d2ad9de237`.
+[Planning #126](https://github.com/tempo-v2/.planning/pull/126) merged at
+`b29a62864339ec6d6543a7d6cc0924c0a60278f1` with the reviewed contract.
+
+The managed schema-23 cutover from
+`d54b71470c279fd0d69c464529c9c8b0bf8f2f44` retained
+244,808 rows across 52 predecessor tables,
+including Study attempt 955. SQLite integrity and foreign
+keys passed. The stopped backup includes the predecessor forecast files.
+The registered server, tactic worker, and Daily Queue worker run the
+matched release. The server owns the new private forecast socket. Ready
+Study counts and all served UI and audio hashes matched.
+
+The integrated release passed hosted CI, strict Clippy, the Rust workspace
+suite, native Maia and restart after interrupted rank staging. Packaged
+Chromium exercised Study move review, title invariance, exact edit replay,
+Next-only retry, and both prior Answer delivery states on disposable
+schema-21 and schema-23 copies. A repeated native poll against oversized
+authored input produced one terminal claim with the required queue ready.
+The [assembly manifest](current-assembly.json) records the merged artifacts
+and rollback backup.
+
 ## Lean optional daily rank isolation candidate
 
 [Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
@@ -12,7 +38,7 @@ and worker binaries from the same release. The [Daily Queue contract](lean-daily
 defines claim, staging, and publication authority.
 
 The earlier isolation candidate `c235e7812bdee515da99685c342217e8f9c6bf07`
-provided the evidence below. The integrated candidate will be qualified against
+provided the evidence below. The integrated candidate was separately qualified against
 the supported schema-21 and schema-23 predecessors. Focused regressions passed for an oversized
 claim that cannot trigger another capture, and for ordinary publication and
 Study Next/Answer with forecast staging reads denied. The saved apply lease
