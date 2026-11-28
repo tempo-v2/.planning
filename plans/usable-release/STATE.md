@@ -1,5 +1,34 @@
 # Tempo V2 usable release
 
+## Installed Lean puzzle Capture
+
+[Tempo #147](https://github.com/tempo-v2/tempo/pull/147) merged at
+`d54b71470c279fd0d69c464529c9c8b0bf8f2f44` from fresh Astra’s cleared
+`7f026c4a4e87c125d23f7bcfba88f16f97cd87b6`. The merge tree matches the
+reviewed tree. The managed server, Tactics worker and Daily Queue worker serve
+schema 23 with vendored Core 0.2.2. The predecessor was the installed
+[Study move review release](https://github.com/tempo-v2/.planning/pull/127)
+at `2f31c53093fa6ad5f70d6f310c9bff696c1e89c2`.
+
+Capture is available in the main header and Puzzle library. It accepts
+Chess.com and Lichess puzzle PGNs and Lichess puzzle IDs. A confirmed save
+clears and refocuses the input. The next tactic rebuild puts eligible unseen
+captures first within the remaining allowance, oldest capture first.
+
+Hosted CI and the final strict Clippy check passed. Chromium exercised
+all three Capture inputs, the live Lichess lookup, exact retry, focus and
+Study isolation. The archived release passed native Stockfish evidence,
+opening edit replay, Next-only retry and both delivery states of predecessor
+single-answer and full-line commands on disposable data.
+
+The stopped backup and migration preserved 244,808 rows in
+51 predecessor tables and Study attempt 955.
+SQLite integrity and foreign keys passed. The live check matched all three
+registered processes, served assets and the retained dataset. Capture’s
+read-only PGN previews recognized the Chess.com and Lichess fixtures.
+The [assembly manifest](current-assembly.json) records the exact artifacts
+and stopped backup.
+
 
 ## Study move review candidate
 

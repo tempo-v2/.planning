@@ -3,14 +3,24 @@
   "repository": "tempo-v2/tempo",
   "core_version": "0.2.2",
   "installed": {
-    "commit": "9ac6752731687e7089769c8754e01c70ba422847",
-    "binary_sha256": "c0f6dcad86727b0ab4c0e4cd6ab864a507c4b954f14134d15e5d4f94148783cc",
+    "commit": "d54b71470c279fd0d69c464529c9c8b0bf8f2f44",
+    "previous_commit": "2f31c53093fa6ad5f70d6f310c9bff696c1e89c2",
+    "binary_sha256": "3a2eb606645b12ab63a10d3958d8cf196d93542eca15cf9f94924e507ff3c9d5",
     "assets": {
-      "index.html": "9eb74aa7566752a1fafcb36c04d6c62cc73153b1bea3ada621cec46d0a9a40a6",
-      "assets/app.js": "6b9b7970389e96a2d16d7ad3be68db24fbfbecfb7b923b737c254a9f8d6c3e31",
-      "assets/app.css": "bfc3c3f47a216c9eef280830b8c82eb0eef2154d4b5e51423374738e43a407e2"
+      "index.html": "94f37643f36f57d31bba136b3f2dbe85edd1f185af8a0bdeef02def7f3f101d2",
+      "assets/app.js": "5e937924cf4e038bab1cc10eb2d880b3ea6e0da243571c29872d5b94f4f7b53a",
+      "assets/app.css": "5c3a78746252fcf00840819885770b03e087530fcc9622a3748aa94885c775e1"
     },
-    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261128T075835.285825Z-before-schema20/tempo.sqlite3",
+    "board_audio_assets": {
+      "move-self.mp3": "3a2eb75af1334c06dafd735c23388a560285e0df9436a44d27adc95a010a8547",
+      "move-opponent.mp3": "0931855637e50e4edbc7916ec7a66cca2f0eee763e1c791ff774a9945517ea61",
+      "capture.mp3": "7158a77f3eb9a763fe723e9c9291819de8748444a1192d10383159fd8175709b",
+      "check.mp3": "ef4764a74d19d0db1659e413e8afadc25f1e8cfba83a4a76e6e64f28f3077d52",
+      "castle.mp3": "da05719e6b3f0d04a2ac1a551e643ab14f4e840ae3b9410c0ea15ba4bcac5010",
+      "promote.mp3": "69219212aa2dce6031d6a641f8813779809bdff33562a8418d8e003eea465815",
+      "illegal.mp3": "3224eb7a6d93e52229ddcb49c62e584764d1474c123d25c91ecb2c74aa6291f9"
+    },
+    "previous_database_backup": "/Users/andy/Library/Application Support/Tempo Lean/backups/20261128T114845.211061Z-before-schema23-puzzle-capture/tempo.sqlite3",
     "tactic_worker": {
       "label": "com.tempo-v2.lean.tactics",
       "binary_sha256": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
@@ -24,8 +34,14 @@
         "retrying": 3,
         "unresolved": 3
       },
-      "verified_pid": 22589,
-      "release": "9ac6752731687e7089769c8754e01c70ba422847"
+      "verified_pid": 65656,
+      "release": "d54b71470c279fd0d69c464529c9c8b0bf8f2f44"
+    },
+    "daily_queue_worker": {
+      "label": "com.tempo-v2.lean.daily-queue",
+      "release": "d54b71470c279fd0d69c464529c9c8b0bf8f2f44",
+      "verified_pid": 65659,
+      "binary_sha256": "3a2eb606645b12ab63a10d3958d8cf196d93542eca15cf9f94924e507ff3c9d5"
     },
     "lichess_catalog": {
       "artifact_sha256": "eb116a0a08076e314a8edb820c9e77973094bcde6d3846b1864029e3921bec6c",
@@ -42,65 +58,49 @@
       ],
       "weights_sha256": "ba14208b2992d85502f5fb501934abf6aaaeb355e9f3fdf90e326911f562524f"
     },
-    "verified_pid": 22586,
-    "daily_queue_worker": {
-      "label": "com.tempo-v2.lean.daily-queue",
-      "release": "9ac6752731687e7089769c8754e01c70ba422847",
-      "verified_pid": 22625,
-      "binary_sha256": "c0f6dcad86727b0ab4c0e4cd6ab864a507c4b954f14134d15e5d4f94148783cc"
+    "verified_pid": 65653,
+    "preservation": {
+      "tables": 51,
+      "rows": 244808
     },
-    "sqlite_schema": 20,
-    "migration": {
-      "predecessor_tables": 45,
-      "predecessor_rows": 236314
-    },
+    "sqlite_schema": 23,
+    "retained_study_attempt": 955,
     "daily_queue_smoke": {
       "counts": {
         "day": "2026-11-28",
-        "new": 0,
+        "new": 16,
         "opening_order": "maia",
         "preparing": false,
-        "reviews": 346
-      },
-      "ranking": {
-        "day": "2026-11-28",
-        "mode": "maia",
-        "source": "maia",
-        "profile": "maia3-5m-1500-authored-history-v2",
-        "forecast_finished": 0,
-        "ranked_cards": 7893,
-        "estimated": 7465,
-        "unscored": 428
+        "reviews": 66
       },
       "worker": {
         "label": "com.tempo-v2.lean.daily-queue",
-        "release": "9ac6752731687e7089769c8754e01c70ba422847",
-        "verified_pid": 22625,
-        "binary_sha256": "c0f6dcad86727b0ab4c0e4cd6ab864a507c4b954f14134d15e5d4f94148783cc"
+        "release": "d54b71470c279fd0d69c464529c9c8b0bf8f2f44",
+        "verified_pid": 65659,
+        "binary_sha256": "3a2eb606645b12ab63a10d3958d8cf196d93542eca15cf9f94924e507ff3c9d5"
       }
     }
   },
   "candidate": {
-    "commit": "87c8bc83e8f808b6a9f1de7ea0a89a0e3c87e3f4",
-    "predecessor": "40b87f4df0881e3f57b6d6a7278ad692202b57d0",
-    "sqlite_schema": 20,
+    "commit": "7f026c4a4e87c125d23f7bcfba88f16f97cd87b6",
+    "reviewed_tree": "fab5e49e5de6efc96926b0643ccbc7425fadef11",
+    "merged_commit": "d54b71470c279fd0d69c464529c9c8b0bf8f2f44",
+    "predecessor": "2f31c53093fa6ad5f70d6f310c9bff696c1e89c2",
+    "pull_request": "https://github.com/tempo-v2/tempo/pull/147",
+    "sqlite_schema": 23,
     "core_version": "0.2.2",
-    "pull_request": "https://github.com/tempo-v2/tempo/pull/142",
-    "qualification": "Fresh Astra cleared the reviewed tree. Hosted CI, strict Clippy, packaged Chromium and installed schema-19 replay passed. Native Maia and worker-stop rollover passed on a disposable retained database. The merged artifact preserved the stopped database and prepared Study before its separate daily worker started.",
-    "merged_commit": "9ac6752731687e7089769c8754e01c70ba422847",
-    "reviewed_tree": "5f441c2dd2482595a27479879ec20658a83ce086",
-    "planning_commit": "94310e9512dc455e8873a9f4335736146d709b0c",
-    "cargo_lock_sha256": "3d401525fc44fdbf919bbf81f520d4a2adb6272d62884e052de5dd49c0c481ba",
-    "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
     "core_package": "ui/vendor/tempo-v2-core-components-0.2.2.tgz",
-    "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4",
     "artifacts": {
-      "bin/tempo": "c0f6dcad86727b0ab4c0e4cd6ab864a507c4b954f14134d15e5d4f94148783cc",
+      "bin/tempo": "3a2eb606645b12ab63a10d3958d8cf196d93542eca15cf9f94924e507ff3c9d5",
       "bin/tempo-tactic-worker": "490b7113b65a500b8b14a27895554743e5d5c147698e0f7e1e2080346005e0cc",
-      "ui/dist/index.html": "9eb74aa7566752a1fafcb36c04d6c62cc73153b1bea3ada621cec46d0a9a40a6",
-      "ui/dist/assets/app.js": "6b9b7970389e96a2d16d7ad3be68db24fbfbecfb7b923b737c254a9f8d6c3e31",
-      "ui/dist/assets/app.css": "bfc3c3f47a216c9eef280830b8c82eb0eef2154d4b5e51423374738e43a407e2"
-    }
+      "ui/dist/index.html": "94f37643f36f57d31bba136b3f2dbe85edd1f185af8a0bdeef02def7f3f101d2",
+      "ui/dist/assets/app.js": "5e937924cf4e038bab1cc10eb2d880b3ea6e0da243571c29872d5b94f4f7b53a",
+      "ui/dist/assets/app.css": "5c3a78746252fcf00840819885770b03e087530fcc9622a3748aa94885c775e1"
+    },
+    "qualification": "Fresh Astra and hosted CI cleared the exact head. The merged archive passed Capture, native Study move review, and predecessor browser recovery. Managed release verification matched the installed source, processes, served assets and preserved dataset.",
+    "cargo_lock_sha256": "d10656363a0fac2ee11714a77b22b9c173707693525ed0c39ebbe86e0939c5fc",
+    "ui_lock_sha256": "c15717f93ba11bd0b5e0637715d74f996f41c95c5b6f54e683fea2116e6c762c",
+    "core_package_sha256": "4413023594936e57196bdd3864e83968fcfb7d753017bff46ee98cd1cf510ca4"
   },
   "predecessor_assembly": {
     "role": "One source manifest for the current review assembly and the separate running baseline",
