@@ -1,5 +1,21 @@
 # Tempo V2 usable release
 
+## Installed bounded daily cleanup
+
+[Tempo #144](https://github.com/tempo-v2/tempo/pull/144) is installed at
+`2163d9ef83562d2a47b3eddda5235038cf32e6b1`. The merge tree matches the head cleared by fresh Astra.
+Hosted CI and all 12 focused Store tests passed. Full cleanup work stayed
+at 207 due-cohort VM steps and 193 saved-fallback VM steps as the protected
+cohorts grew from 100 to 10,000 rows. The packaged server reclaimed seeded
+old rows on a disposable database copy and preserved the published pointers.
+
+The managed server, tactic worker, and Daily Queue worker use the merged
+release. The stopped backup matched all 244,596 rows in 50 tables.
+The schema-20 dataset and issued Study attempt were retained. The running
+service passed health, served asset hashes, Study readiness, SQLite integrity,
+and foreign keys. The [assembly manifest](current-assembly.json) records the
+exact artifacts, verified processes, and backup.
+
 ## Study opening guide candidate
 
 [Tempo #143](https://github.com/tempo-v2/tempo/pull/143) at
@@ -19,16 +35,17 @@ and vendored Core 0.2.2 with the existing Answer and scheduling behavior.
   `2b0f4af34a93bf46e5947d30e8c09e64aea7189cc9df0a784d2ee07757bf4f57`.
   Its packaged app asset SHA-256 is
   `230668f79e94c144efbb67b906706adc84e284d0a30e2b336f1eee0d9d2028ee`.
-  The installed release is recorded below.
+  The guide was installed at `05da90018d8ecbfcf5b7be7e49d054e7ac7db835`,
+  the predecessor of the current release. [Installation receipt](https://github.com/tempo-v2/.planning/pull/121)
 
-## Installed Lean schema 20 with the daily queue
+## Prior Lean schema 20 installation with the daily queue
 
 [Tempo #142](https://github.com/tempo-v2/tempo/pull/142) merged at
 `9ac6752731687e7089769c8754e01c70ba422847`. The merge tree matches fresh
 Astra's cleared revision. [Planning #118](https://github.com/tempo-v2/.planning/pull/118)
 merged at `94310e9512dc455e8873a9f4335736146d709b0c`.
 The registered serving process, tactic worker, and independent Daily Queue
-worker run the merged release. The [assembly manifest](current-assembly.json)
+worker ran the merged release. The [prior assembly manifest](https://github.com/tempo-v2/.planning/blob/6f136bdcc81c79d957b5ea2205ae9f337484df26/plans/usable-release/current-assembly.json)
 records their hashes, process IDs, and the stopped rollback backup.
 
 The migration preserved all 236,314 rows from 45 predecessor tables and
