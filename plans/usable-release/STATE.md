@@ -1,5 +1,22 @@
 # Tempo V2 usable release
 
+## Installed Lean schema 20 with the daily queue
+
+[Tempo #142](https://github.com/tempo-v2/tempo/pull/142) merged at
+`9ac6752731687e7089769c8754e01c70ba422847`. The merge tree matches fresh
+Astra's cleared revision. [Planning #118](https://github.com/tempo-v2/.planning/pull/118)
+merged at `94310e9512dc455e8873a9f4335736146d709b0c`.
+The registered serving process, tactic worker, and independent Daily Queue
+worker run the merged release. The [assembly manifest](current-assembly.json)
+records their hashes, process IDs, and the stopped rollback backup.
+
+The migration preserved all 236,314 rows from 45 predecessor tables and
+retained the issued Study attempt. SQLite integrity and foreign keys passed.
+On November 28, Study prepared 346 due reviews before the Daily Queue worker
+started. Native Maia then published the order for all 7,893 opening targets,
+with 7,465 estimates and 428 unscored. New daily allowances take effect at
+the next local study day under the cutover policy.
+
 ## Lean daily queue candidate
 
 [Tempo #142](https://github.com/tempo-v2/tempo/pull/142) at
