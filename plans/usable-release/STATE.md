@@ -1,5 +1,25 @@
 # Tempo V2 usable release
 
+## Installed Lean board audio and daily Study mix
+
+[Tempo #145](https://github.com/tempo-v2/tempo/pull/145) is installed at
+`5ca62757876449a59f554f0da05b853fa8537699` with Core 0.2.2.
+The merge tree matches the reviewed audio candidate and includes the schema-21
+daily Study mix from [Tempo #146](https://github.com/tempo-v2/tempo/pull/146).
+The managed server, tactic worker, and Daily Queue worker all run this release.
+
+The stopped schema-20 backup matched 244,606 rows in 50
+predecessor tables. The schema-21 migration retained those rows and the active
+Study attempt. A second migration on a disposable copy left it unchanged.
+SQLite integrity and foreign-key checks passed. The live Study queue was ready,
+and its active attempt matched the stopped backup.
+
+Chromium verified audio scheduling, retry, replay, navigation cancellation,
+and saved mute in the packaged build. The live service returned the expected
+UI assets and all seven audio clips. Chromium measured Web Audio scheduling.
+The [assembly manifest](current-assembly.json) records the artifact hashes,
+registered processes, and stopped backup.
+
 ## Study opening guide candidate
 
 [Tempo #143](https://github.com/tempo-v2/tempo/pull/143) at
@@ -19,17 +39,17 @@ and vendored Core 0.2.2 with the existing Answer and scheduling behavior.
   `2b0f4af34a93bf46e5947d30e8c09e64aea7189cc9df0a784d2ee07757bf4f57`.
   Its packaged app asset SHA-256 is
   `230668f79e94c144efbb67b906706adc84e284d0a30e2b336f1eee0d9d2028ee`.
-  The installed release is recorded below.
+  [Planning #121](https://github.com/tempo-v2/.planning/pull/121) records that installation.
 
-## Installed Lean schema 20 with the daily queue
+## Prior Lean schema 20 installation with the daily queue
 
 [Tempo #142](https://github.com/tempo-v2/tempo/pull/142) merged at
 `9ac6752731687e7089769c8754e01c70ba422847`. The merge tree matches fresh
 Astra's cleared revision. [Planning #118](https://github.com/tempo-v2/.planning/pull/118)
 merged at `94310e9512dc455e8873a9f4335736146d709b0c`.
 The registered serving process, tactic worker, and independent Daily Queue
-worker run the merged release. The [assembly manifest](current-assembly.json)
-records their hashes, process IDs, and the stopped rollback backup.
+worker ran that release. The [previous assembly manifest](https://github.com/tempo-v2/.planning/blob/a0dc42682c403a53c4603fb6828a7884802f50eb/plans/usable-release/current-assembly.json)
+records the hashes, process IDs, and stopped backup for `9ac6752731687e7089769c8754e01c70ba422847`.
 
 The migration preserved all 236,314 rows from 45 predecessor tables and
 retained the issued Study attempt. SQLite integrity and foreign keys passed.
@@ -67,8 +87,8 @@ is recorded in [Planning #122](https://github.com/tempo-v2/.planning/pull/122).
   The built app asset SHA-256 is
   `230668f79e94c144efbb67b906706adc84e284d0a30e2b336f1eee0d9d2028ee`.
 
-The schema-21 candidate is published for review. The live release remains
-on schema 20.
+Tempo #146 merged at `f8c23f7a4c9220b8cd7224e49339af4125d49cd5` and ships
+with the installation above.
 
 ## Lean daily queue candidate
 
