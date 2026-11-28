@@ -4,7 +4,7 @@
 
 [Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
 transport and publication from required preparation. The integrated candidate
-is `d550b02869e27041ca463ea0b6813ee0040b996d` on Lean main
+is `4d5464596ab0fbae986b095b82ed32d2ad9de237` on Lean main
 `d54b71470c279fd0d69c464529c9c8b0bf8f2f44`. It includes Study move review
 and Chess.com puzzle PGN import. The candidate uses schema 24,
 the existing Daily Queue registration, and Core 0.2.2. Pair the server
