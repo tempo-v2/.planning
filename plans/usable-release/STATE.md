@@ -4,7 +4,7 @@
 
 [Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
 transport and publication from required preparation. The integrated candidate
-is `60d086237ba3ea80c4fbfdfee3108cd710c557d9` against the installed
+is `8343408da89308398c2a20b6f066dd1e1da12bb4` against the installed
 Study move review release `2f31c53093fa6ad5f70d6f310c9bff696c1e89c2`. The candidate uses schema 22,
 the existing Daily Queue registration, and Core 0.2.2. Pair the server
 and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
@@ -12,7 +12,10 @@ defines claim, staging, and publication authority.
 
 The earlier isolation candidate `c235e7812bdee515da99685c342217e8f9c6bf07`
 provided the evidence below. The integrated candidate will be qualified against
-the installed Study move review release.
+the installed Study move review release. Focused regressions passed for an oversized
+claim that cannot trigger another capture, and for ordinary publication and
+Study Next/Answer with forecast staging reads denied. The saved apply lease
+is checked before converting its remaining duration.
 
 The held-socket HTTP check exercised rollover, opening invalidation,
 Next, and exact Answer replay while due work, tactics, and fallback
