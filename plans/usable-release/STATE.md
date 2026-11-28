@@ -38,6 +38,38 @@ started. Native Maia then published the order for all 7,893 opening targets,
 with 7,465 estimates and 428 unscored. New daily allowances take effect at
 the next local study day under the cutover policy.
 
+## Lean daily Study mix candidate
+
+[Tempo #146](https://github.com/tempo-v2/tempo/pull/146) at
+`7a6477aa48cd592ec7cfe9b88f155a18ce4066d3` adds a stable proportional mix
+of due reviews and ready introductions. Queue keeps the existing lane
+rank, kind alternation, active attempts, committed repeats and allowances.
+The candidate uses schema 21 and vendored Core 0.2.2. Its installed
+schema-20 predecessor, Tempo `2163d9ef83562d2a47b3eddda5235038cf32e6b1`,
+is recorded in [Planning #122](https://github.com/tempo-v2/.planning/pull/122).
+
+- A disposable HTTP run served all 300 reviews and 40 introductions.
+  The first introduction came at selection 5. The three thirds held 13,
+  13 and 14 introductions, with 5–10 reviews between introductions.
+  A separate server matched all 171 remaining attempts and card identities
+  after restarting from the same database state.
+- Locked Rust tests, strict Clippy, the packaged UI build and independent
+  Astra review passed. Focused checks covered lane readiness and
+  prerequisites, repeat reservation rollback, and bounded Next work as
+  the due cohort grew from 100 to 10,000.
+- A disposable copy of the installed schema-20 database retained all
+  244,601 rows from 50 predecessor tables, the issued attempt, and 12
+  committed deck entries. The schema-21 backfill, repeated migration,
+  SQLite integrity and foreign keys passed. Packaged Chromium passed
+  Next-only retry and both predecessor Answer delivery states.
+- The qualified debug binary SHA-256 is
+  `215d9163083ca5cb613eccba00e5107463cacae4518c0b93aebbe0c40aa0afdc`.
+  The built app asset SHA-256 is
+  `230668f79e94c144efbb67b906706adc84e284d0a30e2b336f1eee0d9d2028ee`.
+
+The schema-21 candidate is published for review. The live release remains
+on schema 20.
+
 ## Lean daily queue candidate
 
 [Tempo #142](https://github.com/tempo-v2/tempo/pull/142) at
