@@ -1,5 +1,30 @@
 # Tempo V2 usable release
 
+
+## Study move review candidate
+
+[Tempo #148](https://github.com/tempo-v2/tempo/pull/148) at
+`9b7f105cee87596dde44f2a6429498211630bba8` adds post-answer review,
+replacement and removal of an opening reply directly from Study.
+The candidate uses schema 21 and packaged Core 0.2.2. The installed
+predecessor is Tempo `5ca62757876449a59f554f0da05b853fa8537699`.
+[Planning #124](https://github.com/tempo-v2/.planning/pull/124) records
+that installation.
+
+- Locked Rust workspace tests, strict Clippy and the packaged UI build passed.
+- Packaged Chromium covered desktop and phone, native Stockfish evaluation
+  of every legal root, similarity evidence, manual removal with both evidence
+  sources unavailable, title-only invariance, Next-only retry and a two-tab
+  save with a lost response. Both delivery states of a pending Answer recovered
+  from disposable SQLite backups of the installed predecessor.
+- Focused transaction checks verified retained Study history, a card kept by
+  a transposed route, stale preview rejection and the 128-write limit. An
+  independent Astra review inspected the Study consumer and save transaction.
+- The qualified debug binary SHA-256 is
+  `5d45f04dc86eead051f60a8c635120a2422a7faa98161dfcc7040f81c931e5d5`.
+  The packaged app asset SHA-256 is
+  `97a771ef21c3a482dd72287fd53b67c45613ac0c2dc78f21547a3ca19f14a9b5`.
+
 ## Study opening guide candidate
 
 [Tempo #143](https://github.com/tempo-v2/tempo/pull/143) at
