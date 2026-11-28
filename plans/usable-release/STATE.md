@@ -4,15 +4,16 @@
 
 [Tempo #149](https://github.com/tempo-v2/tempo/pull/149) separates Maia
 transport and publication from required preparation. The integrated candidate
-is `8343408da89308398c2a20b6f066dd1e1da12bb4` against the installed
-Study move review release `2f31c53093fa6ad5f70d6f310c9bff696c1e89c2`. The candidate uses schema 22,
+is `d550b02869e27041ca463ea0b6813ee0040b996d` on Lean main
+`d54b71470c279fd0d69c464529c9c8b0bf8f2f44`. It includes Study move review
+and Chess.com puzzle PGN import. The candidate uses schema 24,
 the existing Daily Queue registration, and Core 0.2.2. Pair the server
 and worker binaries from the same release. The [Daily Queue contract](lean-daily-queue.md#optional-ranking-publication)
 defines claim, staging, and publication authority.
 
 The earlier isolation candidate `c235e7812bdee515da99685c342217e8f9c6bf07`
 provided the evidence below. The integrated candidate will be qualified against
-the installed Study move review release. Focused regressions passed for an oversized
+the supported schema-21 and schema-23 predecessors. Focused regressions passed for an oversized
 claim that cannot trigger another capture, and for ordinary publication and
 Study Next/Answer with forecast staging reads denied. The saved apply lease
 is checked before converting its remaining duration.
@@ -35,7 +36,7 @@ The qualified debug server and worker binary SHA-256 is
 The built app bundle SHA-256 is
 `8f816e9d80d6395fd53406c408b5301792813accac0b5b9567d70bb896b7d055`.
 
-At integration, Tempo main and the installed service were at schema 21.
+At integration, Tempo main used schema 23 and the installed service used schema 21.
 Before a managed cutover, archive the old forecast files with the stopped
 backup and reconfirm the migration number against any intervening merge.
 The held-handoff test held socket delivery. The staging process test
