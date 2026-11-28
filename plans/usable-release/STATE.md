@@ -12,17 +12,26 @@ defines claim, staging, and publication authority.
 The held-socket HTTP check exercised rollover, opening invalidation,
 Next, and exact Answer replay while due work, tactics, and fallback
 openings remained available. The partial-cursor regression verified
-exact redelivery and rank publication from persisted staging. A disposable
-native Maia worker published a complete two-card rank over the new socket.
+exact redelivery and rank publication from persisted staging. A separate
+process test interrupted the second staging batch, restarted the service
+with 64 unexposed ranks, and completed a single 72-rank publication by
+redelivering the exact result. A disposable native Maia worker published a
+complete two-card rank over the new socket. The locked Rust workspace suite,
+strict Clippy, and packaged UI build passed.
 Disposable copies of the installed schema-21 database passed repeated
 migration, row counts, integrity and foreign keys, and both predecessor
 delivery states for ordinary Answer.
 
+The qualified debug server and worker binary SHA-256 is
+`36dc578004853c228f1d4176d1df12a5457f6ef8b69c1610e777ce1aeb8f99f6`.
+The built app bundle SHA-256 is
+`8f816e9d80d6395fd53406c408b5301792813accac0b5b9567d70bb896b7d055`.
+
 Tempo main and the installed service still serve schema 21.
-Before a managed cutover, qualify a process restart during partial
-staging and a hold between real staging batches. Archive the old
-forecast files with the stopped backup. Reconfirm the migration number
-against any intervening merge.
+Before a managed cutover, archive the old forecast files with the stopped
+backup and reconfirm the migration number against any intervening merge.
+The held-handoff test held socket delivery. The staging process test
+interrupted a batch and exercised restart and exact resumption.
 
 ## Study opening guide candidate
 
